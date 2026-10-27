@@ -22,3 +22,12 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# PPL Hub build outputs and tooling
+node_modules/
+src/hub_built.html
+src/hub_download.html
+src/hub_test.html
+src/hub_min.html
+__pycache__/
+*.png.tmp
