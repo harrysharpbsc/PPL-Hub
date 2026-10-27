@@ -12,7 +12,7 @@ import subprocess
 subprocess.run(['node','mini.js','hub_built.html','hub_built.html'],check=True)
 m=open('hub_built.html').read()
 open('hub_download.html','w').write('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body>'+m+'</body></html>')
-t=o.replace("'use strict';","'use strict';window.__T={get ses(){return ses},get S(){return S},get KB(){return KB},get NTTS(){return NTTS},speak:function(t,w){speakAtc(t,w)},render:function(){render()}};",1)
+t=o.replace("'use strict';","'use strict';window.__T={get ses(){return ses},get S(){return S},get KB(){return KB},get NTTS(){return NTTS},get ASR(){return ASR},speak:function(t,w){speakAtc(t,w)},render:function(){render()}};",1)
 open('hub_test.html','w').write('<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body>'+t+'</body></html>')
 print(len(o),len(m))
 # GitHub Pages site (installable, works offline)

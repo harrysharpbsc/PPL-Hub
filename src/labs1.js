@@ -59,9 +59,9 @@ function labSummary(s,title,items,pct,again){
 
 /* ===== voice answer mode for fly-and-talk labs ===== */
 var VOICE={on:false,kb:false};try{VOICE.on=localStorage.getItem('ppl-voice')==='1';VOICE.kb=localStorage.getItem('ppl-voice-kb')==='1'}catch(e){}
-function vKb(){return VOICE.kb||!srOk()}
+function vKb(){return VOICE.kb||(!srOk()&&!(typeof asrOn==='function'&&asrOn()))}
 document.addEventListener('keydown',function(e){var t=e.target;if(t&&t.id==='vx-txt'&&e.key==='Enter'&&!e.shiftKey){e.preventDefault();labOn({k:'r',v:t.value,f:'vt'});labOn({k:'vchk'})}});
-var FS={pace:'fast',auto:'on',hide:'off',voices:'varied',kbAuto:'on',nq:'best',eng:'fast',hold:'normal'};try{var fs0=JSON.parse(localStorage.getItem('ppl-fs')||'null');if(fs0)for(var fk in fs0)FS[fk]=fs0[fk]}catch(e){}
+var FS={pace:'fast',auto:'on',hide:'off',voices:'varied',kbAuto:'on',nq:'best',eng:'fast',hold:'normal',asr:'moon'};try{var fs0=JSON.parse(localStorage.getItem('ppl-fs')||'null');if(fs0)for(var fk in fs0)FS[fk]=fs0[fk]}catch(e){}
 FS.voices='natural';
 function fsSave(){try{localStorage.setItem('ppl-fs',JSON.stringify(FS))}catch(e){}}
 try{if(window.speechSynthesis){speechSynthesis.getVoices();speechSynthesis.onvoiceschanged=function(){}}}catch(e){}
@@ -141,13 +141,13 @@ function flightLab(o){
   function briefFull(){if(!o.brief)return'';return'<div class="brief"><b>Flight brief</b><dl>'+o.brief.map(function(r){return'<dt>'+esc(r[0])+'</dt><dd>'+esc(r[1])+(r[2]?'<span class="m"> '+esc(r[2])+'</span>':'')+'</dd>'}).join('')+'</dl><p class="m">Note these on your kneeboard. You will need them for your calls.</p></div>'}
   function briefLine(){if(!o.brief)return'';return'<div class="bline">'+o.brief.map(function(r){return'<span><i>'+esc(r[0])+'</i> '+esc(r[1])+'</span>'}).join('')+'</div>'}
   function fsRow(l,f,opts){return'<div class="fsrow"><span class="m">'+l+'</span><div class="seg">'+opts.map(function(x){return'<button class="'+(FS[f]===x[0]?'on':'')+'" data-a="lx" data-k="fs" data-f="'+f+'" data-v="'+x[0]+'">'+x[1]+'</button>'}).join('')+'</div></div>'}
-  function fsPanel(){return'<div class="fspanel">'+fsRow('Flying between calls','pace',[['normal','Normal'],['fast','Fast'],['skip','Skip']])+fsRow('After a correct answer','auto',[['on','Carry on'],['off','Wait for me']])+fsRow('ATC message text','hide',[['off','Show'],['on','Hide (listen)']])+fsRow('When I stop talking','hold',[['normal','Wait 3.5s'],['short','Wait 2s'],['tap','Wait for Done']])+fsRow('ATC voices','eng',[['fast','Quick (UK)'],['rich','Richer (bigger download)']])+'<p class="m" id="ntts-st">'+(typeof nttsMsg==='function'?nttsMsg():'')+'</p>'+fsRow('Kneeboard pages','kbAuto',[['on','Follow the flight'],['off','I choose']])+'</div>'}
+  function fsPanel(){return'<div class="fspanel">'+fsRow('Flying between calls','pace',[['normal','Normal'],['fast','Fast'],['skip','Skip']])+fsRow('After a correct answer','auto',[['on','Carry on'],['off','Wait for me']])+fsRow('ATC message text','hide',[['off','Show'],['on','Hide (listen)']])+fsRow('Speech recognition','asr',[['moon','On device (Moonshine)'],['chrome','Chrome']])+(FS.asr!=='chrome'?'<p class="m" id="asr-st">'+(typeof asrMsg==='function'?asrMsg():'')+'</p>':'')+fsRow('When I stop talking','hold',[['normal','Wait 3.5s'],['short','Wait 2s'],['tap','Wait for Done']])+fsRow('ATC voices','eng',[['fast','Quick (UK)'],['rich','Richer (bigger download)']])+'<p class="m" id="ntts-st">'+(typeof nttsMsg==='function'?nttsMsg():'')+'</p>'+fsRow('Kneeboard pages','kbAuto',[['on','Follow the flight'],['off','I choose']])+'</div>'}
   function vToggle(sm,s){return'<div class="vtog'+(sm?' sm':'')+'">'+(sm?'<button class="btn alt sm kb-inline" data-kbopen="1">Kneeboard</button>':'')+'<span class="m">Answer by</span><div class="seg"><button class="'+(!VOICE.on?'on':'')+'" data-a="lx" data-k="vmode"'+(!VOICE.on?' disabled':'')+'>Tapping</button><button class="'+(VOICE.on?'on':'')+'" data-a="lx" data-k="vmode"'+(VOICE.on?' disabled':'')+'>Speaking</button></div>'+(sm?'<button class="btn alt sm" data-a="lx" data-k="fsset">'+(s&&s.fsOpen?'Hide settings':'Settings')+'</button>':'')+(!sm||(s&&s.fsOpen)?fsPanel():'')+(!sm&&VOICE.on?'<p class="m" style="margin-top:6px">'+(vKb()?'You will hear ATC, then tap the answer box and use the microphone on your keyboard to say your call.':'You will hear ATC, then press Speak and say your call. If the page cannot use the microphone, you can use your keyboard microphone instead.')+'</p>':'')+'</div>'}
-  function vStop(s){if(typeof nttsStop==='function')nttsStop();if(s&&s.rec){var L=s.rec;L.done=true;clearTimeout(L.timer);if(L.r){L.r.onend=null;try{L.r.abort()}catch(x){}}s.rec=null}}
+  function vStop(s){if(typeof nttsStop==='function')nttsStop();if(s&&s.rec&&s.rec.kind==='asr'){s.rec.cancel();s.rec=null}if(s&&s.rec){var L=s.rec;L.done=true;clearTimeout(L.timer);if(L.r){L.r.onend=null;try{L.r.abort()}catch(x){}}s.rec=null}}
   /* Listening keeps going through natural pauses: the recogniser is restarted when the browser stops it early,
      and the call only ends after a set quiet time (or when Done is tapped). */
   function vHold(){return FS.hold==='short'?2000:FS.hold==='tap'?0:3500}
-  function vRec(s){if(s.rec){vRecEnd(s,true);return}var SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR)return;try{window.speechSynthesis&&window.speechSynthesis.cancel()}catch(x){}
+  function vRec(s){if(s.rec){if(s.rec.kind==='asr')s.rec.finish(true);else vRecEnd(s,true);return}if(typeof asrOn==='function'&&asrOn()){try{window.speechSynthesis&&window.speechSynthesis.cancel()}catch(x){}if(typeof nttsStop==='function')nttsStop();asrRec(s,{hold:vHold(),done:function(){check(s)}});return}var SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR)return;try{window.speechSynthesis&&window.speechSynthesis.cancel()}catch(x){}
     var L={base:'',run:'',user:false,done:false,t0:Date.now(),last:0,timer:null,r:null};s.rec=L;s.vtext='';
     function show(){var t=(L.base+' '+L.run).replace(/\s+/g,' ').trim();s.vtext=t;var ta=$('vx-txt');if(ta)ta.value=t;return t}
     function msg(t){var m=$('vx-msg');if(m)m.textContent=t}
@@ -187,11 +187,11 @@ function flightLab(o){
   function afterGrade(s,ok){clearTimeout(s.autoT);if(ok&&FS.auto==='on'){var e=s.cur;s.autoT=setTimeout(function(){if(ses===s&&s.cur===e&&s.go&&!s.fin)labOn({k:'n'})},1800)}}
   function mapSvg(s){var p=PATH.at(s.d);return'<svg viewBox="0 0 400 300" class="lmap" role="img" aria-label="'+esc(o.alt)+'">'+mapBase()+o.bg+'<polyline id="lab-trail" class="lm-trail" points="'+s.trail.join(' ')+'"/><g id="lab-tf">'+tfSvg(s)+'</g>'+acG('lab-ac',p.x,p.y,p.h)+'</svg>'}
   addLab({id:o.id,name:o.name,sub:o.sub,grp:'fly',
-    init:function(s){s.go=false;s.fin=false;if(o.make)applyMake();if(typeof nttsPlan==='function')nttsPlan(o.events)},
+    init:function(s){s.go=false;s.fin=false;if(o.make)applyMake();if(typeof nttsPlan==='function')nttsPlan(o.events);if(VOICE.on&&typeof asrLoad==='function')asrLoad()},
     on:function(s,k,v,d){
-      if(k==='fs'){var fv=d&&d.f;if(fv){FS[fv]=v;fsSave()}if(fv==='voices'&&v==='natural'&&typeof nttsLoad==='function'){nttsUnlock();nttsLoad()}if((fv==='nq'||fv==='eng')&&typeof nttsReset==='function'){nttsReset();nttsUnlock();nttsLoad()}if(fv==='voices'&&s.cur&&s.cur.atc)speakAtc(s.cur.atc,s.cur.who);render();return}
+      if(k==='fs'){var fv=d&&d.f;if(fv){FS[fv]=v;fsSave()}if(fv==='voices'&&v==='natural'&&typeof nttsLoad==='function'){nttsUnlock();nttsLoad()}if(fv==='asr'&&v==='moon'&&typeof asrLoad==='function'){ASR.blocked=false;if(ASR.st==='error')ASR.st='off';asrLoad()}if((fv==='nq'||fv==='eng')&&typeof nttsReset==='function'){nttsReset();nttsUnlock();nttsLoad()}if(fv==='voices'&&s.cur&&s.cur.atc)speakAtc(s.cur.atc,s.cur.who);render();return}
       if(k==='fsset'){s.fsOpen=!s.fsOpen;render();return}
-      if(k==='vmode'){VOICE.on=!VOICE.on;try{localStorage.setItem('ppl-voice',VOICE.on?'1':'0')}catch(x){}vStop(s);render();return}
+      if(k==='vmode'){VOICE.on=!VOICE.on;if(VOICE.on&&typeof asrLoad==='function')asrLoad();try{localStorage.setItem('ppl-voice',VOICE.on?'1':'0')}catch(x){}vStop(s);render();return}
       if(k==='r'){if(d&&d.f==='vt')s.vtext=v;return}
       if(k==='go'){if(typeof nttsUnlock==='function'){nttsUnlock();if(FS.voices==='natural')nttsLoad()}begin(s);return}
       if(k==='again'){s.stop&&s.stop();if(o.make)applyMake();if(typeof nttsPlan==='function')nttsPlan(o.events);begin(s);return}
