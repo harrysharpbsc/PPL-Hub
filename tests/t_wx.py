@@ -1,5 +1,5 @@
 from playwright.sync_api import sync_playwright
-URL='file:///tmp/claude-0/-home-claude/558a3edc-86fe-5e9d-8495-aab074e535e7/scratchpad/hub_test.html'
+URL='file://hub_test.html'
 with sync_playwright() as p:
     b=p.chromium.launch();pg=b.new_page(viewport={'width':420,'height':900});errs=[]
     pg.on('pageerror',lambda e:errs.append(str(e)))

@@ -20,4 +20,4 @@ def pack(src):
     return DEC+re.sub(r'\[(-?\d+(?:,-?\d+){7,})\]',r,src)
 if __name__=='__main__':
     s=open('labs50data.js').read();p=pack(s);print(len(s),len(p))
-    open('/tmp/claude-0/-home-claude/558a3edc-86fe-5e9d-8495-aab074e535e7/scratchpad/_pk.js','w').write(p)
+    open('_pk.js','w').write(p)
