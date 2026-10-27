@@ -1,6 +1,6 @@
 import os,re,time
 from playwright.sync_api import sync_playwright
-V='/tmp/claude-0/-home-claude/558a3edc-86fe-5e9d-8495-aab074e535e7/scratchpad/vw'
+V=os.environ.get('PIPER_MOCK','mock')  # folder with onnxruntime-web, piper-wasm and a fake model
 def ctype(p):return 'application/javascript' if p.endswith('.js') else 'application/wasm' if p.endswith('.wasm') else 'application/json' if p.endswith('.json') else 'application/octet-stream'
 def handler(route):
     u=route.request.url
