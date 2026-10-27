@@ -61,7 +61,7 @@ function labSummary(s,title,items,pct,again){
 var VOICE={on:false,kb:false};try{VOICE.on=localStorage.getItem('ppl-voice')==='1';VOICE.kb=localStorage.getItem('ppl-voice-kb')==='1'}catch(e){}
 function vKb(){return VOICE.kb||!srOk()}
 document.addEventListener('keydown',function(e){var t=e.target;if(t&&t.id==='vx-txt'&&e.key==='Enter'&&!e.shiftKey){e.preventDefault();labOn({k:'r',v:t.value,f:'vt'});labOn({k:'vchk'})}});
-var FS={pace:'fast',auto:'on',hide:'off',voices:'varied',kbAuto:'on',nq:'best'};try{var fs0=JSON.parse(localStorage.getItem('ppl-fs')||'null');if(fs0)for(var fk in fs0)FS[fk]=fs0[fk]}catch(e){}
+var FS={pace:'fast',auto:'on',hide:'off',voices:'varied',kbAuto:'on',nq:'best',eng:'fast'};try{var fs0=JSON.parse(localStorage.getItem('ppl-fs')||'null');if(fs0)for(var fk in fs0)FS[fk]=fs0[fk]}catch(e){}
 FS.voices='natural';
 function fsSave(){try{localStorage.setItem('ppl-fs',JSON.stringify(FS))}catch(e){}}
 try{if(window.speechSynthesis){speechSynthesis.getVoices();speechSynthesis.onvoiceschanged=function(){}}}catch(e){}
@@ -141,7 +141,7 @@ function flightLab(o){
   function briefFull(){if(!o.brief)return'';return'<div class="brief"><b>Flight brief</b><dl>'+o.brief.map(function(r){return'<dt>'+esc(r[0])+'</dt><dd>'+esc(r[1])+(r[2]?'<span class="m"> '+esc(r[2])+'</span>':'')+'</dd>'}).join('')+'</dl><p class="m">Note these on your kneeboard. You will need them for your calls.</p></div>'}
   function briefLine(){if(!o.brief)return'';return'<div class="bline">'+o.brief.map(function(r){return'<span><i>'+esc(r[0])+'</i> '+esc(r[1])+'</span>'}).join('')+'</div>'}
   function fsRow(l,f,opts){return'<div class="fsrow"><span class="m">'+l+'</span><div class="seg">'+opts.map(function(x){return'<button class="'+(FS[f]===x[0]?'on':'')+'" data-a="lx" data-k="fs" data-f="'+f+'" data-v="'+x[0]+'">'+x[1]+'</button>'}).join('')+'</div></div>'}
-  function fsPanel(){return'<div class="fspanel">'+fsRow('Flying between calls','pace',[['normal','Normal'],['fast','Fast'],['skip','Skip']])+fsRow('After a correct answer','auto',[['on','Carry on'],['off','Wait for me']])+fsRow('ATC message text','hide',[['off','Show'],['on','Hide (listen)']])+'<p class="m" id="ntts-st">'+(typeof nttsMsg==='function'?nttsMsg():'')+'</p>'+fsRow('Kneeboard pages','kbAuto',[['on','Follow the flight'],['off','I choose']])+'</div>'}
+  function fsPanel(){return'<div class="fspanel">'+fsRow('Flying between calls','pace',[['normal','Normal'],['fast','Fast'],['skip','Skip']])+fsRow('After a correct answer','auto',[['on','Carry on'],['off','Wait for me']])+fsRow('ATC message text','hide',[['off','Show'],['on','Hide (listen)']])+fsRow('ATC voices','eng',[['fast','Quick (UK)'],['rich','Richer (bigger download)']])+'<p class="m" id="ntts-st">'+(typeof nttsMsg==='function'?nttsMsg():'')+'</p>'+fsRow('Kneeboard pages','kbAuto',[['on','Follow the flight'],['off','I choose']])+'</div>'}
   function vToggle(sm,s){return'<div class="vtog'+(sm?' sm':'')+'">'+(sm?'<button class="btn alt sm kb-inline" data-kbopen="1">Kneeboard</button>':'')+'<span class="m">Answer by</span><div class="seg"><button class="'+(!VOICE.on?'on':'')+'" data-a="lx" data-k="vmode"'+(!VOICE.on?' disabled':'')+'>Tapping</button><button class="'+(VOICE.on?'on':'')+'" data-a="lx" data-k="vmode"'+(VOICE.on?' disabled':'')+'>Speaking</button></div>'+(sm?'<button class="btn alt sm" data-a="lx" data-k="fsset">'+(s&&s.fsOpen?'Hide settings':'Settings')+'</button>':'')+(!sm||(s&&s.fsOpen)?fsPanel():'')+(!sm&&VOICE.on?'<p class="m" style="margin-top:6px">'+(vKb()?'You will hear ATC, then tap the answer box and use the microphone on your keyboard to say your call.':'You will hear ATC, then press Speak and say your call. If the page cannot use the microphone, you can use your keyboard microphone instead.')+'</p>':'')+'</div>'}
   function vStop(s){if(typeof nttsStop==='function')nttsStop();if(s&&s.rec){try{s.rec.abort()}catch(x){}s.rec=null}}
   function vRec(s){if(s.rec){try{s.rec.stop()}catch(x){}return}var SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR)return;try{window.speechSynthesis&&window.speechSynthesis.cancel()}catch(x){}
@@ -166,7 +166,7 @@ function flightLab(o){
   addLab({id:o.id,name:o.name,sub:o.sub,grp:'fly',
     init:function(s){s.go=false;s.fin=false;if(o.make)applyMake();if(typeof nttsPlan==='function')nttsPlan(o.events)},
     on:function(s,k,v,d){
-      if(k==='fs'){var fv=d&&d.f;if(fv){FS[fv]=v;fsSave()}if(fv==='voices'&&v==='natural'&&typeof nttsLoad==='function'){nttsUnlock();nttsLoad()}if(fv==='nq'&&typeof nttsReset==='function'){nttsReset();nttsUnlock();nttsLoad()}if(fv==='voices'&&s.cur&&s.cur.atc)speakAtc(s.cur.atc,s.cur.who);render();return}
+      if(k==='fs'){var fv=d&&d.f;if(fv){FS[fv]=v;fsSave()}if(fv==='voices'&&v==='natural'&&typeof nttsLoad==='function'){nttsUnlock();nttsLoad()}if((fv==='nq'||fv==='eng')&&typeof nttsReset==='function'){nttsReset();nttsUnlock();nttsLoad()}if(fv==='voices'&&s.cur&&s.cur.atc)speakAtc(s.cur.atc,s.cur.who);render();return}
       if(k==='fsset'){s.fsOpen=!s.fsOpen;render();return}
       if(k==='vmode'){VOICE.on=!VOICE.on;try{localStorage.setItem('ppl-voice',VOICE.on?'1':'0')}catch(x){}vStop(s);render();return}
       if(k==='r'){if(d&&d.f==='vt')s.vtext=v;return}

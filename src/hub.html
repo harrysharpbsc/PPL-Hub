@@ -659,6 +659,7 @@ function vProgress(){
    +'<h2 class="sec-t">Confidence check</h2><div class="card">'+(certN?'<p>When you said <b>certain</b>, you were right <b>'+Math.round(100*cal.cr/certN)+'%</b> of the time ('+cal.cr+' of '+certN+').</p><p class="m" style="margin-top:6px">'+(cal.cw?cal.cw+' answers were certain and wrong. Those are the most valuable ones to fix.':'No confident mistakes so far.')+'</p>':'<p class="m">Take a quiz and rate how sure you are. This shows how well your confidence matches your results.</p>')+'</div>'
    +(tc?'<h2 class="sec-t">Tricky cards</h2><div class="card sum"><ul>'+tc+'</ul><div class="acts"><button class="btn" data-a="tricky">Practise these now</button></div></div>':'')
    +(mis.length?'<h2 class="sec-t">Mistakes to fix ('+mis.length+')</h2><div class="card sum"><ul>'+ms+'</ul><div class="acts"><button class="btn" data-a="fix">Practise these now</button></div></div>':'')
+   +'<h2 class="sec-t">Backup</h2><div class="card"><p>Save your progress, settings and kneeboard notes to a file, then restore it on another device or browser. Your progress is only kept on this device otherwise.</p><div class="acts"><button class="btn" data-a="backup">Save backup file</button><label class="btn alt" for="restore-file">Restore from file</label><input type="file" id="restore-file" accept=".json,application/json" hidden></div></div>'
    +'<div class="row" style="margin-top:28px;justify-content:flex-start"><button class="link" data-a="reset">'+(resetArm?'Tap again to erase all progress':'Reset all progress')+'</button></div>'}
 
 function vMock(s){
@@ -964,6 +965,7 @@ function act(a,d){
    case'x':{var k=ui.topic+'|'+d.i;ex[k]=!ex[k];render();return}
    case'xa':{var nn=NOTES[ui.topic],all=nn.sections.every(function(s2,i){return ex[nn.id+'|'+i]});nn.sections.forEach(function(s2,i){ex[nn.id+'|'+i]=!all});render();return}
    case'markread':stepsOf(NOTES[ui.topic].topic).read=true;save();toast('Marked as read');go('topic',{});return;
+   case'backup':backupSave();return;
    case'reset':if(resetArm){S=freshS();save();resetArm=false;toast('Progress erased')}else resetArm=true;render();return;
    case'end':exitSession();return;
    case'back':exitSession();return;
@@ -992,6 +994,12 @@ function act(a,d){
    case'clnext':{if(s.i>=s.items.length-1){s.done=true;var t=NOTES[s.n].topic,z=S.cloze[t]||(S.cloze[t]={s:0,n:0});z.n+=s.res.length;z.s+=s.res.filter(function(r){return r.ok}).length;save()}else{s.i++;s.typed='';s.checked=false;s.hint=false}render();return}
   }
 }
+function backupSave(){try{save();var d={};for(var i=0;i<localStorage.length;i++){var k=localStorage.key(i);if(/^ppl-/.test(k))d[k]=localStorage.getItem(k)}
+  var txt=JSON.stringify({app:'ppl-study-hub',saved:new Date().toISOString(),data:d}),blob=new Blob([txt],{type:'application/json'}),a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);a.download='ppl-hub-backup-'+new Date().toISOString().slice(0,10)+'.json';document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},4000);toast('Backup saved to your downloads')}catch(e){toast('Could not save the backup')}}
+function backupLoad(f){var r=new FileReader();r.onload=function(){try{var j=JSON.parse(r.result);if(!j||j.app!=='ppl-study-hub'||!j.data)throw 0;var n=0;for(var k in j.data)if(/^ppl-/.test(k)&&typeof j.data[k]==='string'){localStorage.setItem(k,j.data[k]);n++}
+  if(!n)throw 0;toast('Backup restored, reloading…');setTimeout(function(){location.reload()},900)}catch(e){toast('That file is not a PPL Study Hub backup')}};r.readAsText(f)}
+document.addEventListener('change',function(e){if(e.target&&e.target.id==='restore-file'&&e.target.files&&e.target.files[0]){backupLoad(e.target.files[0]);e.target.value=''}});
 document.addEventListener('click',function(e){var b=e.target.closest('[data-a]');if(b)act(b.dataset.a,b.dataset)});
 document.addEventListener('input',function(e){var t=e.target;if(t&&t.dataset&&t.dataset.a==='lxr')labOn({k:'r',v:t.value,f:t.dataset.f})});
 document.addEventListener('keydown',function(e){
