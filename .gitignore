@@ -31,3 +31,4 @@ src/hub_test.html
 src/hub_min.html
 __pycache__/
 *.png.tmp
+src/*.png
