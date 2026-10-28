@@ -396,6 +396,14 @@ body.kb-open .main{padding-bottom:56vh}
 .fsrow .seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}.fsrow .seg button{border:0;background:var(--surface);color:var(--ink-2);font:600 .82rem var(--f-body)}.fsrow .seg button.on{background:var(--accent);color:var(--on-accent)}
 .ts{display:flex;flex-direction:column;gap:10px;margin-top:12px}.ts-i{border:1px solid var(--line);border-radius:12px;padding:10px 12px}.ts-i.ok{border-left:4px solid var(--good)}.ts-i.no{border-left:4px solid var(--bad)}.ts-h{display:flex;gap:6px;align-items:baseline}.ts-r{margin-left:auto;font-weight:700}.ts-i p{margin-top:4px;font-size:.9rem}
 .ts-txt{width:100%;box-sizing:border-box;margin-top:12px;border:1px solid var(--line);border-radius:12px;padding:10px;font:500 .8rem/1.4 var(--f-mono);background:var(--surface-2);color:var(--ink)}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(44px,1fr));gap:8px;margin-top:10px}
+.mt{min-height:44px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-weight:600;cursor:pointer}
+.mt.ans{background:var(--accent-soft);border-color:var(--accent)}
+.mt.ok{background:var(--good);border-color:var(--good);color:var(--surface)}
+.mt.no{background:var(--bad);border-color:var(--bad);color:var(--surface)}
+.mt.skip{border:2px dashed var(--bad);color:var(--bad)}
+.mt.cur{outline:3px solid var(--ink);outline-offset:2px}
+.mfb{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 12px}
 </style>
 
 <div class="shell" id="shell">
@@ -509,8 +517,8 @@ var tmr=null;
 function stopTimer(){if(tmr){clearInterval(tmr);tmr=null}if(ses&&ses.stop){try{ses.stop()}catch(e){}ses.stop=null}}
 function startTimer(){stopTimer();tmr=setInterval(function(){if(!ses||ses.mode!=='mock'||ses.done){stopTimer();return}var left=Math.max(0,Math.round((ses.end-Date.now())/1000)),el=$('mock-timer');if(el)el.textContent=fmt(left);if(left<=0)finishMock(true)},1000)}
 function recordMock(q,sel){var ok=sel===q.a;ses.res.push({n:q.n,q:q.q,ok:ok,chosen:sel===null?'(no answer)':q.o[sel],ans:q.o[q.a],why:q.why,conf:-1});if(ok)delete S.miss[q.key];else S.miss[q.key]={n:((S.miss[q.key]||{n:0}).n)+1};S.days[today()]=(S.days[today()]||0)+1}
-function finishMock(timeout){var s=ses;if(!s||s.done||s.mode!=='mock')return;if(timeout){if(s.sel!==null&&s.res.length<=s.i)recordMock(s.qs[s.i],s.sel);while(s.res.length<s.qs.length)recordMock(s.qs[s.res.length],null)}var by={};s.res.forEach(function(r){var sb=NOTES[r.n].s;by[sb]=by[sb]||{s:0,n:0};by[sb].n++;if(r.ok)by[sb].s++});Object.keys(by).forEach(function(k){S.mock.push({d:today(),s:by[k].s,n:by[k].n,sub:+k})});s.done=true;s.timeout=!!timeout;s.used=Math.round((Date.now()-s.start)/1000);stopTimer();save();render()}
-function startMock(sub){var pool=[];NOTES.forEach(function(n){if(sub==='all'||n.s===+sub)n.quiz.forEach(function(q){pool.push(mkQ(n,q))})});if(!pool.length){toast('No questions in that subject yet');return}var qs=shuffle(pool).slice(0,20),secs=qs.length*90;ses={type:'quiz',mode:'mock',qs:qs,i:0,sel:null,conf:null,res:[],done:false,sub:sub==='all'?-1:+sub,label:sub==='all'?'All subjects':SUBJECTS[+sub],secs:secs,start:Date.now(),end:Date.now()+secs*1000,topic:null};render();startTimer()}
+function finishMock(timeout){var s=ses;if(!s||s.done||s.mode!=='mock')return;s.res=[];s.qs.forEach(function(q,i){recordMock(q,s.ans[i])});var by={};s.res.forEach(function(r){var sb=NOTES[r.n].s;by[sb]=by[sb]||{s:0,n:0};by[sb].n++;if(r.ok)by[sb].s++});Object.keys(by).forEach(function(k){S.mock.push({d:today(),s:by[k].s,n:by[k].n,sub:+k})});s.done=true;s.timeout=!!timeout;s.used=Math.round((Date.now()-s.start)/1000);stopTimer();save();render()}
+function startMock(sub){var pool=[];NOTES.forEach(function(n){if(sub==='all'||n.s===+sub)n.quiz.forEach(function(q){pool.push(mkQ(n,q))})});if(!pool.length){toast('No questions in that subject yet');return}var qs=shuffle(pool).slice(0,20),secs=qs.length*90;ses={type:'quiz',mode:'mock',qs:qs,ans:qs.map(function(){return null}),i:0,sel:null,conf:null,res:[],done:false,rv:null,sub:sub==='all'?-1:+sub,label:sub==='all'?'All subjects':SUBJECTS[+sub],secs:secs,start:Date.now(),end:Date.now()+secs*1000,topic:null};render();startTimer()}
 function startCalc(k){var keys=Object.keys(CALC),items=[];for(var i=0;i<8;i++){var t=k==='mix'?pick(keys):k,g=CALC[t].gen();g.t=t;items.push(g)}ses={type:'calc',items:items,i:0,typed:'',checked:false,ok:false,res:[],done:false,topic:null};render()}
 function numOk(typed,it){var v=parseFloat(String(typed).replace(',','.'));return!isNaN(v)&&Math.abs(v-it.ans)<=it.tol}
 
@@ -662,13 +670,23 @@ function vProgress(){
    +'<h2 class="sec-t">Backup</h2><div class="card"><p>Save your progress, settings and kneeboard notes to a file, then restore it on another device or browser. Your progress is only kept on this device otherwise.</p><div class="acts"><button class="btn" data-a="backup">Save backup file</button><label class="btn alt" for="restore-file">Restore from file</label><input type="file" id="restore-file" accept=".json,application/json" hidden></div></div>'
    +'<div class="row" style="margin-top:28px;justify-content:flex-start"><button class="link" data-a="reset">'+(resetArm?'Tap again to erase all progress':'Reset all progress')+'</button></div>'}
 
+function mockFb(){return S.mockFb==='end'?'end':'now'}
+function mockGrid(s,done){return'<div class="mgrid" role="list" aria-label="Questions">'+s.qs.map(function(q,i){var a=s.ans[i],st=a===null?(done?' skip':''):(done||mockFb()==='now')?(a===q.a?' ok':' no'):' ans';
+  return'<button role="listitem" class="mt'+st+(!done&&i===s.i?' cur':'')+(done&&i===s.rv?' cur':'')+'" data-a="mgo" data-i="'+i+'" aria-label="Question '+(i+1)+(a===null?', not answered':st===' ok'?', correct':st===' no'?', wrong':', answered')+'">'+(i+1)+'</button>'}).join('')+'</div>'}
+function mockOpts(q,a,show){return q.o.map(function(o,i){var c=show?(i===q.a?' ok':i===a?' bad':''):(i===a?' sel':'');return'<button class="opt'+c+'" data-a="opt" data-i="'+i+'"'+(show?' disabled':'')+'><span class="k">'+'ABCD'.charAt(i)+'</span><span>'+esc(o)+'</span></button>'}).join('')}
 function vMock(s){
-  if(s.done){var ok=s.res.filter(function(r){return r.ok}).length,pct=Math.round(100*ok/s.res.length),pass=pct>=75,wrong=s.res.filter(function(r){return!r.ok});
-    return'<div class="card sum"><p class="m">Mock exam · '+esc(s.label)+'</p><p class="score">'+pct+'%</p><p style="margin-top:6px"><span class="chip '+(pass?'ok':'no')+'">'+(pass?'Pass':'Not yet')+'</span> '+ok+' of '+s.res.length+' correct · pass mark 75% · '+fmt(s.used)+' used'+(s.timeout?' · time ran out':'')+'</p>'+(wrong.length?'<h3 style="margin-top:18px">Review your mistakes</h3>'+wrong.map(function(r){return'<div class="fb" style="margin-top:10px"><p><b>'+esc(r.q)+'</b></p><p>You chose: '+esc(r.chosen)+'</p><p>Correct: '+esc(r.ans)+'</p><p class="cal">'+esc(r.why)+'</p></div>'}).join(''):'<p style="margin-top:14px">No mistakes. Well done.</p>')+'<div class="acts"><button class="btn" data-a="back">Done</button><button class="btn alt" data-a="mock" data-i="'+(s.sub<0?'all':s.sub)+'">New mock</button></div></div>'}
-  var q=s.qs[s.i],left=Math.max(0,Math.round((s.end-Date.now())/1000));
-  var hh=fhead(s.i,s.qs.length)+'<div class="timer"><span id="mock-timer">'+fmt(left)+'</span><small>left · mock exam, '+esc(s.label)+'</small></div><div class="card"><p class="q">'+esc(q.q)+'</p>';
-  q.o.forEach(function(o,i){hh+='<button class="opt'+(i===s.sel?' sel':'')+'" data-a="opt" data-i="'+i+'"><span class="k">'+'ABCD'.charAt(i)+'</span><span>'+esc(o)+'</span></button>'});
-  hh+='<div class="nav"><button class="btn alt" data-a="mskip">Skip</button><button class="btn" data-a="mnext"'+(s.sel===null?' disabled':'')+'>'+(s.i===s.qs.length-1?'Finish exam':'Next question')+'</button></div></div>';
+  if(s.done){var ok=s.res.filter(function(r){return r.ok}).length,pct=Math.round(100*ok/s.res.length),pass=pct>=75,rv='';
+    if(s.rv!==null){var q=s.qs[s.rv],a=s.ans[s.rv];rv='<div class="card" style="margin-top:12px"><p class="m">Question '+(s.rv+1)+' · '+(a===null?'not answered':a===q.a?'correct':'wrong')+'</p><p class="q">'+esc(q.q)+'</p>'+mockOpts(q,a,true)+'<p class="cal" style="margin-top:10px">'+esc(q.why)+'</p></div>'}
+    return'<div class="card sum"><p class="m">Mock exam · '+esc(s.label)+'</p><p class="score">'+pct+'%</p><p style="margin-top:6px"><span class="chip '+(pass?'ok':'no')+'">'+(pass?'Pass':'Not yet')+'</span> '+ok+' of '+s.res.length+' correct · pass mark 75% · '+fmt(s.used)+' used'+(s.timeout?' · time ran out':'')+'</p>'
+     +'<h3 style="margin-top:18px">Your answers</h3><p class="m">Tap a number to see the question, the answer and why.</p>'+mockGrid(s,true)+rv
+     +'<div class="acts"><button class="btn" data-a="end">Done</button><button class="btn alt" data-a="mock" data-i="'+(s.sub<0?'all':s.sub)+'">New mock exam</button></div></div>'}
+  var q=s.qs[s.i],a=s.ans[s.i],now=mockFb()==='now',show=now&&a!==null,left=Math.max(0,Math.round((s.end-Date.now())/1000)),n=s.qs.length,answered=s.ans.filter(function(x){return x!==null}).length;
+  var hh=fhead(s.i,n)+'<div class="timer"><span id="mock-timer">'+fmt(left)+'</span><small>left · mock exam, '+esc(s.label)+'</small></div>'
+   +'<div class="mfb"><span class="m">Show right or wrong</span><div class="seg"><button class="'+(now?'on':'')+'" data-a="mfb" data-v="now">As I go</button><button class="'+(!now?'on':'')+'" data-a="mfb" data-v="end">At the end</button></div></div>'
+   +'<div class="card"><p class="q">'+esc(q.q)+'</p>'+mockOpts(q,a,show)
+   +(show?'<div class="fb '+(a===q.a?'ok':'no')+'" style="margin-top:12px"><b>'+(a===q.a?'Correct.':'Not quite.')+'</b><p>'+esc(q.why)+'</p></div>':'')
+   +'<div class="nav"><button class="btn alt" data-a="mprev"'+(s.i===0?' disabled':'')+'>Previous</button>'+(s.i<n-1?'<button class="btn" data-a="mnext">Next question</button>':'')+'<button class="btn'+(s.i<n-1?' alt':'')+'" data-a="mfin">'+(s.finArm?'Tap again to finish ('+(n-answered)+' unanswered)':'Finish exam')+'</button></div></div>'
+   +'<p class="m" style="margin-top:14px">'+answered+' of '+n+' answered'+(now?' · green is right, red is wrong':' · answers are marked when you finish')+'</p>'+mockGrid(s,false);
   return hh}
 
 function vCalc(s){
@@ -942,8 +960,11 @@ function act(a,d){
    case'calc':startCalc(d.k);s=ses;if(s)s.kind=d.k;return;
    case'calccheck':{var ci=$('calc-in');s.typed=ci?ci.value:'';var it=s.items[s.i];s.ok=numOk(s.typed,it);s.checked=true;s.res.push({ok:s.ok,q:it.q,work:it.work+' (answer '+it.ans+' '+it.unit+')'});var cs=S.calc[it.t]||(S.calc[it.t]={s:0,n:0});cs.n++;if(s.ok)cs.s++;S.days[today()]=(S.days[today()]||0)+1;save();render();return}
    case'calcnext':if(s.i>=s.items.length-1)s.done=true;else{s.i++;s.typed='';s.checked=false}render();return;
-   case'mnext':if(s.sel===null)return;recordMock(s.qs[s.i],s.sel);if(s.i>=s.qs.length-1)finishMock(false);else{s.i++;s.sel=null;render()}return;
-   case'mskip':recordMock(s.qs[s.i],null);if(s.i>=s.qs.length-1)finishMock(false);else{s.i++;s.sel=null;render()}return;
+   case'mnext':if(s.i<s.qs.length-1){s.i++;s.finArm=false;render();window.scrollTo(0,0)}return;
+   case'mprev':if(s.i>0){s.i--;s.finArm=false;render();window.scrollTo(0,0)}return;
+   case'mgo':if(s.done){s.rv=s.rv===+d.i?null:+d.i}else{s.i=+d.i;s.finArm=false}render();return;
+   case'mfb':S.mockFb=d.v;save();render();return;
+   case'mfin':{var un=s.ans.filter(function(x){return x===null}).length;if(un&&!s.finArm){s.finArm=true;render();return}finishMock(false);return}
    case'newcard':ses={type:'newcard',n:ui.topic,saved:0,topic:ui.topic};render();return;
    case'ncsave':{var q=$('nc-q').value.trim(),an=$('nc-a').value.trim(),m=$('nc-m').value.trim();if(!q||!an){toast('Add both a question and an answer');return}var nt=NOTES[s.n];S.custom.push({t:nt.topic,q:q,a:an,m:m});nt.cl.push({n:nt.id,ci:-1,key:nt.topic+'|'+q,q:q,a:an,m:m,custom:true});save();s.saved++;render();toast('Card added');return}
    case'plansave':{var pi=$('plan-date'),pv=pi?pi.value:'';if(!pv){toast('Pick a date first');return}var dd=Math.floor(Date.parse(pv)/864e5);if(isNaN(dd)||dd<=today()){toast('Choose a date in the future');return}S.plan=dd;S.pq={d:0,v:10};save();toast('Exam date saved');render();return}
@@ -974,7 +995,7 @@ function act(a,d){
      if(r===0){s.re[c.key]=(s.re[c.key]||0)+1;if(s.re[c.key]<=2)s.q.splice(Math.min(s.q.length,s.i+4),0,c)}
      if(s.i>=s.q.length-1){s.done=true;s.ms=checkMilestones();if(s.ms.length)toast(s.ms[0])}else{s.i++;s.shown=false}
      render();return}
-   case'opt':if(s.conf===null){s.sel=+d.i;render()}return;
+   case'opt':if(s.mode==='mock'&&!s.done){if(mockFb()==='now'&&s.ans[s.i]!==null)return;s.ans[s.i]=+d.i;s.finArm=false;render();return}if(s.conf===null){s.sel=+d.i;render()}return;
    case'conf':{var q=s.qs[s.i];s.conf=+d.c;var ok=s.sel===q.a;
      s.res.push({n:q.n,q:q.q,ok:ok,conf:s.conf,ans:q.o[q.a]});
      var cal=S.cal;if(s.conf===2){if(ok)cal.cr++;else cal.cw++}if(s.conf===0){if(ok)cal.gr++;else cal.gw++}
