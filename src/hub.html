@@ -396,14 +396,22 @@ body.kb-open .main{padding-bottom:56vh}
 .fsrow .seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}.fsrow .seg button{border:0;background:var(--surface);color:var(--ink-2);font:600 .82rem var(--f-body)}.fsrow .seg button.on{background:var(--accent);color:var(--on-accent)}
 .ts{display:flex;flex-direction:column;gap:10px;margin-top:12px}.ts-i{border:1px solid var(--line);border-radius:12px;padding:10px 12px}.ts-i.ok{border-left:4px solid var(--good)}.ts-i.no{border-left:4px solid var(--bad)}.ts-h{display:flex;gap:6px;align-items:baseline}.ts-r{margin-left:auto;font-weight:700}.ts-i p{margin-top:4px;font-size:.9rem}
 .ts-txt{width:100%;box-sizing:border-box;margin-top:12px;border:1px solid var(--line);border-radius:12px;padding:10px;font:500 .8rem/1.4 var(--f-mono);background:var(--surface-2);color:var(--ink)}
-.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(44px,1fr));gap:8px;margin-top:10px}
-.mt{min-height:44px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-weight:600;cursor:pointer}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(48px,1fr));gap:10px;margin-top:10px}
+.mt{min-height:48px;padding:0;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-weight:600;cursor:pointer}
 .mt.ans{background:var(--accent-soft);border-color:var(--accent)}
 .mt.ok{background:var(--good);border-color:var(--good);color:var(--surface)}
 .mt.no{background:var(--bad);border-color:var(--bad);color:var(--surface)}
 .mt.skip{border:2px dashed var(--bad);color:var(--bad)}
 .mt.cur{outline:3px solid var(--ink);outline-offset:2px}
-.mfb{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 12px}
+.mfb{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:14px 0 6px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.mfb .mfb-n{flex-basis:100%}
+.mfb .seg button{white-space:nowrap}
+.mnav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}
+.mnav .btn{margin:0}
+.mnav .btn,.btn.mfin{width:100%;min-width:0;justify-content:center;text-align:center}
+.btn.mfin{display:flex;margin-top:12px}
+.mcard{margin-top:16px}
+.mcard .mgrid{margin-top:12px}
 </style>
 
 <div class="shell" id="shell">
@@ -611,7 +619,7 @@ function vPractice(){
   var mock=SUBJECTS.map(function(s,i){if(!withQ[i])return'';var last=S.mock.filter(function(m){return m.sub===i}).slice(-1)[0];return'<button class="pick" data-a="mock" data-i="'+i+'"><b>'+s+'</b><span class="m">'+Math.min(20,withQ[i])+' questions'+(last?' · last '+Math.round(100*last.s/last.n)+'%':'')+'</span></button>'}).join('')+(sc>1?'<button class="pick" data-a="mock" data-i="all"><b>All subjects</b><span class="m">mixed</span></button>':'');
   var calc=Object.keys(CALC).map(function(k){var st=S.calc[k];return'<button class="pick" data-a="calc" data-k="'+k+'"><b>'+CALC[k].name+'</b><span class="m">'+(st?st.s+'/'+st.n+' right':'8 questions')+'</span></button>'}).join('');
   return'<div class="head"><div><h1 class="h1">Practice</h1><p class="lede">Test yourself under pressure, mix subjects, and fix what keeps going wrong.</p></div></div>'
-  +'<h2 class="sec-t" style="margin-top:8px">Mock exam</h2><div class="card"><p class="m">Up to 20 questions with a countdown (90 seconds each) and no feedback until the end. The pass mark is 75%. This is practice, not the real exam length.</p>'+(anyQ?mock:'<p class="m" style="margin-top:8px">Add notes with quizzes to unlock mock exams.</p>')+'</div>'
+  +'<h2 class="sec-t" style="margin-top:8px">Mock exam</h2><div class="card"><p class="m">Up to 20 questions with a countdown (90 seconds each). The pass mark is 75%. This is practice, not the real exam length.</p><div class="mfb"><span>Show right or wrong</span><div class="seg"><button class="'+(mockFb()==='now'?'on':'')+'" data-a="mfb" data-v="now">As I go</button><button class="'+(mockFb()!=='now'?'on':'')+'" data-a="mfb" data-v="end">At the end</button></div><span class="m mfb-n">'+(mockFb()==='now'?'Each answer is marked as soon as you choose it.':'Like the real exam: you can change answers, and marking happens when you finish.')+'</span></div>'+(anyQ?mock:'<p class="m" style="margin-top:8px">Add notes with quizzes to unlock mock exams.</p>')+'</div>'
   +'<h2 class="sec-t">Mixed practice</h2><div class="card"><p class="m">Ten questions drawn from every subject at once. Mixing topics feels harder and helps you tell similar ideas apart.</p><div class="pbar"><button class="btn" data-a="mixall"'+(anyQ?'':' disabled')+'>Start mixed quiz</button></div></div>'
   +'<h2 class="sec-t">Fix what is weak</h2><div class="two"><div class="card"><h3>Mistakes</h3><p class="m" style="margin:6px 0 14px">'+(mis?mis+' question'+(mis>1?'s':'')+' you got wrong and have not yet got right with confidence.':'None right now.')+'</p><button class="btn sm alt" data-a="fix"'+(mis?'':' disabled')+'>Practise mistakes</button></div><div class="card"><h3>Tricky cards</h3><p class="m" style="margin:6px 0 14px">'+(tr?tr+' card'+(tr>1?'s':'')+' you have forgotten three or more times.':'Cards you keep forgetting show up here.')+'</p><button class="btn sm alt" data-a="tricky"'+(tr?'':' disabled')+'>Practise tricky cards</button></div></div>'
   +'<h2 class="sec-t">Weather decoding</h2><div class="card"><p class="m">Fresh METARs and TAFs every time, linked to the Meteorology and Air Law VFR minima topics.</p>'+['wxm','wxt','wxc'].map(function(m){return'<button class="pick" data-a="rstart" data-m="'+m+'"><span><b>'+RMODES[m]+'</b><br><span class="m" style="font-family:var(--f-body);font-size:.84rem">'+({wxm:'Wind, visibility, cloud, QNH, VFR limits',wxt:'Validity, BECMG, TEMPO and PROB30',wxc:'Turn plain words into the METAR group'})[m]+'</span></span><span class="m">'+rstat(m)+'</span></button>'}).join('')+'</div>'
@@ -682,11 +690,11 @@ function vMock(s){
      +'<div class="acts"><button class="btn" data-a="end">Done</button><button class="btn alt" data-a="mock" data-i="'+(s.sub<0?'all':s.sub)+'">New mock exam</button></div></div>'}
   var q=s.qs[s.i],a=s.ans[s.i],now=mockFb()==='now',show=now&&a!==null,left=Math.max(0,Math.round((s.end-Date.now())/1000)),n=s.qs.length,answered=s.ans.filter(function(x){return x!==null}).length;
   var hh=fhead(s.i,n)+'<div class="timer"><span id="mock-timer">'+fmt(left)+'</span><small>left · mock exam, '+esc(s.label)+'</small></div>'
-   +'<div class="mfb"><span class="m">Show right or wrong</span><div class="seg"><button class="'+(now?'on':'')+'" data-a="mfb" data-v="now">As I go</button><button class="'+(!now?'on':'')+'" data-a="mfb" data-v="end">At the end</button></div></div>'
    +'<div class="card"><p class="q">'+esc(q.q)+'</p>'+mockOpts(q,a,show)
    +(show?'<div class="fb '+(a===q.a?'ok':'no')+'" style="margin-top:12px"><b>'+(a===q.a?'Correct.':'Not quite.')+'</b><p>'+esc(q.why)+'</p></div>':'')
-   +'<div class="nav"><button class="btn alt" data-a="mprev"'+(s.i===0?' disabled':'')+'>Previous</button>'+(s.i<n-1?'<button class="btn" data-a="mnext">Next question</button>':'')+'<button class="btn'+(s.i<n-1?' alt':'')+'" data-a="mfin">'+(s.finArm?'Tap again to finish ('+(n-answered)+' unanswered)':'Finish exam')+'</button></div></div>'
-   +'<p class="m" style="margin-top:14px">'+answered+' of '+n+' answered'+(now?' · green is right, red is wrong':' · answers are marked when you finish')+'</p>'+mockGrid(s,false);
+   +'<div class="mnav"><button class="btn alt" data-a="mprev"'+(s.i===0?' disabled':'')+'>Previous</button><button class="btn" data-a="mnext"'+(s.i>=n-1?' disabled':'')+'>Next</button></div>'
+   +'<button class="btn mfin'+(s.i<n-1&&!s.finArm?' alt':'')+'" data-a="mfin">'+(s.finArm?'Tap again to finish ('+(n-answered)+' unanswered)':'Finish exam')+'</button></div>'
+   +'<div class="card mcard"><p class="m">'+answered+' of '+n+' answered · '+(now?'green is right, red is wrong':'answers are marked when you finish')+'</p>'+mockGrid(s,false)+'</div>';
   return hh}
 
 function vCalc(s){
