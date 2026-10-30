@@ -397,7 +397,7 @@ body.kb-open .main{padding-bottom:56vh}
 .fsrow .seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}.fsrow .seg button{border:0;background:var(--surface);color:var(--ink-2);font:600 .82rem var(--f-body)}.fsrow .seg button.on{background:var(--accent);color:var(--on-accent)}
 .ts{display:flex;flex-direction:column;gap:10px;margin-top:12px}.ts-i{border:1px solid var(--line);border-radius:12px;padding:10px 12px}.ts-i.ok{border-left:4px solid var(--good)}.ts-i.no{border-left:4px solid var(--bad)}.ts-h{display:flex;gap:6px;align-items:baseline}.ts-r{margin-left:auto;font-weight:700}.ts-i p{margin-top:4px;font-size:.9rem}
 .ts-txt{width:100%;box-sizing:border-box;margin-top:12px;border:1px solid var(--line);border-radius:12px;padding:10px;font:500 .8rem/1.4 var(--f-mono);background:var(--surface-2);color:var(--ink)}
-.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(48px,1fr));gap:10px;margin-top:10px}
+.mtiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(48px,1fr));gap:10px;margin-top:10px}
 .mt{min-height:48px;padding:0;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-weight:600;cursor:pointer}
 .mt.ans{background:var(--accent-soft);border-color:var(--accent)}
 .mt.ok{background:var(--good);border-color:var(--good);color:var(--surface)}
@@ -412,7 +412,17 @@ body.kb-open .main{padding-bottom:56vh}
 .mnav .btn,.btn.mfin{width:100%;min-width:0;justify-content:center;text-align:center}
 .btn.mfin{display:flex;margin-top:12px}
 .mcard{margin-top:16px}
-.mcard .mgrid{margin-top:12px}
+.mcard .mtiles{margin-top:12px}
+.art-hook{margin-bottom:14px}.art-hook p:last-child{margin-top:6px}
+.art-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:4px 0 14px}
+.art-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.art{display:grid;grid-template-columns:56px minmax(0,1fr);gap:12px;align-items:start;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;color:var(--ink);font:inherit;cursor:pointer}
+.art.cov{align-items:center;background:var(--surface-2)}
+.art-no{font:700 1.7rem/1 var(--f-display);color:var(--accent);text-align:center;padding-top:2px}
+.art-b{display:flex;flex-direction:column;gap:4px;min-width:0}.art-b b{font-size:1rem}
+.art-h{color:var(--accent);font-size:.88rem;font-style:italic}
+.pick.art-pick{flex-direction:column;align-items:flex-start;gap:4px;text-align:left}.pick.art-pick .m{font-family:var(--f-body);text-align:left}
+.art-docs{margin:8px 0 8px 20px;line-height:1.6}
 </style>
 
 <div class="shell" id="shell">
@@ -680,7 +690,7 @@ function vProgress(){
    +'<div class="row" style="margin-top:28px;justify-content:flex-start"><button class="link" data-a="reset">'+(resetArm?'Tap again to erase all progress':'Reset all progress')+'</button></div>'}
 
 function mockFb(){return S.mockFb==='end'?'end':'now'}
-function mockGrid(s,done){return'<div class="mgrid" role="list" aria-label="Questions">'+s.qs.map(function(q,i){var a=s.ans[i],st=a===null?(done?' skip':''):(done||mockFb()==='now')?(a===q.a?' ok':' no'):' ans';
+function mockGrid(s,done){return'<div class="mtiles" role="list" aria-label="Questions">'+s.qs.map(function(q,i){var a=s.ans[i],st=a===null?(done?' skip':''):(done||mockFb()==='now')?(a===q.a?' ok':' no'):' ans';
   return'<button role="listitem" class="mt'+st+(!done&&i===s.i?' cur':'')+(done&&i===s.rv?' cur':'')+'" data-a="mgo" data-i="'+i+'" aria-label="Question '+(i+1)+(a===null?', not answered':st===' ok'?', correct':st===' no'?', wrong':', answered')+'">'+(i+1)+'</button>'}).join('')+'</div>'}
 function mockOpts(q,a,show){return q.o.map(function(o,i){var c=show?(i===q.a?' ok':i===a?' bad':''):(i===a?' sel':'');return'<button class="opt'+c+'" data-a="opt" data-i="'+i+'"'+(show?' disabled':'')+'><span class="k">'+'ABCD'.charAt(i)+'</span><span>'+esc(o)+'</span></button>'}).join('')}
 function vMock(s){
