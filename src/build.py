@@ -17,8 +17,8 @@ open('hub_test.html','w').write('<!DOCTYPE html><html><head><meta charset="utf-8
 print(len(o),len(m))
 # GitHub Pages site (installable, works offline)
 HEAD=('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
- '<meta name="theme-color" content="#16284A"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="icon" href="icon-192.png" sizes="192x192">'
- '<link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="mobile-web-app-capable" content="yes"></head><body>')
+ '<meta name="theme-color" content="#16284A"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="icon" href="icon-192.png?v=2" sizes="192x192">'
+ '<link rel="apple-touch-icon" href="apple-touch-icon.png?v=2"><meta name="mobile-web-app-capable" content="yes"></head><body>')
 SW='<script>if("serviceWorker"in navigator&&location.protocol==="https:")addEventListener("load",function(){navigator.serviceWorker.register("sw.js")})</script>'
 if os.path.isdir('../docs'):
     open('../docs/index.html','w').write(HEAD+m+SW+'</body></html>')
