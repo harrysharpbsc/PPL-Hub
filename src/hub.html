@@ -72,6 +72,9 @@ body.focus .tabbar{display:none}
 .h1{font:700 1.95rem/1.1 var(--f-display);letter-spacing:-.02em;text-wrap:balance}
 .lede{color:var(--ink-2);margin-top:6px;max-width:60ch}
 .head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:22px}
+.sychip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:999px;padding:6px 14px;font:500 .86rem/1.3 var(--f-body);min-height:36px;cursor:pointer;max-width:100%}
+.sychip i{width:8px;height:8px;border-radius:50%;background:var(--ink-2);flex:none}.sychip.ok i{background:var(--good)}.sychip.paused i,.sychip.err i{background:var(--mid)}.sychip.busy i{background:var(--accent)}
+.syrow{margin:-8px 0 22px}.systat{display:flex;align-items:center;gap:8px;font-weight:600;margin:0 0 6px}.systat i{width:10px;height:10px;border-radius:50%;background:var(--ink-2)}.systat.ok i{background:var(--good)}.systat.paused i,.systat.err i{background:var(--mid)}.systat.busy i{background:var(--accent)}
 .pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:4px 12px;font-size:.82rem;font-weight:600;background:var(--warm-soft);color:var(--warm);white-space:nowrap}
 .sec-t{font:700 1.15rem/1.3 var(--f-display);margin:32px 0 12px}
 .m{color:var(--ink-2);font-size:.88rem}
@@ -451,7 +454,7 @@ var KEY='ppl-hub-v1';
 function freshS(){return{cards:{},quiz:{},miss:{},blurt:{},cloze:{},steps:{},days:{},newd:{d:0,n:0},cal:{cw:0,cr:0,gr:0,gw:0},custom:[],plan:0,pq:{d:0,v:10},mock:[],calc:{},ms:{},sec:{},radio:{},lab:{}}}
 var S=freshS();
 try{var raw=JSON.parse(localStorage.getItem(KEY)||'null');if(raw)for(var k in raw)S[k]=raw[k]}catch(e){}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}sySched()}
 function stepsOf(t){return S.steps[t]||(S.steps[t]={})}
 
 /* ---------- derived data ---------- */
@@ -598,7 +601,7 @@ function vToday(){
   var weak=NOTES.filter(function(n){var t=tStats(n);return t.secure<t.total&&(t.learning>0||t.secure>0||lastQuiz(n.topic))}).sort(function(a,b){return tStats(a).pct-tStats(b).pct}).slice(0,3);
   var wk=weak.length?'<h2 class="sec-t">Needs attention</h2><div class="stack">'+weak.map(function(n){var t=tStats(n),lq=lastQuiz(n.topic);return'<button class="sc" data-a="topic" data-i="'+n.id+'">'+ring(t.pct,48)+'<div><h3>'+n.topic+'</h3><p class="m">'+t.secure+' of '+t.total+' cards secure'+(lq?' · last quiz '+Math.round(100*lq.s/lq.n)+'%':'')+'</p></div></button>'}).join('')+'</div>':'';
   var how='<h2 class="sec-t">How this hub teaches</h2><div class="explain"><div><b>Test first</b><p>Pre-tests make you try before you read. The effort of guessing primes your memory for the answer.</p></div><div><b>Space it out</b><p>Cards you know come back later. Cards you miss come back sooner. You see each one just before you would forget it.</p></div><div><b>Mix it up</b><p>Daily review mixes topics and subjects. It feels harder and works better than studying one topic at a time.</p></div><div><b>Know what you know</b><p>Rating how sure you are shows where you are overconfident, which is where exams catch people out.</p></div></div>';
-  return'<div class="mbrand">'+LOGO+'<b>PPL Study Hub</b></div><div class="head"><div><h1 class="h1">Today</h1><p class="lede">'+new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'})+planLine()+'</p></div>'+(sk?'<span class="pill">'+sk+' day streak</span>':'')+thmBtn('mthm')+'</div>'+hero+tiles+cont+wk+weekCard()+how}
+  return'<div class="mbrand">'+LOGO+'<b>PPL Study Hub</b></div><div class="head"><div><h1 class="h1">Today</h1><p class="lede">'+new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'})+planLine()+'</p></div>'+(sk?'<span class="pill">'+sk+' day streak</span>':'')+thmBtn('mthm')+'</div>'+(syOn()?'<div class="syrow">'+syChip()+'</div>':'')+hero+tiles+cont+wk+weekCard()+how}
 
 function vSubjects(){
   return'<div class="head"><div><h1 class="h1">Subjects</h1><p class="lede">The nine UK PPL(A) exam subjects. Subjects fill in as you add notes to Obsidian.</p></div></div><div class="grid">'+SUBJECTS.map(function(s,i){
@@ -691,8 +694,8 @@ function vProgress(){
    +'<h2 class="sec-t">Confidence check</h2><div class="card">'+(certN?'<p>When you said <b>certain</b>, you were right <b>'+Math.round(100*cal.cr/certN)+'%</b> of the time ('+cal.cr+' of '+certN+').</p><p class="m" style="margin-top:6px">'+(cal.cw?cal.cw+' answers were certain and wrong. Those are the most valuable ones to fix.':'No confident mistakes so far.')+'</p>':'<p class="m">Take a quiz and rate how sure you are. This shows how well your confidence matches your results.</p>')+'</div>'
    +(tc?'<h2 class="sec-t">Tricky cards</h2><div class="card sum"><ul>'+tc+'</ul><div class="acts"><button class="btn" data-a="tricky">Practise these now</button></div></div>':'')
    +(mis.length?'<h2 class="sec-t">Mistakes to fix ('+mis.length+')</h2><div class="card sum"><ul>'+ms+'</ul><div class="acts"><button class="btn" data-a="fix">Practise these now</button></div></div>':'')
-   +'<h2 class="sec-t">Backup</h2><div class="card"><p>Save your progress, settings and kneeboard notes to a file, then restore it on another device or browser. Your progress is only kept on this device otherwise.</p><div class="acts"><button class="btn" data-a="backup">Save backup file</button><label class="btn alt" for="restore-file">Restore from file</label><input type="file" id="restore-file" accept=".json,application/json" hidden></div></div>'
-   +'<div class="row" style="margin-top:28px;justify-content:flex-start"><button class="link" data-a="reset">'+(resetArm?'Tap again to erase all progress':'Reset all progress')+'</button></div>'}
+   +syCard()+'<h2 class="sec-t">Backup</h2><div class="card"><p>Save your progress, settings and kneeboard notes to a file. Restoring a file adds its progress to what is already on this device, so nothing here is lost; its settings replace this device\'s.</p><div class="acts"><button class="btn" data-a="backup">Save backup file</button><label class="btn alt" for="restore-file">Restore from file</label><input type="file" id="restore-file" accept=".json,application/json" hidden></div></div>'
+   +'<div class="row" style="margin-top:28px;justify-content:flex-start"><button class="link" data-a="reset">'+(resetArm?'Tap again to erase all progress'+(syOn()?' (on every synced device)':''):'Reset all progress')+'</button></div>'}
 
 function mockFb(){return S.mockFb==='end'?'end':'now'}
 function mockGrid(s,done){return'<div class="mtiles" role="list" aria-label="Questions">'+s.qs.map(function(q,i){var a=s.ans[i],st=a===null?(done?' skip':''):(done||mockFb()==='now')?(a===q.a?' ok':' no'):' ans';
@@ -1011,6 +1014,8 @@ function act(a,d){
    case'xa':{var nn=NOTES[ui.topic],all=nn.sections.every(function(s2,i){return ex[nn.id+'|'+i]});nn.sections.forEach(function(s2,i){ex[nn.id+'|'+i]=!all});render();return}
    case'markread':stepsOf(NOTES[ui.topic].topic).read=true;save();toast('Marked as read');go('topic',{});return;
    case'backup':backupSave();return;
+   case'sync':if(syTok()&&syOn())syncNow(true);else syAuth();return;
+   case'syncoff':syOff();render();return;
    case'reset':if(resetArm){S=freshS();save();resetArm=false;toast('Progress erased')}else resetArm=true;render();return;
    case'end':exitSession();return;
    case'back':exitSession();return;
@@ -1039,11 +1044,109 @@ function act(a,d){
    case'clnext':{if(s.i>=s.items.length-1){s.done=true;var t=NOTES[s.n].topic,z=S.cloze[t]||(S.cloze[t]={s:0,n:0});z.n+=s.res.length;z.s+=s.res.filter(function(r){return r.ok}).length;save()}else{s.i++;s.typed='';s.checked=false;s.hint=false}render();return}
   }
 }
+/* ---------- sync between devices (progress only) via a hidden app folder in the user's Google Drive ----------
+   Each device keeps the last synced copy ("base"), so a sync is a three-way merge: answers made on both
+   devices since then are added together, and deletions (fixed mistakes, reset) carry across. Device settings
+   (voices, keyboard/voice answering, theme, kneeboard) are not synced. */
+var SYNC_CID='';
+var SY={st:'',msg:'',busy:false,again:false,t:0,gis:0,tc:null,h:0};
+function syGet(k){try{return localStorage.getItem('pplsync-'+k)}catch(e){return null}}
+function sySet(k,v){try{if(v===null)localStorage.removeItem('pplsync-'+k);else localStorage.setItem('pplsync-'+k,v)}catch(e){}}
+function syOn(){return!!SYNC_CID&&syGet('on')==='1'}
+function syTok(){try{var t=JSON.parse(syGet('tok')||'null');return t&&t.exp>Date.now()+60000?t.t:null}catch(e){return null}}
+function cj(v){if(v===null||typeof v!=='object')return JSON.stringify(v);if(Array.isArray(v))return'['+v.map(function(x){return x===undefined?'null':cj(x)}).join(',')+']';
+  return'{'+Object.keys(v).sort().filter(function(k){return v[k]!==undefined}).map(function(k){return JSON.stringify(k)+':'+cj(v[k])}).join(',')+'}'}
+function syRule(p){var t=p[0],n=p.length,l=p[n-1];
+  if(n===2&&(t==='days'||t==='sec'||t==='cal'))return'add';
+  if(n===3&&(t==='cloze'||t==='calc'||t==='radio'))return'add';
+  if(n===3&&(t==='lab'||t==='miss')&&l==='n')return'add';
+  if((n===3&&t==='lab'&&l==='best')||(n===2&&t==='ms'))return'max';
+  if((n===2&&(t==='quiz'||t==='blurt'))||(n===1&&(t==='mock'||t==='custom')))return'bag';
+  if(n===2&&t==='cards')return'card';
+  if(n===1&&(t==='newd'||t==='pq'))return'dated';
+  return''}
+function syBag(b,l,r,hb){function cnt(a){var m={};a.forEach(function(x){var k=cj(x);m[k]=(m[k]||0)+1});return m}
+  var cb=cnt(b),cl=cnt(l),cr=cnt(r),used={},out=[];
+  l.concat(r).forEach(function(x){var k=cj(x);if(used[k])return;used[k]=1;var nl=cl[k]||0,nr=cr[k]||0,n=hb?Math.max(0,nl+nr-(cb[k]||0)):Math.max(nl,nr);for(var i=0;i<n;i++)out.push(x)});
+  if(out.every(function(x){return x&&typeof x.d==='number'}))out.sort(function(a,c){return a.d-c.d});
+  return out}
+/* b = last synced copy (or null), l = this device, r = the other copy; hb = a base exists */
+function syMerge(b,l,r,hb,p){p=p||[];
+  var ru=syRule(p),num=typeof l==='number'&&typeof r==='number';
+  if(hb&&ru==='add'&&num)return Math.max(0,l+r-(typeof b==='number'?b:0));
+  if(hb&&ru==='bag'&&Array.isArray(l)&&Array.isArray(r))return syBag(Array.isArray(b)?b:[],l,r,true);
+  if(cj(l)===cj(r))return l;
+  if(hb){if(cj(l)===cj(b))return r;if(cj(r)===cj(b))return l}
+  if(l===undefined)return r;if(r===undefined)return l;
+  if(ru==='add'&&num)return hb?Math.max(0,l+r-(typeof b==='number'?b:0)):Math.max(l,r);
+  if(ru==='max'&&num)return Math.max(l,r);
+  if(ru==='bag'&&Array.isArray(l)&&Array.isArray(r))return syBag(hb&&Array.isArray(b)?b:[],l,r,hb);
+  if(ru==='card'&&l&&r)return(r.n||0)>(l.n||0)||((r.n||0)===(l.n||0)&&(r.d||0)>(l.d||0))?r:l;
+  if(ru==='dated'&&l&&r){if(p[0]==='newd'&&l.d===r.d){var bn=hb&&b&&b.d===l.d?b.n||0:0;return{d:l.d,n:hb?Math.max(0,(l.n||0)+(r.n||0)-bn):Math.max(l.n||0,r.n||0)}}return(r.d||0)>(l.d||0)?r:l}
+  if(l&&r&&typeof l==='object'&&typeof r==='object'&&!Array.isArray(l)&&!Array.isArray(r)){var o={},ks={},k;
+    for(k in l)ks[k]=1;for(k in r)ks[k]=1;
+    for(k in ks){var v=syMerge(b&&typeof b==='object'?b[k]:undefined,l[k],r[k],hb,p.concat(k));if(v!==undefined)o[k]=v}
+    return o}
+  return l}
+function syFill(m){var f=freshS();for(var k in f)if(m[k]===undefined)m[k]=f[k];return m}
+var GAPI='https://www.googleapis.com/',SYF='ppl-hub-sync.json';
+function syFetch(u,o){o=o||{};o.headers=o.headers||{};o.headers.Authorization='Bearer '+syTok();
+  return fetch(u,o).then(function(r){if(r.status===401||r.status===403){sySet('tok',null);throw{auth:1}}if(!r.ok&&r.status!==404)throw{http:r.status};return r})}
+function syFind(){return syFetch(GAPI+'drive/v3/files?spaces=appDataFolder&fields=files(id)&q='+encodeURIComponent("name='"+SYF+"'")).then(function(r){return r.json()}).then(function(j){return j&&j.files&&j.files[0]?j.files[0].id:null})}
+function syRead(id){return syFetch(GAPI+'drive/v3/files/'+id+'?alt=media').then(function(r){return r.status===404?null:r.json()})}
+function syWrite(id,txt){if(id)return syFetch(GAPI+'upload/drive/v3/files/'+id+'?uploadType=media',{method:'PATCH',headers:{'Content-Type':'application/json'},body:txt});
+  var bd='ppl-hub-sync-part';
+  return syFetch(GAPI+'upload/drive/v3/files?uploadType=multipart',{method:'POST',headers:{'Content-Type':'multipart/related; boundary='+bd},
+    body:'--'+bd+'\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n'+JSON.stringify({name:SYF,parents:['appDataFolder']})+'\r\n--'+bd+'\r\nContent-Type: application/json\r\n\r\n'+txt+'\r\n--'+bd+'--'})}
+function syncNow(inter){if(!syOn())return;
+  if(SY.busy){SY.again=true;return}
+  if(!syTok()){SY.st='paused';syUi();if(inter)syAuth();return}
+  if(ses){SY.st='wait';syUi();return}
+  SY.busy=true;SY.st='busy';syUi();clearTimeout(SY.h);var id=null;
+  syFind().then(function(f){id=f;return f?syRead(f):null}).then(function(rem){
+    var rs=rem&&rem.app==='ppl-study-hub'&&rem.data&&rem.data[KEY]&&typeof rem.data[KEY]==='object'?rem.data[KEY]:null,bs=null;
+    try{bs=JSON.parse(syGet('base')||'null')}catch(e){}
+    if(ses)throw{later:1};
+    var cur=JSON.parse(JSON.stringify(S)),m=syFill(rs?syMerge(bs,cur,rs,!!bs):cur);
+    if(cj(m)!==cj(cur)){S=m;try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}if(!ses)render()}
+    var w=rs&&cj(m)===cj(rs)?Promise.resolve():syWrite(id,JSON.stringify({app:'ppl-study-hub',v:1,saved:new Date().toISOString(),data:{'ppl-hub-v1':m}}));
+    return w.then(function(){sySet('base',JSON.stringify(m));sySet('at',String(Date.now()));SY.st='ok';SY.msg=''})
+  }).catch(function(e){SY.st=e&&e.auth?'paused':e&&e.later?'wait':'err';SY.msg=e&&e.auth?'':navigator.onLine===false?'You are offline.':'Google Drive did not respond.'})
+  .then(function(){SY.busy=false;syUi();if(SY.again){SY.again=false;syncNow(false)}})}
+function sySched(){if(!SY||!syOn()||!syTok())return;clearTimeout(SY.h);SY.h=setTimeout(function(){syncNow(false)},30000)}
+function syLoadGis(cb){if(window.google&&google.accounts&&google.accounts.oauth2){if(cb)cb();return}if(cb)SY.gcb=cb;if(SY.gis)return;SY.gis=1;
+  var s=document.createElement('script');s.src='https://accounts.google.com/gsi/client';s.async=true;
+  s.onload=function(){var f=SY.gcb;SY.gcb=null;if(f)f()};s.onerror=function(){SY.gis=0;SY.gcb=null;SY.st='err';SY.msg='Could not reach Google. Check your connection.';syUi()};document.head.appendChild(s)}
+function syAuth(){if(!SYNC_CID)return;
+  if(!(window.google&&google.accounts&&google.accounts.oauth2)){SY.st='loading';syUi();syLoadGis(function(){SY.st=syGet('on')==='1'?'paused':'';syUi();toast('Ready. Tap again to sign in.')});return}
+  if(!SY.tc)SY.tc=google.accounts.oauth2.initTokenClient({client_id:SYNC_CID,scope:'https://www.googleapis.com/auth/drive.appdata',
+    callback:function(r){if(r&&r.access_token&&google.accounts.oauth2.hasGrantedAllScopes&&!google.accounts.oauth2.hasGrantedAllScopes(r,'https://www.googleapis.com/auth/drive.appdata')){SY.st=syGet('on')==='1'?'paused':'';syUi();toast('Sync needs the Google Drive tick box. Tap again and tick it.');return}if(r&&r.access_token){sySet('tok',JSON.stringify({t:r.access_token,exp:Date.now()+(+r.expires_in||3600)*1000}));sySet('ok','1');var first=syGet('on')!=='1';sySet('on','1');if(first)render();syncNow(false)}else{SY.st=syGet('on')==='1'?'paused':'';syUi()}},
+    error_callback:function(){SY.st=syGet('on')==='1'?'paused':'';syUi()}});
+  SY.tc.requestAccessToken({prompt:syGet('ok')?'':'consent'})}
+function syOff(){var t=syTok();if(t&&window.google&&google.accounts&&google.accounts.oauth2)try{google.accounts.oauth2.revoke(t,function(){})}catch(e){}
+  ['on','tok','base','at'].forEach(function(k){sySet(k,null)});SY.st='';clearTimeout(SY.h);toast('Sync turned off on this device')}
+function syWhen(){var a=+syGet('at');if(!a)return'';var d=new Date(a),now=new Date();return(d.toDateString()===now.toDateString()?'':d.toLocaleDateString('en-GB',{day:'numeric',month:'short'})+' ')+d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'})}
+function syState(){var st=SY.st;if(!st||st==='ok')st=syTok()?(syGet('at')?'ok':'busy'):'paused';return st}
+function syText(){var st=syState(),w=syWhen();
+  return st==='busy'?'Syncing…':st==='loading'?'Connecting to Google…':st==='wait'?'Syncs when you finish this session':st==='err'?'Sync failed: tap to try again':st==='paused'?'Tap to sync'+(w?' (last '+w+')':''):'Synced'+(w?' '+w:'')}
+function syChip(){var st=syState();return'<button id="sy-chip" class="sychip '+st+'" data-a="sync" aria-label="Sync progress: '+esc(syText())+'"><i></i><span>'+esc(syText())+'</span></button>'}
+function syCard(){if(!SYNC_CID)return'';setTimeout(function(){syLoadGis()},0);
+  if(!syOn())return'<h2 class="sec-t">Sync between devices</h2><div class="card" id="sy-card"><p>Keep your progress the same on your phone and tablet. It is saved privately in a hidden app folder in your Google Drive, which only this app can open.</p><p class="m" style="margin-top:6px">Voices, keyboard or voice answering, dark mode and the kneeboard stay separate on each device.</p><div class="acts"><button class="btn" data-a="sync">Connect Google account</button></div></div>';
+  var st=syState();
+  return'<h2 class="sec-t">Sync between devices</h2><div class="card" id="sy-card"><p class="systat '+st+'"><i></i><span>'+esc(syText())+'</span></p>'+(SY.msg?'<p class="m">'+esc(SY.msg)+'</p>':'')
+    +'<p class="m" style="margin-top:6px">Progress syncs when you open the app, while you study and when you leave it. Google only lets the app sync for an hour at a time, so if it says <b>Tap to sync</b>, tap it once.</p>'
+    +'<div class="acts"><button class="btn" data-a="sync">Sync now</button><button class="btn alt" data-a="syncoff">Turn off on this device</button></div></div>'}
+function syUi(){if(!SY)return;var c=$('sy-chip');if(c)c.outerHTML=syChip();var d=$('sy-card');if(d){var t=document.createElement('div');t.innerHTML=syCard();var n=t.querySelector('#sy-card');if(n)d.replaceWith(n)}}
+document.addEventListener('visibilitychange',function(){if(!syOn())return;
+  if(document.visibilityState==='hidden'){if(syTok()&&!ses)syncNow(false)}
+  else if(Date.now()-SY.t>20000){SY.t=Date.now();if(syTok())syncNow(false);else{SY.st='paused';syUi()}}});
+if(syOn()){syLoadGis();SY.t=Date.now();setTimeout(function(){if(syTok())syncNow(false);else{SY.st='paused';syUi()}},1200)}
+
 function backupSave(){try{save();var d={};for(var i=0;i<localStorage.length;i++){var k=localStorage.key(i);if(/^ppl-/.test(k))d[k]=localStorage.getItem(k)}
   var txt=JSON.stringify({app:'ppl-study-hub',saved:new Date().toISOString(),data:d}),blob=new Blob([txt],{type:'application/json'}),a=document.createElement('a');
   a.href=URL.createObjectURL(blob);a.download='ppl-hub-backup-'+new Date().toISOString().slice(0,10)+'.json';document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},4000);toast('Backup saved to your downloads')}catch(e){toast('Could not save the backup')}}
-function backupLoad(f){var r=new FileReader();r.onload=function(){try{var j=JSON.parse(r.result);if(!j||j.app!=='ppl-study-hub'||!j.data)throw 0;var n=0;for(var k in j.data)if(/^ppl-/.test(k)&&typeof j.data[k]==='string'){localStorage.setItem(k,j.data[k]);n++}
-  if(!n)throw 0;toast('Backup restored, reloading…');setTimeout(function(){location.reload()},900)}catch(e){toast('That file is not a PPL Study Hub backup')}};r.readAsText(f)}
+function backupLoad(f){var r=new FileReader();r.onload=function(){try{var j=JSON.parse(r.result);if(!j||j.app!=='ppl-study-hub'||!j.data)throw 0;var n=0;for(var k in j.data)if(/^ppl-/.test(k)&&typeof j.data[k]==='string'){var v=j.data[k];if(k===KEY){try{v=JSON.stringify(syFill(syMerge(null,JSON.parse(JSON.stringify(S)),JSON.parse(v),false)))}catch(e2){}}localStorage.setItem(k,v);n++}
+  if(!n)throw 0;toast('Backup added to this device, reloading…');setTimeout(function(){location.reload()},900)}catch(e){toast('That file is not a PPL Study Hub backup')}};r.readAsText(f)}
 document.addEventListener('change',function(e){if(e.target&&e.target.id==='restore-file'&&e.target.files&&e.target.files[0]){backupLoad(e.target.files[0]);e.target.value=''}});
 document.addEventListener('click',function(e){var b=e.target.closest('[data-a]');if(b)act(b.dataset.a,b.dataset)});
 document.addEventListener('input',function(e){var t=e.target;if(t&&t.dataset&&t.dataset.a==='lxr')labOn({k:'r',v:t.value,f:t.dataset.f})});
