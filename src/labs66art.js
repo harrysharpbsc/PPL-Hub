@@ -40,7 +40,7 @@ function mkMatch(s){var P=shuffle(pool(s)).slice(0,6);if(P.length<4)P=shuffle(AL
   return{l:shuffle(P.map(function(x,i){return{i:i,t:'Article '+x.no}})),r:shuffle(P.map(function(x,i){return{i:i,t:x.t}})),n:P.length}}
 function best(bi){var m=S.art&&S.art[bi];return m||0}
 function keep(bi,pct){S.art=S.art||{};if(pct>(S.art[bi]||0))S.art[bi]=pct;save()}
-addLab({id:'articles',name:'Chicago Convention articles',sub:'Learn the articles in five themed blocks, then test yourself',grp:'game',
+addLab({id:'articles',name:'Chicago Convention articles',sub:'Learn the articles in five themed blocks, then test yourself',grp:'game',subj:0,
  init:function(s){s.v='menu';s.bi=null},
  on:function(s,k,v){
   if(k==='menu'){s.v='menu';render();return}

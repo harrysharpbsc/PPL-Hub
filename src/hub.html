@@ -617,6 +617,8 @@ function vSubject(){
     var t=tStats(n),i=nextStep(n),st=i>=0?stepList(n)[i]:null;
     return'<button class="sc" data-a="topic" data-i="'+n.id+'">'+ring(t.pct,52)+'<div><h3>'+n.topic+'</h3><p class="m">'+n.cl.length+' cards · '+n.quiz.length+' questions'+(t.due?' · '+t.due+' due':'')+'</p><p class="m stl">'+stepBar(n)+'</p><p class="m">'+(st?'Next: '+st.t.toLowerCase():'All steps complete')+'</p></div></button>'}).join('')+'</div>';
   h+='<div class="row" style="margin-top:20px;justify-content:flex-start;gap:12px;flex-wrap:wrap"><button class="btn alt" data-a="mix" data-i="'+si+'">Mixed quiz across topics</button><button class="btn alt" data-a="sheet" data-i="'+si+'">One-page cheat sheet</button></div>';
+  var SL=LABLIST.filter(function(x){return x.subj===si});
+  if(SL.length)h+='<h2 class="sec-t">Labs for this subject</h2><div class="card">'+SL.map(function(x){return'<button class="pick" data-a="lab" data-id="'+x.id+'"><span><b>'+esc(x.name)+'</b><br><span class="m" style="font-family:var(--f-body);font-size:.84rem">'+esc(x.sub)+'</span></span><span class="m">'+labStat(x.id)+'</span></button>'}).join('')+'</div>';
   return h}
 
 function vTopic(){
