@@ -13,6 +13,13 @@ UK CAA PPL(A) revision app for Harry (student pilot). One self-contained web pag
 - Don't put real brands (Piper, Cessna names/logos) in the app's branding.
 - Monetisation is shelved until the notes are finished.
 
+## Writing quiz questions
+Harry's Obsidian notes (synced to Google Drive, folder `PPL`, one folder per subject) may end with a **Practice Questions** section copied from his textbooks, with an answer key. Use them as the model for exam-style questions, but don't paste them into the app word for word (the repo is public): write your own in the same style.
+- Check the textbook answer key before relying on it (the Rules of the Air key said ATC for "ultimately responsible for avoiding collisions"; it is the pilot in command).
+- Copy the exam's habits: distractors that differ by one element ("heading and speed" vs "heading and height"), the right rule with and without its caveat ("lower aircraft has priority" vs "... but must not cut in on final"), metric/imperial pairs ("300 m (1,000 ft) within 600 m"), and scenarios (relative bearing plus which light you can see).
+- Every explanation says why the answer is right and, where there is an obvious trap, why the tempting option is wrong.
+- Quiz items are `[question, [4 options], correctIndex, why]`; options are shuffled at run time, so don't write "all of the above".
+
 ## Layout
 - `src/hub.html` — shell: all CSS (light and dark tokens on `:root`), core app (Today, Subjects, Practice, Radio, Labs, Progress), quiz/mock engine, backup/restore. Everything sits inside one IIFE.
 - `src/data.js`, `radio.js`, `caa*.js` — study content (`NOTES`, quizzes, radio phraseology). Inserted at `/*DATA*/`.
