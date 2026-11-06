@@ -23,6 +23,7 @@ Harry's Obsidian notes (synced to Google Drive, folder `PPL`, one folder per sub
 ## Layout
 - `src/hub.html` — shell: all CSS (light and dark tokens on `:root`), core app (Today, Subjects, Practice, Radio, Labs, Progress), quiz/mock engine, backup/restore. Everything sits inside one IIFE.
 - `src/data.js`, `radio.js`, `caa*.js` — study content (`NOTES`, quizzes, radio phraseology). Inserted at `/*DATA*/`.
+  - Topics from Harry's own notes carry `num` = the number in the note's file name ("03 Rules of the Air.md" → `num: 3`). A subject page lists them first, in that order, as "Your notes", then the CAA-guidance topics (`src`, no `num`) by `order`.
 - `src/labs*.js` — interactive labs, concatenated in sorted filename order at `/*LABS*/`. Each calls `addLab({id,name,sub,grp,init,on,view})`; buttons use `data-a="lx" data-k=... data-v=...`.
   - `labs1.js` flight framework (`flightLab`), voice answering and marking (`vnorm`, `vGradeBuild`, `vGradeMcq`), flight settings `FS` (localStorage `ppl-fs`), map/chart drawing.
   - `labs62.js` random scenario generators (cross-country, circuits, controlled arrival/departure).
