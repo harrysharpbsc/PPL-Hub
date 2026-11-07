@@ -19,10 +19,16 @@ dzAdd('Operations of Aircraft',[
   'Commercial or not depends on payment, air transport or specialised on the activity, complex or not on the aircraft.'),
  dzF('What makes an aeroplane complex',
   [['MTOM over','5,700 kg','M30 60h40v-14l-8-10h-24l-8 10Z'],['Passenger seats','more than 19',''],['Minimum crew','2 pilots',''],['Engines','1+ turbojet or 2+ turboprop','']].map(function(r,i){var x=10+i*76;return dzB(x,30,70,110,'var(--surface)','var(--accent)',6)+dzT(x+35,52,r[0],'d2','middle')+(r[1].length>14?dzT(x+35,124,r[1].split(' or ')[0],'d1','middle',7.5)+dzT(x+35,135,'or '+r[1].split(' or ')[1],'d1','middle',7.5):dzT(x+35,128,r[1],'d1','middle'))}).join('')
-  +'<g transform="translate(45 92)"><path d="M-18 10H18L14-6H-14Z" fill="var(--ink-2)"/><text y="6" text-anchor="middle" class="d1" style="fill:var(--surface)">kg</text></g>'
+  +'<g transform="translate(45 92)"><path d="M-18 10H18L14-6H-14Z" fill="var(--ink-2)"/><text y="6" text-anchor="middle" class="d1" style="fill:var(--surface);stroke:none">kg</text></g>'
   +'<g transform="translate(121 92)">'+[0,1,2,3].map(function(r){return[0,1,2,3,4].map(function(c){return'<rect x="'+(-17+c*7)+'" y="'+(-14+r*7)+'" width="5" height="5" rx="1" fill="var(--ink-2)"/>'}).join('')}).join('')+'</g>'
   +'<g transform="translate(197 92)"><circle cx="-8" cy="-6" r="5" fill="var(--ink-2)"/><circle cx="8" cy="-6" r="5" fill="var(--ink-2)"/><path d="M-16 12C-16 2-12 0-8 0S0 2 0 12ZM0 12C0 2 4 0 8 0S16 2 16 12Z" fill="var(--ink-2)"/></g>'
-  +'<g transform="translate(273 92)"><path d="M-18-6H10L18 0L10 6H-18Z" fill="var(--ink-2)"/><path d="M-18-8V8" stroke="var(--ink)" stroke-width="2"/></g>'
+  /* Engines: one turbojet (intake, casing, nozzle, hot exhaust), "or", two turboprops (nacelle with propeller) */
+  +'<g transform="translate(264 70) scale(.9)"><path d="M-22-7.5H8L18-4.5H22V4.5H18L8 7.5H-22Z" fill="var(--ink-2)"/><path d="M-12-7.5V7.5M0-7.5V7.5" stroke="var(--surface)" stroke-width=".8" opacity=".6"/>'
+  +'<ellipse cx="-22" cy="0" rx="3.2" ry="8" fill="var(--ink)"/><ellipse cx="-22.4" cy="0" rx="1.8" ry="6" fill="var(--surface-2)"/><path d="M-22.4-5.5V5.5M-24-3.5L-21 3.5M-24 3.5L-21-3.5" stroke="var(--ink-2)" stroke-width=".7"/>'
+  +'<path d="M22-3L28 0L22 3Z" fill="var(--ink)"/><path d="M30-2.5q3-2 6 0t6 0M30 2.5q3 2 6 0t6 0" fill="none" stroke="var(--mid)" stroke-width="1.2"/></g>'
+  +dzT(273,87,'or','d2','middle',7)
+  +[255,289].map(function(cx){return'<g transform="translate('+cx+' 102) scale(1.12)"><path d="M-7-3.5H8L13-2V2L8 3.5H-7Z" fill="var(--ink-2)"/><path d="M-7-3Q-11.5 0-7 3Z" fill="var(--ink)"/>'
+   +'<ellipse cx="-9.5" cy="0" rx="2" ry="11" fill="none" stroke="var(--ink-2)" stroke-width=".5" stroke-dasharray="1.5 1.5"/><path d="M-9.5-1L-10.6-10.5Q-9.5-11.5-8.4-10.5ZM-9.5 1L-10.6 10.5Q-9.5 11.5-8.4 10.5Z" fill="var(--ink)"/><path d="M8 3.5l3 2.5" stroke="var(--ink)" stroke-width="1.2"/></g>'}).join('')
   +dzT(160,172,'Any one of these makes it complex','d1','middle',null,'var(--bad)')+dzT(160,188,'A typical PPL single meets none of them','d2','middle'),
   'MTOM over 5,700 kg, more than 19 passenger seats, at least 2 pilots, or at least one turbojet or more than one turboprop.'),
  dzF('Which rules for a G-registered aeroplane?',
