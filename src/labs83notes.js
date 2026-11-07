@@ -19,7 +19,7 @@ sec(R,'Collision avoidance',[
   +T(206,128,'same angle','d1','end',null,'var(--mid)')+T(206,139,'every time','d2','end')
   +'<g transform="translate(14 118)"><path d="M0 6Q60-6 120 6L114 74H6Z" fill="#bfe0f5" stroke="#1d2b45" stroke-width="1.6"/><path d="M3 50H117" stroke="#6a8f4e" stroke-width="2"/><path d="M6 52H114L114 74H6Z" fill="#9cc27e"/><path d="M60 2V74" stroke="#1d2b45" stroke-width="2.4"/>'
   +'<g transform="translate(34 36)"><path d="M-9 0H7L10-3L12-1L9 2H-9Z" fill="#1d2b45"/><path d="M-4 0L-1-6H2L1 0Z" fill="#1d2b45"/></g>'+'<circle cx="34" cy="36" r="13" fill="none" stroke="var(--bad)" stroke-width="1.2" stroke-dasharray="3 2"/></g>'
-  +T(74,206,'It stays still in your windscreen','d1','middle')+T(74,106,'Your view at t1, t2 and t3','d2','middle'),
+  +T(74,206,'It stays still in your windscreen','d1','middle',8.6)+T(74,106,'Your view at t1, t2 and t3','d2','middle'),
   'If another aircraft keeps the same relative bearing while its range closes, you will collide. In the windscreen it does not move, it just grows. Change heading or height to break it.',320,215)
 ]);
 sec(R,'Flights near an aerodrome',[
@@ -91,8 +91,8 @@ sec(R,'Open-air assemblies',[
   +'<ellipse cx="110" cy="158" rx="40" ry="13" fill="var(--surface-2)" stroke="var(--ink)" stroke-width="1.4"/><ellipse cx="110" cy="156" rx="26" ry="7" fill="var(--ch-l1)" stroke="var(--ink-2)"/><path d="M70 158V164A40 13 0 0 0 150 164V158" fill="none" stroke="var(--ink)" stroke-width="1.4"/>'
   +T(110,186,'over 1,000 people','d2','middle')
   +dzSide(110,28,.9,'var(--accent)')+A(110,38,110,140,'var(--bad)',1.4)+T(116,80,'1,000 ft above the','d1',null,null,'var(--bad)')+T(116,91,'highest obstacle','d2')+T(116,101,'within 600 m, or','d2')+T(116,111,'enough to land clear','d2')+T(116,121,'if that is higher','d2')
-  +dzSide(282,100,.8,'var(--accent)',true)+A(270,108,212,150,'var(--mid)',1.4,'5 3')+T(258,140,'No take-off or','d1','middle',null,'var(--mid)')+T(258,151,'landing within','d1','middle',null,'var(--mid)')+T(258,162,'1,000 m','d1','middle',null,'var(--mid)')
-  +T(258,180,'unless at an aerodrome','d2','middle')+T(258,190,'or with permission','d2','middle'),
+  +dzSide(282,100,.8,'var(--accent)',true)+A(262,110,208,152,'var(--mid)',1.4,'5 3')+T(272,140,'No take-off or','d1','middle',null,'var(--mid)')+T(272,151,'landing within','d1','middle',null,'var(--mid)')+T(272,162,'1,000 m','d1','middle',null,'var(--mid)')
+  +T(262,180,'unless at an aerodrome','d2','middle')+T(262,190,'or with permission','d2','middle'),
   'UK: written CAA permission is needed to fly lower. The 1,000 m take-off and landing ban has exceptions at aerodromes (CAA procedures) and at other sites with the organiser\'s permission.',320,200)
 ]);
 
@@ -121,7 +121,7 @@ sec(D,'Right of way on the ground',[
   +taxi('M212 120Q236 122 248 150')+A(246,146,250,158,'var(--bad)',1.4)+taxi('M264 110Q240 108 228 80')+A(230,84,226,72,'var(--bad)',1.4),
   'Aircraft on the ground give way to aircraft taking off or landing. Head-on, or nearly so, each turns right.',320,198),
  F('Taxiing: who gives way (3 and 4)',
-  panel(10,8,145,180,4,'Converging')+acL(116,64,-90,1.1,'var(--ink)',false)+A(102,64,30,64,'var(--ink-2)',1.2,'4 3')+T(116,44,'has right of way','d2','middle')
+  panel(10,8,145,180,4,'Converging')+acL(116,64,-90,1.1,'var(--ink)',false)+A(102,64,30,64,'var(--ink-2)',1.2,'4 3')+T(66,52,'has right of way','d2','middle')
   +acL(40,160,0,1.1,'var(--accent)',false)+taxi('M40 146Q42 98 100 98Q140 98 142 50')+A(142,54,142,40,'var(--bad)',1.4)+T(54,166,'has it on its right:','d2')+T(54,176,'stop or pass behind','d2')
   +panel(165,8,145,180,5,'Overtaking')+acL(240,70,-90,1.1,'var(--ink)',false)+A(226,70,180,70,'var(--ink-2)',1.2,'4 3')+T(240,50,'being overtaken:','d2','middle')+T(240,60,'has right of way','d2','middle')
   +acL(292,150,-90,1.1,'var(--accent)',false)+taxi('M278 150Q250 150 240 120Q232 104 200 100')+A(204,100,186,100,'var(--bad)',1.4)+T(238,172,'overtaker keeps','d2','middle')+T(238,182,'well clear until past','d2','middle'),

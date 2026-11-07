@@ -47,7 +47,7 @@ dzAdd('GA radiotelephony practice (SS22)',[
 
 /* VFR flight planning and VMC minima */
 var vmc=F('UK VMC minima at a glance',
-  ground(182)+L('M0 34H320','var(--ink)',1,'5 3')+T(4,30,'FL100','d1')+L('M0 108H320','var(--ink)',1,'5 3')+T(4,104,'3,000 ft AMSL','d2',null,7.6)+T(4,124,'or 1,000 ft','d2',null,6.6)
+  ground(182)+L('M0 34H320','var(--ink)',1,'5 3')+T(4,30,'FL100','d1')+L('M0 108H320','var(--ink)',1,'5 3')+T(4,92,'3,000 ft AMSL, or','d2',null,7.2)+T(4,103,'1,000 ft AGL if higher','d2',null,7.2)
   +B(126,40,188,62,'var(--surface)','var(--accent)')+T(220,56,'Below FL100 and above 3,000 ft','d1','middle',8.2)+T(220,70,'5 km visibility','d2','middle')+T(220,82,'1,500 m horizontal and','d2','middle')+T(220,94,'1,000 ft vertical from cloud','d2','middle')
   +T(220,24,'FL100 and above: 8 km, same cloud distances','d2','middle',7)
   +B(8,116,146,58,'var(--surface)','var(--ink-2)')+T(81,130,'Classes A to E','d1','middle')+T(81,143,'5 km, 1,500 m and','d2','middle')+T(81,155,'1,000 ft from cloud','d2','middle')
@@ -107,7 +107,7 @@ dzAdd('Route planning and altitude selection (Skyway Code)',[
   'A made-up quadrangle. The big figure is in thousands and hundreds of feet. Study 5 NM either side of your track.'),
  F('Planning the descent',
   ground(176)+'<rect x="250" y="170" width="50" height="6" fill="#555c6b"/>'+L('M20 30L250 170','var(--accent)',2.4)+dzSide(30,34,.9,'var(--accent)')
-  +[[20,30,'4,000 ft'],[97,77,'3,000 ft'],[173,123,'2,000 ft']].map(function(r){return'<circle cx="'+r[0]+'" cy="'+r[1]+'" r="3" fill="var(--accent)"/>'+T(r[0]+8,r[1]+14,r[2],'d2')}).join('')
+  +[[20,30,'4,000 ft'],[97,77,'3,000 ft'],[173,123,'2,000 ft']].map(function(r){return'<circle cx="'+r[0]+'" cy="'+r[1]+'" r="3" fill="var(--accent)"/>'+(r[0]===20?T(4,60,r[2],'d2'):T(r[0]-8,r[1]+16,r[2],'d2','end'))}).join('')
   +T(200,40,'3 NM per 1,000 ft','d1','middle')+T(200,54,'Rate: ground speed × 5','d2','middle')+T(200,66,'100 kt ≈ 500 ft/min (3°)','d2','middle'),
   'From 4,000 ft to land, start about 12 NM out. 3° is about 300 ft per NM.'),
  F('Take 2 around airspace',
@@ -124,7 +124,7 @@ dzAdd('Altimeter settings (Skyway Code)',[
   '<path d="M0 186H320V200H0Z" fill="#a9cfe6"/>'+T(300,196,'mean sea level','d2','end',7)+'<path d="M0 150Q60 140 120 150V186H0Z" fill="var(--ch-l2)"/>'+'<rect x="40" y="144" width="60" height="6" fill="#555c6b"/>'+T(70,140,'aerodrome 300 ft','d2','middle',7.4)
   +dzSide(200,60,1.1,'var(--accent)')+A(200,66,200,148,'var(--good)',1.4)+A(214,66,214,184,'var(--accent)',1.4)+A(228,66,228,30,'var(--mid)',1.4)
   +L('M0 150H320','var(--ink-2)',.7,'2 3')+L('M0 26H320','var(--mid)',.8,'2 3')+T(316,22,'1013.25 hPa pressure level','d2','end',7)
-  +T(194,110,'QFE: height','d1','end',null,'var(--good)')+T(194,121,'above aerodrome','d2','end',7.4)+T(220,110,'QNH: altitude','d1',null,null,'var(--accent)')+T(220,121,'above sea level','d2',null,7.4)+T(234,48,'1013: flight level','d1',null,null,'var(--mid)'),
+  +T(194,110,'QFE: height','d1','end',null,'var(--good)')+T(194,121,'above aerodrome','d2','end',7.4)+T(220,110,'QNH: altitude','d1',null,null,'var(--accent)')+T(220,121,'above sea level','d2',null,7.4)+T(238,46,'1013: flight level','d1',null,null,'var(--mid)'),
   'On the ground QFE reads zero and QNH reads the aerodrome elevation. Above the transition altitude, set 1013 for flight levels.'),
  F('Transition altitude and level',
   L('M0 150H320','var(--ink)',1)+T(316,146,'transition altitude (often 3,000 ft)','d2','end',7.4)+L('M0 110H320','var(--ink)',1)+T(316,106,'transition level, at least 1,000 ft above','d2','end',7.4)
@@ -156,7 +156,7 @@ dzAdd('Fuel, flight plans and aerodrome planning (Skyway Code)',[
 dzAdd('Rules of the Air essentials (Skyway Code)',[
  F('Right of way on the ground',
   B(4,8,100,170,'var(--surface)','var(--ink-2)',6)+T(54,24,'Head-on','d1','middle')+P(40,140,0,'var(--accent)',1.2)+P(68,56,180,'var(--ink)',1.2)+A(40,124,52,96,'var(--accent)',1)+A(68,72,56,104,'var(--ink)',1)+T(54,170,'both stop, turn right','d2','middle',7)
-  +B(110,8,100,170,'var(--surface)','var(--ink-2)',6)+T(160,24,'Converging','d1','middle')+P(140,140,0,'var(--accent)',1.2)+P(190,90,270,'var(--ink)',1.2)+T(160,170,'other on your right:','d2','middle',7)+T(160,180,'you give way','d2','middle',7)
+  +B(110,8,100,170,'var(--surface)','var(--ink-2)',6)+T(160,24,'Converging','d1','middle')+P(140,140,0,'var(--accent)',1.2)+P(190,90,270,'var(--ink)',1.2)+T(160,164,'other on your right:','d2','middle',7)+T(160,174,'you give way','d2','middle',7)
   +B(216,8,100,170,'var(--surface)','var(--ink-2)',6)+T(266,24,'Overtaking','d1','middle')+P(266,60,0,'var(--ink)',1.2)+P(266,140,0,'var(--accent)',1.2)+A(260,124,240,84,'var(--accent)',1)+A(272,124,292,84,'var(--accent)',1)+T(266,170,'pass left or right','d2','middle',7)
   +T(160,193,'Give way to aircraft taking off. Emergency vehicles first.','d2','middle',7),
   'On the ground the rules match the air, except an overtaker may pass on either side.'),
@@ -202,7 +202,7 @@ dzAdd('Aerodrome operations and circuits (Skyway Code)',[
  F('At the holding point',
   '<rect x="0" y="40" width="320" height="40" fill="#555c6b"/>'+L('M0 60H320','#fff',1.5,'10 8')+'<rect x="120" y="80" width="60" height="120" fill="#6a7180"/>'
   +L('M120 98H180M120 104H180','#f2c94c',2)+L('M120 88H180M120 92H180','#f2c94c',2,'5 4')+'<rect x="186" y="96" width="34" height="16" fill="#d22"/>'+T(203,108,'A1','d1','middle',null,'#fff')
-  +P(140,150,315,'var(--accent)',1.6)+T(150,186,'stop at an angle to see the approach','d2','middle')+T(230,140,'Checks complete,','d2')+T(230,151,'then "ready for','d2')+T(230,162,'departure"','d2')
+  +P(140,150,315,'var(--accent)',1.6)+T(114,172,'stop at an angle','d2','end')+T(114,183,'to see the approach','d2','end')+T(230,140,'Checks complete,','d2')+T(230,151,'then "ready for','d2')+T(230,162,'departure"','d2')
   +T(10,24,'Holding position: two solid lines on your side, two dashed on the runway side','d2',null,7.2),
   'At an ATC aerodrome never cross onto the runway without a clearance. At A/G or AFIS aerodromes check the approach is clear yourself.')
 ]);
@@ -289,7 +289,7 @@ dzAdd('Airspace infringements and FMCs (Skyway Code)',[
 dzAdd('Crosswind component (Skyway Code)',[
  F('Splitting the wind',
   '<rect x="148" y="40" width="24" height="150" fill="#555c6b"/>'+T(160,186,'RWY','d2','middle',7,'#fff')+L('M160 50V180','#fff',1,'6 5')
-  +A(258,6,166,64,'var(--accent)',2.6)+T(316,22,'20 kt, 60° off','d1','end',null,'var(--accent)')
+  +A(258,6,166,64,'var(--accent)',2.6)+T(312,42,'20 kt, 60° off','d1','end',null,'var(--accent)')
   +A(166,6,166,58,'var(--good)',2)+T(150,24,'headwind','d2','end')+T(150,36,'20 × cos 60 = 10 kt','d1','end',null,'var(--good)')
   +A(258,64,174,64,'var(--bad)',2)+T(230,84,'crosswind','d2','middle')+T(230,96,'20 × sin 60 ≈ 17 kt','d1','middle',null,'var(--bad)')
   +L('M166 64m0-24a24 24 0 0 1 21 12','var(--ink)',1)+T(186,46,'60°','d2'),

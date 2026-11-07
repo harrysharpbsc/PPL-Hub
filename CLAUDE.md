@@ -44,7 +44,7 @@ cd src && python3 build.py  # writes ../docs/index.html (minified) + hub_built/h
 python3 ../tests/t_smoke.py # opens every subject and lab, reports page errors
 ```
 `hub_test.html` exposes `window.__T` (ses, S, KB, NTTS, ASR, `grade(e,text)`, speak, render) for tests.
-Useful tests: `t_grade.py` (radio marking), `t_mock.py` (mock exam tiles), `t_art.py`, `t_listen.py` (pause handling), `t_asr.py`/`t_piper.py` (engines with mocked CDN), `t_backup.py`, `t_scan.py` (button spacing).
+Useful tests: `t_grade.py` (radio marking), `t_mock.py` (mock exam tiles), `t_art.py`, `t_listen.py` (pause handling), `t_asr.py`/`t_piper.py` (engines with mocked CDN), `t_backup.py`, `t_scan.py` (button spacing), `t_secdg.py` (diagrams sit in their note sections), `t_dgtext.py` (diagram labels stay inside their boxes, measured with the real fonts in `tests/fonts`).
 Then commit and `git push origin main`; Pages redeploys in a minute or two.
 
 Sandbox note: cdn.jsdelivr.net, huggingface.co, fonts and github.io are blocked from the workspace, so real voice/speech models can't be heard or tested here — test the plumbing with Playwright route mocks and say so honestly.

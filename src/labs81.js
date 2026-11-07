@@ -26,7 +26,7 @@ dzAdd('Rules of the Air',[
   +'<g fill="var(--ch-tn)" stroke="var(--ch-tnl)"><path d="M180 170V146h14v24M200 170V132h10v38M214 170V150h20v20M240 170V138h12v32M258 170V152h18v18M282 170V128h8v42"/></g>'
   +dzSide(60,96,1.2,'var(--accent)')+'<circle cx="60" cy="96" r="58" fill="none" stroke="var(--accent)" stroke-dasharray="4 3"/>'+A(60,96,60,154,'var(--accent)',1)+T(66,132,'500 ft','d1')
   +T(60,22,'Anywhere:','d1','middle')+T(60,33,'500 ft from any person,','d2','middle',7.5)+T(60,43,'vehicle, vessel or structure','d2','middle',7.5)
-  +dzSide(236,52,1.2,'var(--accent)')+L('M150 128H300','var(--bad)',1,'3 3')+A(240,62,240,126,'var(--bad)',1.2)+T(246,96,'1,000 ft','d1',null,null,'var(--bad)')+L('M168 186H306','var(--ink-2)',1)+T(236,196,'highest obstacle within 600 m','d2','middle',7.5)
+  +dzSide(236,68,1.2,'var(--accent)')+L('M150 128H300','var(--bad)',1,'3 3')+A(240,78,240,126,'var(--bad)',1.2)+T(246,106,'1,000 ft','d1',null,null,'var(--bad)')+L('M168 186H306','var(--ink-2)',1)+T(236,196,'highest obstacle within 600 m','d2','middle',7.5)
   +T(236,20,'Congested area:','d1','middle')+T(236,31,'1,000 ft above the highest obstacle','d2','middle',7.5)+T(236,41,'and able to land clear','d2','middle',7.5),
   'Except for take-off and landing, keep 500 ft from people and things. Over towns and assemblies, 1,000 ft above the highest obstacle within 600 m.')
 ]);
@@ -42,7 +42,7 @@ dzAdd('Piston engine icing (SS14)',[
   +B(204,140,112,46,'var(--surface-2)','var(--ink-2)')+T(260,158,'Carb heat:','d1','middle')+T(260,170,'warm air from the','d2','middle',7.2)+T(260,180,'exhaust heat exchanger','d2','middle',7.2),
   'Fuel evaporating in the venturi chills the air by up to 35°C, so water vapour freezes on the venturi and throttle valve.'),
  F('When to expect carb ice',
-  L('M40 170H300M40 170V20','var(--ink)',1.2)+T(170,192,'Air temperature °C','d2','middle')+'<g transform="translate(14 95) rotate(-90)">'+T(0,0,'Relative humidity','d2','middle')+'</g>'
+  L('M40 170H300M40 170V20','var(--ink)',1.2)+T(170,197,'Air temperature °C','d2','middle')+'<g transform="translate(14 95) rotate(-90)">'+T(0,0,'Relative humidity','d2','middle')+'</g>'
   +[-10,0,10,20,30].map(function(t,i){var x=40+i*65;return L('M'+x+' 170v4','var(--ink)',1)+T(x,183,t,'d2','middle')}).join('')
   +'<path d="M105 30H170V170H105Z" fill="var(--bad)" opacity=".26"/>'+'<path d="M70 70Q160 40 280 80V170H70Z" fill="var(--mid)" opacity=".2"/>'
   +T(137,46,'Worst band','d1','middle',null,'var(--bad)')+T(137,58,'0 to 10°C,','d2','middle')+T(137,69,'high humidity','d2','middle')
@@ -97,7 +97,7 @@ dzAdd('Winter weather and icing (SS03)',[
 dzAdd('Weight, balance and performance (SS09)',[
  F('Datum, arm and moment',
   dzSide(170,70,3.6,'var(--accent-soft)')+L('M30 112H310','var(--ink)',1)+L('M30 30V118','var(--bad)',1.6,'4 3')+T(34,28,'datum','d1',null,null,'var(--bad)')
-  +[[2.05,'Front seats','160 kg'],[2.22,'Empty aircraft','700 kg'],[2.41,'Fuel','100 kg'],[2.98,'Rear seats','70 kg'],[3.63,'Baggage','15 kg']].map(function(r,i){var x=30+(r[0]-1.5)*125,ly=132+(i%3)*22;return'<circle cx="'+x.toFixed(0)+'" cy="112" r="3.4" fill="var(--accent)"/>'+L('M'+x.toFixed(0)+' 112V'+(ly-8),'var(--accent)',.9)+T((i===4?x+10:x).toFixed(0),ly,r[1]+', '+r[2],'d1',i===4?'end':'middle',7.4)+T((i===4?x+10:x).toFixed(0),ly+9,'arm '+r[0]+' m','d2',i===4?'end':'middle',6.8)}).join('')
+  +[[2.05,'Front seats','160 kg',64,140,'middle'],[2.22,'Empty aircraft','700 kg',120,172,'middle'],[2.41,'Fuel','100 kg',150,140,'middle'],[2.98,'Rear seats','70 kg',230,140,'middle'],[3.63,'Baggage','15 kg',312,140,'end']].map(function(r){var x=30+(r[0]-1.5)*125,lx=r[3],ly=r[4],tx=r[5]==='end'?lx-22:lx;return'<circle cx="'+x.toFixed(0)+'" cy="112" r="3.4" fill="var(--accent)"/>'+L('M'+x.toFixed(0)+' 112L'+tx+' '+(ly-9),'var(--accent)',.9)+T(lx,ly,r[1]+', '+r[2],'d1',r[5],7.4)+T(lx,ly+9,'arm '+r[0]+' m','d2',r[5],6.8)}).join('')
   +B(232,14,82,36,'var(--surface)','var(--accent)')+T(273,29,'Moment =','d2','middle')+T(273,42,'weight × arm','d1','middle'),
   'Each item sits at an arm measured from the datum. Moments add up, and CG = total moment ÷ total weight. This is the worked example from the leaflet.'),
  F('Worked CG check',
