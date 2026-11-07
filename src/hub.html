@@ -147,6 +147,8 @@ button.sc:hover{border-color:var(--accent)}
 .chev{grid-column:2;grid-row:1/span 2;width:16px;height:16px;color:var(--ink-2);transition:transform .15s;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
 .acc.open .chev{transform:rotate(180deg)}
 .acc-b{padding:12px 18px 16px 38px;border-top:1px solid var(--line)}
+.acc-fig{padding:4px 16px 18px}
+.acc-dg{display:inline-block;margin-left:10px;padding:1px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:.72rem;font-weight:600;vertical-align:2px}
 .acc-b li{margin-block:6px}
 .acc-b li::marker{color:var(--accent)}
 
@@ -546,6 +548,8 @@ function ac(x,y,r,f){return'<g transform="translate('+x+' '+y+') rotate('+r+')">
 function dg(id,title,body,cap){return'<figure class="dg dgx"><svg viewBox="0 0 320 190" role="img" aria-label="'+title+'" style="color:var(--accent)"><rect width="320" height="190" class="ch-paper" rx="6"/>'+chartPaper(320,190)+'<defs><marker id="mk'+id+'" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>'+body+'</svg><figcaption><b>'+title+'</b>'+cap+'</figcaption></figure>'}
 var AR=function(id,d){return'<path d="'+d+'" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" marker-end="url(#mk'+id+')"/>'};
 var DASH=function(d){return'<path d="'+d+'" fill="none" stroke="var(--ink-2)" stroke-width="1.5" stroke-dasharray="4 4"/>'};
+var DSEC={};
+function secFigs(t,h){var f=(DSEC[t]||[]).filter(function(x){return h.indexOf(x[0])===0});return f.length?'<div class="dgs acc-fig">'+f.map(function(x){return x[1]}).join('')+'</div>':''}
 var DIAG={"Rules of the Air":'<div class="dgs">'
  +dg(1,'Head-on',ac(70,70,90,'var(--ink)')+ac(250,70,-90,'var(--ink)')+AR(1,'M92 70Q135 70 135 112')+AR(1,'M228 70Q185 70 185 28')+'<text x="160" y="172" text-anchor="middle">Both turn right</text>','Each aircraft turns right, so they pass with the other on their left.')
  +dg(2,'Overtaking',ac(160,50,0,'var(--ink)')+ac(160,150,0,'var(--ink)')+AR(2,'M160 126Q215 100 215 56')+'<text x="138" y="54" text-anchor="end">Right of way</text><text x="138" y="154" text-anchor="end">Overtaker turns right</text>','The aircraft being overtaken has right of way. Overtaking means approaching within 70° of its centreline.')
@@ -644,7 +648,7 @@ function vTopic(){
 
 function vRead(){
   var n=NOTES[ui.topic],all=n.sections.every(function(s,i){return ex[n.id+'|'+i]});
-  return'<button class="back" data-a="topic" data-i="'+n.id+'">'+IC.back+n.topic+'</button><h1 class="h1">'+n.topic+'</h1>'+(n.summary?'<div class="callout"><h3>Summary</h3><p>'+n.summary+'</p></div>':'')+(n.src?'<p class="m" style="margin-top:10px">Source: '+n.src.map(function(x){return'<a href="'+x[1]+'" target="_blank" rel="noopener">'+x[0]+'</a>'}).join(', ')+'. Paraphrased from CAA guidance, so check the original and your own notes.</p>':'')+(DIAG[n.topic]?'<h2 class="sec-t" style="margin-top:20px">Diagrams</h2>'+DIAG[n.topic]:'')+'<div class="tools" style="margin-top:16px"><span class="m">'+n.sections.length+' sections. Read the one-line summaries first, then open what you need.</span><button class="link" data-a="xa">'+(all?'Collapse all':'Expand all')+'</button></div>'+n.sections.map(function(s,i){var on=!!ex[n.id+'|'+i];return'<div class="acc'+(on?' open':'')+'"><button class="acc-h" data-a="x" data-i="'+i+'" aria-expanded="'+on+'"><span class="acc-t">'+s[0]+'</span>'+(SUM[s[0]]?'<span class="acc-s">'+SUM[s[0]]+'</span>':'')+IC.chev+'</button>'+(on?'<ul class="acc-b">'+s[1].map(function(b){return'<li>'+b+'</li>'}).join('')+'</ul>':'')+'</div>'}).join('')+'<div class="nav"><button class="btn" data-a="markread">Mark as read</button></div>'}
+  return'<button class="back" data-a="topic" data-i="'+n.id+'">'+IC.back+n.topic+'</button><h1 class="h1">'+n.topic+'</h1>'+(n.summary?'<div class="callout"><h3>Summary</h3><p>'+n.summary+'</p></div>':'')+(n.src?'<p class="m" style="margin-top:10px">Source: '+n.src.map(function(x){return'<a href="'+x[1]+'" target="_blank" rel="noopener">'+x[0]+'</a>'}).join(', ')+'. Paraphrased from CAA guidance, so check the original and your own notes.</p>':'')+(DIAG[n.topic]?'<h2 class="sec-t" style="margin-top:20px">Diagrams</h2>'+DIAG[n.topic]:'')+'<div class="tools" style="margin-top:16px"><span class="m">'+n.sections.length+' sections. Read the one-line summaries first, then open what you need.</span><button class="link" data-a="xa">'+(all?'Collapse all':'Expand all')+'</button></div>'+n.sections.map(function(s,i){var on=!!ex[n.id+'|'+i];return'<div class="acc'+(on?' open':'')+'"><button class="acc-h" data-a="x" data-i="'+i+'" aria-expanded="'+on+'"><span class="acc-t">'+s[0]+(secFigs(n.topic,s[0])?'<span class="acc-dg">Diagram</span>':'')+'</span>'+(SUM[s[0]]?'<span class="acc-s">'+SUM[s[0]]+'</span>':'')+IC.chev+'</button>'+(on?'<ul class="acc-b">'+s[1].map(function(b){return'<li>'+b+'</li>'}).join('')+'</ul>'+secFigs(n.topic,s[0]):'')+'</div>'}).join('')+'<div class="nav"><button class="btn" data-a="markread">Mark as read</button></div>'}
 
 function vPractice(){
   var withQ=SUBJECTS.map(function(s,i){var n=0;NOTES.forEach(function(x){if(x.s===i)n+=x.quiz.length});return n});
