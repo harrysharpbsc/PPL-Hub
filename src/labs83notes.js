@@ -407,6 +407,104 @@ sec(D,'Marshalling signals: helicopters',[F('Helicopter marshalling signals',mgr
 sec(D,'Signals from pilot',[F('Pilot to marshaller',mgrid(MP),'Made from the cockpit so the marshaller can see. For a multi-engine aircraft, number 1 is the port outer engine, counted from the marshaller\'s right.',320,mh(6))]);
 sec(D,'Emergency hand signals',[F('Standard emergency hand signals',mgrid(ME),'Given by the fire and rescue crew to the flight crew. At night the same signals are made with wands.',320,mh(4))]);
 
+/* ---------- 05 Altimeter Setting Procedures ---------- */
+var D5='Altimeter Setting Procedures';
+function hline(y,lab,c,dash,x1,x2,anc){x1=x1||10;x2=x2||310;return L('M'+x1+' '+y+'H'+x2,c,1.3,dash)+(lab?T(anc==='start'?x1+2:x2-2,y-4,lab,'d2',anc==='start'?null:'end',null,c):'')}
+function vdim(x,y1,y2,lab,c,side,ly){var m=ly||(y1+y2)/2;return A(x,m,x,y1+1,c,1.3)+A(x,m,x,y2-1,c,1.3)+'<rect x="'+(side==='l'?x-64:x+4)+'" y="'+(m-8)+'" width="60" height="14" rx="3" fill="var(--surface)" opacity=".85"/>'+T(side==='l'?x-6:x+6,m+3,lab,'d2',side==='l'?'end':null,null,c)}
+function sea(y){return'<path d="M10 '+y+'H120V'+(y+16)+'H10Z" fill="var(--ch-wt)"/>'}
+sec(D5,'How the altimeter works',[
+ F('The altimeter is a pressure gauge',
+  (function(){var cx=78,cy=96,r=62,s='<circle cx="'+cx+'" cy="'+cy+'" r="'+(r+6)+'" fill="#3a4250"/><circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="#151a22"/>';
+   for(var k=0;k<50;k++){var a=k/50*Math.PI*2,l=k%5?5:9;s+='<path d="M'+(cx+Math.sin(a)*r).toFixed(1)+' '+(cy-Math.cos(a)*r).toFixed(1)+'L'+(cx+Math.sin(a)*(r-l)).toFixed(1)+' '+(cy-Math.cos(a)*(r-l)).toFixed(1)+'" stroke="#fff" stroke-width="'+(k%5?.8:1.6)+'"/>'}
+   for(k=0;k<10;k++){var a2=k/10*Math.PI*2;s+='<text x="'+(cx+Math.sin(a2)*(r-17)).toFixed(1)+'" y="'+(cy-Math.cos(a2)*(r-17)+4).toFixed(1)+'" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="11" fill="#fff">'+k+'</text>'}
+   s+='<rect x="'+(cx+16)+'" y="'+(cy-7)+'" width="28" height="14" rx="2" fill="#000" stroke="#777"/><text x="'+(cx+30)+'" y="'+(cy+4)+'" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#fff">1013</text>';
+   s+='<path d="M'+(cx-6)+' '+(cy-36)+'h12v8h-12Z" fill="#fff"/><path d="M'+(cx-6)+' '+(cy-36)+'l4 8M'+(cx-2)+' '+(cy-36)+'l4 8M'+(cx+2)+' '+(cy-36)+'l4 8" stroke="#111" stroke-width="1.4"/>';
+   function ptr(f,len,w){var a=f*Math.PI*2;return'<path d="M'+cx+' '+cy+'L'+(cx+Math.sin(a)*len).toFixed(1)+' '+(cy-Math.cos(a)*len).toFixed(1)+'" stroke="#fff" stroke-width="'+w+'" stroke-linecap="round"/>'}
+   s+=ptr(.35,52,2)+ptr(.235,32,4.5)+'<path d="M'+(cx+Math.sin(.0235*6.283)*r).toFixed(1)+' '+(cy-Math.cos(.0235*6.283)*r).toFixed(1)+'l-4 10h8z" fill="#fff"/><circle cx="'+cx+'" cy="'+cy+'" r="4" fill="#888"/>';
+   s+='<circle cx="'+(cx-52)+'" cy="'+(cy+54)+'" r="9" fill="#555" stroke="#222"/>';
+   return s})()
+  +T(150,22,'10,000 ft pointer (tip)','d2')+L('M148 20L90 32','var(--ink-2)',.8)
+  +T(150,40,'striped sector: below 10,000 ft','d2')+L('M148 38L86 62','var(--ink-2)',.8)
+  +T(150,58,'100 ft pointer (long)','d2')+L('M148 56L114 118','var(--ink-2)',.8)
+  +T(150,76,'1,000 ft pointer (short)','d2')+L('M148 74L104 82','var(--ink-2)',.8)
+  +T(150,100,'pressure window (subscale)','d2')+L('M148 98L122 96','var(--ink-2)',.8)
+  +T(150,172,'subscale-setting knob','d2')+L('M148 170L34 152','var(--ink-2)',.8)
+  +T(150,124,'Reads 2,350 ft above the','d1')+T(150,136,'pressure level set in the','d1')+T(150,148,'window (here 1013 hPa)','d1'),
+  'Static pressure from the static vent surrounds a sealed capsule. As you climb it expands, and gearing turns the pointers. The subscale sets the datum the reading is measured from.',320,184)
+]);
+sec(D5,'QNH, QFE and standard pressure',[
+ F('Three settings, three readings (a high-pressure day)',
+  sea(180)+'<path d="M120 180L200 140H310V196H120Z" fill="var(--ch-l1)" stroke="var(--ch-tx)" stroke-width=".6"/>'
+  +hline(180,'mean sea level: QNH 1030','var(--accent)',null,10,310,'start')+hline(162,'1013 hPa level','var(--mid)','5 3',10,310,'start')
+  +hline(140,'','var(--good)','2 2',150,310)+T(306,156,'aerodrome, elev. 1,500 ft: QFE 980','d2','end',null,'var(--good)')
+  +P(240,36,90,'var(--ink)',1.2)+L('M90 36H300','var(--ink-2)',.8,'2 3')
+  +vdim(100,36,180,'4,000 ft alt.','var(--accent)','l',108)+vdim(200,36,162,'FL35','var(--mid)','l',120)+vdim(290,36,140,'2,500 ft ht','var(--good)','l',80)
+  +T(240,26,'aircraft','d2','middle'),
+  'QNH 1030: altitude 4,000 ft amsl. 1013: pressure altitude 3,500 ft, FL35 (the 1013 level is about 500 ft above sea level today). QFE 980: height 2,500 ft above the aerodrome, the setting often used in the circuit.',320,198)
+]);
+sec(D5,'Transition altitude',[
+ F('Transition altitude, layer and level',
+  '<path d="M10 74H310V108H10Z" fill="var(--accent-soft)"/>'+hline(74,'transition level (lowest usable FL)','var(--accent)',null,10,310,'start')
+  +hline(108,'transition altitude: 3,000 ft amsl','var(--ink)',null,10,310,'start')+T(160,94,'transition layer','d1','middle')
+  +hline(176,'mean sea level','var(--ink-2)',null,10,310,'start')+hline(188,'1013 hPa level on a low-pressure day','var(--mid)','5 3',10,310,'start')
+  +T(160,24,'above: cruise on 1013 hPa, flight levels','d1','middle')+T(160,146,'below: cruise on QNH, altitudes','d1','middle')
+  +L('M240 160Q256 120 278 56','var(--good)',1.6)+A(272,70,280,50,'var(--good)',1.6)+T(300,140,'climbing: FL','d2','end',null,'var(--good)')+T(300,151,'from TA','d2','end',null,'var(--good)')
+  +L('M40 56Q60 110 76 160','var(--bad)',1.6)+A(70,146,78,164,'var(--bad)',1.6)+T(86,48,'descending:','d2',null,null,'var(--bad)')+T(86,58,'altitude from TL','d2',null,null,'var(--bad)'),
+  'Climbing, switch to 1013 and report flight levels from the transition altitude. Descending, switch to QNH and report altitudes from the transition level.',320,198)
+]);
+sec(D5,'A typical cross-country',[
+ F('Settings on a typical cross-country',
+  '<path d="M10 160H310V184H10Z" fill="var(--ch-l1)"/>'+'<path d="M20 156H70V160H20ZM250 156H300V160H250Z" fill="var(--ink-2)"/>'
+  +L('M45 156Q70 150 90 90H230Q250 150 275 156','var(--accent)',1.6,'5 3')+P(160,90,90,'var(--accent)',1.1)
+  +dzB(14,30,92,40,'var(--surface)','var(--good)')+T(60,46,'circuit:','d1','middle')+T(60,60,'QFE or QNH','d2','middle')
+  +dzB(214,30,92,40,'var(--surface)','var(--good)')+T(260,46,'circuit:','d1','middle')+T(260,60,'QFE or QNH','d2','middle')
+  +dzB(112,104,96,40,'var(--surface)','var(--accent)')+T(160,120,'en route:','d1','middle')+T(160,134,'regional (RPS)','d2','middle')
+  +L('M190 20V176','var(--mid)',1.2,'4 3')+T(194,24,'new region:','d2',null,null,'var(--mid)')+T(194,34,'new RPS','d2',null,null,'var(--mid)'),
+  'QFE (height aal) or aerodrome QNH (altitude) in each circuit, the Regional Pressure Setting en route, and a new RPS when you cross into another Altimeter Setting Region.',320,190)
+]);
+sec(D5,'En route: high to low',[
+ F('High to low, beware below',
+  T(10,16,'(a) into lower pressure with 1020 still set','d1')
+  +'<path d="M10 92H310V104H10Z" fill="var(--ch-wt)"/>'+hline(92,'','var(--ink-2)')+T(160,102,'mean sea level','d2','middle')
+  +L('M10 92L310 116','var(--mid)',1.3,'5 3')+T(306,128,'1020 hPa level','d2','end',null,'var(--mid)')
+  +L('M30 52L290 76','var(--bad)',1.6)+P(30,52,95,'var(--accent)',1.1)+P(290,76,95,'var(--accent)',1.1)
+  +T(10,38,'QNH 1020','d1')+T(310,38,'QNH 1010','d1','end')+vdim(60,54,92,'1,000 ft','var(--accent)')+vdim(260,74,92,'700 ft','var(--bad)','l')+vdim(280,92,114,'300 ft','var(--mid)')
+  +T(10,146,'(b) into colder air','d1')+'<path d="M10 150H160V214H10Z" fill="#f4d3b5" opacity=".6"/><path d="M160 150H310V214H160Z" fill="#c7def0" opacity=".7"/>'
+  +T(20,162,'warm: less dense','d2')+T(300,162,'cold: more dense','d2','end')+L('M10 172Q160 172 310 196','var(--mid)',1.3,'5 3')+T(160,170,'pressure level','d2','middle',null,'var(--mid)')
+  +L('M30 182Q160 182 290 202','var(--bad)',1.6)+'<path d="M10 214H310" stroke="var(--ink-2)" stroke-width="1.2"/>'+T(240,212,'beware!','d1',null,null,'var(--bad)'),
+  'With the setting unchanged, the altimeter keeps showing the same figure as you follow the pressure level down. Lower pressure or colder air both mean you are lower than indicated, by up to about 10% in very cold air.',320,222)
+]);
+sec(D5,'Choosing a flight level',[
+ F('A flight level on a low-QNH day (QNH 996)',
+  '<path d="M10 170H310V182H10Z" fill="var(--ch-wt)"/>'+'<path d="M140 170L210 116L250 170Z" fill="var(--ch-l2)" stroke="var(--ch-tx)" stroke-width=".7"/>'+T(218,114,'hill 2,800 ft','d2')
+  +hline(170,'mean sea level','var(--ink-2)',null,10,310,'start')+hline(186,'1013 hPa level, about 500 ft below MSL','var(--mid)','5 3',10,310,'start')
+  +P(70,70,90,'var(--accent)',1.2)+hline(70,'FL40 = only about 3,500 ft amsl','var(--accent)','2 2',90,310)
+  +hline(54,'FL45 = about 4,000 ft amsl','var(--good)','2 2',90,310)
+  +P(70,86,270,'var(--ink)',1.1)+T(90,96,'other aircraft at 3,000 ft','d2')
+  +vdim(46,70,86,'500 ft','var(--bad)','l')+vdim(210,70,116,'700 ft','var(--bad)'),
+  'FL40 on QNH 996 is about 3,500 ft amsl: only 500 ft above traffic at 3,000 ft and 700 ft above a 2,800 ft hill. FL45 is the lowest level 1,000 ft clear of 3,000 ft that day.',320,196)
+]);
+sec(D5,'Outside controlled airspace',[
+ F('Under a TMA and through a MATZ',
+  '<path d="M10 176H310V190H10Z" fill="var(--ch-l1)"/>'
+  +'<path d="M10 70H130V30H10Z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.2"/>'+T(16,46,'TMA','d1')+T(16,60,'base 2,500 ft alt.','d2')
+  +'<path d="M30 172H70V176H30Z" fill="var(--ink-2)"/>'+'<path d="M180 176Q180 100 240 100Q300 100 300 176" fill="var(--warm-soft,#f6dbe8)" stroke="var(--warm,#c0508a)" stroke-width="1.2" opacity=".75"/>'+T(240,118,'MATZ','d1','middle')
+  +L('M50 172Q60 120 80 110H170Q190 110 196 130L220 140H260','var(--ink)',1.4,'5 3')
+  +[[60,126,'aerodrome QNH'],[150,96,'reset RPS'],[232,154,'MATZ QFE']].map(function(p){return'<circle cx="'+p[0]+'" cy="'+(p[1]+0)+'" r="3" fill="var(--bad)"/>'+T(p[0]+6,p[1]-4,p[2],'d2')}).join('')
+  +T(300,90,'then reset RPS','d2','end'),
+  'Beneath a TMA use the QNH of an aerodrome under it, the same as the traffic above. Reset the RPS once clear. Crossing a MATZ you are normally given its QFE (the lowest QFE, the clutch QFE, in a combined MATZ).',320,196)
+]);
+sec(D5,'The semicircular rule',[
+ F('Semicircular cruising levels (by magnetic track)',
+  '<circle cx="160" cy="104" r="80" fill="var(--surface)" stroke="var(--ink-2)" stroke-width="1.2"/>'
+  +'<path d="M160 24A80 80 0 0 1 160 184Z" fill="var(--accent-soft)"/><path d="M160 24A80 80 0 0 0 160 184Z" fill="var(--surface-2)"/>'+L('M160 18V190','var(--ink)',1.4)
+  +T(160,14,'360 / 000°M','d2','middle')+T(160,202,'180°M','d2','middle')
+  +T(170,62,'000°–179°','d1')+T(170,82,'IFR: odd','d1')+T(170,94,'FL30, 50, 70','d2')+T(170,116,'VFR: odd + 500','d1')+T(170,128,'FL35, 55, 75','d2')
+  +T(150,62,'180°–359°','d1','end')+T(150,82,'IFR: even','d1','end')+T(150,94,'FL40, 60, 80','d2','end')+T(150,116,'VFR: even + 500','d1','end')+T(150,128,'FL45, 65, 85','d2','end')
+  +A(250,104,296,104,'var(--accent)',1.6)+T(300,96,'east','d2','end')+A(70,104,24,104,'var(--ink-2)',1.6)+T(20,96,'west','d2'),
+  'East is odd, west is even; VFR adds 500 ft. The rule goes by magnetic track, not heading. Required for IFR; recommended for VFR, which must then set 1013.',320,210)
+]);
+
 /* ---------- 02 Aviation Law and organisations ---------- */
 var LW='Aviation Law and organisations';
 function col(x,head,items,c){var s=dzB(x,96,96,30,'var(--accent-soft)',c,4,1.4)+T(x+48,108,head[0],'d1','middle')+T(x+48,120,head[1],'d2','middle')+L('M'+(x+48)+' 82V96','var(--ink-2)',1);items.forEach(function(it,i){var y=134+i*28;s+=L('M'+(x+48)+' '+(y-(i?4:8))+'V'+y,'var(--ink-2)',1)+dzB(x,y,96,24,'var(--surface)','var(--ink-2)',3)+T(x+6,y+10,it[0],'d1')+T(x+6,y+20,it[1],'d2',null,7.5)});return s}
