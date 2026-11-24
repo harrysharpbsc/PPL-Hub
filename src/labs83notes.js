@@ -251,9 +251,9 @@ sec(D,'Signals area: circuit',[
   +'<path d="M66 26H74V96H66ZM96 26H104V96H96ZM74 57H96V65H74Z" fill="'+Wh+'" stroke="var(--ink-2)" stroke-width=".8"/>'
   +A(50,62,50,28,'var(--ink)',1)+A(50,62,50,94,'var(--ink)',1)+T(44,66,'2 m','d1','end')+A(85,108,67,108,'var(--ink)',1)+A(85,108,103,108,'var(--ink)',1)+T(85,104,'1 m','d2','middle')
   +A(118,22,105,22,'var(--ink)',1)+T(120,26,'20 cm','d2')+T(82,122,'(a) in the signals area','d2','middle')
-  +'<path d="M206 24H220V100H206ZM254 24H268V100H254ZM220 56H254V68H220Z" fill="'+Wh+'" stroke="var(--ink-2)" stroke-width=".8"/>'
-  +A(192,62,192,26,'var(--ink)',1)+A(192,62,192,98,'var(--ink)',1)+T(186,66,'6 m','d1','end')+A(237,110,207,110,'var(--ink)',1)+A(237,110,267,110,'var(--ink)',1)+T(237,106,'3 m','d2','middle')
-  +A(286,20,269,20,'var(--ink)',1)+T(288,24,'1 m','d2')+T(238,124,'(b) the helicopter area','d2','middle'),
+  +'<path d="M218 24H231V100H218ZM243 24H256V100H243ZM231 56H243V68H231Z" fill="'+Wh+'" stroke="var(--ink-2)" stroke-width=".8"/>'
+  +A(192,62,192,26,'var(--ink)',1)+A(192,62,192,98,'var(--ink)',1)+T(186,66,'6 m','d1','end')+A(237,110,219,110,'var(--ink)',1)+A(237,110,255,110,'var(--ink)',1)+T(237,106,'3 m','d2','middle')
+  +A(276,20,257,20,'var(--ink)',1)+T(278,24,'1 m','d2')+T(238,124,'(b) the helicopter area','d2','middle'),
   'A white H in the signals area means helicopters take off and land only in the designated area, which is marked by a much larger white H.',320,146),
  F('Gliding in progress',
   grid([[sDx,'Double white cross:','gliding'],[mBall(2,Re),'Two red balls:','gliding',true],[sYp,'Yellow cross: tow-rope','dropping area']]),
@@ -430,17 +430,29 @@ sec(D5,'How the altimeter works',[
   +T(150,100,'pressure window (subscale)','d2')+L('M148 98L122 96','var(--ink-2)',.8)
   +T(150,172,'subscale-setting knob','d2')+L('M148 170L34 152','var(--ink-2)',.8)
   +T(150,124,'Reads 2,350 ft above the','d1')+T(150,136,'pressure level set in the','d1')+T(150,148,'window (here 1013 hPa)','d1'),
-  'Static pressure from the static vent surrounds a sealed capsule. As you climb it expands, and gearing turns the pointers. The subscale sets the datum the reading is measured from.',320,184)
+  'Static pressure from the static vent surrounds a sealed capsule. As you climb it expands, and gearing turns the pointers. The subscale sets the datum the reading is measured from.',320,184),
+ F('Inside the altimeter',
+  dzB(20,14,284,160,'var(--surface-2)','var(--ink-2)',12,1.6)+T(32,32,'sealed instrument case, filled with static air','d1')
+  +'<path d="M60 174V196" stroke="var(--accent)" stroke-width="6"/>'+A(60,196,60,178,'var(--accent)',1.4)+T(70,194,'static pressure in from the static vent','d2',null,null,'var(--accent)')
+  +'<path d="M66 108L74 100L82 108L90 100L98 108L106 100L114 108L122 100L130 108L138 100L146 108V116L138 124L130 116L122 124L114 116L106 124L98 116L90 124L82 116L74 124L66 116Z" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.4" stroke-linejoin="round"/>'
+  +T(106,115,'near vacuum','d2','middle')+'<path d="M106 124V174" stroke="var(--ink-2)" stroke-width="4"/>'
+  +A(152,104,152,90,'var(--bad)',1.2)+A(152,120,152,134,'var(--bad)',1.2)+T(158,96,'expands as','d2',null,null,'var(--bad)')+T(158,106,'you climb','d2',null,null,'var(--bad)')
+  +T(32,146,'aneroid capsule: sealed,','d2')+T(32,156,'air removed, spring-held','d2')
+  +'<path d="M106 100V64H170" stroke="var(--ink)" stroke-width="1.6" fill="none"/><circle cx="178" cy="64" r="9" fill="none" stroke="var(--ink)" stroke-width="2" stroke-dasharray="2.4 1.6"/><circle cx="198" cy="64" r="6" fill="none" stroke="var(--ink)" stroke-width="2" stroke-dasharray="2 1.4"/>'
+  +T(188,50,'linkage and gearing','d2','middle')+'<path d="M204 64H236" stroke="var(--ink)" stroke-width="1.6"/>'
+  +'<circle cx="262" cy="96" r="30" fill="#151a22"/><path d="M262 96L280 76" stroke="#fff" stroke-width="2"/><circle cx="262" cy="96" r="3" fill="#888"/><path d="M236 64Q262 64 262 93" stroke="var(--ink)" stroke-width="1.2" fill="none" stroke-dasharray="3 2"/>'
+  +T(262,142,'pointers','d2','middle'),
+  'The capsule is sealed with most of the air removed, and a spring stops it collapsing. Static air fills the case around it. As you climb, static pressure falls, the capsule expands, and the gearing turns the pointers. (The textbook simplifies this as "a fixed amount of air in the capsule".)',320,204)
 ]);
 sec(D5,'QNH, QFE and standard pressure',[
  F('Three settings, three readings (a high-pressure day)',
-  sea(180)+'<path d="M120 180L200 140H310V196H120Z" fill="var(--ch-l1)" stroke="var(--ch-tx)" stroke-width=".6"/>'
+  sea(180)+'<path d="M120 180L200 126H310V196H120Z" fill="var(--ch-l1)" stroke="var(--ch-tx)" stroke-width=".6"/>'
   +hline(180,'mean sea level: QNH 1030','var(--accent)',null,10,310,'start')+hline(162,'1013 hPa level','var(--mid)','5 3',10,310,'start')
-  +hline(140,'','var(--good)','2 2',150,310)+T(306,156,'aerodrome, elev. 1,500 ft: QFE 980','d2','end',null,'var(--good)')
+  +hline(126,'','var(--good)','2 2',150,310)+T(306,142,'aerodrome, elev. 1,500 ft: QFE 980','d2','end',null,'var(--good)')
   +P(240,36,90,'var(--ink)',1.2)+L('M90 36H300','var(--ink-2)',.8,'2 3')
-  +vdim(100,36,180,'4,000 ft alt.','var(--accent)','l',108)+vdim(200,36,162,'FL35','var(--mid)','l',120)+vdim(290,36,140,'2,500 ft ht','var(--good)','l',80)
+  +vdim(100,36,180,'4,000 ft alt.','var(--accent)','l',108)+vdim(200,36,162,'FL35','var(--mid)','l',116)+vdim(290,36,126,'2,500 ft ht','var(--good)','l',76)
   +T(240,26,'aircraft','d2','middle'),
-  'QNH 1030: altitude 4,000 ft amsl. 1013: pressure altitude 3,500 ft, FL35 (the 1013 level is about 500 ft above sea level today). QFE 980: height 2,500 ft above the aerodrome, the setting often used in the circuit.',320,198)
+  'Drawn to scale. QNH 1030: altitude 4,000 ft amsl. 1013: pressure altitude 3,500 ft, FL35, because the 1013 level is 17 hPa × 30 ft ≈ 500 ft above sea level today. QFE 980: height 2,500 ft above the 1,500 ft aerodrome.',320,198)
 ]);
 sec(D5,'Transition altitude',[
  F('Transition altitude, layer and level',
@@ -465,34 +477,36 @@ sec(D5,'A typical cross-country',[
 sec(D5,'En route: high to low',[
  F('High to low, beware below',
   T(10,16,'(a) into lower pressure with 1020 still set','d1')
-  +'<path d="M10 92H310V104H10Z" fill="var(--ch-wt)"/>'+hline(92,'','var(--ink-2)')+T(160,102,'mean sea level','d2','middle')
-  +L('M10 92L310 116','var(--mid)',1.3,'5 3')+T(306,128,'1020 hPa level','d2','end',null,'var(--mid)')
-  +L('M30 52L290 76','var(--bad)',1.6)+P(30,52,95,'var(--accent)',1.1)+P(290,76,95,'var(--accent)',1.1)
-  +T(10,38,'QNH 1020','d1')+T(310,38,'QNH 1010','d1','end')+vdim(60,54,92,'1,000 ft','var(--accent)')+vdim(260,74,92,'700 ft','var(--bad)','l')+vdim(280,92,114,'300 ft','var(--mid)')
+  +'<path d="M10 92H310V114H10Z" fill="var(--ch-wt)"/>'+hline(92,'','var(--ink-2)')+T(160,110,'mean sea level','d2','middle')
+  +L('M10 92L310 104','var(--mid)',1.3,'5 3')+T(306,126,'1020 hPa level','d2','end',null,'var(--mid)')
+  +L('M30 52.8L290 63.2','var(--bad)',1.6)+P(30,52.8,95,'var(--accent)',1.1)+P(290,63.2,95,'var(--accent)',1.1)
+  +T(10,38,'QNH 1020','d1')+T(310,38,'QNH 1010','d1','end')+vdim(60,54,93,'1,000 ft','var(--accent)')+vdim(250,62,92,'700 ft','var(--bad)','l')+vdim(280,92,103,'300 ft','var(--mid)')
   +T(10,146,'(b) into colder air','d1')+'<path d="M10 150H160V214H10Z" fill="#f4d3b5" opacity=".6"/><path d="M160 150H310V214H160Z" fill="#c7def0" opacity=".7"/>'
   +T(20,162,'warm: less dense','d2')+T(300,162,'cold: more dense','d2','end')+L('M10 172Q160 172 310 196','var(--mid)',1.3,'5 3')+T(160,170,'pressure level','d2','middle',null,'var(--mid)')
   +L('M30 182Q160 182 290 202','var(--bad)',1.6)+'<path d="M10 214H310" stroke="var(--ink-2)" stroke-width="1.2"/>'+T(240,212,'beware!','d1',null,null,'var(--bad)'),
-  'With the setting unchanged, the altimeter keeps showing the same figure as you follow the pressure level down. Lower pressure or colder air both mean you are lower than indicated, by up to about 10% in very cold air.',320,222)
+  '(a) is to scale: 10 hPa × 30 ft puts the 1020 hPa level 300 ft below sea level, so the aircraft still reading 1,000 ft is really at 700 ft. (b) Cold air lowers the pressure levels in the same way, by up to about 10% in very cold air.',320,222)
 ]);
 sec(D5,'Choosing a flight level',[
  F('A flight level on a low-QNH day (QNH 996)',
-  '<path d="M10 170H310V182H10Z" fill="var(--ch-wt)"/>'+'<path d="M140 170L210 116L250 170Z" fill="var(--ch-l2)" stroke="var(--ch-tx)" stroke-width=".7"/>'+T(218,114,'hill 2,800 ft','d2')
-  +hline(170,'mean sea level','var(--ink-2)',null,10,310,'start')+hline(186,'1013 hPa level, about 500 ft below MSL','var(--mid)','5 3',10,310,'start')
-  +P(70,70,90,'var(--accent)',1.2)+hline(70,'FL40 = only about 3,500 ft amsl','var(--accent)','2 2',90,310)
-  +hline(54,'FL45 = about 4,000 ft amsl','var(--good)','2 2',90,310)
-  +P(70,86,270,'var(--ink)',1.1)+T(90,96,'other aircraft at 3,000 ft','d2')
-  +vdim(46,70,86,'500 ft','var(--bad)','l')+vdim(210,70,116,'700 ft','var(--bad)'),
-  'FL40 on QNH 996 is about 3,500 ft amsl: only 500 ft above traffic at 3,000 ft and 700 ft above a 2,800 ft hill. FL45 is the lowest level 1,000 ft clear of 3,000 ft that day.',320,196)
+  '<path d="M10 170H310V192H10Z" fill="var(--ch-wt)"/>'+'<path d="M150 170L210 86L262 170Z" fill="var(--ch-l2)" stroke="var(--ch-tx)" stroke-width=".7"/>'+T(220,98,'hill 2,800 ft','d2')
+  +hline(170,'mean sea level','var(--ink-2)',null,10,310,'start')+hline(185,'1013 hPa level, about 500 ft below MSL','var(--mid)','5 3',10,310,'start')
+  +P(70,65,90,'var(--accent)',1.2)+L('M84 65H310','var(--accent)',1.2,'2 2')+T(308,61,'FL40 ≈ 3,500 ft amsl','d2','end',null,'var(--accent)')
+  +L('M84 50H310','var(--good)',1.2,'2 2')+T(308,46,'FL45 ≈ 4,000 ft amsl','d2','end',null,'var(--good)')
+  +P(110,80,270,'var(--ink)',1.1)+T(98,96,'other aircraft at 3,000 ft','d2')
+  +vdim(46,65,80,'500 ft','var(--bad)','l')+vdim(200,65,86,'700 ft','var(--bad)','l',72),
+  'To scale. QNH 996 is 17 hPa below 1013, so the 1013 level is about 500 ft below sea level and FL40 is about 3,500 ft amsl: only 500 ft above traffic at 3,000 ft and 700 ft above a 2,800 ft hill. FL45 (≈ 4,000 ft) is the lowest level 1,000 ft clear of 3,000 ft that day.',320,196)
 ]);
 sec(D5,'Outside controlled airspace',[
  F('Under a TMA and through a MATZ',
   '<path d="M10 176H310V190H10Z" fill="var(--ch-l1)"/>'
-  +'<path d="M10 70H130V30H10Z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.2"/>'+T(16,46,'TMA','d1')+T(16,60,'base 2,500 ft alt.','d2')
-  +'<path d="M30 172H70V176H30Z" fill="var(--ink-2)"/>'+'<path d="M180 176Q180 100 240 100Q300 100 300 176" fill="var(--warm-soft,#f6dbe8)" stroke="var(--warm,#c0508a)" stroke-width="1.2" opacity=".75"/>'+T(240,118,'MATZ','d1','middle')
-  +L('M50 172Q60 120 80 110H170Q190 110 196 130L220 140H260','var(--ink)',1.4,'5 3')
-  +[[60,126,'aerodrome QNH'],[150,96,'reset RPS'],[232,154,'MATZ QFE']].map(function(p){return'<circle cx="'+p[0]+'" cy="'+(p[1]+0)+'" r="3" fill="var(--bad)"/>'+T(p[0]+6,p[1]-4,p[2],'d2')}).join('')
-  +T(300,90,'then reset RPS','d2','end'),
-  'Beneath a TMA use the QNH of an aerodrome under it, the same as the traffic above. Reset the RPS once clear. Crossing a MATZ you are normally given its QFE (the lowest QFE, the clutch QFE, in a combined MATZ).',320,196)
+  +'<path d="M10 76H130V24H10Z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.2"/>'+T(16,40,'TMA','d1')+T(16,54,'base 2,500 ft alt.','d2')
+  +'<path d="M30 172H70V176H30Z" fill="var(--ink-2)"/>'+'<path d="M190 176V56H256V176" fill="var(--warm-soft)" stroke="var(--warm)" stroke-width="1.2" opacity=".8"/>'+T(223,72,'MATZ','d1','middle')+T(223,84,'surface to','d2','middle')+T(223,94,'3,000 ft','d2','middle')
+  +L('M44 172Q56 120 84 104H310','var(--ink)',1.4,'5 3')
+  +'<circle cx="62" cy="134" r="3" fill="var(--bad)"/>'+T(68,140,'aerodrome QNH','d2')
+  +'<circle cx="146" cy="104" r="3" fill="var(--bad)"/>'+T(146,96,'reset RPS','d2','middle')
+  +'<circle cx="180" cy="104" r="3" fill="var(--bad)"/>'+T(180,120,'set MATZ QFE','d2','end')
+  +'<circle cx="282" cy="104" r="3" fill="var(--bad)"/>'+T(306,96,'reset RPS','d2','end'),
+  'Heights to scale (aerodromes near sea level). Climbing out under the TMA, stay on the QNH of an aerodrome beneath it (the setting the traffic above uses). Reset the RPS once clear. Before entering a MATZ set the QFE you are given (the clutch QFE in a combined MATZ), and go back to the RPS after leaving.',320,196)
 ]);
 sec(D5,'The semicircular rule',[
  F('Semicircular cruising levels (by magnetic track)',
