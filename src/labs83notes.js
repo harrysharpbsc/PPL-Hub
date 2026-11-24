@@ -128,6 +128,117 @@ sec(D,'Right of way on the ground',[
   'The one with the other on its right gives way and must not cross ahead unless well clear. The aircraft being overtaken has right of way.',320,196)
 ]);
 
+/* declared distances, runway state, lights, signals, markings (04 Aerodromes, part 2) */
+function dim(x1,x2,y,lab,c){return L('M'+x1+' '+(y-5)+'V'+(y+5)+'M'+x2+' '+(y-5)+'V'+(y+5),c,1.4)+A((x1+x2)/2,y,x1+1,y,c,1.4)+A((x1+x2)/2,y,x2-1,y,c,1.4)+T((x1+x2)/2,y-6,lab,'d1','middle',null,c)}
+sec(D,'Declared distances',[
+ F('Declared distances',
+  '<rect x="236" y="22" width="74" height="44" rx="3" fill="none" stroke="var(--accent)" stroke-width="1.2" stroke-dasharray="4 3"/>'
+  +T(273,18,'clearway','d2','middle')
+  +'<path d="M20 36H236V52H20Z" fill="var(--ink-2)"/>'+'<path d="M236 36H262V52H236Z" fill="var(--mid)" opacity=".55"/>'
+  +'<path d="M240 39L248 44L240 49M250 39L258 44L250 49" stroke="#fff" stroke-width="1.2" fill="none"/>'
+  +'<path d="M56 36V52" stroke="#fff" stroke-width="3"/>'+'<path d="M28 44H50" stroke="#fff" stroke-width="1" stroke-dasharray="4 3"/>'
+  +T(249,76,'stopway','d2','middle')+T(56,30,'threshold','d2','middle')+P(16,44,90,'var(--accent)',1)
+  +dim(20,236,92,'TORA: the ground run','var(--ink)')
+  +dim(20,262,120,'ASDA = TORA + stopway','var(--mid)')
+  +dim(20,310,148,'TODA = TORA + clearway','var(--accent)')
+  +dim(56,236,176,'LDA: from the landing threshold','var(--good)'),
+  'Take-off runs from the start of the runway. The stopway (ground you can stop on) adds to ASDA; the clearway (airspace you climb over) adds to TODA. Here a displaced threshold makes the LDA shorter than the TORA.',320,190)
+]);
+function third(x,code,cov,dep,desc){return dzB(x,64,92,56,'#2b2f36','var(--ink-2)',2)+T(x+46,80,'code '+code,'d1','middle',null,'#ffffff')+T(x+46,94,cov+'%, '+dep,'d2','middle',null,'#dfe5f0')+T(x+46,108,desc,'d2','middle',null,'#dfe5f0')}
+sec(D,'Runway surface condition',[
+ F('Reading a SNOWTAM, third by third',
+  T(160,20,'EGGP 03150045 09 2/5/5 50/75/75 04/NR/NR SLUSH/WET/WET','d2','middle')
+  +T(160,40,'Each third gets its own code, coverage, depth and description','d1','middle')
+  +third(22,2,50,'4 mm','slush')+third(114,5,75,'depth NR','wet')+third(206,5,75,'depth NR','wet')
+  +T(12,96,'09','d1','middle')+T(308,96,'27','d1','middle')
+  +T(68,136,'first third','d2','middle')+T(160,136,'second third','d2','middle')+T(252,136,'last third','d2','middle')
+  +T(160,156,'Codes: 0 worst, 6 best. Contaminated if over 25% of a third is covered.','d2','middle'),
+  'Assessed 15 March at 00:45. Thirds are counted from the end with the lower runway number. NR means not reported.',320,166)
+]);
+function dots(x,y,n,dx,dy,c,r){var s='';for(var k=0;k<n;k++)s+='<circle cx="'+(x+k*dx)+'" cy="'+(y+k*dy)+'" r="'+(r||2.4)+'" fill="'+c+'"/>';return s}
+sec(D,'Runway lights',[
+ F('Threshold, edge and end lights',
+  '<path d="M60 60H270V110H60Z" fill="var(--ink-2)"/>'+'<path d="M70 85H260" stroke="#fff" stroke-dasharray="8 6"/>'
+  +dots(64,64,6,0,8.4,'#3ccf63',2.8)+dots(266,64,6,0,8.4,'#ff4a4a',2.8)+dots(80,56,8,25,0,'#f4f1e6')+dots(80,114,8,25,0,'#f4f1e6')
+  +P(22,85,90,'var(--accent)',1.2)+A(56,138,34,138,'#2f9d4c',1.6)+A(262,138,240,138,'var(--bad)',1.6)
+  +T(64,152,'threshold: fixed green','d1','middle')+T(64,164,'seen from the approach','d2','middle')
+  +T(256,152,'end: fixed red','d1','middle')+T(256,164,'seen along the runway','d2','middle')
+  +T(165,40,'edge lights along both sides','d2','middle')+T(256,182,'at least 6, within 3 m of the end','d2','middle'),
+  'Both sets face the landing aircraft: green says "runway starts here", red says "runway ends here". Arrows show which way each light shines.',320,192)
+]);
+function tile(x,y,sym,l1,l2){return dzB(x,y,96,82,'var(--surface-2)','var(--line)',6)+'<rect x="'+(x+8)+'" y="'+(y+6)+'" width="80" height="46" rx="3" fill="#2b2f36"/>'+sym(x+48,y+29)+T(x+48,y+64,l1,'d2','middle')+T(x+48,y+75,l2,'d2','middle')}
+var Wh='#f4f1e6',Ye='#f2c14a',Re='#d8312c';
+function sT(disc){return function(cx,cy){return'<path d="M'+(cx-28)+' '+(cy-3)+'H'+(cx+12)+'V'+(cy+3)+'H'+(cx-28)+'Z" fill="'+Wh+'"/><path d="M'+(cx+12)+' '+(cy-16)+'H'+(cx+18)+'V'+(cy+16)+'H'+(cx+12)+'Z" fill="'+Wh+'"/>'+(disc?'<circle cx="'+(cx+28)+'" cy="'+cy+'" r="5" fill="'+Wh+'"/>':'')}}
+function sDb(strips,redL){return function(cx,cy){return'<circle cx="'+(cx-22)+'" cy="'+cy+'" r="10" fill="'+Wh+'"/><circle cx="'+(cx+22)+'" cy="'+cy+'" r="10" fill="'+Wh+'"/><path d="M'+(cx-22)+' '+(cy-3)+'H'+(cx+22)+'V'+(cy+3)+'H'+(cx-22)+'Z" fill="'+Wh+'"/>'+(strips?'<path d="M'+(cx-22)+' '+(cy-10)+'V'+(cy+10)+'M'+(cx+22)+' '+(cy-10)+'V'+(cy+10)+'" stroke="#111" stroke-width="3"/>':'')+(redL?'<path d="M'+(cx-5)+' '+(cy-13)+'V'+(cy+12)+'H'+(cx+8)+'" stroke="'+Re+'" stroke-width="3.5" fill="none"/>':'')}}
+function sL(cx,cy){return'<path d="M'+(cx-7)+' '+(cy-15)+'V'+(cy+13)+'H'+(cx+11)+'" stroke="'+Wh+'" stroke-width="6" fill="none"/>'}
+function sArrow(cx,cy){var d='M'+(cx-30)+' '+(cy-14)+'H'+(cx+22)+'V'+(cy+8);return'<path d="'+d+'" stroke="'+Re+'" stroke-width="7" fill="none"/><path d="'+d+'" stroke="'+Ye+'" stroke-width="7" stroke-dasharray="5 5" fill="none"/><path d="M'+(cx+13)+' '+(cy+8)+'H'+(cx+31)+'L'+(cx+22)+' '+(cy+19)+'Z" fill="'+Re+'"/>'}
+function sSq(cross){return function(cx,cy){return'<rect x="'+(cx-19)+'" y="'+(cy-19)+'" width="38" height="38" fill="'+Re+'"/><path d="M'+(cx-17)+' '+(cy+17)+'L'+(cx+17)+' '+(cy-17)+(cross?'M'+(cx-17)+' '+(cy-17)+'L'+(cx+17)+' '+(cy+17):'')+'" stroke="'+Ye+'" stroke-width="5"/>'}}
+function sH(cx,cy){return'<path d="M'+(cx-11)+' '+(cy-15)+'V'+(cy+15)+'M'+(cx+11)+' '+(cy-15)+'V'+(cy+15)+'M'+(cx-11)+' '+cy+'H'+(cx+11)+'" stroke="'+Wh+'" stroke-width="5"/>'}
+function sDx(cx,cy){return'<path d="M'+(cx-4)+' '+(cy-18)+'V'+(cy+18)+'M'+(cx+4)+' '+(cy-18)+'V'+(cy+18)+'M'+(cx-22)+' '+(cy-4)+'H'+(cx+22)+'M'+(cx-22)+' '+(cy+4)+'H'+(cx+22)+'" stroke="'+Wh+'" stroke-width="4"/>'}
+function sYx(cx,cy){return'<path d="M'+(cx-15)+' '+(cy-15)+'L'+(cx+15)+' '+(cy+15)+'M'+(cx+15)+' '+(cy-15)+'L'+(cx-15)+' '+(cy+15)+'" stroke="'+Ye+'" stroke-width="6"/>'}
+sec(D,'Signals area: direction',[
+ F('Signals area: direction and surfaces',
+  tile(10,8,sT(false),'Land towards','the cross-arm')+tile(112,8,sT(true),'Directions may','not coincide')+tile(214,8,sDb(false),'Hard surfaces','only')
+  +tile(10,98,sDb(true),'Runway for take-off','and landing only')+tile(112,98,sDb(false,true),'Light aircraft:','runway or L area')+tile(214,98,sL,'Light aircraft','area only'),
+  'Ground signals are read from the air. The T points the way to land: along the shaft, towards the cross-arm. The disc (or a black ball on the mast) warns that take-off may be in another direction.',320,188)
+]);
+sec(D,'Signals area: circuit',[
+ F('Signals area: circuit direction and warnings',
+  tile(10,8,sArrow,'Right-hand','circuit')+tile(112,8,sSq(false),'Take special care','when landing')+tile(214,8,sSq(true),'Landing','prohibited')
+  +tile(10,98,sH,'Helicopters use','the marked area')+tile(112,98,sDx,'Glider flying','in progress')+tile(214,98,sYx,'Tow-rope','dropping area'),
+  'One yellow diagonal on a red square means care, a yellow cross means no landing. The double white cross (or two red balls on the mast) means gliding.',320,188)
+]);
+sec(D,'Signals on paved',[
+ F('Unfit section and holding point',
+  '<path d="M10 22H310V58H10Z" fill="var(--ink-2)"/><path d="M200 58H240V196H200Z" fill="var(--ink-2)"/>'
+  +[40,80,120].map(function(x){return'<path d="M'+(x-8)+' 32L'+(x+8)+' 48M'+(x+8)+' 32L'+(x-8)+' 48" stroke="#fff" stroke-width="3"/>'}).join('')
+  +'<path d="M150 40H310" stroke="#fff" stroke-dasharray="10 8"/>'
+  +'<path d="M200 92H240M200 97H240" stroke="'+Ye+'" stroke-width="2.4" stroke-dasharray="5 4"/><path d="M200 104H240M200 109H240" stroke="'+Ye+'" stroke-width="2.4"/>'
+  +'<path d="M220 120V196" stroke="'+Ye+'" stroke-width="1.4"/>'+P(220,164,0,'var(--accent)',1.2)
+  +T(80,74,'white crosses: runway','d2','middle')+T(80,85,'section unfit','d2','middle')+T(80,96,'(yellow on a taxiway)','d2','middle')
+  +T(248,92,'broken lines:','d1')+T(248,103,'runway side','d2')+T(248,120,'continuous:','d1')+T(248,131,'hold here for','d2')+T(248,142,'ATC permission','d2')
+  +T(192,170,'taxiing out','d2','end')+T(192,181,'towards the runway','d2','end'),
+  'Taxiing out, you meet the continuous lines first: stop unless cleared. Vacating the runway you meet the broken lines first and need no clearance to cross.',320,204)
+]);
+function strip(y,mk,temp,l1,l2,l3){var s='<path d="M10 '+y+'H200V'+(y+30)+'H10Z" fill="var(--ink-2)"/><path d="M70 '+y+'V'+(y+30)+'" stroke="#fff" stroke-width="3"/>';
+ for(var k=0;k<5;k++)s+='<path d="M76 '+(y+4+k*5.4)+'H98" stroke="#fff" stroke-width="2.6"/>';
+ s+=T(116,y+19,'09','d1','middle',null,'#ffffff');var cy=y+15;
+ if(mk==='a')s+=A(14,cy,34,cy,'#fff',1.4)+A(38,cy,58,cy,'#fff',1.4);
+ else s+='<path d="M20 '+(cy-6)+'L32 '+(cy+6)+'M32 '+(cy-6)+'L20 '+(cy+6)+'M44 '+(cy-6)+'L56 '+(cy+6)+'M56 '+(cy-6)+'L44 '+(cy+6)+'" stroke="#fff" stroke-width="2"/>';
+ if(temp)s+='<path d="M60 '+(y+4)+'L66 '+cy+'L60 '+(y+26)+'" stroke="#fff" stroke-width="1.6" fill="none"/>';
+ return s+T(208,y+8,l1,'d1')+T(208,y+19,l2,'d2')+T(208,y+29,l3,'d2')}
+sec(D,'Displaced thresholds',[
+ F('Displaced threshold markings',
+  strip(10,'a',false,'Permanent, arrows','taxi and take-off,','no landing')
+  +strip(50,'x',false,'Permanent, crosses','unfit for any','movement')
+  +strip(90,'a',true,'Temporary, arrows','taxi and take-off,','no landing')
+  +strip(130,'x',true,'Temporary, crosses','unfit for any','movement')
+  +T(48,176,'pre-threshold area','d2','middle')+T(70,188,'threshold bar','d2','middle')+T(120,176,'piano keys','d2','middle'),
+  'Temporary displacements add chevrons before the threshold bar. Arrows: you may roll on it but not land on it. Crosses: keep off.',320,196)
+]);
+function lamp(y,c,fl){return'<circle cx="24" cy="'+y+'" r="7" fill="'+c+'"/>'+(fl?'<path d="M24 '+(y-13)+'V'+(y-10)+'M24 '+(y+10)+'V'+(y+13)+'M11 '+y+'H14M34 '+y+'H37M15 '+(y-9)+'L17 '+(y-7)+'M33 '+(y-9)+'L31 '+(y-7)+'M15 '+(y+9)+'L17 '+(y+7)+'M33 '+(y+9)+'L31 '+(y+7)+'" stroke="'+c+'" stroke-width="1.6"/>':'')}
+function lrow(y,c,fl,nm,a,b){return lamp(y,c,fl)+T(42,y-5,nm,'d1')+T(42,y+6,a[0],'d2')+(a[1]?T(42,y+16,a[1],'d2'):'')+T(196,y+1,b[0],'d2')+(b[1]?T(196,y+11,b[1],'d2'):'')+L('M10 '+(y+20)+'H310','var(--line)',.8)}
+sec(D,'Light signals from ATC',[
+ F('Light signals from ATC',
+  T(42,16,'in flight','d1')+T(196,16,'on the ground','d1')+L('M10 22H310','var(--line)',.8)
+  +lrow(38,'#2f9d4c',false,'Steady green',['Cleared to land'],['Cleared to take off'])
+  +lrow(80,'#2f9d4c',true,'Flashing green',['Return and wait for','permission to land'],['Cleared to taxi'])
+  +lrow(122,'#d8312c',false,'Steady red',['Give way to others','and keep circling'],['Stop'])
+  +lrow(164,'#d8312c',true,'Flashing red',['Do not land:','aerodrome not available'],['Move clear of the','landing area'])
+  +lrow(206,'#c8c2b0',true,'Flashing white',['Land here after a steady','green, then wait'],['Return to your','starting point'])
+  +lrow(248,'#ff7a1a',true,'Red flare',['Do not land for now:','wait for permission'],['(not used)']),
+  'Greens clear you to do something (if there is no risk of collision); reds stop you. On the ground, steady green is take-off and flashing green is taxi.',320,276)
+]);
+sec(D,'Obstacle lights',[
+ F('Obstacle lighting',
+  '<path d="M10 150H310" stroke="var(--ink-2)" stroke-width="1.2"/>'
+  +'<path d="M60 150V60" stroke="var(--ink-2)" stroke-width="3"/><circle cx="60" cy="56" r="4.5" fill="var(--bad)"/>'+T(60,166,'45 m or less:','d1','middle')+T(60,178,'one steady red on top','d2','middle')
+  +'<path d="M130 150V40H210V150Z" fill="var(--ch-tn)" stroke="var(--ch-tnl)"/>'+dots(130,40,3,40,0,'var(--bad)',4)+dots(130,95,2,80,0,'var(--bad)',4)+T(170,166,'larger: red lights','d1','middle')+T(170,178,'outline its extent','d2','middle')
+  +'<path d="M272 150V30" stroke="var(--ink-2)" stroke-width="1"/>'+[0,1,2,3,4,5].map(function(k){return'<path d="M266 '+(30+k*20)+'H278V'+(50+k*20)+'H266Z" fill="'+(k%2?'#fff':'#e8742c')+'" stroke="var(--ink-2)" stroke-width=".6"/>'}).join('')
+  +T(272,166,'hard to see by day:','d1','middle')+T(272,178,'red/orange and white','d2','middle'),
+  'Obstacles within 15 km of an aerodrome are normally lit at night. Vehicles carry flashing yellow lights; high-intensity obstacle lights flash white.',320,188)
+]);
+
 /* ---------- 02 Aviation Law and organisations ---------- */
 var LW='Aviation Law and organisations';
 function col(x,head,items,c){var s=dzB(x,96,96,30,'var(--accent-soft)',c,4,1.4)+T(x+48,108,head[0],'d1','middle')+T(x+48,120,head[1],'d2','middle')+L('M'+(x+48)+' 82V96','var(--ink-2)',1);items.forEach(function(it,i){var y=134+i*28;s+=L('M'+(x+48)+' '+(y-(i?4:8))+'V'+y,'var(--ink-2)',1)+dzB(x,y,96,24,'var(--surface)','var(--ink-2)',3)+T(x+6,y+10,it[0],'d1')+T(x+6,y+20,it[1],'d2',null,7.5)});return s}
