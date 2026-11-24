@@ -172,7 +172,7 @@ function dots(x,y,n,dx,dy,c,r){var s='';for(var k=0;k<n;k++)s+='<circle cx="'+(x
 sec(D,'Runway lights',[
  F('Threshold, edge and end lights',
   '<path d="M60 60H270V110H60Z" fill="var(--ink-2)"/>'+'<path d="M70 85H260" stroke="#fff" stroke-dasharray="8 6"/>'
-  +dots(64,64,6,0,8.4,'#3ccf63',2.8)+dots(266,64,6,0,8.4,'#ff4a4a',2.8)+dots(80,56,8,25,0,'#f4f1e6')+dots(80,114,8,25,0,'#f4f1e6')
+  +dots(64,64,6,0,8.4,'#3ccf63',2.8)+dots(266,64,6,0,8.4,'#ff4a4a',2.8)+dots(80,56,8,25,0,'#ffffff').replace(/\/>/g,' stroke="#555" stroke-width=".6"/>')+dots(80,114,8,25,0,'#ffffff').replace(/\/>/g,' stroke="#555" stroke-width=".6"/>')
   +P(22,85,90,'var(--accent)',1.2)+A(56,138,34,138,'#2f9d4c',1.6)+A(262,138,240,138,'var(--bad)',1.6)
   +T(64,152,'threshold: fixed green','d1','middle')+T(64,164,'seen from the approach','d2','middle')
   +T(256,152,'end: fixed red','d1','middle')+T(256,164,'seen along the runway','d2','middle')
@@ -209,8 +209,8 @@ function mast(cx,cy,extra){return'<path d="M'+(cx-12)+' '+(cy+21)+'H'+(cx+12)+'"
 function mBall(n,col){return function(cx,cy){var s='';for(var k=0;k<n;k++)s+='<circle cx="'+(cx-6)+'" cy="'+(cy-12+k*10)+'" r="5" fill="'+col+'"/>';return mast(cx,cy,s)}}
 function mFlag(col,cheq){return function(cx,cy){var f='';if(cheq){for(var r=0;r<3;r++)for(var c=0;c<4;c++)f+='<path d="M'+(cx+1+c*6)+' '+(cy-20+r*6)+'h6v6h-6Z" fill="'+((r+c)%2?Ye:Re)+'"/>'}else f='<path d="M'+(cx+1)+' '+(cy-20)+'h20v14h-20Z" fill="'+col+'"/>';return mast(cx,cy,f)}}
 function sC(cx,cy){return'<rect x="'+(cx-18)+'" y="'+(cy-18)+'" width="36" height="36" fill="'+Ye+'"/><path d="M'+(cx+9)+' '+(cy-8)+'A11 11 0 1 0 '+(cx+9)+' '+(cy+8)+'" stroke="#111" stroke-width="5.5" fill="none"/>'}
-function sRwyT(cx,cy){return'<path d="M'+(cx-30)+' '+(cy+4)+'H'+(cx+34)+'V'+(cy+22)+'H'+(cx-30)+'Z" fill="#555b66"/><path d="M'+(cx-22)+' '+(cy-18)+'H'+(cx-17)+'V'+(cy-2)+'H'+(cx-22)+'Z" fill="'+Wh+'"/><path d="M'+(cx-17)+' '+(cy-12)+'H'+(cx+8)+'V'+(cy-8)+'H'+(cx-17)+'Z" fill="'+Wh+'"/>'}
-function n09(x,y){return'<text x="'+x+'" y="'+y+'" transform="rotate(-90 '+x+' '+y+')" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="13" fill="'+Wh+'">09</text>'}
+function sRwyT(cx,cy){return'<path d="M'+(cx-30)+' '+(cy+4)+'H'+(cx+34)+'V'+(cy+22)+'H'+(cx-30)+'Z" fill="#555b66"/><path d="M'+(cx+12)+' '+(cy-18)+'H'+(cx+17)+'V'+(cy-2)+'H'+(cx+12)+'Z" fill="'+Wh+'"/><path d="M'+(cx-13)+' '+(cy-12)+'H'+(cx+12)+'V'+(cy-8)+'H'+(cx-13)+'Z" fill="'+Wh+'"/>'+A(cx-24,cy+13,cx+26,cy+13,Wh,1.2)}
+function n09(x,y){return'<text x="'+x+'" y="'+y+'" transform="rotate(90 '+x+' '+y+')" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="13" fill="'+Wh+'">09</text>'}
 function sDanger(bar){return function(cx,cy){return(bar?'<path d="M'+(cx-26)+' '+(cy-14)+'V'+(cy+14)+'" stroke="'+Wh+'" stroke-width="4"/>':'')+'<path d="M'+(cx-16)+' '+(cy-12)+'L'+(cx+6)+' '+(cy+12)+'M'+(cx+6)+' '+(cy-12)+'L'+(cx-16)+' '+(cy+12)+'" stroke="'+Wh+'" stroke-width="4.5"/>'+n09(cx+24,cy)}}
 function sWedge(cx,cy){var s='<path d="M'+(cx-34)+' '+(cy+10)+'L'+(cx+18)+' '+(cy-18)+'L'+(cx+30)+' '+(cy-2)+'L'+(cx-22)+' '+(cy+18)+'Z" fill="#fff" stroke="var(--ink-2)" stroke-width=".8"/>';[[-34,10,-22,18,-14,0],[-8,-4,4,4,0,0],[14,-14,26,-6,0,0]].forEach(function(b){});
  var pts=[[cx-34,cy+10],[cx+18,cy-18]],q=[[cx-22,cy+18],[cx+30,cy-2]];[0.08,0.42,0.76].forEach(function(t){var t2=t+0.17,P1=[pts[0][0]+(pts[1][0]-pts[0][0])*t,pts[0][1]+(pts[1][1]-pts[0][1])*t],P2=[pts[0][0]+(pts[1][0]-pts[0][0])*t2,pts[0][1]+(pts[1][1]-pts[0][1])*t2],Q1=[q[0][0]+(q[1][0]-q[0][0])*t,q[0][1]+(q[1][1]-q[0][1])*t],Q2=[q[0][0]+(q[1][0]-q[0][0])*t2,q[0][1]+(q[1][1]-q[0][1])*t2];s+='<path d="M'+P1.join(' ')+'L'+P2.join(' ')+'L'+Q2.join(' ')+'L'+Q1.join(' ')+'Z" fill="'+Or+'"/>'});return s}
@@ -362,8 +362,8 @@ var M1=[
  [function(cx,by){return man(cx,by,DN_R,[[12,4],[-4,-4]])+arr(cx-6,by-62,cx+22,by-62)},'Cut engines (hand','across the chest)']
 ];
 var M2=[
- [function(cx,by){return man(cx,by,OUT_R,OUT_L)+arr(cx-26,by-38,cx-26,by-24)+arr(cx+26,by-38,cx+26,by-24)},'Slow down','(arms move up, down)'],
- [function(cx,by){return man(cx,by,OUT_R,DN_L)+arr(cx-26,by-38,cx-26,by-24)},'Slow engines on','the indicated side'],
+ [function(cx,by){return man(cx,by,OUT_R,OUT_L)+arr(cx-27,by-31,cx-27,by-46)+arr(cx-27,by-31,cx-27,by-18)+arr(cx+27,by-31,cx+27,by-46)+arr(cx+27,by-31,cx+27,by-18)},'Slow down','(arms move up, down)'],
+ [function(cx,by){return man(cx,by,OUT_R,DN_L)+arr(cx-27,by-31,cx-27,by-46)+arr(cx-27,by-31,cx-27,by-18)},'Slow engines on','the indicated side'],
  [function(cx,by){return man(cx,by,[[-5,-14],[-7,-28]],[[5,-14],[7,-28]])},'This bay','(arms vertical)'],
  [function(cx,by){return man(cx,by,[[-4,14],[10,10]],DN_L,{bats:false,extra:'<path d="M'+(cx+3)+' '+(by-50)+'h6M'+(cx+3)+' '+(by-47)+'h6M'+(cx+3)+' '+(by-44)+'h6" stroke="var(--ink)" stroke-width="1"/>'})},'Release brakes','(fist, then open)'],
  [function(cx,by){return man(cx,by,[[-4,14],[10,10]],DN_L,{bats:false,extra:'<circle cx="'+(cx+1)+'" cy="'+(by-44)+'" r="3.4" fill="'+SKd+'"/>'})},'Engage brakes','(open, then fist)'],
@@ -385,7 +385,7 @@ function cockpit(cx,by,extra){return'<path d="M'+(cx-40)+' '+by+'L'+(cx-36)+' '+
  +'<path d="M'+(cx-17)+' '+(by-14)+'Q'+cx+' '+(by-34)+' '+(cx+17)+' '+(by-14)+'Z" fill="'+SKd+'"/><circle cx="'+cx+'" cy="'+(by-40)+'" r="9" fill="'+SKd+'"/>'+(extra||'')+'<path d="M'+(cx-42)+' '+by+'Q'+cx+' '+(by-22)+' '+(cx+42)+' '+by+'Z" fill="var(--accent)"/>'}
 function hand(x,y,open){return open?'<path d="M'+(x-4)+' '+(y+4)+'V'+(y-6)+'M'+(x-1.3)+' '+(y+4)+'V'+(y-8)+'M'+(x+1.4)+' '+(y+4)+'V'+(y-8)+'M'+(x+4)+' '+(y+4)+'V'+(y-6)+'" stroke="'+SK+'" stroke-width="2.2" stroke-linecap="round"/>':'<circle cx="'+x+'" cy="'+y+'" r="4" fill="'+SK+'" stroke="'+SKd+'" stroke-width=".8"/>'}
 var MP=[
- [function(cx,by){return cockpit(cx,by,'<path d="M'+(cx+12)+' '+(by-22)+'L'+(cx-14)+' '+(by-40)+'" stroke="'+SK+'" stroke-width="4" stroke-linecap="round"/>'+hand(cx-16,by-44,false)+mv('M'+(cx-28)+' '+(by-50)+'h-6')+T(cx-24,by-62,'open, fist','d2','middle'))},'Brakes engaged','(fingers, then fist)'],
+ [function(cx,by){return cockpit(cx,by,'<path d="M'+(cx+12)+' '+(by-22)+'L'+(cx-14)+' '+(by-40)+'" stroke="'+SK+'" stroke-width="4" stroke-linecap="round"/>'+hand(cx-16,by-44,false)+T(cx-24,by-62,'open, fist','d2','middle'))},'Brakes engaged','(fingers, then fist)'],
  [function(cx,by){return cockpit(cx,by,'<path d="M'+(cx+12)+' '+(by-22)+'L'+(cx-14)+' '+(by-40)+'" stroke="'+SK+'" stroke-width="4" stroke-linecap="round"/>'+hand(cx-16,by-44,false)+T(cx-24,by-62,'fist, open','d2','middle'))},'Brakes released','(fist, then fingers)'],
  [function(cx,by){return cockpit(cx,by,hand(cx-26,by-44,true)+hand(cx+26,by-44,true)+arr(cx-22,by-56,cx-10,by-56)+arr(cx+22,by-56,cx+10,by-56))},'Insert chocks','(hands in, cross)'],
  [function(cx,by){return cockpit(cx,by,hand(cx-6,by-44,true)+hand(cx+6,by-44,true)+arr(cx-10,by-56,cx-26,by-56)+arr(cx+10,by-56,cx+26,by-56))},'Remove chocks','(hands out)'],
@@ -420,16 +420,19 @@ sec(D5,'How the altimeter works',[
    s+='<rect x="'+(cx+16)+'" y="'+(cy-7)+'" width="28" height="14" rx="2" fill="#000" stroke="#777"/><text x="'+(cx+30)+'" y="'+(cy+4)+'" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#fff">1013</text>';
    s+='<path d="M'+(cx-6)+' '+(cy-36)+'h12v8h-12Z" fill="#fff"/><path d="M'+(cx-6)+' '+(cy-36)+'l4 8M'+(cx-2)+' '+(cy-36)+'l4 8M'+(cx+2)+' '+(cy-36)+'l4 8" stroke="#111" stroke-width="1.4"/>';
    function ptr(f,len,w){var a=f*Math.PI*2;return'<path d="M'+cx+' '+cy+'L'+(cx+Math.sin(a)*len).toFixed(1)+' '+(cy-Math.cos(a)*len).toFixed(1)+'" stroke="#fff" stroke-width="'+w+'" stroke-linecap="round"/>'}
-   s+=ptr(.35,52,2)+ptr(.235,32,4.5)+'<path d="M'+(cx+Math.sin(.0235*6.283)*r).toFixed(1)+' '+(cy-Math.cos(.0235*6.283)*r).toFixed(1)+'l-4 10h8z" fill="#fff"/><circle cx="'+cx+'" cy="'+cy+'" r="4" fill="#888"/>';
+   /* reading 1,400 ft: 10,000 ft pointer 0.014 rev, 1,000 ft pointer 0.14 rev, 100 ft pointer 0.4 rev */
+   function wedge(f,len,w){var a=f*Math.PI*2,sx=Math.sin(a),cy2=-Math.cos(a),px=Math.cos(a),py=Math.sin(a);return'<path d="M'+(cx-px*w).toFixed(1)+' '+(cy-py*w).toFixed(1)+'L'+(cx+sx*len).toFixed(1)+' '+(cy+cy2*len).toFixed(1)+'L'+(cx+px*w).toFixed(1)+' '+(cy+py*w).toFixed(1)+'Z" fill="#fff"/>'}
+   var a10=.014*Math.PI*2,tx=cx+Math.sin(a10)*(r-1),ty=cy-Math.cos(a10)*(r-1),nx=-Math.sin(a10),ny=Math.cos(a10),qx=Math.cos(a10),qy=Math.sin(a10);
+   s+='<path d="M'+tx.toFixed(1)+' '+ty.toFixed(1)+'L'+(tx+nx*10+qx*4).toFixed(1)+' '+(ty+ny*10+qy*4).toFixed(1)+'L'+(tx+nx*10-qx*4).toFixed(1)+' '+(ty+ny*10-qy*4).toFixed(1)+'Z" fill="#fff"/>'+ptr(.014,r-10,1)
+   +wedge(.14,34,4)+ptr(.4,54,2)+'<circle cx="'+cx+'" cy="'+cy+'" r="4" fill="#888"/>';
    s+='<circle cx="'+(cx-52)+'" cy="'+(cy+54)+'" r="9" fill="#555" stroke="#222"/>';
    return s})()
-  +T(150,22,'10,000 ft pointer (tip)','d2')+L('M148 20L90 32','var(--ink-2)',.8)
+  +T(150,22,'10,000 ft pointer (triangle)','d2')+L('M148 20L85 38','var(--ink-2)',.8)
   +T(150,40,'striped sector: below 10,000 ft','d2')+L('M148 38L86 62','var(--ink-2)',.8)
-  +T(150,58,'100 ft pointer (long)','d2')+L('M148 56L114 118','var(--ink-2)',.8)
-  +T(150,76,'1,000 ft pointer (short)','d2')+L('M148 74L104 82','var(--ink-2)',.8)
-  +T(150,100,'pressure window (subscale)','d2')+L('M148 98L122 96','var(--ink-2)',.8)
-  +T(150,172,'subscale-setting knob','d2')+L('M148 170L34 152','var(--ink-2)',.8)
-  +T(150,124,'Reads 2,350 ft above the','d1')+T(150,136,'pressure level set in the','d1')+T(150,148,'window (here 1013 hPa)','d1'),
+  +T(150,58,'1,000 ft pointer (short, wide)','d2')+L('M148 56L95 82','var(--ink-2)',.8)
+  +T(150,76,'pressure window (subscale)','d2')+L('M148 74L123 91','var(--ink-2)',.8)
+  +T(150,100,'100 ft pointer (long, thin)','d2')+L('M148 98L104 131','var(--ink-2)',.8)
+  +T(150,126,'Reads 1,400 ft above the','d1')+T(150,138,'pressure level set in the','d1')+T(150,150,'window (here 1013 hPa)','d1')+T(150,174,'subscale-setting knob','d2')+L('M148 172L36 154','var(--ink-2)',.8),
   'Static pressure from the static vent surrounds a sealed capsule. As you climb it expands, and gearing turns the pointers. The subscale sets the datum the reading is measured from.',320,184),
  F('Inside the altimeter',
   dzB(20,14,284,160,'var(--surface-2)','var(--ink-2)',12,1.6)+T(32,32,'sealed instrument case, filled with static air','d1')
@@ -453,15 +456,15 @@ function wave(x1,x2,y){var d='M'+x1+' '+y;for(var x=x1;x<x2;x+=8)d+='q2 -2 4 0t4
 sec(D5,'QNH, QFE and standard pressure',[
  F('Altitude is measured from mean sea level',
   wave(10,310,112)+'<path d="M10 112V86Q40 80 60 90Q80 96 96 112Z" fill="var(--ch-l1)" stroke="var(--ch-tx)" stroke-width=".6"/>'+tower2(26,88)
-  +P(200,22,90,'var(--accent)',1.2)+A(200,72,200,30,'var(--ink)',1.3)+A(200,72,200,110,'var(--ink)',1.3)+T(206,74,'altitude','d1')
+  +dzSide(150,24,.42,'var(--accent)',true)+A(150,70,150,30,'var(--ink)',1.3)+A(150,70,150,110,'var(--ink)',1.3)+T(156,74,'altitude','d1')
   +T(104,106,'mean sea level','d2')+T(308,94,'QNH: the actual MSL pressure','d2','end')+T(308,104,'at any one place','d2','end'),
   'With QNH set, the altimeter reads altitude: the vertical distance above mean sea level, the same datum as the elevations on your chart.',320,128),
  F('Typical settings on a day of high pressure',
   wave(10,310,196)+'<path d="M196 196Q206 160 226 151H310V196Z" fill="var(--ch-l1)" stroke="var(--ch-tx)" stroke-width=".6"/>'
   +L('M10 181H200','var(--mid)',1.2,'5 3')+T(12,177,'standard pressure 1013 hPa','d2',null,null,'var(--mid)')
   +L('M10 76H310','var(--ink-2)',.9,'6 4')+T(104,72,'constant level','d2','middle')+dzSide(206,74,.42,'var(--accent)',true)
-  +dial(50,44,20,'1030',0,.4)+dial(150,44,20,'1013',.5,.35)+dial(260,44,20,'980',.5,.25)
-  +T(74,38,'4,000 ft','d2')+T(174,38,'3,500 ft','d2')+T(284,38,'2,500','d2')
+  +dial(50,44,19,'1030',0,.4)+dial(150,44,19,'1013',.5,.35)+dial(260,44,19,'980',.5,.25)
+  +T(50,14,'reads 4,000 ft','d2','middle')+T(150,14,'reads 3,500 ft','d2','middle')+T(260,14,'reads 2,500 ft','d2','middle')
   +A(50,136,50,78,'var(--accent)',1.4)+L('M50 136V194','var(--accent)',1.4)+T(56,124,'altitude','d2',null,null,'var(--accent)')+T(56,134,'4,000 ft amsl','d2',null,null,'var(--accent)')
   +A(150,130,150,78,'var(--mid)',1.4)+L('M150 130V180','var(--mid)',1.4)+T(156,118,'pressure altitude','d2',null,null,'var(--mid)')+T(156,128,'3,500 ft (FL35)','d2',null,null,'var(--mid)')
   +A(260,114,260,78,'var(--good)',1.4)+L('M260 114V150','var(--good)',1.4)+T(254,94,'height','d2','end',null,'var(--good)')+T(254,104,'2,500 ft aal','d2','end',null,'var(--good)')
@@ -529,14 +532,14 @@ sec(D5,'Choosing a flight level',[
 sec(D5,'Outside controlled airspace',[
  F('Aerodrome QNH (not RPS) may be needed en route',
   dzB(8,8,148,192,'var(--surface)','var(--line)',4)+dzB(164,8,148,192,'var(--surface)','var(--line)',4)
-  +'<path d="M8 20H156V76H8Z" fill="var(--accent-soft)"/>'+T(14,34,'TMA','d1')+T(14,46,'base 2,500 ft altitude','d2')+T(14,57,'(upper limit FL245)','d2')
+  +'<path d="M8 20H112V76H8Z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1"/>'+T(14,34,'TMA','d1')+T(14,46,'base 2,500 ft alt.','d2')+T(14,57,'(up to FL245)','d2')
   +wave(8,156,186)+'<path d="M8 186V176H156V186Z" fill="var(--ch-l1)"/>'+'<path d="M24 172H54V176H24Z" fill="var(--ink-2)"/>'
   +L('M14 96H150','var(--ink)',1.3)+A(140,96,152,96,'var(--ink)',1.3)+dzSide(86,94,.34,'var(--accent)',true)
   +A(30,170,30,100,'var(--bad)',1.3)+T(36,118,'set aerodrome','d2')+T(36,128,'QNH 1003','d2')+A(134,170,134,100,'var(--bad)',1.3)+T(128,140,'reset RPS','d2','end')+T(128,150,'(1001)','d2','end')
   +wave(164,312,186)+'<path d="M164 186V176H312V186Z" fill="var(--ch-l1)"/>'
   +'<path d="M226 176V56H296V176" fill="var(--warm-soft)" stroke="var(--warm)" stroke-width="1.2"/>'+T(261,130,'MATZ','d1','middle')+T(261,142,'surface to','d2','middle')+T(261,152,'3,000 ft aal','d2','middle')+'<path d="M256 172H266V176H256Z" fill="var(--ink-2)"/>'
   +L('M168 96H310','var(--ink)',1.3)+A(298,96,310,96,'var(--ink)',1.3)+dzSide(262,94,.34,'var(--accent)',true)
-  +A(204,170,204,100,'var(--bad)',1.3)+T(198,124,'set','d2','end')+T(198,134,'MATZ','d2','end')+T(198,144,'QFE','d2','end')+A(304,170,304,100,'var(--bad)',1.3)+T(300,82,'reset RPS','d2','end'),
+  +A(204,170,204,100,'var(--bad)',1.3)+T(198,124,'set','d2','end')+T(198,134,'MATZ','d2','end')+T(198,144,'QFE','d2','end')+A(304,170,304,100,'var(--bad)',1.3)+T(306,48,'reset RPS','d2','end'),
   'Heights to scale. Under a TMA, set the QNH of an aerodrome beneath it (what the traffic above uses), then go back to the RPS once clear. Set the MATZ QFE (the clutch QFE in a combined MATZ) before entering and reset the RPS after leaving. The book shows the aerodrome QNH below the RPS; that cannot happen, so the numbers here are consistent.',320,206)
 ]);
 sec(D5,'The semicircular rule',[
