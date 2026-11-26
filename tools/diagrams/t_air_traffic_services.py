@@ -1,0 +1,173 @@
+"""Air Traffic Services: figures ported from the hand-written labs8x.js code (same geometry and wording).
+
+Ported automatically from src/labs80-83notes.js (output checked identical), then restyled by the shared .pdg CSS.
+Edit this file: the old JS is gone."""
+from pplsvg import dA, dB, dL, dP, dSide, dT  # noqa: F401
+
+TOPIC = 'Air Traffic Services'
+FIGS = []
+
+
+def fig(slug, title, w, h, body, caption, section):
+    FIGS.append((slug, title, body, caption, section, w, h))
+
+
+# ---- What each class gives you
+fig('what-each-class-gives-you', 'What each class gives you', 320, 184, "".join([
+    '<rect x="8" y="8" width="304" height="22" fill="var(--surface-2)"/>',
+    dT(12, 24, 'Class', 'd1'),
+    dT(44, 24, 'Clearance', 'd1'),
+    dT(96, 24, 'IFR separated from', 'd1'),
+    dT(206, 24, 'VFR get', 'd1'),
+    dT(12, 46, 'A', 'd1'),
+    dT(44, 46, 'all', 'd2'),
+    dT(96, 46, 'all (IFR only)', 'd2'),
+    dT(206, 46, '(no VFR)', 'd2'),
+    '<rect x="8" y="52" width="304" height="22" fill="var(--surface-2)" opacity=".5"/>',
+    dT(12, 68, 'B', 'd1'),
+    dT(44, 68, 'all', 'd2'),
+    dT(96, 68, 'all', 'd2'),
+    dT(206, 68, 'separation from all', 'd2'),
+    dT(12, 90, 'C', 'd1'),
+    dT(44, 90, 'all', 'd2'),
+    dT(96, 90, 'IFR and VFR', 'd2'),
+    dT(206, 90, 'sep. from IFR; TI on VFR', 'd2'),
+    '<rect x="8" y="96" width="304" height="22" fill="var(--surface-2)" opacity=".5"/>',
+    dT(12, 112, 'D', 'd1'),
+    dT(44, 112, 'all', 'd2'),
+    dT(96, 112, 'IFR', 'd2'),
+    dT(206, 112, 'TI on all; no separation', 'd2'),
+    dT(12, 134, 'E', 'd1'),
+    dT(44, 134, 'IFR only', 'd2'),
+    dT(96, 134, 'IFR', 'd2'),
+    dT(206, 134, 'TI as far as practical', 'd2'),
+    '<rect x="8" y="140" width="304" height="22" fill="var(--surface-2)" opacity=".5"/>',
+    dT(12, 156, 'F', 'd1'),
+    dT(44, 156, 'none', 'd2'),
+    dT(96, 156, '(advisory)', 'd2'),
+    dT(206, 156, 'service on request', 'd2'),
+    dT(12, 178, 'G', 'd1'),
+    dT(44, 178, 'none', 'd2'),
+    dT(96, 178, '-', 'd2'),
+    dT(206, 178, 'service on request', 'd2'),
+    dL('M8 30H312', 'var(--line)', 1),
+]), 'TI = traffic information. In Class D, VFR flights are not separated from anyone: look out. Avoidance advice is available on request in C and D.', 'Services in each airspace class')
+
+# ---- Who you are talking to
+fig('who-you-are-talking-to', 'Who you are talking to', 320, 236, "".join([
+    dB(8, 8, 304, 36, 'var(--surface-2)', 'var(--line)'),
+    '<rect x="8" y="8" width="6" height="36" fill="var(--accent)"/>',
+    dT(22, 23, 'Tower / Approach / Ground', 'd1'),
+    dT(22, 36, 'ATC', 'd2'),
+    dT(170, 23, 'clearances and instructions', 'd2'),
+    dB(8, 50, 304, 36, 'var(--surface-2)', 'var(--line)'),
+    '<rect x="8" y="50" width="6" height="36" fill="var(--good)"/>',
+    dT(22, 65, '… Information', 'd1'),
+    dT(22, 78, 'AFIS', 'd2'),
+    dT(170, 65, 'information only in the air;', 'd2'),
+    dT(170, 78, 'instructions on the ground', 'd2'),
+    dB(8, 92, 304, 36, 'var(--surface-2)', 'var(--line)'),
+    '<rect x="8" y="92" width="6" height="36" fill="var(--mid)"/>',
+    dT(22, 107, '… Radio', 'd1'),
+    dT(22, 120, 'A/G', 'd2'),
+    dT(170, 107, 'basic information; no ATC', 'd2'),
+    '<path d="M60 216V160H220V216" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.2"/>',
+    dL('M10 216H312', 'var(--ink-2)', 1.2),
+    '<path d="M132 216H148V212H132Z" fill="var(--ink-2)"/>',
+    dT(140, 176, 'Safetycom 135.480', 'd1', 'middle'),
+    dT(140, 188, 'below 2,000 ft aal', 'd2', 'middle'),
+    dT(140, 200, 'within 10 nm', 'd2', 'middle'),
+    dA(140, 226, 220, 226, 'var(--ink)', 1),
+    dT(232, 229, '10 nm', 'd2'),
+]), 'The callsign suffix tells you the service. Safetycom is for airfields without their own frequency; keep calls short.', 'AFIS, A/G radio')
+
+# ---- The four UK FIS outside controlled airspace
+fig('the-four-uk-fis-outside-controlled-airspace', 'The four UK FIS outside controlled airspace', 320, 184, "".join([
+    '<rect x="8" y="8" width="304" height="22" fill="var(--surface-2)"/>',
+    dT(12, 24, '', 'd1'),
+    dT(74, 24, 'Basic', 'd1'),
+    dT(140, 24, 'Traffic', 'd1'),
+    dT(194, 24, 'Deconfl.', 'd1'),
+    dT(256, 24, 'Procedural', 'd1'),
+    dT(12, 46, 'radar?', 'd1'),
+    dT(74, 46, 'no', 'd2'),
+    dT(140, 46, 'yes', 'd2'),
+    dT(194, 46, 'yes', 'd2'),
+    dT(256, 46, 'no', 'd2'),
+    '<rect x="8" y="52" width="304" height="22" fill="var(--surface-2)" opacity=".5"/>',
+    dT(12, 68, 'who', 'd1'),
+    dT(74, 68, 'ctrl or FISO', 'd2'),
+    dT(140, 68, 'controller', 'd2'),
+    dT(194, 68, 'controller', 'd2'),
+    dT(256, 68, 'controller', 'd2'),
+    dT(12, 90, 'flights', 'd1'),
+    dT(74, 90, 'IFR, VFR', 'd2'),
+    dT(140, 90, 'IFR, VFR', 'd2'),
+    dT(194, 90, 'IFR', 'd2'),
+    dT(256, 90, 'IFR', 'd2'),
+    '<rect x="8" y="96" width="304" height="22" fill="var(--surface-2)" opacity=".5"/>',
+    dT(12, 112, 'identified', 'd1'),
+    dT(74, 112, 'maybe', 'd2'),
+    dT(140, 112, 'yes', 'd2'),
+    dT(194, 112, 'yes', 'd2'),
+    dT(256, 112, 'not needed', 'd2'),
+    dT(12, 134, 'traffic info', 'd1'),
+    dT(74, 134, 'not expected', 'd2'),
+    dT(140, 134, 'radar TI', 'd2'),
+    dT(194, 134, 'TI + avoid', 'd2'),
+    dT(256, 134, 'limited', 'd2'),
+    '<rect x="8" y="140" width="304" height="22" fill="var(--surface-2)" opacity=".5"/>',
+    dT(12, 156, 'headings', 'd1'),
+    dT(74, 156, '-', 'd2'),
+    dT(140, 156, 'sequencing', 'd2'),
+    dT(194, 156, 'to deconflict', 'd2'),
+    dT(256, 156, 'radials, times', 'd2'),
+    dT(12, 178, 'avoidance', 'd1'),
+    dT(74, 178, 'pilot', 'd2', None, None, 'var(--bad)'),
+    dT(140, 178, 'pilot', 'd2', None, None, 'var(--bad)'),
+    dT(194, 178, 'pilot', 'd2', None, None, 'var(--bad)'),
+    dT(256, 178, 'pilot', 'd2', None, None, 'var(--bad)'),
+    dL('M8 30H312', 'var(--line)', 1),
+]), 'Whatever the service, in Class G the pilot is ultimately responsible for collision avoidance and terrain clearance. An alerting service comes with all four.', 'UK Flight Information Services')
+
+# ---- Deconfliction minima
+fig('deconfliction-minima', 'Deconfliction minima', 320, 196, "".join([
+    dT(8, 16, 'unknown traffic', 'd1'),
+    '<circle cx="80" cy="96" r="60" fill="var(--accent-soft)" stroke="var(--accent)" stroke-dasharray="5 3"/>',
+    dP(80, 96, 0, 'var(--accent)', 1.2),
+    dA(80, 96, 139, 96, 'var(--ink)', 1),
+    dT(110, 90, '5 nm', 'd2', 'middle'),
+    dT(80, 172, '5 nm laterally', 'd1', 'middle'),
+    dT(80, 184, 'OR 3,000 ft vertically', 'd1', 'middle'),
+    dT(170, 16, 'same controller', 'd1'),
+    '<circle cx="240" cy="96" r="36" fill="var(--good)" opacity=".15" stroke="var(--good)" stroke-dasharray="5 3"/>',
+    dP(240, 96, 0, 'var(--accent)', 1.2),
+    dA(240, 96, 275, 96, 'var(--ink)', 1),
+    dT(258, 90, '3 nm', 'd2', 'middle'),
+    dT(240, 172, '3 nm and 1,000 ft', 'd1', 'middle'),
+    dT(240, 184, '(some military: 500 ft)', 'd2', 'middle'),
+]), "Plan view, circles to scale with each other. The minima are aimed at, not guaranteed, and only given at or above the unit's terrain safe level.", 'Deconfliction Service')
+
+# ---- Flight plan timings
+fig('flight-plan-timings', 'Flight plan timings', 320, 214, "".join([
+    dL('M20 70H300', 'var(--ink-2)', 1.4),
+    dL('M40 62V78', 'var(--ink)', 1.4),
+    dT(40, 56, 'planned ETD', 'd2', 'middle'),
+    dL('M190 62V78', 'var(--ink)', 1.4),
+    dT(190, 56, '+60 min', 'd2', 'middle'),
+    dL('M100 62V78', 'var(--ink)', 1.4),
+    dT(100, 56, '+30 min', 'd2', 'middle'),
+    dT(100, 96, 're-file if any of', 'd2', 'middle'),
+    dT(100, 106, 'the flight is in CAS', 'd2', 'middle'),
+    dT(190, 96, 're-file', 'd2', 'middle'),
+    dT(190, 106, 'otherwise', 'd2', 'middle'),
+    dT(8, 20, 'departure delayed', 'd1'),
+    dL('M20 170H300', 'var(--ink-2)', 1.4),
+    dL('M80 162V178', 'var(--ink)', 1.4),
+    dT(80, 156, 'ETA', 'd2', 'middle'),
+    dL('M200 162V178', 'var(--bad)', 1.6),
+    dT(200, 156, 'ETA + 30 min', 'd2', 'middle', None, 'var(--bad)'),
+    dT(200, 194, 'overdue action:', 'd2', 'middle', None, 'var(--bad)'),
+    dT(200, 205, 'search and rescue', 'd2', 'middle', None, 'var(--bad)'),
+    dT(8, 130, 'not arrived', 'd1'),
+]), 'Close your flight plan on arrival, and tell your original destination if you land elsewhere. With no ATSU there, leave a responsible person who knows your ETA.', 'Flight plans')

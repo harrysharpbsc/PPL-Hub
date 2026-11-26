@@ -6,6 +6,7 @@ Each module defines TOPIC (a NOTES topic name) and FIGS: (slug, title, svg body,
 In the app every figure goes through dzF() (chart paper + figure card) inside <g class="pdg">, and sec()
 puts it in the note section whose title starts with `section` (checked by tests/t_secdg.py).
 """
+import importlib
 import json
 import sys
 from pathlib import Path
@@ -20,7 +21,15 @@ import rules_old  # noqa: E402
 import rules_of_the_air  # noqa: E402
 
 MODULES = [circuits, overhead_join, rules_old, rules_of_the_air, altimeter_skyway]
+# topics ported from the old hand-written JS (t_*.py), after the ones above
+MODULES += [importlib.import_module(p.stem) for p in sorted(HERE.glob("t_*.py"))]
 ROOT = HERE.parents[1]
+
+
+def jstr(v):
+    """A single-quoted JS string (SVG attributes use double quotes, so almost nothing needs escaping)."""
+    q = "'" + str(v).replace("\\", "\\\\").replace("'", "\\'").replace("\n", "\\n").replace("\u2028", "\\u2028") + "'"
+    return q.replace(pplsvg.ACPATH, "'+ACPATH+'")   # one shared copy of the aircraft outline (src/labs80.js)
 
 
 def js_file():
@@ -31,8 +40,8 @@ def js_file():
     for m in MODULES:
         for slug, title, body, cap, section, w, h in m.FIGS:
             out.append(f"/* {slug} */")
-            out.append(f"sec({json.dumps(m.TOPIC)},{json.dumps(section)},[dzF({json.dumps(title)},"
-                       f"{json.dumps('<g class=\"pdg\">' + body + '</g>')},{json.dumps(cap)},{w},{h})]);")
+            out.append(f"sec({jstr(m.TOPIC)},{jstr(section)},[dzF({jstr(title)},"
+                       f"{jstr('<g class=\"pdg\">' + body + '</g>')},{jstr(cap)},{w},{h})]);")
     out.append("})();")
     return "\n".join(out) + "\n"
 

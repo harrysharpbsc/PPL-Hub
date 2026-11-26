@@ -5,14 +5,15 @@ description: Make or change PPL Hub topic diagrams (the figures inside note sect
 
 # PPL Hub diagrams
 
-New diagrams are written in Python and generated into the app. Do not hand-write new SVG strings in the
-`labs8x.js` files; those older figures stay as they are and can be edited in place for small fixes.
+Every topic diagram in the app is written in Python and generated into `src/labs84gen.js`. Change a figure by
+editing its module and regenerating; never edit the generated JS.
 
 ```
 tools/diagrams/
-  pplsvg.py           helpers that mirror src/labs80.js (T, L, B, P, side, badge, head, lines, paper), app tokens, preview page
-  overhead_join.py    one module per topic: TOPIC + FIGS
-  rules_of_the_air.py
+  pplsvg.py           helpers (T, L, B, P, side, badge, head, lines, paper), the app's own helpers with identical output
+                      (dT, dA, dB, dL, dP, dSide), app tokens read from src/hub.html, preview page
+  circuits.py, overhead_join.py, rules_old.py, rules_of_the_air.py, altimeter_skyway.py   redrawn by hand
+  t_*.py              the other topics, ported from the old hand-written JS (same geometry)
   existing.py         lists the figures a topic already has (old and generated)
   gen.py              writes src/labs84gen.js and previews in tools/diagrams/out/ (git-ignored)
   check.py            renders the previews light and dark and fails on label clashes
@@ -21,8 +22,8 @@ tools/diagrams/
 ## Workflow
 
 1. **List what the topic already has, and look at it.** `cd src && python3 build.py && python3
-   ../tools/diagrams/existing.py "<topic>"`. Most of Harry's own notes already have figures in `labs83notes.js`,
-   redrawn from the figures in his notes; never add one that repeats them (a different title is not a different
+   ../tools/diagrams/existing.py "<topic>"`. Most of Harry's own notes already have figures (in the `t_*.py`
+   modules), redrawn from the figures in his notes; never add one that repeats them (a different title is not a different
    figure). Fill gaps only, or replace a figure on purpose and remove the old one.
    Then source the facts: wording and numbers come from Harry's note for that topic (`src/data.js`, `NOTES`) or the
    CAA source it cites.
@@ -56,9 +57,8 @@ tools/diagrams/
   (join track, step badges, warnings); `--mid` amber for pressure levels and lights; `--good` green for terrain and
   "safe" margins; `--warm` magenta only for boundaries that the app already draws that way. Dead side `--ch-l2`
   at 35%, live side accent at 6%. Runway `var(--rwy)`. Every colour must be a token: both themes have to work.
-- **Labels:** 13 units between lines of 10px text, 10–11 between `d2` lines. Labels crossing a line get a halo
-  (`style="paint-order:stroke;stroke:var(--ch-land);stroke-width:3px"`); the app's general text halo is switched off
-  inside `.pdg` so badges and dials stay clean.
+- **Labels:** 13 units between lines of 10px text, 10–11 between `d2` lines. Every label has the app's paper-coloured
+  halo (`.dgx text`); badge numerals (`n`), read-outs (`mono`) and light text on dark fills (`dk`) do not.
 - **Numbering** only for a real sequence (steps of a procedure). Thousands separators: "2,000 ft".
 
 ## UK CAA conventions
@@ -82,6 +82,6 @@ height, regional pressure setting). R/T wording from CAP 413 as the app already 
 - `check.py` flags text over text, over badges, outside boxes and outside the frame. It skips numerals inside their own
   badge and text inside a dial. It does not check text against lines or arrows.
 - A figure title must be unique within its topic (`labs89place.js` matches titles by prefix for the older figures).
-- Older figures that a generated one replaces must be removed from their `labs8x.js` file in the same commit.
-- A text search for `dzAdd(` misses `labs83notes.js`, which adds figures with `sec(` under a variable topic name
-  (`var A='Altimeter Setting Procedures'`). Use `existing.py`, not grep, to see what a topic has.
+- Use `existing.py` to see what a topic already has (it reads the built app), not grep.
+- Previews read every colour from `src/hub.html`. If a preview shows a black shape, a `var(--…)` is missing from the
+  app itself: add it to `hub.html`, never only to the preview.

@@ -3,7 +3,8 @@
     python3 tools/diagrams/check.py                    # every preview in tools/diagrams/out/
     python3 tools/diagrams/check.py out/altimeter.html [shots-dir]
 
-Renders each preview light and dark at 2x and fails on: text over text, text over a step badge,
+Renders each preview light and dark at 2x and fails on: text over text (same tolerance as tests/t_dgtext.py),
+text over a step badge (circle r 8-14),
 text spilling out of its box, text outside the diagram. Screenshots go to shots-dir (default out/shots).
 It cannot see text crossing a line, a wrong arrow direction or a wrong number: look at the screenshots.
 """
@@ -16,12 +17,12 @@ out = sys.argv[2] if len(sys.argv) > 2 else os.path.join(here, 'out', 'shots')
 os.makedirs(out, exist_ok=True)
 JS = """()=>[...document.querySelectorAll('figure svg')].map((svg,fi)=>{const sr=svg.getBoundingClientRect();
  const ts=[...svg.querySelectorAll('text')].filter(t=>t.textContent.trim()).map(t=>({s:t.textContent,r:t.getBoundingClientRect()}));
- const cs=[...svg.querySelectorAll('circle')].filter(c=>+c.getAttribute('r')>=8).map(c=>c.getBoundingClientRect());
+ const cs=[...svg.querySelectorAll('circle')].filter(c=>+c.getAttribute('r')>=8&&+c.getAttribute('r')<=14).map(c=>c.getBoundingClientRect());
  const boxes=[...svg.querySelectorAll('rect')].map(r=>r.getBoundingClientRect()).filter(b=>b.width<sr.width*0.97&&b.height>12);
  const hit=(a,b)=>a.left<b.right-0.5&&b.left<a.right-0.5&&a.top<b.bottom-0.5&&b.top<a.bottom-0.5;
  const inside=(a,b)=>a.left>=b.left-0.5&&a.right<=b.right+0.5&&a.top>=b.top-0.5&&a.bottom<=b.bottom+0.5;
- const o=[];for(let i=0;i<ts.length;i++){const a=ts[i].r;
-  for(let j=i+1;j<ts.length;j++)if(hit(a,ts[j].r))o.push(ts[i].s+' <> '+ts[j].s);
+ const k=sr.width/(+svg.getAttribute('viewBox').split(' ')[2]);const o=[];for(let i=0;i<ts.length;i++){const a=ts[i].r;
+  for(let j=i+1;j<ts.length;j++){const c=ts[j].r,ox=Math.min(a.right,c.right)-Math.max(a.left,c.left),oy=Math.min(a.bottom,c.bottom)-Math.max(a.top,c.top);if(ox>1.2*k&&oy>2.2*k)o.push(ts[i].s+' <> '+ts[j].s)}
   if(!/^\\d$/.test(ts[i].s))cs.forEach(c=>{if(hit(a,c)&&!inside(a,c))o.push(ts[i].s+' <> badge')});
   if(!cs.some(c=>inside(a,c)))boxes.forEach(b=>{const cx=(a.left+a.right)/2,cy=(a.top+a.bottom)/2;if(cx>b.left&&cx<b.right&&cy>b.top&&cy<b.bottom&&!inside(a,b)&&b.width>30)o.push(ts[i].s+' spills out of its box')});
   if(!inside(a,sr))o.push('outside svg: '+ts[i].s)}

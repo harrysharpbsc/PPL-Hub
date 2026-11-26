@@ -25,13 +25,25 @@ def _app_chart_tokens():
             f":root[data-theme=\"dark\"]{{{dark}}}\n")
 
 
-TOKENS += _app_chart_tokens()
+def _app_main_tokens():
+    """The app's main colours and font stacks, light and dark, read from src/hub.html (first :root block)."""
+    import re
+    hub = (Path(__file__).resolve().parents[2] / "src" / "hub.html").read_text()
+    light = re.search(r'\n:root\{([^}]*)\}', hub).group(1)
+    dark = re.search(r':root\[data-theme="dark"\]\{(--bg:[^}]*)\}', hub).group(1)
+    return (f":root{{{light}}}\n@media (prefers-color-scheme:dark){{:root:not([data-theme=\"light\"]){{{dark}}}}}\n"
+            f":root[data-theme=\"dark\"]{{{dark}}}\n")
+
+
+TOKENS += _app_main_tokens() + _app_chart_tokens()
 
 
 SVGCSS = """
 .ch-paper{fill:var(--ch-land)} .ch-pg{fill:none;stroke:var(--ch-tx);stroke-width:.4;opacity:.25}
 .ch-tk{fill:none;stroke:var(--ch-tx);stroke-width:.7}
 svg text{font-family:Barlow,system-ui,sans-serif}
+svg text{paint-order:stroke;stroke:var(--ch-land);stroke-width:2.2px;stroke-linejoin:round}
+svg text.n,svg text.mono,svg text.dk,svg text[font-family]{stroke:none}
 text.d1{font-weight:600;font-size:10px;fill:var(--ink)}
 text.d2{font-weight:500;font-size:7.8px;fill:var(--ink-2)}
 text.d3{font-family:'Barlow Semi Condensed',Barlow,sans-serif;font-weight:700;font-size:12px;fill:var(--ink)}
@@ -155,3 +167,88 @@ section{{display:grid;gap:8px}}
     Path(path).write_text(html)
     for slug, t, svg, cap, sec, w, h in figs:
         (Path(path).parent / f"{slug}.svg").write_text(svg.replace(">", f"><defs><style>{ff}{TOKENS}{SVGCSS}</style></defs>", 1))
+
+
+# ---------- The app's own helpers (src/labs80.js dzT, dzA, dzB, dzL, dzP, dzSide), output identical to the JS ----------
+# Used by the figures ported from the hand-written labs8x.js code; new figures can use them too.
+from decimal import ROUND_HALF_UP, Decimal  # noqa: E402
+import math as _m  # noqa: E402
+import re as _re  # noqa: E402
+
+
+def _t(v):
+    """JavaScript truthiness."""
+    return not (v is None or v is False or v == 0 or v == "" or (isinstance(v, float) and v != v))
+
+
+def js(v):
+    """String(v) as JavaScript writes it."""
+    if v is None:
+        return "null"
+    if isinstance(v, bool):
+        return "true" if v else "false"
+    if isinstance(v, float):
+        if v.is_integer() and abs(v) < 1e21:
+            return str(int(v))
+        r = repr(v)
+        if "e" in r:
+            r = format(Decimal(r), "f")
+        return r
+    return str(v)
+
+
+def fixed(v, n=1):
+    """Number.prototype.toFixed: exact value, halves rounded away from zero."""
+    q = Decimal(v).quantize(Decimal(1).scaleb(-n), rounding=ROUND_HALF_UP)
+    s = format(q, "f")
+    return s
+
+
+def dT(x, y, s, c=None, a=None, fs=None, fill=None):
+    dk = _t(fill) and bool(_re.match(r"^#([9a-f7][0-9a-f]{2}|[9a-f7][0-9a-f]{5})$", str(fill), _re.I))
+    out = f'<text x="{js(x)}" y="{js(y)}"' + (f' text-anchor="{js(a)}"' if _t(a) else "")
+    out += f' class="{js(c) if _t(c) else "d1"}{" dk" if dk else ""}"'
+    if _t(fs) or _t(fill):
+        out += ' style="' + (f"font-size:{js(fs)}px;" if _t(fs) else "") + (f"fill:{js(fill)}" if _t(fill) else "") + '"'
+    return out + f">{js(s)}</text>"
+
+
+def dA(x1, y1, x2, y2, c=None, w=None, dash=None):
+    c = c if _t(c) else "var(--ink)"; w = w if _t(w) else 1.6
+    a = _m.atan2(y2 - y1, x2 - x1); Ln = 6 + w * 1.5
+    hx = x2 - _m.cos(a) * Ln; hy = y2 - _m.sin(a) * Ln; px = _m.sin(a) * Ln * .45; py = -_m.cos(a) * Ln * .45
+    return (f'<path d="M{fixed(x1)} {fixed(y1)}L{fixed(hx)} {fixed(hy)}" stroke="{c}" stroke-width="{js(w)}" fill="none"'
+            + (f' stroke-dasharray="{js(dash)}"' if _t(dash) else "")
+            + f'/><path d="M{fixed(x2)} {fixed(y2)}L{fixed(hx+px)} {fixed(hy+py)}L{fixed(hx-px)} {fixed(hy-py)}Z" fill="{c}"/>')
+
+
+def dB(x, y, w, h, fill=None, stroke=None, r=None, sw=None):
+    return (f'<rect x="{js(x)}" y="{js(y)}" width="{js(w)}" height="{js(h)}" rx="{js(4 if r is None else r)}" '
+            f'fill="{js(fill) if _t(fill) else "var(--surface)"}" stroke="{js(stroke) if _t(stroke) else "var(--ink-2)"}" '
+            f'stroke-width="{js(sw) if _t(sw) else 1}"/>')
+
+
+def dL(d, c=None, w=None, dash=None, f=None):
+    return (f'<path d="{js(d)}" stroke="{js(c) if _t(c) else "var(--ink)"}" stroke-width="{js(w) if _t(w) else 1.4}" '
+            f'fill="{js(f) if _t(f) else "none"}"' + (f' stroke-dasharray="{js(dash)}"' if _t(dash) else "") + "/>")
+
+
+def dP(x, y, h=None, col=None, sc=None):
+    return (f'<g transform="translate({js(x)} {js(y)}) rotate({js(h) if _t(h) else 0}) scale({js(sc) if _t(sc) else 1.4})">'
+            f'<path d="{ACPATH}" fill="{js(col) if _t(col) else "var(--accent)"}" stroke="var(--surface)" stroke-width=".6" '
+            'stroke-linejoin="round"/></g>')
+
+
+def dSide(x, y, sc, col=None, flip=None):
+    col = js(col) if _t(col) else "var(--accent)"; w = "var(--surface)"
+    return (f'<g transform="translate({js(x)} {js(y)}) scale({js(-sc) if _t(flip) else js(sc)} {js(sc)})">'
+            f'<path d="M16.6-6.7L27.4-15.8Q28.4-16.3 29.4-15.8L30.8-4Z" fill="{col}"/>'
+            f'<path d="M23.5-3.1L33.6-2.7Q34.3-2.2 33.6-1.8L23.5-1.4Z" fill="{col}"/>'
+            f'<path d="M-28.4-1.6C-28.4-3.2-27.5-4.2-26-4.5L-17-5.6L-13.4-6.1L-7.1-9.6C-5.6-10.1-3-10.2 0-10.2L6.5-10C8.5-9.8 9.8-9.1 11-8L27-4.6L31.6-3.8L31.7-2.6L26-1.6L12 0.6C5 1.8-2 2.6-8 2.8L-20 2.6C-24 2.4-26.5 1.6-27.5 0.6C-28.2 0-28.4-0.6-28.4-1.6Z" fill="{col}"/>'
+            f'<path d="M-28.3-3.3Q-31.6-1.6-28.3 0.1Z" fill="{col}"/>'
+            f'<path d="M-14.5 1.6Q-15.6 3.7-12.4 3.9L8.2 3.4Q10.2 3.1 10.2 1.6Z" fill="{col}"/>'
+            f'<path d="M-29.5-1.8L-27.3-10.5Q-26.7-11.1-26.8-10.2L-28.9-1.4ZM-29.3-1.4L-31.6 7.3Q-32.2 7.9-32.1 7L-30.1-1.8Z" fill="{col}"/>'
+            f'<path d="M-12.1-6.3L-7.3-9.1H-5.4V-6.3Z" fill="{w}" opacity=".85"/><rect x="-4.2" y="-9.1" width="6" height="2.8" rx=".6" fill="{w}" opacity=".85"/><path d="M3-9.1H6.2C8-9 9-8.5 9.8-7.7L9.2-6.3H3Z" fill="{w}" opacity=".85"/>'
+            f'<path d="M2-10.1L4.6-13.1M14-7.3L16.6-9.8" stroke="{col}" stroke-width=".55" stroke-linecap="round"/>'
+            f'<path d="M-21.8 2.5L-21.3 5.4M-2 3.6L-1.7 5.4" stroke="{col}" stroke-width="1.1"/><circle cx="-21.3" cy="7.1" r="1.5" fill="var(--ink)"/><circle cx="-1.8" cy="7.3" r="1.7" fill="var(--ink)"/>'
+            f'<path d="M-23.9 6.8Q-23.9 4.8-21.4 4.8L-19.2 5.4Q-18.4 6.3-19.2 7L-21.4 7.3Q-23.9 7.4-23.9 6.8ZM-4.6 7Q-4.6 4.8-1.8 4.8L1 5.4Q2 6.4 1 7.2L-1.8 7.6Q-4.6 7.7-4.6 7Z" fill="{col}"/></g>')
