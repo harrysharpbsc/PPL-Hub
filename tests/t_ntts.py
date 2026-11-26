@@ -5,7 +5,7 @@ with sync_playwright() as p:
     pg.route('**cdn.jsdelivr.net/**',lambda r:r.abort())
     pg.goto('file://'+os.getcwd()+'/hub_test.html')
     pg.locator('button.nv:visible:has-text("Labs")').first.click();pg.locator('[data-id="xc"]').click()
-    pg.locator('[data-k="fs"][data-f="voices"][data-v="natural"]').click();pg.wait_for_timeout(1500)
+    pg.locator('[data-k="fs"][data-f="eng"][data-v="fast"]').click();pg.wait_for_timeout(1500)
     print('status:',pg.locator('#ntts-st').inner_text())
     pg.locator('[data-k="go"]').click();pg.wait_for_timeout(800)
     pg.evaluate("(function(){window.__said=[];speechSynthesis.speak=function(u){__said.push(u.text)};return 1})()")
@@ -16,5 +16,8 @@ with sync_playwright() as p:
             for j in range(len(ans)): pg.locator('.lev .chipb[data-v="%d"]'%j).click()
             pg.locator('[data-k="chk"]').click();pg.locator('[data-k="n"]').click()
         pg.wait_for_timeout(150)
-    pg.locator('[data-k="say"]').click();pg.wait_for_timeout(300)
-    print('fallback spoke:',pg.evaluate("__said.length"),errs)
+    pg.locator('[data-k="say"]').click();pg.wait_for_timeout(1200)
+    errs=[e for e in errs if 'importScripts' not in e]  # the blocked CDN is the point of this test
+    n=pg.evaluate("__said.length");print('fallback spoke:',n,errs)
+    assert n>0 and not errs,'with the voice models blocked, the tablet voice should have spoken'
+    print('PASS')

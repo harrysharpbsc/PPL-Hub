@@ -10,10 +10,14 @@ with sync_playwright() as p:
             pg.locator('[data-id="%s"]'%lid).click()
             if rep==0 and lid=='xc':
                 pg.locator('.vtog button:has-text("Speaking")').first.click();pg.screenshot(path='v_start.png')
-            pg.locator('[data-k="go"]').click();n=0;bad=0
+            pg.locator('[data-k="go"]').click();n=0;bad=0;loops=0
             while n<60:
-                pg.wait_for_timeout(60)
+                pg.wait_for_timeout(60);loops+=1
+                assert loops<2500,'%s did not finish (stuck at: %s)'%(lid,pg.evaluate("(function(c){return c?(c.kind||'')+' '+(c.q||c.cap||''):'none'})(__T.ses.cur)"))
                 if pg.locator('.score').count(): break
+                if pg.locator('.lev .opt').count() and not pg.locator('.fb').count():  # tile decisions, not radio calls
+                    pg.locator('.lev .opt').nth(pg.evaluate("__T.ses.ord.indexOf(__T.ses.cur.a)")).click();pg.wait_for_timeout(60)
+                    pg.locator('[data-k="n"]').click();continue
                 if pg.locator('#vx-txt').count():
                     kind=pg.evaluate("__T.ses.cur.kind")
                     if kind=='mcq': txt=pg.evaluate("__T.ses.cur.opts[__T.ses.cur.a]")
@@ -24,10 +28,12 @@ with sync_playwright() as p:
                     if n==1 and rep==0 and lid=='xc': pg.screenshot(path='v_fb.png',full_page=True)
                     if pg.locator('.fb.no').count(): print('WRONG',lid,txt[:80]);bad+=1
                     pg.locator('[data-k="n"]').click();n+=1
-            print(lid,rep,pg.locator('.score').inner_text(),n)
+            sc=pg.locator('.score').inner_text();print(lid,rep,sc,n);assert sc.strip()=='100%',lid+' should score 100% with every call right'
             pg.locator('button:has-text("Done")').click()
     # wrong answer check
     pg.locator('[data-id="circ"]').click();pg.locator('[data-k="go"]').click();pg.wait_for_timeout(300)
     pg.locator('#vx-txt').fill('Mayday mayday, over');pg.locator('[data-k="vchk"]').click();pg.screenshot(path='v_wrong.png',full_page=True)
-    print('wrong marked:',pg.locator('.fb.no').count())
-    print(errs)
+    wm=pg.locator('.fb.no').count();print('wrong marked:',wm)
+    errs=[e for e in errs if 'importScripts' not in e];print(errs)
+    assert wm==1 and not errs
+    print('PASS')

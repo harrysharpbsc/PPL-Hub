@@ -1,6 +1,7 @@
+import os
 
 from playwright.sync_api import sync_playwright
-URL='file://hub_test.html'
+URL='file://'+os.getcwd()+'/hub_test.html'
 with sync_playwright() as p:
     b=p.chromium.launch();pg=b.new_page(viewport={'width':900,'height':900})
     pg.goto(URL);pg.wait_for_timeout(500)

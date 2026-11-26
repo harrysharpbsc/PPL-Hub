@@ -1,6 +1,6 @@
 import os
 from playwright.sync_api import sync_playwright
-exec(open('t_scan.py').read().split('with sync_playwright')[0])
+exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'t_scan.py')).read().split('with sync_playwright')[0])
 with sync_playwright() as p:
     b=p.chromium.launch()
     for w,h in [(1280,900),(430,900)]:

@@ -1,5 +1,6 @@
 import os,json
 from playwright.sync_api import sync_playwright
+import os as _o,sys as _s;_s.path.insert(0,_o.path.dirname(_o.path.abspath(__file__)));from _srv import serve;serve(8767)
 with sync_playwright() as p:
     br=p.chromium.launch();ctx=br.new_context(accept_downloads=True);pg=ctx.new_page();errs=[];pg.on('pageerror',lambda e:errs.append(str(e)))
     pg.goto('http://localhost:8767/hub_test.html');pg.wait_for_timeout(300)

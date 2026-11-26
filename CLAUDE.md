@@ -43,6 +43,7 @@ npm install                 # terser + csso
 cd src && python3 build.py  # writes ../docs/index.html (minified) + hub_built/hub_download/hub_test.html in src/
 python3 ../tests/t_smoke.py # opens every subject and lab, reports page errors
 ```
+Every test runs from `src/` with nothing else to start: `t_asr`, `t_asr2`, `t_backup`, `t_piper` and `t_sync` start their own local server (`tests/_srv.py`); `t_asr` makes its own test recording; `t_piper` carries stand-ins for onnxruntime-web, piper-wasm and the voice. Each test prints PASS or stops with an assertion. When a test answers a flight, pick options with `__T.ses.ord.indexOf(__T.ses.cur.a)` (options are shuffled and can share opening words), and handle option tiles as well as the speech box.
 `hub_test.html` exposes `window.__T` (ses, S, KB, NTTS, ASR, `grade(e,text)`, speak, render) for tests.
 Useful tests: `t_grade.py` (radio marking), `t_mock.py` (mock exam tiles), `t_art.py`, `t_listen.py` (pause handling), `t_asr.py`/`t_piper.py` (engines with mocked CDN), `t_backup.py`, `t_scan.py` (button spacing), `t_secdg.py` (diagrams sit in their note sections), `t_dgtext.py` (diagram labels stay inside their boxes, measured with the real Barlow fonts in `tests/fonts`). `t_scan.py` allows grouped list rows (`.list > .sc`, `.card > .pick`) to touch; every other pair of buttons needs 8 px.
 Then commit and `git push origin main`; Pages redeploys in a minute or two.

@@ -1,15 +1,24 @@
 import os,re,time
 from playwright.sync_api import sync_playwright
-V=os.environ.get('PIPER_MOCK','mock')  # folder with onnxruntime-web, piper-wasm and a fake model
-def ctype(p):return 'application/javascript' if p.endswith('.js') else 'application/wasm' if p.endswith('.wasm') else 'application/json' if p.endswith('.json') else 'application/octet-stream'
+import os as _o,sys as _s;_s.path.insert(0,_o.path.dirname(_o.path.abspath(__file__)));from _srv import serve;serve(8766)
+# Stand-ins for onnxruntime-web, piper-wasm and the VCTK voice, so the plumbing (download, cache, worker,
+# speaker map, audio back to the page) can be tested without the real 95 MB model, which the sandbox cannot fetch.
+ORT=b"""self.ort={env:{wasm:{}},Tensor:function(t,d,s){this.type=t;this.data=d;this.dims=s},
+InferenceSession:{create:async function(m){if(!m||!m.length)throw new Error('empty model');return{run:async function(f){
+var n=Number(f.input_lengths.data[0]),sid=f.sid?Number(f.sid.data[0]):0,a=new Float32Array(n*256);for(var i=0;i<a.length;i++)a[i]=Math.sin(i*(0.05+sid*0.001))*0.3;return{output:{data:a}}}}}}};"""
+PH=b"""self.createPiperPhonemize=async function(o){if(!o.wasmBinary||!o.getPreloadedPackage())throw new Error('phonemizer files missing');
+return{callMain:function(args){var t=JSON.parse(args[args.indexOf('--input')+1])[0].text;o.print(JSON.stringify({phoneme_ids:Array.from(t).map(function(c){return c.charCodeAt(0)%60})}))}}};"""
+CFG=b'{"audio":{"sample_rate":22050},"espeak":{"voice":"en-gb-x-rp"},"inference":{"noise_scale":0.667,"length_scale":1,"noise_w":0.8},"speaker_id_map":{"p225":0,"p226":1,"p228":2,"p232":3,"p276":4,"p254":5,"p231":6,"p258":7,"p262":8,"p237":9}}'
 def handler(route):
-    u=route.request.url
-    if 'onnxruntime-web' in u: f=V+'/mock/package/dist/'+u.split('/')[-1]
-    elif 'piper-wasm' in u: f=V+'/pw/package/build/'+u.split('/')[-1]
-    elif u.endswith('.onnx.json'): f=V+'/mock/fake.onnx.json'
-    elif u.endswith('.onnx'): f=V+'/mock/fake.onnx'
+    u=route.request.url.split('?')[0]
+    if u.endswith('ort.wasm.min.js'): b,t=ORT,'application/javascript'
+    elif u.endswith('piper_phonemize.js'): b,t=PH,'application/javascript'
+    elif u.endswith('piper_phonemize.wasm'): b,t=b'\0asm'+bytes(2000),'application/wasm'
+    elif u.endswith('piper_phonemize.data'): b,t=bytes(50000),'application/octet-stream'
+    elif u.endswith('.onnx.json'): b,t=CFG,'application/json'
+    elif u.endswith('.onnx'): b,t=bytes(200000),'application/octet-stream'
     else: return route.abort()
-    b=open(f,'rb').read();route.fulfill(status=200,body=b,headers={'content-type':ctype(f),'content-length':str(len(b)),'access-control-allow-origin':'*'})
+    route.fulfill(status=200,body=b,headers={'content-type':t,'content-length':str(len(b)),'access-control-allow-origin':'*'})
 with sync_playwright() as p:
     br=p.chromium.launch();ctx=br.new_context();ctx.route(re.compile(r'https://(cdn\.jsdelivr\.net|huggingface\.co)/.*'),handler)
     pg=ctx.new_page();errs=[];pg.on('pageerror',lambda e:errs.append(str(e)))
@@ -35,4 +44,8 @@ with sync_playwright() as p:
         if st.startswith('ready'):break
         pg.wait_for_timeout(250)
     print('after reload',st)
-    print('errors',errs)
+    bad=[e for e in errs if 'importScripts' not in e];print('errors',bad)
+    assert r['n']>0 and all(x[1]>0 for x in r['out']),'no audio generated'
+    assert st.startswith('ready') and 'fromCache=true' in st,'second load should come from the cache: '+st
+    assert not bad
+    print('PASS')

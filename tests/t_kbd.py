@@ -9,7 +9,14 @@ with sync_playwright() as p:
         print('fab on labs page:',pg.locator('#kb-fab:visible').count())
         pg.locator('[data-id="xc"]').click();pg.wait_for_timeout(200)
         print('fab in fly lab:',pg.locator('#kb-fab:visible').count())
-        pg.locator('#kb-fab').click();pg.wait_for_timeout(300)
+        # wide screens have the floating button; below 980 px the lab shows an inline Kneeboard button instead
+        started=False
+        if pg.locator('#kb-fab:visible').count(): pg.locator('#kb-fab').click()
+        else:  # the inline button appears once the flight is under way
+            pg.locator('[data-k="go"]').click();pg.wait_for_timeout(800);started=True
+            pg.locator('[data-kbopen]:visible').first.click()
+        pg.wait_for_timeout(300)
+        assert pg.locator('#kb:visible').count()==1,'kneeboard did not open'
         bx=pg.locator('#kb-cv').bounding_box()
         # draw "QNH 1013"-ish scribble
         x0,y0=bx['x']+70,bx['y']+30
@@ -19,14 +26,16 @@ with sync_playwright() as p:
             pg.mouse.up()
         pg.locator('[data-kbc="red"]').click()
         pg.mouse.move(x0,y0+90);pg.mouse.down();pg.mouse.move(x0+150,y0+110,steps=10);pg.mouse.up()
-        pg.locator('[data-k="go"]').click();pg.wait_for_timeout(1500)
+        if not started: pg.locator('[data-k="go"]').click()
+        pg.wait_for_timeout(1500)
         pg.screenshot(path='kbd_%d.png'%w)
         pg.locator('[data-kbt="type"]').click();pg.locator('#kb-txt').fill('QNH 1009\nSquawk 4521\nNot above 2000');pg.wait_for_timeout(200)
         pg.screenshot(path='kbd_t_%d.png'%w)
         pg.locator('[data-kbt="draw"]').click()
         n=pg.evaluate("KB.s.length") if False else None
         pg.locator('button:has-text("End")').first.click();pg.wait_for_timeout(200)
-        print(w,'kb hidden after end:',pg.locator('#kb:visible').count()==0,errs)
+        hid=pg.locator('#kb:visible').count()==0;errs=[e for e in errs if 'importScripts' not in e];print(w,'kb hidden after end:',hid,errs);assert hid and not errs
         pg.reload();pg.locator('button.nv:visible:has-text("Labs")').first.click();pg.locator('[data-id="circ"]').click();pg.wait_for_timeout(300)
         print('persisted open & strokes visible:',pg.locator('#kb:visible').count())
         pg.screenshot(path='kbd_p_%d.png'%w)
+print('PASS')

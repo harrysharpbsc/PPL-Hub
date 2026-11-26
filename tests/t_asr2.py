@@ -1,6 +1,9 @@
 import os,re,time
 from playwright.sync_api import sync_playwright
+import os as _o,sys as _s;_s.path.insert(0,_o.path.dirname(_o.path.abspath(__file__)));from _srv import serve;serve(8768)
 TF=os.environ.get('TF_DIST','tf/package/dist')
+REAL=os.path.exists(os.path.join(TF,'transformers.min.js'))
+print('real transformers.js files:',('found in '+TF) if REAL else 'not found, so this checks the fallback to Chrome\'s recogniser (set TF_DIST to test the real engine)')
 def h(route):
     u=route.request.url;print('route',u[:100])
     if u.startswith('https://huggingface.co'): return route.fulfill(status=404,body='no')
@@ -19,4 +22,7 @@ with sync_playwright() as p:
         if not st.startswith('loading') and not st.startswith('off'):break
         pg.wait_for_timeout(250)
     print('state:',st[:160]);print('settings rows:',pg.evaluate("document.querySelectorAll('[data-f=asr]').length"),'| status:',pg.evaluate("(document.getElementById('asr-st')||{}).textContent"))
-    print('errors',[e for e in errs if 'importScripts' not in e])
+    bad=[e for e in errs if 'importScripts' not in e];print('errors',bad);assert not bad
+    if not REAL: assert st.startswith('error') and 'Chrome' in pg.evaluate("(document.getElementById('asr-st')||{}).textContent"), 'fallback message missing'
+    else: assert st.startswith('ready') or st.startswith('on'), 'real engine did not load: '+st
+    print('PASS')

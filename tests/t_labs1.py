@@ -22,8 +22,7 @@ async def main():
         if await pg.locator('.lev .opt').count():
           # choose correct via __T
           a=await pg.evaluate("__T.ses.cur.a")
-          txt=await pg.evaluate("__T.ses.cur.opts[__T.ses.cur.a]")
-          await pg.locator('.lev .opt:has-text("%s")'%txt[:25].replace('"','')).first.click()
+          await pg.locator('.lev .opt').nth(await pg.evaluate("__T.ses.ord.indexOf(__T.ses.cur.a)")).click()  # exact, despite shuffling
           await pg.locator('[data-k="n"]').click(); n+=1
         elif await pg.locator('.lev .chipb').count():
           ans=await pg.evaluate("__T.ses.cur.ans")
@@ -45,8 +44,7 @@ async def main():
         await pg.wait_for_timeout(250)
         if await pg.locator('.score').count(): break
         if await pg.locator('.lev .opt').count():
-          txt=await pg.evaluate("__T.ses.cur.opts[__T.ses.cur.a]")
-          await pg.locator('.lev .opt:has-text("%s")'%txt[:25]).first.click()
+          await pg.locator('.lev .opt').nth(await pg.evaluate("__T.ses.ord.indexOf(__T.ses.cur.a)")).click()  # exact, despite shuffling
           if n==2: await pg.screenshot(path='shot_circ_%d.png'%w)
           await pg.locator('[data-k="n"]').click(); n+=1
         elif await pg.locator('.lev .chipb').count():

@@ -1,8 +1,9 @@
 # Sync between devices: merge rules, plus two browser "devices" syncing through a mocked Google Drive
-# and a stubbed Google sign-in script. Run from src/ with a server on 8767 (python3 -m http.server 8767).
+# and a stubbed Google sign-in script. Run from src/; it starts its own server on 8767.
 import json, re, itertools
 from playwright.sync_api import sync_playwright
 
+import os as _o,sys as _s;_s.path.insert(0,_o.path.dirname(_o.path.abspath(__file__)));from _srv import serve;serve(8767)
 URL = 'http://localhost:8767/hub_test.html'
 DRIVE = {}          # id -> {'name':..., 'body': str}
 ids = itertools.count(1)

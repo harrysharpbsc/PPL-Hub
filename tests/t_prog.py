@@ -1,6 +1,7 @@
+import os
 from playwright.sync_api import sync_playwright
 import json
-URL='file://hub_test.html'
+URL='file://'+os.getcwd()+'/hub_test.html'
 with sync_playwright() as p:
     b=p.chromium.launch();errs=[]
     for w,name in [(1000,'d'),(390,'m')]:
