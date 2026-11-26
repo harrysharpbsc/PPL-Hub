@@ -16,9 +16,10 @@ import pplsvg  # noqa: E402
 import altimeter_skyway  # noqa: E402
 import circuits  # noqa: E402
 import overhead_join  # noqa: E402
+import rules_old  # noqa: E402
 import rules_of_the_air  # noqa: E402
 
-MODULES = [circuits, overhead_join, rules_of_the_air, altimeter_skyway]
+MODULES = [circuits, overhead_join, rules_old, rules_of_the_air, altimeter_skyway]
 ROOT = HERE.parents[1]
 
 

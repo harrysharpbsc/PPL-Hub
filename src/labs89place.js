@@ -6,7 +6,6 @@
 var PLACE={
 'Operations of Aircraft':[['Three ways EASA','EASA classifies'],['What makes an aeroplane complex','Definition of complex'],['Which rules for a G-registered','Documents for a UK pilot']],
 'Aviation Law and organisations':[['From Paris','International Civil Aviation'],['The AIP and the 28-day','Aeronautical Information Publication'],['AIC colours','Aeronautical Information Circulars'],['NOTAM types','NOTAMs and Air Supplements']],
-'Rules of the Air':[['Head-on','Right of way'],['Overtaking: the 70','Right of way'],['Overtaking',null],['Converging','Right of way'],['Who gives way when converging','Right of way'],['Navigation light sectors','Lights on aircraft'],['Navigation lights',null],['Low flying minima','Low flying prohibitions']],
 'Piston engine icing (SS14)':[['Where carburettor ice','Three types'],['When to expect carb ice','When it happens'],['The carb heat check','Using carb heat']],
 'Winter weather and icing (SS03)':[['How radiation fog','Radiation fog'],['A depression passing','Fronts and depressions'],['Frost on the wing','Frost, snow'],['Airframe ice','Carb ice and airframe ice']],
 'Weight, balance and performance (SS09)':[['Datum, arm and moment','Balance and the centre'],['Worked CG check','Worked CG example'],['Declared distances','Performance principles'],['Rule-of-thumb take-off','Rule-of-thumb multipliers']],

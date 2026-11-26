@@ -3,34 +3,6 @@
 var F=dzF,T=dzT,A=dzA,B=dzB,L=dzL,P=dzP;
 function sector(cx,cy,r,a0,a1,col,op){var p=function(a){var q=(a-90)*Math.PI/180;return[(cx+Math.cos(q)*r).toFixed(1),(cy+Math.sin(q)*r).toFixed(1)]},s=p(a0),e=p(a1);return'<path d="M'+cx+' '+cy+'L'+s[0]+' '+s[1]+'A'+r+' '+r+' 0 '+((a1-a0+360)%360>180?1:0)+' 1 '+e[0]+' '+e[1]+'Z" fill="'+col+'" opacity="'+(op||.35)+'"/>'}
 
-/* Rules of the Air: extra diagrams */
-dzAdd('Rules of the Air',[
- F('Overtaking: the 70° rule',
-  sector(160,80,95,110,250,'var(--mid)',.3)+L('M160 80L'+(160+Math.sin(110*Math.PI/180)*95).toFixed(0)+' '+(80-Math.cos(110*Math.PI/180)*95).toFixed(0)+'M160 80L'+(160+Math.sin(250*Math.PI/180)*95).toFixed(0)+' '+(80-Math.cos(250*Math.PI/180)*95).toFixed(0),'var(--mid)',1.2,'4 3')
-  +P(160,80,0,'var(--ink)',1.8)+P(160,160,0,'var(--accent)',1.5)+A(160,146,196,108,'var(--accent)',1.6)
-  +T(204,170,'Overtaker:','d1')+T(204,182,'keep out of the way','d2')+T(204,193,'by turning right','d2')+T(60,60,'Being overtaken:','d1','middle')+T(60,72,'has right of way,','d2','middle')+T(60,83,'holds course and speed','d2','middle')
-  +T(118,140,'70°','d1','middle',null,'var(--mid)')+T(202,140,'70°','d1','middle',null,'var(--mid)'),
-  'Approaching from inside 70° either side of the other aircraft\'s tail counts as overtaking, climbing, level or descending.'),
- F('Who gives way when converging',
-  [['Balloons','give way to nobody','var(--good)',300],['Sailplanes','give way to balloons','var(--good)',260],['Airships','give way to sailplanes and balloons','var(--mid)',220],['Aircraft towing','powered aircraft give way to them','var(--mid)',180],['Powered aircraft','give way to all of the above','var(--bad)',140]].map(function(r,i){var w=r[3],x=160-w/2,y=16+i*34;return'<path d="M'+x+' '+y+'h'+w+'l-6 28h-'+(w-12)+'Z" fill="'+r[2]+'" opacity="'+(.22+i*.05)+'" stroke="'+r[2]+'"/>'+T(160,y+13,r[0],'d1','middle')+T(160,y+24,r[1],'d2','middle',7.5)}).join('')
-  +A(306,180,306,24,'var(--ink-2)',1.2)+T(300,192,'more priority','d2','end',7),
-  'Less manoeuvrable aircraft have priority. Between two of the same kind, the one with the other on its right gives way.'),
- F('Navigation light sectors (seen from above)',
-  sector(160,104,82,0,110,'#2fa84f',.4)+sector(160,104,82,250,360,'#e0262b',.4)+sector(160,104,82,110,250,'#cfcfcf',.55)
-  +P(160,104,0,'var(--ink)',2.6)+'<circle cx="187" cy="94" r="3.6" fill="#2fa84f" stroke="var(--surface)"/><circle cx="133" cy="94" r="3.6" fill="#e0262b" stroke="var(--surface)"/><circle cx="160" cy="132" r="3.4" fill="#fff" stroke="var(--ink)"/>'
-  +T(248,64,'Green, right wing','d1','middle')+T(248,76,'110° from dead ahead','d2','middle')+T(72,64,'Red, left wing','d1','middle')+T(72,76,'110° from dead ahead','d2','middle')+T(160,196,'White tail: 70° each side of dead astern','d1','middle')
-  +T(274,150,'Red to green:','d1','middle',null,'var(--bad)')+T(274,161,'collision risk','d2','middle')+T(46,150,'Red to red:','d1','middle',null,'var(--good)')+T(46,161,'paths will not cross','d2','middle'),
-  'Red left, green right, white behind. Seeing both red and green means the other aircraft is coming straight at you.'),
- F('Low flying minima (UK, day)',
-  '<path d="M0 170H320V200H0Z" fill="var(--ch-l1)"/>'+'<path d="M10 170V150h12v20M28 170V140h10v30M44 170V156h16v14" fill="var(--ch-tn)" stroke="var(--ch-tnl)"/>'
-  +'<g fill="var(--ch-tn)" stroke="var(--ch-tnl)"><path d="M180 170V146h14v24M200 170V132h10v38M214 170V150h20v20M240 170V138h12v32M258 170V152h18v18M282 170V128h8v42"/></g>'
-  +dzSide(60,96,1.2,'var(--accent)')+'<circle cx="60" cy="96" r="58" fill="none" stroke="var(--accent)" stroke-dasharray="4 3"/>'+A(60,96,60,154,'var(--accent)',1)+T(66,132,'500 ft','d1')
-  +T(60,22,'Anywhere:','d1','middle')+T(60,33,'500 ft from any person,','d2','middle',7.5)+T(60,43,'vehicle, vessel or structure','d2','middle',7.5)
-  +dzSide(236,68,1.2,'var(--accent)')+L('M150 128H300','var(--bad)',1,'3 3')+A(240,78,240,126,'var(--bad)',1.2)+T(246,106,'1,000 ft','d1',null,null,'var(--bad)')+L('M168 186H306','var(--ink-2)',1)+T(236,196,'highest obstacle within 600 m','d2','middle',7.5)
-  +T(236,20,'Congested area:','d1','middle')+T(236,31,'1,000 ft above the highest obstacle','d2','middle',7.5)+T(236,41,'and able to land clear','d2','middle',7.5),
-  'Except for take-off and landing, keep 500 ft from people and things. Over towns and assemblies, 1,000 ft above the highest obstacle within 600 m.')
-]);
-
 /* Piston engine icing */
 dzAdd('Piston engine icing (SS14)',[
  F('Where carburettor ice forms',

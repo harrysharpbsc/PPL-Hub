@@ -15,6 +15,19 @@ TOKENS = """
  --accent:#82B4F0;--accent-soft:#1B3155;--bad:#FF8B84;--good:#6CCB86;--mid:#E8B04A;--warm:#F07ABF;--ch-land:#1a2230;
  --ch-tx:#a0a8b4;--ch-l2:#2a2d29;--burst-r:#ff6b5e;--burst-g:#5fd17c;color-scheme:dark}
 """
+def _app_chart_tokens():
+    """The app's chart-paper colours (--ch-*), light and dark, read from src/hub.html so previews match the app."""
+    import re
+    hub = (Path(__file__).resolve().parents[2] / "src" / "hub.html").read_text()
+    light = re.search(r':root\{(--ch-land:[^}]*)\}', hub).group(1)
+    dark = re.search(r':root\[data-theme="dark"\]\{(--ch-land:[^}]*)\}', hub).group(1)
+    return (f":root{{{light}}}\n@media (prefers-color-scheme:dark){{:root:not([data-theme=\"light\"]){{{dark}}}}}\n"
+            f":root[data-theme=\"dark\"]{{{dark}}}\n")
+
+
+TOKENS += _app_chart_tokens()
+
+
 SVGCSS = """
 .ch-paper{fill:var(--ch-land)} .ch-pg{fill:none;stroke:var(--ch-tx);stroke-width:.4;opacity:.25}
 .ch-tk{fill:none;stroke:var(--ch-tx);stroke-width:.7}
