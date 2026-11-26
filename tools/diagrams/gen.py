@@ -13,11 +13,10 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import pplsvg  # noqa: E402
-import altimeter  # noqa: E402
 import overhead_join  # noqa: E402
 import rules_of_the_air  # noqa: E402
 
-MODULES = [overhead_join, rules_of_the_air, altimeter]
+MODULES = [overhead_join, rules_of_the_air]
 ROOT = HERE.parents[1]
 
 
@@ -38,6 +37,8 @@ def js_file():
 def previews():
     outdir = HERE / "out"
     outdir.mkdir(exist_ok=True)
+    for old in list(outdir.glob("*.html")) + list(outdir.glob("*.svg")):
+        old.unlink()
     for m in MODULES:
         figs = [(slug, t, f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" role="img" aria-label="{t}">'
                  + pplsvg.paper(w, h) + body + "</svg>", cap, sec, w, h) for slug, t, body, cap, sec, w, h in m.FIGS]

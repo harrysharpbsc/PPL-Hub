@@ -13,16 +13,19 @@ tools/diagrams/
   pplsvg.py           helpers that mirror src/labs80.js (T, L, B, P, side, badge, head, lines, paper), app tokens, preview page
   overhead_join.py    one module per topic: TOPIC + FIGS
   rules_of_the_air.py
-  altimeter.py
+  existing.py         lists the figures a topic already has (old and generated)
   gen.py              writes src/labs84gen.js and previews in tools/diagrams/out/ (git-ignored)
   check.py            renders the previews light and dark and fails on label clashes
 ```
 
 ## Workflow
 
-1. **Source the facts first.** Wording and numbers come from Harry's note for that topic (`src/data.js`, `NOTES`, the
-   section's own text) or the CAA source it cites. Note what the topic already has: list its figures
-   (`grep -n "dzAdd\|sec(" src/labs8*.js`, `labs89place.js`) and fill gaps rather than duplicate.
+1. **List what the topic already has, and look at it.** `cd src && python3 build.py && python3
+   ../tools/diagrams/existing.py "<topic>"`. Most of Harry's own notes already have figures in `labs83notes.js`,
+   redrawn from the figures in his notes; never add one that repeats them (a different title is not a different
+   figure). Fill gaps only, or replace a figure on purpose and remove the old one.
+   Then source the facts: wording and numbers come from Harry's note for that topic (`src/data.js`, `NOTES`) or the
+   CAA source it cites.
 2. **Pick the note section** each figure belongs to. `section` must be the start of exactly one real section title
    of that topic; `tests/t_secdg.py` fails otherwise.
 3. **Write or extend a module.** A new topic gets a new module (add it to `MODULES` in `gen.py`):
@@ -79,3 +82,5 @@ height, regional pressure setting). R/T wording from CAP 413 as the app already 
   badge and text inside a dial. It does not check text against lines or arrows.
 - A figure title must be unique within its topic (`labs89place.js` matches titles by prefix for the older figures).
 - Older figures that a generated one replaces must be removed from their `labs8x.js` file in the same commit.
+- A text search for `dzAdd(` misses `labs83notes.js`, which adds figures with `sec(` under a variable topic name
+  (`var A='Altimeter Setting Procedures'`). Use `existing.py`, not grep, to see what a topic has.
