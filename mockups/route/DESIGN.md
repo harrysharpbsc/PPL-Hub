@@ -1,7 +1,7 @@
-# Design mock-up: "Plotted route"
+# Design mock-up A: "Plotted route" (saved, liked)
 
 A proposal only. It does not touch the live app (`src/`, `docs/`, `main`).
-Open `mockup/index.html` (built by `python3 mockup/build.py`).
+Open `mockups/route/index.html` (built by `python3 mockups/route/build.py`).
 
 ## Brief
 - **Subject:** UK CAA PPL(A) theory revision: notes, quizzes, mock exams, radio and flight labs.

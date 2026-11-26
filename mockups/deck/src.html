@@ -1,0 +1,585 @@
+<title>PPL Hub Flight Deck</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/*FONTS*/
+/* Layout: airfield signage is the navigation (yellow direction signs, black location sign for where you are);
+   lists are pilot checklists with leader dots; readiness reads like an airspeed indicator's coloured arcs. */
+:root{
+  --deck:#E4E7EA;--panel:#FFFFFF;--panel-2:#F1F3F5;--ink:#15191E;--ink-2:#4A535E;--ink-3:#77818C;
+  --rule:#CDD2D8;--rule-2:#B3BAC2;
+  --sign:#F7C600;--sign-ink:#000000;--sign-black:#000000;
+  --arc-red:#CF2338;--arc-amber:#E0A100;--arc-green:#23924A;--arc-white:#FFFFFF;
+  --sel:#00799F;--sel-soft:#DDF1F7;
+  --good:#1E7F40;--good-soft:#E0F2E6;--bad:#C0263A;--bad-soft:#F8E1E4;
+  --readout:#0E1114;--readout-ink:#F2F4F6;--readout-green:#47E07A;--readout-cyan:#4FD8F5;
+  --f:"B612",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --deck:#1B1F23;--panel:#262B30;--panel-2:#2E343A;--ink:#EEF1F4;--ink-2:#AEB7C1;--ink-3:#85909C;
+  --rule:#353C43;--rule-2:#46505A;
+  --sel:#4FD8F5;--sel-soft:#173A45;
+  --good:#5FD38A;--good-soft:#173826;--bad:#FF7D8C;--bad-soft:#40202A;
+  --readout:#0B0D10;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --deck:#1B1F23;--panel:#262B30;--panel-2:#2E343A;--ink:#EEF1F4;--ink-2:#AEB7C1;--ink-3:#85909C;
+  --rule:#353C43;--rule-2:#46505A;
+  --sel:#4FD8F5;--sel-soft:#173A45;
+  --good:#5FD38A;--good-soft:#173826;--bad:#FF7D8C;--bad-soft:#40202A;
+  --readout:#0B0D10;color-scheme:dark}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--deck);color:var(--ink);font:400 16px/1.55 var(--f);-webkit-font-smoothing:antialiased;
+  padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--sel);outline-offset:2px;border-radius:6px}
+h1,h2,h3{margin:0;font-weight:700;line-height:1.2;text-wrap:balance}
+h1{font-size:30px}
+h2{font-size:18px;margin:36px 0 12px}
+p{margin:0}
+.wrap{max-width:880px;margin:0 auto;padding-block:20px 0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:700px){.wrap{padding-block:28px 0;padding-left:max(28px,env(safe-area-inset-left,0px));padding-right:max(28px,env(safe-area-inset-right,0px))}}
+.muted{color:var(--ink-2)}
+.small{font-size:14px}
+.tab-n{font-variant-numeric:tabular-nums}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px}
+.brand svg{width:32px;height:32px;border-radius:8px;flex:none}
+.iconbtn{width:44px;height:44px;border-radius:10px;border:1px solid var(--rule-2);background:var(--panel);display:grid;place-items:center}
+.iconbtn svg{width:20px;height:20px}
+.pagehead{margin:18px 0 0}
+.pagehead p{margin-top:6px;max-width:62ch}
+.back{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 4px;border:0;background:none;color:var(--sel);font-weight:700}
+
+/* buttons: yellow = go and do something */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 20px;border-radius:8px;
+  border:1.5px solid var(--rule-2);background:var(--panel);font-weight:700;font-size:16px}
+.btn.go{background:var(--sign);border-color:var(--sign-black);color:var(--sign-ink);box-shadow:inset 0 0 0 1px var(--sign)}
+.btn.go svg{width:18px;height:18px}
+.btn.block{width:100%}
+.btnrow{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+
+/* panels */
+.panel{background:var(--panel);border:1px solid var(--rule);border-radius:12px;overflow:hidden}
+.panel+.panel{margin-top:16px}
+.phead{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;background:var(--panel-2);border-bottom:1px solid var(--rule);font-weight:700}
+.phead .muted{font-weight:400;font-size:14px}
+.intro{padding:14px 18px;border-bottom:1px solid var(--rule);color:var(--ink-2);font-size:15px}
+.row{display:flex;align-items:center;gap:14px;width:100%;min-height:62px;padding:14px 18px;text-align:left;background:none;border:0;border-top:1px solid var(--rule)}
+.panel>.row:first-child,.phead+.row,.intro+.row{border-top:0}
+.row:active{background:var(--sel-soft)}
+.row .main{flex:1;min-width:0}
+.row .t{font-weight:700;font-size:16px;line-height:1.3}
+.row .s{font-size:14px;color:var(--ink-2);margin-top:2px}
+.row .end{flex:none;font-size:14px;color:var(--ink-3);text-align:right}
+.chev{width:18px;height:18px;flex:none;color:var(--ink-3)}
+
+/* checklist line: item ........ response */
+.ck{display:grid;grid-template-columns:28px 1fr;gap:14px;align-items:start;padding:16px 18px;border-top:1px solid var(--rule)}
+.phead+.ck{border-top:0}
+.box{width:28px;height:28px;border-radius:6px;border:2px solid var(--rule-2);display:grid;place-items:center;margin-top:-2px}
+.ck.done .box{background:var(--good);border-color:var(--good)}
+.ck.done .box svg{display:block}
+.box svg{display:none;width:18px;height:18px;color:var(--panel)}
+.lead{display:flex;align-items:baseline;gap:8px;font-weight:700}
+.lead .dots{flex:1;min-width:16px;border-bottom:2px dotted var(--rule-2);transform:translateY(-4px)}
+.lead .resp{white-space:nowrap}
+.ck .s{font-size:14px;color:var(--ink-2);margin-top:4px}
+.ck.done .lead{color:var(--ink-3)}
+.ck .btn{margin-top:14px}
+.ck.next{background:var(--panel)}
+
+/* readout box (digital display) */
+.ro{display:inline-flex;align-items:baseline;gap:6px;background:var(--readout);color:var(--readout-ink);border-radius:6px;padding:4px 10px;
+  font-weight:700;font-variant-numeric:tabular-nums;border:1px solid #3A4249}
+.ro.green{color:var(--readout-green)}
+.ro.cyan{color:var(--readout-cyan)}
+.ro small{font-size:12px;font-weight:400;color:#A9B2BC}
+
+/* readiness tape: ASI-style arcs, red below 50, amber to 75, green from the 75% pass mark */
+.tape{position:relative;height:28px;margin-top:8px}
+.tape .arcs{position:absolute;left:0;right:0;top:16px;height:6px;border-radius:3px;
+  background:linear-gradient(90deg,var(--arc-red) 0 50%,var(--arc-amber) 50% 75%,var(--arc-green) 75% 100%)}
+.tape .ticks{position:absolute;left:0;right:0;top:12px;height:14px;
+  background:repeating-linear-gradient(90deg,var(--rule-2) 0 1px,transparent 1px 10%);opacity:.9}
+.tape .ptr{position:absolute;top:0;width:0;height:0;margin-left:-7px;border-left:7px solid transparent;border-right:7px solid transparent;border-top:12px solid var(--ink)}
+.tape .pass{position:absolute;left:75%;top:10px;width:2px;height:18px;margin-left:-1px;background:var(--ink)}
+.tapelab{position:relative;height:16px;font-size:12px;color:var(--ink-3);margin-top:2px;font-variant-numeric:tabular-nums}
+.tapelab span{position:absolute;top:0;transform:translateX(-50%);white-space:nowrap}
+.tapelab span:first-child{transform:none}.tapelab span:last-child{transform:translateX(-100%)}
+
+/* week: vertical-speed style columns */
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;align-items:end;padding:18px}
+.day{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:13px;color:var(--ink-3)}
+.day .col{width:100%;max-width:30px;height:70px;border-radius:4px;background:var(--panel-2);border:1px solid var(--rule);position:relative;overflow:hidden}
+.day .col i{position:absolute;left:0;right:0;bottom:0;background:var(--ink-2)}
+.day.today{color:var(--ink);font-weight:700}
+.day.today .col{border:2px solid var(--sign-black);box-shadow:0 0 0 2px var(--sign)}
+
+/* two columns on tablets */
+@media (min-width:700px){.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.two>.panel+.panel{margin-top:0}}
+
+/* Today header strip: METAR-like status line */
+.status{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+
+/* Practice controls */
+.seg{display:inline-flex;padding:3px;gap:3px;border-radius:9px;background:var(--panel-2);border:1px solid var(--rule)}
+.seg button{min-height:44px;padding:0 16px;border-radius:7px;border:0;background:none;font-weight:700;font-size:15px;color:var(--ink-2)}
+.seg button[aria-pressed="true"]{background:var(--readout);color:var(--readout-cyan)}
+.setting{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px solid var(--rule)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;padding:16px 18px}
+.chip{min-height:44px;padding:0 14px;border-radius:8px;border:1.5px solid var(--rule-2);background:var(--panel);font-size:15px;font-weight:700}
+.chip[aria-pressed="true"]{background:var(--readout);border-color:var(--readout);color:var(--readout-cyan)}
+.chip small{font-weight:400;opacity:.75;margin-left:4px}
+.foot{padding:0 18px 18px}
+
+/* Quiz */
+.qtop{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px}
+.tiles{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 12px;margin:12px -2px 0;scrollbar-width:none}
+.tiles::-webkit-scrollbar{display:none}
+.tile{flex:none;width:44px;height:44px;border-radius:8px;border:1.5px solid var(--rule-2);background:var(--panel);font-weight:700;display:grid;place-items:center}
+.tile.ok{background:var(--good-soft);border-color:var(--good);color:var(--good)}
+.tile.no{background:var(--bad-soft);border-color:var(--bad);color:var(--bad)}
+.tile.cur{background:var(--sign-black);border-color:var(--sign);color:var(--sign);box-shadow:inset 0 0 0 2px var(--sign-black)}
+.q{font-weight:700;font-size:22px;line-height:1.35;margin:20px 0 6px;max-width:34ch}
+.opts{display:grid;gap:12px;margin-top:20px}
+@media (min-width:700px){.opts{grid-template-columns:1fr 1fr}}
+.opt{display:flex;align-items:flex-start;gap:14px;text-align:left;min-height:64px;padding:16px;border-radius:10px;border:1.5px solid var(--rule-2);background:var(--panel);font-size:16px;line-height:1.4}
+.opt .k{flex:none;width:28px;height:28px;border-radius:6px;background:var(--panel-2);border:1px solid var(--rule);display:grid;place-items:center;font-weight:700;font-size:14px}
+.opt.right{border-color:var(--good);background:var(--good-soft)}
+.opt.right .k{background:var(--good);border-color:var(--good);color:var(--panel)}
+.opt.dim{opacity:.6}
+.debrief{margin-top:20px}
+.debrief p{padding:0 18px;margin-top:12px;font-size:15px;color:var(--ink-2)}
+.debrief p:last-child{padding-bottom:18px}
+.debrief strong{color:var(--ink)}
+
+/* Radio */
+.toggle{position:relative;width:56px;height:32px;border-radius:999px;border:0;background:var(--rule-2);flex:none}
+.toggle::after{content:"";position:absolute;top:4px;left:4px;width:24px;height:24px;border-radius:50%;background:var(--panel);transition:transform .2s}
+.toggle[aria-pressed="true"]{background:var(--good)}
+.toggle[aria-pressed="true"]::after{transform:translateX(24px)}
+.box-radio{background:var(--readout);border-radius:12px;padding:16px 18px;color:var(--readout-ink);border:1px solid #3A4249}
+.box-radio .freqs{display:flex;flex-wrap:wrap;gap:18px 28px}
+.box-radio .lbl{font-size:12px;color:#A9B2BC}
+.box-radio .f{font-size:28px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.1}
+.box-radio .f.act{color:var(--readout-green)}
+.box-radio .f.sby{color:var(--readout-cyan)}
+.call{margin-top:14px;border-left:3px solid #4A535E;padding:2px 0 2px 14px}
+.call .who{font-size:12px;color:#A9B2BC}
+.call .say{font-size:16px;margin-top:2px}
+.call.you{border-left-color:var(--readout-cyan)}
+.call.you .who{color:var(--readout-cyan)}
+
+/* airfield sign tab bar: yellow direction signs; black location sign marks where you are */
+.tabs{position:fixed;left:0;right:0;bottom:0;z-index:5;background:var(--sign-black);
+  padding:8px max(8px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-left,0px))}
+.tabs .in{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;max-width:760px;margin:0 auto}
+.tab{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:60px;padding:4px 2px;border:0;border-radius:4px;
+  background:var(--sign);color:var(--sign-ink);font-weight:700;font-size:12.5px;letter-spacing:.01em;line-height:1.1}
+.tab svg{width:22px;height:22px}
+.tab[aria-current="page"]{background:var(--sign-black);color:var(--sign);box-shadow:inset 0 0 0 2px var(--sign)}
+@media (min-width:700px){.tab{flex-direction:row;gap:8px;font-size:15px;min-height:56px}}
+
+/* topic steps: four squares like annunciator lights */
+.num{flex:none;width:32px;height:32px;border-radius:6px;background:var(--panel-2);border:1px solid var(--rule);display:grid;place-items:center;font-weight:700;font-size:14px;color:var(--ink-2)}
+.steps{display:flex;gap:4px;flex:none}
+.steps .sq{width:12px;height:12px;border-radius:2px;border:1.5px solid var(--rule-2)}
+.steps .sq.on{background:var(--arc-green);border-color:var(--arc-green)}
+.screen{display:none}
+.screen.on{display:block}
+.spacer{height:28px}
+.note{margin-top:28px;font-size:13px;color:var(--ink-3)}
+</style>
+
+<!-- ============ TODAY ============ -->
+<section class="screen on" id="s-today" aria-label="Today">
+<div class="wrap">
+  <div class="top">
+    <div class="brand">
+      <svg viewBox="0 0 512 512" aria-hidden="true">/*LOGO*/</svg>
+      PPL Study Hub
+    </div>
+    <button class="iconbtn" data-theme-toggle aria-label="Switch light or dark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+    </button>
+  </div>
+
+  <div class="pagehead">
+    <p class="muted small">Thursday 26 November</p>
+    <h1>Today</h1>
+  </div>
+  <div class="status">
+    <span class="ro green">0 <small>due</small></span>
+    <span class="ro cyan">10 <small>new</small></span>
+    <span class="ro">0 <small>answered today</small></span>
+  </div>
+
+  <h2>Today's checklist</h2>
+  <div class="panel">
+    <div class="phead"><span>Before you start</span><span class="muted tab-n">0 of 3 done, about 25 min</span></div>
+    <div class="ck next">
+      <span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span>
+      <div>
+        <div class="lead"><span>Daily review</span><span class="dots"></span><span class="resp tab-n">10 cards</span></div>
+        <div class="s">Mixed across subjects on purpose: switching topics makes memory stronger.</div>
+        <button class="btn go block" data-go="quiz">Start review</button>
+      </div>
+    </div>
+    <div class="ck">
+      <span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span>
+      <div>
+        <div class="lead"><span>Operations of Aircraft</span><span class="dots"></span><span class="resp">Pre-test</span></div>
+        <div class="s">Air Law, 9 questions</div>
+      </div>
+    </div>
+    <div class="ck">
+      <span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span>
+      <div>
+        <div class="lead"><span>Departing Borton</span><span class="dots"></span><span class="resp">Radio</span></div>
+        <div class="s">Radio check, taxi, readbacks and the first call after take-off</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="two">
+    <div>
+      <h2>Closest to the pass mark</h2>
+      <div class="panel">
+        <button class="row" data-go="airlaw"><div class="main"><div class="t">Air Law</div>
+          <div class="tape"><div class="ticks"></div><div class="arcs"></div><div class="pass"></div><div class="ptr" style="left:62%"></div></div></div><span class="ro">62<small>%</small></span></button>
+        <button class="row"><div class="main"><div class="t">Communications</div>
+          <div class="tape"><div class="ticks"></div><div class="arcs"></div><div class="pass"></div><div class="ptr" style="left:48%"></div></div></div><span class="ro">48<small>%</small></span></button>
+        <button class="row"><div class="main"><div class="t">Meteorology</div>
+          <div class="tape"><div class="ticks"></div><div class="arcs"></div><div class="pass"></div><div class="ptr" style="left:31%"></div></div></div><span class="ro">31<small>%</small></span></button>
+      </div>
+    </div>
+    <div>
+      <h2>Your week</h2>
+      <div class="panel">
+        <div class="week" role="img" aria-label="Answers each day this week">
+          <div class="day"><div class="col"><i style="height:40%"></i></div>Fri</div>
+          <div class="day"><div class="col"><i style="height:0"></i></div>Sat</div>
+          <div class="day"><div class="col"><i style="height:65%"></i></div>Sun</div>
+          <div class="day"><div class="col"><i style="height:30%"></i></div>Mon</div>
+          <div class="day"><div class="col"><i style="height:85%"></i></div>Tue</div>
+          <div class="day"><div class="col"><i style="height:50%"></i></div>Wed</div>
+          <div class="day today"><div class="col"><i style="height:0"></i></div>Thu</div>
+        </div>
+        <div class="intro" style="border-top:1px solid var(--rule);border-bottom:0">142 answers this week, 81% right. Five days in a row.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:28px">
+    <button class="row"><div class="main"><div class="t">How this hub teaches</div><div class="s">Test first, space it out, mix it up, know what you know</div></div>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg></button>
+  </div>
+  <p class="note">Design mock-up with sample figures. Nothing here is connected to your real progress.</p>
+  <div class="spacer"></div>
+</div>
+</section>
+
+<!-- ============ SUBJECTS ============ -->
+<section class="screen" id="s-subjects" aria-label="Subjects">
+<div class="wrap">
+  <div class="pagehead">
+    <h1>Subjects</h1>
+    <p class="muted">The nine UK PPL(A) exams. Each gauge reads like an airspeed indicator: the green arc starts at the 75% pass mark.</p>
+  </div>
+  <div class="two" style="margin-top:20px">
+    <div class="panel">
+      /*SUBJ1*/
+    </div>
+    <div class="panel">
+      /*SUBJ2*/
+    </div>
+  </div>
+  <div class="spacer"></div>
+</div>
+</section>
+
+<!-- ============ AIR LAW ============ -->
+<section class="screen" id="s-airlaw" aria-label="Air Law">
+<div class="wrap">
+  <button class="back" data-go="subjects"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m15 6-6 6 6 6"/></svg>Subjects</button>
+  <div class="pagehead" style="margin-top:4px"><h1>Air Law</h1></div>
+  <div class="panel" style="margin-top:16px">
+    <div class="row" style="cursor:default">
+      <div class="main"><div class="t">Readiness</div>
+        <div class="tape"><div class="ticks"></div><div class="arcs"></div><div class="pass"></div><div class="ptr" style="left:62%"></div></div>
+        <div class="tapelab"><span style="left:0">0</span><span style="left:50%">50</span><span style="left:75%">pass 75</span><span style="left:100%">100</span></div>
+        <div class="s" style="margin-top:6px">201 of 323 cards secure</div></div>
+      <span class="ro" style="font-size:24px">62<small>%</small></span>
+    </div>
+  </div>
+
+  <h2>Your notes</h2>
+  <div class="panel">
+    <div class="phead"><span>Topic</span><span class="muted">Pre-test, read, cards, quiz</span></div>
+    /*TOPICS*/
+  </div>
+
+  <h2>From CAA guidance</h2>
+  <div class="panel">
+    <button class="row"><div class="main"><div class="t">Rules of the Air essentials</div><div class="s">Skyway Code, 12 cards</div></div><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg></button>
+    <button class="row"><div class="main"><div class="t">VFR, IFR and Special VFR</div><div class="s">Skyway Code, 12 cards</div></div><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg></button>
+    <button class="row"><div class="main"><div class="t">Airspace, ATZ, MATZ and transponders</div><div class="s">Skyway Code, 12 cards</div></div><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg></button>
+  </div>
+
+  <h2>Labs for Air Law</h2>
+  <div class="panel">
+    <button class="row"><div class="main"><div class="t">Chicago Convention articles</div><div class="s">Learn the articles in five themed blocks, then test yourself</div></div><span class="end">Not tried</span></button>
+  </div>
+  <div class="btnrow">
+    <button class="btn go" data-go="quiz">Mixed Air Law quiz</button>
+    <button class="btn">One-page cheat sheet</button>
+  </div>
+  <div class="spacer"></div>
+</div>
+</section>
+
+<!-- ============ PRACTICE ============ -->
+<section class="screen" id="s-practice" aria-label="Practice">
+<div class="wrap">
+  <div class="pagehead">
+    <h1>Practice</h1>
+    <p class="muted">Test yourself against the clock, mix subjects and fix what keeps going wrong.</p>
+  </div>
+
+  <h2>Mock exam</h2>
+  <div class="panel">
+    <div class="intro">Up to 20 questions, 90 seconds each. Pass mark 75%. Practice length, not the real exam.</div>
+    <div class="setting">
+      <span style="font-weight:700">Show right or wrong</span>
+      <div class="seg" role="group"><button aria-pressed="true">As I go</button><button aria-pressed="false">At the end</button></div>
+    </div>
+    <div class="chips" role="group" aria-label="Subject">
+      <button class="chip" aria-pressed="true">Air Law <small>20</small></button>
+      <button class="chip" aria-pressed="false">Aircraft General <small>6</small></button>
+      <button class="chip" aria-pressed="false">Performance and Planning <small>17</small></button>
+      <button class="chip" aria-pressed="false">Human Performance <small>12</small></button>
+      <button class="chip" aria-pressed="false">Meteorology <small>13</small></button>
+      <button class="chip" aria-pressed="false">Navigation <small>20</small></button>
+      <button class="chip" aria-pressed="false">Operational Procedures <small>20</small></button>
+      <button class="chip" aria-pressed="false">Principles of Flight <small>6</small></button>
+      <button class="chip" aria-pressed="false">Communications <small>20</small></button>
+      <button class="chip" aria-pressed="false">All subjects</button>
+    </div>
+    <div class="foot"><button class="btn go block" data-go="quiz">Start Air Law mock</button></div>
+  </div>
+
+  <div class="two">
+    <div>
+      <h2>Fix what is weak</h2>
+      <div class="panel">
+        <button class="row"><div class="main"><div class="t">Mistakes</div><div class="s">Questions you got wrong</div></div><span class="ro">7</span></button>
+        <button class="row"><div class="main"><div class="t">Tricky cards</div><div class="s">Cards you keep forgetting</div></div><span class="ro">3</span></button>
+        <button class="row"><div class="main"><div class="t">Mixed practice</div><div class="s">Ten questions from every subject</div></div><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg></button>
+      </div>
+    </div>
+    <div>
+      <h2>Weather decoding</h2>
+      <div class="panel">
+        <div class="intro" style="font-variant-numeric:tabular-nums">EGKB 261020Z 24008KT 9999 FEW035 08/03 Q1021</div>
+        <button class="row"><div class="main"><div class="t">Decode a METAR</div><div class="s">Wind, visibility, cloud, QNH, VFR limits</div></div><span class="end">Not tried</span></button>
+        <button class="row"><div class="main"><div class="t">Decode a TAF</div><div class="s">Validity, BECMG, TEMPO and PROB30</div></div><span class="end">Not tried</span></button>
+        <button class="row"><div class="main"><div class="t">Write the code</div><div class="s">Plain words into the METAR group</div></div><span class="end">Not tried</span></button>
+      </div>
+    </div>
+  </div>
+
+  <h2>Calculations</h2>
+  <div class="panel">
+    <div class="intro">Fresh numbers every time. Work it out on paper, then type the answer.</div>
+    <div class="chips">
+      <button class="chip">Mixed</button><button class="chip">Time, speed, distance</button><button class="chip">Fuel</button>
+      <button class="chip">Crosswind</button><button class="chip">ISA temperature</button><button class="chip">1 in 60 rule</button>
+      <button class="chip">Descent planning</button><button class="chip">Unit conversions</button>
+    </div>
+  </div>
+  <div class="spacer"></div>
+</div>
+</section>
+
+<!-- ============ QUIZ ============ -->
+<section class="screen" id="s-quiz" aria-label="Question">
+<div class="wrap">
+  <div class="qtop">
+    <button class="back" data-go="practice"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>End</button>
+    <span class="muted small">Air Law mock, 4 of 20</span>
+    <span class="ro green" style="font-size:18px">1:12</span>
+  </div>
+  <div class="tiles" aria-label="Questions">
+    <button class="tile ok">1</button><button class="tile ok">2</button><button class="tile no">3</button><button class="tile cur" aria-current="step">4</button>
+    <button class="tile">5</button><button class="tile">6</button><button class="tile">7</button><button class="tile">8</button><button class="tile">9</button><button class="tile">10</button>
+    <button class="tile">11</button><button class="tile">12</button><button class="tile">13</button><button class="tile">14</button><button class="tile">15</button><button class="tile">16</button>
+    <button class="tile">17</button><button class="tile">18</button><button class="tile">19</button><button class="tile">20</button>
+  </div>
+
+  <p class="q">At night you see a steady red light ahead and slightly to your right, at your level. Its bearing isn't changing. What should you do?</p>
+  <p class="muted small">Rules of the Air</p>
+
+  <div class="opts">
+    <button class="opt right"><span class="k">&#10003;</span>Give way: turn right to pass behind it</button>
+    <button class="opt dim"><span class="k">B</span>Hold your heading and speed: it must give way to you</button>
+    <button class="opt dim"><span class="k">C</span>Give way: turn left to pass ahead of it</button>
+    <button class="opt dim"><span class="k">D</span>Hold your heading: a red light is the tail of an aircraft you are overtaking</button>
+  </div>
+
+  <div class="panel debrief">
+    <div class="phead"><span style="color:var(--good)">Correct</span><span class="muted">Debrief</span></div>
+    <p>Red is the <strong>left</strong> wingtip light, so you are looking at its left side: it is crossing from your right. A steady bearing means you are converging. The aircraft that has the other on its right gives way, and must not pass over, under or ahead of it, so you turn right and pass behind.</p>
+    <p>The trap is B, which is what you would do if you saw its green light. C gives way but passes ahead, and a tail light is white, so D is out.</p>
+  </div>
+
+  <div class="btnrow"><button class="btn go">Next question</button><button class="btn">Flag for review</button></div>
+  <div class="spacer"></div>
+</div>
+</section>
+
+<!-- ============ RADIO ============ -->
+<section class="screen" id="s-radio" aria-label="Radio">
+<div class="wrap">
+  <div class="pagehead">
+    <h1>Radio</h1>
+    <p class="muted">Practise radiotelephony from CAP 413 until the words come naturally.</p>
+  </div>
+
+  <div class="panel" style="margin-top:20px">
+    <div class="row" style="cursor:default"><div class="main"><div class="t">Listening practice</div><div class="s">Hear controller calls instead of reading them</div></div>
+      <button class="toggle" aria-pressed="true" aria-label="Listening practice" onclick="this.setAttribute('aria-pressed',this.getAttribute('aria-pressed')!=='true')"></button></div>
+  </div>
+
+  <h2>Fly the radio</h2>
+  <div class="two">
+    <div class="panel">
+      <button class="row"><div class="main"><div class="t">Departing Borton</div><div class="s">Radio check, taxi, readbacks and the first call after take-off, with a tower controller</div></div><span class="end">Not tried</span></button>
+      <button class="row"><div class="main"><div class="t">En route and arrival at Walden</div><div class="s">Basic Service, pass your message, weather and joining with a FIS</div></div><span class="end">Not tried</span></button>
+    </div>
+    <div class="box-radio" aria-label="Example exchange">
+      <div class="freqs">
+        <div><div class="lbl">Active, Borton Tower</div><div class="f act">118.505</div></div>
+        <div><div class="lbl">Standby, Walden Information</div><div class="f sby">124.880</div></div>
+      </div>
+      <div class="call"><div class="who">Borton Tower</div><div class="say">G-ABCD, runway 26, cleared for take-off, surface wind 240 degrees 8 knots.</div></div>
+      <div class="call you"><div class="who">You</div><div class="say">Cleared for take-off runway 26, G-ABCD.</div></div>
+    </div>
+  </div>
+
+  <div class="two">
+    <div>
+      <h2>Warm up</h2>
+      <div class="panel">
+        <button class="row"><div class="main"><div class="t">Phonetic alphabet</div><div class="s">Letters to words and back</div></div><span class="end">Not tried</span></button>
+        <button class="row"><div class="main"><div class="t">Spell a registration</div><div class="s">Build G-xxxx in phonetics</div></div><span class="end">Not tried</span></button>
+        <button class="row"><div class="main"><div class="t">Say the numbers</div><div class="s">Frequencies, QNH, altitude, headings</div></div><span class="end">Not tried</span></button>
+      </div>
+    </div>
+    <div>
+      <h2>Build the call</h2>
+      <div class="panel">
+        <button class="row"><div class="main"><div class="t">Calls from the cockpit</div><div class="s">Tap the pieces in the right order</div></div><span class="end">Not tried</span></button>
+        <button class="row"><div class="main"><div class="t">Readbacks</div><div class="s">Choose the correct readback</div></div><span class="end">Not tried</span></button>
+        <button class="row"><div class="main"><div class="t">Emergency calls</div><div class="s">Order a MAYDAY or PAN PAN message</div></div><span class="end">Not tried</span></button>
+      </div>
+    </div>
+  </div>
+  <div class="btnrow"><button class="btn">Open reference sheet</button></div>
+  <div class="spacer"></div>
+</div>
+</section>
+
+<!-- ============ LABS ============ -->
+<section class="screen" id="s-labs" aria-label="Labs">
+<div class="wrap">
+  <div class="pagehead"><h1>Labs</h1><p class="muted">Hands-on practice: fly, plan, decide and play.</p></div>
+  <div class="two">
+    <div>
+      <h2>Fly and talk</h2>
+      <div class="panel">
+        <button class="row"><div class="main"><div class="t">Airspace infringement trainer</div><div class="s">Reach the goal without entering controlled airspace</div></div><span class="end">Not tried</span></button>
+        <button class="row"><div class="main"><div class="t">Circuit joining</div><div class="s">Choose the right join from where you arrive</div></div><span class="end">Not tried</span></button>
+      </div>
+      <h2>Plan and calculate</h2>
+      <div class="panel">
+        <button class="row"><div class="main"><div class="t">Wind triangle planner</div><div class="s">Solve headings and ground speeds</div></div><span class="end">Not tried</span></button>
+        <button class="row"><div class="main"><div class="t">Weight and balance loader</div><div class="s">Keep the CG inside the envelope</div></div><span class="end">Not tried</span></button>
+        <button class="row"><div class="main"><div class="t">Load factor and stall speed</div><div class="s">How bank angle changes both</div></div><span class="end">Not tried</span></button>
+      </div>
+    </div>
+    <div>
+      <h2>Look and decide</h2>
+      <div class="panel">
+        <button class="row"><div class="main"><div class="t">UK airspace map</div><div class="s">Tap a point to see every layer above it</div></div><span class="end">Not tried</span></button>
+        <button class="row"><div class="main"><div class="t">Branching scenarios</div><div class="s">Make decisions and see the consequences</div></div><span class="end">Not tried</span></button>
+        <button class="row"><div class="main"><div class="t">Emergency checklist order</div><div class="s">Six common emergencies</div></div><span class="end">Not tried</span></button>
+      </div>
+      <h2>Games and challenges</h2>
+      <div class="panel">
+        <button class="row"><div class="main"><div class="t">Matching game</div><div class="s">Pair terms with their meanings</div></div><span class="end">Not tried</span></button>
+        <button class="row"><div class="main"><div class="t">Chicago Convention articles</div><div class="s">Five themed blocks, then test yourself</div></div><span class="end">Not tried</span></button>
+      </div>
+    </div>
+  </div>
+  <div class="spacer"></div>
+</div>
+</section>
+
+<!-- ============ PROGRESS ============ -->
+<section class="screen" id="s-progress" aria-label="Progress">
+<div class="wrap">
+  <div class="pagehead"><h1>Progress</h1><p class="muted">How close each exam is to the 75% pass mark.</p></div>
+  <div class="status">
+    <span class="ro">34<small>% overall</small></span>
+    <span class="ro green">5 <small>days in a row</small></span>
+    <span class="ro">1,208 <small>answers</small></span>
+  </div>
+  <h2>By subject</h2>
+  <div class="two">
+    <div class="panel">/*PROG1*/</div>
+    <div class="panel">/*PROG2*/</div>
+  </div>
+  <h2>Backup and sync</h2>
+  <div class="panel">
+    <button class="row"><div class="main"><div class="t">Sync with Google Drive</div><div class="s">Last synced today at 08:14</div></div><span class="end">Tap to sync</span></button>
+    <button class="row"><div class="main"><div class="t">Save backup file</div></div><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg></button>
+    <button class="row"><div class="main"><div class="t">Restore from file</div></div><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg></button>
+  </div>
+  <div class="spacer"></div>
+</div>
+</section>
+
+<nav class="tabs" aria-label="Sections"><div class="in">
+  <button class="tab" data-go="today" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg>Today</button>
+  <button class="tab" data-go="subjects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5C6.5 4 9.5 4 12 5.5v14C9.5 18 6.5 18 4 19.5z"/><path d="M20 5.5C17.5 4 14.5 4 12 5.5v14c2.5-1.5 5.5-1.5 8 0z"/></svg>Subjects</button>
+  <button class="tab" data-go="practice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>Practice</button>
+  <button class="tab" data-go="radio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg>Radio</button>
+  <button class="tab" data-go="labs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5v17"/><path d="m12 12 4-4"/></svg>Labs</button>
+  <button class="tab" data-go="progress"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="M7 16v-4M12 16V7M17 16v-6"/></svg>Progress</button>
+</div></nav>
+
+<script>
+(function(){
+  var tabs={today:1,subjects:1,practice:1,radio:1,labs:1,progress:1};
+  var parent={airlaw:'subjects',quiz:'practice'};
+  function go(id){
+    document.querySelectorAll('.screen').forEach(function(s){s.classList.toggle('on',s.id==='s-'+id)});
+    var t=tabs[id]?id:parent[id];
+    document.querySelectorAll('.tab').forEach(function(b){b.dataset.go===t?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current')});
+    window.scrollTo(0,0);
+    try{history.replaceState(null,'','#'+id)}catch(e){}
+  }
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-go]');if(b){go(b.dataset.go);return}
+    if(e.target.closest('[data-theme-toggle]')){
+      var r=document.documentElement,dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+      r.dataset.theme=dark?'light':'dark';return}
+    var c=e.target.closest('.seg button,.chips[role=group] .chip');
+    if(c){c.parentNode.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===c)})}
+  });
+  function fromHash(){var h=(location.hash||'').slice(1);if(h&&document.getElementById('s-'+h))go(h)}
+  fromHash();addEventListener('hashchange',fromHash);
+})();
+</script>
