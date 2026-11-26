@@ -64,6 +64,7 @@ tools/diagrams/
 ## UK CAA conventions
 
 Heights in ft aal (QFE) or ft amsl (QNH), say which; pressure in hPa; speeds kt; distances NM; wind "W/V 270°/10 kt";
+pressure: 30 ft per hPa, with 27 ft in brackets as the precise figure;
 runways "Runway 27" / RWY 27; left-hand circuits unless stated; UK terms (circuit, dead side, live side, circuit
 height, regional pressure setting). R/T wording from CAP 413 as the app already uses it. Mark sketches "Not to scale".
 

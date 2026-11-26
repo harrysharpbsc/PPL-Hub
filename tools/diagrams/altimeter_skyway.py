@@ -1,4 +1,4 @@
-"""Altimeter settings (Skyway Code): QFE/QNH/1013, the transition layer, the 27 ft per hPa worked example.
+"""Altimeter settings (Skyway Code): QFE/QNH/1013, the transition layer, the 30 ft per hPa worked example (27 ft in brackets).
 
 Redrawn from the hand-written figures that were in src/labs82.js (same content, generator style).
 """
@@ -56,18 +56,21 @@ fig("transition", "Transition altitude and level", 320, 200, b,
     "In the UK outside controlled airspace the transition altitude is usually 3,000 ft. Changing to flight levels "
     "is optional for VFR.", "Transition altitude")
 
-# ================= Worked example: 27 ft per hPa ============================================
+# ================= Worked example: 30 ft per hPa (27 ft more precisely) ============================================
 b = "".join([
     badge(24, 30, 1), T(42, 28, "QNH 1000, flying at 3,000 ft. Now set 1013.", "d1"),
     T(42, 40, "1013 − 1000 = 13 hPa", "d2"),
-    badge(24, 78, 2), T(42, 76, "13 × 27 ft ≈ 351 ft", "d1"), T(42, 88, "the reading goes up", "d2"),
+    badge(24, 78, 2), T(42, 76, "13 × 30 ft ≈ 390 ft: the reading goes up", "d1"),
+    T(42, 88, "(more precisely 13 × 27 ft ≈ 351 ft)", "d2"),
     badge(24, 126, 3), T(42, 124, "The altimeter now reads", "d1"),
     B(42, 132, 112, 30, "var(--surface)", "var(--accent)", 6, 1.4),
-    T(98, 154, "3,351 ft", "mono", "middle", ' style="font-size:20px;fill:var(--accent)"'),
+    T(98, 154, "3,390 ft", "mono", "middle", ' style="font-size:20px;fill:var(--accent)"'),
+    T(42, 174, "(3,351 ft using 27 ft)", "d2"),
     B(176, 98, 132, 64, "var(--surface)", "var(--line)", 6),
     T(184, 114, "Lower pressure than 1013:", "d1", None, ' style="font-size:8.6px"'),
     T(184, 126, "on 1013 the altimeter reads", "d2"), T(184, 136, "higher than your true altitude.", "d2"),
     T(184, 152, "“High to low, look out below.”", "d2"),
 ])
-fig("worked-27ft", "Worked example: 27 ft per hPa", 320, 176, b,
-    "Lower pressure than standard means the altimeter on 1013 reads higher than your true altitude.", "Transition altitude")
+fig("worked-30ft", "Worked example: 30 ft per hPa", 320, 186, b,
+    "Rule of thumb: about 30 ft per hPa (27 ft is the more precise figure near sea level). Lower pressure than "
+    "standard means the altimeter on 1013 reads higher than your true altitude.", "Transition altitude")
