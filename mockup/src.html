@@ -46,8 +46,8 @@ h1{font-size:34px;font-weight:700}
 h2{font-size:21px;font-weight:600;margin:36px 0 12px}
 h3{font-size:19px;font-weight:600}
 p{margin:0}
-.wrap{max-width:880px;margin:0 auto;padding:20px 16px 0}
-@media (min-width:700px){.wrap{padding:28px 28px 0}}
+.wrap{max-width:880px;margin:0 auto;padding-block:20px 0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:700px){.wrap{padding-block:28px 0;padding-left:max(28px,env(safe-area-inset-left,0px));padding-right:max(28px,env(safe-area-inset-right,0px))}}
 .muted{color:var(--ink-2)}
 .small{font-size:15px}
 .num{font-family:var(--f-head);font-variant-numeric:tabular-nums}
@@ -197,7 +197,7 @@ details.how .body strong{display:block;color:var(--ink);font:600 17px var(--f-he
 
 /* tab bar */
 .tabs{position:fixed;left:0;right:0;bottom:0;z-index:5;background:var(--panel);border-top:1px solid var(--line);
-  padding:6px 8px calc(6px + env(safe-area-inset-bottom))}
+  padding:6px max(8px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-left,0px))}
 .tabs .in{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;max-width:720px;margin:0 auto}
 .tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:58px;border:0;border-radius:12px;background:none;
   color:var(--ink-3);font:500 13px var(--f-body)}
@@ -313,6 +313,7 @@ details.how .body strong{display:block;color:var(--ink);font:600 17px var(--f-he
       </div>
     </details>
   </div>
+  <p class="note">Design mock-up with sample figures. Nothing here is connected to your real progress.</p>
   <div class="spacer"></div>
 </div>
 </section>
