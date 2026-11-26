@@ -21,7 +21,7 @@ Harry's Obsidian notes (synced to Google Drive, folder `PPL`, one folder per sub
 - Quiz items are `[question, [4 options], correctIndex, why]`; options are shuffled at run time, so don't write "all of the above".
 
 ## Layout
-- `src/hub.html` — shell: all CSS (light and dark tokens on `:root`), core app (Today, Subjects, Practice, Radio, Labs, Progress), quiz/mock engine, backup/restore. Everything sits inside one IIFE.
+- `src/hub.html` — shell: all CSS (light and dark tokens on `:root`; design "Plotted route": chart-paper greys, logo navy, airspace blue `--accent`, route magenta `--warm` only for Today's route and the 75% pass-mark tick, Barlow Semi Condensed headings + Barlow body; grouped rows in `.list` panels; mock-up kept in `mockups/route/`), core app (Today, Subjects, Practice, Radio, Labs, Progress), quiz/mock engine, backup/restore. Everything sits inside one IIFE.
 - `src/data.js`, `radio.js`, `caa*.js` — study content (`NOTES`, quizzes, radio phraseology). Inserted at `/*DATA*/`.
   - Topics from Harry's own notes carry `num` = the number in the note's file name ("03 Rules of the Air.md" → `num: 3`). A subject page lists them first, in that order, as "Your notes", then the CAA-guidance topics (`src`, no `num`) by `order`.
 - `src/labs*.js` — interactive labs, concatenated in sorted filename order at `/*LABS*/`. Each calls `addLab({id,name,sub,grp,init,on,view})`; buttons use `data-a="lx" data-k=... data-v=...`.
@@ -44,7 +44,7 @@ cd src && python3 build.py  # writes ../docs/index.html (minified) + hub_built/h
 python3 ../tests/t_smoke.py # opens every subject and lab, reports page errors
 ```
 `hub_test.html` exposes `window.__T` (ses, S, KB, NTTS, ASR, `grade(e,text)`, speak, render) for tests.
-Useful tests: `t_grade.py` (radio marking), `t_mock.py` (mock exam tiles), `t_art.py`, `t_listen.py` (pause handling), `t_asr.py`/`t_piper.py` (engines with mocked CDN), `t_backup.py`, `t_scan.py` (button spacing), `t_secdg.py` (diagrams sit in their note sections), `t_dgtext.py` (diagram labels stay inside their boxes, measured with the real fonts in `tests/fonts`).
+Useful tests: `t_grade.py` (radio marking), `t_mock.py` (mock exam tiles), `t_art.py`, `t_listen.py` (pause handling), `t_asr.py`/`t_piper.py` (engines with mocked CDN), `t_backup.py`, `t_scan.py` (button spacing), `t_secdg.py` (diagrams sit in their note sections), `t_dgtext.py` (diagram labels stay inside their boxes, measured with the real Barlow fonts in `tests/fonts`). `t_scan.py` allows grouped list rows (`.list > .sc`, `.card > .pick`) to touch; every other pair of buttons needs 8 px.
 Then commit and `git push origin main`; Pages redeploys in a minute or two.
 
 Sandbox note: cdn.jsdelivr.net, huggingface.co, fonts and github.io are blocked from the workspace, so real voice/speech models can't be heard or tested here — test the plumbing with Playwright route mocks and say so honestly.

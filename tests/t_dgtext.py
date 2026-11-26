@@ -1,12 +1,12 @@
 # Diagram text must stay inside its box, inside the diagram, and off other labels.
-# Uses tests/fonts by default; or pass a folder holding figtree-latin-{400,500,600,700}-normal.woff2 and
-# source-serif-4-latin-{600,700}-normal.woff2 to measure with the real fonts (Google Fonts is blocked here).
+# Uses tests/fonts by default; or pass a folder holding barlow-latin-{400,500,600}-normal.woff2 and
+# barlow-semi-condensed-latin-{500,600,700}-normal.woff2 to measure with the real fonts (Google Fonts is blocked here).
 import os,sys,base64
 from playwright.sync_api import sync_playwright
 fdir=sys.argv[1] if len(sys.argv)>1 else os.path.join(os.path.dirname(os.path.abspath(__file__)),'fonts')
 css=''
 if fdir:
-    for fam,fn,w in [('Figtree','figtree-latin-%d-normal.woff2',[400,500,600,700]),('Source Serif 4','source-serif-4-latin-%d-normal.woff2',[600,700])]:
+    for fam,fn,w in [('Barlow','barlow-latin-%d-normal.woff2',[400,500,600]),('Barlow Semi Condensed','barlow-semi-condensed-latin-%d-normal.woff2',[500,600,700])]:
         for x in w:
             b=base64.b64encode(open(os.path.join(fdir,fn%x),'rb').read()).decode()
             css+="@font-face{font-family:'%s';font-weight:%d;src:url(data:font/woff2;base64,%s) format('woff2')}"%(fam,x,b)

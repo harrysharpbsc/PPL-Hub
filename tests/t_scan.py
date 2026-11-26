@@ -1,7 +1,8 @@
+# Grouped list rows (.list > .sc, .card > .pick) sit edge to edge with a hairline between them by design; every other pair needs 8px.
 import os,json
 from playwright.sync_api import sync_playwright
 JS="""(function(){var bs=[].slice.call(document.querySelectorAll('button,select,.opt,a.btn')).filter(function(b){var r=b.getBoundingClientRect();return r.width>0&&r.height>0&&!b.closest('.seg,.kb-seg,.tabbar,.navl,.rail')});var out=[];
-for(var i=0;i<bs.length;i++)for(var j=i+1;j<bs.length;j++){var a=bs[i].getBoundingClientRect(),c=bs[j].getBoundingClientRect();if(bs[i].contains(bs[j])||bs[j].contains(bs[i]))continue;
+for(var i=0;i<bs.length;i++)for(var j=i+1;j<bs.length;j++){var a=bs[i].getBoundingClientRect(),c=bs[j].getBoundingClientRect();if(bs[i].contains(bs[j])||bs[j].contains(bs[i]))continue;var gi=bs[i].parentNode,gj=bs[j].parentNode;if(gi===gj&&gi.matches&&gi.matches('.list,.card'))if(bs[i].matches('.list>.sc,.card>.pick')&&bs[j].matches('.list>.sc,.card>.pick'))continue;
 var ov=Math.min(a.bottom,c.bottom)-Math.max(a.top,c.top),oh=Math.min(a.right,c.right)-Math.max(a.left,c.left);var g=null;
 if(ov>4){g=Math.max(c.left-a.right,a.left-c.right)}else if(oh>4){g=Math.max(c.top-a.bottom,a.top-c.bottom)}
 if(g!==null&&g<8&&g>-30)out.push([bs[i].textContent.trim().slice(0,18),bs[j].textContent.trim().slice(0,18),Math.round(g)])}return out})()"""

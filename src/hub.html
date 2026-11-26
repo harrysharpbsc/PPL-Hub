@@ -3,20 +3,19 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
 <style>
-/* Layout: left rail on tablets and a bottom tab bar on phones; one bold teal block for today's review, everything else quiet; sessions open in a distraction-free focus mode. */
+/* Design "Plotted route": cool chart paper, logo navy, airspace blue for actions, route magenta for today's route and the 75% pass mark.
+   Barlow Semi Condensed for headings and numbers, Barlow for reading. Grouped rows inside panels; one bold element, the route on Today. */
 :root{
-  --bg:#f4f1e6;--surface:#fbf9f0;--surface-2:#e6e2d0;--ink:#16284a;--ink-2:#55608a;--line:#cfc9b0;
-  --accent:#1f4fa3;--on-accent:#ffffff;--accent-soft:#dbe4f5;
-  --warm:#a1286b;--warm-soft:#f3dbe8;
-  --good:#2f7d3c;--mid:#b07a0a;--bad:#b3282d;
-  --f-display:"Source Serif 4",Georgia,"Times New Roman",serif;
-  --f-body:"Figtree",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --bg:#F5F7F3;--surface:#FFFFFF;--surface-2:#E4EBD6;--terrain-2:#D6E0C3;--ink:#16284A;--ink-2:#4F5D7A;--ink-3:#6E7A90;--line:#D9DED6;--line-2:#C3CABF;--accent:#1E5FA6;--on-accent:#FFFFFF;--accent-soft:#E3ECF7;--warm:#A2186F;--warm-soft:#F6E3EE;--good:#2E7A43;--mid:#A86F00;--bad:#B0302F;
+  --f-display:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;
+  --f-head:var(--f-display);
+  --f-body:"Barlow",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1426;--surface:#131d35;--surface-2:#1b2846;--ink:#e8ecf6;--ink-2:#9aa8c8;--line:#27375c;--accent:#7fa8ff;--on-accent:#0a1530;--accent-soft:#1a2c55;--warm:#f08cc0;--warm-soft:#3a1f33;--good:#5fd07a;--mid:#e8b04a;--bad:#ff8080;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0c1426;--surface:#131d35;--surface-2:#1b2846;--ink:#e8ecf6;--ink-2:#9aa8c8;--line:#27375c;--accent:#7fa8ff;--on-accent:#0a1530;--accent-soft:#1a2c55;--warm:#f08cc0;--warm-soft:#3a1f33;--good:#5fd07a;--mid:#e8b04a;--bad:#ff8080;color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1A2E;--surface:#15233B;--surface-2:#1C2C34;--terrain-2:#24383F;--ink:#E8EDF6;--ink-2:#A6B3CB;--ink-3:#8492AD;--line:#24344F;--line-2:#33466A;--accent:#82B4F0;--on-accent:#0B1A33;--accent-soft:#1B3155;--warm:#F07ABF;--warm-soft:#3A1E36;--good:#6CCB86;--mid:#E8B04A;--bad:#FF8B84;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0E1A2E;--surface:#15233B;--surface-2:#1C2C34;--terrain-2:#24383F;--ink:#E8EDF6;--ink-2:#A6B3CB;--ink-3:#8492AD;--line:#24344F;--line-2:#33466A;--accent:#82B4F0;--on-accent:#0B1A33;--accent-soft:#1B3155;--warm:#F07ABF;--warm-soft:#3A1E36;--good:#6CCB86;--mid:#E8B04A;--bad:#FF8B84;color-scheme:dark}
 
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -48,7 +47,6 @@ code{font-family:var(--f-mono);font-size:.84em;background:var(--surface-2);paddi
 .nv.on{background:var(--accent-soft);color:var(--accent)}
 .nv:hover:not(.on){background:var(--surface-2)}
 
-body{background-image:radial-gradient(circle at 15% 8%,transparent 0 60px,color-mix(in srgb,var(--accent) 7%,transparent) 61px 62px,transparent 63px 110px,color-mix(in srgb,var(--accent) 7%,transparent) 111px 112px,transparent 113px 170px,color-mix(in srgb,var(--accent) 7%,transparent) 171px 172px,transparent 173px 240px,color-mix(in srgb,var(--accent) 6%,transparent) 241px 242px,transparent 243px);background-attachment:fixed}
 .hero{border-radius:8px}.card,.tile,.sc,.step,.explain div,.acc,.opt,.pick,.rcard,.tick,.fb{border-radius:8px}
 .rcard{border-radius:12px}.btn,.rb,.xb,.nv{border-radius:8px}
 .brand{display:grid;grid-template-columns:34px minmax(0,1fr);gap:2px 10px;align-items:center}
@@ -432,6 +430,119 @@ body.kb-open .main{padding-bottom:56vh}
 .mbrand svg{width:36px;height:36px;border-radius:9px;flex:none}
 .mbrand b{font:700 1.2rem/1.1 var(--f-display);color:var(--ink)}
 @media(min-width:900px){.mbrand{display:none}}
+
+/* ===== Design "Plotted route" (components) ===== */
+body{font-size:17px;line-height:1.55}
+.h1{font:700 2.15rem/1.1 var(--f-display);letter-spacing:0}
+.lede{font-size:1rem}
+.sec-t{font:600 1.32rem/1.2 var(--f-display);margin:36px 0 12px}
+.card h3,.sc h3,.step h3,.explain b,.pc-t h3{font-family:var(--f-display);font-weight:600;font-size:1.14rem}
+.card,.sc,.step,.acc,.rcard{border-radius:16px}
+.tile,.opt,.pick,.tick,.fb,.explain div,.art,.shbox,.dg{border-radius:14px}
+.btn,.rb,.xb,.thm,.chipb{border-radius:12px}
+.card{box-shadow:0 1px 0 rgba(22,40,74,.05)}
+.btn{font:600 1.06rem/1.2 var(--f-display);min-height:48px;padding:12px 22px}
+.btn.alt{border-color:var(--line-2)}
+.btn.sm{min-height:44px;font-size:1rem;padding:8px 16px}
+.btn.big{min-height:54px;font-size:1.12rem}
+.pill{background:var(--warm-soft);color:var(--warm)}
+.mbrand b,.brand b{font-family:var(--f-display);font-weight:600}
+/* numbers and small labels: tabular Barlow instead of monospace (METARs, code and the kneeboard keep the monospace) */
+.ring span,.step .n,.step .note,.fcount,.opt .k,.pick .m,.chart .col .v,.chart .col b,.timer,.rtab span,.atc p,.lev .rx .who,.inf-hud,.seq,.lm-sc,.mt{font-family:var(--f-body);font-variant-numeric:tabular-nums}
+.ring span{font-weight:600}.timer{font:600 1.2rem var(--f-display);font-variant-numeric:tabular-nums}
+.atc .lab,.lev .rx .who{text-transform:none;letter-spacing:0;font-size:.82rem}
+.atc p{font-size:1.06rem}
+.ring{background:conic-gradient(var(--accent) calc(var(--p) * 1%),var(--surface-2) 0)}
+/* tab bar: quiet, with a blue marker over the current tab */
+.tabbar{background:var(--surface);border-top:1px solid var(--line);gap:2px}
+.tabbar .nv{font:500 .8rem/1.1 var(--f-body);gap:3px;padding:0 2px 6px;min-height:60px;color:var(--ink-3);border-radius:12px}
+.tabbar .nv::before{content:"";width:28px;height:3px;border-radius:2px;margin-bottom:4px;background:transparent}
+.tabbar .nv.on{background:none;color:var(--accent)}
+.tabbar .nv.on::before{background:var(--accent)}
+.tabbar .nv svg{width:24px;height:24px}
+.tabbar .nv.on svg{stroke-width:2.1}
+.nv.on{font-weight:600}
+/* grouped lists: rows inside one panel, hairlines between */
+.list{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 1px 0 rgba(22,40,74,.05)}
+.list+.list{margin-top:16px}
+.list>.sc,.list>.lr{display:flex;align-items:center;gap:14px;width:100%;min-height:64px;padding:14px 18px;margin:0;text-align:left;background:none;border:0;border-top:1px solid var(--line);border-radius:0;color:var(--ink)}
+.list>:first-child{border-top:0}
+.list>.sc:hover{background:var(--accent-soft)}
+.list>.sc.idle{color:var(--ink-3);border-style:solid;cursor:default}
+.list>.sc.idle:hover{background:none}
+.lr-m{flex:1;min-width:0}
+.lr-t{font:600 1.14rem/1.25 var(--f-display);display:block}
+.lr-s{display:block;font-size:.94rem;color:var(--ink-2);margin-top:2px}
+.lr-e{flex:none;min-width:48px;text-align:right;font:600 1rem var(--f-display);font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.chev2{flex:none;width:18px;height:18px;fill:none;stroke:var(--ink-3);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.idx{flex:none;width:34px;height:34px;border-radius:50%;border:1.5px solid var(--line-2);display:grid;place-items:center;font:600 1rem var(--f-display);color:var(--ink-2)}
+.idx.done{background:var(--good);border-color:var(--good);color:var(--surface)}
+.card:has(>.pick){padding:0;overflow:hidden}
+.card:has(>.pick)>:not(.pick){margin:0;padding:16px 18px}
+.card:has(>.pick)>p.m{padding-bottom:14px}
+.card:has(>.pick)>.mfb{border-top:1px solid var(--line);border-bottom:0;padding:14px 18px}
+.card>.pick{margin:0;border:0;border-top:1px solid var(--line);border-radius:0;background:none;padding:14px 18px;min-height:64px}
+.card>.pick:first-child{border-top:0}
+.card>.pick:hover{background:var(--accent-soft)}
+.pick b{font:600 1.1rem/1.25 var(--f-display)}
+.pick .m{color:var(--ink-3);font-size:.92rem}
+/* readiness meter: the magenta tick is the 75% pass mark */
+.meter{display:block;position:relative;height:8px;border-radius:999px;background:var(--surface-2);margin-top:10px}
+.meter i{position:absolute;left:0;top:0;bottom:0;border-radius:999px;background:var(--accent)}
+.meter b{position:absolute;left:75%;top:-4px;bottom:-4px;width:2px;margin-left:-1px;border-radius:1px;background:var(--warm)}
+.meter.big{height:12px}.meter.big b{top:-5px;bottom:-5px}
+.mlab{display:flex;justify-content:space-between;font-size:.86rem;color:var(--ink-3);margin-top:6px}
+.subhero{display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px 24px;margin-top:16px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px}
+.subhero .pct{font:700 2.8rem/1 var(--f-display);font-variant-numeric:tabular-nums}
+.subhero .grow{flex:1;min-width:200px}
+.stl{margin-top:8px}.stb i{width:30px;height:6px;border-radius:3px;outline:0;background:var(--terrain-2)}.stb i.o{background:var(--accent)}
+@media(min-width:700px){.cols2{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}.cols2>.list+.list{margin-top:0}}
+/* Today: the session plotted as a route */
+.route{margin-top:18px;background:var(--surface-2);border-radius:20px;padding:22px 18px 18px}
+.route .lead{font:600 1.7rem/1.15 var(--f-display);text-wrap:balance}
+.route .lead+p{margin-top:8px;color:var(--ink-2);font-size:1rem;max-width:60ch}
+.legs{list-style:none;margin:22px 0 0;padding:0}
+.leg{position:relative;display:grid;grid-template-columns:34px minmax(0,1fr);gap:14px;padding-bottom:22px}
+.leg:last-child{padding-bottom:0}
+.leg:not(:last-child)::before{content:"";position:absolute;left:15px;top:14px;bottom:-14px;width:4px;border-radius:2px;background:var(--warm);transform-origin:top}
+.wpt{position:relative;z-index:1;width:34px;height:30px;display:grid;place-items:center}
+.wpt svg{width:30px;height:28px}
+.wpt .tri{fill:var(--surface-2);stroke:var(--warm);stroke-width:3;stroke-linejoin:round}
+.leg.done .wpt .tri{fill:var(--warm)}
+.lg{display:block;width:100%;text-align:left;background:none;border:0;padding:0;color:var(--ink)}
+.lg-w{font:600 1.2rem/1.25 var(--f-display);display:block}
+.lg-y{display:block;font-size:.95rem;color:var(--ink-2);margin-top:2px}
+.lg-d{float:right;margin-left:12px;font:600 .98rem var(--f-display);color:var(--warm);font-variant-numeric:tabular-nums}
+.leg.done .lg-w{color:var(--ink-2)}
+.lcard{background:var(--surface);border-radius:14px;padding:16px}
+.lcard .btn{display:flex;justify-content:center;width:100%;margin-top:14px}
+.rstats{display:flex;margin-top:18px;border-top:1px solid var(--terrain-2);padding-top:14px}
+.rstats>*{flex:1;text-align:left;background:none;border:0;padding:0;color:var(--ink)}
+.rstats b{display:block;font:700 1.7rem/1 var(--f-display);font-variant-numeric:tabular-nums}
+.rstats span{display:block;font-size:.88rem;color:var(--ink-2);margin-top:4px}
+@media (prefers-reduced-motion:no-preference){
+  .legs.plot .leg::before{animation:plot .45s cubic-bezier(.4,0,.2,1) both}
+  .legs.plot .leg:nth-child(2)::before{animation-delay:.4s}
+  @keyframes plot{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+}
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;align-items:end;padding:18px}
+.wday{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:.86rem;color:var(--ink-3)}
+.wday .wc{width:100%;max-width:34px;height:72px;border-radius:8px;background:var(--surface-2);position:relative;overflow:hidden}
+.wday .wc i{position:absolute;left:0;right:0;bottom:0;background:var(--accent);border-radius:8px 8px 0 0}
+.wday.now{color:var(--ink);font-weight:600}
+.wday.now .wc{outline:2px solid var(--warm);outline-offset:2px}
+.wsum{padding:14px 18px;border-top:1px solid var(--line);color:var(--ink-2);font-size:.95rem}
+details.how{background:var(--surface);border:1px solid var(--line);border-radius:16px;margin-top:28px}
+details.how summary{list-style:none;display:flex;align-items:center;gap:12px;min-height:64px;padding:14px 18px;cursor:pointer}
+details.how summary::-webkit-details-marker{display:none}
+details.how summary .chev2{transition:transform .15s}
+details.how[open] summary .chev2{transform:rotate(90deg)}
+details.how .explain{padding:0 18px 18px}
+details.how .explain div{border:0;background:var(--surface-2)}
+.mthm.thm{width:44px;height:44px;min-height:44px;padding:0;justify-content:center;flex:none}
+.mthm.thm span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.mthm.thm svg{width:20px;height:20px}
+.head .pill{align-self:center}
 </style>
 
 <div class="shell" id="shell">
@@ -531,7 +642,10 @@ function subQuizPct(si){var v=[];NOTES.forEach(function(n){if(n.s!==si)return;(S
 function readiness(si){var a=sStats(si);if(!a.topics)return null;var q=subQuizPct(si),cp=a.total?100*a.secure/a.total:0;return Math.round(q===null?cp*0.6:0.5*cp+0.5*q)}
 function checkMilestones(){var m=[];SUBJECTS.forEach(function(s,i){var a=sStats(i);if(!a.total)return;var lv=a.pct>=100?100:a.pct>=75?75:a.pct>=50?50:a.pct>=25?25:0,pv=S.ms[i]||0;if(lv>pv){S.ms[i]=lv;m.push(s+' is now '+lv+'% secure')}});if(m.length)save();return m}
 function weekStats(){var t=today(),w=0,p=0,act=0,sec=0,i;for(i=0;i<7;i++){var v=S.days[t-i]||0;w+=v;if(v)act++;sec+=S.sec[t-i]||0}for(i=7;i<14;i++)p+=S.days[t-i]||0;var qs=[];Object.keys(S.quiz).forEach(function(k){S.quiz[k].forEach(function(q){if(q.d>=t-6&&q.n)qs.push(100*q.s/q.n)})});S.mock.forEach(function(m){if(m.d>=t-6&&m.n)qs.push(100*m.s/m.n)});return{w:w,p:p,act:act,sec:sec,q:qs.length?Math.round(qs.reduce(function(a,b){return a+b},0)/qs.length):null}}
-function weekCard(){var k=weekStats();if(!k.w&&!k.p)return'<h2 class="sec-t">Your week</h2><div class="card"><p class="m">Nothing yet this week. A short review today starts it.</p></div>';var dl=k.w-k.p;return'<h2 class="sec-t">Your week</h2><div class="tiles q"><div class="tile"><b>'+k.w+'</b><span>Answers'+(k.p?' ('+(dl>=0?'+':'')+dl+' vs last week)':'')+'</span></div><div class="tile"><b>'+k.act+'/7</b><span>Days studied</span></div><div class="tile"><b>'+k.sec+'</b><span>Cards now secure</span></div><div class="tile"><b>'+(k.q===null?'-':k.q+'%')+'</b><span>Quiz average</span></div></div>'}
+function weekCard(){var k=weekStats(),t=today(),mx=1,ds=[],i;for(i=6;i>=0;i--){var v=S.days[t-i]||0;if(v>mx)mx=v;ds.push({d:t-i,v:v})}
+  var cols=ds.map(function(x){return'<div class="wday'+(x.d===t?' now':'')+'"><div class="wc"><i style="height:'+Math.round(100*x.v/mx)+'%"></i></div>'+new Date(x.d*864e5).toLocaleDateString('en-GB',{weekday:'short',timeZone:'UTC'})+'</div>'}).join('');
+  var dl=k.w-k.p,sm=(!k.w&&!k.p)?'Nothing yet this week. A short review today starts it.':k.w+' answer'+(k.w===1?'':'s')+' this week'+(k.p?' ('+(dl>=0?'+':'')+dl+' on last week)':'')+', '+k.act+' of 7 days studied, '+k.sec+' card'+(k.sec===1?'':'s')+' now secure'+(k.q===null?'':', quiz average '+k.q+'%')+'.';
+  return'<h2 class="sec-t">Your week</h2><div class="list"><div class="week" role="img" aria-label="Answers each day this week">'+cols+'</div><p class="wsum">'+sm+'</p></div>'}
 function isoFrom(d){return new Date(d*864e5).toISOString().slice(0,10)}
 function planLine(){return S.plan&&S.plan>today()?' · Exam in '+(S.plan-today())+' days · '+dailyNew()+' new cards a day':''}
 function heatmap(){var t=today(),dow=(new Date(t*864e5).getUTCDay()+6)%7,start=t-dow-77,cells='',n=0;for(var d=start;d<=t+(6-dow);d++){if(d>t){cells+='<i class="f"></i>';continue}var v=S.days[d]||0;if(v)n++;var l=v===0?'':v<=5?' l1':v<=15?' l2':v<=30?' l3':' l4';cells+='<i class="'+l.trim()+'"></i>'}return'<div class="heat" role="img" aria-label="'+n+' days studied in the last 12 weeks">'+cells+'</div><div class="hleg">Less <i></i><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i> More</div>'}
@@ -607,34 +721,48 @@ function render(){
 
 /* ---------- views ---------- */
 var LOGO='<svg class="logo" viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" rx="112" fill="#16284A"/><circle cx="256" cy="256" r="184" fill="none" stroke="#F4F1E6" stroke-width="7"/><line x1="256.0" y1="72.0" x2="256.0" y2="100.0" stroke="#F4F1E6" stroke-width="7" stroke-linecap="round"/><line x1="415.3" y1="164.0" x2="402.4" y2="171.5" stroke="#F4F1E6" stroke-width="7" stroke-linecap="round"/><line x1="440.0" y1="256.0" x2="412.0" y2="256.0" stroke="#F4F1E6" stroke-width="7" stroke-linecap="round"/><line x1="415.3" y1="348.0" x2="402.4" y2="340.5" stroke="#F4F1E6" stroke-width="7" stroke-linecap="round"/><line x1="348.0" y1="415.3" x2="340.5" y2="402.4" stroke="#F4F1E6" stroke-width="7" stroke-linecap="round"/><line x1="256.0" y1="440.0" x2="256.0" y2="412.0" stroke="#F4F1E6" stroke-width="7" stroke-linecap="round"/><line x1="164.0" y1="415.3" x2="171.5" y2="402.4" stroke="#F4F1E6" stroke-width="7" stroke-linecap="round"/><line x1="96.7" y1="348.0" x2="109.6" y2="340.5" stroke="#F4F1E6" stroke-width="7" stroke-linecap="round"/><line x1="72.0" y1="256.0" x2="100.0" y2="256.0" stroke="#F4F1E6" stroke-width="7" stroke-linecap="round"/><line x1="96.7" y1="164.0" x2="109.6" y2="171.5" stroke="#F4F1E6" stroke-width="7" stroke-linecap="round"/><line x1="164.0" y1="96.7" x2="171.5" y2="109.6" stroke="#F4F1E6" stroke-width="7" stroke-linecap="round"/><g transform="rotate(30 256 256)"><path d="M256 112 L238 80 L274 80 Z" fill="#E0479E"/></g><g transform="translate(256 256) rotate(30) scale(0.7)"><path d="M-20 -66 L20 -66 L176 -60 Q186 -59 186 -50 L186 -27 Q186 -19 177 -19 L20 -14 L-20 -14 L-177 -19 Q-186 -19 -186 -27 L-186 -50 Q-186 -59 -176 -60 Z" fill="#F4F1E6"/><path d="M-8 104 L8 104 L54 109 Q62 110 62 117 L62 125 Q62 132 54 132 L8 134 L-8 134 L-54 132 Q-62 132 -62 125 L-62 117 Q-62 110 -54 109 Z" fill="#F4F1E6"/><path d="M0 -140 C10 -140 16 -133 17 -120 C19 -100 22 -80 23 -60 C24 -30 23 -10 21 10 C17 50 11 95 6 138 L-6 138 C-11 95 -17 50 -21 10 C-23 -10 -24 -30 -23 -60 C-22 -80 -19 -100 -17 -120 C-16 -133 -10 -140 0 -140 Z" fill="#F4F1E6"/><path d="M-34 -146 Q0 -150 34 -146 Q0 -142.5 -34 -146 Z" fill="#F4F1E6"/><circle cx="0" cy="-140" r="7" fill="#F4F1E6"/><path d="M-17 -96 Q0 -106 17 -96 L19 -80 Q0 -87 -19 -80 Z" fill="#1F4FA3"/></g></svg>';
+var CHV='<svg class="chev2" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>',plotted=false;
+function meter(p,big,nopass){p=Math.max(0,Math.min(100,p||0));return'<span class="meter'+(big?' big':'')+'" role="img" aria-label="'+p+' percent'+(nopass?'':', pass mark 75 percent')+'"><i style="width:'+p+'%"></i>'+(nopass?'':'<b></b>')+'</span>'}
+function subRow(i){var a=sStats(i),s=SUBJECTS[i];
+  if(!a.topics)return'<div class="sc idle"><span class="lr-m"><span class="lr-t">'+s+'</span><span class="lr-s">No notes yet</span></span></div>';
+  var rd=readiness(i);return'<button class="sc" data-a="sub" data-i="'+i+'"><span class="lr-m"><span class="lr-t">'+s+'</span><span class="lr-s">'+a.topics+' topic'+(a.topics>1?'s':'')+', '+a.total+' cards'+(a.due?', '+a.due+' due':'')+'</span>'+meter(rd)+'</span><span class="lr-e">'+rd+'%</span></button>'}
 function vToday(){
-  var rv=buildReview(),total=rv.all.length,mis=Object.keys(S.miss).length,nd=nextDue(),sk=streak();
-  var hero='<div class="hero"><div class="k">Today\'s review</div>'+(total?'<div class="big">'+total+' card'+(total>1?'s':'')+'</div><p>'+rv.dueN+' due and '+rv.newN+' new. They are mixed across subjects on purpose, because switching topics makes memory stronger.</p><button class="btn inv" data-a="review">Start review</button>':'<div class="big">All clear</div><p>'+(nd?'Your next cards are due '+whenLabel(nd.days)+' ('+nd.n+' card'+(nd.n>1?'s':'')+'). You can still practise a topic from the Subjects tab.':'Add notes in Obsidian, sync, and ask Claude to refresh the hub.')+'</p><button class="btn inv" data-a="nav" data-v="subjects">Choose a topic</button>')+'</div>';
-  var tiles='<div class="tiles"><div class="tile"><b>'+rv.dueN+'</b><span>Due now</span></div><div class="tile"><b>'+rv.newN+'</b><span>New today</span></div>'+(mis?'<button class="tile" data-a="fix"><b>'+mis+'</b><span>Mistakes to fix</span></button>':'<div class="tile"><b>'+(S.days[today()]||0)+'</b><span>Answers today</span></div>')+'</div>';
-  var cont='',pick=null;
-  NOTES.forEach(function(n){if(pick===null&&nextStep(n)>=0)pick=n});
-  if(pick){var st=stepList(pick)[nextStep(pick)];cont='<h2 class="sec-t">Continue learning</h2><button class="sc" data-a="topic" data-i="'+pick.id+'" style="grid-template-columns:minmax(0,1fr) auto"><div><h3>'+pick.topic+'</h3><p class="m">'+SUBJECTS[pick.s]+' · next step: '+st.t.toLowerCase()+'</p></div><span class="btn sm">'+st.cta+'</span></button>'}
+  var rv=buildReview(),total=rv.all.length,mis=Object.keys(S.miss).length,nd=nextDue(),sk=streak(),ans=S.days[today()]||0,legs=[];
+  if(total)legs.push({w:'Daily review',d:total+' card'+(total>1?'s':''),y:rv.dueN+' due and '+rv.newN+' new, mixed across subjects on purpose: switching topics makes memory stronger.',a:'data-a="review"',cta:'Start review'});
+  else legs.push({done:true,w:ans?'Daily review done':'Review all clear',y:nd?'Your next cards are due '+whenLabel(nd.days)+' ('+nd.n+' card'+(nd.n>1?'s':'')+').':'Add notes in Obsidian, sync, and ask Claude to refresh the hub.'});
+  var pick=null;NOTES.forEach(function(n){if(pick===null&&nextStep(n)>=0)pick=n});
+  if(pick){var st=stepList(pick)[nextStep(pick)];legs.push({w:pick.topic,y:SUBJECTS[pick.s]+', next step: '+st.t.toLowerCase(),a:'data-a="topic" data-i="'+pick.id+'"',cta:st.cta})}
   var weak=NOTES.filter(function(n){var t=tStats(n);return t.secure<t.total&&(t.learning>0||t.secure>0||lastQuiz(n.topic))}).sort(function(a,b){return tStats(a).pct-tStats(b).pct}).slice(0,3);
-  var wk=weak.length?'<h2 class="sec-t">Needs attention</h2><div class="stack">'+weak.map(function(n){var t=tStats(n),lq=lastQuiz(n.topic);return'<button class="sc" data-a="topic" data-i="'+n.id+'">'+ring(t.pct,48)+'<div><h3>'+n.topic+'</h3><p class="m">'+t.secure+' of '+t.total+' cards secure'+(lq?' · last quiz '+Math.round(100*lq.s/lq.n)+'%':'')+'</p></div></button>'}).join('')+'</div>':'';
-  var how='<h2 class="sec-t">How this hub teaches</h2><div class="explain"><div><b>Test first</b><p>Pre-tests make you try before you read. The effort of guessing primes your memory for the answer.</p></div><div><b>Space it out</b><p>Cards you know come back later. Cards you miss come back sooner. You see each one just before you would forget it.</p></div><div><b>Mix it up</b><p>Daily review mixes topics and subjects. It feels harder and works better than studying one topic at a time.</p></div><div><b>Know what you know</b><p>Rating how sure you are shows where you are overconfident, which is where exams catch people out.</p></div></div>';
-  return'<div class="mbrand">'+LOGO+'<b>PPL Study Hub</b></div><div class="head"><div><h1 class="h1">Today</h1><p class="lede">'+new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'})+planLine()+'</p></div>'+(sk?'<span class="pill">'+sk+' day streak</span>':'')+thmBtn('mthm')+'</div>'+(syOn()?'<div class="syrow">'+syChip()+'</div>':'')+hero+tiles+cont+wk+weekCard()+how}
+  if(mis)legs.push({w:'Fix mistakes',d:mis+' question'+(mis>1?'s':''),y:'Questions you got wrong and have not yet got right with confidence.',a:'data-a="fix"',cta:'Practise mistakes'});
+  else{var wn=weak.filter(function(n){return n!==pick})[0];if(wn){var wt=tStats(wn);legs.push({w:wn.topic,d:wt.secure+' of '+wt.total+' secure',y:SUBJECTS[wn.s]+', needs attention',a:'data-a="topic" data-i="'+wn.id+'"',cta:'Open topic'})}}
+  var left=legs.filter(function(l){return!l.done}).length,mainI=-1;legs.forEach(function(l,i){if(mainI<0&&!l.done)mainI=i});
+  var lead=left?['','One leg','Two legs','Three legs'][left]+' today':'Route complete for today';
+  var li=legs.map(function(l,i){var inner='<span class="lg-w">'+(l.d?'<span class="lg-d">'+l.d+'</span>':'')+esc(l.w)+'</span><span class="lg-y">'+l.y+'</span>';
+    return'<li class="leg'+(l.done?' done':'')+'"><div class="wpt"><svg viewBox="0 0 30 28" aria-hidden="true"><path class="tri" d="M15 3 L27 25 H3 Z"/></svg></div>'+(i===mainI?'<div class="lcard">'+inner+'<button class="btn" '+l.a+'>'+l.cta+'</button></div>':l.done?'<div class="lg">'+inner+'</div>':'<button class="lg" '+l.a+'>'+inner+'</button>')+'</li>'}).join('');
+  var route='<div class="route"><p class="lead">'+lead+'</p><ol class="legs'+(plotted?'':' plot')+'">'+li+'</ol><div class="rstats"><div><b>'+rv.dueN+'</b><span>Due now</span></div><div><b>'+rv.newN+'</b><span>New today</span></div>'+(mis?'<button data-a="fix"><b>'+mis+'</b><span>Mistakes to fix</span></button>':'<div><b>'+ans+'</b><span>Answered today</span></div>')+'</div></div>';
+  plotted=true;
+  var subs=[];SUBJECTS.forEach(function(x,i){var r=readiness(i);if(r!==null)subs.push({i:i,r:r})});
+  subs.sort(function(a,b){var ab=a.r<75,bb=b.r<75;return ab!==bb?(ab?-1:1):ab?b.r-a.r:a.r-b.r});
+  var close=subs.length?'<div><h2 class="sec-t">Closest to the pass mark</h2><div class="list">'+subs.slice(0,3).map(function(x){return subRow(x.i)}).join('')+'</div></div>':'';
+  var wk=weak.length?'<h2 class="sec-t">Needs attention</h2><div class="list">'+weak.map(function(n){var t=tStats(n),lq=lastQuiz(n.topic);return'<button class="sc" data-a="topic" data-i="'+n.id+'"><span class="lr-m"><span class="lr-t">'+n.topic+'</span><span class="lr-s">'+t.secure+' of '+t.total+' cards secure'+(lq?', last quiz '+Math.round(100*lq.s/lq.n)+'%':'')+'</span>'+meter(t.pct,0,1)+'</span><span class="lr-e">'+t.pct+'%</span></button>'}).join('')+'</div>':'';
+  var how='<details class="how"><summary><span class="lr-m"><span class="lr-t">How this hub teaches</span><span class="lr-s">Test first, space it out, mix it up, know what you know</span></span>'+CHV+'</summary><div class="explain"><div><b>Test first</b><p>Pre-tests make you try before you read. The effort of guessing primes your memory for the answer.</p></div><div><b>Space it out</b><p>Cards you know come back later. Cards you miss come back sooner. You see each one just before you would forget it.</p></div><div><b>Mix it up</b><p>Daily review mixes topics and subjects. It feels harder and works better than studying one topic at a time.</p></div><div><b>Know what you know</b><p>Rating how sure you are shows where you are overconfident, which is where exams catch people out.</p></div></div></details>';
+  return'<div class="mbrand">'+LOGO+'<b>PPL Study Hub</b></div><div class="head"><div><h1 class="h1">Today</h1><p class="lede">'+new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'})+planLine()+'</p></div>'+(sk?'<span class="pill">'+sk+' day streak</span>':'')+thmBtn('mthm')+'</div>'+(syOn()?'<div class="syrow">'+syChip()+'</div>':'')+route+'<div class="cols2">'+close+'<div>'+weekCard()+'</div></div>'+wk+how}
 
-function vSubjects(){
-  return'<div class="head"><div><h1 class="h1">Subjects</h1><p class="lede">The nine UK PPL(A) exam subjects. Subjects fill in as you add notes to Obsidian.</p></div></div><div class="grid">'+SUBJECTS.map(function(s,i){
-    var a=sStats(i);
-    if(!a.topics)return'<div class="sc idle"><div class="ring" style="--p:0;--s:56px"><span>-</span></div><div><h3>'+s+'</h3><p class="m">No notes yet</p></div></div>';
-    return'<button class="sc" data-a="sub" data-i="'+i+'">'+ring(a.pct)+'<div><h3>'+s+'</h3><p class="m">'+a.topics+' topic'+(a.topics>1?'s':'')+' · '+a.total+' cards'+(a.due?' · '+a.due+' due':'')+'</p><p class="m">Readiness '+readiness(i)+'%</p></div></button>'}).join('')+'</div>'}
+function vSubjects(){var h=[0,1,2,3,4].map(subRow).join(''),h2=[5,6,7,8].filter(function(i){return i<SUBJECTS.length}).map(subRow).join('');
+  return'<div class="head"><div><h1 class="h1">Subjects</h1><p class="lede">The nine UK PPL(A) exams. The magenta mark on each bar is the 75% pass mark. Subjects fill in as you add notes to Obsidian.</p></div></div><div class="cols2"><div class="list">'+h+'</div><div class="list">'+h2+'</div></div>'}
 
 function vSubject(){
   var si=ui.sub,a=sStats(si),ns=NOTES.filter(function(n){return n.s===si}).sort(function(x,y){return(x.num?0:1)-(y.num?0:1)||(x.num||0)-(y.num||0)||x.order-y.order});
-  var h='<button class="back" data-a="nav" data-v="subjects">'+IC.back+'All subjects</button><div class="thead">'+(a.topics?ring(a.pct,72):'')+'<div><h1 class="h1">'+SUBJECTS[si]+'</h1><p class="lede" style="margin-top:2px">'+(a.topics?a.topics+' topic'+(a.topics>1?'s':'')+' · '+a.secure+' of '+a.total+' cards secure · readiness '+readiness(si)+'%':'No notes yet')+'</p></div></div>';
+  var rd=readiness(si);
+  var h='<button class="back" data-a="nav" data-v="subjects">'+IC.back+'All subjects</button><h1 class="h1">'+SUBJECTS[si]+'</h1>'+(a.topics?'<p class="lede">'+a.topics+' topic'+(a.topics>1?'s':'')+(a.due?', '+a.due+' cards due':'')+'</p><div class="subhero"><div><div class="pct">'+rd+'%</div><div class="m">ready</div></div><div class="grow">'+meter(rd,1)+'<div class="mlab"><span>'+a.secure+' of '+a.total+' cards secure</span><span>pass 75%</span></div></div></div>':'');
   if(!a.topics)return h+'<div class="card" style="margin-top:16px"><h3>Nothing to study here yet</h3><p class="m" style="margin-top:6px">Write notes for this subject in its Obsidian folder with the template, sync them to Drive, then ask Claude to refresh the hub. Each note becomes a topic with a summary, flashcards and a quiz.</p></div>';
-  var own=ns.some(function(n){return n.num}),gdone=false;h+='<div class="stack" style="margin-top:20px">'+(own?'<h2 class="sec-t" style="margin:0">Your notes</h2>':'')+ns.map(function(n){var gh='';if(own&&!n.num&&!gdone){gdone=true;gh='<h2 class="sec-t" style="margin:14px 0 0">From CAA guidance</h2>'}
-    var t=tStats(n),i=nextStep(n),st=i>=0?stepList(n)[i]:null;
-    return gh+'<button class="sc" data-a="topic" data-i="'+n.id+'">'+ring(t.pct,52)+'<div><h3>'+(n.num?n.num+'. ':'')+n.topic+'</h3><p class="m">'+n.cl.length+' cards · '+n.quiz.length+' questions'+(t.due?' · '+t.due+' due':'')+'</p><p class="m stl">'+stepBar(n)+'</p><p class="m">'+(st?'Next: '+st.t.toLowerCase():'All steps complete')+'</p></div></button>'}).join('')+'</div>';
-  h+='<div class="row" style="margin-top:20px;justify-content:flex-start;gap:12px;flex-wrap:wrap"><button class="btn alt" data-a="mix" data-i="'+si+'">Mixed quiz across topics</button><button class="btn alt" data-a="sheet" data-i="'+si+'">One-page cheat sheet</button></div>';
+  var row=function(n){var t=tStats(n),i=nextStep(n),st=i>=0?stepList(n)[i]:null;
+    return'<button class="sc" data-a="topic" data-i="'+n.id+'">'+(n.num?'<span class="idx'+(st?'':' done')+'">'+n.num+'</span>':'')+'<span class="lr-m"><span class="lr-t">'+n.topic+'</span><span class="lr-s">'+(st?'Next: '+st.t.toLowerCase():'All steps complete')+', '+n.cl.length+' cards, '+n.quiz.length+' questions'+(t.due?', '+t.due+' due':'')+'</span><span class="m stl">'+stepBar(n)+'</span></span>'+CHV+'</button>'};
+  var own=ns.filter(function(n){return n.num}),caa=ns.filter(function(n){return!n.num});
+  h+=own.length?'<h2 class="sec-t">Your notes</h2><div class="list">'+own.map(row).join('')+'</div>'+(caa.length?'<h2 class="sec-t">From CAA guidance</h2><div class="list">'+caa.map(row).join('')+'</div>':''):'<h2 class="sec-t">Topics</h2><div class="list">'+caa.map(row).join('')+'</div>';
+  h+='<div class="row" style="margin-top:24px;justify-content:flex-start;gap:12px;flex-wrap:wrap"><button class="btn alt" data-a="mix" data-i="'+si+'">Mixed quiz across topics</button><button class="btn alt" data-a="sheet" data-i="'+si+'">One-page cheat sheet</button></div>';
   var SL=LABLIST.filter(function(x){return x.subj===si});
-  if(SL.length)h+='<h2 class="sec-t">Labs for this subject</h2><div class="card">'+SL.map(function(x){return'<button class="pick" data-a="lab" data-id="'+x.id+'"><span><b>'+esc(x.name)+'</b><br><span class="m" style="font-family:var(--f-body);font-size:.84rem">'+esc(x.sub)+'</span></span><span class="m">'+labStat(x.id)+'</span></button>'}).join('')+'</div>';
+  if(SL.length)h+='<h2 class="sec-t">Labs for this subject</h2><div class="card">'+SL.map(function(x){return'<button class="pick" data-a="lab" data-id="'+x.id+'"><span><b>'+esc(x.name)+'</b><br><span class="m" style="font-family:var(--f-body);font-size:.92rem;color:var(--ink-2)">'+esc(x.sub)+'</span></span><span class="m">'+labStat(x.id)+'</span></button>'}).join('')+'</div>';
   return h}
 
 function vTopic(){
