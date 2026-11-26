@@ -2,97 +2,12 @@
    Each sits inside the note section it belongs to (DSEC), matched by the start of the section title. */
 (function(){
 var F=dzF,T=dzT,A=dzA,B=dzB,L=dzL,P=dzP;
-function FR(t,b,c,w,h){return dzF(t,b,c,w,h,'dgr')}
 function sec(topic,head,figs){DSEC[topic]=(DSEC[topic]||[]).concat(figs.map(function(f){return[head,f]}))}
 /* plan-view aircraft with nav lights that rotate with it */
 function acL(x,y,h,sc,col,lights){sc=sc||1.4;return'<g transform="translate('+x+' '+y+') rotate('+h+') scale('+sc+')"><path d="'+ACPATH+'" fill="'+(col||'var(--ink)')+'" stroke="var(--surface)" stroke-width=".6" stroke-linejoin="round"/>'+(lights===false?'':'<circle cx="-10.3" cy="-3.3" r="1.9" fill="#e0262b" stroke="var(--surface)" stroke-width=".5"/><circle cx="10.3" cy="-3.3" r="1.9" fill="#2fa84f" stroke="var(--surface)" stroke-width=".5"/><circle cx="0" cy="10.6" r="1.6" fill="#fff" stroke="var(--ink)" stroke-width=".4"/>')+'</g>'}
 function grass(x,y,w,h){return'<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="var(--ch-l1)" stroke="var(--ch-tx)" stroke-width=".8"/>'}
 function sock(x,y,a){return'<g transform="translate('+x+' '+y+') rotate('+a+')"><path d="M0 0V16" stroke="var(--ink-2)" stroke-width="1.2"/><path d="M0 0L18 2.5V5.5L0 8Z" fill="#e8742c"/><path d="M6 1V7M12 2V6" stroke="#fff" stroke-width="1.6"/></g>'}
 function skyline(x0,y0,bl){var d='M'+x0+' '+y0;bl.forEach(function(b){d+='H'+b[0]+'V'+(y0-b[1])+'H'+(b[0]+b[2])+'V'+y0});return'<path d="'+d+'Z" fill="var(--ch-tn)" stroke="var(--ch-tnl)" stroke-width=".8"/>'}
-
-/* ---------- 03 Rules of the Air ---------- */
-var R='Rules of the Air';
-sec(R,'Collision avoidance',[
- FR('Constant bearing means a collision course',
-  L('M250 200V40','var(--accent)',1.2,'3 3')+L('M70 40H250','var(--ink-2)',1.2,'3 3')+'<circle cx="250" cy="40" r="6" fill="var(--bad)" opacity=".85"/>'+T(260,30,'collision','d1',null,null,'var(--bad)')
-  +[[190,100],[140,150],[90,200]].map(function(p,i){return L('M'+(250)+' '+(p[0]-12)+'L'+(p[1]+10)+' 50','var(--good)',1.3)+P(250,p[0],0,'var(--accent)',1.3)+P(p[1],40,90,'var(--ink)',1.3)+T(p[1],22,'t'+(i+1),'d2','middle')+T(266,p[0]+4,'t'+(i+1),'d2')
-   +'<path d="M250 '+(p[0]-30)+'A18 18 0 0 0 '+(250-12.7).toFixed(1)+' '+(p[0]-12-12.7).toFixed(1)+'" fill="none" stroke="var(--mid)" stroke-width="1.4"/>'}).join('')
-  +T(204,126,'same angle','d1','end',null,'var(--mid)')+T(204,140,'every time','d2','end')
-  +'<g transform="translate(14 118)"><path d="M0 6Q60-6 120 6L114 74H6Z" fill="#bfe0f5" stroke="#1d2b45" stroke-width="1.6"/><path d="M3 50H117" stroke="#6a8f4e" stroke-width="2"/><path d="M6 52H114L114 74H6Z" fill="#9cc27e"/><path d="M60 2V74" stroke="#1d2b45" stroke-width="2.4"/>'
-  +'<g transform="translate(34 36)"><path d="M-9 0H7L10-3L12-1L9 2H-9Z" fill="#1d2b45"/><path d="M-4 0L-1-6H2L1 0Z" fill="#1d2b45"/></g>'+'<circle cx="34" cy="36" r="13" fill="none" stroke="var(--bad)" stroke-width="1.2" stroke-dasharray="3 2"/></g>'
-  +T(74,108,'Your view','d1','middle')+T(74,210,'it stays still, just grows','d2','middle'),
-  'If another aircraft keeps the same relative bearing while its range closes, you will collide. In the windscreen it does not move, it just grows. Change heading or height to break it.',320,218)
-]);
-sec(R,'Flights near an aerodrome',[
- FR('Join the pattern: all turns to the left',
-  '<path d="M70 150H250" stroke="var(--ink-2)" stroke-width="18"/>'+'<path d="M100 150H220" stroke="#fff" stroke-width="1" stroke-dasharray="8 6"/>'+T(86,154,'09','d2','middle',null,'#fff')+T(234,154,'27','d2','middle',null,'#fff')
-  +L('M250 150H282Q296 150 296 136V62Q296 48 282 48H38Q24 48 24 62V136Q24 150 38 150H70','var(--accent)',1.8)
-  +A(256,150,280,150,'var(--accent)',1.8)+A(296,120,296,90,'var(--accent)',1.8)+A(200,48,150,48,'var(--accent)',1.8)+A(24,80,24,112,'var(--accent)',1.8)+A(30,150,56,150,'var(--accent)',1.8)
-  +P(160,150,90,'var(--accent)',1.3)
-  +T(268,174,'Upwind','d1','middle')+T(290,100,'Crosswind','d1','end')+T(160,38,'Downwind','d1','middle')+T(32,100,'Base','d1')+T(40,174,'Final','d1','middle')
-  +sock(140,74,180)+T(128,104,'windsock','d2','middle')+A(236,84,196,84,'var(--ink-2)',1.6)+T(216,76,'wind','d2','middle')
-  +T(160,128,'left-hand unless signals say otherwise','d2','middle'),
-  'Conform to the circuit other traffic is flying, or keep clear of it. Take off and land into wind. On a straight-in approach report long final between 8 and 4 nm and final at 4 nm.',320,184)
-]);
-sec(R,'Order of landing',[
- FR('No runway: keep earlier traffic on your left',
-  grass(30,26,260,142)+T(40,44,'grass landing area','d2')+sock(262,8,0)+T(254,20,'wind from the west','d2','end')
-  +L('M300 76H200','var(--accent)',1.2)+A(196,76,150,76,'var(--accent)',1.6,'5 3')+acL(186,76,-90,1.3,'var(--accent)',false)
-  +T(196,62,'Landing: leaves it on its left','d1','middle',null,'var(--accent)')
-  +L('M300 128H130','var(--ink-2)',1.2)+'<path d="M108 128Q84 128 84 148" fill="none" stroke="var(--ink-2)" stroke-width="1.6" stroke-dasharray="5 3"/>'+A(84,146,84,158,'var(--ink-2)',1.6)+acL(118,128,-90,1.3,'var(--ink)',false)
-  +T(196,116,'Already landed: turns left','d1','middle')+T(196,148,'once sure it will not get in the way','d2','middle'),
-  'Where take-offs and landings are not confined to a runway, newer traffic stays to the right of older traffic and turns on the landing area are to the left. Taking off, leave earlier departures on your left too. After landing, clear the landing area as soon as possible.',320,176)
-]);
-sec(R,'Radio in the ATZ',[
- FR('Following a line feature: keep it on your left',
-  L('M10 112L310 88','var(--ink-2)',3)+(function(){var s='';for(var i=0;i<=30;i++){var x=12+i*10,y=112-i*0.8;s+='M'+x+' '+(y-4)+'V'+(y+4)}return L(s,'var(--ink-2)',1.2)})()+T(16,130,'railway, road, canal or coast','d2')
-  +L('M20 152H96','var(--accent)',1.2,'4 3')+acL(110,150,90,1.4,'var(--accent)',false)+A(124,150,170,148,'var(--accent)',1.6)
-  +L('M300 52H222','var(--accent)',1.2,'4 3')+acL(208,52,-90,1.4,'var(--accent)',false)+A(194,52,150,54,'var(--accent)',1.6)
-  +T(40,178,'Heading east: line on the left','d1')+T(280,30,'Heading west: line on the left','d1','end')
-  +T(160,198,'both keep right, so they pass apart','d2','middle'),
-  'No longer a legal requirement under SERA, but the CAA strongly recommends it. In controlled airspace follow ATC instead.',320,206)
-]);
-sec(R,'Lights on aircraft',[
- FR('Reading another aircraft\'s lights at night',
-  L('M170 206L170 44M170 206L62 132M170 206L278 132M170 206L74 48M170 206L266 48','var(--line)',1,'2 3')
-  +acL(170,214,0,1.5,'var(--accent)')+T(146,232,'You','d1','end')
-  +acL(170,34,180,1.4)+T(170,64,'Red and green: head-on','d1','middle',null,'var(--bad)')+T(170,78,'both turn right','d2','middle',11.8)
-  +acL(62,128,90,1.4)+T(62,102,'Green on your left','d1','middle',null,'var(--mid)')+T(62,156,'it gives way;','d2','middle',11.8)+T(62,169,'hold heading, speed','d2','middle',11.8)
-  +acL(278,128,-90,1.4)+T(278,102,'Red on your right','d1','middle',null,'var(--bad)')+T(278,156,'it is on your right:','d2','middle',11.8)+T(278,169,'you give way','d2','middle',11.8)
-  +acL(56,40,200,1.3)+T(60,14,'Red to red: safe','d1','middle',null,'var(--good)')
-  +acL(284,40,160,1.3)+T(272,14,'Green to green: safe','d1','middle',null,'var(--good)')
-  +T(274,212,'White only: it is','d2','middle',11.8)+T(274,225,'flying away from you','d2','middle',11.8),
-  'Your red is on your left, your green on your right. Matching colours on the same side mean the paths will not cross; red facing green means risk. Check the bearing as well.',340,245)
-]);
-sec(R,'Low flying prohibitions',[
- FR('Congested area: 1,000 ft and able to land clear',
-  '<path d="M0 182H320V210H0Z" fill="var(--ch-l1)"/>'+skyline(70,182,[[74,6,30],[106,14,14],[122,22,20],[146,40,18],[166,58,16],[184,34,22],[208,20,18],[228,12,26],[256,6,20]])+L('M173 124V108','var(--ch-tnl)',1.6)
-  +T(14,200,'open fields','d2')+T(306,200,'fields','d2','end')
-  +dzSide(174,30,1,'var(--accent)')+L('M150 108H200','var(--bad)',1,'3 3')+A(174,40,174,106,'var(--bad)',1.4)+T(180,78,'1,000 ft','d1',null,null,'var(--bad)')
-  +L('M174 40L100 182M174 40L248 182','var(--accent)',1)+L('M100 192H248','var(--accent)',1)+L('M100 188V196M248 188V196','var(--accent)',1)+T(174,208,'highest obstacle within 600 m','d2','middle')
-  +L('M168 40L36 180','var(--good)',1.4,'6 4')+T(14,128,'glide range','d1',null,null,'var(--good)')+T(14,142,'reaches open','d2')+T(14,155,'ground','d2'),
-  'Over a city, town or settlement fly at least 1,000 ft above the highest obstacle within 600 m, and high enough to glide clear if the engine stops. Landing clear is the pilot\'s job, not ATC\'s.',320,214),
- FR('The 500 ft rule: EASA and UK compared',
-  '<path d="M0 172H320V200H0Z" fill="var(--ch-l1)"/>'+L('M160 8V196','var(--line)',1)
-  +T(80,20,'EASA; UK at night','d1','middle')+T(80,34,'500 ft above surface','d2','middle')+T(80,47,'or obstacle in 150 m','d2','middle')
-  +'<path d="M116 172V140h8v32Z" fill="var(--ch-tn)" stroke="var(--ch-tnl)"/>'+L('M30 82H150','var(--bad)',1,'3 3')+dzSide(70,70,.9,'var(--accent)')+A(120,84,120,138,'var(--bad)',1.2)+T(126,114,'500 ft','d1',null,null,'var(--bad)')
-  +L('M70 156H114M70 152V160M114 152V160','var(--ink-2)',1)+L('M70 78V150','var(--ink-2)',.8,'2 3')+T(92,150,'150 m','d2','middle')
-  +T(240,20,'UK by day','d1','middle')+T(240,34,'500 ft from people,','d2','middle')+T(240,47,'vehicles, vessels','d2','middle')+T(240,60,'and structures','d2','middle')
-  +'<path d="M250 168l14 0l-3 4h-10Z" fill="var(--ink)"/><path d="M257 166V146l8 18Z" fill="var(--ink)"/>'+'<path d="M200 172A57 57 0 0 1 314 172" fill="var(--bad)" opacity=".12" stroke="var(--bad)" stroke-dasharray="4 3"/>'
-  +dzSide(196,104,.9,'var(--accent)')+A(214,112,240,128,'var(--bad)',1.2)+T(266,96,'500 ft bubble','d1','middle',null,'var(--bad)')
-  +T(240,190,'open ground: may go lower','d2','middle'),
-  'EASA sets a height above the surface. The UK day rule is a 500 ft bubble around people and things instead, so lower flight over open ground is allowed. Take-off and landing are exempt from both.',320,200)
-]);
-sec(R,'Open-air assemblies',[
- FR('Open-air assemblies of more than 1,000 people',
-  '<ellipse cx="104" cy="164" rx="92" ry="28" fill="none" stroke="var(--mid)" stroke-dasharray="5 4"/>'
-  +'<ellipse cx="104" cy="162" rx="40" ry="13" fill="var(--surface-2)" stroke="var(--ink)" stroke-width="1.4"/><ellipse cx="104" cy="160" rx="26" ry="7" fill="var(--ch-l1)" stroke="var(--ink-2)"/><path d="M64 162V168A40 13 0 0 0 144 168V162" fill="none" stroke="var(--ink)" stroke-width="1.4"/>'
-  +T(104,206,'over 1,000 people','d2','middle')
-  +dzSide(104,24,.9,'var(--accent)')+A(104,34,104,144,'var(--bad)',1.4)+T(112,64,'1,000 ft above','d1',null,null,'var(--bad)')+T(112,78,'highest obstacle','d2')+T(112,91,'in 600 m, or','d2')+T(112,104,'enough to land','d2')+T(112,117,'clear if higher','d2')
-  +dzSide(282,92,.8,'var(--accent)',true)+A(262,104,198,152,'var(--mid)',1.4,'5 3')+T(262,128,'No take-off','d1','middle',null,'var(--mid)')+T(262,142,'or landing','d1','middle',null,'var(--mid)')+T(262,156,'within 1,000 m','d1','middle',null,'var(--mid)')
-  +T(262,186,'unless at an','d2','middle')+T(262,199,'aerodrome or','d2','middle')+T(262,212,'with permission','d2','middle'),
-  'UK: written CAA permission is needed to fly lower. The 1,000 m take-off and landing ban has exceptions at aerodromes (CAA procedures) and at other sites with the organiser\'s permission.',320,218)
-]);
 
 /* ---------- 04 Aerodromes ---------- */
 var D='Aerodromes';

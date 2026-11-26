@@ -1,6 +1,5 @@
-# Readable diagrams (class dgr) keep every label at 11px or more on screen, at phone and tablet widths.
-# Topics listed in DONE must be fully converted: every figure in them carries dgr (Head-on and Converging
-# are drawn by the core dg() helper at 11px and are checked by size instead).
+# Style B diagrams (class dgb, library labs80b.js, skill .claude/skills/ppl-diagram) keep every label at 11px
+# or more on screen, at phone and tablet widths. Topics listed in DONE must be fully converted to style B.
 import os
 from playwright.sync_api import sync_playwright
 DONE=['Rules of the Air']
@@ -27,6 +26,8 @@ with sync_playwright() as p:
               [].forEach.call(s.querySelectorAll('text'),function(x){var px=parseFloat(getComputedStyle(x).fontSize)*k;if(px<min-0.05)out.push(name+': "'+x.textContent+'" '+px.toFixed(1)+'px')})});return out})(%d)"""%MIN)
             assert not bad,(w,t,bad)
             n=pg.evaluate("document.querySelectorAll('.acc-fig figure').length")
+            notb=pg.evaluate("[].filter.call(document.querySelectorAll('.acc-fig figure'),function(f){return !f.classList.contains('dgb')}).map(function(f){return f.querySelector('figcaption b').textContent})")
+            assert n and not notb,(t,'not style B:',notb)
             print(w,t,n,'figures, all labels >=%dpx'%MIN)
         assert not errs,errs
     print('PASS')
