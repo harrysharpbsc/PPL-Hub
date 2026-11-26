@@ -17,7 +17,6 @@ var PLACE={
 'VFR flight planning and VMC minima (SS05)':[['UK VMC minima','VMC minima in the UK'],['Final fuel reserve','Fuel reserves'],['FREDA','In-flight monitoring']],
 'Weather charts and forecasts (Skyway Code)':[['Reading a METAR','Reading TAFs'],['Cloud amounts and the ceiling','Making the weather decision'],['What the F215','F215']],
 'Route planning and altitude selection (Skyway Code)':[['Maximum Elevation Figure','Maximum Elevation Figure'],['Planning the descent','Choosing a cruising altitude'],['Take 2 around airspace','Avoiding infringements']],
-'Altimeter settings (Skyway Code)':[['QFE, QNH and 1013','Four pressure settings'],['Transition altitude and level','Transition altitude'],['Worked example: 27 ft','Transition altitude']],
 'Fuel, flight plans and aerodrome planning (Skyway Code)':[['Fuel by volume','Fuel management'],['When you need a flight plan','Flight plans'],['Questions for an unfamiliar','Unfamiliar aerodromes']],
 'Rules of the Air essentials (Skyway Code)':[['Right of way on the ground','Right of way on the ground'],['The pilot in command','Pilot in command']],
 'VFR, IFR and Special VFR (Skyway Code)':[['UK VMC minima','VMC minima'],['Special VFR in a control zone','Special VFR'],['When VFR is not enough','Other VFR requirements']],

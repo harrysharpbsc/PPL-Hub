@@ -118,26 +118,6 @@ dzAdd('Route planning and altitude selection (Skyway Code)',[
   'Stay 2 NM from edges and 200 ft below bases of controlled airspace, danger areas and ATZs, more in turbulence.')
 ]);
 
-/* Altimeter settings */
-dzAdd('Altimeter settings (Skyway Code)',[
- F('QFE, QNH and 1013',
-  '<path d="M0 186H320V200H0Z" fill="#a9cfe6"/>'+T(300,196,'mean sea level','d2','end',7)+'<path d="M0 150Q60 140 120 150V186H0Z" fill="var(--ch-l2)"/>'+'<rect x="40" y="144" width="60" height="6" fill="#555c6b"/>'+T(70,140,'aerodrome 300 ft','d2','middle',7.4)
-  +dzSide(200,60,1.1,'var(--accent)')+A(200,66,200,148,'var(--good)',1.4)+A(214,66,214,184,'var(--accent)',1.4)+A(304,60,304,168,'var(--mid)',1.4)+L('M228 60H304','var(--mid)',.8,'2 2')
-  +L('M0 150H320','var(--ink-2)',.7,'2 3')+L('M0 170H320','var(--mid)',.8,'2 3')+T(6,166,'1013.25 hPa level','d2',null,7)
-  +T(194,110,'QFE: height','d1','end',null,'var(--good)')+T(194,121,'above aerodrome','d2','end',7.4)+T(220,110,'QNH: altitude','d1',null,null,'var(--accent)')+T(220,121,'above sea level','d2',null,7.4)+T(298,140,'1013: flight level','d1','end',null,'var(--mid)'),
-  'On the ground QFE reads zero and QNH reads the aerodrome elevation. Above the transition altitude, set 1013 for flight levels. Shown on a high-pressure day: the 1013 hPa level is above sea level, so the flight level is less than the altitude.'),
- F('Transition altitude and level',
-  L('M0 150H320','var(--ink)',1)+T(316,146,'transition altitude (often 3,000 ft)','d2','end',7.4)+L('M0 110H320','var(--ink)',1)+T(316,106,'transition level, at least 1,000 ft above','d2','end',7.4)
-  +'<rect x="0" y="110" width="320" height="40" fill="var(--mid)" opacity=".15"/>'+T(160,134,'transition layer','d1','middle')
-  +T(80,60,'Climbing: set 1013','d1','middle')+A(80,140,80,70,'var(--accent)',1.4)+T(240,60,'Descending: set QNH','d1','middle')+A(240,70,240,140,'var(--accent)',1.4)+T(80,176,'Altitudes on QNH','d2','middle')+T(240,30,'Flight levels on 1013','d2','middle'),
-  'In the UK outside controlled airspace the transition altitude is usually 3,000 ft. Changing to flight levels is optional for VFR.'),
- F('Worked example: 27 ft per hPa',
-  B(20,30,280,40,'var(--surface)','var(--ink-2)')+T(160,47,'QNH 1000, flying at 3,000 ft. Now set 1013.','d1','middle')+T(160,61,'1013 − 1000 = 13 hPa','d2','middle')
-  +A(160,74,160,96,'var(--ink-2)',1.2)+B(60,100,200,40,'var(--surface)','var(--accent)')+T(160,117,'13 × 27 ft ≈ 351 ft','d1','middle')+T(160,131,'reading goes up','d2','middle')
-  +A(160,144,160,160,'var(--ink-2)',1.2)+'<text x="160" y="186" text-anchor="middle" font-family="var(--f-mono)" font-size="20" font-weight="700" fill="var(--accent)">3,351 ft</text>',
-  'Lower pressure than standard means the altimeter on 1013 reads higher than your true altitude. "High to low, look out below."')
-]);
-
 /* Fuel, flight plans and aerodrome planning */
 dzAdd('Fuel, flight plans and aerodrome planning (Skyway Code)',[
  F('Fuel by volume and by mass',

@@ -13,11 +13,12 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import pplsvg  # noqa: E402
+import altimeter_skyway  # noqa: E402
 import circuits  # noqa: E402
 import overhead_join  # noqa: E402
 import rules_of_the_air  # noqa: E402
 
-MODULES = [circuits, overhead_join, rules_of_the_air]
+MODULES = [circuits, overhead_join, rules_of_the_air, altimeter_skyway]
 ROOT = HERE.parents[1]
 
 
