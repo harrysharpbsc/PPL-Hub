@@ -22,7 +22,6 @@ var PLACE={
 'Rules of the Air essentials (Skyway Code)':[['Right of way on the ground','Right of way on the ground'],['The pilot in command','Pilot in command']],
 'VFR, IFR and Special VFR (Skyway Code)':[['UK VMC minima','VMC minima'],['Special VFR in a control zone','Special VFR'],['When VFR is not enough','Other VFR requirements']],
 'Airspace, ATZ, MATZ and transponders (Skyway Code)':[['An ATZ is a cylinder','ATZ and aerodromes'],['A typical MATZ','MATZ'],['Control zone and control area','Airspace structure']],
-'Aerodrome operations and circuits (Skyway Code)':[['Live side and dead side','The circuit'],['The overhead join','The circuit'],['At the holding point','Departure procedures']],
 'Emergencies (Skyway Code)':[['Choosing a field','Engine failure'],['The constant aspect','Engine failure'],['Before you change anything','Key principles']],
 'Decision making and threat and error management (Skyway Code)':[['PAVE before you go','Pre-flight decisions'],['Threat and error management','Threat and error management']],
 'Aerodrome signals, markings and lighting (Skyway Code)':[['The signals square','Signal square'],['Runway lights and PAPI','Runway lighting'],['Signs and stop bars','Taxiway signs']],

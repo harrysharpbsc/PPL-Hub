@@ -13,10 +13,11 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import pplsvg  # noqa: E402
+import circuits  # noqa: E402
 import overhead_join  # noqa: E402
 import rules_of_the_air  # noqa: E402
 
-MODULES = [overhead_join, rules_of_the_air]
+MODULES = [circuits, overhead_join, rules_of_the_air]
 ROOT = HERE.parents[1]
 
 

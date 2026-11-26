@@ -186,23 +186,6 @@ dzAdd('Airspace, ATZ, MATZ and transponders (Skyway Code)',[
   'A CTR starts at the surface around the airport. CTAs sit above and around it with higher bases you can fly beneath.')
 ]);
 
-/* Aerodrome operations and circuits */
-var circ=function(){return'<rect x="100" y="96" width="120" height="8" fill="#555c6b"/>'+L('M220 100H70V160H250V100H220','var(--accent)',1.8,'6 3')}
-dzAdd('Aerodrome operations and circuits (Skyway Code)',[
- F('Live side and dead side',
-  '<rect x="0" y="0" width="320" height="100" fill="var(--ch-l2)" opacity=".35"/>'+'<rect x="0" y="100" width="320" height="100" fill="var(--accent)" opacity=".06"/>'+circ()
-  +T(160,40,'DEAD SIDE','d3','middle',null,'var(--ink-2)')+T(160,56,'no circuit traffic: descend here after the overhead','d2','middle',7.4)+T(160,186,'LIVE SIDE (circuit traffic)','d1','middle')
-  +T(160,92,'Runway 27','d2','middle')+T(160,174,'downwind','d2','middle')+T(56,134,'crosswind','d2','end')+T(264,134,'base','d2')+T(240,90,'final','d2','middle')+T(60,90,'upwind','d2','middle')
-  +P(118,160,90,'var(--accent)',1.1),
-  'Left-hand circuit shown. Calls on downwind and final, plus base or late downwind if it helps others picture you.'),
- F('At the holding point',
-  '<rect x="0" y="40" width="320" height="40" fill="#555c6b"/>'+L('M0 60H320','#fff',1.5,'10 8')+'<rect x="120" y="80" width="60" height="120" fill="#6a7180"/>'
-  +L('M120 98H180M120 104H180','#f2c94c',2)+L('M120 88H180M120 92H180','#f2c94c',2,'5 4')+'<rect x="186" y="96" width="34" height="16" fill="#d22"/>'+T(203,108,'A1','d1','middle',null,'#fff')
-  +P(140,150,315,'var(--accent)',1.6)+T(114,172,'stop at an angle','d2','end')+T(114,183,'to see the approach','d2','end')+T(230,140,'Checks complete,','d2')+T(230,151,'then "ready for','d2')+T(230,162,'departure"','d2')
-  +T(10,24,'Holding position: two solid lines on your side, two dashed on the runway side','d2',null,7.2),
-  'At an ATC aerodrome never cross onto the runway without a clearance. At A/G or AFIS aerodromes check the approach is clear yourself.')
-]);
-
 /* Emergencies */
 dzAdd('Emergencies (Skyway Code)',[
  F('Choosing a field: the six S',
