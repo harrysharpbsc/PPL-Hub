@@ -32,3 +32,7 @@ src/hub_min.html
 __pycache__/
 *.png.tmp
 src/*.png
+
+# test output
+src/sg.html
+src/sheet.pdf
