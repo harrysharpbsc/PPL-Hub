@@ -122,10 +122,10 @@ dzAdd('Route planning and altitude selection (Skyway Code)',[
 dzAdd('Altimeter settings (Skyway Code)',[
  F('QFE, QNH and 1013',
   '<path d="M0 186H320V200H0Z" fill="#a9cfe6"/>'+T(300,196,'mean sea level','d2','end',7)+'<path d="M0 150Q60 140 120 150V186H0Z" fill="var(--ch-l2)"/>'+'<rect x="40" y="144" width="60" height="6" fill="#555c6b"/>'+T(70,140,'aerodrome 300 ft','d2','middle',7.4)
-  +dzSide(200,60,1.1,'var(--accent)')+A(200,66,200,148,'var(--good)',1.4)+A(214,66,214,184,'var(--accent)',1.4)+A(228,66,228,30,'var(--mid)',1.4)
-  +L('M0 150H320','var(--ink-2)',.7,'2 3')+L('M0 26H320','var(--mid)',.8,'2 3')+T(316,22,'1013.25 hPa pressure level','d2','end',7)
-  +T(194,110,'QFE: height','d1','end',null,'var(--good)')+T(194,121,'above aerodrome','d2','end',7.4)+T(220,110,'QNH: altitude','d1',null,null,'var(--accent)')+T(220,121,'above sea level','d2',null,7.4)+T(238,46,'1013: flight level','d1',null,null,'var(--mid)'),
-  'On the ground QFE reads zero and QNH reads the aerodrome elevation. Above the transition altitude, set 1013 for flight levels.'),
+  +dzSide(200,60,1.1,'var(--accent)')+A(200,66,200,148,'var(--good)',1.4)+A(214,66,214,184,'var(--accent)',1.4)+A(304,60,304,168,'var(--mid)',1.4)+L('M228 60H304','var(--mid)',.8,'2 2')
+  +L('M0 150H320','var(--ink-2)',.7,'2 3')+L('M0 170H320','var(--mid)',.8,'2 3')+T(6,166,'1013.25 hPa level','d2',null,7)
+  +T(194,110,'QFE: height','d1','end',null,'var(--good)')+T(194,121,'above aerodrome','d2','end',7.4)+T(220,110,'QNH: altitude','d1',null,null,'var(--accent)')+T(220,121,'above sea level','d2',null,7.4)+T(298,140,'1013: flight level','d1','end',null,'var(--mid)'),
+  'On the ground QFE reads zero and QNH reads the aerodrome elevation. Above the transition altitude, set 1013 for flight levels. Shown on a high-pressure day: the 1013 hPa level is above sea level, so the flight level is less than the altitude.'),
  F('Transition altitude and level',
   L('M0 150H320','var(--ink)',1)+T(316,146,'transition altitude (often 3,000 ft)','d2','end',7.4)+L('M0 110H320','var(--ink)',1)+T(316,106,'transition level, at least 1,000 ft above','d2','end',7.4)
   +'<rect x="0" y="110" width="320" height="40" fill="var(--mid)" opacity=".15"/>'+T(160,134,'transition layer','d1','middle')
@@ -195,10 +195,6 @@ dzAdd('Aerodrome operations and circuits (Skyway Code)',[
   +T(160,92,'Runway 27','d2','middle')+T(160,174,'downwind','d2','middle')+T(56,134,'crosswind','d2','end')+T(264,134,'base','d2')+T(240,90,'final','d2','middle')+T(60,90,'upwind','d2','middle')
   +P(118,160,90,'var(--accent)',1.1),
   'Left-hand circuit shown. Calls on downwind and final, plus base or late downwind if it helps others picture you.'),
- F('The overhead join',
-  '<g transform="translate(-34 26) scale(.72)">'+circ()+'<path d="M300 20L160 100" stroke="var(--bad)" stroke-width="2.6" fill="none"/><path d="M160 100Q130 60 100 50H60Q40 50 50 80L70 100" stroke="var(--bad)" stroke-width="2.6" fill="none" stroke-dasharray="5 3"/></g>'+T(80,180,'left-hand circuit, runway 27','d2','middle',7.4)
-  +steps([['Overhead, 2,000 ft QFE','1,000 ft above circuit'],['Descend on dead side',''],['Cross the upwind end','at circuit height'],['Join crosswind','then fly the circuit']],190,14,44,'var(--bad)',8.4),
-  'A joining aircraft gives way to traffic already in the circuit. Report overhead, then descending dead side.'),
  F('At the holding point',
   '<rect x="0" y="40" width="320" height="40" fill="#555c6b"/>'+L('M0 60H320','#fff',1.5,'10 8')+'<rect x="120" y="80" width="60" height="120" fill="#6a7180"/>'
   +L('M120 98H180M120 104H180','#f2c94c',2)+L('M120 88H180M120 92H180','#f2c94c',2,'5 4')+'<rect x="186" y="96" width="34" height="16" fill="#d22"/>'+T(203,108,'A1','d1','middle',null,'#fff')

@@ -36,3 +36,5 @@ src/*.png
 # test output
 src/sg.html
 src/sheet.pdf
+tools/diagrams/out/
+__pycache__/

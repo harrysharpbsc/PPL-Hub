@@ -32,7 +32,8 @@ Harry's Obsidian notes (synced to Google Drive, folder `PPL`, one folder per sub
   - `labs65asr.js` speech recognition: default **Moonshine base** (transformers.js 3.8.1) on device, records the whole call and ends after the quiet time (`FS.hold`) or Done; falls back to Chrome's recogniser.
   - `labs66art.js` Chicago Convention articles (five themed blocks, cover-and-reveal, quiz, match).
   - `labs50data.js` UK airspace (YAIXM, CC0), coastline and chart layer (Natural Earth); packed at build time by `packdata.py`.
-  - `labs80–82.js` topic diagrams.
+  - `labs80–83notes.js` older topic diagrams, hand-written JS (edit in place for small fixes).
+  - `labs84gen.js` **generated** topic diagrams: never edit by hand. Source is `tools/diagrams/` (one Python module per topic); run `python3 tools/diagrams/gen.py`, then `python3 tools/diagrams/check.py`. New diagrams are made this way: follow the `ppl-hub-diagrams` skill (`.claude/skills/ppl-hub-diagrams/SKILL.md`).
 - `docs/` — the published site (Pages serves `main` → `/docs`). `docs/index.html` is generated: never edit it by hand. `sw.js` (network-first offline cache), `manifest.webmanifest`, icons (logo: GA aircraft in plan view, cream on navy `#16284A`, cobalt windscreen).
 - `index.html` at the root only redirects to `docs/`.
 - `tests/` — Playwright scripts (run from `src/`).
