@@ -467,7 +467,7 @@ body{font-size:17px;line-height:1.55}
 .list+.list{margin-top:16px}
 .list>.sc,.list>.lr{display:flex;align-items:center;gap:14px;width:100%;min-height:64px;padding:14px 18px;margin:0;text-align:left;background:none;border:0;border-top:1px solid var(--line);border-radius:0;color:var(--ink)}
 .list>:first-child{border-top:0}
-.list>.sc:hover{background:var(--accent-soft)}
+@media(hover:hover){.list>.sc:hover{background:var(--accent-soft)}}
 .list>.sc.idle{color:var(--ink-3);border-style:solid;cursor:default}
 .list>.sc.idle:hover{background:none}
 .lr-m{flex:1;min-width:0}
@@ -483,7 +483,8 @@ body{font-size:17px;line-height:1.55}
 .card:has(>.pick)>.mfb{border-top:1px solid var(--line);border-bottom:0;padding:14px 18px}
 .card>.pick{margin:0;border:0;border-top:1px solid var(--line);border-radius:0;background:none;padding:14px 18px;min-height:64px}
 .card>.pick:first-child{border-top:0}
-.card>.pick:hover{background:var(--accent-soft)}
+@media(hover:hover){.card>.pick:hover{background:var(--accent-soft)}}
+.list>.sc:active,.card>.pick:active{background:var(--accent-soft)}
 .pick b{font:600 1.1rem/1.25 var(--f-display)}
 .pick .m{color:var(--ink-3);font-size:.92rem}
 /* readiness meter: the magenta tick is the 75% pass mark */
