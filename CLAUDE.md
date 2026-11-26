@@ -32,7 +32,7 @@ Harry's Obsidian notes (synced to Google Drive, folder `PPL`, one folder per sub
   - `labs65asr.js` speech recognition: default **Moonshine base** (transformers.js 3.8.1) on device, records the whole call and ends after the quiet time (`FS.hold`) or Done; falls back to Chrome's recogniser.
   - `labs66art.js` Chicago Convention articles (five themed blocks, cover-and-reveal, quiz, match).
   - `labs50data.js` UK airspace (YAIXM, CC0), coastline and chart layer (Natural Earth); packed at build time by `packdata.py`.
-  - `labs80–82.js` topic diagrams.
+  - `labs80–82.js` topic diagrams. Redrawn "readable" figures pass `cls='dgr'` to `dzF` (helper `FR`): labels 12/11 px, nothing below 11 px on a phone-width card, sentences go in the caption, width capped at 460 px. Converted so far: Rules of the Air.
 - `docs/` — the published site (Pages serves `main` → `/docs`). `docs/index.html` is generated: never edit it by hand. `sw.js` (network-first offline cache), `manifest.webmanifest`, icons (logo: GA aircraft in plan view, cream on navy `#16284A`, cobalt windscreen).
 - `index.html` at the root only redirects to `docs/`.
 - `tests/` — Playwright scripts (run from `src/`).
@@ -45,7 +45,7 @@ python3 ../tests/t_smoke.py # opens every subject and lab, reports page errors
 ```
 Every test runs from `src/` with nothing else to start: `t_asr`, `t_asr2`, `t_backup`, `t_piper` and `t_sync` start their own local server (`tests/_srv.py`); `t_asr` makes its own test recording; `t_piper` carries stand-ins for onnxruntime-web, piper-wasm and the voice. Each test prints PASS or stops with an assertion. When a test answers a flight, pick options with `__T.ses.ord.indexOf(__T.ses.cur.a)` (options are shuffled and can share opening words), and handle option tiles as well as the speech box.
 `hub_test.html` exposes `window.__T` (ses, S, KB, NTTS, ASR, `grade(e,text)`, speak, render) for tests.
-Useful tests: `t_grade.py` (radio marking), `t_mock.py` (mock exam tiles), `t_art.py`, `t_listen.py` (pause handling), `t_asr.py`/`t_piper.py` (engines with mocked CDN), `t_backup.py`, `t_scan.py` (button spacing), `t_secdg.py` (diagrams sit in their note sections), `t_dgtext.py` (diagram labels stay inside their boxes, measured with the real Barlow fonts in `tests/fonts`). `t_scan.py` allows grouped list rows (`.list > .sc`, `.card > .pick`) to touch; every other pair of buttons needs 8 px.
+Useful tests: `t_grade.py` (radio marking), `t_mock.py` (mock exam tiles), `t_art.py`, `t_listen.py` (pause handling), `t_asr.py`/`t_piper.py` (engines with mocked CDN), `t_backup.py`, `t_scan.py` (button spacing), `t_secdg.py` (diagrams sit in their note sections), `t_dgtext.py` (diagram labels stay inside their boxes, measured with the real Barlow fonts in `tests/fonts`). `t_dgsize.py` (labels in converted topics stay at 11 px or more at 430/800/1100 px). `t_scan.py` allows grouped list rows (`.list > .sc`, `.card > .pick`) to touch; every other pair of buttons needs 8 px.
 Then commit and `git push origin main`; Pages redeploys in a minute or two.
 
 Sandbox note: cdn.jsdelivr.net, huggingface.co, fonts and github.io are blocked from the workspace, so real voice/speech models can't be heard or tested here — test the plumbing with Playwright route mocks and say so honestly.
