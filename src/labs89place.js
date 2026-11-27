@@ -4,14 +4,6 @@
    Anything not listed stays in the Diagrams panel at the top of the topic (t_secdg.py flags it). */
 (function(){
 var PLACE={
-'Piston engine icing (SS14)':[['Where carburettor ice','Three types'],['When to expect carb ice','When it happens'],['The carb heat check','Using carb heat']],
-'Winter weather and icing (SS03)':[['How radiation fog','Radiation fog'],['A depression passing','Fronts and depressions'],['Frost on the wing','Frost, snow'],['Airframe ice','Carb ice and airframe ice']],
-'Weight, balance and performance (SS09)':[['Datum, arm and moment','Balance and the centre'],['Worked CG check','Worked CG example'],['Declared distances','Performance principles'],['Rule-of-thumb take-off','Rule-of-thumb multipliers']],
-'Pilot health and performance (SS24)':[['I AM SAFE','I AM SAFE'],['Altitude and your body','Altitude and gas'],['Alcohol before flying','Factors that reduce performance']],
-'Stalls, spins and loss of control (SS30)':[['Lift and angle of attack','What a stall is'],['Stall speed in a level turn','Load factor'],['Stall recovery','Recovery']],
-'VFR flight into IMC (SS33)':[['The 180','The 180'],['Tricks your balance','Spatial disorientation types'],['VFR on top','VFR on top']],
-'GA radiotelephony practice (SS22)':[['Squawk codes','Squawk codes'],['Where to make your aerodrome calls','Circuit and aerodrome calls'],['The distress or urgency','MAYDAY and PAN PAN']],
-'VFR flight planning and VMC minima (SS05)':[['UK VMC minima','VMC minima in the UK'],['Final fuel reserve','Fuel reserves'],['FREDA','In-flight monitoring']],
 'Weather charts and forecasts (Skyway Code)':[['Reading a METAR','Reading TAFs'],['Cloud amounts and the ceiling','Making the weather decision'],['What the F215','F215']],
 'Route planning and altitude selection (Skyway Code)':[['Maximum Elevation Figure','Maximum Elevation Figure'],['Planning the descent','Choosing a cruising altitude'],['Take 2 around airspace','Avoiding infringements']],
 'Altimeter settings (Skyway Code)':[['QFE, QNH and 1013','Four pressure settings'],['Transition altitude and level','Transition altitude'],['Worked example: 27 ft','Transition altitude']],

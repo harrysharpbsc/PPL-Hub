@@ -5,46 +5,6 @@ function steps(list,x,y0,dy,col,fs){return list.map(function(r,i){var y=y0+i*dy;
 function cloud(x,y,w,h,col){return'<path d="M'+x+' '+(y+h)+'q-'+(h*.6)+' 0 -'+(h*.4)+' -'+(h*.5)+'q0 -'+(h*.6)+' '+(h*.6)+' -'+(h*.5)+'q'+(w*.15)+' -'+(h*.7)+' '+(w*.4)+' -'+(h*.3)+'q'+(w*.3)+' -'+(h*.4)+' '+(w*.45)+' '+(h*.25)+'q'+(h*.6)+' '+(h*.1)+' '+(h*.4)+' '+(h*.55)+'q0 '+(h*.5)+' -'+(h*.5)+' '+(h*.5)+'Z" fill="'+(col||'#d7dde3')+'" stroke="#9aa6b3" stroke-width=".8"/>'}
 function ground(y){return'<path d="M0 '+y+'H320V200H0Z" fill="var(--ch-l1)"/>'}
 
-/* VFR flight into IMC */
-dzAdd('VFR flight into IMC (SS33)',[
- F('The 180° turn out of cloud',
-  '<path d="M160 170V110A50 50 0 0 1 260 110V170" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-dasharray="6 4"/>'+A(260,140,260,176,'var(--accent)',2.4)
-  +P(160,160,0,'var(--ink)',1.5)+cloud(30,20,110,60,'#c7ced6')+T(85,62,'cloud ahead','d1','middle')
-  +B(210,14,104,74,'var(--surface)','var(--accent)')+T(262,30,'Rate 1 turn','d1','middle')+T(262,43,'bank no more than 20°','d2','middle',7.4)+T(262,56,'180° takes 1 minute','d2','middle',7.4)+T(262,69,'back pressure to','d2','middle',7.4)+T(262,80,'hold height','d2','middle',7.4)
-  +T(110,140,'note the target','d2','end')+T(110,151,'heading first','d2','end')+T(272,190,'roll out, hold it','d2','middle'),
-  'Trust the instruments, keep the wings level, then make a gentle rate 1 turn. Without a heading indicator, time it: 1 minute for 180°.'),
- F('Tricks your balance can play',
-  [['The leans','you feel level','but are banked'],['Somatogravic','speeding up feels','like pitching up'],['Coriolis','head moves in a turn:','false rotation'],['Inversion','abrupt level-off','feels like tumbling'],['False horizon','sloping cloud tops','look level']].map(function(r,i){var x=8+(i%3)*104,y=i<3?10:104;return B(x,y,98,84,'var(--surface)','var(--ink-2)',6)+T(x+49,y+18,r[0],'d1','middle')+T(x+49,y+58,r[1],'d2','middle',7)+T(x+49,y+69,r[2],'d2','middle',7)
-   +(i===0?'<g transform="translate('+(x+49)+' '+(y+36)+') rotate(-15)"><path d="M-22 0H22M-3 0V-6" stroke="var(--accent)" stroke-width="3"/></g>':i===1?'<g transform="translate('+(x+49)+' '+(y+36)+') rotate(-12)"><path d="M-20 0H18L22-4" stroke="var(--accent)" stroke-width="3" fill="none"/></g>'+A(x+20,y+44,x+76,y+44,'var(--bad)',1):i===2?'<path d="M'+(x+30)+' '+(y+36)+'a18 10 0 1 0 36 0" stroke="var(--accent)" stroke-width="2" fill="none"/>':i===3?'<path d="M'+(x+34)+' '+(y+32)+'h30M'+(x+49)+' '+(y+24)+'v18" stroke="var(--accent)" stroke-width="2.4"/>':'<path d="M'+(x+18)+' '+(y+46)+'L'+(x+80)+' '+(y+30)+'" stroke="#9aa6b3" stroke-width="6"/>')}).join('')
-  +B(216,104,98,84,'var(--bad)','var(--bad)',6).replace('fill="var(--bad)"','fill="var(--bad)" fill-opacity=".1"')+T(265,130,'If you enter cloud:','d1','middle',null,'var(--bad)')+T(265,148,'aviate, navigate,','d2','middle',7.4)+T(265,160,'communicate','d2','middle',7.4),
-  'Spatial disorientation is the killer in VFR into IMC. Your inner ear is wrong; the attitude indicator is right.'),
- F('VFR on top and the 3,000 ft rule',
-  ground(170)+'<path d="M0 170L40 160L80 166L120 150L160 162L200 156L240 166L280 154L320 164V170Z" fill="var(--ch-l2)"/>'+'<path d="M0 108Q60 96 120 108T240 106T320 104V128H0Z" fill="#d7dde3" stroke="#9aa6b3"/>'
-  +L('M0 92H320','var(--bad)',1.2,'5 3')+T(316,88,'3,000 ft AMSL','d1','end',null,'var(--bad)')+dzSide(90,60,1.1,'var(--accent)')+T(90,24,'Above 3,000 ft: 5 km,','d2','middle',7.4)+T(90,35,'1,500 m and 1,000 ft from cloud','d2','middle',7.4)
-  +T(230,60,'No hole at the','d1','middle')+T(230,72,'destination?','d1','middle')+T(230,142,'Below 3,000 ft in Class G:','d2','middle',7.4)+T(230,152,'stay in sight of the surface','d2','middle',7.4),
-  'Flying above cloud is legal above 3,000 ft with the right cloud separation, but you may have no way down at the other end.')
-]);
-
-/* GA radiotelephony practice */
-dzAdd('GA radiotelephony practice (SS22)',[
- F('Squawk codes to know',
-  [['7000','VFR conspicuity','var(--good)'],['2000','IFR conspicuity','var(--good)'],['0030','Lost (UK)','var(--mid)'],['7600','Radio failure','var(--mid)'],['7700','Emergency','var(--bad)'],['7500','Unlawful interference','var(--bad)']].map(function(r,i){var x=10+(i%2)*154,y=12+Math.floor(i/2)*60;return B(x,y,146,50,'#15181d','#666',6)+'<text x="'+(x+12)+'" y="'+(y+33)+'" font-family="var(--f-mono)" font-size="22" fill="#7cf29a">'+r[0]+'</text>'+T(x+82,y+22,r[1].split(' ')[0],'d1',null,8.6,'#eee')+T(x+82,y+35,r[1].split(' ').slice(1).join(' '),'d2',null,7.6,'#bbb')+'<rect x="'+(x+136)+'" y="'+(y+8)+'" width="4" height="34" rx="2" fill="'+r[2]+'"/>'}).join('')
-  +T(160,196,'Select ALT (Mode C). Press IDENT only when asked.','d2','middle'),
-  'The three 7s are for trouble. 0030 is the UK lost code, used while you call for help.'),
- F('Where to make your aerodrome calls',
-  L('M10 120H310','var(--ink-2)',1,'2 3')+'<rect x="20" y="114" width="60" height="12" fill="#555c6b"/>'+T(50,142,'runway','d2','middle')
-  +[[80,'threshold'],[150,'4 NM'],[220,'8 NM']].map(function(r){return L('M'+r[0]+' 104V136','var(--ink)',1)+T(r[0],100,r[1],'d2','middle')}).join('')
-  +'<rect x="80" y="112" width="70" height="16" fill="var(--good)" opacity=".2"/>'+T(115,124,'final','d1','middle')+'<rect x="150" y="112" width="70" height="16" fill="var(--mid)" opacity=".2"/>'+T(185,124,'long final','d1','middle')
-  +P(300,120,270,'var(--accent)',1.2)+T(160,60,'No such call as "short final": give the distance','d2','middle')
-  +B(20,154,280,36,'var(--surface)','var(--accent)')+T(160,168,'At ATC aerodromes call 15 NM or 5 minutes','d1','middle')+T(160,181,'from the ATZ, whichever is greater','d2','middle')
-  +T(160,24,'Circuit calls: downwind and final.','d1','middle')+T(160,36,'Overhead join: overhead, then descending deadside','d2','middle'),
-  'Final runs from 4 NM to the threshold, long final from 4 to 8 NM.'),
- F('The distress or urgency message',
-  [['MAYDAY ×3 or PAN PAN ×3',''],['Station called',''],['Your callsign and type',''],['Nature of the problem',''],['Intentions',''],['Position, height, heading',''],['Pilot qualification','(helps UK controllers)'],['Other: persons on board, endurance','']].map(function(r,i){var y=6+i*22;return'<rect x="40" y="'+y+'" width="240" height="18" rx="9" fill="'+(i===0?'var(--bad)':'var(--surface)')+'" stroke="var(--ink-2)"/>'+T(54,y+13,(i+1)+'. '+r[0],'d1',null,8.4,i===0?'#fff':null)+(r[1]?T(272,y+13,r[1],'d2','end',7):'')}).join('')
-  +T(160,196,'Then squawk 7700. Use 121.5 MHz if not with a unit.','d2','middle'),
-  'MAYDAY is grave and imminent danger. PAN PAN is a concern without immediate danger, and is worth making early.')
-]);
-
 /* VFR flight planning and VMC minima */
 var vmc=F('UK VMC minima at a glance',
   ground(182)+L('M0 34H320','var(--ink)',1,'5 3')+T(4,30,'FL100','d1')+L('M0 108H320','var(--ink)',1,'5 3')+T(4,92,'3,000 ft AMSL, or','d2',null,7.2)+T(4,103,'1,000 ft AGL if higher','d2',null,7.2)
@@ -54,15 +14,6 @@ var vmc=F('UK VMC minima at a glance',
   +B(164,116,148,58,'var(--surface)','var(--good)')+T(238,130,'Class F and G','d1','middle')+T(238,143,'5 km, clear of cloud,','d2','middle')+T(238,155,'surface in sight','d2','middle')+T(238,167,'(1,500 m at 140 kt or less, day)','d2','middle',6.8)
   +T(160,190,'UK Class D exemption (day, 140 kt or less, 3,000 ft or below):','d2','middle',6.6)+T(160,198,'clear of cloud with the surface in sight','d2','middle',6.6),
   'Visibility and distance from cloud depend on height, class and speed. These are legal minima, not targets.');
-dzAdd('VFR flight planning and VMC minima (SS05)',[vmc,
- F('Final fuel reserve minima (Part-21 aeroplanes)',
-  [['Day, staying in sight of the aerodrome',10,'var(--mid)'],['Day, any other flight',30,'var(--accent)'],['Night',45,'var(--ink)']].map(function(r,i){var y=30+i*48,w=r[1]*5;return T(20,y-4,r[0],'d1')+'<rect x="20" y="'+y+'" width="'+w+'" height="22" rx="4" fill="'+r[2]+'" opacity=".75"/>'+T(28+w,y+15,r[1]+' min','d3')}).join('')+T(160,190,'These are minima: plan to land with more','d2','middle'),
-  'Helicopters need 20 minutes. Measure fuel with a dipstick and plan for the worst case.'),
- F('FREDA every 10 minutes',
-  [['F','Fuel','quantity, selector'],['R','Radio','frequency, squawk'],['E','Engine','Ts and Ps, carb heat'],['D','Direction','compass, DI aligned'],['A','Altimeter','setting, height']].map(function(r,i){var x=10+i*61;return B(x,40,56,110,'var(--surface)','var(--accent)',6)+T(x+28,74,r[0],'d3','middle',null,'var(--accent)')+T(x+28,98,r[1],'d1','middle',8.4)+T(x+28,118,r[2].split(', ')[0],'d2','middle',6.8)+T(x+28,129,r[2].split(', ')[1]||'','d2','middle',6.8)}).join('')
-  +T(160,24,'Look outside about 80% of the time','d1','middle')+T(160,176,'Take 2: keep 2 NM or 200 ft clear of controlled airspace','d2','middle'),
-  'A short routine check that catches fuel, radio and navigation slips before they grow.')
-]);
 dzAdd('VFR, IFR and Special VFR (Skyway Code)',[vmc,
  F('Special VFR in a control zone',
   '<circle cx="110" cy="100" r="80" fill="color-mix(in srgb,#2457c5 8%,transparent)" stroke="#2457c5" stroke-width="1.8" stroke-dasharray="7 3"/>'+T(110,32,'CTR','d1','middle',null,'#2457c5')
