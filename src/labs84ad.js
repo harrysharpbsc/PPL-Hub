@@ -126,7 +126,7 @@ var NAVY='#16284A';
 function towerB(x,y){return'<path d="M'+x+' '+y+'V'+(y-30)+'" stroke="#4F5D7A" stroke-width="4"/><path d="M'+(x-10)+' '+(y-30)+'H'+(x+10)+'L'+(x+7)+' '+(y-38)+'H'+(x-7)+'Z" fill="#4F5D7A"/><path d="M'+(x-12)+' '+(y-40)+'H'+(x+12)+'L'+x+' '+(y-46)+'Z" fill="#4F5D7A"/>'}
 function beamB(x1,y1,x2,y2,c,fl){return'<path d="M'+x1+' '+y1+'L'+x2+' '+y2+'" stroke="'+c+'" stroke-width="'+(c==='#ffffff'?3:4)+'"'+(fl?' stroke-dasharray="6 4"':'')+(c==='#ffffff'?' style="filter:drop-shadow(0 0 .8px #333)"':'')+'/>'}
 function lrow(y,name,col,kind,air,gnd){var s='<rect x="8" y="'+(y+18)+'" width="140" height="86" rx="5" fill="'+SKY+'"/><path d="M8 '+(y+98)+'H148V'+(y+104)+'H8Z" fill="#4F5D7A"/>'+towerB(26,y+98)+T(8,y+12,name,'t1')
-  +dbSide(122,y+42,.5,'k').replace('class="fk"','fill="'+NAVY+'"')+(gnd?dbSide(122,y+92,.5,'k').replace('class="fk"','fill="'+NAVY+'"'):'');
+  +dbSide(122,y+42,.5,'k',true).replace('class="fk"','fill="'+NAVY+'"')+(gnd?dbSide(122,y+92,.5,'k',true).replace('class="fk"','fill="'+NAVY+'"'):'');
  if(kind==='flare')s+='<path d="M34 '+(y+52)+'Q54 '+(y+30)+' 72 '+(y+48)+'" stroke="'+col+'" stroke-width="1.4" fill="none"/><circle cx="74" cy="'+(y+56)+'" r="8" fill="'+col+'"/>';
  else s+=beamB(36,y+58,96,y+44,col,kind==='flash')+(gnd?beamB(36,y+62,96,y+90,col,kind==='flash'):'');
  s+=T(158,y+34,'In the air','t2 ta');air.forEach(function(t,k){s+=T(158,y+48+k*13,t,'t2')});
@@ -180,7 +180,7 @@ var F=[
   'ASDA, accelerate-stop distance available, is where you can stop after abandoning a take-off. A stopway is prepared ground beyond the runway for this; with none, ASDA is the same as TORA.'],
 /* 6 */['Landing distance available (LDA)',320,160,
   '<path d="M8 112H312V140H8Z" class="gnd"/><path d="M70 108H290V114H70Z" fill="var(--ink-3)"/>'
-  +AR('M14 32Q50 74 70 88',62,82,70,89,'a',1.6,'5 3')+dbSide(276,102,.5,'a')
+  +AR('M14 32Q50 74 70 88',62,82,70,89,'a',1.6,'5 3')+dbSide(180,102,.5,'a')
   +L('M70 64H14','s2',1,'3 3')+AR('M40 80V68',40,72,40,66,'k',1.2)+AR('M40 92V104',40,100,40,106,'k',1.2)+T(34,90,'50 ft','t1','end')
   +guide(70,60,140)+guide(290,60,140)+dimB(70,290,132,'LDA','g',true)+T(76,58,'threshold','t2'),
   'LDA is the runway length declared suitable for the landing ground run, measured from the threshold. Landing performance figures assume you cross the threshold at 50 ft.'],
@@ -282,7 +282,7 @@ var F=[
 /* 25 */['From aircraft to ATC',320,350,
   [[6,'Lights on and off',['I am compelled','to land'],0],[120,'Red flare',['I need immediate','assistance'],1],[234,'Green flare',['Night: may I land?','Day: may I land in a','different direction?'],2]].map(function(r){var y=r[0],i=r[3],s='<rect x="8" y="'+(y+18)+'" width="140" height="86" rx="5" fill="'+SKY+'"/><path d="M8 '+(y+98)+'H148V'+(y+104)+'H8Z" fill="#4F5D7A"/>'+towerB(26,y+98)+T(8,y+12,r[1],'t1');
    if(i===0)s+='<g transform="translate(100 '+(y+56)+') scale(1.5)"><path d="'+DB_PL+'" fill="'+NAVY+'"/></g><circle cx="82" cy="'+(y+54)+'" r="4.5" fill="#E0262B"/><circle cx="118" cy="'+(y+54)+'" r="4.5" fill="#2FA84F"/><circle cx="100" cy="'+(y+40)+'" r="3.5" fill="#fff59a" stroke="#888" stroke-width=".5"/>';
-   else s+=dbSide(122,y+56,.5,'k').replace('class="fk"','fill="'+NAVY+'"')+'<path d="M104 '+(y+52)+'Q86 '+(y+30)+' 66 '+(y+46)+'" stroke="'+(i===1?'#E0262B':'#2FA84F')+'" stroke-width="1.4" fill="none"/><circle cx="64" cy="'+(y+48)+'" r="9" fill="'+(i===1?'#E0262B':'#2FA84F')+'"/>';
+   else s+=dbSide(122,y+56,.5,'k',true).replace('class="fk"','fill="'+NAVY+'"')+'<path d="M104 '+(y+52)+'Q86 '+(y+30)+' 66 '+(y+46)+'" stroke="'+(i===1?'#E0262B':'#2FA84F')+'" stroke-width="1.4" fill="none"/><circle cx="64" cy="'+(y+48)+'" r="9" fill="'+(i===1?'#E0262B':'#2FA84F')+'"/>';
    s+=T(158,y+34,'Meaning','t2 ta');r[2].forEach(function(t,k){s+=T(158,y+48+k*13,t,'t2')});return s}).join(''),
   'Few light aircraft carry flares, but you can always switch the landing or navigation lights on and off to say you are compelled to land. Green flare by day: may I land in a direction different from the one shown?'],
 /* 26 */['Marshaller to pilot (1)',320,mgH(9),mgal(M1,M1L),

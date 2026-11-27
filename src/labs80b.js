@@ -18,10 +18,18 @@ function dbAR(d,xp,yp,x2,y2,c,w,dash){return dbL(d,'s'+c,w||1.8,dash)+dbHead(xp,
 /* plan-view aircraft, nose up at heading 0; lights = any of 'r','g','w' (left red, right green, tail white) */
 function dbPlane(x,y,h,c,s,lights){var g='<g transform="translate('+x+' '+y+') rotate('+(h||0)+') scale('+(s||1.3)+')"><path d="'+DB_PL+'" class="plane f'+(c||'k')+'"/>';
   (lights||'').split('').forEach(function(k){if(k==='r')g+='<circle cx="-12" cy="-.8" r="2.4" fill="#E0262B" stroke="var(--surface)" stroke-width=".6"/>';if(k==='g')g+='<circle cx="12" cy="-.8" r="2.4" fill="#2FA84F" stroke="var(--surface)" stroke-width=".6"/>';if(k==='w')g+='<circle cx="0" cy="10.6" r="2.3" fill="#fff" stroke="var(--ink)" stroke-width=".6"/>'});return g+'</g>'}
-/* side-view aircraft facing right (flip = facing left) */
-function dbSide(x,y,s,c,flip){return'<g transform="translate('+x+' '+y+') scale('+(flip?-s:s)+' '+s+')"><path d="'+DB_SIDE+'" class="f'+(c||'a')+'"/><path d="M-6-2.5H12" stroke="var(--surface)" stroke-width="1.6"/></g>'}
+/* side-view aircraft facing right (flip = facing left). The outline is drawn nose-left, hence the mirrored default. */
+function dbSide(x,y,s,c,flip){return'<g transform="translate('+x+' '+y+') scale('+(flip?s:-s)+' '+s+')"><path d="'+DB_SIDE+'" class="f'+(c||'a')+'"/><path d="M-6-2.5H12" stroke="var(--surface)" stroke-width="1.6"/></g>'}
 /* arc path on a circle, angles in degrees clockwise from north */
 function dbArc(cx,cy,r,a0,a1){function p(a){var q=(a-90)*Math.PI/180;return[dbN(cx+Math.cos(q)*r),dbN(cy+Math.sin(q)*r)]}var s=p(a0),e=p(a1);return'M'+s[0]+' '+s[1]+'A'+r+' '+r+' 0 '+((a1-a0+360)%360>180?1:0)+' 1 '+e[0]+' '+e[1]}
 function dbSector(cx,cy,r,a0,a1,fill,op){return'<path d="M'+cx+' '+cy+'L'+dbArc(cx,cy,r,a0,a1).slice(1)+'Z" fill="'+fill+'" opacity="'+op+'"/>'}
+/* cumulus-style cloud: a flat base and overlapping rounded tops, fitted into the w x h box at (x,y) */
+function dbCloud(x,y,w,h,op){var b=y+h,r=h*.42,pts=[[.16,.62,.55],[.34,.38,.75],[.55,.30,.85],[.75,.45,.7],[.88,.66,.5]],d='';
+  pts.forEach(function(p){var cx=x+w*p[0],cy=y+h*p[1],rr=r*p[2]*1.25;d+='M'+dbN(cx-rr)+' '+dbN(cy)+'a'+dbN(rr)+' '+dbN(rr)+' 0 1 0 '+dbN(rr*2)+' 0a'+dbN(rr)+' '+dbN(rr)+' 0 1 0 '+dbN(-rr*2)+' 0Z'});
+  d+='M'+dbN(x+w*.08)+' '+dbN(b-h*.3)+'H'+dbN(x+w*.94)+'V'+dbN(b)+'H'+dbN(x+w*.08)+'Z';
+  return'<g opacity="'+(op||1)+'"><path d="'+d+'" fill="var(--surface-2)" stroke="var(--ink-3)" stroke-width="1.6"/><path d="'+d+'" fill="var(--surface-2)"/></g>'}
+/* mist or low cloud: soft horizontal bands between y1 and y2 */
+function dbMist(x1,x2,y1,y2){var s='',n=4;for(var k=0;k<n;k++){var y=y1+(y2-y1)*k/n;s+='<rect x="'+x1+'" y="'+dbN(y)+'" width="'+(x2-x1)+'" height="'+dbN((y2-y1)/n+1)+'" fill="var(--ink-3)" opacity="'+dbN(.42-k*.09)+'"/>'}
+  for(k=0;k<3;k++)s+='<path d="M'+x1+' '+dbN(y1+6+k*9)+'q'+dbN((x2-x1)/8)+' -5 '+dbN((x2-x1)/4)+' 0t'+dbN((x2-x1)/4)+' 0t'+dbN((x2-x1)/4)+' 0t'+dbN((x2-x1)/4)+' 0" fill="none" stroke="var(--surface)" stroke-width="1.4" opacity=".55"/>';return s}
 /* the figure: viewBox w x h (width 320 so 11px labels stay >= 11px on a phone card), caption carries the full sentence */
 function dbFig(title,w,h,inner,cap){return'<figure class="dg dgb"><svg viewBox="0 0 '+w+' '+h+'" role="img" aria-label="'+esc(title+'. '+cap)+'"><rect width="'+w+'" height="'+h+'" rx="8" fill="var(--surface)"/>'+inner+'</svg><figcaption><b>'+title+'</b>'+cap+'</figcaption></figure>'}

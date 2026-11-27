@@ -74,7 +74,7 @@ S('Winter weather and icing (SS03)',[
 var ITEMS=[[2.05,'Front seats','160 kg'],[2.22,'Empty aircraft','700 kg'],[2.41,'Fuel','100 kg'],[2.98,'Rear seats','70 kg'],[3.63,'Baggage','15 kg']];
 S('Weight, balance and performance (SS09)',[
  ['Datum, arm and moment',320,224,
-  side(176,66,3.4,'a').replace('class="fa"','fill="var(--accent-soft)"')+L('M28 104H312','sk',1.2)+L('M28 24V110','sr',1.6,'4 3')+T(34,24,'datum','t1 tr')
+  side(176,66,3.4,'a',true).replace('class="fa"','fill="var(--accent-soft)"')+L('M28 104H312','sk',1.2)+L('M28 24V110','sr',1.6,'4 3')+T(34,24,'datum','t1 tr')
   +ITEMS.map(function(r,i){var x=n(28+(r[0]-1.5)*125);return'<circle cx="'+x+'" cy="104" r="8" class="fa"/><text x="'+x+'" y="108" text-anchor="middle" style="font:700 11px var(--f-body);fill:var(--surface)">'+(i+1)+'</text>'}).join('')
   +ITEMS.map(function(r,i){var y=134+i*17;return T(16,y,(i+1)+'. '+r[1],'t2')+T(200,y,r[2]+' × '+r[0].toFixed(2)+' m','t2','end')}).join('')
   +box(224,128,88,46,'var(--surface)','var(--accent)')+T(268,146,'Moment =','t2','middle')+T(268,162,'weight × arm','t1','middle'),
