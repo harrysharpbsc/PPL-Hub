@@ -45,8 +45,7 @@ list order. So the prefix must match a heading in that topic's `NOTES` sections 
    sentence wouldn't, or duplicates a better one, propose dropping it rather than redrawing it.
 3. **Check the content** against UK sources before drawing (see "Getting the aviation right"). Redrawing is
    the cheapest moment to fix an error, and Harry relies on these for the exam.
-4. **Write `src/labs84<short>.js`** (e.g. `labs84ad.js` for Aerodromes; the `labs84` prefix keeps it after
-   `labs83notes.js` and before `labs89place.js` in the build order). Same shape as `labs84air.js`:
+4. **Write `src/labs84<short>.js`** (e.g. `labs84met.js`; files build in name order, so a file that reuses another's figure must sort after it, as `labs85sky.js` does after `labs84ss.js`). Same shape as `labs84air.js`:
    ```js
    (function(){
    var T=dbT,L=dbL,AR=dbAR,head=dbHead,plane=dbPlane,side=dbSide,arc=dbArc,sector=dbSector,n=dbN;
