@@ -151,6 +151,7 @@ button.sc:hover{border-color:var(--accent)}
 b.k{font-weight:inherit}
 .acc-b code,.cz code{font:inherit;background:none;padding:0;border-radius:0;white-space:normal}
 .acc-b li::marker{color:var(--accent)}
+.acc-b li.sub{margin-left:22px;margin-block:4px;list-style-type:circle}
 
 .focus-wrap{max-width:720px;margin:0 auto}
 .fhead{display:flex;align-items:center;gap:14px;margin-bottom:22px}
@@ -628,7 +629,7 @@ function clozePool(n){
   n.sections.forEach(function(s,si){s[1].forEach(function(b,bi){
     var sp=[],re=/<(b|code)(?: class="k")?>([\s\S]*?)<\/\1>/g,m;
     while((m=re.exec(b))){var t=plain(m[2]).trim();if(t.length>=2&&t.length<=40&&!/:$/.test(t))sp.push({full:m[0],ans:t})}
-    if(sp.length)out.push({si:si,bi:bi,html:b,sp:sp})})});
+    if(sp.length)out.push({si:si,bi:bi,html:b.replace(/^– /,''),sp:sp})})});
   return n._cz=out}
 function norm(s){return plain(s).toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9°]+/g,'')}
 function sameAns(typed,ans){var a=norm(ans),t=norm(typed);if(!t)return false;if(t===a)return true;var r=Math.min(a.length,t.length)/Math.max(a.length,t.length);return r>=0.8&&(a.indexOf(t)>=0||t.indexOf(a)>=0)}
@@ -779,7 +780,7 @@ function vTopic(){
 
 function vRead(){
   var n=NOTES[ui.topic],all=n.sections.every(function(s,i){return ex[n.id+'|'+i]});
-  return'<button class="back" data-a="topic" data-i="'+n.id+'">'+IC.back+n.topic+'</button><h1 class="h1">'+n.topic+'</h1>'+(n.summary?'<div class="callout"><h3>Summary</h3><p>'+n.summary+'</p></div>':'')+(n.src?'<p class="m" style="margin-top:10px">Source: '+n.src.map(function(x){return'<a href="'+x[1]+'" target="_blank" rel="noopener">'+x[0]+'</a>'}).join(', ')+'. Paraphrased from CAA guidance, so check the original and your own notes.</p>':'')+(DIAG[n.topic]?'<h2 class="sec-t" style="margin-top:20px">Diagrams</h2>'+DIAG[n.topic]:'')+'<div class="tools" style="margin-top:16px"><span class="m">'+n.sections.length+' sections. Read the one-line summaries first, then open what you need.</span><button class="link" data-a="xa">'+(all?'Collapse all':'Expand all')+'</button></div>'+n.sections.map(function(s,i){var on=!!ex[n.id+'|'+i];return'<div class="acc'+(on?' open':'')+'"><button class="acc-h" data-a="x" data-i="'+i+'" aria-expanded="'+on+'"><span class="acc-t">'+s[0]+(function(k){return k?'<span class="acc-dg">'+(k>1?k+' diagrams':'Diagram')+'</span>':''})((DSEC[n.topic]||[]).filter(function(x){return s[0].indexOf(x[0])===0}).length)+'</span>'+(SUM[s[0]]?'<span class="acc-s">'+SUM[s[0]]+'</span>':'')+IC.chev+'</button>'+(on?'<ul class="acc-b">'+s[1].map(function(b){return'<li>'+b+'</li>'}).join('')+'</ul>'+secFigs(n.topic,s[0]):'')+'</div>'}).join('')+'<div class="nav"><button class="btn" data-a="markread">Mark as read</button></div>'}
+  return'<button class="back" data-a="topic" data-i="'+n.id+'">'+IC.back+n.topic+'</button><h1 class="h1">'+n.topic+'</h1>'+(n.summary?'<div class="callout"><h3>Summary</h3><p>'+n.summary+'</p></div>':'')+(n.src?'<p class="m" style="margin-top:10px">Source: '+n.src.map(function(x){return'<a href="'+x[1]+'" target="_blank" rel="noopener">'+x[0]+'</a>'}).join(', ')+'. Paraphrased from CAA guidance, so check the original and your own notes.</p>':'')+(DIAG[n.topic]?'<h2 class="sec-t" style="margin-top:20px">Diagrams</h2>'+DIAG[n.topic]:'')+'<div class="tools" style="margin-top:16px"><span class="m">'+n.sections.length+' sections. Read the one-line summaries first, then open what you need.</span><button class="link" data-a="xa">'+(all?'Collapse all':'Expand all')+'</button></div>'+n.sections.map(function(s,i){var on=!!ex[n.id+'|'+i];return'<div class="acc'+(on?' open':'')+'"><button class="acc-h" data-a="x" data-i="'+i+'" aria-expanded="'+on+'"><span class="acc-t">'+s[0]+(function(k){return k?'<span class="acc-dg">'+(k>1?k+' diagrams':'Diagram')+'</span>':''})((DSEC[n.topic]||[]).filter(function(x){return s[0].indexOf(x[0])===0}).length)+'</span>'+(SUM[s[0]]?'<span class="acc-s">'+SUM[s[0]]+'</span>':'')+IC.chev+'</button>'+(on?'<ul class="acc-b">'+s[1].map(function(b){return b.indexOf('– ')===0?'<li class="sub">'+b.slice(2)+'</li>':'<li>'+b+'</li>'}).join('')+'</ul>'+secFigs(n.topic,s[0]):'')+'</div>'}).join('')+'<div class="nav"><button class="btn" data-a="markread">Mark as read</button></div>'}
 
 function vPractice(){
   var withQ=SUBJECTS.map(function(s,i){var n=0;NOTES.forEach(function(x){if(x.s===i)n+=x.quiz.length});return n});
