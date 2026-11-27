@@ -13,6 +13,9 @@ UK CAA PPL(A) revision app for Harry (student pilot). One self-contained web pag
 - Don't put real brands (Piper, Cessna names/logos) in the app's branding.
 - Monetisation is shelved until the notes are finished.
 
+## New scans
+When Harry adds textbook scans to Drive ("PPL book scans"), follow the `ppl-scans` skill: find chapters without a note, write Obsidian notes in his format, add app topics and style B diagrams, review page, then ship on his say-so.
+
 ## Writing quiz questions
 Harry's Obsidian notes (synced to Google Drive, folder `PPL`, one folder per subject) may end with a **Practice Questions** section copied from his textbooks, with an answer key. Use them as the model for exam-style questions, but don't paste them into the app word for word (the repo is public): write your own in the same style.
 - Check the textbook answer key before relying on it (the Rules of the Air key said ATC for "ultimately responsible for avoiding collisions"; it is the pilot in command).

@@ -1,0 +1,34 @@
+<script>
+(function(){
+var pairs=[].slice.call(document.querySelectorAll('.pair[data-key]')),state={},db=null,local=false,timers={};
+function lsGet(){try{return JSON.parse(localStorage.getItem('ppl-__COLL__')||'{}')}catch(e){return{}}}
+function lsSet(){try{localStorage.setItem('ppl-__COLL__',JSON.stringify(state))}catch(e){}}
+function title(p){return p.querySelector('h3').textContent}
+function topicOf(p){var s=p.closest('.topic');return s?s.querySelector('h2').textContent:''}
+function render(){var n=0,t={ok:0,fix:0};pairs.forEach(function(p){var v=state[p.dataset.key]||{};
+  [].forEach.call(p.querySelectorAll('.pick button'),function(b){b.setAttribute('aria-pressed',v.choice===b.dataset.c?'true':'false')});
+  var ta=p.querySelector('.cm textarea');if(document.activeElement!==ta)ta.value=v.comment||'';
+  p.classList.toggle('done',!!v.choice);if(v.choice){n++;t[v.choice]++}});
+ document.getElementById('count').textContent=n+' of '+pairs.length+' checked';
+ document.getElementById('tally').textContent='Looks right '+t.ok+' · Needs work '+t.fix;
+ }
+function save(key,extra,status){var cur=Object.assign({},state[key]||{},extra);state[key]=cur;render();
+ if(local||!db){lsSet();if(status)status.textContent='Saved on this device only';return}
+ if(status)status.textContent='Saving…';
+ db.collection('__COLL__').doc(key).set(cur).then(function(){if(status)status.textContent='Saved'}).catch(function(e){if(status)status.textContent='Not saved: '+((e&&e.message)||'error')})}
+pairs.forEach(function(p){var key=p.dataset.key,st=p.querySelector('.st'),ta=p.querySelector('.cm textarea');
+ [].forEach.call(p.querySelectorAll('.pick button'),function(b){b.addEventListener('click',function(){var cur=(state[key]||{}).choice;save(key,{choice:cur===b.dataset.c?'':b.dataset.c,title:title(p),topic:topicOf(p),at:Date.now()},st)})});
+ ta.addEventListener('input',function(){clearTimeout(timers[key]);st.textContent='Typing…';timers[key]=setTimeout(function(){save(key,{comment:ta.value,title:title(p),topic:topicOf(p),at:Date.now()},st)},900)});
+});
+var g=document.getElementById('general');if(g)g.addEventListener('input',function(){clearTimeout(timers._g);timers._g=setTimeout(function(){save('_general',{comment:g.value,title:'General',topic:'',at:Date.now()},null)},900)});
+document.getElementById('only').addEventListener('change',function(e){document.body.classList.toggle('only',e.target.checked)});
+var info=document.getElementById('saveinfo');
+function goLocal(msg){local=true;state=lsGet();render();info.textContent=msg}
+var to=setTimeout(function(){if(!db)goLocal('Could not reach the save service: choices are kept on this device only, so tell Claude when you are done.')},10000);
+render();
+(window.claude&&claude.use?claude.use('db'):Promise.resolve(null)).then(function(d){clearTimeout(to);if(!d){goLocal('Sign in to claude.ai to save choices for Claude; for now they are kept on this device only.');return}
+ db=d;info.textContent='Choices save automatically and Claude can read them.';
+ db.collection('__COLL__').onSnapshot(function(snap){snap.docs.forEach(function(doc){var v=doc.data();if(v)state[doc.id]=Object.assign({},v)});render()},function(e){info.textContent='Saving is unavailable ('+((e&&e.code)||'error')+'); choices stay on this device.';local=true});
+}).catch(function(){clearTimeout(to);goLocal('Choices are kept on this device only.')});
+})();
+</script>
