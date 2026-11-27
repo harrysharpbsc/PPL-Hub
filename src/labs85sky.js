@@ -162,16 +162,29 @@ add('Aerodrome operations and circuits (Skyway Code)',[
   +L('M236 94V106','sm',2.4)+T(312,86,'"final" call','t2 tm','end')
   +plane(150,172,90,'a',1)+T(312,214,'not to scale','t2','end'),
   'Left-hand circuit shown. Calls on downwind (abeam the upwind end) and final, plus base or late downwind if it helps others picture you.','The circuit'],
- ['The overhead join',320,326,
-  '<rect x="0" y="0" width="320" height="100" class="fm" opacity=".08"/><rect x="0" y="100" width="320" height="108" class="fa" opacity=".05"/>'
-  +AR('M16 40V14',16,22,16,10,'k',1.4)+T(16,54,'N','t1','middle')+rwy(112,96,96,8)+T(196,90,'runway 27','t2','middle')
-  +L('M112 100H78Q62 100 62 116V156Q62 172 78 172H242Q258 172 258 156V116Q258 100 242 100H208','sa',1.6,'6 3')
-  +head(176,172,200,172,'a')+head(258,150,258,130,'a')
-  +AR('M160 196V104',160,112,160,100,'r',2)+L('M160 100V50Q160 22 130 22Q100 22 100 50V84Q100 100 84 100H78Q62 100 62 116V132','sr',2.2)+head(62,124,62,138,'r')
-  +[[160,100,1],[132,22,2],[100,70,3],[44,126,4]].map(function(b){return'<circle cx="'+b[0]+'" cy="'+b[1]+'" r="10" class="fr"/><text x="'+b[0]+'" y="'+(b[1]+4)+'" text-anchor="middle" style="font:700 11px var(--f-body);fill:var(--surface)">'+b[2]+'</text>'}).join('')
-  +T(240,58,'DEAD SIDE','t1','middle')+T(240,72,'no circuit traffic','t2','middle')+T(168,30,'descend to 1,000 ft','t2 tr')
-  +T(96,196,'LIVE SIDE','t1 ta','middle')+T(96,210,'circuit traffic','t2','middle')+T(168,200,'arrive from any direction','t2')+T(312,16,'W/V 270°/10 kt','t2','end')
-  +[['Overhead at 2,000 ft QFE','1,000 ft above the circuit'],['Descend on the dead side','turning left, to 1,000 ft'],['Cross the upwind end','at circuit height'],['Join crosswind','then fly the circuit']].map(function(r,i){var y=222+i*26;return'<circle cx="18" cy="'+(y+6)+'" r="9" class="fr"/><text x="18" y="'+(y+10)+'" text-anchor="middle" style="font:700 11px var(--f-body);fill:var(--surface)">'+(i+1)+'</text>'+T(36,y+5,r[0],'t1')+T(36,y+18,r[1],'t2')}).join(''),
+ ['The overhead join',320,436,
+  (function(){var K=1.2,OX=10;function X(x){return n(OX+x*K)}function Y(y){return n(y*K)}
+   function chev(x,y,dx,dy,c,sz){sz=(sz||4.2)*K;var l=Math.sqrt(dx*dx+dy*dy);dx/=l;dy/=l;var px=-dy,py=dx,cx=+X(x),cy=+Y(y);
+    return'<path d="M'+n(cx+dx*sz)+' '+n(cy+dy*sz)+'L'+n(cx-dx*sz+px*sz*.8)+' '+n(cy-dy*sz+py*sz*.8)+'L'+n(cx-dx*sz-px*sz*.8)+' '+n(cy-dy*sz-py*sz*.8)+'Z" class="f'+c+'"/>'}
+   function badge(x,y,k){return'<circle cx="'+X(x)+'" cy="'+Y(y)+'" r="10" class="fr" stroke="var(--surface)" stroke-width="1.5"/><text x="'+X(x)+'" y="'+n(+Y(y)+4)+'" text-anchor="middle" style="font:700 11px var(--f-body);fill:var(--surface)">'+k+'</text>'}
+   var RX0=91,RX1=169,RY=110,XW=60,XB=200,YD=166,R=14,OC=[95,82],OR=35;
+   var circuit='M'+RX0+' '+RY+'H'+(XW+R)+'A'+R+' '+R+' 0 0 0 '+XW+' '+(RY+R)+'V'+(YD-R)+'A'+R+' '+R+' 0 0 0 '+(XW+R)+' '+YD+'H'+(XB-R)+'A'+R+' '+R+' 0 0 0 '+XB+' '+(YD-R)+'V'+(RY+R)+'A'+R+' '+R+' 0 0 0 '+(XB-R)+' '+RY+'H'+(RX1+2);
+   var join='M130 240V'+OC[1]+'A'+OR+' '+OR+' 0 0 0 '+XW+' '+OC[1]+'V114';
+   var ap=[OC[0]+OR*Math.cos(Math.PI/4),OC[1]-OR*Math.sin(Math.PI/4)];
+   var g='<g transform="translate('+OX+' 0) scale('+K+')">'+'<rect x="'+RX0+'" y="'+(RY-4)+'" width="'+(RX1-RX0)+'" height="8" fill="var(--ink-3)"/>'
+    +'<path d="'+circuit+'" class="sa" stroke-width="1.5" stroke-dasharray="5 2.5" fill="none"/>'+'<path d="M'+RX0+' '+(YD-5)+'V'+(YD+5)+'" class="sm" stroke-width="2"/>'
+    +'<path d="M130 '+(YD-10)+'V'+(YD+10)+'" stroke="var(--surface)" stroke-width="6"/>'+'<path d="'+join+'" class="sr" stroke-width="1.9" fill="none"/></g>';
+   return'<rect x="0" y="0" width="320" height="'+Y(RY)+'" class="fm" opacity=".08"/><rect x="0" y="'+Y(RY)+'" width="320" height="'+n(300-Y(RY))+'" class="fa" opacity=".05"/>'+g
+    +chev(124,YD,1,0,'a')+chev(XB,138,0,-1,'a')+chev(RX1+5,RY,-1,0,'a')+plane(+X(152),+Y(YD),90,'a',1)
+    +chev(XW,119,0,1,'r',4.8)+chev(130,196,0,-1,'r',4.8)+chev(ap[0],ap[1],-1,-1,'r',4.8)
+    +badge(130,RY,1)+badge(OC[0],OC[1]-OR,2)+badge(XW,RY,3)+badge(XW,140,4)
+    +T(233,74,'DEAD SIDE','t1','middle')+T(233,88,'no circuit traffic','t2','middle')+T(214,247,'LIVE SIDE','t1 ta','middle')+T(214,261,'circuit traffic','t2','middle')
+    +T(137,152,'Runway 27','t2','middle')+T(180,152,'2,000 ft QFE','t2 tr')+T(124,37,'descend to 1,000 ft','t2 tr','middle')+T(66,128,'1,000 ft','t2 tr','end')
+    +T(68,172,'crosswind','t2','end')+T(111,122,'upwind','t2','middle')+T(226,217,'downwind','t2','middle')+T(258,168,'base','t2')
+    +T(240,105,'final','t2','middle')+T(240,121,'"final" call','t2 tm','middle')+T(119,217,'"downwind" call','t2 tm','middle')+T(173,288,'arrive from any direction','t2')
+    +AR('M29 44V22',29,30,29,18,'k',1.4)+T(29,58,'N','t1','middle')+AR('M22 270H56',48,270,60,270,'k',1.4)+T(20,288,'W/V 270°/10 kt','t2')
+    +[['Overhead at 2,000 ft QFE','1,000 ft above the circuit'],['Descend on the dead side','turning left, to 1,000 ft'],['Cross the upwind end','at circuit height'],['Join crosswind','then fly the circuit']].map(function(r,i){var y=306+i*27;return'<circle cx="18" cy="'+(y+6)+'" r="9" class="fr"/><text x="18" y="'+(y+10)+'" text-anchor="middle" style="font:700 11px var(--f-body);fill:var(--surface)">'+(i+1)+'</text>'+T(36,y+5,r[0],'t1')+T(36,y+18,r[1],'t2')}).join('')
+    +L('M8 422H26','sr',2.2)+T(32,426,'overhead join','t2')+L('M120 422H140','sa',1.8,'6 3')+T(146,426,'left-hand circuit','t2')+T(312,426,'not to scale','t2','end')})(),
   'A joining aircraft gives way to traffic already in the circuit. Calls: "overhead", "deadside descending", then "downwind" abeam the upwind end and "final". Check the UK AIP (AD 2) for local procedures.','The circuit'],
  ['At the holding point',320,222,
   T(8,16,'Runway','t1')+'<rect x="0" y="24" width="320" height="40" fill="var(--ink-3)"/><path d="M0 44H320" stroke="#fff" stroke-width="1.5" stroke-dasharray="10 8"/>'
