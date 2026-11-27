@@ -1,15 +1,16 @@
 # Style B diagrams (class dgb, library labs80b.js, skill .claude/skills/ppl-diagram) keep every label at 11px
-# or more on screen, at phone and tablet widths. Topics listed in DONE must be fully converted to style B.
+# or more on screen, at phone and tablet widths. Every topic's figures must be style B (DONE=None means all).
 import os
 from playwright.sync_api import sync_playwright
-DONE=['Rules of the Air','Aerodromes','Altimeter Setting Procedures','Airspace','Air Traffic Services','Aviation Law and organisations','Operations of Aircraft','Piston engine icing (SS14)','Winter weather and icing (SS03)','Weight, balance and performance (SS09)','Pilot health and performance (SS24)','Stalls, spins and loss of control (SS30)','VFR flight into IMC (SS33)','GA radiotelephony practice (SS22)','VFR flight planning and VMC minima (SS05)']
+DONE=None  # every topic with diagrams must be style B (read from __T.DSEC)
 MIN=11
 with sync_playwright() as p:
     b=p.chromium.launch()
     for w in (430,800,1100):
         pg=b.new_page(viewport={'width':w,'height':900});errs=[];pg.on('pageerror',lambda e:errs.append(str(e)))
         pg.goto('file://'+os.getcwd()+'/hub_test.html');pg.wait_for_timeout(300)
-        for t in DONE:
+        topics=DONE or pg.evaluate("Object.keys(__T.DSEC)")
+        for t in topics:
             found=False
             for si in range(10):
                 pg.locator('button.nv:visible:has-text("Subjects")').first.click()

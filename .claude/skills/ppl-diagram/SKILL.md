@@ -23,10 +23,11 @@ before drawing anything; copying their patterns is faster and more consistent th
 | File | What it is |
 |---|---|
 | `src/labs80b.js` | The style B library (`dbFig`, `dbT`, `dbL`, `dbAR`, `dbHead`, `dbPlane`, `dbSide`, `dbArc`, `dbSector`, `dbN`). Shared by every topic. |
-| `src/labs84air.js` | Rules of the Air, style B. Pattern for new topic files. |
+| `src/labs84air.js` | Rules of the Air. The reference implementation. |
+| `src/labs84ad.js` | Aerodromes: sign, mast and marshalling galleries (`gal`, `mgal`) and light-signal rows (`lrow`). Copy these for picture galleries. |
+| `src/labs84alt.js`, `labs84as.js`, `labs84law.js` | Altimeter settings; Airspace and ATS (tables via `tbl`, cards); Aviation Law and Operations. |
+| `src/labs84ss.js`, `labs85sky.js` | Safety Sense and Skyway Code topics. `labs85sky.js` builds after `labs84ss.js` and reuses its VMC figure from `DSEC`. |
 | `src/hub.html` | CSS for `.dgb` (search "style B diagrams"); `DSEC` (figures per note section) and `secFigs`. |
-| `src/labs80.js`, `labs81.js`, `labs82.js`, `labs83notes.js` | Old chart-paper diagrams (`dzF`, `dzAdd`, `sec`) still waiting to be converted. |
-| `src/labs89place.js` | Moves old `DIAG` figures into note sections by title. Style B figures go straight into `DSEC`, so they need no entry here. |
 | `tests/t_dgsize.py` | Labels >= 11 px at 430/800/1100 px, and every figure in a topic listed in `DONE` is style B. |
 | `tests/t_dgtext.py` | Labels stay inside the drawing and don't overlap, measured with the real Barlow fonts. |
 | `tests/t_secdg.py` | Every figure sits in a real note section and fits its card. |
@@ -37,10 +38,8 @@ list order. So the prefix must match a heading in that topic's `NOTES` sections 
 
 ## Converting a topic (the usual job)
 
-1. **Inventory.** Open the topic in the app (or grep the title in `src/labs8*.js` and `src/hub.html`) and list
-   every figure: title, which note section it sits in, which file draws it. Old figures come from three places:
-   `dzAdd('Topic',[...])` in labs80–82 (placed by `labs89place.js`), `sec(X,'Section',[...])` in
-   `labs83notes.js`, and occasionally the `DIAG` object in `hub.html`.
+1. **Inventory.** Every topic is already style B (November 2026). For a new topic or a redraw, open it in the app
+   (or grep the title in `src/labs84*.js` / `labs85sky.js`) and list each figure: title, note section, file.
 2. **Decide what each figure must show.** For each one, write one sentence: the claim it makes. Then ask what
    the reader has to *see* for that claim, and draw that (see "Drawing rules"). If a figure says nothing a
    sentence wouldn't, or duplicates a better one, propose dropping it rather than redrawing it.
@@ -61,10 +60,8 @@ list order. So the prefix must match a heading in that topic's `NOTES` sections 
    ```
    Assigning `DSEC['Topic']=` replaces the topic's old section figures; keep the order Harry is used to unless
    there is a reason to change it.
-5. **Remove the old versions** so nothing is drawn twice: the topic's `dzAdd` block(s), its `sec(...)` block in
-   `labs83notes.js`, its `DIAG` entry, and its line in `labs89place.js`. Delete helpers only if nothing else
-   uses them (grep first).
-6. **Add the topic to `DONE`** in `tests/t_dgsize.py`.
+5. **Remove any old version** so nothing is drawn twice, and delete helpers only if nothing else uses them (grep first).
+6. **`tests/t_dgsize.py`** checks every topic in `DSEC` automatically (`DONE=None`); nothing to register.
 7. **Build and test** (below), then look at every figure yourself at 430 px in light *and* dark mode.
 8. **Review before shipping.** Commit to the working branch, not `main` (pushing to `main` ships to Harry's
    tablet). Give him a side-by-side page (live vs new, at phone width, light and dark, a one-line "what
@@ -114,7 +111,9 @@ when a case isn't covered.
   same aircraft colour for "you" throughout a figure.
 - **Ground and buildings**: `class="gnd"` for ground/grass strips, `class="bld"` for buildings and obstacles.
   Both follow dark mode through the chart tokens.
-- **Literal colours**: only nav lights. Everything else goes through the classes or `var(--token)` so dark
+- **Literal colours**: only real-world lights, signs, displays and paint (nav lights, PAPI, signs, squawk
+  displays, marshallers), drawn on a fixed dark, sky or green ground so they look the same in both themes.
+  Raw instrument text inside them has no class, which turns off the label halo (otherwise digits smear). Everything else goes through the classes or `var(--token)` so dark
   mode works. If you need a soft fill, use `var(--surface-2)`, `var(--accent-soft)` or a role colour at low
   opacity.
 
