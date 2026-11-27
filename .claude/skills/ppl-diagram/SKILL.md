@@ -1,6 +1,6 @@
 ---
 name: ppl-diagram
-description: Draw, redraw or fix the topic diagrams in Harry's PPL Study Hub (UK PPL(A) revision app) in the approved "style B" - hand-written inline SVG built with the labs80b.js library, labels 11 px or more on a phone, every arrow labelled, colour by role, UK air-law accurate. Use this whenever a task touches a diagram, figure, picture or illustration in a subject's notes (Rules of the Air, Aerodromes, Altimetry, Airspace, ATS, Meteorology, Navigation, Human Performance, Flight Performance, Principles of Flight, Aircraft General, Communications), when converting the remaining topics from the old chart-paper style, when Harry says a diagram is hard to read, wrong, cluttered or too small, or asks for a new diagram for a note section - even if he does not say "diagram" (e.g. "the MATZ picture is unreadable on my tablet", "can you show the circuit joins visually").
+description: Draw, redraw or fix the topic diagrams in Harry's PPL Study Hub (UK PPL(A) revision app) in the agreed "style B" design (signed off by Harry on 27 Nov 2026) - hand-written inline SVG built with the labs80b.js library, labels 11 px or more on a phone, every arrow labelled, colour by role, UK air-law accurate. Use this whenever a task touches a diagram, figure, picture or illustration in a subject's notes (Rules of the Air, Aerodromes, Altimetry, Airspace, ATS, Meteorology, Navigation, Human Performance, Flight Performance, Principles of Flight, Aircraft General, Communications), when converting the remaining topics from the old chart-paper style, when Harry says a diagram is hard to read, wrong, cluttered or too small, or asks for a new diagram for a note section - even if he does not say "diagram" (e.g. "the MATZ picture is unreadable on my tablet", "can you show the circuit joins visually").
 ---
 
 # PPL Study Hub diagrams (style B)
@@ -15,8 +15,59 @@ Style B in one line: a plain card (no chart-paper grid), short labels at 12 px /
 means, comparisons are drawn side by side, the full sentence lives in the caption, and colour always means the
 same thing.
 
-Reference implementation: `src/labs84air.js` (14 Rules of the Air figures). Read two or three of its entries
-before drawing anything; copying their patterns is faster and more consistent than inventing new ones.
+The design is **agreed**. Harry picked Live, B or a mix for all 146 diagrams in a picker page, commented on
+about 45, and signed off the result twice (27 Nov 2026). Everything below records what he chose and what he
+asked to change, so new diagrams should come out right first time. Follow it unless he asks otherwise.
+
+Reference implementations (read two or three before drawing anything; copying their patterns is faster and
+more consistent than inventing new ones):
+- `src/labs84air.js`: Rules of the Air, including interception and simulated instrument flight.
+- `labs85sky.js` "The overhead join" and "Live side and dead side": how a circuit is drawn (Harry asked for this exact pattern).
+- `labs84air.js` "Who gives way when converging": numbered, colour-coded priority rows.
+- `labs85sky.js` "QFE, QNH and 1013": a colour key at the top when several coloured arrows would crowd their labels.
+- `labs84as.js` "The four UK FIS outside controlled airspace": a comparison table in style B.
+
+## Harry's agreed design rules
+
+These come from his choices and comments. Each was asked for by name, so treat them as firm.
+
+- **No chart-paper grid.** Plain card. Where a figure has a sky/ground or live/dead split, use a faint full-width
+  tint band (`class="fm"` or `"fa"` at 5 to 9% opacity), not grid paper.
+- **Nothing overlaps.** No text over a line, arrow, aircraft, cloud or another label; arrowheads sit at the
+  ends of their lines and point along them. Harry checks this closely on the tablet; `t_dgtext` catches only text
+  against text, so look at every figure yourself.
+- **Aircraft face the way they travel.** `dbSide` faces right by default; flip only for an aircraft flying
+  right to left. Take-off and landing runs go left to right.
+- **Clouds use `dbCloud`**: the puffy grey outline with a fixed light grey, so clouds stay light in dark mode.
+  For a cloud ceiling or poor visibility, use a solid grey band (`#c7ced6`, opacity .9) over a pale mist band
+  (`#e7ebee`, opacity .5), as in "When VFR is not enough in a CTR". Don't use `dbMist` for that; Harry preferred the bands.
+- **Circuits** copy the overhead-join pattern: rounded corners, a chevron on each leg, a runway bar on the upwind
+  edge, call positions as small amber ticks with amber labels (`"downwind" call`, `"final" call`), leg names
+  outside the pattern, north arrow, W/V note, "not to scale". Live side tinted blue, dead side amber.
+- **Priority or order lists** become numbered rows with role colours (green = has priority, amber = middle,
+  red = gives way to most). Anything outside the ladder, like aircraft towing, goes in its own box.
+- **Several coloured arrows to one point** (QFE/QNH/1013): put a small colour key at the top and short tags (QFE,
+  QNH, FL) beside the arrows, rather than long labels squeezed between them.
+- **Comparisons with many attributes** (the four FIS) are one table, services across the top, two-line cells
+  where needed, the decisive row (who avoids collisions) tinted red.
+- **Show the real thing where it helps**: windsocks on circuit and landing figures, nav lights on *your* aircraft
+  too, the windscreen view in constant-bearing figures, real engine shapes, chequered and banded obstacles,
+  hand signs drawn as palm, fist and finger symbols with an arrow for the sequence.
+- **Draw dimensions to scale with clean metre labels** (the helicopter H: 2 m × 1 m with 0.2 m strokes; 6 m × 3 m
+  with 1 m strokes), each in its own panel, nothing touching.
+- **Memory aids may go in a tinted strip** at the bottom ("red to red, green to green: safe; red to green: risk").
+- **One agreed exception:** the MATZ in "Aerodrome QNH (not RPS) may be needed en route" uses `--warm` magenta,
+  at Harry's request. Other MATZ and airspace figures use the accent blue. Don't spread magenta elsewhere;
+  CLAUDE.md keeps it for Today's route and the 75% tick.
+- **Pressure arithmetic uses 30 ft per hPa**, with 27 ft in brackets (CLAUDE.md product decision).
+
+## How Harry reviews diagrams
+
+Don't push new or changed diagrams straight to `main`. Put them on a branch, then publish a claude.ai review page
+built from the real app figures (light and dark at phone width; before beside after; his earlier note and a line
+on what changed). For many diagrams, give each a choice row (Live / B / Mix, or Looks right / Needs work) plus a
+comment box, saved with the artifact `db` capability, and read his answers back with `ArtifactData`. Fix what he
+marks, show him just those again, and ship to `main` only when he says so.
 
 ## Where things live
 
@@ -28,7 +79,7 @@ before drawing anything; copying their patterns is faster and more consistent th
 | `src/labs84alt.js`, `labs84as.js`, `labs84law.js` | Altimeter settings; Airspace and ATS (tables via `tbl`, cards); Aviation Law and Operations. |
 | `src/labs84ss.js`, `labs85sky.js` | Safety Sense and Skyway Code topics. `labs85sky.js` builds after `labs84ss.js` and reuses its VMC figure from `DSEC`. |
 | `src/hub.html` | CSS for `.dgb` (search "style B diagrams"); `DSEC` (figures per note section) and `secFigs`. |
-| `tests/t_dgsize.py` | Labels >= 11 px at 430/800/1100 px, and every figure in a topic listed in `DONE` is style B. |
+| `tests/t_dgsize.py` | Labels >= 11 px at 430/800/1100 px, and every figure in every topic is style B. |
 | `tests/t_dgtext.py` | Labels stay inside the drawing and don't overlap, measured with the real Barlow fonts. |
 | `tests/t_secdg.py` | Every figure sits in a real note section and fits its card. |
 
@@ -106,7 +157,6 @@ when a case isn't covered.
   about 13 x scale each side), and keep everything 4+ units inside the canvas. `t_dgtext` measures this with
   the real fonts and will catch what eyeballing misses.
 - **Point aircraft the way they travel.** Side views face right by default (the take-off run goes left to right); pass `flip` only for an aircraft flying right-to-left (towards a tower or a crowd on the left). Harry noticed backwards aircraft on several figures.
-- **Clouds look like clouds**: use `dbCloud`, and `dbMist` for low cloud or poor visibility, never a grey blob.
 - **Aircraft**: `dbPlane(x,y,heading,colourLetter,scale,lights)` for plan view (heading in degrees, 0 = up/north,
   90 = east); scale 1.1-1.6. `dbSide(x,y,scale,colourLetter,flip)` for side view, about 0.7-1.1. Use the
   same aircraft colour for "you" throughout a figure.
@@ -127,7 +177,7 @@ dbAR('M20 50Q60 50 70 90',66,82,70,92,'a',1.8,'5 3')        // arrow: path, then
 dbHead(xp,yp,x2,y2,'k')                                     // arrowhead only (e.g. on a circuit leg)
 dbPlane(160,100,0,'a',1.3,'rgw')                            // plan-view aircraft, optional lights
 dbSide(70,96,.9,'a')                                        // side-view aircraft facing right; pass true last to face left
-dbCloud(x,y,w,h) / dbMist(x1,x2,y1,y2)                     // a cumulus cloud; layered mist or low cloud
+dbCloud(x,y,w,h)                                            // the agreed puffy grey cloud (see the rules for ceiling and mist bands)
 dbArc(cx,cy,r,deg0,deg1) / dbSector(cx,cy,r,deg0,deg1,fill,opacity)  // degrees clockwise from north
 dbFig(title,320,h,drawing,caption)                          // the figure (aria-label = title + caption)
 ```
