@@ -196,14 +196,25 @@ add('Accident Investigation Regulations',[
 
 /* ---- 16 ICAO Annex Terminology ---- */
 add('ICAO Annex Terminology',[
- ['Manoeuvring area and movement area',320,212,
-  T(160,28,'runway','t2','middle')+'<rect x="20" y="36" width="280" height="18" rx="2" class="fa" opacity=".4"/>'
-  +'<rect x="74" y="54" width="12" height="60" class="fa" opacity=".4"/><rect x="74" y="104" width="132" height="12" class="fa" opacity=".4"/>'+T(140,134,'taxiway','t2','middle')
-  +'<rect x="206" y="80" width="100" height="62" rx="4" class="fm" opacity=".3"/>'+plane(234,104,180,'k',.9)+plane(278,104,180,'k',.9)+T(256,134,'apron','t1 tm','middle')
-  +'<rect x="20" y="156" width="14" height="10" class="fa" opacity=".4"/>'+T(40,165,'manoeuvring area: runways, taxiways','t2')
-  +'<rect x="20" y="174" width="14" height="10" class="fm" opacity=".3"/>'+T(40,183,'apron','t2')
-  +T(160,204,'movement area = both together','t1','middle'),
-  'The manoeuvring area is the part used for taxiing, take-off and landing, excluding aprons. The movement area is the manoeuvring area plus the aprons.','Aerodromes'],
+ ['Manoeuvring area and movement area',320,304,
+  /* blue halo = manoeuvring area (solid, so overlaps don't darken) */
+  '<rect x="10" y="34" width="300" height="34" rx="5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.2"/>'
+  +'<path d="M52 62H64V96H256V62H268V108H112V140H100V108H52Z" fill="var(--accent-soft)" stroke="var(--accent-soft)" stroke-width="12" stroke-linejoin="round"/>'+'<rect x="70" y="72" width="180" height="18" class="gnd"/>'
+  
+  +'<rect x="16" y="40" width="288" height="22" rx="1" fill="var(--ink-3)"/>'
+  +'<path d="M22 44V58M25 44V58M28 44V58M31 44V58M289 44V58M292 44V58M295 44V58M298 44V58" stroke="#fff" stroke-width="1.6"/><path d="M40 51H280" stroke="#fff" stroke-width="1.4" stroke-dasharray="10 8"/>'
+  +'<path d="M52 62H64V96H256V62H268V108H112V140H100V108H52Z" fill="var(--line-2)"/>'
+  +'<path d="M58 62V102H262V62M106 102V140" fill="none" stroke="#e3b33c" stroke-width="1.3"/>'
+  +'<path d="M52 72H64M52 74.5H64M256 72H268M256 74.5H268" stroke="#e3b33c" stroke-width="1.2"/><path d="M52 77.5H64M52 80H64M256 77.5H268M256 80H268" stroke="#e3b33c" stroke-width="1.2" stroke-dasharray="2 1.5"/>'
+  +'<rect x="88" y="140" width="156" height="60" rx="3" class="fm" opacity=".3"/>'+plane(156,170,0,'k',.9)+plane(194,170,0,'k',.9)+plane(230,170,0,'k',.9)
+  +'<rect x="256" y="150" width="48" height="40" class="bld"/>'
+  +T(160,30,'runway','t1','middle')+T(26,30,'threshold','t2')+T(74,85,'holding point','t2')+T(200,126,'taxiway','t2','middle')+T(200,85,'grass','t2','middle')
+  +T(96,176,'apron','t1 tm')+T(280,206,'hangar','t2','middle')+T(166,214,'parking stands','t2','middle')
+  +L('M8 226H312','s2',1,'2 3')
+  +'<rect x="8" y="236" width="16" height="12" fill="var(--accent-soft)" stroke="var(--accent)"/>'+T(32,246,'Manoeuvring area','t1 ta')+T(140,246,'runways and taxiways','t2')
+  +'<rect x="8" y="256" width="16" height="12" class="fm" opacity=".3"/>'+T(32,266,'Apron','t1 tm')+T(140,266,'parking, loading, fuel','t2')
+  +'<rect x="8" y="276" width="304" height="22" rx="5" class="fa" opacity=".08"/>'+T(160,291,'Movement area = manoeuvring area + aprons','t1','middle'),
+  'The manoeuvring area (shaded blue) is the part used for take-off, landing and taxiing: runways and taxiways, not aprons. The movement area adds the aprons, where aircraft park, load and refuel. Buildings such as hangars are neither.','Aerodromes'],
  R('Aerodromes','TORA, TODA and clearway','Declared distances'),
  R('Aerodromes','ASDA with and without a stopway','Declared distances'),
  R('Aerodromes','Landing distance available (LDA)','Declared distances'),
