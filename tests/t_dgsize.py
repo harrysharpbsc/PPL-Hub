@@ -2,7 +2,7 @@
 # or more on screen, at phone and tablet widths. Topics listed in DONE must be fully converted to style B.
 import os
 from playwright.sync_api import sync_playwright
-DONE=['Rules of the Air','Aerodromes','Altimeter Setting Procedures','Airspace','Air Traffic Services']
+DONE=['Rules of the Air','Aerodromes','Altimeter Setting Procedures','Airspace','Air Traffic Services','Aviation Law and organisations','Operations of Aircraft']
 MIN=11
 with sync_playwright() as p:
     b=p.chromium.launch()
