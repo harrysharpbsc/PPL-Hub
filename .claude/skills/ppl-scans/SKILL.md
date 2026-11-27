@@ -72,15 +72,27 @@ Copy the shape of an existing note (read one, e.g. `07 Air Traffic Services.md`)
 ---
 topic: Visual Flight Rules
 tags:
- - ppl/law
- - status/draft
- - confidence/weak
+  - ppl/law
+  - status/draft
+  - confidence/weak
 ---
 ## Big section
-- **Bold** the key term, `code` every number with its unit: **`1,500 m`**, `30 minutes`.
-- **Note** for an aside; **Trap** for the exam's favourite confusion.
+- Plain bullets, no bold. `code` every number with its unit: `1,500 m`, `30 minutes`.
+- `Term`: definition, one term per bullet (never several definitions run together in one bullet).
+- A list inside a bullet:
+	- nested items are indented with a TAB (a single space renders out of line in Obsidian)
+
+> [!note]
+> An aside.
+
+> [!warning] Exam trap
+> The exam's favourite confusion.
+
+> [!tip] Memory aid
+> A mnemonic.
 
 ### Subsection
+
 | Table | for | comparisons |
 | --- | --- | --- |
 
@@ -88,11 +100,15 @@ tags:
 
 ### Practice Questions
 1. Question copied from the book
- 1. option
- 2. option
+	1. option
+	2. option
 ##### Answers
 1. 3 (short reason when the key needs one)
 ```
+
+- Harry asked (27 Nov 2026) for far less bold and properly aligned bullets: no `**bold**` in notes, tabs for
+  nesting, callouts for notes/traps/memory aids, and a blank line before and after every table (otherwise the
+  next bullet is swallowed into the table).
 
 - File name `NN Title.md` (no apostrophes: `11 Pilots Licences.md`), same NN as the scan; frontmatter
   `topic:` is the display name. Tag `ppl/law` for Air Law (use the subject's tag otherwise; check a sibling note).

@@ -148,6 +148,7 @@ button.sc:hover{border-color:var(--accent)}
 .acc-fig{padding:4px 16px 18px}
 .acc-dg{display:inline-block;margin-left:10px;padding:1px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:.72rem;font-weight:600;vertical-align:2px}
 .acc-b li{margin-block:6px}
+b.k{font-weight:inherit}
 .acc-b li::marker{color:var(--accent)}
 
 .focus-wrap{max-width:720px;margin:0 auto}
@@ -624,7 +625,7 @@ function streak(){var d=today(),n=0;if(!S.days[d])d--;while(S.days[d]>0){n++;d--
 function clozePool(n){
   if(n._cz)return n._cz;var out=[];
   n.sections.forEach(function(s,si){s[1].forEach(function(b,bi){
-    var sp=[],re=/<(b|code)>([\s\S]*?)<\/\1>/g,m;
+    var sp=[],re=/<(b|code)(?: class="k")?>([\s\S]*?)<\/\1>/g,m;
     while((m=re.exec(b))){var t=plain(m[2]).trim();if(t.length>=2&&t.length<=40&&!/:$/.test(t))sp.push({full:m[0],ans:t})}
     if(sp.length)out.push({si:si,bi:bi,html:b,sp:sp})})});
   return n._cz=out}
