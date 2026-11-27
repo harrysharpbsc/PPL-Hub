@@ -23,11 +23,8 @@ function dbSide(x,y,s,c,flip){return'<g transform="translate('+x+' '+y+') scale(
 /* arc path on a circle, angles in degrees clockwise from north */
 function dbArc(cx,cy,r,a0,a1){function p(a){var q=(a-90)*Math.PI/180;return[dbN(cx+Math.cos(q)*r),dbN(cy+Math.sin(q)*r)]}var s=p(a0),e=p(a1);return'M'+s[0]+' '+s[1]+'A'+r+' '+r+' 0 '+((a1-a0+360)%360>180?1:0)+' 1 '+e[0]+' '+e[1]}
 function dbSector(cx,cy,r,a0,a1,fill,op){return'<path d="M'+cx+' '+cy+'L'+dbArc(cx,cy,r,a0,a1).slice(1)+'Z" fill="'+fill+'" opacity="'+op+'"/>'}
-/* cumulus-style cloud: a flat base and overlapping rounded tops, fitted into the w x h box at (x,y) */
-function dbCloud(x,y,w,h,op){var b=y+h,r=h*.42,pts=[[.16,.62,.55],[.34,.38,.75],[.55,.30,.85],[.75,.45,.7],[.88,.66,.5]],d='';
-  pts.forEach(function(p){var cx=x+w*p[0],cy=y+h*p[1],rr=r*p[2]*1.25;d+='M'+dbN(cx-rr)+' '+dbN(cy)+'a'+dbN(rr)+' '+dbN(rr)+' 0 1 0 '+dbN(rr*2)+' 0a'+dbN(rr)+' '+dbN(rr)+' 0 1 0 '+dbN(-rr*2)+' 0Z'});
-  d+='M'+dbN(x+w*.08)+' '+dbN(b-h*.3)+'H'+dbN(x+w*.94)+'V'+dbN(b)+'H'+dbN(x+w*.08)+'Z';
-  return'<g opacity="'+(op||1)+'"><path d="'+d+'" fill="var(--surface-2)" stroke="var(--ink-3)" stroke-width="1.6"/><path d="'+d+'" fill="var(--surface-2)"/></g>'}
+/* cloud: the puffy grey outline the live diagrams used (fixed light grey: clouds stay light in dark mode), fitted into w x h at (x,y) */
+function dbCloud(x,y,w,h){var x0=x+h*.4,W=w-h*.8;return'<path d="M'+dbN(x0)+' '+dbN(y+h)+'q-'+dbN(h*.6)+' 0 -'+dbN(h*.4)+' -'+dbN(h*.5)+'q0 -'+dbN(h*.6)+' '+dbN(h*.6)+' -'+dbN(h*.5)+'q'+dbN(W*.15)+' -'+dbN(h*.7)+' '+dbN(W*.4)+' -'+dbN(h*.3)+'q'+dbN(W*.3)+' -'+dbN(h*.4)+' '+dbN(W*.45)+' '+dbN(h*.25)+'q'+dbN(h*.6)+' '+dbN(h*.1)+' '+dbN(h*.4)+' '+dbN(h*.55)+'q0 '+dbN(h*.5)+' -'+dbN(h*.5)+' '+dbN(h*.5)+'Z" fill="#c7ced6" stroke="#9aa6b3" stroke-width=".9"/>'}
 /* mist or low cloud: soft horizontal bands between y1 and y2 */
 function dbMist(x1,x2,y1,y2){var s='',n=4;for(var k=0;k<n;k++){var y=y1+(y2-y1)*k/n;s+='<rect x="'+x1+'" y="'+dbN(y)+'" width="'+(x2-x1)+'" height="'+dbN((y2-y1)/n+1)+'" fill="var(--ink-3)" opacity="'+dbN(.42-k*.09)+'"/>'}
   for(k=0;k<3;k++)s+='<path d="M'+x1+' '+dbN(y1+6+k*9)+'q'+dbN((x2-x1)/8)+' -5 '+dbN((x2-x1)/4)+' 0t'+dbN((x2-x1)/4)+' 0t'+dbN((x2-x1)/4)+' 0t'+dbN((x2-x1)/4)+' 0" fill="none" stroke="var(--surface)" stroke-width="1.4" opacity=".55"/>';return s}

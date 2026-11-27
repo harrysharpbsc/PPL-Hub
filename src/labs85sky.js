@@ -17,14 +17,14 @@ var VMC=(DSEC['VFR flight planning and VMC minima (SS05)']||[])[0];
 add('VFR, IFR and Special VFR (Skyway Code)',[
  [{h:VMC?VMC[1]:''},0,0,'','','VMC minima'],
  ['Special VFR in a control zone',320,212,
-  '<circle cx="90" cy="104" r="76" class="fa" opacity=".08"/><circle cx="90" cy="104" r="76" fill="none" class="sa" stroke-width="1.8" stroke-dasharray="7 3"/>'+T(90,44,'CTR','t1 ta','middle')
-  +dbCloud(40,56,100,40)+side(92,128,.6,'a')
+  '<circle cx="90" cy="104" r="76" class="fa" opacity=".08"/><circle cx="90" cy="104" r="76" fill="none" class="sa" stroke-width="1.8" stroke-dasharray="7 3"/>'+T(90,40,'CTR','t1 ta','middle')
+  +dbCloud(40,60,100,36)+side(92,128,.6,'a')
   +box(180,8,132,94,'var(--surface)','var(--accent)')+T(190,26,'To accept SVFR','t1')+T(190,42,'clear of cloud','t2')+T(190,56,'surface in sight','t2')+T(190,70,'visibility 1,500 m+','t2')+T(190,84,'140 kt or less','t2')
   +box(180,110,132,94,'var(--surface)','var(--mid)')+T(190,128,'Take-off or landing','t1 tm')+T(190,144,'not if ground','t2')+T(190,158,'visibility is below','t2')+T(190,172,'1,500 m or the','t2')+T(190,186,'ceiling below 600 ft','t2'),
   'Special VFR lets you fly in a control zone below VMC without IFR, with ATC separating you from IFR and other SVFR traffic.','Special VFR'],
  ['When VFR is not enough in a CTR',320,206,
-  gnd(176,30)+rwy(120,170,80,6)+dbCloud(10,62,90,42)+dbCloud(112,58,110,46)+dbCloud(230,64,86,40)+L('M0 104H320','sr',1.2,'4 3')+T(8,98,'ceiling below 1,500 ft','t1 tr')
-  +dbMist(0,320,108,170)+T(160,138,'or ground visibility under 5 km','t1 tr','middle')
+  gnd(176,30)+rwy(120,170,80,6)+'<rect x="0" y="80" width="320" height="24" fill="#c7ced6" opacity=".9"/>'+L('M0 104H320','sr',1.2,'4 3')+T(8,98,'ceiling below 1,500 ft','t1 tr')
+  +'<rect x="0" y="104" width="320" height="66" fill="#e7ebee" opacity=".5"/>'+T(160,138,'or ground visibility under 5 km','t1 tr','middle')
   +T(160,28,'Ask for Special VFR instead','t1 tg','middle')+T(160,44,'VFR is never allowed in Class A','t2','middle')+T(160,196,'no VFR take-off, landing, ATZ or circuit','t2','middle'),
   'In a control zone, VFR stops below a 1,500 ft ceiling or 5 km ground visibility: no VFR take-off, landing, ATZ entry or circuit. Ask ATC for Special VFR.','Other VFR requirements']
 ]);
@@ -73,18 +73,21 @@ add('Route planning and altitude selection (Skyway Code)',[
 ]);
 
 add('Altimeter settings (Skyway Code)',[
- ['QFE, QNH and 1013',320,226,
+ ['QFE, QNH and 1013',320,272,
   T(8,16,'High-pressure day: QNH above 1013','t1')
-  +'<rect x="0" y="26" width="320" height="150" class="fm" opacity=".09"/>'+T(312,40,'flight levels:','t2 tm','end')+T(312,54,'measured from','t2 tm','end')+T(312,68,'the 1013 level','t2 tm','end')
-  +'<path d="M0 206H320V226H0Z" fill="var(--ch-wt)"/>'+T(312,222,'mean sea level','t2','end')+'<path d="M0 186Q60 178 130 186V206H0Z" class="gnd"/>'+rwy(40,180,64,6)+T(72,172,'aerodrome 300 ft','t2','middle')
-  +L('M0 176H320','sm',1.4,'5 3')+T(150,172,'1013 hPa level','t2 tm')
-  +side(216,64,.6,'a')+AR('M196 74V178',196,170,196,180,'g',1.4)+AR('M212 74V204',212,196,212,206,'a',1.4)+AR('M228 74V174',228,166,228,176,'m',1.4)
-  +T(190,110,'QFE: height','t1 tg','end')+T(190,124,'above aerodrome','t2','end')+T(234,104,'QNH: altitude','t1 ta')+T(234,118,'above sea level','t2')+T(234,142,'1013: flight level','t1 tm')+T(234,156,'above 1013 level','t2'),
+  +L('M8 36H20','sg',3)+T(26,40,'QFE: height above the aerodrome','t2')+L('M8 52H20','sa',3)+T(26,56,'QNH: altitude above sea level','t2')+L('M8 68H20','sm',3)+T(26,72,'1013: flight level above the 1013 level','t2')
+  +'<rect x="0" y="84" width="320" height="142" class="fm" opacity=".07"/>'+L('M0 92H320','s2',1,'5 4')+side(290,90,.55,'a')
+  +'<path d="M0 240H320V272H0Z" fill="var(--ch-wt)"/>'+T(312,264,'mean sea level','t2','end')
+  +'<path d="M0 210Q60 204 120 210V240H0Z" class="gnd"/>'+rwy(24,204,70,6)+T(8,232,'aerodrome 300 ft','t2')
+  +L('M0 226H320','sm',1.4,'5 3')+T(228,220,'1013 hPa level','t2 tm')
+  +AR('M60 204V98',60,106,60,94,'g',1.6)+T(66,124,'QFE','t1 tg')
+  +AR('M140 240V98',140,106,140,94,'a',1.6)+T(146,124,'QNH','t1 ta')
+  +AR('M220 226V98',220,106,220,94,'m',1.6)+T(226,124,'FL','t1 tm')+T(226,138,'measured from','t2 tm')+T(226,152,'the 1013 level','t2 tm'),
   'On the ground QFE reads zero and QNH reads the aerodrome elevation. Above the transition altitude, set 1013 for flight levels, measured from the 1013 hPa level. On a high-pressure day that level is above sea level, so the flight level is less than the altitude.','Four pressure settings'],
  ['Transition altitude and level',320,226,
   T(160,22,'Flight levels on 1013','t1','middle')
-  +'<rect x="0" y="104" width="320" height="44" class="fm" opacity=".15"/>'+L('M0 104H320','sk',1)+L('M0 148H320','sk',1)+T(160,130,'transition layer','t1','middle')
-  +T(8,98,'transition level (TL): lowest flight level above the TA','t2')+T(8,164,'transition altitude (TA): 3,000 ft over most of the UK','t2')
+  +'<rect x="0" y="104" width="320" height="44" class="fm" opacity=".15"/>'+L('M0 104H320','sk',1)+L('M0 148H320','sk',1)+T(166,130,'transition layer','t1','middle')
+  +T(56,98,'TL: lowest flight level above the TA','t2')+T(56,164,'TA: 3,000 ft over most of the UK','t2')
   +AR('M40 196V40',40,48,40,36,'a',1.4)+T(50,46,'Climbing: set 1013','t1 ta')+T(50,60,'as you pass the TA','t2')
   +AR('M292 40V196',292,188,292,200,'a',1.4)+T(282,68,'Descending: set QNH','t1 ta','end')+T(282,82,'as you pass the TL','t2','end')
   +T(160,218,'Altitudes on QNH','t1','middle'),
@@ -113,9 +116,9 @@ add('Fuel, flight plans and aerodrome planning (Skyway Code)',[
 
 add('Rules of the Air essentials (Skyway Code)',[
  ['Right of way on the ground',320,196,
-  box(4,8,100,180)+T(54,28,'Head-on','t1','middle')+plane(54,150,0,'a',1.1)+plane(54,58,180,'k',1.1)+AR('M54 134Q54 118 80 112',72,113,82,112,'a',1.2)+AR('M54 74Q54 90 28 96',36,95,26,96,'k',1.2)+T(54,164,'both stop or','t2','middle')+T(54,178,'turn right','t2','middle')
-  +box(110,8,100,180)+T(160,28,'Converging','t1','middle')+plane(140,148,0,'a',1.1)+plane(190,90,270,'k',1.1)+T(160,164,'other on right:','t2 ta','middle')+T(160,178,'you give way','t2 ta','middle')
-  +box(216,8,100,180)+T(266,28,'Overtaking','t1','middle')+plane(266,64,0,'k',1.1)+plane(266,148,0,'a',1.1)+AR('M260 132L242 92',246,100,242,90,'a',1.2)+AR('M272 132L290 92',286,100,290,90,'a',1.2)+T(266,164,'keep well clear,','t2 ta','middle')+T(266,178,'either side','t2 ta','middle'),
+  box(4,8,100,180)+T(54,28,'Head-on','t1','middle')+plane(54,134,0,'a',1.1)+plane(54,56,180,'k',1.1)+AR('M54 118Q54 104 80 98',72,99,82,98,'a',1.2)+AR('M54 72Q54 86 28 92',36,91,26,92,'k',1.2)+T(54,164,'both stop or','t2','middle')+T(54,178,'turn right','t2','middle')
+  +box(110,8,100,180)+T(160,28,'Converging','t1','middle')+plane(140,134,0,'a',1.1)+plane(190,84,270,'k',1.1)+T(160,164,'other on right:','t2 ta','middle')+T(160,178,'you give way','t2 ta','middle')
+  +box(216,8,100,180)+T(266,28,'Overtaking','t1','middle')+plane(266,58,0,'k',1.1)+plane(266,134,0,'a',1.1)+AR('M260 118L242 82',246,90,242,80,'a',1.2)+AR('M272 118L290 82',286,90,290,80,'a',1.2)+T(266,164,'keep well clear,','t2 ta','middle')+T(266,178,'either side','t2 ta','middle'),
   'On the ground the rules match the air, except an overtaker may pass on either side, keeping well clear. Give way to aircraft taking off or landing, and to emergency vehicles.','Right of way on the ground'],
  ['The pilot in command',320,196,
   '<circle cx="72" cy="98" r="56" fill="var(--accent-soft)" stroke="var(--accent)"/>'+T(72,94,'Final','t1','middle')+T(72,110,'authority','t1','middle')
@@ -146,28 +149,29 @@ add('Airspace, ATZ, MATZ and transponders (Skyway Code)',[
 
 function circ(){return rwy(100,96,120,8)+L('M220 100H70V160H250V100H220','sa',1.8,'6 3')}
 add('Aerodrome operations and circuits (Skyway Code)',[
- ['Live side and dead side',320,214,
-  '<rect x="0" y="0" width="320" height="100" class="fm" opacity=".08"/><rect x="0" y="100" width="320" height="114" class="fa" opacity=".05"/>'
+ ['Live side and dead side',320,222,
+  '<rect x="0" y="0" width="320" height="100" class="fm" opacity=".08"/><rect x="0" y="100" width="320" height="122" class="fa" opacity=".05"/>'
   +AR('M16 40V14',16,22,16,10,'k',1.4)+T(16,54,'N','t1','middle')
   +rwy(112,96,96,8)+T(160,90,'runway 27','t2','middle')
   +L('M112 100H78Q62 100 62 116V156Q62 172 78 172H242Q258 172 258 156V116Q258 100 242 100H208','sa',1.8,'6 3')
-  +head(120,100,104,100,'a')+head(62,124,62,144,'a')+head(140,172,170,172,'a')+head(258,150,258,130,'a')+head(240,100,222,100,'a')
+  +head(120,100,104,100,'a')+head(62,124,62,144,'a')+head(176,172,200,172,'a')+head(258,150,258,130,'a')+head(240,100,222,100,'a')
   +T(160,34,'DEAD SIDE','t1','middle')+T(160,50,'no circuit traffic: descend here','t2','middle')+T(160,64,'after an overhead join','t2','middle')
-  +T(160,136,'LIVE SIDE','t1 ta','middle')+T(160,150,'circuit traffic','t2','middle')
-  +T(84,90,'upwind','t2','middle')+T(56,140,'crosswind','t2','end')+T(160,190,'downwind','t2','middle')+T(264,140,'base','t2')+T(236,90,'final','t2','middle')
-  +T(96,206,'"downwind" call','t2 tm','middle')+T(256,78,'"final" call','t2 tm','middle')+L('M96 176V196','sm',1,'2 2')+L('M232 96V82','sm',1,'2 2')
-  +plane(110,172,90,'a',1)+T(312,206,'not to scale','t2','end'),
+  +T(160,132,'LIVE SIDE','t1 ta','middle')+T(160,146,'circuit traffic','t2','middle')
+  +T(84,90,'upwind','t2','middle')+T(56,140,'crosswind','t2','end')+T(220,190,'downwind','t2','middle')+T(264,140,'base','t2')+T(234,118,'final','t2','middle')
+  +L('M112 166V178','sm',2.4)+T(112,196,'"downwind" call','t2 tm','middle')+T(112,210,'abeam upwind end','t2','middle')
+  +L('M236 94V106','sm',2.4)+T(312,86,'"final" call','t2 tm','end')
+  +plane(150,172,90,'a',1)+T(312,214,'not to scale','t2','end'),
   'Left-hand circuit shown. Calls on downwind (abeam the upwind end) and final, plus base or late downwind if it helps others picture you.','The circuit'],
- ['The overhead join',320,318,
-  '<rect x="0" y="0" width="320" height="100" class="fm" opacity=".08"/><rect x="0" y="100" width="320" height="96" class="fa" opacity=".05"/>'
+ ['The overhead join',320,326,
+  '<rect x="0" y="0" width="320" height="100" class="fm" opacity=".08"/><rect x="0" y="100" width="320" height="108" class="fa" opacity=".05"/>'
   +AR('M16 40V14',16,22,16,10,'k',1.4)+T(16,54,'N','t1','middle')+rwy(112,96,96,8)+T(196,90,'runway 27','t2','middle')
   +L('M112 100H78Q62 100 62 116V156Q62 172 78 172H242Q258 172 258 156V116Q258 100 242 100H208','sa',1.6,'6 3')
-  +head(140,172,170,172,'a')+head(258,150,258,130,'a')
-  +AR('M160 192V104',160,112,160,100,'r',2)+L('M160 100V50Q160 22 130 22Q100 22 100 50V100Q100 118 76 128','sr',2)+head(84,124,72,130,'r')
-  +[[160,100,1],[132,22,2],[100,100,3],[72,132,4]].map(function(b){return'<circle cx="'+b[0]+'" cy="'+b[1]+'" r="10" class="fr"/><text x="'+b[0]+'" y="'+(b[1]+4)+'" text-anchor="middle" style="font:700 11px var(--f-body);fill:var(--surface)">'+b[2]+'</text>'}).join('')
-  +T(232,40,'DEAD SIDE','t1','middle')+T(232,54,'no circuit traffic','t2','middle')+T(222,150,'LIVE SIDE','t1 ta','middle')+T(222,164,'circuit traffic','t2','middle')
-  +T(168,26,'descend to 1,000 ft','t2 tr')+T(166,190,'arrive from any direction','t2')+T(8,190,'W/V 270°/10 kt','t2')
-  +[['Overhead at 2,000 ft QFE','1,000 ft above the circuit'],['Descend on the dead side','turning left, to 1,000 ft'],['Cross the upwind end','at circuit height'],['Join crosswind','then fly the circuit']].map(function(r,i){var y=210+i*27;return'<circle cx="18" cy="'+(y+6)+'" r="9" class="fr"/><text x="18" y="'+(y+10)+'" text-anchor="middle" style="font:700 11px var(--f-body);fill:var(--surface)">'+(i+1)+'</text>'+T(36,y+5,r[0],'t1')+T(36,y+18,r[1],'t2')}).join(''),
+  +head(176,172,200,172,'a')+head(258,150,258,130,'a')
+  +AR('M160 196V104',160,112,160,100,'r',2)+L('M160 100V50Q160 22 130 22Q100 22 100 50V84Q100 100 84 100H78Q62 100 62 116V132','sr',2.2)+head(62,124,62,138,'r')
+  +[[160,100,1],[132,22,2],[100,70,3],[44,126,4]].map(function(b){return'<circle cx="'+b[0]+'" cy="'+b[1]+'" r="10" class="fr"/><text x="'+b[0]+'" y="'+(b[1]+4)+'" text-anchor="middle" style="font:700 11px var(--f-body);fill:var(--surface)">'+b[2]+'</text>'}).join('')
+  +T(240,58,'DEAD SIDE','t1','middle')+T(240,72,'no circuit traffic','t2','middle')+T(168,30,'descend to 1,000 ft','t2 tr')
+  +T(96,196,'LIVE SIDE','t1 ta','middle')+T(96,210,'circuit traffic','t2','middle')+T(168,200,'arrive from any direction','t2')+T(312,16,'W/V 270°/10 kt','t2','end')
+  +[['Overhead at 2,000 ft QFE','1,000 ft above the circuit'],['Descend on the dead side','turning left, to 1,000 ft'],['Cross the upwind end','at circuit height'],['Join crosswind','then fly the circuit']].map(function(r,i){var y=222+i*26;return'<circle cx="18" cy="'+(y+6)+'" r="9" class="fr"/><text x="18" y="'+(y+10)+'" text-anchor="middle" style="font:700 11px var(--f-body);fill:var(--surface)">'+(i+1)+'</text>'+T(36,y+5,r[0],'t1')+T(36,y+18,r[1],'t2')}).join(''),
   'A joining aircraft gives way to traffic already in the circuit. Calls: "overhead", "deadside descending", then "downwind" abeam the upwind end and "final". Check the UK AIP (AD 2) for local procedures.','The circuit'],
  ['At the holding point',320,222,
   T(8,16,'Runway','t1')+'<rect x="0" y="24" width="320" height="40" fill="var(--ink-3)"/><path d="M0 44H320" stroke="#fff" stroke-width="1.5" stroke-dasharray="10 8"/>'

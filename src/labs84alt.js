@@ -108,7 +108,7 @@ var F=[
   +AR('M14 98H150',140,98,152,98,'k',1.3)+side(86,96,.42,'a')
   +up(30,174,102,'r')+T(36,120,'set aerodrome','t2 tr')+T(36,134,'QNH 1003','t2 tr')+up(136,174,102,'r')+T(130,154,'reset RPS','t2 tr','end')+T(130,168,'(1001)','t2 tr','end')
   +sea(164,312,190,8)+'<path d="M164 190V180H312V190Z" class="gnd"/>'
-  +'<path d="M228 180V56H298V180" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.2"/>'+T(263,128,'MATZ','t1','middle')+T(263,142,'up to 3,000','t2','middle')+T(263,156,'ft aal','t2','middle')+'<path d="M258 176H268V180H258Z" fill="var(--ink-3)"/>'
+  +'<path d="M228 180V56H298V180" fill="var(--warm-soft)" stroke="var(--warm)" stroke-width="1.2"/>'+T(263,128,'MATZ','t1','middle')+T(263,142,'up to 3,000','t2','middle')+T(263,156,'ft aal','t2','middle')+'<path d="M258 176H268V180H258Z" fill="var(--ink-3)"/>'
   +AR('M168 98H310',298,98,310,98,'k',1.3)+side(262,96,.42,'a')
   +up(206,174,102,'r')+T(200,124,'set','t2 tr','end')+T(200,138,'MATZ','t2 tr','end')+T(200,152,'QFE','t2 tr','end')+up(306,174,102,'r')+T(306,48,'reset RPS','t2 tr','end'),
   'Heights to scale. Under a TMA, set the QNH of an aerodrome beneath it (what the traffic above uses), then go back to the RPS once clear. Set the MATZ QFE (the clutch QFE in a combined MATZ) before entering and reset the RPS after leaving. An aerodrome QNH can never be below the RPS, which is the lowest forecast in the region.'],
