@@ -55,12 +55,13 @@ S('Winter weather and icing (SS03)',[
   +T(312,24,'Warm front: first','t1 tr','end')+T(312,38,'cloud lowers, rain','t2','end')+T(8,24,'Cold front: second','t1 ta')+T(8,38,'showers, gusts','t2')
   +AR('M110 190H230',220,190,232,190,'k',1.2)+T(170,208,'moving this way','t2','middle'),
   'You meet the warm front first: lowering cloud, rain and falling pressure. Then the warm sector, then the cold front with showers and gusts, often followed by good flying in clear air.','Fronts and depressions'],
- ['Frost on the wing',320,180,
+ ['Frost on the wing',320,196,
   '<path d="M30 92C60 52 170 42 290 86L292 90L290 94C200 108 80 116 30 92Z" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.6"/>'
   +'<path d="M40 78C80 54 170 48 270 78" class="sa" stroke-width="6" fill="none" stroke-dasharray="2 2" opacity=".6"/>'+T(160,40,'rough frost on top','t2 ta','middle')
-  +T(160,134,'Even light frost can cost up to','t1','middle')
-  +box(50,146,100,26,'none','var(--bad)')+T(100,164,'lift −30%','t1 tr','middle')+box(170,146,100,26,'none','var(--bad)')+T(220,164,'drag +40%','t1 tr','middle'),
-  'A thin layer of frost roughens the upper surface. Remove all frost, ice and snow before flight: brush it off without scratching, or use Type I fluid.','Frost, snow'],
+  +T(8,134,'Even light frost can cost up to','t1')
+  +T(8,162,'lift','t1')+'<rect x="60" y="150" width="200" height="16" rx="3" fill="none" stroke="var(--ink-3)"/><rect x="60" y="150" width="140" height="16" rx="3" class="fa" opacity=".55"/><rect x="200" y="150" width="60" height="16" class="fr" opacity=".28"/>'+T(268,163,'−30%','t1 tr')
+  +T(8,188,'drag','t1')+'<rect x="60" y="176" width="200" height="16" rx="3" class="fk" opacity=".22"/><rect x="190" y="176" width="70" height="16" class="fr" opacity=".55"/>'+L('M190 174V194','sk',1.2)+T(268,189,'+40%','t1 tr'),
+  'A thin layer of frost roughens the upper surface: up to 30% less lift and 40% more drag. Remove all frost, ice and snow before flight: brush it off without scratching, or use Type I fluid.','Frost, snow'],
  ['Airframe ice: where and when',320,196,
   L('M64 20V180','sk',1)+[[30,'+5°C'],[60,'0°C'],[100,'−5°C'],[140,'−10°C'],[175,'−15°C']].map(function(r){return L('M60 '+r[0]+'h8','sk',1)+T(54,r[0]+4,r[1],'t2','end')}).join('')
   +'<rect x="68" y="60" width="244" height="80" class="fa" opacity=".12"/>'+T(190,78,'Most airframe ice: 0 to −10°C','t1','middle')
@@ -142,19 +143,20 @@ S('Stalls, spins and loss of control (SS30)',[
 S('VFR flight into IMC (SS33)',[
  ['The 180° turn out of cloud',320,206,
   '<path d="M150 172V112A50 50 0 0 1 250 112V172" fill="none" class="sa" stroke-width="2.4" stroke-dasharray="6 4"/>'+head(250,160,250,182,'a')
-  +plane(150,168,0,'a',1.3)+cloudB(30,22,110,60)+T(85,66,'cloud ahead','t1','middle')
+  +plane(150,168,0,'a',1.3)+dbCloud(24,14,124,66)+T(85,66,'cloud ahead','t1','middle')
   +box(196,10,116,78,'var(--surface)','var(--accent)')+T(206,28,'Rate 1 turn','t1 ta')+T(206,44,'bank 20° or less','t2')+T(206,58,'180° in 1 minute','t2')+T(206,72,'hold height','t2')
   +T(136,140,'note the','t2','end')+T(136,154,'heading first','t2','end')+T(250,200,'roll out, hold it','t2 ta','middle'),
   'Trust the instruments and keep the wings level, then make a gentle rate 1 turn. Without a heading indicator, time it: 1 minute for 180°.','The 180'],
  ['Tricks your balance can play',320,296,
-  [['The leans','you feel level,','but are banked'],['Somatogravic','speeding up feels','like pitching up'],['Coriolis','head moved in a turn:','false rotation'],['Inversion','abrupt level-off','feels like tumbling'],['False horizon','sloping cloud tops','look level'],['If you enter cloud','aviate, navigate,','communicate']].map(function(r,i){var x=8+(i%2)*156,y=8+Math.floor(i/2)*96,cx=x+74,cy=y+42,ic='';
-   if(i===0)ic='<g transform="translate('+cx+' '+cy+') rotate(-15)"><path d="M-24 0H24M-3 0V-7" class="sa" stroke-width="3"/></g>';
-   if(i===1)ic='<g transform="translate('+cx+' '+cy+') rotate(-12)"><path d="M-22 0H18L24-5" class="sa" stroke-width="3"/></g>'+AR('M'+(cx-30)+' '+(cy+10)+'H'+(cx+28),cx+20,cy+10,cx+30,cy+10,'r',1.2);
-   if(i===2)ic=AR('M'+(cx-20)+' '+cy+'a20 10 0 1 0 40 0',cx+20,cy-6,cx+20,cy-1,'a',1.6);
-   if(i===3)ic='<path d="M'+(cx-22)+' '+cy+'H'+(cx+22)+'M'+cx+' '+(cy-10)+'V'+(cy+10)+'" class="sa" stroke-width="3"/>'+AR('M'+(cx-26)+' '+(cy-12)+'Q'+cx+' '+(cy-28)+' '+(cx+26)+' '+(cy-12),cx+20,cy-16,cx+27,cy-11,'r',1.2);
-   if(i===4)ic='<path d="M'+(cx-32)+' '+(cy+8)+'L'+(cx+32)+' '+(cy-8)+'" stroke="var(--ink-3)" stroke-width="6"/>'+L('M'+(cx-32)+' '+(cy+12)+'H'+(cx+32),'s2',1,'3 3');
-   return box(x,y,148,88,i===5?'none':'none',i===5?'var(--bad)':'var(--line-2)')+T(x+10,y+20,r[0],i===5?'t1 tr':'t1')+ic+T(x+10,y+66,r[1],'t2')+T(x+10,y+80,r[2],'t2')}).join(''),
-  'Spatial disorientation is the killer in VFR flight into IMC. Your inner ear is wrong; the attitude indicator is right.','Spatial disorientation types'],
+  [['The leans','you feel level,','but are banked'],['Somatogravic','speeding up feels','like pitching up'],['Coriolis','head moved in a turn:','false rotation'],['Inversion','abrupt level-off','feels like tumbling'],['False horizon','sloping cloud tops','look level'],['If you enter cloud','aviate, navigate,','communicate']].map(function(r,i){var x=8+(i%2)*156,y=8+Math.floor(i/2)*96,cx=x+74,cy=y+44,ic='';
+   function rear(a,c,dash){return'<g transform="translate('+cx+' '+cy+') rotate('+a+')"'+(dash?' opacity=".55"':'')+'><path d="M-34 0H34" stroke="var(--'+c+')" stroke-width="3"'+(dash?' stroke-dasharray="4 3"':'')+'/><circle r="6" fill="'+(dash?'none':'var(--'+c+')')+'" stroke="var(--'+c+')" stroke-width="1.6"/><path d="M0-6V-14" stroke="var(--'+c+')" stroke-width="2.4"/></g>'}
+   if(i===0)ic=rear(0,'ink-3',1)+rear(-18,'accent')+T(x+142,y+40,'real','t2 ta','end')+T(x+142,y+54,'felt','t2','end');
+   if(i===1)ic='<g opacity=".5">'+dbSide(cx,cy-2,.62,'k').replace('scale(-0.62 0.62)','scale(-0.62 0.62) rotate(-16)')+'</g>'+dbSide(cx,cy+6,.62,'a')+AR('M'+(cx-46)+' '+(cy+22)+'H'+(cx+40),cx+30,cy+22,cx+42,cy+22,'r',1.4)+T(x+142,y+40,'felt','t2','end');
+   if(i===2)ic='<circle cx="'+cx+'" cy="'+cy+'" r="11" fill="none" stroke="var(--accent)" stroke-width="2"/><path d="M'+(cx-4)+' '+(cy-2)+'h2M'+(cx+3)+' '+(cy-2)+'h2" stroke="var(--accent)" stroke-width="2"/>'+AR('M'+(cx-30)+' '+(cy+6)+'A30 12 0 0 0 '+(cx+30)+' '+(cy+6),cx+22,cy+12,cx+31,cy+5,'a',1.4)+AR('M'+(cx+20)+' '+(cy-22)+'Q'+(cx+30)+' '+cy+' '+(cx+18)+' '+(cy+16),cx+22,cy+8,cx+17,cy+18,'r',1.4);
+   if(i===3)ic=dbSide(cx-6,cy+8,.62,'a')+AR('M'+(cx+22)+' '+(cy-8)+'A22 22 0 1 0 '+(cx-30)+' '+(cy-16),cx-24,cy-20,cx-31,cy-14,'r',1.4)+T(x+142,y+40,'felt','t2 tr','end');
+   if(i===4)ic=dbCloud(x+14,cy-10,70,24).replace('<g opacity="1">','<g opacity="1" transform="rotate(-10 '+cx+' '+cy+')">')+L('M'+(x+12)+' '+(cy+16)+'H'+(x+136),'s2',1,'4 3')+T(x+136,cy+10,'true horizon','t2','end');
+   return'<rect x="'+x+'" y="'+y+'" width="148" height="88" rx="8" fill="none" stroke="var('+(i===5?'--bad':'--line-2')+')" stroke-width="1.2"/>'+T(x+10,y+18,r[0],i===5?'t1 tr':'t1')+ic+T(x+10,y+68,r[1],'t2')+T(x+10,y+82,r[2],'t2')}).join(''),
+  'Spatial disorientation is the killer in VFR flight into IMC. Your inner ear is wrong; the attitude indicator is right. Each picture shows what really happens (solid) against what you feel (faint).','Spatial disorientation types'],
  ['VFR on top and the 3,000 ft rule',320,196,
   '<path d="M0 170H320V196H0Z" class="gnd"/><path d="M0 170L40 160L80 166L120 150L160 162L200 156L240 166L280 154L320 164V170Z" class="bld" opacity=".7"/>'
   +'<path d="M0 110Q60 98 120 110T240 108T320 106V130H0Z" fill="var(--surface-2)" stroke="var(--ink-3)"/>'

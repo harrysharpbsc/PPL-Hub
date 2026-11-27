@@ -67,8 +67,8 @@ var M2=[
  [function(cx,by){return man(cx,by,OUT_R,OUT_L)+arr(cx-27,by-31,cx-27,by-46)+arr(cx-27,by-31,cx-27,by-18)+arr(cx+27,by-31,cx+27,by-46)+arr(cx+27,by-31,cx+27,by-18)},'Slow down','(arms move up, down)'],
  [function(cx,by){return man(cx,by,OUT_R,DN_L)+arr(cx-27,by-31,cx-27,by-46)+arr(cx-27,by-31,cx-27,by-18)},'Slow engines on','the indicated side'],
  [function(cx,by){return man(cx,by,[[-5,-14],[-7,-28]],[[5,-14],[7,-28]])},'This bay','(arms vertical)'],
- [function(cx,by){return man(cx,by,[[-4,14],[10,10]],DN_L,{bats:false,extra:'<path d="M'+(cx+3)+' '+(by-50)+'h6M'+(cx+3)+' '+(by-47)+'h6M'+(cx+3)+' '+(by-44)+'h6" stroke="var(--ink)" stroke-width="1"/>'})},'Release brakes','(fist, then open)'],
- [function(cx,by){return man(cx,by,[[-4,14],[10,10]],DN_L,{bats:false,extra:'<circle cx="'+(cx+1)+'" cy="'+(by-44)+'" r="3.4" fill="'+SKd+'"/>'})},'Engage brakes','(open, then fist)'],
+ [function(cx,by){return man(cx,by,[[-4,14],[10,10]],DN_L,{bats:false,extra:seq(cx,by-80,'fist','palm')})},'Release brakes','(fist, then open)'],
+ [function(cx,by){return man(cx,by,[[-4,14],[10,10]],DN_L,{bats:false,extra:seq(cx,by-80,'palm','fist')})},'Engage brakes','(open, then fist)'],
  [function(cx,by){return man(cx,by,[[-15,0],[-15,-15]],DN_L)},'All clear: marshalling','finished'],
  [function(cx,by){return man(cx,by,[[-13,4],[-14,-10]],[[4,-14],[4,-28]],{extra:'<text x="'+(cx+16)+'" y="'+(by-80)+'" class="t1">2</text>'})+'<circle cx="'+(cx-23)+'" cy="'+(by-64)+'" r="8" fill="none" stroke="var(--bad)" stroke-width="1.2" stroke-dasharray="3 2"/>'},'Start engine no. 2','(fingers overhead)'],
  [function(cx,by){return man(cx,by,UP_R,[[6,13],[12,27]])+arr(cx-20,by-80,cx-20,by-58)+arr(cx-20,by-62,cx-20,by-84)},'Back tail to','starboard'],
@@ -86,12 +86,17 @@ var MH=[
 function cockpit(cx,by,extra){return'<path d="M'+(cx-40)+' '+by+'L'+(cx-36)+' '+(by-70)+'Q'+cx+' '+(by-78)+' '+(cx+36)+' '+(by-70)+'L'+(cx+40)+' '+by+'" stroke="var(--ink-2)" stroke-width="2" fill="none"/>'
  +'<path d="M'+(cx-17)+' '+(by-14)+'Q'+cx+' '+(by-34)+' '+(cx+17)+' '+(by-14)+'Z" fill="'+SKd+'"/><circle cx="'+cx+'" cy="'+(by-40)+'" r="9" fill="'+SKd+'"/>'+(extra||'')+'<path d="M'+(cx-42)+' '+by+'Q'+cx+' '+(by-22)+' '+(cx+42)+' '+by+'Z" fill="var(--accent)"/>'}
 function hand(x,y,open){return open?'<path d="M'+(x-4)+' '+(y+4)+'V'+(y-6)+'M'+(x-1.3)+' '+(y+4)+'V'+(y-8)+'M'+(x+1.4)+' '+(y+4)+'V'+(y-8)+'M'+(x+4)+' '+(y+4)+'V'+(y-6)+'" stroke="'+SK+'" stroke-width="2.2" stroke-linecap="round"/>':'<circle cx="'+x+'" cy="'+y+'" r="4" fill="'+SK+'" stroke="'+SKd+'" stroke-width=".8"/>'}
+/* hand symbols for brake and start signals: open palm, fist, two fingers up; seq shows a change a -> b */
+function palm(x,y,k){k=k||1;return'<g transform="translate('+x+' '+y+') scale('+k+')"><rect x="-5" y="-1" width="10" height="8" rx="2.5" fill="'+SK+'" stroke="#8a5530" stroke-width=".6"/><path d="M-3.6-1V-7.5M-1.2-1V-9M1.2-1V-9M3.6-1V-7.5" stroke="'+SK+'" stroke-width="2.1" stroke-linecap="round"/><path d="M-5 3.5L-8 0" stroke="'+SK+'" stroke-width="2.1" stroke-linecap="round"/></g>'}
+function fist(x,y,k){k=k||1;return'<g transform="translate('+x+' '+y+') scale('+k+')"><rect x="-5.5" y="-4" width="11" height="11" rx="3.5" fill="'+SK+'" stroke="#8a5530" stroke-width=".7"/><path d="M-3.5-1H3.5M-3.5 1.6H3.5" stroke="#8a5530" stroke-width=".7"/></g>'}
+function two(x,y,k){k=k||1;return'<g transform="translate('+x+' '+y+') scale('+k+')"><rect x="-5" y="-1" width="10" height="8" rx="2.5" fill="'+SK+'" stroke="#8a5530" stroke-width=".6"/><path d="M-1.4-1V-10M1.6-1V-10" stroke="'+SK+'" stroke-width="2.1" stroke-linecap="round"/></g>'}
+function seq(x,y,a,b,k){k=k||1;var f={palm:palm,fist:fist};return f[a](x-13*k,y,k)+'<path d="M'+(x-5*k)+' '+y+'H'+(x+4*k)+'" stroke="#4F5D7A" stroke-width="1.2"/><path d="M'+(x+6*k)+' '+y+'l-4 -3v6z" fill="#4F5D7A"/>'+f[b](x+13*k,y,k)}
 var MP=[
- [function(cx,by){return cockpit(cx,by,'<path d="M'+(cx+12)+' '+(by-22)+'L'+(cx-14)+' '+(by-40)+'" stroke="'+SK+'" stroke-width="4" stroke-linecap="round"/>'+hand(cx-16,by-44,false))},'Brakes engaged','(fingers, then fist)'],
- [function(cx,by){return cockpit(cx,by,'<path d="M'+(cx+12)+' '+(by-22)+'L'+(cx-14)+' '+(by-40)+'" stroke="'+SK+'" stroke-width="4" stroke-linecap="round"/>'+hand(cx-16,by-44,false))},'Brakes released','(fist, then fingers)'],
+ [function(cx,by){return cockpit(cx,by,'<path d="M'+(cx+12)+' '+(by-22)+'L'+(cx-8)+' '+(by-42)+'" stroke="'+SK+'" stroke-width="4" stroke-linecap="round"/>'+seq(cx,by-56,'palm','fist',1.15))},'Brakes engaged','(fingers, then fist)'],
+ [function(cx,by){return cockpit(cx,by,'<path d="M'+(cx+12)+' '+(by-22)+'L'+(cx-8)+' '+(by-42)+'" stroke="'+SK+'" stroke-width="4" stroke-linecap="round"/>'+seq(cx,by-56,'fist','palm',1.15))},'Brakes released','(fist, then fingers)'],
  [function(cx,by){return cockpit(cx,by,hand(cx-26,by-44,true)+hand(cx+26,by-44,true)+arr(cx-22,by-56,cx-10,by-56)+arr(cx+22,by-56,cx+10,by-56))},'Insert chocks','(hands in, cross)'],
  [function(cx,by){return cockpit(cx,by,hand(cx-6,by-44,true)+hand(cx+6,by-44,true)+arr(cx-10,by-56,cx-26,by-56)+arr(cx+10,by-56,cx+26,by-56))},'Remove chocks','(hands out)'],
- [function(cx,by){return cockpit(cx,by,hand(cx-22,by-46,true)+T(cx-22,by-56,'no. 2','t2','middle'))},'Ready to start','(fingers = engine)'],
+ [function(cx,by){return cockpit(cx,by,two(cx-22,by-48,1.4)+T(cx+10,by-58,'no. 2','t2','middle'))},'Ready to start','(fingers = engine)'],
  [function(cx,by){return'<path d="M'+(cx-44)+' '+(by-50)+'H'+(cx+44)+'" stroke="var(--ink-2)" stroke-width="3"/><circle cx="'+cx+'" cy="'+(by-50)+'" r="7" fill="var(--ink-2)"/>'+[[-34,'4'],[-18,'3'],[18,'2'],[34,'1']].map(function(e){return'<circle cx="'+(cx+e[0])+'" cy="'+(by-44)+'" r="4.5" fill="var(--surface)" stroke="var(--ink)"/>'+T(cx+e[0],by-28,e[1],'d1','middle')}).join('')+T(cx,by-64,'front view','t2','middle')+T(cx-30,by-6,'stbd','t2','middle')+T(cx+30,by-6,'port','t2','middle')},'Engine numbers, from','marshaller\'s right']
 ];
 var FF='#8a5530',ffo={col:FF,leg:'#6d4224',head:'#e0b48a',band:true,helmet:true,bats:false,hand:'#333'};
@@ -136,7 +141,7 @@ function lrow(y,name,col,kind,air,gnd){var s='<rect x="8" y="'+(y+18)+'" width="
 var M1L=[['Next marshaller','point to them'],['Move ahead','beckon up, back'],['Turn to port','right arm down'],['Turn starboard','left arm down'],['Stop','crossed overhead'],['Start engine','circle, point'],['Chocks in','swing inwards'],['Chocks away','swing outwards'],['Cut engine','hand at throat']];
 var M2L=[['Slow down','patting down'],['Slow one side','pat that side'],['This bay','arms vertical'],['Release brakes','fist, then open'],['Engage brakes','open, then fist'],['All clear','arm up, palm out'],['Start engine 2','circle, 2 up'],['Back tail','to starboard'],['Back tail','to port']];
 var MHL=[['Hover','arms out'],['Land','crossed low'],['Move up','palms up'],['Move down','palms down'],['Move sideways','sweep across'],['Move back','sweep up'],['Release load','slice under arm']];
-var MPL=[['Brakes on','fingers, then fist'],['Brakes off','fist, then fingers'],['Insert chocks','hands in, cross'],['Remove chocks','hands out'],['Ready to start','fingers = engine'],['Engine numbers','no. 1 port outer']];
+var MPL=[['Brakes on','open, then fist'],['Brakes off','fist, then open'],['Insert chocks','hands in, cross'],['Remove chocks','hands out'],['Ready to start','2 fingers: no. 2'],['Engine numbers','no. 1 port outer']];
 var MEL=[['Evacuate','beckon backwards'],['Stop','wrists crossed'],['Contained','sweep in, low'],['Fire','fan, point at it']];
 
 var F=[
@@ -201,18 +206,20 @@ var F=[
   +AR('M276 166H250',258,166,248,166,'r',1.6)+T(244,170,'end: red','t1 tr','end'),
   'Threshold lights are steady green, seen from the approach: the runway starts here. Runway end lights are steady red, seen along the runway: it ends here. White edge lights line both sides. Arrows show which way each set shines.'],
 /* 9 */['Obstacle lighting',320,214,
-  '<path d="M8 178H312V206H8Z" class="gnd"/>'+L('M8 104H312','sr',1,'4 3')+T(312,98,'45 m','t1 tr','end')
-  +'<path d="M28 178V140H74V178Z" class="bld"/><circle cx="51" cy="140" r="4" fill="#E0262B"/>'+T(51,124,'one red','t2','middle')+T(51,196,'under 45 m','t2','middle')
-  +'<path d="M104 178V56H170V178Z" class="bld"/>'+[[104,56],[137,56],[170,56],[104,104],[170,104],[104,150],[170,150]].map(function(p){return'<circle cx="'+p[0]+'" cy="'+p[1]+'" r="4" fill="#E0262B"/>'}).join('')
-  +T(137,28,'red lights','t2','middle')+T(137,42,'outline it','t2','middle')+T(137,196,'over 45 m','t2','middle')
-  +[0,1,2,3,4,5,6,7].map(function(k){return'<path d="M'+(236-k*.8)+' '+(50+k*16)+'H'+(252+k*.8)+'V'+(66+k*16)+'H'+(236-k*.8)+'Z" fill="'+(k%2?'#ffffff':'#E0262B')+'" stroke="#4F5D7A" stroke-width=".6"/>'}).join('')
-  +T(244,196,'mast by day:','t2','middle')+T(286,40,'red and','t2','middle')+T(286,54,'white bands','t2','middle'),
-  'At night an obstacle up to 45 m tall has a single steady red light on top; anything taller has extra red lights outlining it. By day tall obstacles may be painted in red (or orange) and white bands. Obstacles within 15 km of an aerodrome are normally lit.'],
+  '<path d="M8 178H312V206H8Z" class="gnd"/>'+L('M8 104H312','sr',1,'4 3')+T(8,98,'45 m','t1 tr')
+  +'<path d="M24 178V140H64V178Z" class="bld"/><circle cx="44" cy="140" r="4" fill="#E0262B"/>'+T(44,124,'one red','t2','middle')+T(44,196,'under 45 m','t2','middle')
+  +'<path d="M88 178V56H148V178Z" class="bld"/>'+[[88,56],[118,56],[148,56],[88,104],[148,104],[88,150],[148,150]].map(function(p){return'<circle cx="'+p[0]+'" cy="'+p[1]+'" r="4" fill="#E0262B"/>'}).join('')
+  +T(118,28,'red lights','t2','middle')+T(118,42,'outline it','t2','middle')+T(118,196,'over 45 m','t2','middle')
+  +[0,1,2,3,4,5,6,7].map(function(k){return'<path d="M'+(196-k*.8)+' '+(50+k*16)+'H'+(212+k*.8)+'V'+(66+k*16)+'H'+(196-k*.8)+'Z" fill="'+(k%2?'#ffffff':'#E0262B')+'" stroke="#4F5D7A" stroke-width=".6"/>'}).join('')+T(204,196,'mast','t2','middle')
+  +'<path d="M248 178L256 112M300 178L292 112M248 178L292 112M300 178L256 112" stroke="#E0262B" stroke-width="2"/>'
+  +[0,1,2,3].map(function(r){return[0,1,2,3,4].map(function(c){return'<path d="M'+(252+c*9.6)+' '+(68+r*11)+'h9.6v11h-9.6Z" fill="'+((r+c)%2?'#ffffff':'#E0262B')+'" stroke="#4F5D7A" stroke-width=".4"/>'}).join('')}).join('')
+  +'<path d="M250 68L274 54L300 68Z" fill="#E0262B"/>'+T(274,196,'tower','t2','middle')+T(312,24,'by day: red and white','t2','end')+T(312,38,'bands or chequers','t2','end'),
+  'At night an obstacle up to 45 m tall has a single steady red light on top; anything taller has extra red lights outlining it. By day tall obstacles may be marked with red (or orange) and white bands or chequers. Obstacles within 15 km of an aerodrome are normally lit.'],
 /* 10 */['Direction of take-off and landing',320,galH(4),
   gal([[sT(false),'Landing T','land towards cross-arm'],[sT(true),'T with a disc','directions may differ'],[mBall(1,'#111'),'Black ball (mast)','directions may differ',true],
        [function(cx,cy){return sT(false)(cx+4,cy)+'<path d="M'+(cx+52)+' '+(cy-26)+'H'+(cx-34)+'" stroke="#E8EDF6" stroke-width="1.6"/><path d="M'+(cx-40)+' '+(cy-26)+'l8-4v8z" fill="#E8EDF6"/>'},'Reading the T','land this way: ←']]),
   'Land and take off parallel with the shaft of the T, towards the cross-arm, unless ATC say otherwise. A disc at the head of the T, or a black ball on the mast, means landing and take-off may be in different directions.'],
-/* 11 */['Use hard surfaces only',320,galH(2),
+/* 11 */['Use hard surfaces only',320,galH(2,3),
   gal([[sDb(false),'Dumb-bell','land, take off, taxi|on hard surfaces only'],[sDb(true),'Black strips on discs','land, take off on runway|taxiing may use grass']],3),
   'Plain dumb-bell: keep to paved, metalled or similar hard surfaces on the ground. Black strips across the discs: take off and land on a runway, but taxiing need not be on hard surfaces.'],
 /* 12 */['Light aircraft areas',320,galH(2,3),
@@ -232,15 +239,17 @@ var F=[
 /* 15 */['Special precautions and landing prohibited',320,galH(2),
   gal([[sSq(false),'Yellow diagonal','take special care'],[sSq(true),'Yellow cross','landing prohibited']]),
   'One diagonal on a red square: the manoeuvring area is in poor condition, so take special care on approach and landing. A diagonal cross: landing is prohibited, probably for some time.'],
-/* 16 */['Helicopter operations markers',320,164,
-  '<rect x="8" y="8" width="148" height="148" rx="8" class="panel"/><rect x="164" y="8" width="148" height="148" rx="8" class="panel"/>'
-  +'<path d="M66 30H76V102H66ZM96 30H106V102H96ZM76 61H96V71H76Z" fill="#fff" stroke="var(--ink)" stroke-width="1"/>'
-  +L('M44 30V102M39 30H49M39 102H49','sk',1.2)+T(36,70,'2 m','t1','end')+L('M66 116H106M66 111V121M96 111V121','sk',1.2)+T(86,134,'1 m','t2','middle')
-  +T(82,150,'signals area','t2','middle')+T(120,26,'20 cm','t2')
-  +'<path d="M218 26H232V104H218ZM244 26H258V104H244ZM232 58H244V72H232Z" fill="#fff" stroke="var(--ink)" stroke-width="1"/>'
-  +L('M198 26V104M193 26H203M193 104H213','sk',1.2)+T(190,70,'6 m','t1','end')+L('M218 116H258M218 111V121M258 111V121','sk',1.2)+T(238,134,'3 m','t2','middle')
-  +T(238,150,'helicopter area','t2','middle')+T(266,22,'1 m','t2'),
-  'A white H in the signals area means helicopters take off and land only in the designated helicopter area, which is marked by a much larger white H.'],
+/* 16 */['Helicopter operations markers',320,196,
+  (function(){function H(x0,y0,k,hm,wm,sm){var h=hm*k,w=wm*k,t=sm*k;return'<path d="M'+x0+' '+y0+'h'+n(t)+'v'+n(h)+'h'+n(-t)+'Z M'+n(x0+w-t)+' '+y0+'h'+n(t)+'v'+n(h)+'h'+n(-t)+'Z M'+n(x0+t)+' '+n(y0+h/2-t/2)+'h'+n(w-2*t)+'v'+n(t)+'h'+n(-(w-2*t))+'Z" fill="#fff" stroke="var(--ink)" stroke-width="1"/>'}
+   function dV(x,y1,y2,lab){return L('M'+x+' '+y1+'V'+y2+'M'+(x-5)+' '+y1+'h10M'+(x-5)+' '+y2+'h10','sk',1.2)+T(x-8,(y1+y2)/2+4,lab,'t1','end')}
+   function dH(x1,x2,y,lab){return L('M'+x1+' '+y+'H'+x2+'M'+x1+' '+(y-5)+'v10M'+x2+' '+(y-5)+'v10','sk',1.2)+T((x1+x2)/2,y+16,lab,'t2','middle')}
+   var s='<rect x="8" y="8" width="148" height="180" rx="8" class="panel"/><rect x="164" y="8" width="148" height="180" rx="8" class="panel"/>'+T(82,28,'In the signals area','t1','middle')+T(238,28,'Helicopter area','t1','middle');
+   /* (a) 2 m x 1 m, 0.2 m strokes, 40 units per metre */
+   s+=H(68,50,40,2,1,.2)+dV(56,50,130,'2 m')+dH(68,108,144,'1 m')+L('M68 44h8M68 40v8M76 40v8','sk',1)+T(80,46,'0.2 m','t2');
+   /* (b) 6 m x 3 m, 1 m strokes, 16 units per metre */
+   s+=H(222,42,16,6,3,1)+dV(210,42,138,'6 m')+dH(222,270,146,'3 m')+L('M270 58h12','s2',1)+T(282,62,'1 m','t2');
+   return s+T(82,180,'each H to scale','t2','middle')+T(238,180,'each H to scale','t2','middle')})(),
+  'A white H in the signals area means helicopters take off and land only in the designated helicopter area, which is marked by a much larger white H. Each H is drawn to scale; the two are not to the same scale.'],
 /* 17 */['Gliding in progress',320,galH(3),
   gal([[sDx,'Double white cross','gliding in progress'],[mBall(2,Re),'Two red balls (mast)','gliding in progress',true],[sYp,'Yellow cross','tow-rope dropping area']]),
   'A double white cross and/or two red balls on the mast mean glider flying is taking place. The yellow cross marks where tow-ropes are dropped.'],

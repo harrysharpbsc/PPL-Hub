@@ -105,6 +105,8 @@ when a case isn't covered.
   on it: leave about 14 units between stacked baselines, start text clear of aircraft wings (plane span is
   about 13 x scale each side), and keep everything 4+ units inside the canvas. `t_dgtext` measures this with
   the real fonts and will catch what eyeballing misses.
+- **Point aircraft the way they travel.** Side views face right by default (the take-off run goes left to right); pass `flip` only for an aircraft flying right-to-left (towards a tower or a crowd on the left). Harry noticed backwards aircraft on several figures.
+- **Clouds look like clouds**: use `dbCloud`, and `dbMist` for low cloud or poor visibility, never a grey blob.
 - **Aircraft**: `dbPlane(x,y,heading,colourLetter,scale,lights)` for plan view (heading in degrees, 0 = up/north,
   90 = east); scale 1.1-1.6. `dbSide(x,y,scale,colourLetter,flip)` for side view, about 0.7-1.1. Use the
   same aircraft colour for "you" throughout a figure.
@@ -124,7 +126,8 @@ dbL('M10 20H200','sk'|'sa'|'sr'|'sg'|'sm'|'s2',width,'4 3')   // line/path (dash
 dbAR('M20 50Q60 50 70 90',66,82,70,92,'a',1.8,'5 3')        // arrow: path, then last direction for the head
 dbHead(xp,yp,x2,y2,'k')                                     // arrowhead only (e.g. on a circuit leg)
 dbPlane(160,100,0,'a',1.3,'rgw')                            // plan-view aircraft, optional lights
-dbSide(70,96,.9,'a',false)                                  // side-view aircraft
+dbSide(70,96,.9,'a')                                        // side-view aircraft facing right; pass true last to face left
+dbCloud(x,y,w,h) / dbMist(x1,x2,y1,y2)                     // a cumulus cloud; layered mist or low cloud
 dbArc(cx,cy,r,deg0,deg1) / dbSector(cx,cy,r,deg0,deg1,fill,opacity)  // degrees clockwise from north
 dbFig(title,320,h,drawing,caption)                          // the figure (aria-label = title + caption)
 ```

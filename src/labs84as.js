@@ -16,13 +16,14 @@ function tbl(x,y,cols,rows,rh){var s='',cx=x,W=cols.reduce(function(a,c){return 
  return s+L('M'+x+' '+(y+rh)+'H'+(x+W),'s2',1)}
 
 var A=[
-/* 1 */['FIRs and UIRs (not to scale)',320,210,
-  '<path d="M60 150H312V196H60Z" fill="var(--accent-soft)"/><path d="M60 40H312V150H60Z" fill="var(--surface-2)"/>'
-  +L('M60 150H312','sa',1.4)+L('M60 40H312','sk',1.4)+sea(60,312,196,8)
-  +T(186,170,'London and Scottish FIRs','t1','middle')+T(186,186,'surface to FL245','t2','middle')
+/* 1 */['FIRs and UIRs (not to scale)',320,222,
+  '<path d="M60 150H312V208H60Z" fill="var(--accent-soft)"/><path d="M60 40H312V150H60Z" fill="var(--surface-2)"/>'
+  +L('M60 150H312','sa',1.4)+L('M60 40H312','sk',1.4)+sea(60,312,208,8)
   +T(186,90,'London and Scottish UIRs','t1','middle')+T(186,104,'FL245 to FL660','t2','middle')
-  +T(54,154,'FL245','t1','end')+T(54,44,'FL660','t1','end')+T(54,200,'SFC','t1','end'),
-  'Two UK Flight Information Regions, London and Scottish, run from the surface to FL245. The upper airspace above them forms the London and Scottish Upper Information Regions, FL245 to FL660.'],
+  +L('M60 168H312','sm',1.2,'5 3')+T(306,164,'in Europe the UIR starts at FL195','t2 tm','end')
+  +T(186,188,'London and Scottish FIRs','t1','middle')+T(186,202,'surface to FL245','t2','middle')
+  +T(54,154,'FL245','t1','end')+T(54,44,'FL660','t1','end')+T(54,172,'FL195','t1 tm','end')+T(54,212,'SFC','t1','end'),
+  'Two UK Flight Information Regions, London and Scottish, run from the surface to FL245. The upper airspace above them forms the London and Scottish Upper Information Regions, FL245 to FL660. Elsewhere in Europe the upper region usually starts at FL195.'],
 /* 2 */['CTR, TMA, airway and ATZ (side view, not to scale)',320,200,
   sea(8,312,188,8)+'<path d="M8 188V182H312V188Z" class="gnd"/>'
   +'<path d="M108 182V98H212V182Z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.4"/>'+T(160,118,'CTR','t1','middle')+T(160,132,'from the surface','t2','middle')
@@ -32,7 +33,7 @@ var A=[
   'A Control Zone starts at the surface; a Control Area (including a TMA) and an airway start at a base, and an airway base often steps down near aerodromes. An ATZ can sit inside a CTR.'],
 /* 3 */['Special VFR minima (inside a Control Zone)',320,214,
   box(8,8,304,150,'var(--accent-soft)','var(--accent)')+T(16,26,'Control Zone only','t1 ta')
-  +'<path d="M150 30Q164 18 180 26Q196 14 214 26Q236 22 236 38Q236 50 214 48H160Q144 48 150 30Z" fill="var(--surface)" stroke="var(--ink-3)"/>'+T(244,42,'clear of cloud','t2')
+  +dbCloud(144,14,96,42)+T(244,42,'clear of cloud','t2')
   +side(116,80,.55,'a')+T(150,78,'140 kt or less','t1')+T(150,92,'visibility 1,500 m+','t2')
   +'<path d="M8 150V140Q60 130 120 140T312 136V150Z" class="gnd"/>'+T(16,128,'in sight of the surface','t2')
   +T(8,180,'Aerodrome limits','t1 tr')+T(8,194,'no take-off, landing or ATZ entry if it reports','t2')+T(8,208,'visibility below 1,500 m or ceiling below 600 ft','t2'),
@@ -101,12 +102,15 @@ var S=[
   +'<path d="M60 224V160H220V224" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.2"/>'+L('M8 224H312','sk',1.2)+'<path d="M132 224H148V220H132Z" fill="var(--ink-3)"/>'
   +T(140,178,'Safetycom 135.480','t1','middle')+T(140,192,'below 2,000 ft aal','t2','middle')+T(140,206,'within 10 nm','t2','middle')+T(230,196,'unattended','t2')+T(230,210,'airfields','t2'),
   'The callsign suffix tells you the service. Safetycom is for airfields without their own frequency, below 2,000 ft aal and within 10 nm; keep calls short.'],
-/* 3 */['The four UK FIS outside controlled airspace',320,250,
-  [['Basic','a',['no radar needed','ATCO or FISO','IFR and VFR','no traffic info expected']],['Traffic','a',['radar, identified','IFR and VFR','radar traffic info','headings to sequence']],
-   ['Deconfliction','a',['radar, identified','IFR only','traffic info + avoidance','headings to deconflict']],['Procedural','a',['no radar','IFR','limited traffic info','radials, times, levels']]].map(function(c,i){var x=8+(i%2)*156,y=8+Math.floor(i/2)*106;
-   return box(x,y,148,98,'none','var(--line-2)')+T(x+10,y+20,c[0],'t1 ta')+c[2].map(function(t,k){return T(x+10,y+38+k*14,t,'t2')}).join('')}).join('')
-  +T(160,236,'In every one, you avoid collisions','t1 tr','middle'),
-  'Whatever the service, in Class G the pilot is ultimately responsible for collision avoidance and terrain clearance. An alerting service comes with all four.'],
+/* 3 */['The four UK FIS outside controlled airspace',320,262,
+  (function(){var C=[78,138,198,258],H=['Basic','Traffic','Deconfl.','Procedural'],R=[['radar?',['no'],['yes'],['yes'],['no']],['who',['ATCO','or FISO'],['controller'],['controller'],['controller']],['flights',['IFR, VFR'],['IFR, VFR'],['IFR only'],['IFR']],
+    ['identified',['maybe'],['yes'],['yes'],['not needed']],['traffic info',['not','expected'],['radar','TI'],['TI and','avoiding'],['limited']],['headings',['none'],['to','sequence'],['to','deconflict'],['radials,','times']]],s='<rect x="4" y="4" width="312" height="30" fill="var(--surface-2)"/>';
+   H.forEach(function(h,k){s+=T(C[k]+28,24,h,'t1 ta','middle')});var y=34;
+   R.forEach(function(r,i){var h=r.slice(1).some(function(c){return c.length>1})?34:22;if(i%2)s+='<rect x="4" y="'+y+'" width="312" height="'+h+'" fill="var(--surface-2)" opacity=".5"/>';
+    s+=T(10,y+15,r[0],'t1');r.slice(1).forEach(function(c,k){c.forEach(function(t,m){s+=T(C[k]+28,y+15+m*13,t,'t2','middle')})});y+=h});
+   s+='<rect x="4" y="'+y+'" width="312" height="26" fill="var(--bad)" opacity=".1"/>'+T(10,y+18,'avoidance','t1')+C.map(function(x){return T(x+28,y+18,'pilot','t1 tr','middle')}).join('');
+   return s+L('M74 4V'+(y+26),'s2',.8)})(),
+  'Whatever the service, in Class G the pilot is ultimately responsible for collision avoidance and terrain clearance. An alerting service comes with all four. TI = traffic information.'],
 /* 4 */['Deconfliction minima',320,204,
   T(80,18,'Unknown traffic','t1','middle')+'<circle cx="80" cy="96" r="60" fill="var(--accent-soft)" stroke="var(--accent)" stroke-dasharray="5 3"/>'+plane(80,96,0,'a',1.2)+AR('M80 96H139',131,96,139,96,'k',1)+T(112,88,'5 nm','t2','middle')
   +T(80,178,'5 nm laterally','t1','middle')+T(80,194,'or 3,000 ft vertically','t2','middle')
