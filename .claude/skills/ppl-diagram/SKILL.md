@@ -85,7 +85,7 @@ marks, show him just those again, and ship to `main` only when he says so.
 
 How a figure reaches the screen: `DSEC[topic]` is a list of `[sectionHeadingPrefix, figureHtml]`. When Harry
 opens a note section, `secFigs` shows the figures whose prefix matches the start of that section's heading, in
-list order. So the prefix must match a heading in that topic's `NOTES` sections (in `src/data.js` / `caa*.js`).
+list order. So the prefix must match a heading in that topic's sections (`src/content/<subject>/*.json`).
 
 ## Converting a topic (the usual job)
 

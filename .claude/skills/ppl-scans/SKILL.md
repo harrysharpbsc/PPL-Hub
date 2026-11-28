@@ -7,7 +7,7 @@ description: Process Harry's new textbook scans for his PPL Study Hub - find the
 
 Harry scans chapters of his PPL textbooks to PDF and drops them in Google Drive. Each batch becomes:
 1. an **Obsidian note** per chapter in his vault (Drive), in his own format;
-2. a **topic** in the app (`src/data.js`): sections, summaries, flashcards, quiz;
+2. a **topic** in the app (`src/content/<subject>/*.json`): sections, summaries, flashcards, quiz, each item with its source `ref`;
 3. **style B diagrams** for that topic (follow the `ppl-diagram` skill, which this skill relies on);
 4. a **review page** he ticks, then fixes, then "ship it" → `main`.
 
@@ -34,10 +34,28 @@ Drive layout (IDs as of Nov 2026; if one fails, search by title):
 - List the subject's notes the same way. A note is `NN Title.md` (`08 Visual Flight Rules.md`). A scan is
   **new** when no note with the same `NN` exists in that subject's folder. Unnumbered scans (e.g. `Aerodromes.pdf`)
   are older ones already handled; skip them unless Harry asks.
-- **Subject**: so far every scan is Air Law. If a scan clearly belongs to another subject (Meteorology,
-  Navigation...), list the vault root's subject folders and use the matching one; if there's no folder or
-  it's unclear, ask Harry before writing (that's his decision). App subject index `s` = position in
-  `SUBJECTS` in `src/data.js` (Air Law = 0).
+- **Subject**: so far every scan is Air Law. If a scan clearly belongs to another subject, list the vault
+  root's subject folders and use the matching one; if there's no folder or it's unclear, ask Harry before
+  writing (that's his decision, and so is the folder's number). Subjects, app index `s` (= position in
+  `SUBJECTS` in `src/data.js`) and the tag his notes would use:
+
+  | `s` | Subject | Tag | Vault folder |
+  |---|---|---|---|
+  | 0 | Air Law | `ppl/law` | `01 Air Law` |
+  | 1 | Aircraft General Knowledge | `ppl/agk` | ask |
+  | 2 | Flight Performance and Planning | `ppl/fpp` | ask |
+  | 3 | Human Performance and Limitations | `ppl/hpl` | ask |
+  | 4 | Meteorology | `ppl/met` | ask |
+  | 5 | Navigation | `ppl/nav` | ask |
+  | 6 | Operational Procedures | `ppl/ops` | ask |
+  | 7 | Principles of Flight | `ppl/pof` | ask |
+  | 8 | Communications | `ppl/comms` | ask |
+
+  Only `ppl/law` exists so far: confirm a new subject's tag with Harry on its first note, then fix this table.
+  Topics in other subjects already come from CAA guidance (Skyway Code, Safety Sense); a chapter that covers
+  the same ground is still a new topic (his notes come first on the subject page), but mention the overlap.
+- Run the `ppl-notes-sync` check first if Harry has edited notes since the last batch, so the app starts from
+  his latest notes.
 - Never trash, move or rename anything in his Drive.
 
 ## 2. Read each scan
@@ -123,8 +141,9 @@ tags:
 
 ## 5. Add each chapter to the app
 
-Topics from his notes live in `src/data.js` as `NOTES.push({...}); Object.assign(SUM,{...});` blocks, with
-`num` = the note's NN (subject page lists them in that order) and `order = num*10`.
+Each topic is one JSON file in `src/content/<NN-subject>/` (format in `src/content/README.md`), with
+`num` = the note's NN (subject page lists them in that order) and `order = num*10`. `build.py` checks every
+file with the content lint and fails on new problems.
 
 1. Write a content file per batch (scratchpad), shaped like this:
    ```python
@@ -132,23 +151,36 @@ Topics from his notes live in `src/data.js` as `NOTES.push({...}); Object.assign
    T['08 Visual Flight Rules.md']=dict(topic="Visual Flight Rules",num=8,
      summary="3-5 sentences: the rules he must know, with the numbers.",
      sum={"Section heading prefix":"One-line summary of that section.", ...},   # one per section
-     cards=[["Question?","Answer."], ...],      # 10-20, one fact each
-     quiz=[["Question",["right","wrong","wrong","wrong"],0,"Why right; why the tempting one is wrong."], ...],  # 8-10
-     rename={"Transponder":"Using the transponder"})   # optional, to avoid heading clashes
+     cards=[["Question?","Answer.",{"sec":"Heading prefix","rule":"SERA.5005"}], ...],   # 10-20, one fact each
+     quiz=[["Question",["right","wrong","wrong","wrong"],0,"Why right; why the tempting one is wrong.",
+            {"sec":"Heading prefix","rule":"SERA.5005"}], ...],                           # 8-10
+     rename={"Transponder":"Using the transponder"},   # optional, to avoid heading clashes
+     modified="<the note's Drive modifiedTime>")       # from the upload result, for ppl-notes-sync
    ```
    Quiz rules are in CLAUDE.md ("Writing quiz questions"): write your own in the exam's style (one-element
    distractors, rule with and without its caveat, unit pairs, scenarios), never the book's questions, no
    "all of the above"; correct option first (the app shuffles).
-2. Assemble and append (run from `src/`):
+   - **Every item has a `ref`**: `sec` = the start of the heading of the section the fact is in (if the fact is
+     in no section, the note is missing it: add it to the note or drop the item); `rule` = the regulation it
+     rests on (`SERA.3210`, `ANO art. 249`, `Part-FCL.040`, `Part-NCO.GEN.105`, `CAP 413 4.1`) whenever one
+     exists. The app shows it after each answer ("From your note 08: ...").
+   - **Distractors as long and as specific as the right answer.** The lint fails a question whose right
+     option is clearly the longest (≥ 1.3× the average wrong one), and a subject where more than 35% are the
+     longest. Make wrong options differ by one element and carry the same caveats, units and detail.
+   - **Cards: one fact per answer**, under about 160 characters.
+   - Then run the `ppl-content-review` checklist over the batch before building.
+2. Assemble (run from `src/`), then lint:
    ```
-   python3 ../.claude/skills/ppl-scans/scripts/assemble.py --existing . NOTES_DIR CONTENT.py > /tmp/new.js
-   cat /tmp/new.js >> data.js
+   python3 ../.claude/skills/ppl-scans/scripts/assemble.py NOTES_DIR CONTENT.py
+   python3 ../tests/t_content.py          # must PASS: no new errors (warnings: read them)
    ```
-   `scripts/md2sec.py` turns the note into app sections (each `##`/`###` heading with bullets becomes a section,
-   tables become "**row**: col value; ..." items, nested bullets become "– " items, Practice Questions are cut).
-   `assemble.py` refuses: a topic name already in the app; a section heading already used by another topic
-   (`SUM` is global, so a clash overwrites that topic's summary; add a `rename`); a section without a summary;
-   bad quiz items. Watch for near-duplicate topic names (e.g. existing "Operations of Aircraft" vs new
+   `assemble.py` writes one topic file per note with the next free `seq` and records the note it came from.
+   `scripts/md2sec.py` turns the note into app sections (each `##`/`###` heading starts a section, `####`
+   headings become bold sub-headings inside it, tables become "**row**: col value; ..." items, nested bullets
+   become "– " items, paragraphs are kept, Practice Questions are cut, and image embeds / `%% image %%` notes
+   are listed as diagram ideas). `assemble.py` refuses: a topic name already in the app; a section heading
+   already used by another topic (`SUM` is global, so a clash overwrites that topic's summary; add a
+   `rename`); a section without a summary; an item without a `ref`; bad quiz items. Watch for near-duplicate topic names (e.g. existing "Operations of Aircraft" vs new
    "Operation of Aircraft") and mention them to Harry.
 3. Work on the branch named in the session instructions, never straight on `main`.
 
@@ -182,7 +214,7 @@ colour by role, nothing overlapping, Harry's agreed design decisions). Batch-spe
 ```
 export PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers
 python3 build.py
-for t in t_dgsize t_dgtext t_secdg t_dark t_scan t_smoke t_mock; do python3 ../tests/$t.py | tail -2; done
+for t in t_content t_dgsize t_dgtext t_secdg t_dark t_scan t_smoke t_mock t_ref; do python3 ../tests/$t.py | tail -2; done
 ```
 All must pass; `t_smoke` may report only blocked CDN (jsdelivr) errors. Commit (`docs/index.html` is
 regenerated by the build; never edit it by hand) and push the branch.
@@ -208,7 +240,7 @@ regenerated by the build; never edit it by hand) and push the branch.
 - [ ] Each scan read in full; answer keys checked
 - [ ] Book errors listed with the UK rule
 - [ ] Notes in his format uploaded to the subject folder (no overwrites)
-- [ ] Topics appended with summaries, cards, original quiz; no clashes
+- [ ] Topics written with summaries, cards, original quiz, a ref on every item; `t_content` passes
 - [ ] Diagrams drawn or reused, looked at light/dark at 430 px
 - [ ] Tests pass; branch pushed
 - [ ] Review page published; Harry's picks read and fixed

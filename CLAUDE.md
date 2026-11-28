@@ -16,6 +16,9 @@ UK CAA PPL(A) revision app for Harry (student pilot). One self-contained web pag
 ## New scans
 When Harry adds textbook scans to Drive ("PPL book scans"), follow the `ppl-scans` skill: find chapters without a note, write Obsidian notes in his format, add app topics and style B diagrams, review page, then ship on his say-so.
 
+## Notes changed in Obsidian
+When Harry says he has edited his notes, or before a scans batch, follow the `ppl-notes-sync` skill: list the vault, run `drift.py`, diff the changed notes, re-import on his say-so. After writing or changing any cards or questions, follow `ppl-content-review` (rule check, refs, distractors, review page).
+
 ## Writing quiz questions
 Harry's Obsidian notes (synced to Google Drive, folder `PPL`, one folder per subject) may end with a **Practice Questions** section copied from his textbooks, with an answer key. Use them as the model for exam-style questions, but don't paste them into the app word for word (the repo is public): write your own in the same style.
 - Check the textbook answer key before relying on it (the Rules of the Air key said ATC for "ultimately responsible for avoiding collisions"; it is the pilot in command).
@@ -25,8 +28,11 @@ Harry's Obsidian notes (synced to Google Drive, folder `PPL`, one folder per sub
 
 ## Layout
 - `src/hub.html` — shell: all CSS (light and dark tokens on `:root`; design "Plotted route": chart-paper greys, logo navy, airspace blue `--accent`, route magenta `--warm` only for Today's route and the 75% pass-mark tick, Barlow Semi Condensed headings + Barlow body; grouped rows in `.list` panels; mock-up kept in `mockups/route/`), core app (Today, Subjects, Practice, Radio, Labs, Progress), quiz/mock engine, backup/restore. Everything sits inside one IIFE.
-- `src/data.js`, `radio.js`, `caa*.js` — study content (`NOTES`, quizzes, radio phraseology). Inserted at `/*DATA*/`.
-  - Topics from Harry's own notes carry `num` = the number in the note's file name ("03 Rules of the Air.md" → `num: 3`). A subject page lists them first, in that order, as "Your notes", then the CAA-guidance topics (`src`, no `num`) by `order`.
+- `src/content/<NN-subject>/<seq>-<slug>.json` — study content, one file per topic (summary, sections, section summaries, cards, quiz, mnemonics). Format in `src/content/README.md`. `src/content.py` loads, checks and lints them and writes `NOTES`/`SUM`/`MN` at `/*DATA*/`, after `src/data.js` (`SUBJECTS` only) and before `radio.js` (radio phraseology data `RB`).
+  - Topics from Harry's own notes carry `num` = the number in the note's file name ("03 Rules of the Air.md" → `num: 3`) and `note` (file name, Drive modified time at import). A subject page lists them first, in that order, as "Your notes", then the CAA-guidance topics (`src`, no `num`) by `order`.
+  - Every card and question carries `ref` = `{sec: heading prefix in its topic, rule?: "SERA.3210", p?: "p.46"}`; the app shows "From your note 03: ... / Show the note" after each answer (`refLine` in hub.html).
+  - Progress is keyed on topic name + question text (and section index for per-section progress): never rename a topic, reword an existing question or reorder sections without saying progress resets. Options, answers and `why` can be reworded freely.
+  - The build fails on any content lint error not in `src/content/lint_baseline.json` (old debt from Nov 2026, which only shrinks): duplicates, missing summaries, missing/dangling refs, a right option clearly the longest, a subject with over 35% longest-right questions, "all of the above", and known wrong facts in `src/content/errata.json`.
 - `src/labs*.js` — interactive labs, concatenated in sorted filename order at `/*LABS*/`. Each calls `addLab({id,name,sub,grp,init,on,view})`; buttons use `data-a="lx" data-k=... data-v=...`.
   - `labs1.js` flight framework (`flightLab`), voice answering and marking (`vnorm`, `vGradeBuild`, `vGradeMcq`), flight settings `FS` (localStorage `ppl-fs`), map/chart drawing.
   - `labs62.js` random scenario generators (cross-country, circuits, controlled arrival/departure).
@@ -45,10 +51,12 @@ Harry's Obsidian notes (synced to Google Drive, folder `PPL`, one folder per sub
 npm install                 # terser + csso
 cd src && python3 build.py  # writes ../docs/index.html (minified) + hub_built/hub_download/hub_test.html in src/
 python3 ../tests/t_smoke.py # opens every subject and lab, reports page errors
+python3 ../tests/t_content.py   # content lint (--all lists everything, --rebaseline after fixing old debt)
 ```
+If `from playwright.sync_api import ...` fails, `pip install playwright==<the version of the pre-installed node playwright>` (1.63.0 in Nov 2026) and `export PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers`.
 Every test runs from `src/` with nothing else to start: `t_asr`, `t_asr2`, `t_backup`, `t_piper` and `t_sync` start their own local server (`tests/_srv.py`); `t_asr` makes its own test recording; `t_piper` carries stand-ins for onnxruntime-web, piper-wasm and the voice. Each test prints PASS or stops with an assertion. When a test answers a flight, pick options with `__T.ses.ord.indexOf(__T.ses.cur.a)` (options are shuffled and can share opening words), and handle option tiles as well as the speech box.
 `hub_test.html` exposes `window.__T` (ses, S, KB, NTTS, ASR, `grade(e,text)`, speak, render) for tests.
-Useful tests: `t_grade.py` (radio marking), `t_mock.py` (mock exam tiles), `t_art.py`, `t_listen.py` (pause handling), `t_asr.py`/`t_piper.py` (engines with mocked CDN), `t_backup.py`, `t_scan.py` (button spacing), `t_secdg.py` (diagrams sit in their note sections), `t_dgtext.py` (diagram labels stay inside their boxes, measured with the real Barlow fonts in `tests/fonts`). `t_dgsize.py` (every diagram label stays at 11 px or more at 430/800/1100 px, and every figure is style B). `t_scan.py` allows grouped list rows (`.list > .sc`, `.card > .pick`) to touch; every other pair of buttons needs 8 px.
+Useful tests: `t_grade.py` (radio marking), `t_mock.py` (mock exam tiles), `t_art.py`, `t_listen.py` (pause handling), `t_asr.py`/`t_piper.py` (engines with mocked CDN), `t_backup.py`, `t_scan.py` (button spacing), `t_secdg.py` (diagrams sit in their note sections), `t_dgtext.py` (diagram labels stay inside their boxes, measured with the real Barlow fonts in `tests/fonts`). `t_content.py` (content lint), `t_md2sec.py` (note → sections converter), `t_drift.py` (vault drift check), `t_assemble.py` (new topic files), `t_ref.py` (source line after answers). `t_dgsize.py` (every diagram label stays at 11 px or more at 430/800/1100 px, and every figure is style B). `t_scan.py` allows grouped list rows (`.list > .sc`, `.card > .pick`) to touch; every other pair of buttons needs 8 px.
 Then commit and `git push origin main`; Pages redeploys in a minute or two.
 
 Sandbox note: cdn.jsdelivr.net, huggingface.co, fonts and github.io are blocked from the workspace, so real voice/speech models can't be heard or tested here — test the plumbing with Playwright route mocks and say so honestly.
