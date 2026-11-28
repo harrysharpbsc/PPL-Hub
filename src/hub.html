@@ -151,6 +151,9 @@ button.sc:hover{border-color:var(--accent)}
 b.k{font-weight:inherit}
 .acc-b code,.cz code{font:inherit;background:none;padding:0;border-radius:0;white-space:normal}
 .acc-b li::marker{color:var(--accent)}
+.refl{margin-top:12px;border-top:1px solid var(--line);padding-top:8px}
+.refl .m{margin:0}
+.refb{margin:4px 0 0;padding:8px 0 4px 22px;border-top:0}
 .acc-b li.sub{margin-left:22px;margin-block:4px;list-style-type:circle}
 
 .focus-wrap{max-width:720px;margin:0 auto}
@@ -584,7 +587,7 @@ function stepsOf(t){return S.steps[t]||(S.steps[t]={})}
 
 /* ---------- derived data ---------- */
 var INT=[0,1,3,7,14,30];
-NOTES.forEach(function(n,i){n.id=i;n.cl=n.cards.map(function(c,ci){return{n:i,ci:ci,key:n.topic+'|'+c[0],q:c[0],a:c[1],m:MN[c[0]]||''}})});
+NOTES.forEach(function(n,i){n.id=i;n.cl=n.cards.map(function(c,ci){return{n:i,ci:ci,key:n.topic+'|'+c[0],q:c[0],a:c[1],m:MN[c[0]]||'',ref:c[2]}})});
 S.custom.forEach(function(cu){NOTES.forEach(function(n){if(n.topic===cu.t)n.cl.push({n:n.id,ci:-1,key:cu.t+'|'+cu.q,q:cu.q,a:cu.a,m:cu.m||'',custom:true})})});
 function getc(k){return S.cards[k]||{b:0,d:0,n:0}}
 function stage(k){var b=getc(k).b;return b===0?'new':b>=3?'secure':'learning'}
@@ -833,14 +836,14 @@ function mockGrid(s,done){return'<div class="mtiles" role="list" aria-label="Que
 function mockOpts(q,a,show){return q.o.map(function(o,i){var c=show?(i===q.a?' ok':i===a?' bad':''):(i===a?' sel':'');return'<button class="opt'+c+'" data-a="opt" data-i="'+i+'"'+(show?' disabled':'')+'><span class="k">'+'ABCD'.charAt(i)+'</span><span>'+esc(o)+'</span></button>'}).join('')}
 function vMock(s){
   if(s.done){var ok=s.res.filter(function(r){return r.ok}).length,pct=Math.round(100*ok/s.res.length),pass=pct>=75,rv='';
-    if(s.rv!==null){var q=s.qs[s.rv],a=s.ans[s.rv];rv='<div class="card" style="margin-top:12px"><p class="m">Question '+(s.rv+1)+' · '+(a===null?'not answered':a===q.a?'correct':'wrong')+'</p><p class="q">'+esc(q.q)+'</p>'+mockOpts(q,a,true)+'<p class="cal" style="margin-top:10px">'+esc(q.why)+'</p></div>'}
+    if(s.rv!==null){var q=s.qs[s.rv],a=s.ans[s.rv];rv='<div class="card" style="margin-top:12px"><p class="m">Question '+(s.rv+1)+' · '+(a===null?'not answered':a===q.a?'correct':'wrong')+'</p><p class="q">'+esc(q.q)+'</p>'+mockOpts(q,a,true)+'<p class="cal" style="margin-top:10px">'+esc(q.why)+'</p>'+refLine(q.n,q.ref)+'</div>'}
     return'<div class="card sum"><p class="m">Mock exam · '+esc(s.label)+'</p><p class="score">'+pct+'%</p><p style="margin-top:6px"><span class="chip '+(pass?'ok':'no')+'">'+(pass?'Pass':'Not yet')+'</span> '+ok+' of '+s.res.length+' correct · pass mark 75% · '+fmt(s.used)+' used'+(s.timeout?' · time ran out':'')+'</p>'
      +'<h3 style="margin-top:18px">Your answers</h3><p class="m">Tap a number to see the question, the answer and why.</p>'+mockGrid(s,true)+rv
      +'<div class="acts"><button class="btn" data-a="end">Done</button><button class="btn alt" data-a="mock" data-i="'+(s.sub<0?'all':s.sub)+'">New mock exam</button></div></div>'}
   var q=s.qs[s.i],a=s.ans[s.i],now=mockFb()==='now',show=now&&a!==null,left=Math.max(0,Math.round((s.end-Date.now())/1000)),n=s.qs.length,answered=s.ans.filter(function(x){return x!==null}).length;
   var hh=fhead(s.i,n)+'<div class="timer"><span id="mock-timer">'+fmt(left)+'</span><small>left · mock exam, '+esc(s.label)+'</small></div>'
    +'<div class="card"><p class="q">'+esc(q.q)+'</p>'+mockOpts(q,a,show)
-   +(show?'<div class="fb '+(a===q.a?'ok':'no')+'" style="margin-top:12px"><b>'+(a===q.a?'Correct.':'Not quite.')+'</b><p>'+esc(q.why)+'</p></div>':'')
+   +(show?'<div class="fb '+(a===q.a?'ok':'no')+'" style="margin-top:12px"><b>'+(a===q.a?'Correct.':'Not quite.')+'</b><p>'+esc(q.why)+'</p>'+refLine(q.n,q.ref)+'</div>':'')
    +'<div class="mnav"><button class="btn alt" data-a="mprev"'+(s.i===0?' disabled':'')+'>Previous</button><button class="btn" data-a="mnext"'+(s.i>=n-1?' disabled':'')+'>Next</button></div>'
    +'<button class="btn mfin'+(s.i<n-1&&!s.finArm?' alt':'')+'" data-a="mfin">'+(s.finArm?'Tap again to finish ('+(n-answered)+' unanswered)':'Finish exam')+'</button></div>'
    +'<div class="card mcard"><p class="m">'+answered+' of '+n+' answered · '+(now?'green is right, red is wrong':'answers are marked when you finish')+'</p>'+mockGrid(s,false)+'</div>';
@@ -1037,7 +1040,7 @@ function vSession(){
     if(s.done){var tl=s.tally[0]+s.tally[1]+s.tally[2]+s.tally[3],nd=nextDue(),rv=buildReview();
       return w('<div class="card sum"><p class="m">'+s.title+' complete</p><p class="score">'+tl+'</p><p class="m">cards answered</p><ul><li><b>'+s.tally[2]+s.tally[3]+'</b> remembered ('+s.tally[3]+' easily)</li><li><b>'+s.tally[1]+'</b> hard, <b>'+s.tally[0]+'</b> missed. They will come back sooner.</li></ul>'+(nd&&!s.noSched?'<p class="m">Next cards due '+whenLabel(nd.days)+'.</p>':'')+''+(s.ms&&s.ms.length?'<div class="callout"><h3>Milestone</h3>'+s.ms.map(function(m){return'<p>'+m+'</p>'}).join('')+'</div>':'')+'<div class="acts"><button class="btn" data-a="nav" data-v="today">Done</button>'+(s.src==='daily'&&rv.newAvail>0?'<button class="btn alt" data-a="more">Learn 10 more new cards</button>':'')+'</div></div>')}
     var c=s.q[s.i],n=NOTES[c.n],t=getc(c.key);
-    var body='<div class="rcard"><span class="tag">'+SUBJECTS[n.s]+' · '+n.topic+(t.b===0?' · new':'')+(isTricky(c.key)?' · tricky card':'')+(c.custom?' · yours':'')+'</span><p class="rq">'+esc(c.q)+'</p>'+(s.shown?'<div class="ra">'+esc(c.a)+'</div>'+(c.m?'<div class="mn"><b>Memory aid</b>'+esc(c.m)+'</div>':''):'<p class="prompt">Say or write your answer in your head first. Then check.</p>')+'</div>';
+    var body='<div class="rcard"><span class="tag">'+SUBJECTS[n.s]+' · '+n.topic+(t.b===0?' · new':'')+(isTricky(c.key)?' · tricky card':'')+(c.custom?' · yours':'')+'</span><p class="rq">'+esc(c.q)+'</p>'+(s.shown?'<div class="ra">'+esc(c.a)+'</div>'+(c.m?'<div class="mn"><b>Memory aid</b>'+esc(c.m)+'</div>':'')+refLine(c.n,c.ref):'<p class="prompt">Say or write your answer in your head first. Then check.</p>')+'</div>';
     var act=s.shown?'<div class="rate">'+[['a','Again','Today',0],['h','Hard',ivl(INT[nextBox(t.b,1)]),1],['g','Good',ivl(INT[nextBox(t.b,2)]),2],['e','Easy',ivl(INT[nextBox(t.b,3)]),3]].map(function(x){return'<button class="rb '+x[0]+'" data-a="rate" data-r="'+x[3]+'">'+x[1]+'<small>'+(s.noSched?'':x[2])+'</small></button>'}).join('')+'</div>':'<div style="margin-top:14px"><button class="btn big" data-a="show">Show answer</button></div>';
     return w(fhead(s.i,s.q.length)+body+act)}
   if(s.type==='quiz'){
@@ -1049,7 +1052,7 @@ function vSession(){
     q.o.forEach(function(o,i){var cl='opt';if(rev){if(i===q.a)cl+=' ok';else if(i===s.sel)cl+=' bad'}else if(i===s.sel)cl+=' sel';h+='<button class="'+cl+'" data-a="opt" data-i="'+i+'"><span class="k">'+'ABCD'.charAt(i)+'</span><span>'+esc(o)+'</span></button>'});
     if(s.sel!==null&&!rev)h+='<div class="conf"><p>How sure are you?</p><div class="three"><button class="btn alt" data-a="conf" data-c="0">Guessing</button><button class="btn alt" data-a="conf" data-c="1">Fairly sure</button><button class="btn alt" data-a="conf" data-c="2">Certain</button></div></div>';
     if(rev){var cal=right?(s.conf===0?'That was a guess, so keep this one on your list.':s.conf===2?'Certain and correct. This one is solid.':''):(s.conf===2?'You were certain, which makes this the most useful mistake to learn from.':'');
-      h+='<div class="fb"><h3 class="'+(right?'good':'badt')+'">'+(right?'Correct':'Incorrect')+'</h3>'+(right?'':'<p><b>You chose:</b> '+esc(q.o[s.sel])+'</p><p><b>Correct answer:</b> '+esc(q.o[q.a])+'</p>')+'<p><b>Why:</b> '+esc(q.why)+'</p>'+(cal?'<p class="cal">'+cal+'</p>':'')+'</div><div class="nav"><button class="btn" data-a="nq">'+(s.i===s.qs.length-1?'See results':'Next question')+'</button></div>'}
+      h+='<div class="fb"><h3 class="'+(right?'good':'badt')+'">'+(right?'Correct':'Incorrect')+'</h3>'+(right?'':'<p><b>You chose:</b> '+esc(q.o[s.sel])+'</p><p><b>Correct answer:</b> '+esc(q.o[q.a])+'</p>')+'<p><b>Why:</b> '+esc(q.why)+'</p>'+(cal?'<p class="cal">'+cal+'</p>':'')+refLine(q.n,q.ref)+'</div><div class="nav"><button class="btn" data-a="nq">'+(s.i===s.qs.length-1?'See results':'Next question')+'</button></div>'}
     return w(h+'</div>')}
   if(s.type==='blurtpick'){
     var n2=NOTES[s.n];
@@ -1073,7 +1076,13 @@ function vSession(){
 
 /* ---------- session starters ---------- */
 function startReviewSession(cards,title,src,noSched){ses={type:'review',q:cards,i:0,shown:false,tally:[0,0,0,0],re:{},title:title,src:src,noSched:!!noSched,done:false};render()}
-function mkQ(n,item){var idx=shuffle(item[1].map(function(_,i){return i}));return{n:n.id,key:n.topic+'|'+item[0],q:item[0],o:idx.map(function(i){return item[1][i]}),a:idx.indexOf(item[2]),why:item[3]}}
+var refOpen={};
+// 'From your note 03: Right of Way (SERA.3210)' + a toggle that opens that note section in place (no navigation, so a quiz in progress is kept)
+function refLine(nid,r){var n=NOTES[nid];if(!n||!r)return'';var si=-1;n.sections.some(function(x,i){if(x[0].indexOf(r.sec)===0){si=i;return true}});if(si<0)return'';var hd=n.sections[si][0],k=nid+'|'+si,on=!!refOpen[k];
+  var from=n.num?'your note '+(n.num<10?'0':'')+n.num+': '+hd:(n.src?n.src[0][0].replace(/,? ?pp?\.[\d ,\-]+$/,'')+(r.p?', '+r.p:'')+': '+hd:n.topic+': '+hd);
+  if(r.rule&&hd.indexOf(r.rule)<0)from+=' ('+r.rule+')';
+  return'<div class="refl"><p class="m">From '+esc(from)+'</p><button class="link" data-a="refx" data-k="'+k+'" aria-expanded="'+on+'">'+(on?'Hide the note':'Show the note')+'</button>'+(on?'<ul class="acc-b refb">'+n.sections[si][1].map(function(b){return b.indexOf('– ')===0?'<li class="sub">'+b.slice(2)+'</li>':'<li>'+b+'</li>'}).join('')+'</ul>'+(n.src&&!n.num?'<p class="m"><a href="'+n.src[0][1]+'" target="_blank" rel="noopener">Open '+esc(n.src[0][0])+'</a></p>':''):'')+'</div>'}
+function mkQ(n,item){var idx=shuffle(item[1].map(function(_,i){return i}));return{n:n.id,key:n.topic+'|'+item[0],q:item[0],o:idx.map(function(i){return item[1][i]}),a:idx.indexOf(item[2]),why:item[3],ref:item[4]}}
 function startQuiz(qs,mode,topicId,sub){if(!qs.length){toast('No questions available');return}ses={type:'quiz',qs:qs,i:0,sel:null,conf:null,res:[],mode:mode,topic:topicId,sub:sub,done:false,logged:false};render()}
 function topicQuiz(n,count,mode){startQuiz(shuffle(n.quiz).slice(0,count).map(function(q){return mkQ(n,q)}),mode,n.id)}
 function mistakeQuiz(){var out=[];NOTES.forEach(function(n){n.quiz.forEach(function(q){if(S.miss[n.topic+'|'+q[0]])out.push(mkQ(n,q))})});startQuiz(shuffle(out).slice(0,12),'mistakes',null)}
@@ -1140,6 +1149,7 @@ function act(a,d){
      else if(d.k==='recall'){var cs=n.cl.filter(function(c){return getc(c.key).b===0||isDue(c.key)}).slice(0,20);if(cs.length)startReviewSession(shuffle(cs),n.topic,'topic');else startReviewSession(shuffle(n.cl.slice()),n.topic+' practice','topic',true)}
      else if(d.k==='test')topicQuiz(n,10,'quiz');
      return}
+   case'refx':refOpen[d.k]=!refOpen[d.k];render();return;
    case'x':{var k=ui.topic+'|'+d.i;ex[k]=!ex[k];render();return}
    case'xa':{var nn=NOTES[ui.topic],all=nn.sections.every(function(s2,i){return ex[nn.id+'|'+i]});nn.sections.forEach(function(s2,i){ex[nn.id+'|'+i]=!all});render();return}
    case'markread':stepsOf(NOTES[ui.topic].topic).read=true;save();toast('Marked as read');go('topic',{});return;
