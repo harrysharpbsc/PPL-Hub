@@ -1,0 +1,160 @@
+{
+ "seq": 34,
+ "s": 3,
+ "topic": "Decision making and threat and error management (Skyway Code)",
+ "order": 30,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "Good decisions start before flight. Use PAVE (Pilot, Aircraft, EnVironment, External pressures) and I AM SAFE, ask 'what if?', and avoid time pressure. Threat and error management (TEM) has three elements: threats, errors and undesired aircraft states, and aims to manage them rather than eliminate them. Threats are anticipated, unanticipated or latent. Errors are handling, procedural or communication. Distraction and overload are common causes. Built from the Skyway Code pp.122-125.",
+ "src": [
+  [
+   "The Skyway Code (CAP 1535 v4, Nov 2023), pp.122-125",
+   "https://www.caa.co.uk/our-work/publications/documents/content/cap1535s/"
+  ]
+ ],
+ "sections": [
+  [
+   "Pre-flight decisions",
+   [
+    "Use a pre-flight checklist and consider the <b>cumulative</b> effect of risk factors. The decision to start the flight is often the most critical",
+    "<b>PAVE</b>: <b>P</b>ilot (recency, fitness, I AM SAFE), <b>A</b>ircraft (airworthiness, limits), En<b>V</b>ironment (weather, aerodrome, terrain), <b>E</b>xternal pressures (time, delays, passengers)",
+    "Gather NOTAMs and weather, think about how it will evolve and identify diversion aerodromes, not just a return to the start",
+    "Always ask 'what if?' and take positive decisions: do not wait 'hoping it will be OK'",
+    "Match the flight to your recent experience. Arrive in good time and remove distractions. Check the weather and NOTAMs the evening before for an early flight, then again on the day"
+   ]
+  ],
+  [
+   "Stress and in-flight decisions",
+   [
+    "If stressed, fatigued or unsure of fitness, defer the flight or fly with an instructor",
+    "Major emotional events such as bereavement can reduce focus below a safe level. Chronic stress signs: poor sleep, appetite, indigestion, irritability, poor concentration",
+    "Think a few minutes ahead of the aircraft and use quiet periods for routine checks",
+    "Monitor the wider weather: if you are being forced lower, a new plan is needed",
+    "In most non-normal situations pause and assess before reacting, unless the aircraft is in immediate danger. Emergencies such as engine failure need rehearsed procedures"
+   ]
+  ],
+  [
+   "Threat and error management",
+   [
+    "TEM is 'defensive flying'. It aims to manage threats and errors, not to eliminate them",
+    "Three elements: <b>threats</b>, <b>errors</b> and <b>undesired aircraft states</b> (an unsafe attitude, configuration or location)",
+    "<b>Threats</b> are outside the pilot's direct influence: <b>anticipated</b> (poor forecast, dense VFR traffic, short runway, known fault), <b>unanticipated</b> and <b>latent</b> (time pressure, fatigue, insufficient skill, poor safety attitude)",
+    "<b>Errors</b> are actions or inactions that reduce safety: <b>aircraft handling</b>, <b>procedural</b> or <b>communication</b>",
+    "Handling errors reflect low recency. Procedural and communication errors often come from poor checklist discipline or RT proficiency",
+    "A common cause of all error types is <b>distraction and overload</b>. Mitigate with planning, anticipation, task prioritisation and removing distractions"
+   ]
+  ]
+ ],
+ "sum": {
+  "Pre-flight decisions": "PAVE, 'what if?' and diversion planning.",
+  "Stress and in-flight decisions": "Defer when unfit and think ahead.",
+  "Threat and error management": "Threats, errors, undesired states and distraction."
+ },
+ "cards": [
+  {
+   "q": "What does PAVE stand for?",
+   "a": "Pilot, Aircraft, EnVironment, External pressures."
+  },
+  {
+   "q": "What does TEM stand for?",
+   "a": "Threat and error management."
+  },
+  {
+   "q": "What are the three elements of TEM?",
+   "a": "Threats, errors and undesired aircraft states."
+  },
+  {
+   "q": "What is an undesired aircraft state?",
+   "a": "An unsafe attitude, configuration or location."
+  },
+  {
+   "q": "Name the three categories of threat.",
+   "a": "Anticipated, unanticipated and latent."
+  },
+  {
+   "q": "Give an example of a latent threat.",
+   "a": "Time pressure, fatigue, insufficient skill or poor safety attitude."
+  },
+  {
+   "q": "Name three types of error.",
+   "a": "Aircraft handling, procedural and communication."
+  },
+  {
+   "q": "What is a common cause of all error types?",
+   "a": "Distraction and mental overload."
+  },
+  {
+   "q": "What should you avoid when deciding to fly?",
+   "a": "Waiting 'to see what happens' or 'hoping it will be OK'."
+  },
+  {
+   "q": "What does TEM aim to do?",
+   "a": "Manage threats and errors, not eliminate them."
+  },
+  {
+   "q": "What should you do in most non-normal situations?",
+   "a": "Pause and assess before reacting, unless in immediate danger."
+  },
+  {
+   "q": "What should you do if stressed or fatigued?",
+   "a": "Defer the flight or fly with an instructor."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "In PAVE, the E for External pressures includes:",
+   "o": [
+    "Engine",
+    "Time pressure and passengers",
+    "Weather",
+    "Fuel"
+   ],
+   "a": 1,
+   "why": "Time pressure, delays and passengers are external pressures."
+  },
+  {
+   "q": "A forecast of poor weather is which kind of threat?",
+   "o": [
+    "Latent",
+    "Anticipated",
+    "Unanticipated",
+    "Error"
+   ],
+   "a": 1,
+   "why": "It is known in advance."
+  },
+  {
+   "q": "Fatigue and time pressure are examples of:",
+   "o": [
+    "Unanticipated threats",
+    "Latent threats",
+    "Handling errors",
+    "Undesired aircraft states"
+   ],
+   "a": 1,
+   "why": "Latent threats are background factors."
+  },
+  {
+   "q": "A procedural error often comes from:",
+   "o": [
+    "Insufficient checklist discipline",
+    "Excess altitude",
+    "Engine icing",
+    "Radar"
+   ],
+   "a": 0,
+   "why": "Procedural and communication errors link to checklist and RT discipline."
+  },
+  {
+   "q": "TEM is best described as:",
+   "o": [
+    "Eliminating all risk",
+    "Defensive flying that manages threats and errors",
+    "A navigation method",
+    "An emergency drill"
+   ],
+   "a": 1,
+   "why": "TEM aims to manage them more effectively."
+  }
+ ]
+}

@@ -1,0 +1,251 @@
+{
+ "seq": 20,
+ "s": 3,
+ "topic": "Pilot health and performance (SS24)",
+ "order": 20,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "You must self-assess your fitness before every flight, whether you hold a Part-MED medical or a Pilot Medical Declaration. Stress, fatigue, dehydration, alcohol, medication and illness all reduce performance. The UK alcohol limit for flying is 20 mg per 100 ml, and the I AM SAFE checklist covers Illness, Attitude, Medication, Stress, Alcohol, Fatigue and Eating. Hypoxia is a risk above 8,000 ft and carbon monoxide mimics it. Built from CAA Safety Sense Leaflet 24.",
+ "src": [
+  [
+   "Safety Sense Leaflet 24: Pilot Health and Performance",
+   "https://www.caa.co.uk/media/dvfk0ogj/safetysense_pilot_health.pdf"
+  ]
+ ],
+ "sections": [
+  [
+   "Factors that reduce performance",
+   [
+    "<b>Stress</b>: some is useful, too much hurts performance",
+    "<b>Fatigue</b> slows reactions and weakens concentration, memory and vigilance",
+    "<b>Dehydration</b> causes fatigue and headaches, worsened by hot cabins. Skipping meals gives low energy and mood swings",
+    "<b>Alcohol</b>: UK flying limit is <code>20 mg per 100 ml</code> blood, stricter than driving. Alcohol in the last 24 hours can still give a positive result",
+    "Persistent low mood or anxiety harms concentration and decisions: pause and seek advice"
+   ]
+  ],
+  [
+   "I AM SAFE",
+   [
+    "<b>I</b>llness, <b>A</b>ttitude, <b>M</b>edication, <b>S</b>tress, <b>A</b>lcohol, <b>F</b>atigue, <b>E</b>ating",
+    "Plan at least <code>8 hours</code> sleep before flying",
+    "No flying within <code>8 hours</code> of drinking, and up to <code>24 hours</code> after a lot",
+    "Eat a moderate, healthy meal within a few hours of flight",
+    "Use it like a weather or NOTAM check before going to the aircraft"
+   ]
+  ],
+  [
+   "Medical certificates and the PMD",
+   [
+    "Private pilots need a <b>UK Part-MED</b> certificate or, where permitted, a <b>Pilot Medical Declaration</b> (PMD)",
+    "PMD standard: reasonable belief you meet <b>DVLA Group 1</b> (car) standards. No examination, introduced 2016, with more restricted privileges (normally UK aircraft and airspace)",
+    "PMD maximum take-off mass limits: <code>2,000 kg</code> or <code>5,700 kg</code> depending on the requirements met",
+    "<b>Class 2</b> covers PPL flying and is done by an AME. A <b>LAPL</b> medical can usually be done by a GP",
+    "Both systems rely on honesty. Seek aeromedical advice after surgery, regular medication, serious illness or injury, pregnancy, hospital admission, or needing glasses for the first time",
+    "Withdraw a PMD as soon as you stop meeting DVLA Group 1 standards"
+   ]
+  ],
+  [
+   "Medication, illness and incapacitation",
+   [
+    "Starting a new medicine: leave a few days before flying to see effects",
+    "SERA.2020 bars flying under a psychoactive substance that impairs performance. Be careful with strong pain relief such as codeine, tramadol or morphine",
+    "Heart, blood vessel and brain conditions are the most critical causes of sudden incapacitation",
+    "Severe pain, vertigo, sudden vision loss and severe gastroenteritis can incapacitate",
+    "Minor colds and earache can become serious in flight"
+   ]
+  ],
+  [
+   "Vision and hearing",
+   [
+    "Eye checks at least every <code>two years</code>. Cataracts often affect night vision first",
+    "Carry a spare pair of glasses or lenses. The CAA advises against <b>polarised</b> and <b>photochromic</b> lenses",
+    "Hearing loss, especially of high frequencies, makes radio speech harder. A good aviation headset helps"
+   ]
+  ],
+  [
+   "Altitude and gas effects",
+   [
+    "Trapped gas expands as you climb: ear, sinus and gut discomfort. Do not fly with a cold, and use the <b>Valsalva</b> technique to clear ears",
+    "Above <code>8,000 ft</code> contrast sensitivity falls, especially in low light",
+    "Above <code>10,000 ft</code>: confusion, clumsiness, drowsiness, alcohol-like effects",
+    "Without oxygen or pressurisation stay below <code>10,000 ft</code>, and above that use supplementary oxygen per NCO.OP.190",
+    "If hypoxia is suspected, descend. Hyperventilation can be a sign of hypoxia or stress"
+   ]
+  ],
+  [
+   "Heat, cold, CO and G",
+   [
+    "Cockpits trap heat, especially while taxiing: drink water and wear breathable clothing",
+    "Cold reduces dexterity and slows reactions",
+    "<b>Carbon monoxide</b> is colourless and odourless from exhaust and cabin heaters, and its symptoms resemble hypoxia",
+    "G-forces change blood flow to eyes and brain: aerobatic training covers the anti-G straining manoeuvre"
+   ]
+  ],
+  [
+   "Spatial disorientation and motion sickness",
+   [
+    "Balance sense can conflict with the aircraft's real attitude, leading to wrong control inputs",
+    "Risk is highest at night, in cloud, or with false horizons such as sloping cloud banks",
+    "If you enter cloud: trust the instruments, level the wings, stabilise, then look for visual references. Non-instrument pilots must never enter cloud deliberately",
+    "Motion sickness is a mismatch between vision and balance. If it starts, be ready to return early"
+   ]
+  ],
+  [
+   "Staying healthy",
+   [
+    "UK adult guidance: <code>150 minutes</code> moderate or <code>75 minutes</code> vigorous activity a week",
+    "Alcohol: not more than <code>14 units</code> a week, spread over 3 or more days",
+    "NHS Health Check every five years for ages <code>40 to 74</code> in England",
+    "Smoking and e-cigarettes raise heart disease risk"
+   ]
+  ]
+ ],
+ "sum": {
+  "Factors that reduce performance": "Stress, fatigue, dehydration and alcohol, with the 20 mg limit.",
+  "I AM SAFE": "A seven-letter self-check before every flight.",
+  "Medical certificates and the PMD": "Part-MED, Class 2, LAPL and the DVLA Group 1 PMD.",
+  "Medication, illness and incapacitation": "New medicines, strong pain relief and causes of sudden incapacitation.",
+  "Vision and hearing": "Two-yearly eye checks, spare glasses and a good headset.",
+  "Altitude and gas effects": "Gas expansion, ears and hypoxia above 8,000 and 10,000 ft.",
+  "Heat, cold, CO and G": "Heat, cold, carbon monoxide and G-force effects.",
+  "Spatial disorientation and motion sickness": "False horizons and what to do if you enter cloud.",
+  "Staying healthy": "Activity, alcohol units and health checks."
+ },
+ "cards": [
+  {
+   "q": "What is the UK flying alcohol limit?",
+   "a": "20 mg per 100 ml of blood."
+  },
+  {
+   "q": "What does I AM SAFE stand for?",
+   "a": "Illness, Attitude, Medication, Stress, Alcohol, Fatigue, Eating."
+  },
+  {
+   "q": "Minimum recommended sleep before a flight day?",
+   "a": "At least 8 hours."
+  },
+  {
+   "q": "No flying within how long of drinking alcohol?",
+   "a": "8 hours, and up to 24 hours after a lot."
+  },
+  {
+   "q": "PMD basis standard?",
+   "a": "DVLA Group 1 (car) medical standards."
+  },
+  {
+   "q": "What kind of examiner performs Part-MED exams?",
+   "a": "A CAA-authorised AME."
+  },
+  {
+   "q": "Altitude where contrast sensitivity falls?",
+   "a": "Above 8,000 ft."
+  },
+  {
+   "q": "Altitude where confusion and drowsiness appear?",
+   "a": "Above 10,000 ft."
+  },
+  {
+   "q": "Technique to clear the ears?",
+   "a": "Valsalva."
+  },
+  {
+   "q": "How often should eyes be checked?",
+   "a": "At least every two years."
+  },
+  {
+   "q": "Which lenses does the CAA advise against?",
+   "a": "Polarised and photochromic."
+  },
+  {
+   "q": "Why is CO dangerous?",
+   "a": "Colourless and odourless, with symptoms like hypoxia."
+  },
+  {
+   "q": "What is the weekly activity guideline?",
+   "a": "150 minutes moderate or 75 vigorous."
+  },
+  {
+   "q": "If you suspect hypoxia?",
+   "a": "Descend."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which describes the alcohol rule for pilots?",
+   "o": [
+    "Same as driving limit",
+    "20 mg per 100 ml blood",
+    "80 mg per 100 ml blood",
+    "No alcohol limit if not flying solo"
+   ],
+   "a": 1,
+   "why": "The flying limit is 20 mg per 100 ml, much stricter than driving."
+  },
+  {
+   "q": "In I AM SAFE, what does the second A stand for?",
+   "o": [
+    "Altitude",
+    "Attitude",
+    "Alcohol",
+    "Aircraft"
+   ],
+   "a": 2,
+   "why": "Illness, Attitude, Medication, Stress, Alcohol, Fatigue, Eating."
+  },
+  {
+   "q": "You start a new medication. What does the leaflet suggest?",
+   "o": [
+    "Fly immediately",
+    "Leave a few days before flying to see how it affects you",
+    "Fly only solo",
+    "Take a double dose"
+   ],
+   "a": 1,
+   "why": "Side effects may be delayed, so wait and take aeromedical advice."
+  },
+  {
+   "q": "A Pilot Medical Declaration is based on meeting:",
+   "o": [
+    "Class 1 standards",
+    "DVLA Group 1 standards",
+    "LAPL standards only",
+    "ICAO Class 3"
+   ],
+   "a": 1,
+   "why": "A PMD requires reasonable belief you meet DVLA Group 1 car standards."
+  },
+  {
+   "q": "Without oxygen or pressurisation, which ceiling applies?",
+   "o": [
+    "Below 8,000 ft",
+    "Below 10,000 ft",
+    "Below FL150",
+    "No limit"
+   ],
+   "a": 1,
+   "why": "Flights without oxygen or pressurisation must stay below 10,000 ft."
+  },
+  {
+   "q": "Carbon monoxide poisoning is hard to spot because:",
+   "o": [
+    "It smells strongly",
+    "It is colourless, odourless and mimics hypoxia",
+    "It only happens in winter",
+    "It affects only passengers"
+   ],
+   "a": 1,
+   "why": "CO is invisible and its symptoms resemble hypoxia."
+  },
+  {
+   "q": "Who is responsible for fitness to fly before each flight?",
+   "o": [
+    "The AME",
+    "The instructor",
+    "The pilot, whichever medical system applies",
+    "The aircraft operator"
+   ],
+   "a": 2,
+   "why": "Self-assessment before every flight is the pilot's responsibility."
+  }
+ ]
+}

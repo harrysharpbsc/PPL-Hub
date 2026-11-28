@@ -1,8 +1,9 @@
 import sys,os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 h=open('hub.html').read()
-files=['data.js','radio.js','caa.js','caa2.js','caa3.js']
-d='\n'.join(open(f).read() for f in files)
+import content
+ts=content.load();content.gate(ts)  # schema + lint: fails on new problems
+d='\n'.join([open('data.js').read(),content.to_js(ts),open('radio.js').read()])
 import os
 from packdata import pack
 labs='\n'.join((pack(open(f).read()) if f=='labs50data.js' else open(f).read()) for f in sorted(os.listdir('.')) if f.startswith('labs') and f.endswith('.js'))

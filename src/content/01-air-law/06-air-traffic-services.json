@@ -1,0 +1,628 @@
+{
+ "seq": 6,
+ "s": 0,
+ "topic": "Air Traffic Services",
+ "num": 7,
+ "order": 70,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "ATS (ICAO Annex 11) prevent collisions, keep traffic flowing, give information and alert search and rescue. Each airspace class sets who is separated from whom. In the UK you meet ATC (Ground, Tower, Approach), AFIS (\"Information\", no instructions in the air) and A/G (\"Radio\"). Outside controlled airspace CAP 774 gives four services: Basic, Traffic, Deconfliction and Procedural; whichever you get, avoiding traffic and terrain stays your job. Know when a flight plan is required or advisable, and the 30-minute overdue rule.",
+ "sections": [
+  [
+   "ICAO Annex 11: objectives of ATS",
+   [
+    "<b>Annex 11</b> covers airspace, ATS units and the services needed for a safe, orderly and expeditious flow of traffic",
+    "Objectives: prevent <b>collisions in the air</b>; prevent collisions on the <b>manoeuvring area</b> (aircraft and obstructions); <b>expedite</b> and keep an orderly flow; give <b>advice and information</b>; <b>alert</b> search and rescue and assist it",
+    "ATS are <b>not solely</b> responsible for preventing collisions: pilots and vehicle drivers keep their own responsibilities",
+    "The need for ATS depends on the types of traffic, its density and the weather",
+    "ATC is provided to all <b>IFR</b> flights in A to E; all <b>VFR</b> flights in B, C and D; all <b>Special VFR</b>; and all aerodrome traffic at controlled aerodromes (the book lists A for VFR too, but VFR is not allowed in Class A)"
+   ]
+  ],
+  [
+   "Services in each airspace class",
+   [
+    "<b>A</b>: IFR only; all cleared; all separated",
+    "<b>B</b>: IFR and VFR; all cleared; all separated from each other",
+    "<b>C</b>: all cleared; IFR separated from IFR <b>and</b> VFR; VFR separated from IFR, with traffic information on other VFR",
+    "<b>D</b>: all cleared; IFR separated from IFR only; VFR get traffic information on <b>all</b> other flights; avoidance advice on request",
+    "<b>E</b>: only <b>IFR</b> needs a clearance; IFR separated from IFR; traffic information as far as practical",
+    "<b>F</b>: advisory service for participating IFR; <b>G</b>: services on request only",
+    "Trap: in Class D, VFR are <b>not</b> separated from anyone; they get traffic information"
+   ]
+  ],
+  [
+   "ATS units in the UK",
+   [
+    "ATSUs give information before flight and keep radio contact during it; control is by <b>clearances and instructions</b>",
+    "<b>Area Control Centre</b>: ATC on airways (IFR), FIS and alerting, and the <b>Distress and Diversion</b> service",
+    "<b>Aerodrome ATC</b> controls aircraft in the vicinity and <b>all traffic on the manoeuvring area</b>, which needs ATC's prior permission",
+    "<b>Ground</b>: the manoeuvring area except runways in use. <b>Tower</b>: the runway and the circuit. Small aerodromes: Tower does both",
+    "<b>Approach</b>: departing the circuit, joining, and operating nearby. Normally departures call the <b>Tower (or Ground) first</b>; arrivals call <b>Approach first</b>",
+    "In a radar-equipped CTR you get a <b>Radar Control Service</b>: comply with the clearance, or ask for an alternative <b>before</b> deviating",
+    "Non-radio aircraft: light signals (also from a runway control van) and ground signals",
+    "Near aerodromes separation may be reduced if the controller can see both aircraft, or the pilots can see each other and say they will keep their own separation, or a following pilot has the one ahead in sight"
+   ]
+  ],
+  [
+   "AFIS, A/G radio and Safetycom",
+   [
+    "<b>AFIS</b> (\"Information\"): at aerodromes without ATC, information for safe flight <b>in the ATZ</b>. <b>No instructions to aircraft in the air</b>; on the ground, instructions should be followed",
+    "<b>A/G radio</b> (\"Radio\"): neither ATC nor AFIS; usually staff without ATC qualifications",
+    "<b>Safetycom <code>135.480 MHz</code></b>: shared by airfields without their own frequency. Expect congestion; keep calls short",
+    "Use Safetycom only <b>below <code>2,000 ft</code> aal</b> (or 1,000 ft above circuit height) and <b>within <code>10 nm</code></b> of your landing aerodrome"
+   ]
+  ],
+  [
+   "Lower Airspace Radar Service (LARS)",
+   [
+    "Outside controlled airspace <b>up to FL100</b>, within about <b><code>30 nm</code></b> of a participating civil or military unit",
+    "Provides a Basic, <b>Traffic</b> or <b>Deconfliction</b> Service on request",
+    "Three unanswered calls: assume the unit is closed",
+    "LARS frequencies are on the 1:500,000 and 1:250,000 charts"
+   ]
+  ],
+  [
+   "UK Flight Information Services (CAP 774)",
+   [
+    "In Class G, <b>the pilot is ultimately responsible for collision avoidance and terrain clearance</b>, whatever the service",
+    "Four services: <b>Basic, Traffic, Deconfliction, Procedural</b>. An <b>alerting service</b> comes with all of them",
+    "Agreeing a service is a \"contract\": both sides keep to its definition",
+    "<b>FISOs</b> can only give a <b>Basic Service</b>; the others need a controller",
+    "You choose the service; the controller asks if you don't say. Units without radar give a Procedural Service to IFR procedures as routine",
+    "The controller tells you when the service is <b>reduced</b> (high workload or traffic, SSR only, edge of radar cover)",
+    "Instructions outside controlled airspace are <b>not mandatory</b>, but follow them where you can",
+    "<b>Agreements</b> (with a controller, not a FISO, under a Basic or Traffic Service) on route, heading, level or area: don't break one without telling the controller and getting a reply, unless safety requires it"
+   ]
+  ],
+  [
+   "Basic Service",
+   [
+    "Maximum autonomy: <b>advice and information</b> for safe and efficient flight (weather, serviceability, aerodrome conditions, aerial activity)",
+    "For IFR or VFR, but may not suit IMC",
+    "<b>Traffic information should not be expected</b>. Outside an ATZ there is no obligation to give it",
+    "You may be identified, but nobody is <b>monitoring</b> your flight",
+    "You may change heading, route or level <b>without telling</b> the controller, unless you have an agreement",
+    "You avoid other traffic <b>unaided</b>"
+   ]
+  ],
+  [
+   "Traffic Service",
+   [
+    "<b>Radar-based</b>: a Basic Service plus <b>radar-derived traffic information</b>",
+    "IFR or VFR. If a heading or level would take you into IMC and you are not qualified, say so",
+    "You are <b>identified</b> and told so",
+    "Headings and levels may be given for positioning or sequencing, but <b>not to deconflict</b>",
+    "Don't change an assigned heading or level without telling ATC and getting a response, unless safety requires it",
+    "Still your job to avoid traffic and terrain. Want avoiding action? <b>Ask for a Deconfliction Service</b>"
+   ]
+  ],
+  [
+   "Deconfliction Service",
+   [
+    "<b>Radar-based</b>: traffic information <b>plus headings and levels</b> aimed at deconfliction minima",
+    "Minima against unknown traffic: <b><code>5 nm</code> laterally or <code>3,000 ft</code> vertically</b>. Between aircraft with the same controller: <code>3 nm</code> and <code>1,000 ft</code> (some military units 500 ft)",
+    "Minima are aimed at, <b>not guaranteed</b>",
+    "For <b>IFR</b>: expect headings or levels that may put you in IMC",
+    "Traffic avoidance is <b>still ultimately the pilot's</b>. Ignore an instruction and the avoidance of that aircraft is on you",
+    "Only <b>at or above the unit's terrain safe level</b>; below it you get a Traffic Service instead"
+   ]
+  ],
+  [
+   "Procedural Service",
+   [
+    "<b>No radar</b>: levels, radials, tracks and times that keep you apart from <b>other aircraft taking part</b> in the Procedural Service",
+    "Other Class G traffic need not be talking to the unit, so <b>conflicting traffic can appear without warning</b>",
+    "Common at aerodromes with instrument procedures but no radar. For <b>IFR</b>, possibly in IMC",
+    "You need not be identified; accurate <b>position reports</b> are essential",
+    "Traffic information is given on aircraft receiving a Basic Service from that unit, but no deconfliction advice on them"
+   ]
+  ],
+  [
+   "Flight plans",
+   [
+    "A flight plan is an ICAO-format ATC message and the basis for a clearance. Form <b>CA48</b>, or online via <b>AFPEx</b>. Guidance: Safety Sense 20 and AIP ENR 1.10",
+    "<b>Booking out</b> with the departure aerodrome is still required, and a flight plan is <b>not PPR</b>",
+    "Must file: all flights in <b>Class A</b>; all IFR in controlled airspace; all flights in controlled airspace in IMC or at night; all flights in <b>Class B to D</b>; destination over <code>40 km</code> with MTOW over <code>5,700 kg</code>; flights <b>crossing the UK FIR boundary</b>",
+    "VFR and Special VFR into a CTR usually use an <b>abbreviated flight plan</b>: the details given by radio when asking for the clearance",
+    "<b>Advisable</b> more than <code>10 nm</code> from the coast or over sparsely populated or mountainous areas",
+    "IFR in the Open-FIR does not need one on its own",
+    "No ATSU at the destination: leave a <b>responsible person</b> who knows your ETA",
+    "Not arrived <b><code>30 minutes</code> after ETA</b>: overdue action and search and rescue begin. <b>Close</b> the plan on arrival",
+    "Delayed more than <code>60 minutes</code> (<code>30</code> if any of it is in controlled airspace): cancel and re-file"
+   ]
+  ],
+  [
+   "Briefing, weather and facilitation",
+   [
+    "AIS online: AIP, AICs and NOTAMs, provided by <b>NATS</b> for the CAA",
+    "Weather: <b>self-briefing</b>, mainly from the Met Office. GAMET areas: North, Central, South-West, South-East. Report severe or unforecast weather to ATC",
+    "<b>VOLMET</b>: VHF broadcasts of aerodrome weather. <b>ATIS</b>: recorded aerodrome information (separate arrival and departure ATIS at big airports)",
+    "<b>General Aviation Report (GAR)</b>: for flights to or from the UK, including the Channel Islands, unless outbound directly to the EU (not Ireland)",
+    "Airfields: <b>designated</b>; non-designated with a <b>Certificate of Agreement</b>; others (police permission, 12 hours' notice)",
+    "Common Travel Area: GB, Channel Islands, Isle of Man, Northern Ireland, Republic of Ireland",
+    "Eurocontrol charges exempt: entirely VFR flights, flights returning to the same aerodrome, MTOW under 2,000 kg"
+   ]
+  ]
+ ],
+ "sum": {
+  "ICAO Annex 11: objectives of ATS": "Prevent collisions, keep traffic flowing, give information, alert SAR.",
+  "Services in each airspace class": "C separates IFR from everyone; D gives VFR traffic information only; E clears IFR only.",
+  "ATS units in the UK": "ACC for airways; Ground, Tower and Approach at aerodromes; ask before deviating from a clearance.",
+  "AFIS, A/G radio and Safetycom": "Information (no air instructions), Radio (A/G), Safetycom 135.480 below 2,000 ft within 10 nm.",
+  "Lower Airspace Radar Service (LARS)": "Up to FL100, within about 30 nm; three calls then give up.",
+  "UK Flight Information Services (CAP 774)": "Basic, Traffic, Deconfliction, Procedural; the pilot always avoids traffic and terrain.",
+  "Basic Service": "Information only; no traffic information expected.",
+  "Traffic Service": "Radar traffic information; headings only for sequencing.",
+  "Deconfliction Service": "IFR; headings and levels aiming for 5 nm or 3,000 ft.",
+  "Procedural Service": "No radar; separates only participating aircraft.",
+  "Flight plans": "Required cases, booking out, 30 minutes overdue, re-file after 60 (30) minutes' delay.",
+  "Briefing, weather and facilitation": "AIS, Met Office, ATIS and VOLMET; GAR and designated airports."
+ },
+ "cards": [
+  {
+   "q": "Annex covering ATS?",
+   "a": "ICAO Annex 11."
+  },
+  {
+   "q": "Five objectives of ATS?",
+   "a": "Prevent collisions in the air and on the manoeuvring area, expedite flow, give advice and information, alert SAR."
+  },
+  {
+   "q": "Which VFR flights receive an ATC service?",
+   "a": "VFR in Classes B, C and D, and all Special VFR."
+  },
+  {
+   "q": "Class D: are VFR separated?",
+   "a": "No: they get traffic information on all other flights."
+  },
+  {
+   "q": "Class C: IFR separated from?",
+   "a": "Other IFR and VFR."
+  },
+  {
+   "q": "Class E: who needs a clearance?",
+   "a": "IFR only."
+  },
+  {
+   "q": "ACC services?",
+   "a": "ATC on airways, FIS and alerting, Distress and Diversion."
+  },
+  {
+   "q": "Arriving aircraft normally call?",
+   "a": "Approach first."
+  },
+  {
+   "q": "Departing aircraft normally call?",
+   "a": "Aerodrome Control (Ground or Tower) first."
+  },
+  {
+   "q": "Unsuitable clearance?",
+   "a": "Request an alternative before deviating."
+  },
+  {
+   "q": "AFIS callsign suffix?",
+   "a": "Information."
+  },
+  {
+   "q": "Can AFIS instruct an aircraft in the air?",
+   "a": "No: information only (instructions on the ground)."
+  },
+  {
+   "q": "A/G callsign suffix?",
+   "a": "Radio."
+  },
+  {
+   "q": "Safetycom frequency?",
+   "a": "135.480 MHz."
+  },
+  {
+   "q": "When to use Safetycom?",
+   "a": "Below 2,000 ft aal (or 1,000 ft above circuit height) and within 10 nm."
+  },
+  {
+   "q": "LARS limits?",
+   "a": "Up to FL100, within about 30 nm of the unit."
+  },
+  {
+   "q": "LARS: no answer after how many calls?",
+   "a": "Three: assume it is closed."
+  },
+  {
+   "q": "The four UK FIS?",
+   "a": "Basic, Traffic, Deconfliction, Procedural."
+  },
+  {
+   "q": "Who can give a Traffic Service?",
+   "a": "Only a controller with radar."
+  },
+  {
+   "q": "Which service can a FISO give?",
+   "a": "Only a Basic Service."
+  },
+  {
+   "q": "Basic Service: traffic information?",
+   "a": "Not to be expected."
+  },
+  {
+   "q": "Traffic Service: headings given to deconflict?",
+   "a": "No: only for positioning or sequencing."
+  },
+  {
+   "q": "Deconfliction minima vs unknown traffic?",
+   "a": "5 nm laterally or 3,000 ft vertically."
+  },
+  {
+   "q": "Deconfliction minima, same controller?",
+   "a": "3 nm and 1,000 ft."
+  },
+  {
+   "q": "Deconfliction below the terrain safe level?",
+   "a": "Not given: expect a Traffic Service."
+  },
+  {
+   "q": "Procedural Service: needs radar?",
+   "a": "No."
+  },
+  {
+   "q": "Who avoids collisions in Class G?",
+   "a": "The pilot, whatever the service."
+  },
+  {
+   "q": "Flight plan form?",
+   "a": "CA48 (or online via AFPEx)."
+  },
+  {
+   "q": "Does a flight plan count as PPR?",
+   "a": "No."
+  },
+  {
+   "q": "When is a flight plan advisable?",
+   "a": "More than 10 nm from the coast, or over sparsely populated or mountainous areas."
+  },
+  {
+   "q": "Overdue action starts when?",
+   "a": "30 minutes after ETA."
+  },
+  {
+   "q": "Departure delayed: when must you re-file?",
+   "a": "Over 60 minutes (30 if in controlled airspace)."
+  },
+  {
+   "q": "Flight plan required for MTOW over?",
+   "a": "5,700 kg with a destination over 40 km away."
+  },
+  {
+   "q": "What is ATIS?",
+   "a": "Recorded aerodrome information on a dedicated frequency."
+  },
+  {
+   "q": "What is a GAR?",
+   "a": "General Aviation Report for the Police and Border Force."
+  },
+  {
+   "q": "Eurocontrol charge exemptions?",
+   "a": "All-VFR flights, same aerodrome out and back, MTOW under 2,000 kg."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "What is an alerting service?",
+   "o": [
+    "A service to notify organisations of aircraft in need of search and rescue aid, and assist them",
+    "A service from the Distress and Diversion cell only",
+    "A network of civil and military radio stations",
+    "A service to notify organisations of aircraft needing navigational help"
+   ],
+   "a": 0,
+   "why": "Alerting is about search and rescue. Navigational help is a different matter, and D&D is one provider, not the definition."
+  },
+  {
+   "q": "LARS is available outside controlled airspace:",
+   "o": [
+    "Up to FL100, within about 30 nm, giving Traffic and Deconfliction Services",
+    "Up to FL80, within about 30 nm, giving Traffic and Procedural Services",
+    "Up to FL100, within about 25 nm, giving Procedural and Deconfliction Services",
+    "Up to FL80, within about 25 nm, giving Deconfliction and Traffic Services"
+   ],
+   "a": 0,
+   "why": "FL100 and 30 nm. LARS is radar-based, so not Procedural. (Units also give a Basic Service.)"
+  },
+  {
+   "q": "An aerodrome Flight Information Service provides:",
+   "o": [
+    "Information useful for safe and efficient flight within the ATZ",
+    "Instructions and advice to aircraft in the ATZ",
+    "Clearances to operate within the ATZ",
+    "Information for flights in a CTR"
+   ],
+   "a": 0,
+   "why": "AFIS is information only, in the ATZ. It cannot clear or instruct aircraft in the air."
+  },
+  {
+   "q": "You receive an ATC clearance you consider unsuitable. You should:",
+   "o": [
+    "Request an alternative clearance",
+    "Ignore it and continue as planned",
+    "Comply even though it is unsuitable",
+    "Comply with as much as you can"
+   ],
+   "a": 0,
+   "why": "Ask for an alternative before deviating."
+  },
+  {
+   "q": "The purpose of a Basic Service is to:",
+   "o": [
+    "Provide information useful for the safe and efficient conduct of flight",
+    "Give radar-derived traffic warnings",
+    "Deconflict aircraft outside controlled airspace",
+    "Separate aircraft outside controlled airspace"
+   ],
+   "a": 0,
+   "why": "Basic is advice and information. Radar traffic information is a Traffic Service; deconfliction is a Deconfliction Service."
+  },
+  {
+   "q": "A flight plan was filed for a flight in controlled airspace and departure is delayed. After how long must a delay message be sent?",
+   "o": [
+    "30 minutes",
+    "45 minutes",
+    "60 minutes",
+    "2 hours"
+   ],
+   "a": 0,
+   "why": "30 minutes where the flight enters controlled airspace; the chapter gives 60 minutes for other flights."
+  },
+  {
+   "q": "Apart from when it is required, a flight plan is advisable when flying:",
+   "o": [
+    "More than 10 nm from the coast, or over sparsely populated or mountainous areas",
+    "More than 10 km from the coast, or over sparsely populated or mountainous areas",
+    "Through more than one ATZ",
+    "To a destination more than 40 km away"
+   ],
+   "a": 0,
+   "why": "10 nautical miles, not km. 40 km is part of a mandatory case (with MTOW over 5,700 kg)."
+  },
+  {
+   "q": "In Class D airspace, VFR flights:",
+   "o": [
+    "Get traffic information on all other flights but are not separated",
+    "Are separated from IFR flights",
+    "Are separated from all other flights",
+    "Need no clearance"
+   ],
+   "a": 0,
+   "why": "In Class D only IFR are separated from IFR. VFR get traffic information. Separation of VFR from IFR is Class C."
+  },
+  {
+   "q": "In Class C airspace, IFR flights are separated from:",
+   "o": [
+    "Other IFR flights and VFR flights",
+    "Other IFR flights only",
+    "VFR flights only",
+    "Nobody"
+   ],
+   "a": 0,
+   "why": "Class C: IFR from IFR and VFR. Class D and E: IFR from IFR only."
+  },
+  {
+   "q": "In Class E airspace, an ATC clearance is needed for:",
+   "o": [
+    "IFR flights only",
+    "VFR flights only",
+    "All flights",
+    "No flights"
+   ],
+   "a": 0,
+   "why": "Class E: IFR need a clearance; VFR do not."
+  },
+  {
+   "q": "ATC provides an air traffic control service to all VFR flights in Classes:",
+   "o": [
+    "B, C and D",
+    "A, B, C and D",
+    "C, D and E",
+    "D and E"
+   ],
+   "a": 0,
+   "why": "VFR is not allowed in Class A, and VFR in Class E get no ATC service."
+  },
+  {
+   "q": "At an AFIS aerodrome, an aircraft in the air may receive:",
+   "o": [
+    "Information only",
+    "Instructions to land",
+    "A clearance to enter the ATZ",
+    "Separation from other traffic"
+   ],
+   "a": 0,
+   "why": "AFIS gives information to aircraft in the air; on the ground it can give instructions."
+  },
+  {
+   "q": "A station calling itself \"Nottingham Radio\" provides:",
+   "o": [
+    "An air/ground communication service",
+    "Air traffic control",
+    "An aerodrome flight information service",
+    "A radar service"
+   ],
+   "a": 0,
+   "why": "Radio = A/G; Information = AFIS; Tower, Approach, Ground = ATC."
+  },
+  {
+   "q": "Safetycom (135.480 MHz) should only be used:",
+   "o": [
+    "Below 2,000 ft aal (or 1,000 ft above circuit height) and within 10 nm of the landing aerodrome",
+    "Below 3,000 ft and within 10 nm",
+    "Anywhere below FL100",
+    "Within 5 nm and below 1,000 ft"
+   ],
+   "a": 0,
+   "why": "Below 2,000 ft aal and within 10 nm, to limit congestion on a shared frequency."
+  },
+  {
+   "q": "Which service can a FISO provide?",
+   "o": [
+    "Basic Service only",
+    "Basic and Traffic",
+    "Traffic and Deconfliction",
+    "All four"
+   ],
+   "a": 0,
+   "why": "FISOs are not licensed for Traffic, Deconfliction or Procedural Services."
+  },
+  {
+   "q": "Under a Traffic Service, the controller may give headings:",
+   "o": [
+    "For positioning or sequencing, not to deconflict",
+    "To achieve the deconfliction minima",
+    "Never",
+    "Only in IMC"
+   ],
+   "a": 0,
+   "why": "Deconfliction headings are a Deconfliction Service. Under a Traffic Service, avoidance is up to you."
+  },
+  {
+   "q": "The deconfliction minima against unknown traffic are:",
+   "o": [
+    "5 nm laterally or 3,000 ft vertically",
+    "3 nm laterally or 1,000 ft vertically",
+    "5 nm laterally and 1,000 ft vertically",
+    "10 nm or 5,000 ft"
+   ],
+   "a": 0,
+   "why": "5 nm or 3,000 ft; between aircraft on the same controller, 3 nm and 1,000 ft."
+  },
+  {
+   "q": "Under a Deconfliction Service you decide not to follow an avoiding action instruction. Then:",
+   "o": [
+    "You become responsible for avoiding that conflicting aircraft",
+    "The controller remains responsible",
+    "The service is cancelled automatically",
+    "You must land at once"
+   ],
+   "a": 0,
+   "why": "Traffic avoidance is ultimately yours; ignoring the advice makes avoiding that aircraft your own task."
+  },
+  {
+   "q": "You ask to descend below the unit's terrain safe level while under a Deconfliction Service. Expect:",
+   "o": [
+    "A Traffic Service instead",
+    "The same service, with terrain warnings",
+    "A Procedural Service",
+    "No service at all"
+   ],
+   "a": 0,
+   "why": "Deconfliction is only given at or above the terrain safe level."
+  },
+  {
+   "q": "Under a Procedural Service:",
+   "o": [
+    "You are deconflicted only from other aircraft taking part in it",
+    "You are deconflicted from all traffic",
+    "You receive radar traffic information",
+    "You must be identified"
+   ],
+   "a": 0,
+   "why": "No radar: other Class G traffic may not be talking to the unit, so conflicts can appear without warning."
+  },
+  {
+   "q": "Who is ultimately responsible for collision avoidance in Class G when receiving a Deconfliction Service?",
+   "o": [
+    "The pilot",
+    "The controller",
+    "Both equally",
+    "The LARS unit"
+   ],
+   "a": 0,
+   "why": "In Class G the pilot is ultimately responsible for collision avoidance and terrain clearance under every service."
+  },
+  {
+   "q": "Under a Basic Service with no agreement, may you change level without telling the controller?",
+   "o": [
+    "Yes",
+    "No, never",
+    "Only above 3,000 ft",
+    "Only in VMC"
+   ],
+   "a": 0,
+   "why": "Basic allows maximum autonomy; only an agreement ties you to a level or route."
+  },
+  {
+   "q": "Normally, an arriving aircraft first contacts:",
+   "o": [
+    "Approach Control",
+    "Aerodrome Control (Tower)",
+    "Ground",
+    "The ACC"
+   ],
+   "a": 0,
+   "why": "Arrivals call Approach first; departures call the aerodrome controller first."
+  },
+  {
+   "q": "Which flight must file a flight plan?",
+   "o": [
+    "Any flight crossing the UK FIR boundary",
+    "A VFR flight in Class G over 40 km",
+    "Any flight over the sea",
+    "IFR in the Open-FIR"
+   ],
+   "a": 0,
+   "why": "Crossing the FIR boundary always needs one. IFR in the Open-FIR does not on its own; distance alone (without MTOW over 5,700 kg) does not."
+  },
+  {
+   "q": "You land somewhere other than your flight-plan destination. You must:",
+   "o": [
+    "Tell your original destination (or parent ATSU) so overdue action is not started",
+    "Do nothing; the plan closes itself",
+    "Phone London Information only if it is after dark",
+    "Re-file a new flight plan"
+   ],
+   "a": 0,
+   "why": "Overdue action starts 30 minutes after your ETA, so tell them you have landed elsewhere."
+  },
+  {
+   "q": "Does filing a flight plan give you prior permission to land at a PPR aerodrome?",
+   "o": [
+    "No",
+    "Yes",
+    "Only if the destination has ATC",
+    "Only for IFR flights"
+   ],
+   "a": 0,
+   "why": "PPR must be obtained separately from the aerodrome."
+  },
+  {
+   "q": "Overdue action begins if you have not arrived within:",
+   "o": [
+    "30 minutes of your ETA",
+    "15 minutes of your ETA",
+    "60 minutes of your ETA",
+    "2 hours of departure"
+   ],
+   "a": 0,
+   "why": "30 minutes after ETA."
+  },
+  {
+   "q": "Which flights are exempt from Eurocontrol en-route charges?",
+   "o": [
+    "Flights made entirely under VFR",
+    "Flights by aircraft over 2,000 kg",
+    "Flights between different aerodromes under IFR",
+    "All flights below FL100"
+   ],
+   "a": 0,
+   "why": "Exempt: all-VFR flights, flights returning to the same aerodrome, and aircraft under 2,000 kg MTOW."
+  },
+  {
+   "q": "ATIS is:",
+   "o": [
+    "Recorded aerodrome information broadcast on its own frequency",
+    "A live weather broadcast for en-route aerodromes",
+    "A radar service",
+    "An automatic terrain warning"
+   ],
+   "a": 0,
+   "why": "ATIS reduces load on the ATC frequency. VOLMET broadcasts weather for several aerodromes."
+  }
+ ]
+}

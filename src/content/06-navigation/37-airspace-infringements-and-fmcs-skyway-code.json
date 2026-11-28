@@ -1,0 +1,168 @@
+{
+ "seq": 37,
+ "s": 5,
+ "topic": "Airspace infringements and FMCs (Skyway Code)",
+ "order": 40,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "An infringement is unauthorised entry into notified airspace: CAS, prohibited or restricted airspace, active danger areas, ATZ, RMZ or TMZ. Prevent them with pre-flight planning, a correctly configured moving map, a margin of 200 ft vertically or 2 NM horizontally, the right altimeter setting, a UK FIS or a Frequency Monitoring Code. To use an FMC, tune the frequency, check volume, select the code with ALT, listen out, and reset to 7000 afterwards. Built from the Skyway Code pp.12, 89, 133-134.",
+ "src": [
+  [
+   "The Skyway Code (CAP 1535 v4, Nov 2023), pp.12, 89, 133-134",
+   "https://www.caa.co.uk/our-work/publications/documents/content/cap1535s/"
+  ]
+ ],
+ "sections": [
+  [
+   "What counts as an infringement",
+   [
+    "Unauthorised entry into notified airspace: controlled airspace, prohibited or restricted airspace, active danger areas, <b>ATZ</b>, <b>RMZ</b> (radio mandatory zone) and <b>TMZ</b> (transponder mandatory zone)",
+    "Can be a serious safety incident and could lead to a mid-air collision",
+    "In most infringements pilots were not using a moving map, or not using it correctly"
+   ]
+  ],
+  [
+   "Prevention",
+   [
+    "Plan the flight in detail, even 'on the dining room table', with a secondary plan",
+    "Use a VFR moving map: keep databases up to date, check airspace and NOTAMs, place it where it does not block the lookout and have a backup (draw the route on a 1:500,000 or 1:250,000 chart)",
+    "Stay <code>200 ft</code> below the base of CAS (or over an ATZ, Danger, Prohibited or Restricted area) and <code>2 NM</code> from the edge of notified airspace. Increase the margin in turbulence",
+    "Use the right altimeter setting and note where the base of CAS changes between an altitude and a flight level",
+    "Get a UK FIS from an ATSU, or use an FMC",
+    "Apply TEM: threats include airspace, NOTAM, weather, distraction and equipment failure. Errors include misidentifying features, not holding altitude and inaccurate headings",
+    "Recognise distraction and positively shift attention back to flying"
+   ]
+  ],
+  [
+   "Frequency Monitoring Codes (FMC)",
+   [
+    "An FMC is selected on the transponder while <b>monitoring</b> an ATC frequency without having established contact",
+    "Steps: select the frequency and check volume and reception, select the FMC with <b>ALT (Mode C)</b>, listen for your callsign or position, and stay within range of the ATSU",
+    "Return to <code>7000</code> (VFR) or <code>2000</code> (IFR) when you stop monitoring",
+    "ATC will endeavour to warn you of a likely infringement but this is not guaranteed and depends on capacity",
+    "Each FMC has a published frequency and area (AIP ENR 6-80)"
+   ]
+  ],
+  [
+   "Transponder rules",
+   [
+    "If you have a serviceable transponder, SERA requires it selected on with altitude reporting at all times",
+    "Exceptions: ATC direction or local procedure, airspace where carriage is not required (turn off only to save power)",
+    "Switching it off while infringing increases the likely sanction"
+   ]
+  ]
+ ],
+ "sum": {
+  "What counts as an infringement": "CAS, restricted airspace, ATZ, RMZ and TMZ.",
+  "Prevention": "Planning, moving map, 200 ft and 2 NM margins and TEM.",
+  "Frequency Monitoring Codes (FMC)": "Tune, select ALT, listen, then return to 7000.",
+  "Transponder rules": "Keep it on with ALT unless an exception applies."
+ },
+ "cards": [
+  {
+   "q": "Which airspace types count for infringement?",
+   "a": "CAS, prohibited and restricted airspace, active danger areas, ATZ, RMZ and TMZ."
+  },
+  {
+   "q": "What does RMZ stand for?",
+   "a": "Radio mandatory zone."
+  },
+  {
+   "q": "What does TMZ stand for?",
+   "a": "Transponder mandatory zone."
+  },
+  {
+   "q": "Common factor in most infringements?",
+   "a": "Not using a moving map or using it incorrectly."
+  },
+  {
+   "q": "Recommended vertical margin from CAS?",
+   "a": "200 ft."
+  },
+  {
+   "q": "Recommended horizontal margin from notified airspace?",
+   "a": "2 NM."
+  },
+  {
+   "q": "What does FMC stand for?",
+   "a": "Frequency Monitoring Code."
+  },
+  {
+   "q": "What is an FMC used for?",
+   "a": "Showing you monitor a frequency without a service."
+  },
+  {
+   "q": "Mode to select an FMC with?",
+   "a": "ALT (Mode C)."
+  },
+  {
+   "q": "What to set after finishing with an FMC?",
+   "a": "7000 (VFR) or 2000 (IFR)."
+  },
+  {
+   "q": "Does an FMC guarantee a warning?",
+   "a": "No, it depends on ATC capacity."
+  },
+  {
+   "q": "Is it recommended to use IFR waypoints for VFR?",
+   "a": "No."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "A Frequency Monitoring Code is used to:",
+   "o": [
+    "Declare an emergency",
+    "Show you are listening on a frequency without a service",
+    "Request a clearance",
+    "Report position"
+   ],
+   "a": 1,
+   "why": "It improves situational awareness for pilot and ATC."
+  },
+  {
+   "q": "The recommended margin from the base of CAS is:",
+   "o": [
+    "50 ft",
+    "200 ft",
+    "500 ft",
+    "1,000 ft"
+   ],
+   "a": 1,
+   "why": "Plus 2 NM horizontally from the edge of notified airspace."
+  },
+  {
+   "q": "When leaving the monitored frequency you should:",
+   "o": [
+    "Stay on the FMC",
+    "Return to 7000 (VFR)",
+    "Select 7700",
+    "Turn the transponder off"
+   ],
+   "a": 1,
+   "why": "Reset to the conspicuity code."
+  },
+  {
+   "q": "Which is NOT counted as an infringement?",
+   "o": [
+    "Entering an ATZ without permission",
+    "Entering a TMZ without transponder",
+    "Entering Class G airspace below 1,000 ft",
+    "Entering an active danger area"
+   ],
+   "a": 2,
+   "why": "Class G is not notified restricted airspace."
+  },
+  {
+   "q": "Most infringements occur when the pilot:",
+   "o": [
+    "Used a moving map correctly",
+    "Did not use or misused a moving map",
+    "Flew IFR",
+    "Had a Mode S transponder"
+   ],
+   "a": 1,
+   "why": "Moving maps help only when configured and used properly."
+  }
+ ]
+}

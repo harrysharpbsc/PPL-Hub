@@ -1,0 +1,180 @@
+{
+ "seq": 30,
+ "s": 0,
+ "topic": "VFR, IFR and Special VFR (Skyway Code)",
+ "order": 35,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "VMC minima depend on height and airspace class. At and above FL100 the minimum is 8 km visibility, 1,500 m horizontally and 1,000 ft vertically from cloud. Below FL100 it is 5 km with the same cloud distances, with UK exceptions for class D and class G at 140 kt IAS or less. VFR at night requires a cloud ceiling of at least 1,500 ft. Special VFR in a CTR needs 1,500 m visibility, clear of cloud, in sight of the surface and 140 kt IAS or less. Built from the Skyway Code pp.64-67.",
+ "src": [
+  [
+   "The Skyway Code (CAP 1535 v4, Nov 2023), pp.64-67",
+   "https://www.caa.co.uk/our-work/publications/documents/content/cap1535s/"
+  ]
+ ],
+ "sections": [
+  [
+   "VMC minima",
+   [
+    "At and above <code>FL100 / 10,000 ft</code> (all classes): <code>8 km</code> visibility, <code>1,500 m</code> horizontally and <code>1,000 ft</code> vertically from cloud",
+    "Below FL100 and above 3,000 ft AMSL or 1,000 ft above terrain, whichever is higher: <code>5 km</code>, same cloud distances",
+    "At and below 3,000 ft AMSL or 1,000 ft above terrain (classes A to E): 5 km, 1,500 m horizontal and 1,000 ft vertical. Class F and G: 5 km, clear of cloud and in sight of the surface",
+    "<b>Class D exception (UK)</b>: by day at or below 3,000 ft AMSL, in sight of the surface and at 140 kt IAS or less you may fly clear of cloud, with 5 km visibility (1,500 m for helicopters)",
+    "<b>Class G exception (UK)</b>: 5 km may reduce to 1,500 m by day in sight of the surface at 140 kt IAS or less",
+    "VFR is not permitted in class A",
+    "VMC minima exist to avoid other traffic (e.g. class E cloud rules keep VFR from IFR traffic)"
+   ]
+  ],
+  [
+   "Other VFR requirements",
+   [
+    "A VFR flight may not take off or land in a CTR, or enter the ATZ or circuit, if the reported cloud ceiling is under <code>1,500 ft</code> or ground visibility under <code>5 km</code>. Request Special VFR instead",
+    "VFR flights may not operate above <code>FL195</code> unless authorised",
+    "SERA VFR cruising levels are not mandatory in the UK"
+   ]
+  ],
+  [
+   "VFR at night (UK)",
+   [
+    "Same visibility and cloud rules as by day, except the 1,500 m class G reduction is not permitted",
+    "Cloud ceiling must be at least <code>1,500 ft</code>",
+    "Be in sight of the surface at or below 3,000 ft AMSL or 1,000 ft above terrain",
+    "Never fly lower than 500 ft above ground or water, or 500 ft above the highest obstacle within 150 m. Over congested areas stay 1,000 ft above the highest obstacle within 600 m",
+    "Submit a flight plan if leaving the vicinity of the aerodrome, and use an air traffic service if available",
+    "En-route obstacles 150 m (490 ft) or more AGL are lit at night"
+   ]
+  ],
+  [
+   "Special VFR (SVFR)",
+   [
+    "Allows flight in a CTR below VMC minima without complying with IFR. Subject to ATC separation from IFR and other SVFR flights",
+    "Minimum to accept a clearance: clear of cloud, in sight of the surface, flight visibility not less than <code>1,500 m</code> (<code>800 m</code> helicopters) and <code>140 kt</code> IAS or less",
+    "For take-off or landing in the CTR, reported ground visibility must be at least 1,500 m (800 m helicopter) or a cloud ceiling of <code>600 ft</code>",
+    "SVFR at night is permitted in the UK. Some aerodromes have local flying areas with standard SVFR arrangements"
+   ]
+  ],
+  [
+   "IFR",
+   [
+    "You must fly IFR if below VMC minima (unless in a CTR with SVFR clearance). Class A is IFR only",
+    "IFR requires a valid instrument qualification",
+    "IFR flights fly at least 1,000 ft (2,000 ft in mountainous areas) above the highest obstacle within 8 km (5 NM), except for take-off or landing",
+    "Outside CAS, IFR cruising levels apply above 3,000 ft AMSL in the UK"
+   ]
+  ]
+ ],
+ "sum": {
+  "VMC minima": "Visibility and cloud distances with the UK class D and G exceptions.",
+  "Other VFR requirements": "CTR conditions and the FL195 ceiling.",
+  "VFR at night (UK)": "Minima and ceiling of 1,500 ft.",
+  "Special VFR (SVFR)": "1,500 m, clear of cloud, 140 kt.",
+  "IFR": "Class A and instrument qualification."
+ },
+ "cards": [
+  {
+   "q": "VMC visibility at and above FL100?",
+   "a": "8 km."
+  },
+  {
+   "q": "Horizontal and vertical cloud clearance in SERA VMC?",
+   "a": "1,500 m horizontally and 1,000 ft vertically."
+  },
+  {
+   "q": "Class D exception conditions?",
+   "a": "By day at or below 3,000 ft AMSL, in sight of the surface at 140 kt IAS or less."
+  },
+  {
+   "q": "Class G visibility reduction in the UK?",
+   "a": "5 km to 1,500 m by day, in sight of the surface at 140 kt IAS or less."
+  },
+  {
+   "q": "Is VFR permitted in class A?",
+   "a": "No."
+  },
+  {
+   "q": "Cloud ceiling needed to take off or land in a CTR under VFR?",
+   "a": "At least 1,500 ft, with 5 km ground visibility."
+  },
+  {
+   "q": "Upper limit for VFR flights unless authorised?",
+   "a": "FL195."
+  },
+  {
+   "q": "Cloud ceiling needed for VFR at night?",
+   "a": "At least 1,500 ft."
+  },
+  {
+   "q": "Minimum visibility for SVFR (aeroplane)?",
+   "a": "1,500 m, clear of cloud and in sight of the surface."
+  },
+  {
+   "q": "Maximum speed for SVFR?",
+   "a": "140 kt IAS."
+  },
+  {
+   "q": "Minimum reported ceiling to take off or land under SVFR?",
+   "a": "600 ft (or ground visibility 1,500 m)."
+  },
+  {
+   "q": "IFR terrain clearance outside mountainous areas?",
+   "a": "1,000 ft above highest obstacle within 8 km."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "In Class E at FL100 or above the VFR visibility minimum is:",
+   "o": [
+    "5 km",
+    "8 km",
+    "10 km",
+    "1,500 m"
+   ],
+   "a": 1,
+   "why": "8 km at or above FL100."
+  },
+  {
+   "q": "In class G by day at 120 kt IAS and in sight of the surface, the UK visibility minimum can reduce to:",
+   "o": [
+    "800 m",
+    "1,500 m",
+    "3 km",
+    "5 km"
+   ],
+   "a": 1,
+   "why": "1,500 m by day, clear of cloud and in sight of the surface at 140 kt IAS or less."
+  },
+  {
+   "q": "The reported ceiling below which VFR cannot be used to land in a CTR is:",
+   "o": [
+    "600 ft",
+    "1,000 ft",
+    "1,500 ft",
+    "2,500 ft"
+   ],
+   "a": 2,
+   "why": "Below 1,500 ft ceiling or 5 km ground visibility, request Special VFR."
+  },
+  {
+   "q": "Special VFR minima for an aeroplane include:",
+   "o": [
+    "800 m visibility",
+    "1,500 m visibility and 140 kt IAS or less",
+    "5 km visibility",
+    "FL100"
+   ],
+   "a": 1,
+   "why": "Clear of cloud, in sight of the surface, 1,500 m and 140 kt or less."
+  },
+  {
+   "q": "Which statement is true about night VFR in the UK?",
+   "o": [
+    "The 1,500 m class G reduction still applies",
+    "Minima are the same as by day, except no 1,500 m reduction",
+    "VFR is not allowed",
+    "Ceiling of 600 ft is enough"
+   ],
+   "a": 1,
+   "why": "The reduced class G visibility is not permitted at night."
+  }
+ ]
+}

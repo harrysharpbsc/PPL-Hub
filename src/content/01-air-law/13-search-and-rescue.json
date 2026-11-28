@@ -1,0 +1,280 @@
+{
+ "seq": 13,
+ "s": 0,
+ "topic": "Search and Rescue",
+ "num": 14,
+ "order": 140,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "An RCC runs search and rescue; 121.5 MHz is watched continuously, and the ATSU last in contact normally starts alerting action. For a SAR watch, file a flight plan, which is advisable more than 10 nm from the coast, over remote areas or without a suitable radio. Diverting? Tell the original destination before ETA plus 30 minutes or SAR action begins. The phases are uncertainty, alert and distress. If you see a craft in distress, keep it in sight, fix your position and report what you see. Ground signals: V assistance, X medical, arrow direction, Y yes, N no; the aircraft rocks its wings (day) or flashes its landing lights twice (night) to show it understood.",
+ "sections": [
+  [
+   "Search and rescue in the UK",
+   [
+    "SAR is controlled by a <b class=\"k\">Rescue Coordination Centre (RCC)</b>, acting on reports from any source; the response may be joint civil and military. Details: <b class=\"k\">AIP GEN 3.6</b>.",
+    "A <b class=\"k\">continuous listening watch</b> is kept on <code>121.5 MHz</code>. If you can't make a Mayday, Pan or \"lost\" call on the frequency in use, call on 121.5."
+   ]
+  ],
+  [
+   "Alerting service",
+   [
+    "Available to <b class=\"k\">all aircraft known to ATS</b> in the UK FIRs. Action is normally started by the <b class=\"k\">ATSU last in contact</b> with the aircraft, or the one that receives the information."
+   ]
+  ],
+  [
+   "Position fixing on 121.5 MHz",
+   [
+    "The book describes <b class=\"k\">autotriangulation</b> (direction-finding fixes) on 121.5 MHz over much of England south and east of Manchester above <code>3,000 ft</code> (down to <code>2,000 ft</code> near London), triggered just by calling. The D&amp;D cell can also use radar; check AIP GEN 3.6 for what's available now."
+   ]
+  ],
+  [
+   "Transponder in an emergency",
+   [
+    "<code>7700</code> emergency (keep an assigned code if already with a unit), <code>7600</code> radio failure, <code>7500</code> unlawful interference, with <b class=\"k\">Mode C</b>."
+   ]
+  ],
+  [
+   "SAR watch",
+   [
+    "For a constant SAR watch, <b class=\"k\">file a flight plan</b>. Advisable when:",
+    "– flying more than <code>10 nm</code> from the coast",
+    "– over <b class=\"k\">remote or hazardous areas</b> (northern Scotland, much of the west coast down to Cornwall)",
+    "– in an aircraft <b class=\"k\">without a suitable radio</b>",
+    "If you are expected at an aerodrome, tell its ATC unit (or the authority there) <b class=\"k\">as soon as possible</b> of:",
+    "– any <b class=\"k\">change of destination</b>",
+    "– any expected delay of <code>30 minutes</code> or more",
+    "Diverting en route: tell the <b class=\"k\">original destination</b> (or ask ATC to) before your ETA plus <code>30 minutes</code>, or <b class=\"k\">SAR action will begin</b>."
+   ]
+  ],
+  [
+   "ICAO Annex 12",
+   [
+    "States provide SAR <b class=\"k\">24 hours a day</b> in their territory, <b class=\"k\">whatever the nationality</b> of the aircraft or occupants.",
+    "Each State defines <b class=\"k\">SAR regions</b> (not overlapping) with a <b class=\"k\">rescue coordination centre</b> in each, coordinates with <b class=\"k\">neighbouring States</b>, and arranges for aircraft, ships and local services outside the SAR organisation to help.",
+    "Anyone who believes an aircraft is in an emergency passes <b class=\"k\">all available information</b> to the RCC <b class=\"k\">immediately</b>."
+   ]
+  ],
+  [
+   "Emergency phases",
+   [
+    "<b class=\"k\">Uncertainty phase</b>: doubt about the safety of the aircraft. The RCC works with ATSUs to <b class=\"k\">evaluate reports</b> quickly.",
+    "<b class=\"k\">Alert phase</b>: <b class=\"k\">concern</b> for its safety. The RCC <b class=\"k\">alerts SAR units</b> and starts action.",
+    "<b class=\"k\">Distress phase</b>: <b class=\"k\">reasonably certain</b> the aircraft needs <b class=\"k\">immediate assistance</b> or faces grave and imminent danger. The RCC, in order:",
+    "– starts action by <b class=\"k\">SAR units</b>",
+    "– fixes the aircraft's <b class=\"k\">position</b>, its uncertainty and the <b class=\"k\">search area</b>",
+    "– notifies the <b class=\"k\">operator</b>, and <b class=\"k\">adjacent RCCs</b> if needed",
+    "– tells the ATSU about information from other sources",
+    "– asks <b class=\"k\">aircraft, ships and coastal stations</b> to listen for the aircraft or its <b class=\"k\">ELT</b>, help it and report",
+    "– makes and updates a <b class=\"k\">SAR plan</b>",
+    "– notifies the <b class=\"k\">State of Registry</b> and the <b class=\"k\">accident investigation</b> authorities"
+   ]
+  ],
+  [
+   "If you see an aircraft or vessel in distress (5.8)",
+   [
+    "Unless unable, or it's unnecessary:",
+    "– <b class=\"k\">keep it in sight</b> as long as needed",
+    "– <b class=\"k\">fix your own position</b> precisely",
+    "– <b class=\"k\">report</b> to the RCC or ATSU: type, identification and <b class=\"k\">condition</b>; its <b class=\"k\">position</b> (coordinates, or distance and <b class=\"k\">true</b> bearing from a landmark or navaid); <b class=\"k\">time (UTC)</b>; <b class=\"k\">number of people</b> seen; whether they have <b class=\"k\">abandoned</b> it; number <b class=\"k\">afloat</b>; survivors' apparent condition",
+    "– <b class=\"k\">act as instructed</b>",
+    "The <b class=\"k\">first aircraft on scene</b>, if not a SAR aircraft, takes <b class=\"k\">charge of on-scene activity</b> until the first SAR aircraft arrives (or hands over to a capable aircraft if it can't talk to the RCC).",
+    "Directing a <b class=\"k\">surface craft</b> to the scene: give precise instructions by any means available."
+   ]
+  ],
+  [
+   "If you intercept a distress call (5.9)",
+   [
+    "<b class=\"k\">Record</b> the aircraft's position if given; <b class=\"k\">take a bearing</b> if you can; <b class=\"k\">inform</b> the RCC or ATSU with all the information; at your discretion, <b class=\"k\">head for the position</b> while awaiting instructions."
+   ]
+  ],
+  [
+   "Signals from survivors",
+   [
+    "Radio if it works, or: <b class=\"k\">flares</b>, a <b class=\"k\">heliograph</b> (mirror) flash, a flashing <b class=\"k\">light</b>, a <b class=\"k\">flag</b> (with a ball above or below it: the international distress signal), <b class=\"k\">whistles</b>, <b class=\"k\">sea dye markers</b>.",
+    "<b class=\"k\">Ground-to-air signals</b>, at least <code>2-3 m</code> long, contrasting with the ground:",
+    "<b>V</b>: <b class=\"k\">Require assistance</b>",
+    "<b>X</b>: <b class=\"k\">Require medical assistance</b>",
+    "<b>↑ (arrow)</b>: <b class=\"k\">Proceeding in this direction</b>",
+    "<b>Y</b>: <b class=\"k\">Yes</b> (affirmative)",
+    "<b>N</b>: <b class=\"k\">No</b> (negative)",
+    "<b class=\"k\">Aircraft reply</b> that the signal is <b class=\"k\">understood</b>: by <b class=\"k\">day</b>, <b class=\"k\">rock the wings</b>; at <b class=\"k\">night</b>, <b class=\"k\">flash the landing lights on and off twice</b> (or the navigation lights). No reply = <b class=\"k\">not understood</b>.",
+    "<b>Memory aid</b> V for \"Very much need help\", X marks a doctor's cross."
+   ]
+  ]
+ ],
+ "sum": {
+  "Search and rescue in the UK": "A Rescue Coordination Centre controls SAR; 121.5 MHz is watched continuously.",
+  "Alerting service": "For all aircraft known to ATS; the ATSU last in contact normally starts it.",
+  "Position fixing on 121.5 MHz": "Calling on 121.5 MHz lets the D&D cell fix your position.",
+  "Transponder in an emergency": "7700, 7600 and 7500 with Mode C.",
+  "SAR watch": "File a flight plan for a SAR watch; tell your destination of a diversion before ETA plus 30 minutes.",
+  "ICAO Annex 12": "SAR 24 hours a day for any nationality, in non-overlapping regions each with an RCC.",
+  "Emergency phases": "Uncertainty, then alert, then distress, each with more RCC action.",
+  "If you see an aircraft or vessel in distress (5.8)": "Keep it in sight, fix your position, report what you see, follow instructions.",
+  "If you intercept a distress call (5.9)": "Record the position, take a bearing, pass it on, and head there if appropriate.",
+  "Signals from survivors": "V assistance, X medical, arrow direction, Y yes, N no. Rock wings by day, flash lights twice at night."
+ },
+ "cards": [
+  {
+   "q": "Who controls SAR in the UK?",
+   "a": "A Rescue Coordination Centre (RCC)."
+  },
+  {
+   "q": "Emergency frequency watched continuously?",
+   "a": "121.5 MHz."
+  },
+  {
+   "q": "Who normally starts alerting action?",
+   "a": "The ATSU last in contact with the aircraft."
+  },
+  {
+   "q": "How do you get a SAR watch?",
+   "a": "File a flight plan."
+  },
+  {
+   "q": "When is a flight plan advisable for SAR?",
+   "a": "More than 10 nm from the coast, over remote or hazardous areas, or without a suitable radio."
+  },
+  {
+   "q": "Diverting en route: deadline to tell the original destination?",
+   "a": "Before ETA plus 30 minutes, or SAR action starts."
+  },
+  {
+   "q": "The three emergency phases?",
+   "a": "Uncertainty, alert, distress."
+  },
+  {
+   "q": "Distress phase means?",
+   "a": "Reasonably certain the aircraft needs immediate help or faces grave and imminent danger."
+  },
+  {
+   "q": "First non-SAR aircraft at a scene?",
+   "a": "Takes charge on scene until the first SAR aircraft arrives."
+  },
+  {
+   "q": "Ground signal V?",
+   "a": "Require assistance."
+  },
+  {
+   "q": "Ground signal X?",
+   "a": "Require medical assistance."
+  },
+  {
+   "q": "Ground signal arrow?",
+   "a": "Proceeding in this direction."
+  },
+  {
+   "q": "Ground signals Y and N?",
+   "a": "Yes and No."
+  },
+  {
+   "q": "Aircraft acknowledging a ground signal by day?",
+   "a": "Rocks its wings."
+  },
+  {
+   "q": "By night?",
+   "a": "Flashes its landing lights (or nav lights) on and off twice."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "A survivor lays out a large 'X' on the ground. It means:",
+   "o": [
+    "Require medical assistance",
+    "Require assistance",
+    "Proceeding in this direction",
+    "No"
+   ],
+   "a": 0,
+   "why": "X is medical assistance; V is general assistance. The two are easy to swap."
+  },
+  {
+   "q": "A survivor lays out a 'V'. It means:",
+   "o": [
+    "Require assistance",
+    "Require medical assistance",
+    "Yes",
+    "Proceeding in this direction"
+   ],
+   "a": 0,
+   "why": "V = require assistance."
+  },
+  {
+   "q": "By day, a pilot shows that a ground signal has been understood by:",
+   "o": [
+    "Rocking the wings",
+    "Flashing the landing lights twice",
+    "Circling twice to the left",
+    "Lowering the undercarriage"
+   ],
+   "a": 0,
+   "why": "Rocking the wings by day; flashing the landing or navigation lights twice at night. No reply means not understood."
+  },
+  {
+   "q": "To get a constant SAR watch, a pilot should:",
+   "o": [
+    "File a flight plan",
+    "Book out with the aerodrome",
+    "Call 121.5 MHz every 30 minutes",
+    "Squawk 7000 with Mode C"
+   ],
+   "a": 0,
+   "why": "Filing a flight plan sets up the overdue action that triggers SAR."
+  },
+  {
+   "q": "A flight plan is advisable for SAR purposes when flying:",
+   "o": [
+    "More than 10 nm from the coast, over remote areas, or without a suitable radio",
+    "More than 20 nm from the coast or over congested areas",
+    "Outside controlled airspace for more than an hour",
+    "More than 10 km from the coast"
+   ],
+   "a": 0,
+   "why": "10 nm (not km, not 20 nm), remote or hazardous areas, or no suitable radio."
+  },
+  {
+   "q": "You decide en route to land somewhere other than your flight-planned destination. You must tell the original destination:",
+   "o": [
+    "Before your ETA there plus 30 minutes",
+    "Before your ETA there plus 60 minutes",
+    "Within 24 hours of landing",
+    "Only if you were in controlled airspace"
+   ],
+   "a": 0,
+   "why": "Otherwise overdue action and SAR start at ETA plus 30 minutes."
+  },
+  {
+   "q": "Which emergency phase is declared when there is concern for an aircraft's safety?",
+   "o": [
+    "The alert phase",
+    "The uncertainty phase",
+    "The distress phase",
+    "The urgency phase"
+   ],
+   "a": 0,
+   "why": "Uncertainty is doubt, alert is concern, distress is reasonable certainty of grave danger. 'Urgency' is a state of emergency, not a phase."
+  },
+  {
+   "q": "You see a boat sinking and you are the first aircraft on scene. You should:",
+   "o": [
+    "Keep it in sight, fix your position and report to the RCC or ATSU",
+    "Land nearby to help",
+    "Leave the area so as not to hinder rescuers",
+    "Circle until you see the occupants rescued, without reporting"
+   ],
+   "a": 0,
+   "why": "Keep sight, fix your own position, report type, position, time, numbers and condition, then act as instructed. You also take charge on scene until a SAR aircraft arrives."
+  },
+  {
+   "q": "An alerting service is provided by ATS to:",
+   "o": [
+    "All aircraft known to ATS in the UK FIRs",
+    "Only aircraft on a flight plan",
+    "Only aircraft in controlled airspace",
+    "Only IFR flights"
+   ],
+   "a": 0,
+   "why": "It is for all aircraft known to ATS; a flight plan just makes you known in advance."
+  }
+ ]
+}

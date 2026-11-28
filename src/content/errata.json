@@ -1,0 +1,6 @@
+[
+ {"re": "\\b(ATC|air traffic control)\\b.*\\b(ultimately |legally )?responsible\\b.*\\bcollision", "msg": "The pilot in command, not ATC, is ultimately responsible for avoiding collisions (SERA.3201); the Rules of the Air book key gets this wrong."},
+ {"re": "\\b27 ?ft (per|/|for each|a) ?hPa", "unless": "\\b30 ?ft", "msg": "House rule: 30 ft per hPa is the primary figure; give 27 ft only in brackets as the more precise value."},
+ {"re": "\\bkeep (the )?(line feature|road|railway|coast\\w*|canal) on (the |your )?left\\b.*\\b(required|must|legal)", "msg": "Keeping a line feature on the left is a CAA recommendation, no longer a legal requirement under SERA."},
+ {"re": "\\bOVER\\b.*\\bOUT\\b.*\\b(always|must)\\b", "msg": "OVER and OUT are not normally used on VHF (CAP 413)."}
+]

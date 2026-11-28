@@ -1,0 +1,191 @@
+{
+ "seq": 35,
+ "s": 6,
+ "topic": "Aerodrome signals, markings and lighting (Skyway Code)",
+ "order": 40,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "Ground signals sit in the signal square: a white or orange T shows the landing direction, a right-hand arrow means right-hand circuits, and a red square with one yellow diagonal means special precautions. Two yellow diagonals mean landings are prohibited, a white dumb-bell means use runways and taxiways only. Mandatory signs are white on red and you must not pass them without clearance or checking the runway. A red stop bar must never be crossed. APAPI: one white and one red light on the correct slope. Built from the Skyway Code pp.107-113.",
+ "src": [
+  [
+   "The Skyway Code (CAP 1535 v4, Nov 2023), pp.107-113",
+   "https://www.caa.co.uk/our-work/publications/documents/content/cap1535s/"
+  ]
+ ],
+ "sections": [
+  [
+   "Signal square",
+   [
+    "<b>White or orange T</b>: land and take off parallel to the shaft of the T, towards the cross arm",
+    "<b>Right-hand arrow</b>: turns to the right before landing and after take-off. Absent any signal, left-hand circuits are the norm",
+    "<b>Red square with one yellow diagonal</b>: special precautions in approaching or landing, for example poor state of the manoeuvring area",
+    "<b>Red square with two yellow diagonals</b>: landings prohibited",
+    "<b>Horizontal white dumb-bell</b>: land, take off and taxi on runways and taxiways only",
+    "<b>Dumb-bell with black stripes</b>: take-offs and landings on runways only, other manoeuvres need not be",
+    "<b>Double white cross</b>: gliding operations in progress",
+    "<b>Cross on the surface</b>: area unfit for aircraft (white on a runway, yellow on a taxiway)",
+    "<b>Black C on yellow</b>: where a pilot reports to ATC or the person in charge. Visiting pilots usually report here"
+   ]
+  ],
+  [
+   "Runway lighting and PAPI",
+   [
+    "Typical GA runway: <b>green</b> threshold lights, <b>white</b> edge lights, <b>red</b> end lights",
+    "A simple approach lighting system is a single white T-bar to help acquire the runway in poor visibility",
+    "<b>PAPI</b> shows whether you are on the correct approach angle, normally between <code>3° and 4°</code>",
+    "Most GA aerodromes have a two-light <b>APAPI</b>: on the correct slope one light is white and one is red. Larger aerodromes typically use four lights"
+   ]
+  ],
+  [
+   "Taxiway signs and holding points",
+   [
+    "Taxiways are named by a letter such as Alpha. Holding points are usually a letter and number",
+    "<b>Mandatory instruction signs</b> are white on red. Do not pass one without permission from ATC (controlled aerodrome), or at an uncontrolled aerodrome without checking the runway and final approach are clear and announcing your intentions",
+    "The holding position marking on the ground has <b>two solid yellow lines followed by two dashed lines</b> on the runway side",
+    "Guard lights are pairs of alternately flashing yellow lights at the holding point",
+    "<b>Stop bars</b> at larger controlled aerodromes are red lights across the taxiway. Never cross a red stop bar. ATC switches it off and the green lights beyond come on after clearance to cross or enter",
+    "Hot spots on charts are holding points prone to runway incursions"
+   ]
+  ],
+  [
+   "Marshalling",
+   [
+    "A marshaller may direct you to park at larger aerodromes. Details are in Appendix 1 of SERA and CAP 637",
+    "Normal stop: arms and wands extended at 90° moved slowly above the head until they cross. Emergency stop: abruptly extend arms and wands to the top of the head, crossing wands",
+    "Wands pointing up with arms raised means identify gate"
+   ]
+  ]
+ ],
+ "sum": {
+  "Signal square": "T, arrows, red squares, dumb-bells and crosses.",
+  "Runway lighting and PAPI": "Green threshold, white edge, red end and APAPI.",
+  "Taxiway signs and holding points": "Mandatory signs, holding markings and stop bars.",
+  "Marshalling": "Normal and emergency stop signals."
+ },
+ "cards": [
+  {
+   "q": "What does a white or orange T mean?",
+   "a": "Land and take off parallel to the shaft towards the cross arm."
+  },
+  {
+   "q": "What does a right-hand arrow in the signal square mean?",
+   "a": "Right-hand circuits. Left-hand is the norm otherwise."
+  },
+  {
+   "q": "Red square with one yellow diagonal?",
+   "a": "Take special precautions in approaching or landing."
+  },
+  {
+   "q": "Red square with two yellow diagonals?",
+   "a": "Landings are prohibited."
+  },
+  {
+   "q": "Horizontal white dumb-bell?",
+   "a": "Land, take off and taxi on runways and taxiways only."
+  },
+  {
+   "q": "Double white cross?",
+   "a": "Gliding operations in progress."
+  },
+  {
+   "q": "Cross on the surface, and its colours?",
+   "a": "Area unfit for movement: white on runways, yellow on taxiways."
+  },
+  {
+   "q": "Black letter C on yellow?",
+   "a": "Where to report to ATC or the person in charge."
+  },
+  {
+   "q": "GA runway light colours?",
+   "a": "Green threshold, white edge, red end."
+  },
+  {
+   "q": "Normal approach angle indicated by PAPI?",
+   "a": "Between 3° and 4°."
+  },
+  {
+   "q": "APAPI on the correct slope?",
+   "a": "One white light and one red light."
+  },
+  {
+   "q": "Mandatory instruction sign colours?",
+   "a": "White letters on a red background."
+  },
+  {
+   "q": "Holding position marking?",
+   "a": "Two solid yellow lines then two dashed lines on the runway side."
+  },
+  {
+   "q": "Can you cross a red stop bar?",
+   "a": "Never. Wait for ATC to switch it off."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "A red square with two yellow diagonals in the signal square means:",
+   "o": [
+    "Special precautions",
+    "Landings prohibited",
+    "Right-hand circuit",
+    "Gliding"
+   ],
+   "a": 1,
+   "why": "Two diagonals mean landings are prohibited."
+  },
+  {
+   "q": "On the correct slope a two-light APAPI shows:",
+   "o": [
+    "Two white",
+    "Two red",
+    "One white and one red",
+    "One green"
+   ],
+   "a": 2,
+   "why": "One white and one red light indicate the correct approach path."
+  },
+  {
+   "q": "Mandatory instruction signs are:",
+   "o": [
+    "Black on yellow",
+    "White on red",
+    "Yellow on black",
+    "White on blue"
+   ],
+   "a": 1,
+   "why": "They mark runway entry points and must not be passed without permission."
+  },
+  {
+   "q": "You are approaching a red stop bar. You should:",
+   "o": [
+    "Cross carefully",
+    "Stop and wait for ATC to switch it off",
+    "Call tower and cross",
+    "Cross if the runway looks clear"
+   ],
+   "a": 1,
+   "why": "Never cross a red stop bar."
+  },
+  {
+   "q": "A white or orange T shows:",
+   "o": [
+    "Gliding",
+    "Direction for landing and take-off",
+    "Parking",
+    "Wind speed"
+   ],
+   "a": 1,
+   "why": "Aircraft land and take off parallel to the shaft towards the cross arm."
+  },
+  {
+   "q": "A double white cross means:",
+   "o": [
+    "Landing prohibited",
+    "Gliding operations",
+    "Unfit area",
+    "Right-hand circuit"
+   ],
+   "a": 1,
+   "why": "Gliding is taking place at the aerodrome."
+  }
+ ]
+}

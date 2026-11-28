@@ -1,0 +1,190 @@
+{
+ "seq": 29,
+ "s": 0,
+ "topic": "Rules of the Air essentials (Skyway Code)",
+ "order": 30,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "The pilot in command has final authority, is responsible for compliance even when not at the controls, and must not fly impaired by psychoactive substances. Do not fly closer than 500 ft to any person, vessel, vehicle or structure, and over congested areas stay at least 1,000 ft above the highest obstacle within 600 m. In the air, head-on both turn right, converging the aircraft with the other on its right gives way, and the aircraft being overtaken has right of way. Built from the Skyway Code pp.57-63.",
+ "src": [
+  [
+   "The Skyway Code (CAP 1535 v4, Nov 2023), pp.57-63",
+   "https://www.caa.co.uk/our-work/publications/documents/content/cap1535s/"
+  ]
+ ],
+ "sections": [
+  [
+   "Which rules apply",
+   [
+    "UK Standardised Rules of the Air (UK SERA), the UK Rules of the Air Regulations 2015 and general permissions (see ORS4)",
+    "In another state comply with both your state of registry's rules and the state you are in, whichever is more limiting. If they conflict the rules of the state you are in take precedence"
+   ]
+  ],
+  [
+   "Pilot in command",
+   [
+    "Has final authority over the aircraft and is always responsible for compliance, even if not touching the controls",
+    "May depart from the rules only if absolutely necessary for safety",
+    "Must be familiar with all available information and study weather and fuel and an alternative course of action for flights away from the aerodrome",
+    "Must not act while under the influence of a psychoactive substance that impairs performance"
+   ]
+  ],
+  [
+   "Low flying and congested areas",
+   [
+    "Unless taking off or landing, do not fly closer than <code>500 ft</code> to any person, vessel, vehicle or structure",
+    "Over congested areas or open-air assemblies stay at least <code>1,000 ft</code> above the highest obstacle within <code>600 m</code>, and high enough to land clear of people and property in an emergency",
+    "UK exceptions include practice approaches, published low-level routes, Special VFR, hill soaring gliders and permitted events",
+    "Do not take off or land in a congested area except at an aerodrome, or within 1,000 m of an open-air assembly of more than 1,000 people",
+    "Aerobatics over congested areas are not allowed. Single-engine pilots should be able to glide clear of congested areas"
+   ]
+  ],
+  [
+   "Right of way in the air",
+   [
+    "Do not fly close to other aircraft so as to cause a collision hazard",
+    "<b>Head-on</b>: both turn right",
+    "<b>Converging</b>: the aircraft that has the other on its right gives way ('on the right, in the right')",
+    "<b>Overtaking</b>: the aircraft being overtaken has right of way, and the overtaker passes to the right, keeping clear. Overtaking exists within 70° of the other's extended centreline. Sailplanes may pass either side",
+    "Priority order when converging: balloons, gliders, airships, then aircraft towing, then powered aircraft last (powered aircraft give way to all others)",
+    "Landing aircraft have priority. The lower aircraft has priority when two approach to land, but do not cut in front of one already on final. An aircraft compelled to land has priority",
+    "Following a line feature on the right side is good practice but no longer mandatory"
+   ]
+  ],
+  [
+   "Right of way on the ground",
+   [
+    "Head-on: both stop and turn right",
+    "Converging: the aircraft that has the other on its right gives way",
+    "Overtaking: the overtaken aircraft has right of way and the overtaker may pass left or right",
+    "Taxiing aircraft give way to aircraft taking off or about to take off",
+    "Aircraft have priority over vehicles. Emergency vehicles have priority over all surface traffic"
+   ]
+  ]
+ ],
+ "sum": {
+  "Which rules apply": "UK SERA plus the Rules of the Air Regulations 2015.",
+  "Pilot in command": "Final authority and responsibility for compliance.",
+  "Low flying and congested areas": "500 ft and 1,000 ft within 600 m rules.",
+  "Right of way in the air": "Head-on, converging, overtaking and landing priorities.",
+  "Right of way on the ground": "Taxiing priorities and vehicles."
+ },
+ "cards": [
+  {
+   "q": "Who has final authority over the aircraft?",
+   "a": "The pilot in command."
+  },
+  {
+   "q": "Closest approach allowed to any person, vessel, vehicle or structure (not taking off or landing)?",
+   "a": "500 ft."
+  },
+  {
+   "q": "Minimum height over congested areas?",
+   "a": "1,000 ft above the highest obstacle within 600 m."
+  },
+  {
+   "q": "Head-on in the air?",
+   "a": "Both turn right."
+  },
+  {
+   "q": "Converging aircraft: who gives way?",
+   "a": "The one that has the other on its right."
+  },
+  {
+   "q": "Overtaking aircraft pass on which side?",
+   "a": "The right (sailplanes may pass either side)."
+  },
+  {
+   "q": "Overtaking sector angle?",
+   "a": "Within 70° either side of the extended centreline."
+  },
+  {
+   "q": "Who gives way, a powered aircraft or a glider?",
+   "a": "The powered aircraft."
+  },
+  {
+   "q": "Who has priority when two aircraft approach to land?",
+   "a": "The lower one, but do not cut in front of one on final."
+  },
+  {
+   "q": "Head-on on the ground?",
+   "a": "Both stop and turn right."
+  },
+  {
+   "q": "Which aircraft taxiing give way to?",
+   "a": "Aircraft taking off or about to take off."
+  },
+  {
+   "q": "Which vehicles have priority over all surface traffic?",
+   "a": "Emergency vehicles assisting an aircraft in distress."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Two aeroplanes approach head-on. Each should:",
+   "o": [
+    "Turn left",
+    "Turn right",
+    "Climb",
+    "Descend"
+   ],
+   "a": 1,
+   "why": "Both alter course to the right."
+  },
+  {
+   "q": "You are converging with an aircraft on your right. You should:",
+   "o": [
+    "Maintain course",
+    "Give way",
+    "Turn left",
+    "Overtake"
+   ],
+   "a": 1,
+   "why": "The aircraft that has the other on its right gives way."
+  },
+  {
+   "q": "Over a congested area your minimum height is:",
+   "o": [
+    "500 ft above ground",
+    "1,000 ft above the highest obstacle within 600 m",
+    "1,500 ft above ground",
+    "2,000 ft AMSL"
+   ],
+   "a": 1,
+   "why": "It is also high enough to land clear in an emergency."
+  },
+  {
+   "q": "Who has priority among these in the air?",
+   "o": [
+    "A glider over a powered aeroplane",
+    "A powered aeroplane over a balloon",
+    "An airship over a glider",
+    "A powered aircraft over towing aircraft"
+   ],
+   "a": 0,
+   "why": "Powered heavier-than-air aircraft give way to gliders."
+  },
+  {
+   "q": "An aircraft is being overtaken. It has:",
+   "o": [
+    "No right of way",
+    "Right of way",
+    "Right of way only on the ground",
+    "To give way"
+   ],
+   "a": 1,
+   "why": "The aircraft being overtaken has right of way."
+  },
+  {
+   "q": "Where may you not take off or land in the UK without special permission?",
+   "o": [
+    "Aerodrome",
+    "Congested area (outside an aerodrome)",
+    "Licensed strip",
+    "ATZ"
+   ],
+   "a": 1,
+   "why": "Take-off and landing in a congested area need aerodrome procedures or CAA permission."
+  }
+ ]
+}

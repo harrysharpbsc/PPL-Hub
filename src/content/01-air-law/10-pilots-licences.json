@@ -1,0 +1,371 @@
+{
+ "seq": 10,
+ "s": 0,
+ "topic": "Pilots' Licences",
+ "num": 11,
+ "order": 110,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "UK Part-FCL licences (issued by the CAA) are for life, but you need a valid rating and medical to use them. A PPL(A) needs a Class 1 or 2 medical, 45 hours (25 dual, 10 solo with a 150 nm cross-country and two full-stop landings away), nine exams within 18 months, and a skill test; minimum age 17, solo from 16. Class 2 lasts 60 months under 40, 24 months from 40, 12 months from 50. The SEP rating lasts 24 months: revalidate by a proficiency check in the last 3 months, or by 12 hours in the last 12 months (6 PIC, 12 take-offs and landings, 1 hour with an instructor). To carry passengers, do 3 take-offs, approaches and landings in 90 days (one at night for night). Cost sharing: up to 6 on board, pilot pays a share.",
+ "sections": [
+  [
+   "Part-FCL and Part-MED",
+   [
+    "EASA licensing comes from the <b class=\"k\">Aircrew Regulation</b> (EU 1178/2011): <b class=\"k\">Annex I = Part-FCL</b> (licences), <b class=\"k\">Annex IV = Part-MED</b> (medicals).",
+    "After Brexit these became <b class=\"k\">UK Part-FCL</b> and <b class=\"k\">Part-MED</b> (assimilated law). The <b class=\"k\">CAA</b> issues UK licences; they are no longer EASA licences.",
+    "Aircraft that were \"EASA aircraft\" are now <b class=\"k\">Part-21</b> aircraft. Exceptions: State aircraft (military, customs, police) and <b class=\"k\">Annex I</b> types (microlights, home-builds, historic), now <b class=\"k\">non-Part-21</b>.",
+    "Part-FCL licences are <b class=\"k\">ICAO-compliant</b> and <b class=\"k\">non-expiring</b>; using them depends on valid <b class=\"k\">ratings</b> and <b class=\"k\">medicals</b>. The <b class=\"k\">LAPL</b> is not ICAO-compliant."
+   ]
+  ],
+  [
+   "Part-FCL terms",
+   [
+    "<code>Category</code>: aeroplane, helicopter, glider, balloon.",
+    "<code>Class rating</code>: a single-pilot aeroplane that needs no type rating (e.g. SEP land).",
+    "<code>Type rating</code>: a specific aircraft type.",
+    "<code>Flight time</code>: from when the aircraft <b class=\"k\">first moves</b> (own or external power) <b class=\"k\">to take off</b> until it <b class=\"k\">comes to rest</b> after the flight.",
+    "<code>SPIC</code> (student pilot-in-command): the instructor only observes.",
+    "<code>Solo flight time</code>: the student is the sole occupant.",
+    "<b class=\"k\">Instrument time</b> = instrument flight time (sole reference to instruments) + instrument ground time (in a synthetic trainer).",
+    "<code>Revalidation</code>: extends a rating that is <b class=\"k\">still valid</b>.",
+    "<code>Renewal</code>: restores one that has <b class=\"k\">expired</b>.",
+    "<code>Skill test</code>: for the <b class=\"k\">issue</b> of a licence or rating.",
+    "<code>Proficiency check</code>: to <b class=\"k\">revalidate or renew</b> a rating. (The book swaps these two definitions.)",
+    "<code>Touring motor glider (TMG)</code>: fixed, non-retractable engine and propeller; can take off and climb on its own power.",
+    "<code>Private pilot</code>: may not be paid to fly (except instruction or examining).",
+    "<code>Professional pilot</code>: may be paid.",
+    "<code>Night</code>: in ICAO terms, end of evening civil twilight to start of morning civil twilight. In the <b class=\"k\">UK</b>, <b class=\"k\">30 minutes after sunset to 30 minutes before sunrise</b>."
+   ]
+  ],
+  [
+   "Student pilots",
+   [
+    "Training starts without a licence under an instructor. A student may fly <b class=\"k\">solo as PIC</b> if:",
+    "– at least <code>16</code> years old",
+    "– holds a <b class=\"k\">Class 1 or Class 2</b> medical and keeps to its limits (e.g. glasses)",
+    "– carries <b class=\"k\">no one else</b>",
+    "– is <b class=\"k\">authorised and supervised</b> by a flight instructor"
+   ]
+  ],
+  [
+   "Medicals (Part-MED)",
+   [
+    "A medical by an <b class=\"k\">Authorised Medical Examiner (AME)</b> is needed before applying for and while using a licence.",
+    "<code>PPL(A)</code>: <b class=\"k\">Class 2</b> (or <b class=\"k\">Class 1</b>).",
+    "<code>LAPL</code>: <b class=\"k\">LAPL</b> medical (or <b class=\"k\">Class 1</b> or 2).",
+    "Professional pilots: <b class=\"k\">Class 1</b>."
+   ]
+  ],
+  [
+   "Class 2 validity",
+   [
+    "<b>Under <code>40</code></b>: <code>60 months</code>",
+    "<b><code>40</code> to <code>49</code></b>: <code>24 months</code>",
+    "<b><code>50</code> and over</b>: <code>12 months</code>",
+    "Valid for its full period even if you move into the next age group, <b class=\"k\">but</b>: issued before <b class=\"k\">40</b> → not valid after age <b class=\"k\">42</b>; issued before <b class=\"k\">50</b> → not valid after age <b class=\"k\">51</b>.",
+    "Renew up to <code>45 days</code> before expiry without losing time (the new one runs from the old expiry). An initial medical runs from the date of the assessment.",
+    "<code>LAPL medical</code>: an AME or a <b class=\"k\">GP</b>; <code>60 months</code> until 40 (not valid after 42), then <code>24 months</code>."
+   ]
+  ],
+  [
+   "Decrease in medical fitness",
+   [
+    "Don't fly if you <b class=\"k\">know or suspect</b> you are unfit. Get advice from an <b class=\"k\">AME or AeMC</b> without delay after:",
+    "– surgery or an invasive procedure",
+    "– regular use of medication",
+    "– significant injury or illness",
+    "– pregnancy",
+    "– admission to hospital or a medical clinic",
+    "– first needing corrective lenses",
+    "Rules of thumb: local anaesthetic <code>12 h</code>, general anaesthetic <code>48 h</code>, blood donation <code>24 h</code> (bone marrow with a general: <code>48 h</code>). Pregnancy: once assessed fit, flying up to the <b class=\"k\">26th week</b>.",
+    "<code>Pilot Medical Declaration (PMD)</code>: for some UK licences, flying <b class=\"k\">G-registered aircraft in UK airspace</b>, if you meet the <b class=\"k\">DVLA Group 1 (car)</b> standard."
+   ]
+  ],
+  [
+   "The PPL(A)",
+   [
+    "Minimum age <code>17</code> (solo from 16). Train at an <b class=\"k\">ATO or DTO</b>. The CAA must be satisfied you are fit, knowledgeable and skilled.",
+    "<code>Theory</code>: <b class=\"k\">9 exams</b> (Air Law, Operational Procedures, Navigation, Meteorology, Aircraft General Knowledge, Principles of Flight, Human Performance, Flight Performance and Planning, Communications), all within <code>18 months</code> from the end of the month of the first pass. Credit then lasts <code>24 months</code> for licence issue.",
+    "Also a <b class=\"k\">radiotelephony practical</b>, and a <b class=\"k\">skill test</b> with an oral.",
+    "<code>Flying</code>: at least <code>45 h</code>, including <code>25 h</code> dual and <code>10 h</code> supervised solo, of which <code>5 h</code> solo cross-country with one flight of at least <code>270 km</code> (<code>150 nm</code>) and <b class=\"k\">two full-stop landings</b> at other aerodromes.",
+    "Pilots of another category (not balloons) may credit <b class=\"k\">10%</b> of their PIC time, up to <code>10 h</code> (not against the solo cross-country).",
+    "Not valid until <b class=\"k\">signed in ink</b> by the holder. Then valid for <b class=\"k\">life</b>.",
+    "A Part-FCL PPL(A) is also valid, with the same privileges, on <b class=\"k\">non-Part-21</b> aircraft of the same class."
+   ]
+  ],
+  [
+   "Privileges",
+   [
+    "PIC or co-pilot of <b class=\"k\">aeroplanes or TMGs</b> on <b class=\"k\">non-commercial</b> flights, with a <b class=\"k\">valid class or type rating</b> and a <b class=\"k\">valid Class 1 or 2 medical</b>.",
+    "No pay, except as an <b class=\"k\">instructor or examiner</b> for the LAPL(A)/PPL(A).",
+    "<code>Cost sharing</code>: allowed on private flights with up to <code>6</code> people on board, <b class=\"k\">including the pilot</b>, as long as <b class=\"k\">everyone shares the direct costs, pilot included</b>.",
+    "Glider towing or parachute dropping for pay is commercial, except at clubs whose aim is training or promoting aviation."
+   ]
+  ],
+  [
+   "Passenger recency (FCL.060)",
+   [
+    "To carry passengers: <b class=\"k\">3 take-offs, approaches and landings</b> in the preceding <code>90 days</code>, in the same type or class (as sole manipulator of the controls).",
+    "At <b class=\"k\">night</b>: at least <b class=\"k\">one</b> of the three at night, unless you hold an <b class=\"k\">IR</b>."
+   ]
+  ],
+  [
+   "FRTOL",
+   [
+    "A <b class=\"k\">Flight Radiotelephony Operator's Licence</b> is needed to use the radio (students have a dispensation). Pass the Communications exam before the licence; the practical can follow."
+   ]
+  ],
+  [
+   "Ratings",
+   [
+    "<code>SEP (land)</code>: almost all single-engine piston aeroplanes. Also MEP (land) and single-pilot (sea).",
+    "<code>Differences training</code> (logged, with an instructor): variable-pitch propeller, retractable gear, turbo/supercharging, pressurisation, <b class=\"k\">tailwheel</b>, single-lever power control, glass cockpits."
+   ]
+  ],
+  [
+   "Revalidating the SEP class rating (valid 24 months)",
+   [
+    "<b class=\"k\">Either</b> a <b class=\"k\">proficiency check</b> with an examiner in the <code>3 months</code> before expiry,",
+    "<b class=\"k\">or</b>, in the <code>12 months</code> before expiry: <code>12 h</code> in the class, including <code>6 h</code> PIC, <code>12</code> take-offs and <code>12</code> landings, and <code>1 h</code> refresher training with an <b class=\"k\">FI or CRI</b> (exempt if you passed another class or type proficiency check, skill test or assessment of competence).",
+    "An examiner or suitably qualified instructor then <b class=\"k\">endorses</b> the licence.",
+    "Lapsed: refresher training as required, then a proficiency check."
+   ]
+  ],
+  [
+   "Other ratings",
+   [
+    "<code>MEP</code>: <code>70 h</code> PIC first; ATO course; proficiency check in the 3 months before expiry.",
+    "<code>Type ratings</code>: complex single-pilot turbine aeroplanes and multi-pilot aeroplanes; valid <b class=\"k\">12 months</b>.",
+    "<code>Night rating</code>: to use the licence in <b class=\"k\">VMC at night</b>.",
+    "<code>IR(R) / IMC rating</code> (UK only): <code>25 h</code> after PPL, <code>10 h</code> PIC (<code>5 h</code> cross-country), <code>15 h</code> instrument training (<code>10 h</code> sole reference), written exam and test. IFR anywhere <b class=\"k\">except Class A</b>, and not to take off or land with flight visibility below cloud under <code>1,500 m</code>. Valid <code>25 months</code>.",
+    "<code>IR(A)</code>: IFR down to a decision height of <code>200 ft</code> (<code>60 m</code>).",
+    "Also aerobatic, sailplane towing, banner towing and mountain ratings; <b class=\"k\">FI</b> certificates (an FI(R) may not authorise first solos)."
+   ]
+  ],
+  [
+   "Other licences",
+   [
+    "<code>LAPL(A)</code>: leisure, no pay; age <code>17</code>; aircraft MTOW <code>2,000 kg</code> or less, at most <code>3</code> passengers (4 on board); passengers only after <code>10 h</code> as PIC after issue. Training <code>30 h</code> minimum (book: <code>15 h</code> dual, <code>6 h</code> solo, <code>80 nm</code> cross-country). Recency: <code>12 h</code> PIC in <code>24 months</code> with <code>12</code> take-offs and landings and <code>1 h</code> with an instructor.",
+    "<code>UK (ANO) PPL</code>: Schedule 8; a UK PPL(A) may <b class=\"k\">not</b> fly out of sight of the surface without an IMC rating or IR.",
+    "<code>NPPL(A) SSEA/SLMG</code> (administered by the LAA): UK airspace only, <b class=\"k\">day VFR</b>, max <code>4</code> on board, MTOW <code>2,000 kg</code>, <code>140 kt</code> cruise limit; training <code>22 h</code> dual and <code>10 h</code> solo; ratings valid <code>24 months</code>.",
+    "<code>Microlights</code>: two seats at most, Permit to Fly, weight and stall-speed limits (the book's mass limits are out of date; check the CAA's current definition).",
+    "Also: PPL(H), PPL(As), SPL (sailplanes), BPL (balloons), UK PPL(G) (gyroplanes, not ICAO)."
+   ]
+  ],
+  [
+   "Personal flying logbook",
+   [
+    "Kept by qualified pilots and anyone training for a licence: name and address, licence details, and for each flight the <b class=\"k\">date, places, times</b>, aircraft <b class=\"k\">type and registration</b>, <b class=\"k\">capacity</b> (dual, PIC), <b class=\"k\">night/instrument</b>, and any tests.",
+    "<b class=\"k\">Damaging, altering or falsifying</b> logbook entries is an offence (it amounts to forgery).",
+    "Produce it to an <b class=\"k\">authorised person</b> within a reasonable time, for up to <code>2 years</code> after the last entry."
+   ]
+  ]
+ ],
+ "sum": {
+  "Part-FCL and Part-MED": "UK Part-FCL and Part-MED, issued by the CAA, cover Part-21 aircraft; licences are for life.",
+  "Part-FCL terms": "Key definitions: class and type ratings, flight time, revalidation versus renewal, skill test versus proficiency check.",
+  "Student pilots": "Solo from 16 with a Class 1 or 2 medical, nobody else on board, authorised by an instructor.",
+  "Medicals (Part-MED)": "PPL needs Class 2 (or Class 1); LAPL can use a LAPL medical.",
+  "Class 2 validity": "60 months under 40, 24 months from 40, 12 months from 50; renew up to 45 days early.",
+  "Decrease in medical fitness": "Unfit or in doubt: don't fly, see your AME. Local anaesthetic 12 h, general 48 h, blood 24 h.",
+  "The PPL(A)": "Age 17; 45 h with 25 dual and 10 solo; nine exams in 18 months; signed in ink and valid for life.",
+  "Privileges": "Non-commercial PIC or co-pilot; cost sharing with up to 6 on board, pilot pays a share.",
+  "Passenger recency (FCL.060)": "3 take-offs, approaches and landings in 90 days; one at night for night passengers.",
+  "FRTOL": "You need a radio licence to use the aircraft radio.",
+  "Ratings": "Class ratings like SEP (land); differences training for things like retractable gear, VP props and tailwheels.",
+  "Revalidating the SEP class rating (valid 24 months)": "Proficiency check in the last 3 months, or 12 h in the last 12 months with 6 PIC, 12 landings and 1 h with an instructor.",
+  "Other ratings": "Night, IR(R)/IMC (UK only, 25 months), IR, type ratings (12 months) and instructor certificates.",
+  "Other licences": "LAPL: 2,000 kg, 3 passengers, Europe. NPPL: UK day VFR, 4 on board. Plus PPL(H), SPL, BPL.",
+  "Personal flying logbook": "Record every flight; falsifying it is an offence; produce it for 2 years after the last entry."
+ },
+ "cards": [
+  {
+   "q": "Minimum age for a PPL(A)? For solo?",
+   "a": "17 for the licence, 16 for solo."
+  },
+  {
+   "q": "Medical needed for a PPL(A)?",
+   "a": "Class 2 (or Class 1)."
+  },
+  {
+   "q": "Class 2 validity under 40?",
+   "a": "60 months (but not beyond age 42 if issued before 40)."
+  },
+  {
+   "q": "Class 2 validity from 40 to 49?",
+   "a": "24 months (not beyond 51 if issued before 50)."
+  },
+  {
+   "q": "Class 2 validity from 50?",
+   "a": "12 months."
+  },
+  {
+   "q": "How early can you renew a medical without losing time?",
+   "a": "Up to 45 days before expiry."
+  },
+  {
+   "q": "Who do you see after a significant illness or injury?",
+   "a": "Your AME (or an AeMC), before flying again."
+  },
+  {
+   "q": "Rule of thumb after a local / general anaesthetic?",
+   "a": "12 hours / 48 hours."
+  },
+  {
+   "q": "PPL(A) minimum flying hours?",
+   "a": "45 h, including 25 h dual and 10 h supervised solo."
+  },
+  {
+   "q": "PPL(A) qualifying cross-country?",
+   "a": "At least 150 nm (270 km) solo with two full-stop landings at other aerodromes."
+  },
+  {
+   "q": "How long do you have to pass the nine exams?",
+   "a": "18 months from the end of the month of the first pass."
+  },
+  {
+   "q": "Passenger recency?",
+   "a": "3 take-offs, approaches and landings in the preceding 90 days (one at night for night passengers)."
+  },
+  {
+   "q": "Cost sharing conditions?",
+   "a": "Private flight, up to 6 people on board including the pilot, and the pilot pays a share."
+  },
+  {
+   "q": "SEP rating validity?",
+   "a": "24 months."
+  },
+  {
+   "q": "SEP revalidation by experience?",
+   "a": "In the 12 months before expiry: 12 h, 6 h PIC, 12 take-offs and 12 landings, 1 h with an FI or CRI."
+  },
+  {
+   "q": "SEP revalidation by test?",
+   "a": "A proficiency check with an examiner in the 3 months before expiry."
+  },
+  {
+   "q": "LAPL(A) limits?",
+   "a": "MTOW 2,000 kg or less and no more than 3 passengers."
+  },
+  {
+   "q": "Revalidation vs renewal?",
+   "a": "Revalidation extends a valid rating; renewal restores an expired one."
+  },
+  {
+   "q": "How long must you be able to produce your logbook?",
+   "a": "Up to 2 years after the last entry."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "A pilot who is 38 passes a Class 2 medical. It is valid for:",
+   "o": [
+    "60 months, but not beyond age 42",
+    "60 months, whatever their age",
+    "24 months",
+    "60 months, but not beyond age 40"
+   ],
+   "a": 0,
+   "why": "Under 40 it's 60 months, but one issued before 40 lapses at 42. Lapsing at exactly 40 is the trap."
+  },
+  {
+   "q": "A Class 2 medical issued to a 52-year-old is valid for:",
+   "o": [
+    "12 months",
+    "24 months",
+    "60 months",
+    "6 months"
+   ],
+   "a": 0,
+   "why": "From 50 the period is 12 months."
+  },
+  {
+   "q": "Before carrying passengers, a PPL(A) holder must have made, in the same class or type:",
+   "o": [
+    "3 take-offs, approaches and landings in the preceding 90 days",
+    "3 take-offs and landings in the preceding 60 days",
+    "5 take-offs and landings in the preceding 90 days",
+    "3 take-offs, approaches and landings in the preceding calendar month"
+   ],
+   "a": 0,
+   "why": "Three in 90 days, as sole manipulator of the controls. For night passengers one must be at night."
+  },
+  {
+   "q": "Which is a valid way to revalidate an SEP class rating?",
+   "o": [
+    "12 h in the 12 months before expiry, with 6 h PIC, 12 take-offs and landings and 1 h with an instructor",
+    "12 h in the 12 months before expiry, with 6 take-offs and landings and 2 h with an instructor",
+    "A proficiency check with an examiner in the 12 months before expiry",
+    "6 h PIC in the 6 months before expiry"
+   ],
+   "a": 0,
+   "why": "Experience route: 12 h, 6 PIC, 12 and 12, 1 h refresher. The proficiency check must fall in the last 3 months, not 12."
+  },
+  {
+   "q": "Cost sharing on a private flight is allowed when:",
+   "o": [
+    "There are no more than 6 people on board and the pilot pays a share",
+    "There are no more than 6 people on board and the passengers pay everything",
+    "There are no more than 4 people on board and the pilot pays a share",
+    "The pilot holds an instructor rating"
+   ],
+   "a": 0,
+   "why": "Up to 6 on board, and direct costs are shared by everyone including the pilot."
+  },
+  {
+   "q": "A student pilot may fly solo without a licence if they are at least:",
+   "o": [
+    "16, hold a Class 1 or 2 medical and are authorised and supervised by an instructor",
+    "17 and hold a Class 2 medical",
+    "16 and hold a LAPL medical, with one passenger",
+    "16, with written permission from the CAA"
+   ],
+   "a": 0,
+   "why": "16, a Class 1 or 2 medical, no one else on board, and an instructor's authorisation and supervision."
+  },
+  {
+   "q": "After a dental local anaesthetic, a pilot should not fly for at least:",
+   "o": [
+    "12 hours",
+    "24 hours",
+    "48 hours",
+    "8 hours"
+   ],
+   "a": 0,
+   "why": "12 hours for a local; 48 hours for a general anaesthetic."
+  },
+  {
+   "q": "A pilot is admitted to hospital overnight. What must they do before flying again?",
+   "o": [
+    "Seek advice from their AME or an AeMC",
+    "Wait 20 days, then resume",
+    "Nothing, if they feel well",
+    "Get a note from their GP"
+   ],
+   "a": 0,
+   "why": "Hospital admission is one of the triggers; the AME or AeMC decides fitness."
+  },
+  {
+   "q": "A LAPL(A) holder could act as PIC of an aeroplane with:",
+   "o": [
+    "MTOW 1,950 kg and 4 seats",
+    "MTOW 2,200 kg and 4 seats",
+    "MTOW 1,950 kg and 6 seats",
+    "MTOW 2,500 kg and 2 seats"
+   ],
+   "a": 0,
+   "why": "LAPL(A): 2,000 kg or less and no more than 3 passengers, so 4 seats at most."
+  },
+  {
+   "q": "Under Part-FCL, a 'proficiency check' is used to:",
+   "o": [
+    "Revalidate or renew a rating",
+    "Issue a licence for the first time",
+    "Gain a new class rating",
+    "Test a student before first solo"
+   ],
+   "a": 0,
+   "why": "A skill test is for issue; a proficiency check revalidates or renews. The book's glossary has these the wrong way round."
+  }
+ ]
+}

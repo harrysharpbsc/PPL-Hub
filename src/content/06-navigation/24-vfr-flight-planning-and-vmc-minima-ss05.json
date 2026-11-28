@@ -1,0 +1,177 @@
+{
+ "seq": 24,
+ "s": 5,
+ "topic": "VFR flight planning and VMC minima (SS05)",
+ "order": 20,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "Good VFR planning covers weather, NOTAMs, fuel, weight, route and airspace, then keeps checking in flight. Legal fuel reserves for Part-21 aeroplanes are 10 minutes in sight of an aerodrome by day, 30 minutes by day otherwise and 45 minutes at night. Know the VMC minima and the FREDA checks, and keep 'Take 2' (2 NM or 200 ft) from controlled airspace. Built from CAA Safety Sense Leaflet 5.",
+ "src": [
+  [
+   "Safety Sense Leaflet 5: Flight under VFR",
+   "https://www.caa.co.uk/media/ekemwzjw/caa8230_safetysense_05-vfr_v5.pdf"
+  ]
+ ],
+ "sections": [
+  [
+   "Pre-flight planning",
+   [
+    "Use threat and error management: spot the threats, then plan how to handle them",
+    "Brief weather for departure, route, destination and alternates. Avoid en-route flight below <code>1,500 ft AGL</code>",
+    "Get NOTAMs and check airspace and temporary restrictions",
+    "Check weight and balance and performance for the actual load and runway",
+    "Carry a paper chart as backup. A Maximum Elevation Figure leaves no margin by itself"
+   ]
+  ],
+  [
+   "Fuel reserves",
+   [
+    "Part-21 aeroplanes: <code>10 minutes</code> by day in sight of the aerodrome, <code>30 minutes</code> by day otherwise, <code>45 minutes</code> by night",
+    "Helicopters: <code>20 minutes</code>",
+    "These are minima: plan to land with more"
+   ]
+  ],
+  [
+   "VMC minima in the UK",
+   [
+    "At or above <code>10,000 ft</code> (FL100): <code>8 km</code> visibility, <code>1,500 m</code> horizontal and <code>1,000 ft</code> vertical from cloud",
+    "Below 10,000 ft and above 3,000 ft amsl or 1,000 ft above terrain: <code>5 km</code>, same cloud distances",
+    "At or below 3,000 ft amsl, Classes A to E: 5 km with the same cloud distances",
+    "Class F or G at or below 3,000 ft: 5 km, clear of cloud and the surface in sight",
+    "UK reduction for Class F or G at or below 140 kt IAS by day with the surface in sight: <code>1,500 m</code> visibility",
+    "UK Class D exemption at or below 3,000 ft amsl by day at 140 kt IAS or less, clear of cloud, surface in sight"
+   ]
+  ],
+  [
+   "In-flight monitoring",
+   [
+    "About <code>80%</code> of your time should be spent looking outside",
+    "Do <b>FREDA</b> checks about every 10 minutes: Fuel, Radio, Engine, Direction, Altimeter",
+    "The regional pressure setting often reads low, so allow for it",
+    "Know your ATS: <b>Basic Service</b> versus <b>Traffic Service</b>",
+    "Use <b>Take 2</b>: keep 2 NM or 200 ft clear of controlled airspace edges"
+   ]
+  ],
+  [
+   "Arrival and review",
+   [
+    "Call the destination about 10 minutes before arrival and plan an overhead join where appropriate",
+    "Review the flight afterwards: what went well and what to improve"
+   ]
+  ]
+ ],
+ "sum": {
+  "Pre-flight planning": "Weather, NOTAMs, weight, route and a paper chart.",
+  "Fuel reserves": "10, 30 and 45 minute reserves for Part-21 aeroplanes.",
+  "VMC minima in the UK": "Visibility and cloud distances by height and airspace class.",
+  "In-flight monitoring": "80% outside, FREDA and Take 2.",
+  "Arrival and review": "Early call and a post-flight review."
+ },
+ "cards": [
+  {
+   "q": "Fuel reserve for a Part-21 aeroplane at night?",
+   "a": "45 minutes."
+  },
+  {
+   "q": "Fuel reserve by day not in sight of an aerodrome?",
+   "a": "30 minutes."
+  },
+  {
+   "q": "Fuel reserve by day in sight of the aerodrome?",
+   "a": "10 minutes."
+  },
+  {
+   "q": "Fuel reserve for helicopters?",
+   "a": "20 minutes."
+  },
+  {
+   "q": "Visibility at or above FL100?",
+   "a": "8 km."
+  },
+  {
+   "q": "Visibility below FL100, above 3,000 ft amsl?",
+   "a": "5 km."
+  },
+  {
+   "q": "Horizontal and vertical distance from cloud in controlled-airspace VMC minima?",
+   "a": "1,500 m horizontal, 1,000 ft vertical."
+  },
+  {
+   "q": "What does FREDA stand for?",
+   "a": "Fuel, Radio, Engine, Direction, Altimeter."
+  },
+  {
+   "q": "How often to do FREDA checks?",
+   "a": "About every 10 minutes."
+  },
+  {
+   "q": "What is Take 2?",
+   "a": "Keep 2 NM or 200 ft clear of controlled airspace."
+  },
+  {
+   "q": "How much time should be spent looking outside?",
+   "a": "About 80%."
+  },
+  {
+   "q": "Recommended minimum en-route height under VFR?",
+   "a": "Avoid below 1,500 ft AGL."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "You are flying a Part-21 aeroplane by night. The minimum final reserve is:",
+   "o": [
+    "10 minutes",
+    "30 minutes",
+    "45 minutes",
+    "60 minutes"
+   ],
+   "a": 2,
+   "why": "45 minutes at night for Part-21 aeroplanes."
+  },
+  {
+   "q": "VMC visibility at FL100 and above:",
+   "o": [
+    "5 km",
+    "8 km",
+    "10 km",
+    "1,500 m"
+   ],
+   "a": 1,
+   "why": "8 km at or above 10,000 ft."
+  },
+  {
+   "q": "FREDA stands for:",
+   "o": [
+    "Fuel Radio Engine Direction Altimeter",
+    "Fuel Route Engine Direction Altitude",
+    "Flaps Radio Engine Distance Altimeter",
+    "Fuel Radio Electrics Direction Airspeed"
+   ],
+   "a": 0,
+   "why": "Fuel, Radio, Engine, Direction, Altimeter."
+  },
+  {
+   "q": "What does 'Take 2' mean?",
+   "o": [
+    "Two radio calls",
+    "Keep 2 NM or 200 ft from controlled airspace",
+    "Two turns of a hold",
+    "Two minutes of fuel"
+   ],
+   "a": 1,
+   "why": "A margin of 2 NM or 200 ft helps avoid infringements."
+  },
+  {
+   "q": "About how much of your time should you spend looking outside?",
+   "o": [
+    "20%",
+    "50%",
+    "80%",
+    "100%"
+   ],
+   "a": 2,
+   "why": "Roughly 80% of the time outside, 20% inside."
+  }
+ ]
+}

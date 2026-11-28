@@ -1,0 +1,397 @@
+{
+ "seq": 15,
+ "s": 0,
+ "topic": "ICAO Annex Terminology",
+ "num": 16,
+ "order": 160,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "The exam uses ICAO's definitions exactly. Know the aerodrome areas (manoeuvring area excludes aprons, movement area includes them), the declared distances (TODA = TORA + clearway, ASDA = TORA + stopway), and the vertical words (altitude from sea level, height from a datum, elevation of a point on the ground, flight level on 1013.2 hPa). A cloud ceiling is the lowest layer below 20,000 ft covering more than half the sky. A CTR starts at the surface, a CTA above it. Flight time runs from first moving to take off until coming to rest. The emergency phases are uncertainty, alert and distress.",
+ "sections": [
+  [
+   "ICAO Annex terminology",
+   [
+    "Terms used in the ICAO Annexes and in the PPL exams, grouped by theme. See also the Part-FCL terms in Pilots Licences."
+   ]
+  ],
+  [
+   "Aircraft",
+   [
+    "<code>Aircraft</code>: any machine that can derive support in the atmosphere from the reactions of the air, <b class=\"k\">other than</b> reactions against the earth's surface (so not a hovercraft).",
+    "<code>Heavier-than-air</code>: lift mainly from <b class=\"k\">aerodynamic</b> forces.",
+    "<code>Lighter-than-air</code>: supported mainly by <b class=\"k\">buoyancy</b>.",
+    "<code>Aeroplane</code>: <b class=\"k\">power-driven</b>, heavier than air, lift from <b class=\"k\">fixed</b> wings.",
+    "<code>Glider</code>: the same but <b class=\"k\">not</b> <b class=\"k\">power-driven</b>.",
+    "<code>Rotorcraft</code>: <b class=\"k\">power-driven</b>, lift from one or more rotors.",
+    "<code>Helicopter</code>: lift <b class=\"k\">and control</b> from <b class=\"k\">power-driven</b> rotors on substantially vertical axes.",
+    "<code>Gyroplane</code>: lift from a <b class=\"k\">freely rotating</b> rotor, thrust from a propeller.",
+    "<code>Airship</code>: power-driven lighter than air.",
+    "<code>Balloon</code>: non-power-driven lighter than air."
+   ]
+  ],
+  [
+   "Aerodromes",
+   [
+    "<code>Aerodrome</code>: a defined area on land or water for the <b class=\"k\">arrival, departure and surface movement</b> of aircraft.",
+    "<code>Heliport</code>: the same for helicopters.",
+    "<code>Aerodrome elevation</code>: the elevation of the <b class=\"k\">highest point of the landing area</b>.",
+    "<code>Aerodrome reference point</code>: its designated geographical location.",
+    "<code>Aerodrome traffic</code>: all traffic on the <b class=\"k\">manoeuvring area</b> and all aircraft <b class=\"k\">in the vicinity</b>, which means <b class=\"k\">in, entering or leaving the traffic circuit</b>.",
+    "<code>Manoeuvring area</code>: used for <b class=\"k\">taxiing, take-off and landing</b>, <b class=\"k\">excluding aprons</b>.",
+    "<code>Movement area</code>: the manoeuvring area <b class=\"k\">plus aprons</b>.",
+    "<code>Apron</code>: for parking, loading, refuelling and maintenance.",
+    "<code>Aircraft stand</code>: a parking place on the apron.",
+    "<code>Runway</code>: a defined rectangular area for take-off and landing.",
+    "<code>Threshold</code>: the beginning of the usable runway (normally the piano keys).",
+    "<code>Touchdown zone</code>: just beyond it, where landing aircraft first touch down.",
+    "<b class=\"k\">Taxiway</b>, <b class=\"k\">taxi-holding position</b> (where you may be held before entering or crossing a runway), <b class=\"k\">holding bay</b>.",
+    "<code>Signal area</code>: where ground signals are displayed.",
+    "<code>Marking</code>: a symbol on the movement area surface.",
+    "<code>Marker</code>: an object above ground showing an obstacle or boundary.",
+    "<code>Runway guard lights</code>: warn that you are about to enter an active runway.",
+    "<code>Aerodrome beacon</code>: shows the aerodrome's location from the air.",
+    "<code>Identification beacon</code>: flashes a code to identify the location.",
+    "<code>Hazard beacon</code>: marks a danger.",
+    "<code>Obstacle</code>: any fixed or mobile object on the movement area, or one that sticks up through a protected surface, above a defined height."
+   ]
+  ],
+  [
+   "Declared distances",
+   [
+    "<code>TORA</code> (take-off run available): runway length available for the <b class=\"k\">ground run</b>.",
+    "<code>TODA</code> (take-off distance available): <b class=\"k\">TORA + clearway</b>.",
+    "<code>ASDA</code> (accelerate-stop distance available): <b class=\"k\">TORA + stopway</b>.",
+    "<code>LDA</code> (landing distance available): runway available for the landing ground run (may start at a <b class=\"k\">displaced threshold</b>).",
+    "<code>Clearway</code>: an area beyond the runway, under the aerodrome's control, suitable for the <b class=\"k\">initial climb</b>.",
+    "<code>Stopway</code>: a prepared area beyond the runway for <b class=\"k\">stopping</b> after an abandoned take-off.",
+    "The CAA agrees declared distances; they are published in <b class=\"k\">AIP AD</b>."
+   ]
+  ],
+  [
+   "Heights and levels",
+   [
+    "<code>Altitude</code>: vertical distance of a point from <b class=\"k\">mean sea level</b>.",
+    "<code>Elevation</code>: of a point <b class=\"k\">on the earth's surface</b> from <b class=\"k\">mean sea level</b>.",
+    "<code>Height</code>: from a <b class=\"k\">specified datum</b> (e.g. the aerodrome).",
+    "<code>Level</code>: a generic term for <b class=\"k\">height, altitude or flight level</b>.",
+    "<code>Flight level</code>: a surface of constant pressure related to <code>1013.2 hPa</code>, in hundreds of feet (FL180 = 18,000 ft on 1013).",
+    "<code>Pressure altitude</code>: altitude in the standard atmosphere for that pressure (1013.2 set).",
+    "<code>Transition altitude</code>: at or below it, vertical position is by <b class=\"k\">altitude</b> (QNH); <code>3,000 ft</code> at most UK aerodromes outside CAS, higher in some CAS (18,000 ft in the USA).",
+    "<code>Transition level</code>: the <b class=\"k\">lowest flight level</b> usable above it.",
+    "<code>Transition layer</code>: between the two.",
+    "<code>Cruising level</code>: held for a large part of the flight."
+   ]
+  ],
+  [
+   "Weather and visibility",
+   [
+    "<code>Cloud ceiling</code>: height above ground or water of the base of the lowest layer below <code>20,000 ft</code> covering <b class=\"k\">more than half the sky</b>.",
+    "<code>Visibility</code>: how far prominent <b class=\"k\">unlit objects by day</b> and <b class=\"k\">lit objects by night</b> can be seen.",
+    "<code>Flight visibility</code>: forward from the cockpit in flight.",
+    "<code>Ground visibility</code>: at an aerodrome, reported by an observer.",
+    "<code>Runway visual range (RVR)</code>: how far a pilot on the <b class=\"k\">centreline</b> can see the runway markings or lights.",
+    "<code>VMC</code>: visibility, cloud distance and ceiling <b class=\"k\">equal to or better than</b> the minima.",
+    "<code>IMC</code>: <b class=\"k\">less than</b> them.",
+    "<code>SIGMET</code>: hazardous weather information for flights. <b class=\"k\">AIRMET</b> (now <b class=\"k\">GAMET</b> in the UK) for low-level flights.",
+    "<code>Meteorological report</code>: observed conditions at a place and time.",
+    "<code>Forecast</code>: expected conditions.",
+    "<code>Air-report</code>: a report from an aircraft in flight.",
+    "<code>Slush</code>: water-saturated snow that splatters underfoot.",
+    "<code>Dry snow</code>: blows when loose, falls apart when squeezed.",
+    "<code>Wet snow</code>: sticks into a snowball.",
+    "<code>Compacted snow</code>: pressed into a solid mass."
+   ]
+  ],
+  [
+   "ATS and airspace",
+   [
+    "<code>Air traffic service</code>: <b class=\"k\">flight information</b>, <b class=\"k\">alerting</b>, <b class=\"k\">air traffic advisory</b> or <b class=\"k\">air traffic control</b> service.",
+    "<code>Air traffic control service</code>: to <b class=\"k\">prevent collisions</b> (in the air, and on the manoeuvring area with obstructions) and <b class=\"k\">expedite</b> an orderly flow.",
+    "<code>ATC clearance</code>: <b class=\"k\">authorisation</b> to proceed under conditions set by ATC.",
+    "<code>ATC instruction</code>: a <b class=\"k\">directive</b> requiring a specific action.",
+    "<code>Clearance limit</code>: the point the clearance runs to.",
+    "<code>Flight information service</code>: advice and information for safe and efficient flight.",
+    "<code>Alerting service</code>: notifies organisations of aircraft needing SAR, and assists them.",
+    "<code>Control zone (CTR)</code>: controlled airspace from the <b class=\"k\">surface</b> up to a specified limit.",
+    "<code>Control area (CTA)</code>: controlled airspace from a specified height <b class=\"k\">above the surface</b>.",
+    "<code>Terminal control area (TMA)</code>: a control area normally around major aerodromes.",
+    "<code>Airway</code>: a control area in the form of a <b class=\"k\">corridor</b>.",
+    "<code>Controlled airspace</code>: ATC is provided to IFR and VFR flights in line with its class.",
+    "<code>Controlled aerodrome</code>: ATC is provided to aerodrome traffic (not necessarily inside a CTR).",
+    "<code>Controlled flight</code>: any flight subject to an ATC clearance.",
+    "<code>Advisory airspace / advisory route</code>: air traffic advisory service available (none in the UK now).",
+    "<code>Flight information region (FIR)</code>: FIS and alerting available.",
+    "<code>Flight information centre</code>: the unit that provides them.",
+    "<code>ATS unit</code>: ATC unit, flight information centre or ATS reporting office.",
+    "<code>Special VFR flight</code>: a VFR flight <b class=\"k\">cleared by ATC</b> to operate in a <b class=\"k\">control zone</b> in conditions <b class=\"k\">below VMC</b>.",
+    "<code>Traffic information</code>: from ATC about known traffic nearby.",
+    "<code>Traffic avoidance advice</code>: advice to help avoid a collision.",
+    "<code>ATIS</code>: continuous recorded broadcast of routine aerodrome information.",
+    "<code>Holding fix</code> (the book calls it a \"<b class=\"k\">holding point</b>\"): a location around which an aircraft flies a standard holding pattern. In UK radio a holding point is the place you stop before a runway.",
+    "<code>Expected approach time</code>: when ATC expects a holding aircraft to leave the hold for its approach.",
+    "<code>Approach sequence</code>: the order of aircraft cleared to approach."
+   ]
+  ],
+  [
+   "Radar",
+   [
+    "<code>Primary radar</code>: uses <b class=\"k\">reflected</b> radio signals.",
+    "<code>Secondary surveillance radar (SSR)</code>: an interrogator prompts a <b class=\"k\">reply</b> from the aircraft's <b class=\"k\">transponder</b>.",
+    "<code>Radar contact</code>: the aircraft's position seen and identified on the display.",
+    "<code>Radar identification</code>: positively identified by the controller.",
+    "<code>Radar vectoring</code>: headings given from radar.",
+    "<code>Radar monitoring</code>: radar used to tell aircraft about deviations from their route or clearance.",
+    "<code>ACAS</code>: airborne collision avoidance from transponder signals, independent of the ground."
+   ]
+  ],
+  [
+   "Flight plans and times",
+   [
+    "<code>Flight plan</code>: specified information given to ATS about an intended flight.",
+    "<code>Filed flight plan</code>: as submitted, before any changes.",
+    "<code>ETA</code>: VFR, arrival <b class=\"k\">over the destination aerodrome</b>; IFR, arrival over the point where the instrument approach begins.",
+    "<code>Estimated off-block time</code>: when the aircraft will start moving for departure.",
+    "<code>Estimated elapsed time</code>: from one significant point to another.",
+    "<code>Flight time</code>: the total time from when the aircraft <b class=\"k\">first moves for the purpose of taking off</b> until it <b class=\"k\">finally comes to rest</b> at the end of the flight (\"chock to chock\"). The book says \"from the beginning of the take-off roll\", which contradicts its own note.",
+    "<code>Pilot-in-command</code>: responsible for the <b class=\"k\">operation and safety</b> of the aircraft during flight time.",
+    "<code>Operator</code>: a person or organisation engaged in aircraft operation.",
+    "<code>Alternate aerodrome</code>: where you can go if landing at the destination becomes impossible or inadvisable (en-route or destination alternate)."
+   ]
+  ],
+  [
+   "Emergencies, accidents and SAR",
+   [
+    "<code>Emergency phase</code>: <b class=\"k\">uncertainty</b>, <b class=\"k\">alert</b> or <b class=\"k\">distress</b> phase.",
+    "<code>Uncertainty</code>: safety uncertain.",
+    "<code>Alert</code>: concern for safety.",
+    "<code>Distress</code>: reasonably certain of <b class=\"k\">grave and imminent danger</b> or need of immediate assistance.",
+    "<code>Ditching</code>: a forced landing <b class=\"k\">on water</b>.",
+    "<b class=\"k\">Accident</b>, <b class=\"k\">serious incident</b>, <b class=\"k\">serious injury</b>: see Accident Investigation Regulations.",
+    "<code>Rescue coordination centre</code>: organises SAR in a <b class=\"k\">search and rescue region</b>.",
+    "<code>Rescue unit</code>: trained and equipped people.",
+    "<code>Dangerous goods</code>: articles or substances that pose significant risk to health, safety or property when carried by air.",
+    "<code>Fireproof material</code>: withstands heat <b class=\"k\">as well as or better than steel</b>."
+   ]
+  ],
+  [
+   "States",
+   [
+    "<code>State of Registry</code>: where the aircraft is registered.",
+    "<code>State of the Operator</code>: the operator's principal place of business. <b class=\"k\">State of Design</b> and <b class=\"k\">State of Manufacture</b>: responsible for the type design and final assembly.",
+    "<code>State of Occurrence</code>: where the accident or incident happens.",
+    "<code>Appropriate authority</code>: over the high seas, the <b class=\"k\">State of Registry</b>; over a State's territory, <b class=\"k\">that State</b>."
+   ]
+  ],
+  [
+   "Communications",
+   [
+    "<code>Blind transmission</code>: sent when two-way contact can't be made but the station is believed to receive it.",
+    "<code>Broadcast</code>: an \"all stations\" transmission.",
+    "<code>Aeronautical fixed service</code>: between fixed points (e.g. the AFTN).",
+    "<code>Aeronautical station</code>: a ground or sea station in the aeronautical mobile service.",
+    "<code>Location indicator</code>: the four-letter code of an aeronautical fixed station (e.g. <b class=\"k\">EGKK</b>).",
+    "<code>Air-taxiing</code>: a helicopter moving above an aerodrome surface, normally in ground effect, below <code>20 kt</code> groundspeed."
+   ]
+  ]
+ ],
+ "sum": {
+  "ICAO Annex terminology": "The definitions the exam uses, grouped by theme.",
+  "Aircraft": "Lighter or heavier than air, power-driven or not: aeroplane, glider, helicopter, gyroplane, airship, balloon.",
+  "Aerodromes": "Manoeuvring area excludes aprons; movement area includes them. Elevation is the highest point of the landing area.",
+  "Declared distances": "TORA; TODA = TORA + clearway; ASDA = TORA + stopway; LDA.",
+  "Heights and levels": "Altitude from MSL, height from a datum, elevation of a ground point, flight levels on 1013.2 hPa.",
+  "Weather and visibility": "Ceiling: lowest layer below 20,000 ft covering more than half the sky.",
+  "ATS and airspace": "CTR from the surface, CTA from a height above it; a clearance authorises, an instruction directs.",
+  "Radar": "Primary radar uses reflections; SSR gets replies from transponders.",
+  "Flight plans and times": "Flight time runs chock to chock; ETA for VFR is over the destination aerodrome.",
+  "Emergencies, accidents and SAR": "Uncertainty, alert and distress phases; ditching is a forced landing on water.",
+  "States": "State of Registry, of the Operator, of Design, of Manufacture and of Occurrence.",
+  "Communications": "Blind transmission, broadcast, location indicators (EGKK) and air-taxiing."
+ },
+ "cards": [
+  {
+   "q": "Manoeuvring area?",
+   "a": "For taxiing, take-off and landing, excluding aprons."
+  },
+  {
+   "q": "Movement area?",
+   "a": "The manoeuvring area plus aprons."
+  },
+  {
+   "q": "Aerodrome elevation?",
+   "a": "The elevation of the highest point of the landing area."
+  },
+  {
+   "q": "Aerodrome traffic?",
+   "a": "All traffic on the manoeuvring area and all aircraft in the vicinity (in, entering or leaving the circuit)."
+  },
+  {
+   "q": "TODA?",
+   "a": "TORA plus clearway."
+  },
+  {
+   "q": "ASDA?",
+   "a": "TORA plus stopway."
+  },
+  {
+   "q": "Altitude?",
+   "a": "Vertical distance of a point from mean sea level."
+  },
+  {
+   "q": "Height?",
+   "a": "Vertical distance from a specified datum."
+  },
+  {
+   "q": "Elevation?",
+   "a": "Vertical distance of a point on the earth's surface from mean sea level."
+  },
+  {
+   "q": "Transition level?",
+   "a": "The lowest flight level available above the transition altitude."
+  },
+  {
+   "q": "Cloud ceiling?",
+   "a": "Base of the lowest layer below 20,000 ft covering more than half the sky."
+  },
+  {
+   "q": "Control zone vs control area?",
+   "a": "CTR from the surface up; CTA from a specified height above the surface."
+  },
+  {
+   "q": "ATC clearance vs instruction?",
+   "a": "A clearance authorises you to proceed under conditions; an instruction directs a specific action."
+  },
+  {
+   "q": "Special VFR flight?",
+   "a": "A VFR flight cleared by ATC to operate in a CTR below VMC."
+  },
+  {
+   "q": "Flight time?",
+   "a": "From first moving for the purpose of taking off until coming to rest after the flight."
+  },
+  {
+   "q": "The emergency phases?",
+   "a": "Uncertainty, alert, distress."
+  },
+  {
+   "q": "Fireproof material?",
+   "a": "Withstands heat as well as or better than steel."
+  },
+  {
+   "q": "Air-taxiing?",
+   "a": "Helicopter movement above an aerodrome surface, normally in ground effect, below 20 kt groundspeed."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "The movement area of an aerodrome is:",
+   "o": [
+    "The manoeuvring area plus the aprons",
+    "The manoeuvring area, excluding aprons",
+    "The runways only",
+    "The aprons and taxiways only"
+   ],
+   "a": 0,
+   "why": "Movement includes aprons; manoeuvring excludes them. The exam swaps these often."
+  },
+  {
+   "q": "TODA is:",
+   "o": [
+    "TORA plus clearway",
+    "TORA plus stopway",
+    "TORA plus stopway plus clearway",
+    "The landing distance available"
+   ],
+   "a": 0,
+   "why": "Clearway is for the climb-out, so it extends the take-off distance. Stopway extends ASDA."
+  },
+  {
+   "q": "ASDA is:",
+   "o": [
+    "TORA plus stopway",
+    "TORA plus clearway",
+    "TODA plus stopway",
+    "The runway length less any displaced threshold"
+   ],
+   "a": 0,
+   "why": "Accelerate-stop: you need somewhere to stop, so stopway."
+  },
+  {
+   "q": "Aerodrome elevation is the elevation of:",
+   "o": [
+    "The highest point of the landing area",
+    "The aerodrome reference point",
+    "The threshold of the main runway",
+    "The control tower base"
+   ],
+   "a": 0,
+   "why": "ICAO uses the highest point of the landing area."
+  },
+  {
+   "q": "The vertical distance of an aircraft from mean sea level is its:",
+   "o": [
+    "Altitude",
+    "Height",
+    "Elevation",
+    "Flight level"
+   ],
+   "a": 0,
+   "why": "Altitude is from MSL. Height is from a datum such as the aerodrome; elevation is for a point on the ground; flight levels use 1013.2 hPa."
+  },
+  {
+   "q": "A cloud ceiling is the height of the base of the lowest cloud layer:",
+   "o": [
+    "Below 20,000 ft covering more than half the sky",
+    "Below 10,000 ft covering more than half the sky",
+    "Below 20,000 ft covering at least a quarter of the sky",
+    "Of any amount below 5,000 ft"
+   ],
+   "a": 0,
+   "why": "More than half the sky (BKN or OVC) and below 20,000 ft."
+  },
+  {
+   "q": "A control zone is controlled airspace extending:",
+   "o": [
+    "Upwards from the surface to a specified upper limit",
+    "Upwards from a specified height above the surface",
+    "From FL100 to FL195",
+    "Only along a corridor between navaids"
+   ],
+   "a": 0,
+   "why": "A CTR starts at the surface. A CTA starts at a height above it; an airway is a corridor-shaped CTA."
+  },
+  {
+   "q": "Under ICAO and Part-FCL, flight time starts when the aircraft:",
+   "o": [
+    "First moves for the purpose of taking off",
+    "Begins its take-off roll",
+    "Becomes airborne",
+    "Has its engine started"
+   ],
+   "a": 0,
+   "why": "It runs from first moving to take off until it comes to rest. The book's glossary says 'take-off roll', which is wrong."
+  },
+  {
+   "q": "The transition level is:",
+   "o": [
+    "The lowest flight level available for use above the transition altitude",
+    "The highest altitude flown on QNH",
+    "The airspace between transition altitude and transition level",
+    "Always FL40 in the UK"
+   ],
+   "a": 0,
+   "why": "The transition altitude is the top of QNH flying; the transition level is the lowest usable FL above it; between them is the transition layer."
+  },
+  {
+   "q": "An area at the end of the runway prepared for stopping after an abandoned take-off is a:",
+   "o": [
+    "Stopway",
+    "Clearway",
+    "Runway end safety area",
+    "Holding bay"
+   ],
+   "a": 0,
+   "why": "Stopway is for stopping (in ASDA). Clearway is for the initial climb (in TODA)."
+  }
+ ]
+}

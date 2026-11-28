@@ -1,0 +1,138 @@
+{
+ "seq": 38,
+ "s": 2,
+ "topic": "Crosswind component (Skyway Code)",
+ "order": 40,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "The Skyway Code includes a chart for finding headwind and crosswind components. Resolve the wind speed against the angle between the runway and the wind direction: crosswind = speed x sin of the angle, headwind = speed x cos of the angle. Example from the chart: 20 kt at 60° to the runway gives a 17 kt crosswind and a 10 kt headwind. Know the crosswind limit for your aircraft and confidence level. Built from the Skyway Code p.153 and pre-flight guidance on p.40.",
+ "src": [
+  [
+   "The Skyway Code (CAP 1535 v4, Nov 2023), p.153",
+   "https://www.caa.co.uk/our-work/publications/documents/content/cap1535s/"
+  ]
+ ],
+ "sections": [
+  [
+   "Finding the components",
+   [
+    "Angle = angle between runway direction and wind direction",
+    "<b>Crosswind</b> = wind speed x sin(angle). <b>Headwind</b> = wind speed x cos(angle)",
+    "Chart example: <code>20 kt</code> at <code>60°</code> gives a crosswind of about <code>17 kt</code> and a headwind of <code>10 kt</code>",
+    "Rules of thumb: 30° gives about half the speed as crosswind, 45° about 70%, 60° about 85%, 90° all of it",
+    "If the wind comes from behind the runway direction (more than 90°) the headwind becomes a tailwind component"
+   ]
+  ],
+  [
+   "Using it",
+   [
+    "If significant crosswind is expected be confident in the technique, or practise with an instructor",
+    "Winds above about 35 kt aloft often mean bumpy conditions and strong headwinds raise fuel needs",
+    "Tailwind of 10% of lift-off speed increases take-off and landing distances by about x1.2"
+   ]
+  ]
+ ],
+ "sum": {
+  "Finding the components": "Sine for crosswind, cosine for headwind.",
+  "Using it": "Practise technique and allow for tailwind effects."
+ },
+ "cards": [
+  {
+   "q": "Crosswind component formula?",
+   "a": "Wind speed x sin of the angle to the runway."
+  },
+  {
+   "q": "Headwind component formula?",
+   "a": "Wind speed x cos of the angle to the runway."
+  },
+  {
+   "q": "Crosswind from 20 kt at 60°?",
+   "a": "About 17 kt."
+  },
+  {
+   "q": "Headwind from 20 kt at 60°?",
+   "a": "About 10 kt."
+  },
+  {
+   "q": "Crosswind from 20 kt at 90°?",
+   "a": "20 kt, the full speed."
+  },
+  {
+   "q": "Crosswind from 30 kt at 30°?",
+   "a": "About 15 kt."
+  },
+  {
+   "q": "Rule of thumb at 30°?",
+   "a": "Crosswind is about half the wind speed."
+  },
+  {
+   "q": "Rule of thumb at 45°?",
+   "a": "Crosswind is about 70% of the wind speed."
+  },
+  {
+   "q": "Rule of thumb at 60°?",
+   "a": "Crosswind is about 85% of the wind speed."
+  },
+  {
+   "q": "Effect of a tailwind of 10% of lift-off speed?",
+   "a": "About x1.2 on distance."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "A 30 kt wind is 30° off the runway. The crosswind component is about:",
+   "o": [
+    "8 kt",
+    "15 kt",
+    "26 kt",
+    "30 kt"
+   ],
+   "a": 1,
+   "why": "Crosswind = 30 x sin30° = 15 kt."
+  },
+  {
+   "q": "A 20 kt wind straight across the runway gives a crosswind of:",
+   "o": [
+    "0 kt",
+    "10 kt",
+    "17 kt",
+    "20 kt"
+   ],
+   "a": 3,
+   "why": "At 90° the whole wind is crosswind."
+  },
+  {
+   "q": "A 20 kt wind 60° off gives a headwind of about:",
+   "o": [
+    "10 kt",
+    "17 kt",
+    "20 kt",
+    "0 kt"
+   ],
+   "a": 0,
+   "why": "Headwind = 20 x cos60° = 10 kt."
+  },
+  {
+   "q": "A 20 kt wind 45° off gives a crosswind of about:",
+   "o": [
+    "10 kt",
+    "14 kt",
+    "17 kt",
+    "20 kt"
+   ],
+   "a": 1,
+   "why": "20 x 0.7 = 14 kt."
+  },
+  {
+   "q": "Approximate crosswind for a 24 kt wind at 60°:",
+   "o": [
+    "12 kt",
+    "16 kt",
+    "21 kt",
+    "24 kt"
+   ],
+   "a": 2,
+   "why": "24 x 0.85 = about 21 kt."
+  }
+ ]
+}

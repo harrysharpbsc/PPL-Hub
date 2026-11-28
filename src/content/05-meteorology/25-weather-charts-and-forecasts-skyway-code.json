@@ -1,0 +1,191 @@
+{
+ "seq": 25,
+ "s": 4,
+ "topic": "Weather charts and forecasts (Skyway Code)",
+ "order": 30,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "The Skyway Code explains the UK GA weather products. The F215 forecasts weather below 10,000 ft for a 9-hour period, the F214 gives upper winds and temperatures, and the GAMET is a plain-text low-level forecast issued four times a day for four UK regions. TAFs are forecasts and METARs are reports, with cloud heights above aerodrome level. A ceiling is BKN or OVC, and legal VFR minima are limits, not targets. Built from the Skyway Code pp.33-40.",
+ "src": [
+  [
+   "The Skyway Code (CAP 1535 v4, Nov 2023), pp.33-40",
+   "https://www.caa.co.uk/our-work/publications/documents/content/cap1535s/"
+  ]
+ ],
+ "sections": [
+  [
+   "F215, F214 and GAMET",
+   [
+    "<b>F215</b> forecasts in-flight weather below <code>10,000 ft</code> for the British Isles over a <code>9-hour</code> period centred on a fixed time. F415 is the near-Europe version",
+    "The F215 shows fronts and pressure centres at the chart time, zones lettered A, B, C with cloud amount, type and heights above mean sea level, visibility, ice and turbulence, and the freezing level (0°C isotherm). <code>XXX</code> means tops above the chart limit",
+    "<b>F214</b> gives forecast upper winds and temperatures at 'spot' positions (columns: altitude in 1,000s of feet, wind direction, speed, temperature). F414 is near Europe",
+    "<b>GAMET</b> is an abbreviated plain-text low-level forecast issued four times a day for four UK regions. It replaced AIRMETs and includes the synoptic summary, hazards, freezing level and zone forecasts"
+   ]
+  ],
+  [
+   "Reading TAFs and METARs",
+   [
+    "TAFs are <b>forecasts</b>, METARs are <b>reports</b> of actual weather, normally updated every half hour",
+    "Example: <code>34008KT</code> is wind from 340° at 8 kt. <code>9999</code> means visibility 10 km or more. <code>SCT025</code> is 3 to 4 oktas at 2,500 ft above aerodrome level (AAL)",
+    "Cloud type is not reported unless it is cumulonimbus or towering cumulus",
+    "<b>TEMPO</b> is a temporary change within a period. <b>PROB30</b> and <b>PROB40</b> are the only probabilities used in the UK. If PROB30/40 or uncertain timings appear, look at the overall situation more thoroughly",
+    "Cloud is given above the <b>aerodrome</b>, so compare with terrain on your route. A 1,500 ft ceiling can hide hill tops",
+    "Viewing reports on a map helps build the weather picture. A <b>SIGMET</b> warns of severe weather such as thunderstorms, mountain waves, icing or turbulence"
+   ]
+  ],
+  [
+   "Icing in the Skyway Code",
+   [
+    "If you enter visible moisture at <code>0°C</code> or below, airframe ice may form. The worst usually occurs between <code>0°C and -15°C</code>",
+    "Always remove frost, ice and snow, and keep the pitot and static ports clear",
+    "Carb ice comes from the pressure and temperature drop in the venturi. It often forms outside visible moisture with high humidity and is more likely at low power",
+    "The carb icing risk chart plots dewpoint against air temperature and shows serious icing at any power or at descent power, so use carb heat per the AFM",
+    "Fuel-injected engines can still ice at the air intake: use alternate air"
+   ]
+  ],
+  [
+   "Making the weather decision",
+   [
+    "Know the conditions linked with warm and cold fronts, high and low pressure and thunderstorms",
+    "<b>Cloud ceiling</b> is the lowest cloud covering more than half the sky (BKN or OVC). <b>Cloud base</b> is the lowest visible cloud and includes FEW and SCT",
+    "Legal VFR minima are <b>limits, not targets</b>. Class G can allow 1,500 m visibility clear of cloud but the cloud height often forces dangerously low flight",
+    "Ceiling of <code>1,500 ft AGL</code> or less needs particular attention to terrain. Below <code>1,000 ft AGL</code> is normally for circuits or familiar local flying",
+    "Surface visibility under <code>5 km</code> is not recommended for VFR: the horizon is unlikely to be clear. Haze towards the sun and low winter sun can reduce visibility",
+    "Winds above about <code>35 kt</code> aloft often mean bumpy conditions, and strong headwinds affect fuel",
+    "If you do not hold an IR or IMC rating, you must not enter cloud"
+   ]
+  ]
+ ],
+ "sum": {
+  "F215, F214 and GAMET": "Low-level chart, upper winds chart and plain-text GA forecast.",
+  "Reading TAFs and METARs": "Decode wind, visibility, cloud, TEMPO and PROB groups.",
+  "Icing in the Skyway Code": "Airframe ice 0°C to -15°C, carb ice and alternate air.",
+  "Making the weather decision": "Ceiling, cloud base and why minima are limits."
+ },
+ "cards": [
+  {
+   "q": "What period does an F215 cover?",
+   "a": "A 9-hour period centred on a fixed time, below 10,000 ft."
+  },
+  {
+   "q": "What does the F214 provide?",
+   "a": "Forecast upper winds and temperatures."
+  },
+  {
+   "q": "How often is a GAMET issued?",
+   "a": "Four times a day for four UK regions."
+  },
+  {
+   "q": "What does XXX on the F215 mean?",
+   "a": "Cloud tops above the chart upper limit."
+  },
+  {
+   "q": "What is the difference between a TAF and a METAR?",
+   "a": "A TAF is a forecast, a METAR is a report of the actual weather."
+  },
+  {
+   "q": "What does 9999 mean in visibility?",
+   "a": "10 km or more."
+  },
+  {
+   "q": "Cloud heights in TAFs and METARs are measured from where?",
+   "a": "Above aerodrome level."
+  },
+  {
+   "q": "What does TEMPO mean?",
+   "a": "A temporary condition within the stated period."
+  },
+  {
+   "q": "Which probabilities are used in UK TAFs?",
+   "a": "PROB30 and PROB40 only."
+  },
+  {
+   "q": "What is a SIGMET?",
+   "a": "A warning of severe weather such as thunderstorms, mountain waves, icing or turbulence."
+  },
+  {
+   "q": "Define cloud ceiling.",
+   "a": "The lowest cloud covering more than half the sky (BKN or OVC)."
+  },
+  {
+   "q": "Worst airframe icing temperature range per the Skyway Code?",
+   "a": "0°C to -15°C."
+  },
+  {
+   "q": "Surface visibility threshold below which VFR is not recommended?",
+   "a": "Less than 5 km."
+  },
+  {
+   "q": "Winds aloft above roughly what speed suggest bumpy conditions?",
+   "a": "About 35 kt."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which chart forecasts weather below 10,000 ft over a 9-hour period?",
+   "o": [
+    "F214",
+    "F215",
+    "GAMET",
+    "SIGMET"
+   ],
+   "a": 1,
+   "why": "F215 is the low-level significant weather forecast."
+  },
+  {
+   "q": "In a TAF, SCT025 means:",
+   "o": [
+    "3 to 4 oktas at 2,500 ft AAL",
+    "3 to 4 oktas at 250 ft AMSL",
+    "1 to 2 oktas at 2,500 ft AAL",
+    "5 to 7 oktas at 2,500 ft AMSL"
+   ],
+   "a": 0,
+   "why": "SCT is 3 to 4 oktas and the height is above aerodrome level in hundreds of feet."
+  },
+  {
+   "q": "A cloud ceiling is:",
+   "o": [
+    "Any cloud base",
+    "Lowest cloud covering more than half the sky",
+    "Cloud above 10,000 ft",
+    "Cumulonimbus only"
+   ],
+   "a": 1,
+   "why": "BKN or OVC forms a ceiling. FEW and SCT do not."
+  },
+  {
+   "q": "A METAR reports visibility as 9999. This means:",
+   "o": [
+    "999 m",
+    "9,999 m exactly",
+    "10 km or more",
+    "Fog"
+   ],
+   "a": 2,
+   "why": "9999 is used for 10 km or more."
+  },
+  {
+   "q": "The Skyway Code says legal VFR visibility minima should be regarded as:",
+   "o": [
+    "Targets",
+    "Limits not targets",
+    "Irrelevant",
+    "Only for IFR"
+   ],
+   "a": 1,
+   "why": "Safe VFR flight normally ceases long before the legal minima."
+  },
+  {
+   "q": "Which product is a plain-text forecast issued four times a day for low-level GA?",
+   "o": [
+    "GAMET",
+    "F215",
+    "SIGMET",
+    "VOLMET"
+   ],
+   "a": 0,
+   "why": "GAMET replaced AIRMET and covers four UK regions."
+  }
+ ]
+}

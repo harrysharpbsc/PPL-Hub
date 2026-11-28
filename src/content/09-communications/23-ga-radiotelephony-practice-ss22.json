@@ -1,0 +1,224 @@
+{
+ "seq": 23,
+ "s": 8,
+ "topic": "GA radiotelephony practice (SS22)",
+ "order": 30,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "CAA guidance on how GA pilots use the radio in the UK. Know the squawks (7000, 7500, 7600, 7700), read back the key clearances, report the right circuit calls and use 121.5 MHz for emergencies. MAYDAY and PAN PAN follow a set order. For radio failure, set 7600 and keep clear of controlled airspace. Built from CAA Safety Sense Leaflet 22, alongside CAP 413.",
+ "src": [
+  [
+   "Safety Sense Leaflet 22: Radiotelephony",
+   "https://www.caa.co.uk/media/vfybdggv/safetysense22-radiotelephony.pdf"
+  ]
+ ],
+ "sections": [
+  [
+   "Squawk codes",
+   [
+    "<code>7000</code> VFR conspicuity",
+    "<code>2000</code> IFR conspicuity (not used in all states)",
+    "<code>7500</code> unlawful interference",
+    "<code>7600</code> radio failure",
+    "<code>7700</code> emergency",
+    "<code>0030</code> lost (UK procedure). Press IDENT only when asked",
+    "Select ALT unless told otherwise"
+   ]
+  ],
+  [
+   "Equipment and technique",
+   [
+    "Voice band is <code>117.975 to 137.000 MHz</code> at 8.33 kHz spacing",
+    "Check squelch is set properly and keep volume ideally no higher than <code>70%</code>",
+    "Initial call: station name then your callsign. Later: callsign only",
+    "Answer with the response then your callsign. Avoid fillers like 'this is' and do not use voice inflection to ask questions",
+    "Press PTT before speaking and hold until finished"
+   ]
+  ],
+  [
+   "Items to read back",
+   [
+    "Taxi instructions, level, heading and speed instructions",
+    "Airway or en-route clearances and approach clearances",
+    "Runway-in-use and clearances to take off, land, enter, backtrack, cross or hold short",
+    "Transponder instructions and altimeter settings",
+    "Frequency changes, type of ATS service and transition levels",
+    "Simple reporting instructions need only <b>wilco</b>"
+   ]
+  ],
+  [
+   "Circuit and aerodrome calls",
+   [
+    "Standard calls are <b>downwind</b> and <b>final</b>. Overhead join: report overhead and then descending deadside",
+    "<b>Final</b> is between 4 NM and the threshold. <b>Long final</b> is 4 to 8 NM. There is no 'short final': state distance instead",
+    "At ATC aerodromes call at 15 NM or 5 minutes from the ATZ, whichever is greater",
+    "<b>AFIS</b> uses the suffix 'Information' and may issue ground instructions up to a holding point. 'Land at your discretion' is not a clearance",
+    "<b>AGCS</b> uses 'Radio' and cannot give clearances or instructions",
+    "Unattended aerodromes: use <b>SAFETYCOM 135.480 MHz</b> within 10 NM and up to 1,000 ft above circuit height"
+   ]
+  ],
+  [
+   "Flight information services and transits",
+   [
+    "<b>Basic Service</b>: pilot avoids traffic. <b>Traffic Service</b>: gives traffic information only. <b>Deconfliction Service</b>: IFR in Class G, with avoidance advice",
+    "Request a CAS transit about <b>10 minutes</b> before the boundary and stay clear until cleared. Read back altitude limits",
+    "Pass-your-message order: callsign, type, departure, destination, position, altitude and altimeter setting, VFR or IFR, intentions",
+    "MATZ is not controlled airspace for civil aircraft, but contact the unit before entering"
+   ]
+  ],
+  [
+   "MAYDAY and PAN PAN",
+   [
+    "MAYDAY is serious and imminent danger. PAN PAN is a safety concern without immediate danger",
+    "Order: MAYDAY or PAN PAN x3, station, callsign, type, nature, intentions, position (height and heading), pilot qualification, other information (POB, endurance)",
+    "Call the unit you are talking to, or <b>London Centre D&amp;D on 121.5</b>. Select <code>7700</code>",
+    "'Mayday out' closes the call. Make a PAN PAN early if things may get worse"
+   ]
+  ],
+  [
+   "Radio failure and lost procedures",
+   [
+    "Fly the aircraft, stay in VMC and clear of controlled airspace",
+    "Check frequency, switches, volume and squelch, PTT, headset, circuit breakers (reset once), an alternate radio, a relay, or 121.5",
+    "Set <code>7600</code>. If only receive failed, make blind transmissions. If only transmit failed, keep listening",
+    "Over an aerodrome, observe the signal square, join the circuit and watch for light signals",
+    "If lost, seek help early, squawk <code>0030</code> with ALT and call London Centre on 121.5. Do not ask for training fixes in a real emergency"
+   ]
+  ]
+ ],
+ "sum": {
+  "Squawk codes": "7000, 7500, 7600, 7700 and the UK lost code 0030.",
+  "Equipment and technique": "8.33 kHz, squelch, volume and call structure.",
+  "Items to read back": "Clearances and settings that must be read back.",
+  "Circuit and aerodrome calls": "Final, long final, AFIS, AGCS and SAFETYCOM.",
+  "Flight information services and transits": "Basic, Traffic and Deconfliction services and transit requests.",
+  "MAYDAY and PAN PAN": "The distress call order and 121.5 D&D.",
+  "Radio failure and lost procedures": "Squawk 7600, check the set and use the signal square."
+ },
+ "cards": [
+  {
+   "q": "What does squawk 7600 mean?",
+   "a": "Radio failure."
+  },
+  {
+   "q": "What does squawk 7700 mean?",
+   "a": "Emergency."
+  },
+  {
+   "q": "What does squawk 7500 mean?",
+   "a": "Unlawful interference."
+  },
+  {
+   "q": "VFR conspicuity squawk?",
+   "a": "7000."
+  },
+  {
+   "q": "UK lost procedure squawk?",
+   "a": "0030."
+  },
+  {
+   "q": "Frequency for the London Centre D&D cell?",
+   "a": "121.5 MHz."
+  },
+  {
+   "q": "SAFETYCOM frequency?",
+   "a": "135.480 MHz."
+  },
+  {
+   "q": "How far from the aerodrome is SAFETYCOM usable?",
+   "a": "Within 10 NM and up to 1,000 ft above circuit height."
+  },
+  {
+   "q": "What does AFIS suffix say?",
+   "a": "Information."
+  },
+  {
+   "q": "What does AGCS suffix say?",
+   "a": "Radio."
+  },
+  {
+   "q": "Long final range?",
+   "a": "4 to 8 NM."
+  },
+  {
+   "q": "When do you press IDENT?",
+   "a": "Only when ATC says squawk IDENT."
+  },
+  {
+   "q": "Who may be unable to give clearances at AGCS?",
+   "a": "The radio operator, since it is not a formal ATC service."
+  },
+  {
+   "q": "How early should a CAS transit be requested?",
+   "a": "About 10 minutes before the boundary."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which code do you set after radio failure?",
+   "o": [
+    "7000",
+    "7500",
+    "7600",
+    "7700"
+   ],
+   "a": 2,
+   "why": "7600 is radio failure."
+  },
+  {
+   "q": "What is the UK lost procedure squawk?",
+   "o": [
+    "0030",
+    "2000",
+    "7000",
+    "7700"
+   ],
+   "a": 0,
+   "why": "0030 is the UK lost procedure code, with ALT selected."
+  },
+  {
+   "q": "SAFETYCOM 135.480 MHz is used at unattended aerodromes within:",
+   "o": [
+    "5 NM",
+    "10 NM and 1,000 ft above circuit height",
+    "25 NM",
+    "The ATZ only"
+   ],
+   "a": 1,
+   "why": "SAFETYCOM is usable within 10 NM and up to 1,000 ft above circuit height."
+  },
+  {
+   "q": "An AFIS says 'land at your discretion'. This is:",
+   "o": [
+    "A landing clearance",
+    "Not a clearance, so make sure the runway is clear",
+    "A request to go around",
+    "An instruction to hold"
+   ],
+   "a": 1,
+   "why": "AFIS gives no landing clearance and you decide and check the runway is clear."
+  },
+  {
+   "q": "Where should you call if you are not in contact with anyone and need emergency help?",
+   "o": [
+    "Any tower",
+    "London Centre D&D on 121.5",
+    "Ground",
+    "Information on 119.875"
+   ],
+   "a": 1,
+   "why": "D&D on 121.5 MHz can help."
+  },
+  {
+   "q": "There is no 'short final' call. Instead you should:",
+   "o": [
+    "Say 'final'",
+    "State the distance, such as 'half-mile final'",
+    "Say 'base'",
+    "Say 'long final'"
+   ],
+   "a": 1,
+   "why": "State the distance from the threshold."
+  }
+ ]
+}

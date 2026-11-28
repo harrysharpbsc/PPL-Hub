@@ -1,0 +1,171 @@
+{
+ "seq": 32,
+ "s": 6,
+ "topic": "Aerodrome operations and circuits (Skyway Code)",
+ "order": 30,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "At aerodromes you observe other traffic, conform with the circuit, turn left unless told otherwise, and land and take off into wind. You may not land on an occupied runway without ATC authority. During notified watch hours you may not operate in an ATZ without permission (ATC) or information (AFIS/AGCS), and you must report position and height entering and leaving. Joining aircraft give way to traffic in the circuit. Built from the Skyway Code pp.96-99.",
+ "src": [
+  [
+   "The Skyway Code (CAP 1535 v4, Nov 2023), pp.96-99",
+   "https://www.caa.co.uk/our-work/publications/documents/content/cap1535s/"
+  ]
+ ],
+ "sections": [
+  [
+   "Operating rules (SERA.3225)",
+   [
+    "Observe other traffic to avoid collision, conform with or avoid the circuit pattern",
+    "All turns to the <b>left</b> when approaching to land or take off unless otherwise indicated",
+    "Land and take off <b>into wind</b> unless safety dictates otherwise",
+    "On landing, leave clear to your left any other aircraft landing or about to take off, and move clear of the landing area as soon as possible",
+    "When taking up position for take-off leave clear on your left any aircraft that has taken off or is about to"
+   ]
+  ],
+  [
+   "ATZ rules (Rule 11 and 12)",
+   [
+    "Rule 10: do not land on a runway occupied by another aircraft unless authorised by ATC",
+    "Rule 11: during notified hours of ATC, AFIS or AGCS, do not operate within an ATZ unless you have permission (ATC) or have obtained information (AFIS or AGCS)",
+    "Keep a continuous watch on the frequency or for visual signals and transmit position and height on entering or leaving the ATZ",
+    "Rule 12: do not taxi on the manoeuvring area of an uncontrolled aerodrome without the permission of the person in charge or the AFIS unit"
+   ]
+  ],
+  [
+   "The circuit",
+   [
+    "Legs: crosswind, downwind, base, final, with the liveside and deadside",
+    "Standard radio calls at downwind and final. Also announce base or late downwind if it helps situational awareness",
+    "Joining aircraft give way to traffic already established",
+    "Always make position calls even if you know of no other traffic, with blind calls if no AGCS or AFIS. Non-radio aircraft are a possibility",
+    "If in doubt on local procedure, ask by phone or radio. AFIS and AGCS will not give instructions to airborne aircraft"
+   ]
+  ],
+  [
+   "Departure procedures",
+   [
+    "Obtain runway in use, circuit direction and QNH or QFE before taxiing. Larger aerodromes provide ATIS: quote the information letter",
+    "At a controlled aerodrome request permission to taxi. At an AGCS aerodrome no taxi clearance is needed but you must have the permission of the person in charge. At an AFIS aerodrome request taxi instructions",
+    "Complete power and pre-take-off checks at the holding point before saying 'ready for departure'",
+    "At an AFIS aerodrome the service reverts to information only: the pilot ensures it is safe to enter the runway",
+    "At an ATC aerodrome you must not enter the runway without clearance (take-off clearance or 'line up and wait')",
+    "Stop at an angle at the holding point for a good view of the approach, particularly in a high-wing aircraft",
+    "Report leaving the ATZ. At large aerodromes, moving-map aerodrome charts are helpful. <b>Hot spots</b> are circled in red on charts"
+   ]
+  ]
+ ],
+ "sum": {
+  "Operating rules (SERA.3225)": "Left turns, into wind and leave clear to the left.",
+  "ATZ rules (Rule 11 and 12)": "Permission or information in the ATZ, and taxiing rules.",
+  "The circuit": "Legs, calls and giving way when joining.",
+  "Departure procedures": "Runway in use, taxi, hold, ready and report leaving the ATZ."
+ },
+ "cards": [
+  {
+   "q": "Which way do you turn in the circuit unless told otherwise?",
+   "a": "Left."
+  },
+  {
+   "q": "Which direction do you land and take off?",
+   "a": "Into wind unless safety dictates otherwise."
+  },
+  {
+   "q": "What does Rule 10 say about runways?",
+   "a": "Do not land on an occupied runway unless authorised by ATC."
+  },
+  {
+   "q": "What does Rule 11 apply to?",
+   "a": "Operating within an ATZ during notified hours of watch."
+  },
+  {
+   "q": "What does Rule 12 apply to?",
+   "a": "Taxiing on the manoeuvring area of an uncontrolled aerodrome."
+  },
+  {
+   "q": "Do you need a taxi clearance at an AGCS aerodrome?",
+   "a": "No, but you need the permission of the person in charge."
+  },
+  {
+   "q": "What do you request at an AFIS aerodrome before taxiing?",
+   "a": "Taxi instructions."
+  },
+  {
+   "q": "Who must you give way to when joining the circuit?",
+   "a": "Traffic already established."
+  },
+  {
+   "q": "What must be transmitted on entering or leaving an ATZ?",
+   "a": "Aircraft position and height."
+  },
+  {
+   "q": "What are hot spots on aerodrome charts?",
+   "a": "Holding points vulnerable to runway incursion, circled in red."
+  },
+  {
+   "q": "Which clearance allows runway entry at an ATC aerodrome?",
+   "a": "Take-off clearance or 'line up and wait'."
+  },
+  {
+   "q": "What must you call after departing the ATZ?",
+   "a": "Report leaving the ATZ."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Unless told otherwise, circuit turns are:",
+   "o": [
+    "Right",
+    "Left",
+    "Either",
+    "Depends on wind"
+   ],
+   "a": 1,
+   "why": "All turns left when approaching to land or take off unless indicated."
+  },
+  {
+   "q": "At an AFIS aerodrome, when you report 'ready for departure':",
+   "o": [
+    "You receive a take-off clearance",
+    "The service reverts to information only and you ensure it is safe",
+    "ATC separates you",
+    "You must hold"
+   ],
+   "a": 1,
+   "why": "AFIS gives information, not clearances, once you are at the holding point."
+  },
+  {
+   "q": "Rule 11 requires, in an ATZ with an AGCS, that you:",
+   "o": [
+    "Get permission",
+    "Obtain appropriate information",
+    "Hold off",
+    "Squawk 7700"
+   ],
+   "a": 1,
+   "why": "For AFIS or AGCS you get information, with ATC you get permission."
+  },
+  {
+   "q": "Joining traffic must:",
+   "o": [
+    "Have priority",
+    "Give way to traffic already in the circuit",
+    "Join on final",
+    "Squawk ident"
+   ],
+   "a": 1,
+   "why": "Joining aircraft give way to established traffic."
+  },
+  {
+   "q": "Before taxiing at an aerodrome with ATIS, you should quote:",
+   "o": [
+    "The QFE",
+    "The information letter on first contact",
+    "The squawk",
+    "Fuel on board"
+   ],
+   "a": 1,
+   "why": "Give the ATIS letter on first contact with ATC."
+  }
+ ]
+}

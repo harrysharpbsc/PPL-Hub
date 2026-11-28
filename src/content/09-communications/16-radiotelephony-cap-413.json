@@ -1,0 +1,436 @@
+{
+ "seq": 16,
+ "s": 8,
+ "topic": "Radiotelephony (CAP 413)",
+ "order": 10,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "How to talk on the radio in the UK. Speak clearly and steadily, say digits the radio way, use the standard words (ROGER, WILCO, AFFIRM, NEGATIVE, UNABLE), and read back the clearances that matter, ending with your callsign. Declare MAYDAY for distress and PAN PAN for urgency, and know what to do if the radio fails. Built from CAP 413 Edition 24, not yet from your own notes.",
+ "sections": [
+  [
+   "Transmitting technique",
+   [
+    "Check the volume and listen out first so you do not talk over someone else",
+    "Speak in a normal tone at an even rate of no more than <code>100 words per minute</code>, and keep the microphone at a steady distance",
+    "A slight pause before and after numbers makes them easier to understand",
+    "Avoid hesitation sounds like \"er\" and avoid courtesies and chat",
+    "Press the transmit switch fully before speaking and release it only when the message is complete. A <b>stuck microphone</b> blocks the frequency for everyone",
+    "After a call, wait at least <code>10 seconds</code> before calling again",
+    "A message should not contain more than <b>three</b> items (clearances, instructions or information)"
+   ]
+  ],
+  [
+   "Letters, numbers and time",
+   [
+    "Use the phonetic alphabet for individual letters, for example Alpha, Bravo, Charlie, Juliett, Whiskey",
+    "Digits are said <b>ZERO, WUN, TOO, TREE, FOWER, FIFE, SIX, SEVEN, AIT, NINER</b>, with <b>DAYSEEMAL</b> for the decimal point",
+    "Callsigns, headings, wind, speeds, flight levels and frequencies are said <b>one digit at a time</b>",
+    "Altitude, height, cloud height, visibility and pressure settings in whole hundreds or thousands use <b>HUNDRED</b> and <b>TOUSAND</b>, for example 2,500 ft is TOO TOUSAND FIFE HUNDRED and QNH 1000 is WUN TOUSAND",
+    "Frequencies use all six figures, except when the last two digits are zero, so 118.000 is WUN WUN AIT DAYSEEMAL ZERO",
+    "Time is given in <b>UTC</b>. Normally only the minutes are given, preceded by the word TIME if a time check"
+   ]
+  ],
+  [
+   "Standard words and phrases",
+   [
+    "<b>ROGER</b> means you have received the last transmission. It does not mean you will comply",
+    "<b>WILCO</b> means you understand the message and will comply with it",
+    "<b>AFFIRM</b> means yes. <b>NEGATIVE</b> means no, permission not granted, or that is not correct",
+    "<b>UNABLE</b> means you cannot comply, normally followed by a reason",
+    "<b>STANDBY</b> means wait and I will call you. It is not an approval or a denial",
+    "<b>SAY AGAIN</b> asks for a repeat. <b>I SAY AGAIN</b> repeats for emphasis. <b>CORRECTION</b> means an error has been made and the right version follows",
+    "<b>READ BACK</b> asks you to repeat the message exactly. <b>CONFIRM</b> asks for verification",
+    "<b>CONTACT</b> means your details have been passed. <b>FREECALL</b> means they have not, so give full details",
+    "<b>OVER</b> and <b>OUT</b> are not normally used on VHF"
+   ]
+  ],
+  [
+   "Callsigns and stations",
+   [
+    "On first contact use the full callsigns of both stations, for example <i>Borton Tower, G-ABCD</i>",
+    "You may abbreviate your own callsign (G-ABCD becomes G-CD) only after the ground station has abbreviated it first",
+    "The abbreviation keeps the first character and the last two",
+    "You may prefix the callsign with the aircraft manufacturer, type or category (such as Cessna or Helicopter)",
+    "You must not change callsign type during a flight unless ATC instructs it",
+    "Station suffixes show the service: <b>TOWER</b> (aerodrome control), <b>GROUND</b>, <b>APPROACH</b>, <b>RADAR</b>, <b>CONTROL</b>, <b>INFORMATION</b> (flight information), <b>RADIO</b> (air/ground), <b>DELIVERY</b>",
+    "On initial contact state the service you want, for example <i>request Basic Service</i>"
+   ]
+  ],
+  [
+   "Clearances and readbacks",
+   [
+    "Read back in full: taxi instructions, level, heading and speed instructions, route and approach clearances, runway in use, clearances to enter, land on, take off from, cross or hold short of a runway, SSR codes, altimeter settings, frequency changes, type of ATS service and transition levels",
+    "Always end a readback with your <b>callsign</b>",
+    "If your readback is wrong the controller says <b>NEGATIVE</b> followed by the correct version, and you read it back again",
+    "If you cannot comply, say <b>UNABLE</b> and give the reason",
+    "Other messages can be acknowledged with an abbreviated readback, such as <i>Roger</i> or <i>Wilco</i>",
+    "An ATC route clearance is <b>not</b> permission to take off or enter the runway",
+    "The word <b>TAKE-OFF</b> is used only when cleared for take-off or when that clearance is cancelled. At other times the word is <b>DEPARTURE</b>",
+    "A take-off clearance is issued separately from any other clearance",
+    "<b>CLEARED</b> and <b>CLIMB</b> are not used by air/ground radio operators or FISOs"
+   ]
+  ],
+  [
+   "Aerodrome calls",
+   [
+    "Make the first call short: station, your callsign and what you want, for example <i>request join</i>. The unit replies with your callsign and <i>pass your message</i>",
+    "Surface wind is a two-minute average. Ask for <i>instant wind</i> if you want the instantaneous value",
+    "Circuit reports are made as required by local procedures, such as downwind, base and final",
+    "<b>Final</b> is reported when you turn onto final approach. If that turn is more than <code>4 NM</code> from touchdown the report is <b>long final</b>",
+    "A landing clearance includes the runway designator. <b>CONTINUE APPROACH</b> is not an invitation to land",
+    "<b>LAND AFTER</b> (the preceding aircraft) is not a landing clearance: the pilot decides whether separation is sufficient",
+    "At aerodromes with a FISO the pilot hears information such as <b>LAND AT YOUR DISCRETION</b>, not clearances, and states their intentions",
+    "After landing, stay on the tower frequency until the runway is vacated, then report <i>runway vacated</i> if asked"
+   ]
+  ],
+  [
+   "Emergencies and failures",
+   [
+    "<b>MAYDAY, MAYDAY, MAYDAY</b> is distress: serious or imminent danger requiring immediate assistance",
+    "<b>PAN PAN, PAN PAN, PAN PAN</b> is urgency: a safety concern that does not require immediate assistance",
+    "The emergency message order is: prefix, station, callsign, aircraft type, nature of emergency, intentions, position, level and heading, pilot qualifications, other useful information such as persons on board",
+    "If not already talking to a unit, use <code>121.5 MHz</code>, address <b>London Centre</b>, and squawk <code>7700</code> if you have a transponder",
+    "Other special codes are <code>7600</code> for radio failure and <code>7500</code> for hijack",
+    "Declare early and cancel later. It is better to declare as soon as there is doubt",
+    "With a suspected communication failure check frequency, volume, headset and range, then try another frequency",
+    "If still unable, transmit your message twice, preceded by <b>TRANSMITTING BLIND</b>, or <b>TRANSMITTING BLIND DUE TO RECEIVER FAILURE</b> if your receiver has failed",
+    "A radio check uses the format: station callsign, your callsign, RADIO CHECK, frequency. Readability is 1 (unreadable) to 5 (perfectly readable)"
+   ]
+  ]
+ ],
+ "sum": {
+  "Transmitting technique": "Speak steadily at no more than 100 words per minute, pause around numbers, and release the microphone when done.",
+  "Letters, numbers and time": "Say digits as ZERO, WUN, TOO, TREE, FOWER, FIFE, SIX, SEVEN, AIT, NINER, and use HUNDRED and TOUSAND for whole hundreds and thousands of altitude and pressure.",
+  "Standard words and phrases": "ROGER means received, WILCO means will comply, AFFIRM means yes, NEGATIVE means no, UNABLE means you cannot comply.",
+  "Callsigns and stations": "Use full callsigns at first, shorten yours only after the ground station does, and use the right suffix for the service.",
+  "Clearances and readbacks": "Read back the safety-critical items in full, end with your callsign, and remember a route clearance is not a take-off clearance.",
+  "Aerodrome calls": "Keep first calls short, report long final beyond 4 NM, and never treat CONTINUE APPROACH or LAND AFTER as a landing clearance.",
+  "Emergencies and failures": "MAYDAY is distress, PAN PAN is urgency; use 121.5 and 7700, declare early, and transmit blind twice if you cannot make contact."
+ },
+ "cards": [
+  {
+   "q": "What is the maximum rate of speech on the radio?",
+   "a": "No more than 100 words per minute."
+  },
+  {
+   "q": "How long should you wait before making a second call?",
+   "a": "At least 10 seconds."
+  },
+  {
+   "q": "How is the digit 9 said on the radio?",
+   "a": "NINER."
+  },
+  {
+   "q": "How are the digits 3, 4 and 5 said?",
+   "a": "TREE, FOWER, FIFE."
+  },
+  {
+   "q": "How is a decimal point said?",
+   "a": "DAYSEEMAL."
+  },
+  {
+   "q": "How is 2,500 ft said?",
+   "a": "TOO TOUSAND FIFE HUNDRED."
+  },
+  {
+   "q": "How is QNH 1000 said?",
+   "a": "WUN TOUSAND."
+  },
+  {
+   "q": "How is frequency 118.000 said?",
+   "a": "WUN WUN AIT DAYSEEMAL ZERO. If the last two digits are zero, only the first four digits are given."
+  },
+  {
+   "q": "Which time standard is used on the radio?",
+   "a": "UTC."
+  },
+  {
+   "q": "What does ROGER mean?",
+   "a": "I have received your last transmission. It does not mean you will comply."
+  },
+  {
+   "q": "What does WILCO mean?",
+   "a": "I understand your message and will comply with it."
+  },
+  {
+   "q": "What does AFFIRM mean?",
+   "a": "Yes."
+  },
+  {
+   "q": "What does NEGATIVE mean?",
+   "a": "No, permission not granted, or that is not correct."
+  },
+  {
+   "q": "What does UNABLE mean?",
+   "a": "I cannot comply with your request, instruction or clearance. It is normally followed by a reason."
+  },
+  {
+   "q": "What does STANDBY mean?",
+   "a": "Wait and I will call you. It is not an approval or a denial."
+  },
+  {
+   "q": "What is the difference between CONTACT and FREECALL?",
+   "a": "CONTACT: your details have been passed. FREECALL: they have not, so give full details."
+  },
+  {
+   "q": "When may you shorten G-ABCD to G-CD?",
+   "a": "Only after the ground station has abbreviated it first."
+  },
+  {
+   "q": "Which services do not use the word CLEARED?",
+   "a": "Air/ground radio operators and flight information service officers (FISOs)."
+  },
+  {
+   "q": "Which clearances must be read back in full?",
+   "a": "Taxi, level, heading, speed, route and approach clearances, runway in use, runway entry, landing, take-off, crossing and hold-short clearances, SSR codes, altimeter settings, frequency changes, type of service and transition levels."
+  },
+  {
+   "q": "How do you end a readback?",
+   "a": "With your callsign."
+  },
+  {
+   "q": "What does a controller say if your readback is wrong?",
+   "a": "NEGATIVE, followed by the correct version."
+  },
+  {
+   "q": "Which word is used in a departure clearance that is not a take-off clearance?",
+   "a": "DEPARTURE. TAKE-OFF is used only when cleared for take-off or when that clearance is cancelled."
+  },
+  {
+   "q": "At what distance is a 'long final' report made?",
+   "a": "When turning onto final more than 4 NM from touchdown."
+  },
+  {
+   "q": "Is CONTINUE APPROACH an invitation to land?",
+   "a": "No. You must wait for a landing clearance or go around."
+  },
+  {
+   "q": "What does the radio check format contain?",
+   "a": "Station callsign, your callsign, RADIO CHECK, and the frequency."
+  },
+  {
+   "q": "What does readability 3 mean?",
+   "a": "Readable but with difficulty."
+  },
+  {
+   "q": "Which prefix declares distress?",
+   "a": "MAYDAY, MAYDAY, MAYDAY."
+  },
+  {
+   "q": "Which prefix declares urgency?",
+   "a": "PAN PAN, PAN PAN, PAN PAN."
+  },
+  {
+   "q": "Which frequency is used for emergency calls and who do you address?",
+   "a": "121.5 MHz, addressed to London Centre."
+  },
+  {
+   "q": "Which transponder code means emergency?",
+   "a": "7700. Radio failure is 7600 and hijack is 7500."
+  },
+  {
+   "q": "What do you say if you cannot make contact and must transmit blind?",
+   "a": "TRANSMITTING BLIND, then the message twice. If your receiver has failed: TRANSMITTING BLIND DUE TO RECEIVER FAILURE."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "How is the digit 9 said on the radio?",
+   "o": [
+    "Nine",
+    "Niner",
+    "Nyne",
+    "Nein"
+   ],
+   "a": 1,
+   "why": "NINER, so it cannot be confused with the German word for no."
+  },
+  {
+   "q": "How is QNH 1000 hPa said?",
+   "o": [
+    "Wun zero zero zero",
+    "Wun tousand",
+    "Ten hundred",
+    "One thousand hectopascals only"
+   ],
+   "a": 1,
+   "why": "Whole thousands are said as the digit followed by TOUSAND, so WUN TOUSAND."
+  },
+  {
+   "q": "How is an altitude of 2,500 ft said?",
+   "o": [
+    "Too fife zero zero",
+    "Twenty-five hundred",
+    "Too tousand fife hundred",
+    "Too tousand five zero zero"
+   ],
+   "a": 2,
+   "why": "Altitudes in whole hundreds and thousands use TOUSAND and HUNDRED: TOO TOUSAND FIFE HUNDRED."
+  },
+  {
+   "q": "Which word means you have received the message and will comply?",
+   "o": [
+    "Roger",
+    "Wilco",
+    "Affirm",
+    "Acknowledge"
+   ],
+   "a": 1,
+   "why": "WILCO means understood and will comply. ROGER only means received."
+  },
+  {
+   "q": "Which word do you use for yes?",
+   "o": [
+    "Yes",
+    "Affirm",
+    "Positive",
+    "Roger"
+   ],
+   "a": 1,
+   "why": "AFFIRM is the standard word for yes. NEGATIVE means no."
+  },
+  {
+   "q": "What is the maximum rate of speech?",
+   "o": [
+    "60 words per minute",
+    "100 words per minute",
+    "150 words per minute",
+    "200 words per minute"
+   ],
+   "a": 1,
+   "why": "No more than 100 words per minute, slower when the message will be written down."
+  },
+  {
+   "q": "How long should you wait before a second call?",
+   "o": [
+    "2 seconds",
+    "5 seconds",
+    "10 seconds",
+    "30 seconds"
+   ],
+   "a": 2,
+   "why": "At least 10 seconds, to give the receiving station time to get ready to reply."
+  },
+  {
+   "q": "Which of these must be read back in full?",
+   "o": [
+    "Time check",
+    "Runway in use",
+    "Traffic information",
+    "Surface wind"
+   ],
+   "a": 1,
+   "why": "Runway in use is on the mandatory readback list."
+  },
+  {
+   "q": "A controller says NEGATIVE after your readback. What does it mean?",
+   "o": [
+    "Your readback was incorrect and the correct version follows",
+    "You are refused take-off",
+    "Your radio is unreadable",
+    "You must change frequency"
+   ],
+   "a": 0,
+   "why": "NEGATIVE followed by the correct version means your readback was wrong. Read the corrected version back."
+  },
+  {
+   "q": "How may G-ABCD be shortened?",
+   "o": [
+    "G-AB",
+    "G-CD",
+    "ABCD",
+    "G-ACD"
+   ],
+   "a": 1,
+   "why": "First character and last two: G-CD, and only once the ground station has abbreviated it first."
+  },
+  {
+   "q": "Which word replaces TAKE-OFF in a departure instruction that is not a take-off clearance?",
+   "o": [
+    "DEPARTURE",
+    "LAUNCH",
+    "LINE UP",
+    "ROLL"
+   ],
+   "a": 0,
+   "why": "TAKE-OFF is used only when cleared for take-off or when it is cancelled. Otherwise DEPARTURE."
+  },
+  {
+   "q": "Which call prefix declares distress?",
+   "o": [
+    "PAN PAN",
+    "MAYDAY",
+    "SECURITE",
+    "URGENT"
+   ],
+   "a": 1,
+   "why": "MAYDAY, MAYDAY, MAYDAY declares distress. PAN PAN declares urgency."
+  },
+  {
+   "q": "Which frequency is used for emergency calls when not talking to a unit?",
+   "o": [
+    "118.0",
+    "121.5",
+    "123.45",
+    "130.0"
+   ],
+   "a": 1,
+   "why": "121.5 MHz, the international aeronautical emergency frequency."
+  },
+  {
+   "q": "Which transponder code indicates an emergency?",
+   "o": [
+    "7000",
+    "7500",
+    "7600",
+    "7700"
+   ],
+   "a": 3,
+   "why": "7700 is emergency. 7600 is radio failure and 7500 is hijack."
+  },
+  {
+   "q": "Which callsign suffix is used for a flight information service?",
+   "o": [
+    "TOWER",
+    "RADIO",
+    "INFORMATION",
+    "CONTROL"
+   ],
+   "a": 2,
+   "why": "INFORMATION is flight information. RADIO is air/ground communication service."
+  },
+  {
+   "q": "A radio check reply says READABILITY 3. What does it mean?",
+   "o": [
+    "Perfectly readable",
+    "Readable",
+    "Readable but with difficulty",
+    "Unreadable"
+   ],
+   "a": 2,
+   "why": "3 is readable but with difficulty. 5 is perfectly readable and 1 is unreadable."
+  },
+  {
+   "q": "What do you say if you suspect your receiver has failed?",
+   "o": [
+    "Mayday receiver",
+    "Transmitting blind due to receiver failure, then the message twice",
+    "Say again all stations",
+    "Radio check"
+   ],
+   "a": 1,
+   "why": "Transmit your reports twice, preceded by TRANSMITTING BLIND DUE TO RECEIVER FAILURE."
+  },
+  {
+   "q": "Is CONTINUE APPROACH an invitation to land?",
+   "o": [
+    "Yes",
+    "Only in daylight",
+    "No, you need a landing clearance or must go around",
+    "Only at an uncontrolled aerodrome"
+   ],
+   "a": 2,
+   "why": "CONTINUE APPROACH is not an invitation to land."
+  }
+ ]
+}

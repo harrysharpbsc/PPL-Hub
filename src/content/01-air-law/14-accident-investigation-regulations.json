@@ -1,0 +1,226 @@
+{
+ "seq": 14,
+ "s": 0,
+ "topic": "Accident Investigation Regulations",
+ "num": 15,
+ "order": 150,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "An accident happens between boarding with the intention of flight and everyone getting off, when someone is killed or seriously injured by the aircraft (including parts that fall off, and jet blast), when the aircraft suffers structural damage needing major repair (damage only to the engine, propeller, wingtips, aerials, tyres, brakes or small dents doesn't count), or when it is missing. The commander tells the AAIB (Chief Inspector of Air Accidents) and the police by the quickest means. The State where it happens investigates, to find the cause and prevent a repeat, never to blame. Report all bird strikes, and MORs through the CAA's portal.",
+ "sections": [
+  [
+   "What counts as an accident",
+   [
+    "An occurrence between the time <b class=\"k\">anyone boards with the intention of flight</b> and the time <b class=\"k\">all have left</b>, in which:",
+    "– someone is <b class=\"k\">killed or seriously injured</b>: in or on the aircraft, by <b class=\"k\">direct contact</b> with any part of it (including parts that have <b class=\"k\">come off</b>), or by <b class=\"k\">jet blast</b>. Not if from <b class=\"k\">natural causes</b>, <b class=\"k\">self-inflicted</b>, inflicted by <b class=\"k\">others</b>, or a <b class=\"k\">stowaway</b> outside the normal areas.",
+    "– the aircraft has <b class=\"k\">damage or structural failure</b> that <b class=\"k\">affects its strength, performance or flight characteristics</b> and would normally need <b class=\"k\">major repair or replacement</b>. <b class=\"k\">Not</b> an accident: damage limited to the <b class=\"k\">engine</b>, its cowlings or accessories; or to <b class=\"k\">propellers, wingtips, aerials, tyres, brakes, fairings</b>, small dents or punctures.",
+    "– the aircraft is <b class=\"k\">missing</b> or <b class=\"k\">completely inaccessible</b> (missing = the official search has ended without finding the wreckage).",
+    "<b>Exam trap</b> A person on the ground hit by a part that <b class=\"k\">fell off</b> an aircraft in flight → <b class=\"k\">accident</b>. A person on the apron hit by the wingtip of a <b class=\"k\">taxiing</b> aircraft → accident (someone boarded with the intention of flight)."
+   ]
+  ],
+  [
+   "Serious injury",
+   [
+    "Hospital for more than <code>48 hours</code>, starting within <code>7 days</code>",
+    "a <b class=\"k\">fracture</b> (except simple fractures of fingers, toes or nose)",
+    "<b class=\"k\">lacerations</b> causing severe bleeding or nerve, muscle or tendon damage",
+    "injury to an <b class=\"k\">internal organ</b>",
+    "<b class=\"k\">second or third-degree burns</b>, or burns over <code>5%</code> of the body",
+    "verified exposure to <b class=\"k\">infectious substances</b> or harmful <b class=\"k\">radiation</b>"
+   ]
+  ],
+  [
+   "Notifying an accident",
+   [
+    "The <b class=\"k\">commander</b> (or the <b class=\"k\">operator</b> if the commander is killed or incapacitated) tells, <b class=\"k\">by the quickest means</b>:",
+    "– the <b class=\"k\">Chief Inspector of Air Accidents</b> (the <b class=\"k\">AAIB</b>)",
+    "– the <b class=\"k\">local police</b>, if it happened in or over the UK",
+    "The <b class=\"k\">State in which the accident happens</b> starts the investigation."
+   ]
+  ],
+  [
+   "Incidents",
+   [
+    "An occurrence, <b class=\"k\">other than an accident</b>, that <b class=\"k\">affected or could have affected</b> safety. Examples: an <b class=\"k\">Airprox</b>, a near miss with the <b class=\"k\">ground</b>, <b class=\"k\">undershooting or overshooting</b> a runway, a structural or engine failure that isn't an accident, <b class=\"k\">crew incapacitation</b>, <b class=\"k\">low fuel</b> leading to a Mayday.",
+    "<code>Serious incident</code>: one that <b class=\"k\">almost</b> resulted in an accident. Damage or injury = accident; <b class=\"k\">could have</b> = incident."
+   ]
+  ],
+  [
+   "Purpose of an investigation",
+   [
+    "<b class=\"k\">Only</b> to find the <b class=\"k\">cause</b> and <b class=\"k\">prevent recurrence</b>. Investigators do <b class=\"k\">not</b> apportion <b class=\"k\">blame or liability</b>.",
+    "The commander must <b class=\"k\">assist</b> the investigators.",
+    "The <b class=\"k\">CAA</b> is legally responsible for implementing safety recommendations.",
+    "<b class=\"k\">CHIRP</b> (the Confidential Human Factors <b class=\"k\">Incident</b> Reporting Programme) takes confidential reports; its <b class=\"k\">GA Feedback</b> is published online."
+   ]
+  ],
+  [
+   "ICAO Annex 13",
+   [
+    "Procedures for States investigating accidents and incidents, so experts from different States cooperate and the lessons are shared worldwide.",
+    "An accredited investigator may: <b class=\"k\">visit the scene</b>, examine the <b class=\"k\">wreckage</b>, get <b class=\"k\">witness</b> information, have access to all relevant <b class=\"k\">evidence</b>, take part in tests and simulations, and make <b class=\"k\">submissions</b>."
+   ]
+  ],
+  [
+   "Reporting",
+   [
+    "<code>Bird strikes</code>: report <b class=\"k\">all</b> of them, <b class=\"k\">damage or not</b>. Near misses are welcome too.",
+    "<code>Mandatory Occurrence Reports (MOR)</code>: the events listed in <b class=\"k\">Regulation 2015/1018</b> (under Regulation 376/2014). Anything else can go in as a <b class=\"k\">voluntary</b> report.",
+    "The book gives the EU's online portal; UK pilots report to the <b class=\"k\">CAA</b> through its own online occurrence-reporting portal (check the CAA website for the current link)."
+   ]
+  ]
+ ],
+ "sum": {
+  "What counts as an accident": "Death or serious injury, structural damage needing major repair, or a missing aircraft, between boarding and everyone getting off.",
+  "Serious injury": "Over 48 hours in hospital, most fractures, serious cuts, organ damage, bad burns, infection or radiation.",
+  "Notifying an accident": "Commander tells the AAIB and the police by the quickest means; the State of Occurrence investigates.",
+  "Incidents": "Anything else that affected or could have affected safety; a serious incident almost became an accident.",
+  "Purpose of an investigation": "To find the cause and prevent recurrence, not to blame; the commander must help.",
+  "ICAO Annex 13": "How States investigate and share the lessons.",
+  "Reporting": "Report every bird strike; MORs and voluntary reports go to the CAA online."
+ },
+ "cards": [
+  {
+   "q": "When does the accident 'window' start and end?",
+   "a": "From when anyone boards with the intention of flight until all have left."
+  },
+  {
+   "q": "Is a person on the ground hit by a part that fell off an aircraft an accident?",
+   "a": "Yes."
+  },
+  {
+   "q": "Is damage limited to the propeller an accident?",
+   "a": "No (nor engine-only damage, wingtips, aerials, tyres, brakes, small dents)."
+  },
+  {
+   "q": "Is a missing aircraft an accident?",
+   "a": "Yes, once the official search ends without finding the wreckage."
+  },
+  {
+   "q": "Who must be told of a UK accident, and how?",
+   "a": "The Chief Inspector of Air Accidents (AAIB) and the local police, by the quickest means."
+  },
+  {
+   "q": "Who tells them if the commander is killed?",
+   "a": "The operator."
+  },
+  {
+   "q": "Which State starts the investigation?",
+   "a": "The State in which the accident happens."
+  },
+  {
+   "q": "Purpose of an accident investigation?",
+   "a": "To find the cause and prevent recurrence; not to apportion blame or liability."
+  },
+  {
+   "q": "Serious injury: hospital time?",
+   "a": "More than 48 hours, starting within 7 days."
+  },
+  {
+   "q": "Which fractures don't count as serious injury?",
+   "a": "Simple fractures of fingers, toes or nose."
+  },
+  {
+   "q": "Accident vs serious incident?",
+   "a": "An accident has the damage or injury; a serious incident nearly did."
+  },
+  {
+   "q": "Which bird strikes must be reported?",
+   "a": "All of them, damage or not."
+  },
+  {
+   "q": "What does CHIRP stand for?",
+   "a": "Confidential Human Factors Incident Reporting Programme."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which of these is an aircraft accident?",
+   "o": [
+    "A person on the ground is seriously injured by a part that falls off an aircraft in flight",
+    "A tyre bursts on landing",
+    "An aerial breaks off in flight",
+    "A bird strike leaves a small dent in the wing"
+   ],
+   "a": 0,
+   "why": "Injury from a detached part is an accident. Tyres, aerials and small dents are listed exceptions."
+  },
+  {
+   "q": "An engine fails in the circuit and the aircraft lands safely on the runway. Damage is limited to the engine. This is:",
+   "o": [
+    "Not an accident; engine-only damage is excluded",
+    "An accident",
+    "A serious injury occurrence",
+    "An accident only if the engine must be replaced"
+   ],
+   "a": 0,
+   "why": "Damage limited to the engine, its cowlings or accessories is excluded. It is still reportable as an occurrence."
+  },
+  {
+   "q": "A person on the apron is seriously injured by the wingtip of an aircraft taxiing for departure. This is:",
+   "o": [
+    "An accident",
+    "An incident",
+    "Not reportable",
+    "An accident only if the aircraft is damaged"
+   ],
+   "a": 0,
+   "why": "People had boarded with the intention of flight, and a person was seriously injured by direct contact with the aircraft."
+  },
+  {
+   "q": "A UK accident must be reported by the quickest means to:",
+   "o": [
+    "The Chief Inspector of Air Accidents and the local police",
+    "The CAA and the AAIB",
+    "The CAA and the police",
+    "The operator and the insurer"
+   ],
+   "a": 0,
+   "why": "AAIB (the Chief Inspector) and the police. The CAA is the trap."
+  },
+  {
+   "q": "Who is responsible for starting the investigation of an accident?",
+   "o": [
+    "The authority of the State in which it occurred",
+    "The State of Registry",
+    "The CAA, wherever it happens",
+    "The aircraft's operator"
+   ],
+   "a": 0,
+   "why": "The State of Occurrence starts the investigation; other States may take part."
+  },
+  {
+   "q": "The purpose of an accident investigation is to:",
+   "o": [
+    "Find the cause and prevent recurrence",
+    "Decide who was to blame",
+    "Assess liability for insurers",
+    "Decide whether to prosecute the pilot"
+   ],
+   "a": 0,
+   "why": "Investigators do not apportion blame or liability."
+  },
+  {
+   "q": "Which of these counts as a serious injury?",
+   "o": [
+    "A broken arm",
+    "A simple fracture of a finger",
+    "A night in hospital for observation",
+    "A small cut"
+   ],
+   "a": 0,
+   "why": "Most fractures count, but not simple fractures of fingers, toes or nose. Hospital must be more than 48 hours."
+  },
+  {
+   "q": "Which bird strikes should be reported?",
+   "o": [
+    "All of them, whether or not there is damage",
+    "Only those that cause damage",
+    "Only those that cause an accident",
+    "Only those at controlled aerodromes"
+   ],
+   "a": 0,
+   "why": "Every bird strike, and near misses are welcome too."
+  }
+ ]
+}

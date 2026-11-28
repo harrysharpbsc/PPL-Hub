@@ -1,0 +1,223 @@
+{
+ "seq": 7,
+ "s": 0,
+ "topic": "Visual Flight Rules",
+ "num": 8,
+ "order": 80,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "VFR keeps you in sight of the ground and clear of cloud. Above FL100 you need 8 km visibility, below it 5 km, and 1,500 m horizontally and 1,000 ft vertically from cloud, except in Class F and G at or below 3,000 ft, where clear of cloud with the surface in sight will do (and 1,500 m visibility at 140 kt or less). The UK lets you fly clear of cloud in Class D below 3,000 ft by day at 140 kt or less. A CTR aerodrome needs 5 km and a 1,500 ft ceiling unless you are Special VFR. At night: ceiling 1,500 ft, ground visibility 5 km, 1,000 ft (2,000 ft over high ground) above obstacles within 8 km.",
+ "sections": [
+  [
+   "Visual Flight Rules (SERA.5005)",
+   [
+    "A basic PPL holder (no IR(R) or IR) needs <b class=\"k\">visual reference</b> outside for both <b class=\"k\">attitude</b> and <b class=\"k\">navigation</b>. Losing it, for example by entering cloud or poor visibility, can be disastrous.",
+    "The <b class=\"k\">Visual Flight Rules (VFR)</b> set minimum <b class=\"k\">flight visibility</b> and <b class=\"k\">distance from cloud</b>. Conditions that meet them are <b class=\"k\">Visual Meteorological Conditions (VMC)</b>.",
+    "Starting point: flight visibility <code>8 km</code>, <code>1,500 m</code> horizontally and <code>1,000 ft</code> vertically from cloud. Below <b class=\"k\">FL100</b> the visibility minimum drops to <code>5 km</code>.",
+    "Only two flight categories exist: <b class=\"k\">VFR</b> or <b class=\"k\">IFR</b>."
+   ]
+  ],
+  [
+   "VMC minima by airspace class (SERA.5001)",
+   [
+    "<b>At and above <code>10,000 ft</code> amsl (FL100)</b>: Class A B C D E F G; Flight visibility <code>8 km</code>; Distance from cloud <code>1,500 m</code> horizontally, <code>1,000 ft</code> vertically",
+    "<b>Below <code>10,000 ft</code>, above <code>3,000 ft</code> amsl or <code>1,000 ft</code> above terrain (whichever is higher)</b>: Class A B C D E F G; Flight visibility <code>5 km</code>; Distance from cloud <code>1,500 m</code> horizontally, <code>1,000 ft</code> vertically",
+    "<b>At and below <code>3,000 ft</code> amsl or <code>1,000 ft</code> above terrain (whichever is higher)</b>: Class A B C D E; Flight visibility <code>5 km</code>; Distance from cloud <code>1,500 m</code> horizontally, <code>1,000 ft</code> vertically",
+    "<b>At and below <code>3,000 ft</code> amsl or <code>1,000 ft</code> above terrain (whichever is higher)</b>: Class F G; Flight visibility <code>5 km</code> (can be less, see below); Distance from cloud <b class=\"k\">Clear of cloud</b> with the <b class=\"k\">surface in sight</b>",
+    "Class A minima are guidance only: <b class=\"k\">VFR is not allowed in Class A</b>.",
+    "If the transition altitude is lower than <code>10,000 ft</code>, use <b class=\"k\">FL100</b> instead of <code>10,000 ft</code>.",
+    "In <b class=\"k\">F and G</b> the visibility may be reduced to <code>1,500 m</code> when flying at <code>140 kt</code> IAS or less (time to see and avoid traffic and obstacles), or where meeting other traffic is unlikely. <b class=\"k\">Helicopters</b> may go down to <code>800 m</code> if flown slowly enough to see and avoid.",
+    "<code>UK Class D</code> (at or below <code>3,000 ft</code> amsl or <code>1,000 ft</code> above terrain, whichever is higher): you meet SERA.5001 if you fly <b class=\"k\">by day</b>, at <code>140 kt</code> IAS or less, <b class=\"k\">clear of cloud with the surface in sight</b>, with flight visibility at least <code>5 km</code> (helicopters <code>1,500 m</code>).",
+    "<b>Note</b> Under VFR the pilot alone is responsible for the safety of the flight, separation from other aircraft, terrain clearance and staying far enough from cloud in adequate visibility."
+   ]
+  ],
+  [
+   "VFR into a control zone",
+   [
+    "Unless cleared <b class=\"k\">Special VFR</b>, a VFR flight must not take off or land at an aerodrome in a <b class=\"k\">control zone</b>, or enter its <b class=\"k\">ATZ or circuit</b>, when the reported ground visibility is less than <code>5 km</code> or the cloud ceiling is less than <code>1,500 ft</code>."
+   ]
+  ],
+  [
+   "VFR flight plan and ATC clearance",
+   [
+    "In <b class=\"k\">Class C and D</b>, the pilot-in-command must give flight details to the ATC unit and get an <b class=\"k\">ATC clearance</b> (the unit may waive this). The details must be enough to issue a clearance and for <b class=\"k\">search and rescue</b>.",
+    "Keep a <b class=\"k\">continuous listening watch</b> on the frequency and <b class=\"k\">comply with ATC instructions</b>.",
+    "Exemptions (in practice Class D only):",
+    "– <b class=\"k\">gliders</b> with <code>8 km</code> visibility, <code>1,500 m</code> horizontally and <code>1,000 ft</code> vertically from cloud",
+    "– <b class=\"k\">non-radio powered aircraft</b> by <b class=\"k\">day</b> with <code>5 km</code> visibility, <code>1,500 m</code> and <code>1,000 ft</code> from cloud, with <b class=\"k\">prior ATC permission</b>"
+   ]
+  ],
+  [
+   "Night VFR",
+   [
+    "<code>Night</code> (ANO): from <b class=\"k\">half an hour after sunset</b> to <b class=\"k\">half an hour before sunrise</b>, measured at the surface.",
+    "Minima for VFR at night:",
+    "– <b class=\"k\">cloud ceiling</b> at least <code>1,500 ft</code> (<code>450 m</code>). The book says \"AMSL\" in the licences chapter, but a ceiling is measured <b class=\"k\">above ground or water</b>.",
+    "– <b class=\"k\">ground visibility</b> at least <code>5 km</code>",
+    "– at or below <code>3,000 ft</code> amsl (or <code>1,000 ft</code> above terrain), keep <b class=\"k\">sight of the surface</b>",
+    "– except taking off or landing, at least <code>1,000 ft</code> above the highest obstacle within <code>8 km</code> (<code>2,000 ft</code> over high or mountainous terrain)",
+    "If leaving the <b class=\"k\">vicinity of the aerodrome</b>, file a <b class=\"k\">flight plan</b> (a full plan or an abbreviated one, i.e. booking out). Establish <b class=\"k\">two-way radio</b> contact.",
+    "UK difference (book, licences chapter): you may fly below <code>1,000 ft</code> above obstacles within <code>8 km</code> if you stay at or below <code>3,000 ft</code> amsl, clear of cloud with the surface in sight, and still meet the low-flying rules (<code>1,000 ft</code> over congested areas within <code>600 m</code> or glide clear; <code>500 ft</code> from the ground elsewhere)."
+   ]
+  ],
+  [
+   "Notes on VFR",
+   [
+    "Always fly within the <b class=\"k\">privileges of your licence</b> (a basic PPL, for example, has no IMC privileges).",
+    "Using <b class=\"k\">semicircular cruising levels</b> is advised even under VFR, though flying on the <b class=\"k\">Regional Pressure Setting</b> above <code>3,000 ft</code> is fine, especially when manoeuvring."
+   ]
+  ]
+ ],
+ "sum": {
+  "Visual Flight Rules (SERA.5005)": "VFR sets minimum visibility and distance from cloud; meeting them is VMC. The baseline is 8 km, 1,500 m and 1,000 ft.",
+  "VMC minima by airspace class (SERA.5001)": "5 km below FL100 (8 km above); 1,500 m and 1,000 ft from cloud, except F and G low down: clear of cloud, surface in sight.",
+  "VFR into a control zone": "No VFR take-off, landing or circuit at a CTR aerodrome below 5 km ground visibility or a 1,500 ft ceiling, unless Special VFR.",
+  "VFR flight plan and ATC clearance": "In Class C and D, give flight details, get a clearance, listen out and obey ATC.",
+  "Night VFR": "Night is 30 minutes after sunset to 30 minutes before sunrise; ceiling 1,500 ft, 5 km, and 1,000 ft above obstacles within 8 km.",
+  "Notes on VFR": "Stay within your licence privileges; semicircular levels are advised, but QNH/RPS is fine above 3,000 ft."
+ },
+ "cards": [
+  {
+   "q": "VFR flight visibility at and above FL100?",
+   "a": "8 km."
+  },
+  {
+   "q": "VFR flight visibility below FL100?",
+   "a": "5 km."
+  },
+  {
+   "q": "Distance from cloud, normal VFR?",
+   "a": "1,500 m horizontally and 1,000 ft vertically."
+  },
+  {
+   "q": "Class F/G at or below 3,000 ft amsl (or 1,000 ft agl if higher)?",
+   "a": "5 km, clear of cloud with the surface in sight."
+  },
+  {
+   "q": "When can Class G visibility drop to 1,500 m?",
+   "a": "At or below 3,000 ft at 140 kt IAS or less (or where traffic is unlikely)."
+  },
+  {
+   "q": "UK Class D alleviation below 3,000 ft?",
+   "a": "By day, 140 kt IAS or less, clear of cloud with the surface in sight, 5 km visibility."
+  },
+  {
+   "q": "Is VFR allowed in Class A?",
+   "a": "No. Its VMC minima are guidance only."
+  },
+  {
+   "q": "VFR into a CTR aerodrome: minimum ground visibility and ceiling?",
+   "a": "5 km and 1,500 ft, unless cleared Special VFR."
+  },
+  {
+   "q": "UK definition of night?",
+   "a": "From 30 minutes after sunset to 30 minutes before sunrise, at the surface."
+  },
+  {
+   "q": "Night VFR minimum ceiling?",
+   "a": "1,500 ft (450 m), measured above the ground."
+  },
+  {
+   "q": "Night VFR minimum height en route?",
+   "a": "1,000 ft above the highest obstacle within 8 km (2,000 ft over high terrain)."
+  },
+  {
+   "q": "Who keeps a VFR flight separated from other aircraft?",
+   "a": "The pilot alone."
+  },
+  {
+   "q": "What two things do Class C and D need from a VFR flight?",
+   "a": "Flight details to ATC and an ATC clearance (plus a listening watch)."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Between FL100 and 3,000 ft amsl in Class E, the VFR minima are:",
+   "o": [
+    "5 km, 1,500 m horizontally and 1,000 ft vertically from cloud",
+    "8 km, 1,500 m horizontally and 1,000 ft vertically from cloud",
+    "5 km, 1,000 m horizontally and 1,500 ft vertically from cloud",
+    "5 km, clear of cloud and in sight of the surface"
+   ],
+   "a": 0,
+   "why": "Below FL100 visibility drops to 5 km but the cloud distances stay 1,500 m and 1,000 ft. 8 km applies only at and above FL100, and the 1,000 m / 1,500 ft pair has the numbers swapped."
+  },
+  {
+   "q": "At 2,000 ft amsl in Class G by day at 120 kt, the lowest flight visibility allowed under VFR is:",
+   "o": [
+    "1,500 m, clear of cloud with the surface in sight",
+    "5 km, clear of cloud with the surface in sight",
+    "1,500 m, 1,000 ft vertically from cloud",
+    "800 m, clear of cloud"
+   ],
+   "a": 0,
+   "why": "In F and G at or below 3,000 ft the minimum is 5 km, but it may be 1,500 m at 140 kt IAS or less. Cloud distance is clear of cloud with the surface in sight; 800 m is for helicopters."
+  },
+  {
+   "q": "The UK Class D alleviation (clear of cloud, surface in sight) applies:",
+   "o": [
+    "By day, at 140 kt IAS or less, at or below 3,000 ft amsl (or 1,000 ft above terrain if higher)",
+    "By day or night, at 140 kt IAS or less, at or below 3,000 ft amsl",
+    "By day, at any speed, at or below 3,000 ft amsl",
+    "By day, at 140 kt IAS or less, at or below FL100"
+   ],
+   "a": 0,
+   "why": "All three conditions together: day, 140 kt or less, and at or below 3,000 ft amsl or 1,000 ft above terrain, with 5 km visibility."
+  },
+  {
+   "q": "Unless cleared Special VFR, you may not take off from an aerodrome in a CTR under VFR when:",
+   "o": [
+    "The ground visibility is below 5 km or the cloud ceiling below 1,500 ft",
+    "The flight visibility is below 8 km or the ceiling below 1,500 ft",
+    "The ground visibility is below 5 km or the ceiling below 1,000 ft",
+    "The ground visibility is below 1,500 m or the ceiling below 1,500 ft"
+   ],
+   "a": 0,
+   "why": "5 km ground visibility and a 1,500 ft ceiling. It is reported ground visibility, not flight visibility."
+  },
+  {
+   "q": "For night VFR, the cloud ceiling must be at least:",
+   "o": [
+    "1,500 ft above the ground",
+    "1,500 ft amsl",
+    "1,000 ft above the ground",
+    "2,000 ft above the ground"
+   ],
+   "a": 0,
+   "why": "450 m (1,500 ft). A ceiling is always measured above ground or water, so 'amsl' is the trap."
+  },
+  {
+   "q": "Except taking off or landing, a night VFR flight over ordinary terrain must stay at least:",
+   "o": [
+    "1,000 ft above the highest obstacle within 8 km",
+    "1,000 ft above the highest obstacle within 8 nm",
+    "1,500 ft above the highest obstacle within 5 km",
+    "500 ft above the highest obstacle within 150 m"
+   ],
+   "a": 0,
+   "why": "1,000 ft within 8 km (2,000 ft over high or mountainous terrain). 8 nm is the wrong unit; 500 ft within 150 m is the day low-flying rule."
+  },
+  {
+   "q": "Under VFR, who is responsible for separation from other aircraft and terrain?",
+   "o": [
+    "The pilot alone",
+    "ATC in controlled airspace, the pilot elsewhere",
+    "The pilot, but ATC in Class C and D",
+    "ATC whenever the aircraft has a clearance"
+   ],
+   "a": 0,
+   "why": "Under VFR the pilot is solely responsible for separation, terrain clearance and staying in VMC, even with a clearance."
+  },
+  {
+   "q": "A VFR flight into Class D must:",
+   "o": [
+    "Give flight details to ATC, get a clearance, listen out and comply with instructions",
+    "Book out only; no clearance is needed",
+    "File a full flight plan at least 60 minutes before departure",
+    "Have a transponder with Mode S"
+   ],
+   "a": 0,
+   "why": "Class C and D need flight details and a clearance, plus a listening watch. An abbreviated plan by radio is enough."
+  }
+ ]
+}

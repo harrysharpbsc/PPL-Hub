@@ -1,0 +1,190 @@
+{
+ "seq": 31,
+ "s": 0,
+ "topic": "Airspace, ATZ, MATZ and transponders (Skyway Code)",
+ "order": 40,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "An ATZ is a cylinder of 2 NM radius when the longest runway is 1,850 m or less, 2.5 NM otherwise, extending 2,000 ft above the aerodrome. A MATZ is not controlled airspace for civilians but contact is strongly recommended. Most UK GA controlled airspace is class D (CTRs and CTAs) with class A for airways and TMAs. Transponders should be on with altitude reporting (squawk 7000 VFR), and Mode S is needed in class A and C, above FL100 and in TMZs. Built from the Skyway Code pp.68-72 and 84-89.",
+ "src": [
+  [
+   "The Skyway Code (CAP 1535 v4, Nov 2023), pp.68-72, 84-89",
+   "https://www.caa.co.uk/our-work/publications/documents/content/cap1535s/"
+  ]
+ ],
+ "sections": [
+  [
+   "Airspace structure",
+   [
+    "ICAO classes A to G exist but in UK airspace A, C, D, E and G are notified",
+    "<b>Class A</b>: IFR only, clearance required, ATC service and separation for all flights",
+    "Most controlled airspace GA meets is class D: <b>CTRs</b> (surface to about 2,500 ft AMSL or higher) and <b>CTAs</b> (base about 1,500 ft AMSL, overlying CTRs)",
+    "<b>TMAs</b> cover several busy aerodromes and are normally class A (the Scottish TMA is an exception)",
+    "<b>Airways</b> link structures and are normally class A. Some in Scotland are class E with a transponder mandatory zone, giving VFR access without clearance",
+    "In class D there is no formal ATC separation of VFR from other traffic, only traffic information"
+   ]
+  ],
+  [
+   "ATZ and aerodromes without one",
+   [
+    "An ATZ is a cylinder around an aerodrome: <code>2 NM</code> radius if the longest runway is <code>1,850 m or less</code>, <code>2.5 NM</code> if longer, up to <code>2,000 ft</code> above the aerodrome",
+    "You may cross an ATZ en route if you comply with Rule 11: with ATC permission is needed, with AFIS or AGCS get information",
+    "Some aerodromes without an ATZ are shown with a circle and <b>T</b> (intensive training) or <b>U</b> (unusual activity such as aerobatics or formation)"
+   ]
+  ],
+  [
+   "MATZ",
+   [
+    "A MATZ is <b>not controlled airspace</b> for civilians but contains high-performance military aircraft, so contact the unit before entering",
+    "It contains an ATZ: never enter that ATZ without a positive clearance",
+    "Standard MATZ: 5 NM radius, 3,000 ft above airfield level, with two STUBS and LARS frequency",
+    "Request a 'MATZ penetration service' about 10 minutes flying time ahead. If there is no reply after two attempts you may enter with caution",
+    "MATZ are often inactive at weekends but check. Downwind and base legs of the radar training circuit can lie outside the MATZ"
+   ]
+  ],
+  [
+   "Requesting a transit",
+   [
+    "Start with the request: for example 'Solent Radar, G-DOME, request Basic Service and zone transit'",
+    "On 'pass your message', give type, route, position, altitude and QNH. 'Standby' needs no acknowledgement",
+    "Read back the squawk, altitude limits and service, and acknowledge future instructions with 'wilco'",
+    "Remain clear until cleared. If no clearance is likely, alter course away positively"
+   ]
+  ],
+  [
+   "Transponder",
+   [
+    "Squawk <code>7000</code> VFR or <code>2000</code> IFR. Select Mode C (ALT) at all times",
+    "Emergency codes: <code>7700</code> emergency, <code>7600</code> radio failure, <code>7500</code> unlawful interference, <code>0030</code> lost",
+    "Frequency Monitoring Codes show you are listening on a frequency. Reset to conspicuity afterwards",
+    "If you carry a serviceable transponder SERA requires it selected on with altitude. It can be turned off only on ATC direction, in airspace not needing carriage, or to save power",
+    "<b>Mode S Elementary Surveillance</b> is needed in class A or C airspace, above FL100 and in TMZs"
+   ]
+  ]
+ ],
+ "sum": {
+  "Airspace structure": "Class A, CTR, CTA, TMA and airways.",
+  "ATZ and aerodromes without one": "2 or 2.5 NM and 2,000 ft, plus T and U circles.",
+  "MATZ": "Not controlled airspace, but contact first.",
+  "Requesting a transit": "Request, pass message, read back and wilco.",
+  "Transponder": "7000, emergency codes, FMCs and Mode S."
+ },
+ "cards": [
+  {
+   "q": "ATZ radius for a runway of 1,850 m or less?",
+   "a": "2 NM."
+  },
+  {
+   "q": "ATZ radius for a runway over 1,850 m?",
+   "a": "2.5 NM."
+  },
+  {
+   "q": "ATZ height?",
+   "a": "Up to 2,000 ft above the aerodrome."
+  },
+  {
+   "q": "What do T and U mean on a chart circle?",
+   "a": "T is intensive training, U is unusual activity such as aerobatics or formation."
+  },
+  {
+   "q": "Is a MATZ controlled airspace for civil aircraft?",
+   "a": "No."
+  },
+  {
+   "q": "Standard MATZ dimensions?",
+   "a": "5 NM radius, 3,000 ft above airfield level."
+  },
+  {
+   "q": "Can you enter the ATZ within a MATZ without clearance?",
+   "a": "No."
+  },
+  {
+   "q": "Which class is a typical UK CTR?",
+   "a": "Class D."
+  },
+  {
+   "q": "Which class are airways and TMAs?",
+   "a": "Normally class A."
+  },
+  {
+   "q": "VFR conspicuity squawk?",
+   "a": "7000."
+  },
+  {
+   "q": "Squawk for lost?",
+   "a": "0030."
+  },
+  {
+   "q": "Where is Mode S ES required?",
+   "a": "Class A and C, above FL100, and TMZs."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "The ATZ around an aerodrome with a 1,500 m runway has a radius of:",
+   "o": [
+    "1 NM",
+    "2 NM",
+    "2.5 NM",
+    "3 NM"
+   ],
+   "a": 1,
+   "why": "Runways of 1,850 m or less give a 2 NM ATZ."
+  },
+  {
+   "q": "A MATZ is:",
+   "o": [
+    "Controlled airspace",
+    "Not controlled airspace for civilians, but contact is strongly recommended",
+    "Prohibited",
+    "Class A"
+   ],
+   "a": 1,
+   "why": "Contact the unit before entering and never enter the ATZ without clearance."
+  },
+  {
+   "q": "Which class is most GA controlled airspace in the UK?",
+   "o": [
+    "A",
+    "B",
+    "D",
+    "F"
+   ],
+   "a": 2,
+   "why": "CTRs and CTAs are normally class D."
+  },
+  {
+   "q": "Which squawk shows a lost aircraft?",
+   "o": [
+    "7500",
+    "7600",
+    "0030",
+    "2000"
+   ],
+   "a": 2,
+   "why": "0030 is the UK lost code."
+  },
+  {
+   "q": "A circle with a T on the VFR chart means:",
+   "o": [
+    "Transit allowed",
+    "Intensive training",
+    "Tower",
+    "TMZ"
+   ],
+   "a": 1,
+   "why": "T denotes intensive use for training flights."
+  },
+  {
+   "q": "Mode S Elementary Surveillance is required:",
+   "o": [
+    "In class G",
+    "In class A or C airspace, above FL100 and in TMZs",
+    "Only at night",
+    "Only IFR"
+   ],
+   "a": 1,
+   "why": "Those are the circumstances listed by the Skyway Code."
+  }
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "seq": 21,
+ "s": 7,
+ "topic": "Stalls, spins and loss of control (SS30)",
+ "order": 20,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "A stall depends on angle of attack, not speed or attitude, so it can happen at any speed or attitude. Stall speed rises with the square root of load factor: a 60° banked level turn is 2 g, so a 50 kt stall speed becomes about 70 kt. Recovery is: lower the nose, level the wings, full power, accelerate, balance with rudder. A spin needs much more height to recover. Built from CAA Safety Sense Leaflet 30.",
+ "src": [
+  [
+   "Safety Sense Leaflet 30: Loss of Control",
+   "https://www.caa.co.uk/media/ukogcsea/caa8230_safetysense_30-lossofcontrol_v10.pdf"
+  ]
+ ],
+ "sections": [
+  [
+   "What a stall is",
+   [
+    "A stall is controlled by the wing's <b>angle of attack</b> (AoA), not by airspeed alone",
+    "It can happen at any attitude or airspeed, including with high control forces",
+    "A spin can follow if there is significant yaw during a stall. Recovery needs far more height than a stall",
+    "Warning of an approaching stall may be reduced in turns or at higher g"
+   ]
+  ],
+  [
+   "Load factor and stall speed",
+   [
+    "Stall speed rises with the <b>square root</b> of load factor",
+    "60° bank in a level turn = <code>2 g</code>, so stall speed rises by <code>sqrt 2</code> (about 1.4)",
+    "Example: <code>50 kt</code> becomes about <code>70 kt</code>"
+   ]
+  ],
+  [
+   "Common causes",
+   [
+    "<b>Distraction and fixation</b>: traffic, warnings, late turn to final with too much bank, unexpected ATC instructions",
+    "<b>Engine failure on take-off</b>: speed decays quickly, so lower the nose at once. Turning back or stretching the glide often causes a stall",
+    "<b>Go-around</b>: abrupt pitch and power changes, so watch airspeed even at full power",
+    "<b>VFR into IMC</b>: spatial disorientation leads to loss of control"
+   ]
+  ],
+  [
+   "Symptoms",
+   [
+    "<b>Approaching stall</b>: rising nose attitude, falling airspeed, buffet, possible warning",
+    "<b>Developed stall</b>: low airspeed, nose drop, strong buffet, roll or yaw, sloppy controls, high rate of descent even with a high nose attitude"
+   ]
+  ],
+  [
+   "Recovery",
+   [
+    "1. Move the control column centrally <b>forward</b> to reduce AoA",
+    "2. Level the wings with aileron only after AoA is reduced",
+    "3. Apply full power if available and counter any pitch-up",
+    "4. Accelerate and retract flap and gear as needed",
+    "5. Balance with rudder",
+    "Always follow the AFM stall and spin technique. Height loss is small if you act at the first stall warning"
+   ]
+  ],
+  [
+   "Staying out of trouble",
+   [
+    "Select the right power and attitude for each phase and trim to hold them",
+    "Check attitude and airspeed regularly and re-check after any distraction",
+    "Practise at safe altitudes and ask an instructor if unsure",
+    "Read the AFM or POH for your aircraft"
+   ]
+  ]
+ ],
+ "sum": {
+  "What a stall is": "It depends on angle of attack, not speed.",
+  "Load factor and stall speed": "Stall speed goes up with the square root of g.",
+  "Common causes": "Distraction, engine failure, go-around and VFR into IMC.",
+  "Symptoms": "Buffet, nose attitude and falling speed warn you.",
+  "Recovery": "Forward stick, wings level, power, accelerate, rudder.",
+  "Staying out of trouble": "Trim, check attitude and airspeed, and practise."
+ },
+ "cards": [
+  {
+   "q": "What controls whether a wing stalls?",
+   "a": "Angle of attack."
+  },
+  {
+   "q": "Can a stall happen at high airspeed?",
+   "a": "Yes, at any airspeed or attitude if the critical AoA is exceeded."
+  },
+  {
+   "q": "Stall speed in a 60° banked level turn?",
+   "a": "Rises by about 1.4 times (2 g)."
+  },
+  {
+   "q": "Load factor in a 60° banked level turn?",
+   "a": "2 g."
+  },
+  {
+   "q": "First action in stall recovery?",
+   "a": "Move the control column forward to reduce AoA."
+  },
+  {
+   "q": "Why not use aileron first in a stall?",
+   "a": "Aileron on a stalled wing can aggravate roll. Reduce AoA first."
+  },
+  {
+   "q": "What follows significant yaw in a stall?",
+   "a": "A possible spin."
+  },
+  {
+   "q": "Why is turning back after engine failure on take-off dangerous?",
+   "a": "Speed decays and AoA rises, so a stall or spin is likely."
+  },
+  {
+   "q": "Does full power on a go-around guarantee safety?",
+   "a": "No. Airspeed can still fall so lower the nose to accelerate."
+  },
+  {
+   "q": "Stall speed changes with what mathematical relationship?",
+   "a": "The square root of load factor."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "A level turn at 60° bank has a stall speed of 50 kt in straight flight. The turning stall speed is about:",
+   "o": [
+    "50 kt",
+    "60 kt",
+    "70 kt",
+    "100 kt"
+   ],
+   "a": 2,
+   "why": "2 g multiplies stall speed by about 1.4, so roughly 70 kt."
+  },
+  {
+   "q": "The first action to recover from a stall is to:",
+   "o": [
+    "Apply full power only",
+    "Move the control column forward to reduce AoA",
+    "Level the wings with aileron",
+    "Pull back"
+   ],
+   "a": 1,
+   "why": "Reduce AoA first, then level wings, add power and accelerate."
+  },
+  {
+   "q": "A stall can occur:",
+   "o": [
+    "Only at low airspeed",
+    "Only in a climb",
+    "At any attitude or airspeed",
+    "Only with flaps down"
+   ],
+   "a": 2,
+   "why": "A stall depends on AoA, which can be exceeded at any speed or attitude."
+  },
+  {
+   "q": "After engine failure on take-off the leaflet advises you to:",
+   "o": [
+    "Turn back immediately",
+    "Stretch the glide",
+    "Lower the nose promptly",
+    "Raise the nose"
+   ],
+   "a": 2,
+   "why": "Lower the nose to keep flying speed. Turning back and stretching the glide often cause stalls."
+  },
+  {
+   "q": "Which is a developed stall symptom?",
+   "o": [
+    "Increasing airspeed",
+    "Strong buffet with a high descent rate despite a high nose attitude",
+    "Steady climb",
+    "Stable controls"
+   ],
+   "a": 1,
+   "why": "A developed stall gives strong buffet, mushy controls and a high descent rate."
+  },
+  {
+   "q": "Why is a spin more serious than a stall?",
+   "o": [
+    "It needs far more height to recover",
+    "It uses more fuel",
+    "It is only a risk with flaps",
+    "It disables radios"
+   ],
+   "a": 0,
+   "why": "A spin needs considerably more height to recover from, and may be unrecoverable at low level."
+  }
+ ]
+}

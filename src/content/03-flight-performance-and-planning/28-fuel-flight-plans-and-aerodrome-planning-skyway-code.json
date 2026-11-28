@@ -1,0 +1,179 @@
+{
+ "seq": 28,
+ "s": 2,
+ "topic": "Fuel, flight plans and aerodrome planning (Skyway Code)",
+ "order": 30,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "Part 21 aircraft must carry certain reserves, and for non-Part 21 aircraft the Skyway Code advises not landing with less than 30 minutes of fuel for VFR. Gauges are not reliable so dip the tanks. A flight plan is required across borders, when under ATC, and when leaving the vicinity of an aerodrome at night. Check PPR, surface, usable length, obstacles and local procedures at unfamiliar aerodromes. Built from the Skyway Code pp.46-55.",
+ "src": [
+  [
+   "The Skyway Code (CAP 1535 v4, Nov 2023), pp.46-55",
+   "https://www.caa.co.uk/our-work/publications/documents/content/cap1535s/"
+  ]
+ ],
+ "sections": [
+  [
+   "Fuel management",
+   [
+    "Know fuel burn at each power setting and compare actual with planned during the flight",
+    "Carry reserves proportionate to the flight. Non-Part 21 aircraft just need 'sufficient', but not less than <code>30 minutes</code> for VFR is recommended",
+    "Pay attention to climb burn at high density altitude, cruise altitude and TAS, winds aloft and diversion options",
+    "Fuel gauges are not reliable for planning: use a dipstick or equivalent. Never ignore a low gauge in flight",
+    "A <b>fuel totaliser</b> measures fuel used, depends on the starting figure and would not show a leak",
+    "Lean the mixture for cruise per the AFM. Several accidents came from fuel system misconfiguration, so understand tanks and selectors"
+   ]
+  ],
+  [
+   "Mass and balance reminders",
+   [
+    "Operating outside mass and balance limits is illegal. Use figures for your own airframe",
+    "Avgas is about <code>0.72 kg/L</code> and Jet A-1 about <code>0.82 kg/L</code> (the leaflet uses about 0.8)",
+    "CG = total moments / total mass (example 2,386.05 / 1,045 = 2.28 m)",
+    "Check CG for take-off and landing as burning fuel can move it out of limits. Utility category may limit manoeuvres",
+    "In most light aircraft you cannot fill the tanks and all the seats"
+   ]
+  ],
+  [
+   "Performance reminders",
+   [
+    "TORA, TODA, ASDA and LDA are in the AIP. Unlicensed strips often give only total length",
+    "Do a calculation if mass, temperature, elevation or surface changes significantly. AFM data is for a new aircraft and proficient pilot",
+    "Safety factors: dry grass x1.2 and x1.15, wet grass x1.3 and x1.35, soft ground or snow x1.25, then general x1.33 for take-off and x1.43 for landing",
+    "Do not operate if factored distances exceed distances available",
+    "Do not fly if the climb would be under <code>500 ft/min</code> in a typical single, or <code>150 ft/min</code> on a twin with one engine failed. Vx is slower than Vy and gives the better gradient"
+   ]
+  ],
+  [
+   "Flight plans",
+   [
+    "A flight plan is required for flights across international borders, flights under an ATC service (entering CAS or leaving a controlled aerodrome), and leaving the vicinity of an aerodrome at night",
+    "'Booking out' fulfils the night abbreviated flight plan if an ATSU can receive it. Otherwise file a full plan",
+    "Full plans go via AFTN. Abbreviated plans can be given by radio or phone and are not passed to other units",
+    "Filing is recommended over water more than <code>10 NM</code> from the UK coast, to the Scottish Highlands and Islands, and over sparse areas"
+   ]
+  ],
+  [
+   "Unfamiliar aerodromes",
+   [
+    "The AIP covers licensed or certificated aerodromes only. Unlicensed information may be unverified",
+    "Ask about PPR, local procedures, surface (long, wet or soft grass), usable length, obstacles, wind effects, noise abatement and other hazards",
+    "Do the same for alternates. Considering alternates is often overlooked in GA"
+   ]
+  ]
+ ],
+ "sum": {
+  "Fuel management": "Dip the tanks, trust no gauge and plan 30 minutes minimum.",
+  "Mass and balance reminders": "CG maths, fuel density and checks at landing.",
+  "Performance reminders": "Safety factors and minimum climb rates.",
+  "Flight plans": "When one is required and the abbreviated versus full forms.",
+  "Unfamiliar aerodromes": "What to ask before landing somewhere new."
+ },
+ "cards": [
+  {
+   "q": "Recommended minimum fuel at landing for VFR non-Part 21 aircraft?",
+   "a": "Not less than 30 minutes."
+  },
+  {
+   "q": "Best way to check fuel on board?",
+   "a": "Physically with a dipstick or equivalent."
+  },
+  {
+   "q": "What does a fuel totaliser measure?",
+   "a": "Fuel consumed by the engine, not tank contents."
+  },
+  {
+   "q": "Specific gravity of Avgas?",
+   "a": "About 0.72 kg/L."
+  },
+  {
+   "q": "Specific gravity of Jet A-1 in the Skyway Code?",
+   "a": "About 0.82 kg/L."
+  },
+  {
+   "q": "Climb rate below which not to fly in a single piston aircraft?",
+   "a": "500 ft/min."
+  },
+  {
+   "q": "Climb rate minimum on a twin with one engine failed?",
+   "a": "150 ft/min."
+  },
+  {
+   "q": "When must a flight plan be filed?",
+   "a": "International flights, under ATC service, and leaving the aerodrome vicinity at night."
+  },
+  {
+   "q": "What is an abbreviated flight plan?",
+   "a": "Information to an ATSU by radio or phone for part of a flight."
+  },
+  {
+   "q": "Over-water distance from the UK coast where a flight plan is recommended?",
+   "a": "More than 10 NM."
+  },
+  {
+   "q": "Does the AIP cover unlicensed aerodromes?",
+   "a": "No, only licensed or certificated ones."
+  },
+  {
+   "q": "Which speed gives the better climb gradient for obstacles?",
+   "a": "Vx."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "What minimum fuel at landing is recommended for a VFR flight in non-Part 21 aircraft?",
+   "o": [
+    "10 minutes",
+    "30 minutes",
+    "45 minutes",
+    "60 minutes"
+   ],
+   "a": 1,
+   "why": "Part 21 aircraft have specific reserves, but for others 30 minutes is recommended."
+  },
+  {
+   "q": "A flight plan is required when:",
+   "o": [
+    "Flying over any water",
+    "Leaving the vicinity of an aerodrome at night",
+    "Flying above 3,000 ft",
+    "Flying solo"
+   ],
+   "a": 1,
+   "why": "Booking out can satisfy this if an ATSU receives it."
+  },
+  {
+   "q": "Which is the most reliable fuel quantity check?",
+   "o": [
+    "Fuel gauge",
+    "Totaliser",
+    "Dipstick or equivalent",
+    "Fuel flow estimate"
+   ],
+   "a": 2,
+   "why": "Gauges are not sufficiently reliable for planning."
+  },
+  {
+   "q": "A twin with one engine failed should not operate if it climbs below:",
+   "o": [
+    "50 ft/min",
+    "150 ft/min",
+    "500 ft/min",
+    "1,000 ft/min"
+   ],
+   "a": 1,
+   "why": "150 ft/min on a twin with an engine failed; 500 ft/min for singles."
+  },
+  {
+   "q": "Which is true of the general safety factors?",
+   "o": [
+    "Applied before other factors",
+    "Applied after other factors: x1.33 take-off, x1.43 landing",
+    "Apply only to paved runways",
+    "Apply only to twins"
+   ],
+   "a": 1,
+   "why": "Apply them after surface factors."
+  }
+ ]
+}

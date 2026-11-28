@@ -1,0 +1,170 @@
+{
+ "seq": 36,
+ "s": 6,
+ "topic": "Avoiding collisions (Skyway Code)",
+ "order": 45,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "Most UK mid-air collisions happen in good VMC at low level and about half near aerodromes. The big sky helps as much as see-and-avoid. Keep your eyes inside the cockpit no more than 25% of the time, scan in short 10° steps pausing at least a second, randomise levels, avoid choke points and final approach tracks, and use lights and electronic conspicuity (ADS-B on 1090 MHz is the preferred UK system). Built from the Skyway Code pp.129-132.",
+ "src": [
+  [
+   "The Skyway Code (CAP 1535 v4, Nov 2023), pp.129-132",
+   "https://www.caa.co.uk/our-work/publications/documents/content/cap1535s/"
+  ]
+ ],
+ "sections": [
+  [
+   "The risk",
+   [
+    "More than <code>100</code> airproxes are reported to the UK Airprox Board each year",
+    "Almost all mid-air collisions are in good VMC at relatively low level and around <b>half</b> happen near aerodromes, many in the circuit",
+    "No pilot detects 100% of traffic, especially outside the normal field of view"
+   ]
+  ],
+  [
+   "Mitigations",
+   [
+    "Avoid <b>choke points</b> at beacons and VRPs and avoid direct overflight",
+    "Avoid gliding sites. Gliders thermal in groups and fly cross-country downwind. Note cable launch heights",
+    "Hang glider and paraglider sites may not be on charts and may be activated by NOTAM",
+    "Randomise cruising levels, for example 2,200 ft instead of 2,000 ft",
+    "Avoid crossing the final approach track of aerodromes outside CAS, even outside the ATZ. Feathered arrows on charts show instrument approach paths, descending at about <code>300 ft per NM</code>",
+    "Know joining and circuit procedures. Be clear on position and intentions on the radio"
+   ]
+  ],
+  [
+   "The visual scan",
+   [
+    "Keep a clean windscreen",
+    "Eyes inside the cockpit <b>no more than 25%</b> of the time",
+    "Move your eyes in steps of about <code>10°</code>, pausing at least <code>1 second</code>. The eyes struggle to detect movement while the head is moving",
+    "<b>Side-to-side</b> method: start at far left and sweep right pausing in each block, then check the panel",
+    "<b>Front-to-side</b> method: start in the centre, move left, swing back to the centre, then go right, then check the panel",
+    "Do not fixate inside: look out every few seconds. A passenger can help if briefed"
+   ]
+  ],
+  [
+   "Electronic and visual conspicuity",
+   [
+    "<b>Electronic conspicuity (EC)</b> lets aircraft be detected by ATC or other aircraft. The transponder is the most common device",
+    "<b>ADS-B</b> broadcasts GPS position (Out) for receivers (In). The CAA preferred national system is ADS-B at <code>1090 MHz</code>. FLARM and PilotAware use other bands to transmit",
+    "EC devices are not always interoperable and must not replace a good lookout",
+    "Strobes and anti-collision beacons on at all times after entering the runway environment. Landing lights on approaching an aerodrome and in high traffic density",
+    "Black aircraft can show up well, while white or broken patterns blend into grey backgrounds"
+   ]
+  ]
+ ],
+ "sum": {
+  "The risk": "Airproxes and where collisions happen.",
+  "Mitigations": "Choke points, random levels and final approach tracks.",
+  "The visual scan": "25% inside, 10° steps and two scan methods.",
+  "Electronic and visual conspicuity": "ADS-B, lights and aircraft colour."
+ },
+ "cards": [
+  {
+   "q": "How many airproxes are reported each year?",
+   "a": "More than 100."
+  },
+  {
+   "q": "Where do about half of UK mid-air collisions happen?",
+   "a": "Near aerodromes, many in the circuit."
+  },
+  {
+   "q": "Maximum time eyes inside the cockpit?",
+   "a": "25%."
+  },
+  {
+   "q": "Eye movement per scan step?",
+   "a": "About 10°."
+  },
+  {
+   "q": "Minimum pause for each scan step?",
+   "a": "At least one second."
+  },
+  {
+   "q": "Name two scanning methods.",
+   "a": "Side-to-side and front-to-side."
+  },
+  {
+   "q": "Why avoid whole-number cruising levels?",
+   "a": "Many pilots use them, so randomising reduces conflict risk."
+  },
+  {
+   "q": "Descent along an instrument approach path?",
+   "a": "About 300 ft per NM."
+  },
+  {
+   "q": "Preferred UK ADS-B frequency?",
+   "a": "1090 MHz."
+  },
+  {
+   "q": "What is EC?",
+   "a": "Electronic conspicuity: technology detecting aircraft position electronically."
+  },
+  {
+   "q": "When should strobes and beacons be on?",
+   "a": "At all times after entering the runway environment."
+  },
+  {
+   "q": "When should landing lights be on?",
+   "a": "On approaching an aerodrome and in areas of high traffic density."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Eyes should be inside the cockpit for no more than:",
+   "o": [
+    "10%",
+    "25%",
+    "50%",
+    "75%"
+   ],
+   "a": 1,
+   "why": "The rest of the time look outside."
+  },
+  {
+   "q": "Most mid-air collisions occur:",
+   "o": [
+    "In IMC at high level",
+    "In good VMC at low level",
+    "At night",
+    "Above FL100"
+   ],
+   "a": 1,
+   "why": "Traffic density is higher at low level."
+  },
+  {
+   "q": "The CAA preferred UK ADS-B frequency is:",
+   "o": [
+    "978 MHz",
+    "1090 MHz",
+    "121.5 MHz",
+    "135.48 MHz"
+   ],
+   "a": 1,
+   "why": "ADS-B on 1090 MHz is the preferred national system."
+  },
+  {
+   "q": "Which statement about gliders is correct?",
+   "o": [
+    "They stay overhead their site",
+    "They may congregate in thermals and fly cross-country",
+    "They have no cable launches",
+    "They never use sites without charts"
+   ],
+   "a": 1,
+   "why": "Gliders do not confine themselves to the site."
+  },
+  {
+   "q": "An effective scan moves the eyes in steps of about:",
+   "o": [
+    "2°",
+    "10°",
+    "45°",
+    "90°"
+   ],
+   "a": 1,
+   "why": "10° steps with a pause of at least a second each."
+  }
+ ]
+}

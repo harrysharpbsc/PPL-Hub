@@ -1,0 +1,237 @@
+{
+ "seq": 18,
+ "s": 4,
+ "topic": "Winter weather and icing (SS03)",
+ "order": 20,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "Winter flying is a Threat and Error Management problem. Fog is visibility below 1,000 m, mist 1,000 to 5,000 m, and clear cold nights breed radiation fog when temperature and dew point close. Cold fronts bring showers and sudden visibility drops, warm fronts lower cloud and visibility. Even light frost can cut lift by up to 30%. Airframe ice mostly forms between 0°C and -10°C. Built from CAA Safety Sense Leaflet 3.",
+ "src": [
+  [
+   "Safety Sense Leaflet 3: Winter Flying",
+   "https://www.caa.co.uk/media/3hwj223x/safety-sense-03-winter-flying-version-9.pdf"
+  ]
+ ],
+ "sections": [
+  [
+   "Fog, mist and reporting",
+   [
+    "<b>Fog</b>: visibility below <code>1,000 m</code>. <b>Mist</b>: <code>1,000 to 5,000 m</code>",
+    "METAR codes: <code>FG</code> fog, <code>BR</code> mist, <code>SN</code> snow, <code>GR</code> hail, <code>GS</code> snow pellets, <code>MI</code> shallow, <code>BC</code> patches",
+    "Runway state is reported in the <b>Global Reporting Format</b> (GRF) through SNOWTAM or ATIS, not the METAR. It is rated <code>0 to 6</code>, where 6 is a normal dry runway and 0 is minimal braking action",
+    "A SNOWTAM is a special NOTAM about snow, ice, slush or standing water",
+    "The Met Office is the UK regulated aviation weather provider. Use regulated products as a minimum, plus the F215 low-level chart"
+   ]
+  ],
+  [
+   "Radiation fog and high pressure",
+   [
+    "Most inland winter fog is <b>radiation fog</b>, forming after sunset under clear skies, cold temperatures and light winds",
+    "The key warning is temperature and dew point <b>converging</b>",
+    "It clears slowly, often most of the morning, and unevenly across short distances",
+    "Anticyclones give stability and inversions, so fog and low stratus can persist",
+    "After several days haze and smog build and the low sun badly reduces visibility"
+   ]
+  ],
+  [
+   "Fronts and depressions",
+   [
+    "<b>Cold front</b>: showers, winter thunderstorms, sudden visibility drops, rapid change in temperature and wind. Often good flying in the clear air behind",
+    "<b>Warm front</b>: stratus and rain, with cloud base and visibility falling as the leading edge passes",
+    "<b>Depression</b>: warm front first (falling pressure, lowering cloud), then cold front (showers, gusts)",
+    "<b>Occlusions</b> move slowly and bring low cloud and precipitation"
+   ]
+  ],
+  [
+   "Frost, snow and de-icing",
+   [
+    "All frost, ice and snow must be removed before flight. Even light frost can reduce lift by up to <code>30%</code> and raise drag by up to <code>40%</code>",
+    "Brush off light frost without scratching, and do not use car scrapers on windows",
+    "Use <b>Type I</b> fluid (such as Kilfrost). Types II and IV are for larger aircraft and will not flow off properly at light aircraft speeds",
+    "Type I has little or no hold-over time",
+    "Hot water works but dry the aircraft and check hinges and gaps",
+    "Check pitot and static covers off, drains clear and pitot heat working"
+   ]
+  ],
+  [
+   "Surface performance factors",
+   [
+    "Take-off factors from SS09: dry grass <code>x1.2</code>, wet grass <code>x1.3</code>, soft ground or snow <code>x1.25</code> minimum, then the general <code>x1.33</code>",
+    "Landing: dry grass <code>x1.15</code>, wet grass <code>x1.35</code>, soft ground or snow <code>x1.25</code>, then the general <code>x1.43</code>",
+    "Multiply factors together when more than one applies",
+    "Check with the operator about runway condition before going to a strip. Frost, thaw, mud and refreezing change through the day",
+    "Low winter sun causes glare accidents and daylight ends early, so keep a time margin"
+   ]
+  ],
+  [
+   "Carb ice and airframe ice",
+   [
+    "Carb ice is the main VFR icing risk, most likely <code>0°C to 10°C</code> with high humidity",
+    "In cruise in conducive conditions apply heat for about 15 seconds every 10 to 15 minutes",
+    "Airframe ice needs visible moisture and <code>0°C</code> or below. Most forms between <code>0°C and -10°C</code>",
+    "<b>Clear ice</b>: large supercooled drops in towering cloud, builds fast and is hard to see. <b>Rime ice</b>: milky, powdery on leading edges in stable cloud. <b>Freezing rain</b>: can be extremely severe, avoid it",
+    "Only aircraft approved for known icing should enter it, and the AFM must state this"
+   ]
+  ],
+  [
+   "If you pick up ice",
+   [
+    "Watch for airspeed loss, and look for ice on windscreen edges and small protrusions",
+    "Icing usually sits in bands several thousand feet thick. Descent into warmer air is normally the answer, but watch the terrain",
+    "Keep speed up: stall speed is higher by an unknown amount and the stall warner may be frozen",
+    "Tail ice cuts elevator authority and can stall the tailplane",
+    "On approach add <code>20%</code> or more to speed and consider less flap, and divert to a long runway",
+    "If you cannot shed ice, tell ATC and consider a Mayday"
+   ]
+  ],
+  [
+   "Winter ground handling",
+   [
+    "Heater exchangers on piston aircraft can leak carbon monoxide. From January 2025 certain piston aircraft carrying passengers need a working CO detector",
+    "Battery capacity falls in the cold, so avoid electrics before start and use external power if weak",
+    "Avoid long idling and over-priming. Below 0°C preheat with a light-aircraft system",
+    "Check the oil breather pipe for ice, and keep tanks full to reduce condensation",
+    "Carry survival kit: warm clothing, torch, whistle. A PLB is a wise precaution"
+   ]
+  ]
+ ],
+ "sum": {
+  "Fog, mist and reporting": "Fog is under 1,000 m, mist 1,000 to 5,000 m, and runway state uses GRF.",
+  "Radiation fog and high pressure": "Clear, calm nights with closing temperature and dew point make fog.",
+  "Fronts and depressions": "Cold fronts bring showers, warm fronts lower cloud and visibility.",
+  "Frost, snow and de-icing": "Clear all frost. Use Type I fluid on light aircraft.",
+  "Surface performance factors": "Multiply the surface factors, then the general safety factor.",
+  "Carb ice and airframe ice": "Carb ice 0 to 10°C, airframe ice mostly 0 to -10°C.",
+  "If you pick up ice": "Keep speed up, descend if terrain allows, add 20% on approach.",
+  "Winter ground handling": "CO detectors, cold starts, battery care and survival gear."
+ },
+ "cards": [
+  {
+   "q": "Define fog and mist by visibility.",
+   "a": "Fog is below 1,000 m. Mist is 1,000 to 5,000 m."
+  },
+  {
+   "q": "How is runway condition reported now?",
+   "a": "Global Reporting Format (rated 0 to 6) via SNOWTAM or ATIS, not the METAR."
+  },
+  {
+   "q": "What does GRF 6 mean? And 0?",
+   "a": "6 is a normal dry runway. 0 means minimal braking action, such as wet ice."
+  },
+  {
+   "q": "Main warning sign of radiation fog?",
+   "a": "Temperature and dew point converging, with clear skies and light wind."
+  },
+  {
+   "q": "How much can light frost reduce lift and increase drag?",
+   "a": "Lift down by up to 30%, drag up by up to 40%."
+  },
+  {
+   "q": "Which de-icing fluid type suits light aircraft?",
+   "a": "Type I. Types II and IV are for larger aircraft."
+  },
+  {
+   "q": "Take-off factors for wet grass and general safety?",
+   "a": "x1.3 for wet grass, then x1.33 general."
+  },
+  {
+   "q": "Landing factors for wet grass and general safety?",
+   "a": "x1.35 for wet grass, then x1.43 general."
+  },
+  {
+   "q": "Temperature range of most airframe icing?",
+   "a": "0°C to -10°C."
+  },
+  {
+   "q": "Clear ice versus rime ice?",
+   "a": "Clear ice is from large drops, builds fast and is hard to see. Rime is milky and powdery on leading edges in stable cloud."
+  },
+  {
+   "q": "Approach speed change with significant ice?",
+   "a": "Add 20% or more."
+  },
+  {
+   "q": "Routine carb heat in cruise in icing conditions?",
+   "a": "About 15 seconds every 10 to 15 minutes."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Visibility is 800 m. The METAR code would describe it as:",
+   "o": [
+    "BR",
+    "FG",
+    "SN",
+    "BC"
+   ],
+   "a": 1,
+   "why": "Fog is visibility below 1,000 m. BR is mist, 1,000 to 5,000 m."
+  },
+  {
+   "q": "Which fluid is appropriate for de-icing a light aircraft?",
+   "o": [
+    "Type II",
+    "Type IV",
+    "Type I",
+    "Washing-up liquid"
+   ],
+   "a": 2,
+   "why": "Type I fluid is used on light aircraft. Types II and IV do not shear off at low speeds."
+  },
+  {
+   "q": "How much can light frost on the wing reduce lift?",
+   "o": [
+    "Up to 3%",
+    "Up to 10%",
+    "Up to 30%",
+    "None"
+   ],
+   "a": 2,
+   "why": "Up to 30% lift loss and up to 40% more drag, so remove all frost."
+  },
+  {
+   "q": "A take-off from wet grass: which factor applies before the general safety factor?",
+   "o": [
+    "x1.1",
+    "x1.3",
+    "x1.5",
+    "x2.0"
+   ],
+   "a": 1,
+   "why": "Wet grass is x1.3 for take-off, then x1.33 general."
+  },
+  {
+   "q": "You encounter airframe ice. The best first option is usually to:",
+   "o": [
+    "Climb at the best rate regardless of terrain",
+    "Slow down for better control",
+    "Descend towards warmer air if terrain allows, keeping speed up",
+    "Switch off the pitot heater"
+   ],
+   "a": 2,
+   "why": "Ice sits in bands. Descent is normally safer, and keep speed high because stall speed has risen."
+  },
+  {
+   "q": "Which is the likely fog type on a clear, calm, cold winter night inland?",
+   "o": [
+    "Advection fog",
+    "Radiation fog",
+    "Sea fog",
+    "Frontal fog"
+   ],
+   "a": 1,
+   "why": "Radiation fog forms as the ground cools under clear skies with light winds."
+  },
+  {
+   "q": "The GRF runway condition code of 0 indicates:",
+   "o": [
+    "Dry runway",
+    "Minimal braking action such as wet ice",
+    "Light frost",
+    "Runway closed for work"
+   ],
+   "a": 1,
+   "why": "0 is the worst rating, with minimal braking action."
+  }
+ ]
+}

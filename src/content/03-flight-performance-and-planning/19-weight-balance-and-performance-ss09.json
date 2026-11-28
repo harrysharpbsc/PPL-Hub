@@ -1,0 +1,264 @@
+{
+ "seq": 19,
+ "s": 2,
+ "topic": "Weight, balance and performance (SS09)",
+ "order": 20,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "The pilot is legally responsible for weight, balance and performance. Overloading lengthens take-off and landing, cuts climb and range, and raises stall speed. A forward CG raises stall speed, an aft CG reduces pitch stability. CG is total moment divided by total weight. AFM performance is unfactored, so GA pilots should apply safety factors (take-off x1.33, landing x1.43). Built from CAA Safety Sense Leaflet 9.",
+ "src": [
+  [
+   "Safety Sense Leaflet 9: Weight, Balance and Performance",
+   "https://www.caa.co.uk/media/wcebqozv/ssl09-caa-safety-sense-weight-balance-and-performance.pdf"
+  ]
+ ],
+ "sections": [
+  [
+   "Responsibility and empty weight",
+   [
+    "The pilot in command must keep the aircraft within weight and balance limits for the whole flight, and confirm it can take off, climb and land in the space available",
+    "Use the schedule for your own airframe, not a generic type schedule",
+    "Basic empty weight normally includes oil, unusable fuel and fitted equipment",
+    "If you might exceed MTOW, find real passenger and baggage weights (include lifejackets, coats and bags). Check baggage compartment and seat limits"
+   ]
+  ],
+  [
+   "Fuel weight",
+   [
+    "Check tank quantities against the schedule with a dipstick, because gauges can be wrong",
+    "For weight and balance assume fuel is on the high side, for fuel planning assume low",
+    "AVGAS is about <code>0.72 kg/L</code>, Jet A-1 about <code>0.8 kg/L</code>. MOGAS varies, so weigh a litre"
+   ]
+  ],
+  [
+   "Effects of overloading",
+   [
+    "Longer take-off run and higher take-off speed",
+    "Reduced acceleration, climb angle, climb rate and ceiling",
+    "Reduced range and poorer controllability",
+    "Higher stall and landing speeds, longer landing roll and reduced braking",
+    "Smaller structural margins, and performance beyond limits cannot be predicted"
+   ]
+  ],
+  [
+   "Balance and the centre of gravity",
+   [
+    "<b>Datum</b> is the reference point. <b>Arm</b> is distance from datum. <b>Moment = weight x arm</b>",
+    "CG = total moments / total weight",
+    "Forward CG: higher stall speed, heavier nose, less nose-up authority, more drag and fuel burn",
+    "Aft CG: hard to trim, less pitch stability, pitch-up at low speed and high power, degraded stall and unknown spin behaviour",
+    "CG can move as fuel burns, so calculate for take-off and landing",
+    "Heavy small items (tool box) matter. Load evenly side to side and respect fuel imbalance limits"
+   ]
+  ],
+  [
+   "Worked CG example",
+   [
+    "Empty 700 kg at 2.22 m = 1,554. Front seats 160 kg at 2.05 m = 328. Rear seats 70 kg at 2.98 m = 208.6",
+    "Baggage 15 kg at 3.63 m = 54.45. Fuel 100 kg at 2.41 m = 241",
+    "Total weight 1,045 kg, total moment 2,386.05",
+    "CG = 2,386.05 / 1,045 = <code>2.28 m</code> aft of datum, then check it sits inside the envelope limits"
+   ]
+  ],
+  [
+   "Performance principles and definitions",
+   [
+    "AFM figures are <b>unfactored</b>: a new aircraft, a proficient pilot, no wear",
+    "Take-off distance includes climb to <code>50 ft</code>. Landing distance is measured from crossing the threshold at 50 ft",
+    "<b>TORA</b> take-off run available. <b>TODA</b> = TORA plus clearway. <b>ASDA</b> = TORA plus stopway. <b>LDA</b> landing distance available",
+    "Standard reference is <code>1013 hPa</code> and <code>15°C</code>. Pressure altitude is the altimeter reading with 1013 set. Density altitude is pressure altitude corrected for temperature",
+    "Rule of thumb: <code>30 ft per hPa</code> (the leaflet gives the more precise 27 ft)"
+   ]
+  ],
+  [
+   "Rule-of-thumb multipliers",
+   [
+    "+10% weight: take-off x1.2, landing x1.1",
+    "+1,000 ft elevation: take-off x1.1, landing x1.05",
+    "+10°C temperature: take-off x1.1, landing x1.05",
+    "Tailwind of 10% of lift-off speed: x1.2 for both",
+    "2% uphill slope: take-off x1.1. 2% downhill slope: landing x1.1",
+    "Multiply multiple factors together"
+   ]
+  ],
+  [
+   "Safety factors",
+   [
+    "Dry grass: take-off x1.2, landing x1.15",
+    "Wet grass: take-off x1.3, landing x1.35",
+    "Wet paved surface: landing x1.15",
+    "Soft ground or snow: x1.25 both",
+    "General factor applied last: take-off <code>x1.33</code>, landing <code>x1.43</code>",
+    "Do not operate if factored distances exceed those available"
+   ]
+  ],
+  [
+   "Rejected take-off and climb",
+   [
+    "Pick a visual <b>decision point</b> where you will abort if not enough speed. Move it earlier if the full ASDA is not available",
+    "Reasons to reject before the decision point: abnormal engine, poor acceleration, losing the centreline, bird strike, open door, loss of airspeed",
+    "After the decision point, minor problems are handled in the air. Never force a lift-off below rotation speed",
+    "Minimum climb rates: single-engine <code>500 ft/min</code>, multi-engine with one engine out <code>150 ft/min</code>",
+    "Required rate of climb = (ground speed / 60) x gradient in ft per NM. Example: 500 ft in 2 NM is 250 ft/NM. At 70 kt that needs about 291 ft/min",
+    "Non-turbo piston aircraft lose a lot of climb above 5,000 ft density altitude"
+   ]
+  ],
+  [
+   "Units and conversions",
+   [
+    "1 kg = 2.205 lb. 1 ft = 0.305 m. 1 Imperial gal = 4.546 L. 1 US gal = 3.785 L",
+    "1 Imperial gal = 1.205 US gal",
+    "Mixed units have caused accidents: check every document and match the specific gravity to the volume unit"
+   ]
+  ]
+ ],
+ "sum": {
+  "Responsibility and empty weight": "The pilot in command owns the weight and balance and performance check.",
+  "Fuel weight": "Verify fuel with a dipstick and know AVGAS is about 0.72 kg/L.",
+  "Effects of overloading": "Longer take-off and landing, worse climb and range, higher stall speed.",
+  "Balance and the centre of gravity": "CG is total moment over total weight, and each end of the range has hazards.",
+  "Worked CG example": "A step-by-step example giving a CG of 2.28 m.",
+  "Performance principles and definitions": "AFM data is unfactored. TORA, TODA, ASDA, LDA and density altitude.",
+  "Rule-of-thumb multipliers": "How weight, height, heat, wind and slope scale distances.",
+  "Safety factors": "Surface factors, then x1.33 take-off and x1.43 landing.",
+  "Rejected take-off and climb": "Decision points, abort criteria and climb gradient maths.",
+  "Units and conversions": "Mass, length and volume conversions to prevent unit errors."
+ },
+ "cards": [
+  {
+   "q": "What is a moment?",
+   "a": "Weight x arm (distance from the datum)."
+  },
+  {
+   "q": "How do you calculate the CG?",
+   "a": "Total moment divided by total weight."
+  },
+  {
+   "q": "Effect of a forward CG on stall speed?",
+   "a": "Stall speed rises."
+  },
+  {
+   "q": "Effect of an aft CG on stability?",
+   "a": "Pitch stability reduces, so it is harder to trim and recover."
+  },
+  {
+   "q": "General safety factor for take-off and landing?",
+   "a": "Take-off x1.33, landing x1.43."
+  },
+  {
+   "q": "What does TODA equal?",
+   "a": "TORA plus clearway."
+  },
+  {
+   "q": "What does ASDA equal?",
+   "a": "TORA plus stopway."
+  },
+  {
+   "q": "Take-off distance is measured to what height?",
+   "a": "50 ft."
+  },
+  {
+   "q": "What is pressure altitude?",
+   "a": "The altimeter reading with 1013 hPa set."
+  },
+  {
+   "q": "Effect of +10% weight on take-off distance?",
+   "a": "About x1.2."
+  },
+  {
+   "q": "Effect of a tailwind of 10% of lift-off speed?",
+   "a": "About x1.2 on distance."
+  },
+  {
+   "q": "Minimum single-engine climb rate?",
+   "a": "500 ft/min."
+  },
+  {
+   "q": "Weight of AVGAS per litre?",
+   "a": "About 0.72 kg/L."
+  },
+  {
+   "q": "Convert 1 US gallon to litres.",
+   "a": "3.785 L."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "A 160 kg load at 2.05 m arm creates a moment of:",
+   "o": [
+    "78",
+    "328",
+    "1,640",
+    "32.8"
+   ],
+   "a": 1,
+   "why": "Moment is weight x arm: 160 x 2.05 = 328."
+  },
+  {
+   "q": "An aircraft with 1,045 kg total weight and 2,386.05 total moment has a CG of about:",
+   "o": [
+    "2.10 m",
+    "2.28 m",
+    "2.50 m",
+    "2.86 m"
+   ],
+   "a": 1,
+   "why": "2,386.05 / 1,045 = 2.28 m."
+  },
+  {
+   "q": "Which is a result of an aft CG?",
+   "o": [
+    "Higher stall speed",
+    "Reduced pitch stability",
+    "Higher nose-wheel loads",
+    "Greater induced drag"
+   ],
+   "a": 1,
+   "why": "An aft CG reduces pitch stability and can worsen stall and spin behaviour."
+  },
+  {
+   "q": "You calculate a 400 m take-off on dry grass. Applying x1.2 for grass then x1.33 gives about:",
+   "o": [
+    "480 m",
+    "532 m",
+    "640 m",
+    "712 m"
+   ],
+   "a": 2,
+   "why": "400 x 1.2 = 480, then x1.33 = about 638 m, so roughly 640 m."
+  },
+  {
+   "q": "Which describes TODA?",
+   "o": [
+    "TORA plus stopway",
+    "TORA plus clearway",
+    "LDA plus clearway",
+    "Runway length minus displaced threshold"
+   ],
+   "a": 1,
+   "why": "TODA is the take-off run available plus clearway."
+  },
+  {
+   "q": "You must clear 500 ft in 2 NM at 70 kt ground speed. Roughly what rate of climb is needed?",
+   "o": [
+    "150 ft/min",
+    "250 ft/min",
+    "290 ft/min",
+    "500 ft/min"
+   ],
+   "a": 2,
+   "why": "250 ft/NM x (70/60) = about 291 ft/min."
+  },
+  {
+   "q": "Which statement about AFM performance figures is correct?",
+   "o": [
+    "They include safety margins",
+    "They are unfactored for a new aircraft and proficient pilot",
+    "They apply only to paved runways",
+    "They ignore weight"
+   ],
+   "a": 1,
+   "why": "AFM data is unfactored, so GA pilots should add their own safety factors."
+  }
+ ]
+}

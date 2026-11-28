@@ -1,0 +1,226 @@
+{
+ "seq": 12,
+ "s": 0,
+ "topic": "Distress, Urgency, Safety and Warning Signals",
+ "num": 13,
+ "order": 130,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "There are two states of emergency. Distress (MAYDAY) is grave and imminent danger needing immediate help; urgency (PAN PAN) is a safety concern without immediate danger. Call first on the frequency in use, otherwise 121.5 MHz, and squawk 7700. Visual distress signals are SOS, red flares or a red parachute flare; flashing landing or navigation lights and white flares mean 'I must land but don't need help'; XXX is an urgent safety message. Student pilots say STUDENT. If you stray into a danger area, leave it as fast as possible without descending. Low on fuel and in danger: declare a MAYDAY.",
+ "sections": [
+  [
+   "The two states of emergency",
+   [
+    "<code>Distress</code>: threatened by <b class=\"k\">grave and/or imminent danger</b>, needing <b class=\"k\">immediate assistance</b>. Prefix <b class=\"k\">\"MAYDAY MAYDAY MAYDAY\"</b>.",
+    "<code>Urgency</code>: a condition concerning the safety of an aircraft, vehicle or person on board or in sight, <b class=\"k\">not</b> needing immediate assistance. Prefix <b class=\"k\">\"PAN PAN, PAN PAN, PAN PAN\"</b>.",
+    "Transmit first on the <b class=\"k\">frequency in use</b>; if you're not in contact with anyone, or get no reply, use <code>121.5 MHz</code>."
+   ]
+  ],
+  [
+   "Distress signals",
+   [
+    "<code>Radio</code>: \"MAYDAY MAYDAY MAYDAY\", then the message. Example order:",
+    "– station addressed (\"London Centre\", or the unit you are talking to)",
+    "– callsign (and type)",
+    "– nature of the emergency (\"engine has failed\")",
+    "– intentions (\"making a forced landing\")",
+    "– position, level and heading (\"five miles north of the field, three thousand feet descending, heading two eight zero\")",
+    "– <b class=\"k\">pilot qualification</b> (\"student pilot\"), not an ICAO requirement but it helps the controller plan",
+    "<b class=\"k\">Student pilots</b> add <b class=\"k\">\"STUDENT\"</b> to their callsign when solo and in an emergency message on any frequency, so instructions are kept simple.",
+    "<code>Visual</code>: <b class=\"k\">SOS</b> in Morse (· · · − − − · · ·) by light; a <b class=\"k\">succession of red pyrotechnics</b> at short intervals; a <b class=\"k\">red parachute flare</b>.",
+    "<code>Sound</code>: SOS in Morse; a <b class=\"k\">continuous sound</b> from any apparatus."
+   ]
+  ],
+  [
+   "Urgency signals",
+   [
+    "An aircraft in difficulties that <b class=\"k\">compel it to land</b>, but not needing immediate help:",
+    "– <b class=\"k\">repeated switching on and off of the landing lights</b>",
+    "– <b class=\"k\">repeated switching on and off of the navigation lights</b> (distinguishable from normal flashing)",
+    "– a <b class=\"k\">succession of white pyrotechnic lights</b>",
+    "An aircraft with an <b class=\"k\">urgent message</b> about the safety of a ship, aircraft, vehicle, property or person (on board or <b class=\"k\">in sight</b>):",
+    "– <code>Radio</code>: \"PAN PAN\" ×3, e.g. reporting another aircraft that has force-landed and its occupants",
+    "– <code>Visual or sound</code>: <b class=\"k\">XXX</b> in Morse (− · · − ×3)",
+    "<b>Exam trap</b> Flashing landing lights or white flares mean <b class=\"k\">\"I must land, but don't need help now\"</b>; red flares mean distress."
+   ]
+  ],
+  [
+   "Using the transponder",
+   [
+    "<code>7700</code> emergency, <code>7600</code> radio failure, <code>7500</code> unlawful interference, with <b class=\"k\">Mode C</b> selected.",
+    "If you're already squawking a code given by a unit you're talking to, normally <b class=\"k\">keep it</b>."
+   ]
+  ],
+  [
+   "Danger areas",
+   [
+    "<code>DACS</code> (Danger Area <b class=\"k\">Crossing</b> Service): a unit can tell you whether a danger area is active and may give a <b class=\"k\">crossing clearance</b>. Marked on the 1:500,000 chart with a prefix symbol.",
+    "<code>DAAIS</code> (Danger Area <b class=\"k\">Activity Information</b> Service): tells you whether an area is active, but is <b class=\"k\">not a clearance</b> to cross.",
+    "Details: <b class=\"k\">AIP ENR 5</b>, the chart's list of danger areas and Pooley's.",
+    "If you <b class=\"k\">inadvertently enter</b> a danger or prohibited area, <b class=\"k\">leave it as quickly as possible without descending</b>, even without a radio instruction."
+   ]
+  ],
+  [
+   "Low fuel",
+   [
+    "If the fuel state means you need <b class=\"k\">priority</b>, declare a <b class=\"k\">MAYDAY</b> (ICAO phraseology: \"MAYDAY MAYDAY MAYDAY FUEL\"), but only if you believe the aircraft is <b class=\"k\">in danger</b>, and make it match the real fuel state.",
+    "The book recommends arriving over the destination with enough to <b class=\"k\">approach</b>, <b class=\"k\">go around</b>, fly to an <b class=\"k\">alternate</b>, land there and hold for <code>45 minutes</code>. For Part-NCO VFR flights the legal final reserve is <code>30 minutes</code> by day and <code>45 minutes</code> at night; plan for more."
+   ]
+  ]
+ ],
+ "sum": {
+  "The two states of emergency": "Distress (MAYDAY): grave and imminent danger. Urgency (PAN PAN): a concern, no immediate danger.",
+  "Distress signals": "MAYDAY ×3 then the message; SOS, red flares or a red parachute flare; a continuous sound.",
+  "Urgency signals": "Flashing landing or nav lights and white flares: must land, no help needed. XXX or PAN PAN: urgent safety message.",
+  "Using the transponder": "7700 emergency, 7600 radio failure, 7500 unlawful interference, with Mode C.",
+  "Danger areas": "DACS can clear you across; DAAIS only says if an area is active. Strayed in? Leave without descending.",
+  "Low fuel": "Declare a MAYDAY if the fuel state puts you in danger; Part-NCO reserves are 30 min day, 45 min night."
+ },
+ "cards": [
+  {
+   "q": "The two states of emergency?",
+   "a": "Distress and urgency."
+  },
+  {
+   "q": "Distress means?",
+   "a": "Grave and/or imminent danger, needing immediate assistance."
+  },
+  {
+   "q": "Urgency means?",
+   "a": "A safety concern for an aircraft, vehicle or person, not needing immediate assistance."
+  },
+  {
+   "q": "First frequency for a MAYDAY?",
+   "a": "The frequency in use; 121.5 MHz if not in contact or no reply."
+  },
+  {
+   "q": "Visual distress signals?",
+   "a": "SOS by light, red pyrotechnics at short intervals, a red parachute flare."
+  },
+  {
+   "q": "Flashing landing lights or white flares mean?",
+   "a": "Difficulties compel me to land, but I don't need immediate help."
+  },
+  {
+   "q": "XXX in Morse means?",
+   "a": "An urgent message about the safety of a ship, aircraft, vehicle or person."
+  },
+  {
+   "q": "Why say 'STUDENT'?",
+   "a": "So the controller keeps instructions simple."
+  },
+  {
+   "q": "DACS vs DAAIS?",
+   "a": "DACS: crossing service, may give a clearance. DAAIS: activity information only, not a clearance."
+  },
+  {
+   "q": "Strayed into a danger area?",
+   "a": "Leave as quickly as possible without descending."
+  },
+  {
+   "q": "Low fuel and in danger?",
+   "a": "Declare a MAYDAY (MAYDAY FUEL)."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "The two states of emergency are:",
+   "o": [
+    "Distress and urgency",
+    "Mayday and pan pan",
+    "Difficulty and urgency",
+    "Distress and danger"
+   ],
+   "a": 0,
+   "why": "The states are distress and urgency; MAYDAY and PAN PAN are their radio prefixes, not the states."
+  },
+  {
+   "q": "A MAYDAY should first be transmitted on:",
+   "o": [
+    "The frequency in use",
+    "121.5 MHz",
+    "The nearest MATZ frequency",
+    "The London Information frequency"
+   ],
+   "a": 0,
+   "why": "The unit you're talking to can help fastest. Use 121.5 MHz if you're not with anyone or get no reply."
+  },
+  {
+   "q": "Distress is defined as:",
+   "o": [
+    "Threatened by grave and/or imminent danger and needing immediate assistance",
+    "A condition concerning safety that does not need immediate assistance",
+    "Any engine failure",
+    "Being unsure of your position"
+   ],
+   "a": 0,
+   "why": "Distress needs immediate assistance; the second option is urgency."
+  },
+  {
+   "q": "You see an aircraft repeatedly switching its landing lights on and off. It means:",
+   "o": [
+    "It must land but does not need immediate assistance",
+    "It is in distress and needs immediate help",
+    "It is warning you of a collision",
+    "It has an urgent message about another aircraft"
+   ],
+   "a": 0,
+   "why": "Flashing landing or navigation lights (or white flares) are the 'must land, no immediate help' signal. Red flares are distress; XXX is the urgent-message signal."
+  },
+  {
+   "q": "XXX sent by light in Morse means:",
+   "o": [
+    "An urgent message about the safety of a ship, aircraft, vehicle or person",
+    "Distress: immediate assistance needed",
+    "Radio failure",
+    "Land at this aerodrome"
+   ],
+   "a": 0,
+   "why": "XXX is the urgency signal for an urgent safety message. SOS is distress."
+  },
+  {
+   "q": "Which of these is a distress signal?",
+   "o": [
+    "A red parachute flare",
+    "A succession of white pyrotechnics",
+    "Repeated switching of navigation lights",
+    "XXX in Morse"
+   ],
+   "a": 0,
+   "why": "Red flares and SOS are distress. White flares and flashing lights are urgency (must land)."
+  },
+  {
+   "q": "DACS stands for:",
+   "o": [
+    "Danger Area Crossing Service",
+    "Danger Area Clearance Service",
+    "Danger Area Activity Service",
+    "Danger Area Coordination Service"
+   ],
+   "a": 0,
+   "why": "Crossing Service; it may give you a clearance. DAAIS is the Activity Information Service."
+  },
+  {
+   "q": "You realise you have entered an active danger area. You should:",
+   "o": [
+    "Leave as quickly as possible without descending",
+    "Descend below its base at once",
+    "Orbit and call the controlling unit",
+    "Climb to the upper limit and continue"
+   ],
+   "a": 0,
+   "why": "Leave by the quickest route without descending, even with no radio instruction."
+  },
+  {
+   "q": "Your fuel state means you will land with less than your final reserve. You should:",
+   "o": [
+    "Declare a MAYDAY to get priority",
+    "Call PAN PAN and ask for a direct route",
+    "Say nothing until overhead",
+    "Squawk 7600"
+   ],
+   "a": 0,
+   "why": "Fuel at or below reserve puts the aircraft in danger: MAYDAY (ICAO: 'MAYDAY FUEL'). 7600 is radio failure."
+  }
+ ]
+}

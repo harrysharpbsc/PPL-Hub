@@ -1,0 +1,316 @@
+{
+ "seq": 9,
+ "s": 0,
+ "topic": "Registration and Airworthiness",
+ "num": 10,
+ "order": 100,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "Annex 7 sets the registration marks: nationality mark first, a hyphen before a letter, once under the left wing (50 cm high) and on the fuselage or fin (30 cm), characters two-thirds as wide as high, plus a fireproof plate by the door. In the UK an aircraft must be registered, and changes go to the CAA in writing. Part-21 aircraft have a non-expiring CofA kept alive by an annual ARC; non-approved maintenance or modification makes the CofA invalid. Maintenance needs a Certificate of Release to Service, defects go in the tech log, logbooks are kept 2 years after the aircraft goes, and an old weight schedule 6 months.",
+ "sections": [
+  [
+   "Registration and Marking of Aircraft (ICAO Annex 7)",
+   [
+    "<b class=\"k\">Annex 7</b> sets the minimum standards for displaying <b class=\"k\">nationality and registration marks</b>."
+   ]
+  ],
+  [
+   "The marks",
+   [
+    "A group of <b class=\"k\">letter</b>s and/or numbers, e.g. <b class=\"k\">G-AGOH</b>, N7207V. The <b class=\"k\">nationality mark comes first</b>. If the registration mark starts with a letter, put a <b class=\"k\">hyphen</b> between them (F-BUDG).",
+    "The <b class=\"k\">State of Registry</b> assigns the registration mark."
+   ]
+  ],
+  [
+   "Where the marks go",
+   [
+    "<b class=\"k\">Painted on or permanently fixed</b>, kept <b class=\"k\">clean and visible</b>.",
+    "<code>Heavier-than-air aircraft</code>:",
+    "– <b class=\"k\">once on the lower surface of the wing</b>, on the <b class=\"k\">left</b> half (unless across the whole wing), tops of the letters towards the <b class=\"k\">leading edge</b>, midway between leading and trailing edge",
+    "– on <b class=\"k\">both sides of the fuselage</b> between wings and tail, <b class=\"k\">or</b> on the upper halves of the <b class=\"k\">vertical tail</b> (both sides of a single fin)",
+    "<code>Balloons</code>: each side, near the widest part. Other lighter-than-air aircraft: visible from the sides and from the ground."
+   ]
+  ],
+  [
+   "Size and lettering",
+   [
+    "<b>Lighter-than-air aircraft</b>: <code>50 cm</code>",
+    "<b>Wings of heavier-than-air aircraft</b>: <code>50 cm</code>",
+    "<b>Fuselage or vertical tail</b>: <code>30 cm</code>",
+    "<b class=\"k\">Roman capitals</b> and <b class=\"k\">Arabic numerals</b>, no ornamentation. Each character <b class=\"k\">two-thirds as wide as it is high</b> (except I and 1), solid lines, in a <b class=\"k\">contrasting colour</b>."
+   ]
+  ],
+  [
+   "Identification plate",
+   [
+    "A <b class=\"k\">fireproof</b> plate (metal or similar) with the nationality and registration marks, fixed <b class=\"k\">near the main entrance</b>."
+   ]
+  ],
+  [
+   "Registration in the UK (ANO Articles 24-26, Schedule 4)",
+   [
+    "In practice you must <b class=\"k\">not fly in the UK</b> unless the aircraft is <b class=\"k\">registered</b> (in the UK or elsewhere) and shows its marks.",
+    "Register under the <b class=\"k\">General Classification of Aircraft</b> (ANO Schedule 4).",
+    "Owners and part-owners must tell the CAA <b class=\"k\">in writing</b> of any change: ownership, <b class=\"k\">destruction</b>, or <b class=\"k\">permanent withdrawal</b> from use.",
+    "Some aircraft need not be registered: non-Part-21 <b class=\"k\">gliders and hang-gliders</b>, and in some cases powered aircraft on <b class=\"k\">test, certification or demonstration</b> flights.",
+    "Flying an unregistered aircraft does not excuse any other ANO offence on that flight."
+   ]
+  ],
+  [
+   "General classification of aircraft",
+   [
+    "<b class=\"k\">Lighter than air</b>",
+    "– non-power-driven: <b class=\"k\">free balloon</b>, <b class=\"k\">captive balloon</b>",
+    "– power-driven: <b class=\"k\">airship</b>",
+    "<b class=\"k\">Heavier than air</b>",
+    "– non-power-driven: <b class=\"k\">glider</b> (including hang-gliders), <b class=\"k\">kite</b>",
+    "– power-driven (flying machines): <b class=\"k\">aeroplane</b> (landplane, seaplane, amphibian, self-launching motor glider; includes microlights and powered parachutes), <b class=\"k\">powered lift</b> (tilt rotor), <b class=\"k\">rotorcraft</b> (helicopter, gyroplane)"
+   ]
+  ],
+  [
+   "Airworthiness (ICAO Annex 8; ANO Part 4; UK Basic Regulation)",
+   [
+    "<b class=\"k\">Annex 8</b> sets the minimum airworthiness standards that let one State recognise another's <b class=\"k\">Certificate of Airworthiness (CofA)</b>.",
+    "Since <b class=\"k\">1 January 2021</b> EASA rules became UK law (retained, now <b class=\"k\">assimilated</b> law). The old \"EASA\" and \"Annex I / non-EASA\" aircraft are now <b class=\"k\">Part-21</b> and <b class=\"k\">non-Part-21</b> aircraft.",
+    "– <code>Part-21</code>: airworthiness, operations and licensing under the <b class=\"k\">UK Basic Regulation</b>",
+    "– <code>non-Part-21</code>: the <b class=\"k\">ANO</b> and <b class=\"k\">British Civil Airworthiness Requirements (BCAR)</b>",
+    "<code>Part-21 CofA</code>: <b class=\"k\">non-expiring</b>, kept in force by an annual <b class=\"k\">Airworthiness Review Certificate (ARC)</b>. A non-<b class=\"k\">Part-21 CofA</b> (book): issued for <b class=\"k\">3 years</b>.",
+    "The CofA is <b class=\"k\">invalid</b> if the aircraft is <b class=\"k\">modified, repaired or maintained</b> in a <b class=\"k\">non-approved</b> way, and that can also void the <b class=\"k\">insurance</b>.",
+    "The <b class=\"k\">Flight Manual (POH)</b> is part of the aircraft's equipment and must be available to the pilot at all times. The CAA may add supplements for aircraft built abroad.",
+    "Fly only within the conditions of a valid CofA, e.g. towing a glider needs that approval (ANO Article 87).",
+    "No valid CofA but needs to fly (e.g. test flights for a CofA): a <b class=\"k\">Permit to Fly</b>."
+   ]
+  ],
+  [
+   "Maintenance",
+   [
+    "<code>Part-21</code>: maintained to an approved <b class=\"k\">aircraft maintenance programme</b>.",
+    "<code>Non-Part-21</code> (not LAA): normally the <b class=\"k\">Light Aircraft Maintenance Schedule (LAMS)</b>, with a <b class=\"k\">Certificate of Maintenance Review</b> every <b class=\"k\">12 months</b> (aircraft under <code>2,730 kg</code>). The <b class=\"k\">Part-21</b> equivalent is the <b class=\"k\">ARC</b>.",
+    "Owners of Part-21 aircraft need the <b class=\"k\">CAMO</b>'s agreement before doing their own maintenance.",
+    "<code>Technical Log</code>: flight times, defects and maintenance. Enter a defect <b class=\"k\">before the next pilot flies</b> or at the <b class=\"k\">end of the day</b>, whichever is earlier.",
+    "<code>Certificate of Release to Service (CRS)</code>: needed, as well as the CofA, after the aircraft or any part needed for airworthiness is <b class=\"k\">overhauled, repaired, replaced, modified or otherwise maintained</b>. Only authorised people may sign it, though pilot-owners may do certain listed <b class=\"k\">minor maintenance</b> (Part-ML / ANGR).",
+    "<code>Logbooks</code>: aircraft, engine and (if fitted) <b class=\"k\">variable-pitch propeller</b> logbooks, kept for <b class=\"k\">2 years</b> after the aircraft, engine or propeller is destroyed or permanently withdrawn."
+   ]
+  ],
+  [
+   "Temporary loss of airworthiness (Annex 8)",
+   [
+    "An aircraft not kept airworthy <b class=\"k\">cannot fly</b> until it is restored.",
+    "If damaged, the <b class=\"k\">State of Registry</b> decides whether it is still airworthy. If the damage happens abroad, that State may stop the flight but must tell the State of Registry at once; the State of Registry may allow a <b class=\"k\">ferry flight</b> without fare-paying passengers to a repair base."
+   ]
+  ],
+  [
+   "Mass and balance (ANO Article 43)",
+   [
+    "The aircraft is <b class=\"k\">weighed</b> and its <b class=\"k\">centre of gravity</b> found; the operator prepares a <b class=\"k\">Weight Schedule</b>. When a new one is made, keep the old one for <b class=\"k\">6 months</b>."
+   ]
+  ],
+  [
+   "Flight Manual, limitations and placards (Annex 8)",
+   [
+    "Limitations go in the <b class=\"k\">Flight Manual</b>, on <b class=\"k\">placards</b> and as <b class=\"k\">instrument markings</b>: loading (masses, CG, floor loads), airspeeds (e.g. <b class=\"k\">VNE</b>, <b class=\"k\">VFE</b>), powerplant, systems and miscellaneous.",
+    "Where a limit could be exceeded in flight, the crew must be able to see it on their <b class=\"k\">instruments</b>.",
+    "<b class=\"k\">Empty mass</b> usually <b class=\"k\">excludes</b> crew, payload, usable fuel and drainable oil, and <b class=\"k\">includes</b> fixed ballast, unusable fuel, undrainable oil, engine coolant and hydraulic fluid.",
+    "Flying outside the CofA or Flight Manual (non-permitted manoeuvres, overweight, CG out) can make the <b class=\"k\">CofA invalid</b>, void the <b class=\"k\">insurance</b> and leave the pilot open to a <b class=\"k\">fine or prison</b>."
+   ]
+  ],
+  [
+   "Equipment, noise and insurance",
+   [
+    "Minimum equipment: <b class=\"k\">ANO Schedule 5</b> (general) and <b class=\"k\">Schedule 6</b> (radio). Know what your operation needs, e.g. a harness for aerobatics.",
+    "<code>Noise Certificate</code>: propeller aeroplanes up to <code>9,000 kg</code>, all helicopters and microlights, and other subsonic aeroplanes needing more than <code>610 m</code> to take off.",
+    "<code>Insurance</code>: passenger and <b class=\"k\">third-party</b> liability cover is <b class=\"k\">mandatory</b>; <b class=\"k\">hull</b> cover is not, but you could lose a lot without it. Check the certificate is valid for the flight, and watch for <b class=\"k\">excesses</b>, exclusions (unlicensed strips, aerobatics) and <b class=\"k\">pilot warranties</b> (minimum hours). Military aerodromes may need much higher third-party cover.",
+    "The PIC is still responsible (ANO Articles 68-69) for a safe and legal flight; insurance does not change that."
+   ]
+  ]
+ ],
+ "sum": {
+  "Registration and Marking of Aircraft (ICAO Annex 7)": "ICAO Annex 7 sets the minimum standards for nationality and registration marks.",
+  "The marks": "Nationality mark first, then the registration mark, with a hyphen if it starts with a letter.",
+  "Where the marks go": "Once under the left wing, and on both sides of the fuselage or fin.",
+  "Size and lettering": "50 cm on the wing, 30 cm on fuselage or fin; plain capitals two-thirds as wide as high.",
+  "Identification plate": "A fireproof plate with the marks, near the main entrance.",
+  "Registration in the UK (ANO Articles 24-26, Schedule 4)": "You must fly a registered aircraft; tell the CAA in writing of changes of owner, destruction or withdrawal.",
+  "General classification of aircraft": "Lighter or heavier than air, then power-driven or not: balloons, airships, gliders, aeroplanes, rotorcraft.",
+  "Airworthiness (ICAO Annex 8; ANO Part 4; UK Basic Regulation)": "Part-21 aircraft: non-expiring CofA plus an annual ARC. Non-approved work invalidates the CofA.",
+  "Maintenance": "Maintenance programme, tech log, Certificate of Release to Service after work, logbooks kept 2 years after the aircraft goes.",
+  "Temporary loss of airworthiness (Annex 8)": "No flight until airworthiness is restored; the State of Registry decides after damage.",
+  "Mass and balance (ANO Article 43)": "Weigh the aircraft, find the CG, make a weight schedule; keep the old one 6 months.",
+  "Flight Manual, limitations and placards (Annex 8)": "Limits go in the Flight Manual, on placards and on the instruments.",
+  "Equipment, noise and insurance": "Minimum equipment in ANO Schedules 5 and 6; third-party cover is compulsory, hull cover isn't."
+ },
+ "cards": [
+  {
+   "q": "Which Annex covers registration marks?",
+   "a": "ICAO Annex 7."
+  },
+  {
+   "q": "When is a hyphen used in the marks?",
+   "a": "When the registration mark starts with a letter (G-ABCD)."
+  },
+  {
+   "q": "Where are the marks on the wing?",
+   "a": "Once on the lower surface, on the left half, tops towards the leading edge."
+  },
+  {
+   "q": "Minimum height of marks on the wing?",
+   "a": "50 cm."
+  },
+  {
+   "q": "Minimum height on fuselage or fin?",
+   "a": "30 cm."
+  },
+  {
+   "q": "Width of a character?",
+   "a": "Two-thirds of its height (except I and 1)."
+  },
+  {
+   "q": "What is the identification plate made of and where is it?",
+   "a": "Fireproof material, near the main entrance."
+  },
+  {
+   "q": "How long is a Part-21 CofA valid?",
+   "a": "It doesn't expire; it stays valid with a current ARC (yearly)."
+  },
+  {
+   "q": "What makes a CofA invalid?",
+   "a": "Modification, repair or maintenance in a non-approved way (and flying outside its limits)."
+  },
+  {
+   "q": "When is a Certificate of Release to Service needed?",
+   "a": "After the aircraft or any part is overhauled, repaired, replaced, modified or maintained."
+  },
+  {
+   "q": "Where does a pilot record a defect?",
+   "a": "In the technical log, before the next flight or the end of the day, whichever is earlier."
+  },
+  {
+   "q": "How long are aircraft and engine logbooks kept?",
+   "a": "2 years after the aircraft or engine is destroyed or permanently withdrawn."
+  },
+  {
+   "q": "How long is a superseded weight schedule kept?",
+   "a": "6 months."
+  },
+  {
+   "q": "Does empty mass include unusable fuel?",
+   "a": "Yes, and undrainable oil, fixed ballast, coolant and hydraulic fluid; not usable fuel or crew."
+  },
+  {
+   "q": "Is hull insurance a legal requirement?",
+   "a": "No; passenger and third-party liability cover is."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "On a heavier-than-air aircraft, the registration marks on the wing must be at least:",
+   "o": [
+    "50 cm high, once on the lower surface of the left wing",
+    "30 cm high, once on the lower surface of the left wing",
+    "50 cm high, on the upper surface of the right wing",
+    "30 cm high, on both lower wing surfaces"
+   ],
+   "a": 0,
+   "why": "Wing marks are 50 cm, once under the left half. 30 cm is the fuselage and fin figure."
+  },
+  {
+   "q": "Each character in a registration mark must be:",
+   "o": [
+    "Two-thirds as wide as it is high (except I and 1)",
+    "Half as wide as it is high",
+    "As wide as it is high",
+    "Two-thirds as high as it is wide"
+   ],
+   "a": 0,
+   "why": "Two-thirds of the height, so the letters aren't stretched. The last option swaps width and height."
+  },
+  {
+   "q": "A Certificate of Airworthiness ceases to be valid:",
+   "o": [
+    "If the aircraft is modified, repaired or maintained in a non-approved way",
+    "After 5 years",
+    "When the aircraft leaves its State of Registry",
+    "At the end of each calendar year"
+   ],
+   "a": 0,
+   "why": "A Part-21 CofA doesn't expire; it stays valid with a current ARC unless non-approved work (or misuse) invalidates it."
+  },
+  {
+   "q": "A Part-21 aircraft's Certificate of Airworthiness is kept in force by:",
+   "o": [
+    "An Airworthiness Review Certificate, renewed or extended each year",
+    "A new CofA every 3 years",
+    "A Certificate of Maintenance Review every 6 months",
+    "The pilot's daily inspection"
+   ],
+   "a": 0,
+   "why": "The ARC is the annual check. The 3-year CofA and the CMR belong to non-Part-21 aircraft."
+  },
+  {
+   "q": "After an aircraft has been repaired it needs, in addition to its CofA:",
+   "o": [
+    "A Certificate of Release to Service",
+    "A new Certificate of Registration",
+    "A Noise Certificate",
+    "A new weight schedule"
+   ],
+   "a": 0,
+   "why": "Any overhaul, repair, replacement, modification or maintenance needs a CRS signed by an authorised person."
+  },
+  {
+   "q": "A pilot finds a defect during a flight. It must be recorded:",
+   "o": [
+    "In the technical log, before the next flight or at the end of the day, whichever is earlier",
+    "In the pilot's personal logbook",
+    "On the Certificate of Release to Service",
+    "In the technical log within 7 days"
+   ],
+   "a": 0,
+   "why": "The tech log records defects; the deadline is before the next pilot flies or the end of the day."
+  },
+  {
+   "q": "When a new weight schedule is prepared, the previous one must be kept for:",
+   "o": [
+    "6 months",
+    "3 months",
+    "1 year",
+    "2 years"
+   ],
+   "a": 0,
+   "why": "ANO Article 43: 6 months. 2 years is the logbook period."
+  },
+  {
+   "q": "Aircraft, engine and variable-pitch propeller logbooks must be kept until:",
+   "o": [
+    "2 years after the aircraft, engine or propeller is destroyed or permanently withdrawn",
+    "2 years after the last entry",
+    "6 months after the aircraft is sold",
+    "The next Airworthiness Review"
+   ],
+   "a": 0,
+   "why": "2 years after destruction or permanent withdrawal. '2 years after the last entry' is the rule for producing a pilot's personal logbook."
+  },
+  {
+   "q": "The owner of a UK-registered aircraft sells half of it. They must:",
+   "o": [
+    "Tell the CAA in writing",
+    "Tell the CAA within 28 days by phone",
+    "Re-register the aircraft with new marks",
+    "Do nothing; only a full sale needs reporting"
+   ],
+   "a": 0,
+   "why": "Any change of ownership or part-ownership is reported to the CAA in writing."
+  },
+  {
+   "q": "Which UK insurance cover is compulsory for a private aeroplane?",
+   "o": [
+    "Passenger and third-party liability",
+    "Hull only",
+    "Hull and third-party",
+    "None; it is the owner's choice"
+   ],
+   "a": 0,
+   "why": "Liability cover is compulsory; hull cover is optional, though wise."
+  }
+ ]
+}

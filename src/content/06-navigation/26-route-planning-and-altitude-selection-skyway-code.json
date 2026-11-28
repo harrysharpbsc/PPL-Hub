@@ -1,0 +1,181 @@
+{
+ "seq": 26,
+ "s": 5,
+ "topic": "Route planning and altitude selection (Skyway Code)",
+ "order": 30,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "Plan a VFR route with a pilot's log (PLOG), error-check it, and back it up with a plotted chart. Choose a safety altitude by adding 500 or 1,000 ft to the Maximum Elevation Figure (MEF) and study at least 5 NM either side of track. Avoid whole-number cruising altitudes, plan descents at 3 NM per 1,000 ft, use Take 2 near controlled airspace and plan a transit about 10 minutes ahead. Built from the Skyway Code pp.41-45.",
+ "src": [
+  [
+   "The Skyway Code (CAP 1535 v4, Nov 2023), pp.41-45",
+   "https://www.caa.co.uk/our-work/publications/documents/content/cap1535s/"
+  ]
+ ],
+ "sections": [
+  [
+   "The PLOG",
+   [
+    "A pilot's log holds headings, distances and times for each leg, frequencies, planned and safety altitudes and the fuel plan",
+    "Gross-error check all figures, for example confusing 030° with 300°, and keep winds aloft up to date",
+    "Plot the route on a paper chart too: it is the backup if the moving map device fails",
+    "Pick a radio frequency for each stage, consider UK FIS, and note hazards: aerodromes, danger areas, parachuting, glider sites and cable launches",
+    "Many busy GA aerodromes have no ATZ. VFR traffic may bunch near visual reference points (VRPs) and beacons"
+   ]
+  ],
+  [
+   "Maximum Elevation Figure and safety altitude",
+   [
+    "The <b>MEF</b> is the large figure in each lat/long box on the VFR chart. It is the higher of the highest obstacle or the highest terrain plus <code>300 ft</code>",
+    "Obstacles under 300 ft AGL may not be in the data, hence the 300 ft. Obstacles over 300 ft are captured with no extra margin",
+    "Study the area at least <code>5 NM</code> either side of track",
+    "No legal safety altitude exists for VFR but add <code>500 ft or 1,000 ft</code> over the highest obstacle or terrain",
+    "Set safety altitudes below which you will not descend without reversing course or diverting",
+    "If IFR-qualified, consider planning the flight as IFR from the outset"
+   ]
+  ],
+  [
+   "Choosing a cruising altitude",
+   [
+    "Avoid whole-number altitudes such as 3,000 ft. Pick random ones such as 4,200 ft or 5,400 ft",
+    "Flying higher can give a better view, greater glide range, lower traffic density, less turbulence, better TAS and fuel burn, and better radio reception",
+    "SERA VFR cruising levels apply above 3,000 ft AGL (starting at FL35) but are not mandatory in the UK. In some European states they are mandatory",
+    "Descent planning rule: <code>3 NM for every 1,000 ft</code>, so about 30 NM from 10,000 ft. Ground speed x 5 gives the descent rate in ft/min (100 kt is about 500 ft/min, a 3° path)"
+   ]
+  ],
+  [
+   "Avoiding infringements",
+   [
+    "Study controlled airspace boundaries: vertical limits change over short distances",
+    "Mark a route that clearly avoids CAS rather than navigating around edges ad hoc",
+    "<b>Take 2</b>: keep <code>2 NM or 200 ft</code> from CAS, Danger and Restricted areas, ATZs and similar",
+    "Request a UK FIS near CAS, or use a Frequency Monitoring Code",
+    "Use the relevant aerodrome QNH, not the RPS. Do not use IFR waypoints for VFR navigation. Make user waypoints at recognisable features",
+    "In local handling, set altitudes you must not exceed and include 'airspace' in HASELL checks"
+   ]
+  ],
+  [
+   "Planning a transit of CAS",
+   [
+    "Have a plan B. For CTRs check for preferred VFR routes in the aerodrome AIP entry (AD 2.22)",
+    "Request about <b>10 minutes</b> before the boundary and calculate an ETA at the boundary",
+    "Crossing overhead at right angles to the main runway can avoid aerodrome traffic",
+    "Be ready for a different route or altitude. Overflying with vertical clearance is an effective avoidance"
+   ]
+  ]
+ ],
+ "sum": {
+  "The PLOG": "Contents of a pilot's log and why to plot a paper chart.",
+  "Maximum Elevation Figure and safety altitude": "MEF derivation and a 500 or 1,000 ft margin.",
+  "Choosing a cruising altitude": "Random altitudes and the 3 NM per 1,000 ft descent rule.",
+  "Avoiding infringements": "Take 2, FMCs and correct altimeter settings.",
+  "Planning a transit of CAS": "Request 10 minutes ahead with a plan B."
+ },
+ "cards": [
+  {
+   "q": "What does a PLOG contain?",
+   "a": "Headings, distances, times, frequencies, planned and safety altitudes and the fuel plan."
+  },
+  {
+   "q": "What is the MEF?",
+   "a": "The higher of the highest obstacle or highest terrain plus 300 ft in a lat/long box."
+  },
+  {
+   "q": "Why the 300 ft in the MEF?",
+   "a": "Obstacles under 300 ft AGL may not be captured in the aeronautical data."
+  },
+  {
+   "q": "Suggested margin above the highest obstacle for a safety altitude?",
+   "a": "500 ft or 1,000 ft."
+  },
+  {
+   "q": "How wide should you study terrain either side of track?",
+   "a": "At least 5 NM."
+  },
+  {
+   "q": "Why choose non-whole-number cruising altitudes?",
+   "a": "To reduce the risk of conflict, such as 4,200 ft."
+  },
+  {
+   "q": "Descent rule of thumb?",
+   "a": "3 NM per 1,000 ft of height to lose."
+  },
+  {
+   "q": "Descent rate rule using ground speed?",
+   "a": "Ground speed x 5 gives ft/min, so 100 kt gives about 500 ft/min."
+  },
+  {
+   "q": "What is Take 2?",
+   "a": "Keep 2 NM or 200 ft from CAS and similar airspace."
+  },
+  {
+   "q": "How early to request a CAS transit?",
+   "a": "About 10 minutes before the boundary."
+  },
+  {
+   "q": "Is the RPS recommended for VFR near CAS?",
+   "a": "No, use the relevant aerodrome QNH."
+  },
+  {
+   "q": "Why avoid IFR waypoints in VFR navigation?",
+   "a": "They are often on CAS boundaries or approach routes, creating infringement risk."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "The MEF in a lat/long box represents:",
+   "o": [
+    "Average terrain height",
+    "Higher of the highest obstacle or highest terrain plus 300 ft",
+    "Safe cruising altitude",
+    "Highest obstacle plus 1,000 ft"
+   ],
+   "a": 1,
+   "why": "The MEF is not a safe altitude on its own: add a margin."
+  },
+  {
+   "q": "You need to descend from 6,000 ft to 1,000 ft. Using the rule of thumb you need about:",
+   "o": [
+    "5 NM",
+    "15 NM",
+    "25 NM",
+    "50 NM"
+   ],
+   "a": 1,
+   "why": "3 NM per 1,000 ft x 5,000 ft of height to lose = 15 NM."
+  },
+  {
+   "q": "At 120 kt ground speed the rate of descent rule gives about:",
+   "o": [
+    "300 ft/min",
+    "600 ft/min",
+    "900 ft/min",
+    "1,200 ft/min"
+   ],
+   "a": 1,
+   "why": "Ground speed x 5 = 600 ft/min."
+  },
+  {
+   "q": "Take 2 means:",
+   "o": [
+    "Two radio calls",
+    "2 NM or 200 ft clear of airspace",
+    "Two navigation aids",
+    "Two crew"
+   ],
+   "a": 1,
+   "why": "It is the recommended margin from CAS and similar airspace."
+  },
+  {
+   "q": "Which safety altitude margin does the Skyway Code suggest?",
+   "o": [
+    "100 ft",
+    "500 ft or 1,000 ft",
+    "2,000 ft",
+    "None"
+   ],
+   "a": 1,
+   "why": "There is no legal requirement but 500 or 1,000 ft above the highest obstacle or terrain is appropriate."
+  }
+ ]
+}

@@ -1,0 +1,158 @@
+{
+ "seq": 27,
+ "s": 5,
+ "topic": "Altimeter settings (Skyway Code)",
+ "order": 35,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "The UK uses QNH (altitude above sea level), QFE (height above aerodrome), regional pressure setting (the lowest forecast pressure in a region) and standard 1013 hPa (flight levels). One hPa is about 30 ft (27 ft more precisely). The transition altitude is normally 3,000 ft outside controlled airspace and 5,000 or 6,000 ft within and below it, and the transition level must be at least 1,000 ft above it. The RPS usually reads low. Built from the Skyway Code pp.90-91.",
+ "src": [
+  [
+   "The Skyway Code (CAP 1535 v4, Nov 2023), pp.90-91",
+   "https://www.caa.co.uk/our-work/publications/documents/content/cap1535s/"
+  ]
+ ],
+ "sections": [
+  [
+   "Four pressure settings",
+   [
+    "<b>QNH</b>: altitude above mean sea level. On the ground it reads aerodrome elevation",
+    "<b>QFE</b>: height above aerodrome level. On the ground it reads zero",
+    "<b>Regional pressure setting (RPS)</b>: the lowest forecast pressure in an altimeter setting region. The UK has <code>21</code> regions with geographic names such as Portland or Cotswold. It normally gives a lower reading than actual altitude",
+    "<b>Standard 1013 hPa</b>: used above the transition altitude, giving flight levels and pressure altitude",
+    "<code>1 hPa</code> is about <code>30 ft</code> (27 ft more precisely)"
+   ]
+  ],
+  [
+   "Transition altitude and level",
+   [
+    "TA is the altitude above which position is given as a flight level",
+    "Outside CAS the UK transition altitude is normally <code>3,000 ft</code> AMSL. Within and below CAS it is normally <code>5,000 or 6,000 ft</code> (see ENR 1.7)",
+    "It is not mandatory for VFR flights in the UK to change to FLs, but it is for IFR",
+    "The lowest VFR flight level is normally FL35. The transition level is always at least <code>1,000 ft</code> above the TA",
+    "Example: QNH 1000 and 3,000 ft altitude: set 1013 and the altimeter reads about <code>3,390 ft</code> (13 hPa x 30 ft; 3,351 ft using 27 ft)"
+   ]
+  ],
+  [
+   "Recommended procedure",
+   [
+    "Use the most relevant QNH for your route or area. Use the RPS only if no local QNH is available",
+    "When transiting below or near CAS defined by altitude, use the QNH applicable to the airspace",
+    "When near CAS defined by flight level, use 1013 hPa",
+    "Larger aerodromes use QNH for take-off and landing"
+   ]
+  ]
+ ],
+ "sum": {
+  "Four pressure settings": "QNH, QFE, RPS and 1013, and 30 ft per hPa (27 ft more precisely).",
+  "Transition altitude and level": "3,000 ft outside CAS, 5,000 or 6,000 ft in and below CAS.",
+  "Recommended procedure": "Use the local QNH and 1013 near flight-level airspace."
+ },
+ "cards": [
+  {
+   "q": "What does QNH indicate?",
+   "a": "Altitude above mean sea level."
+  },
+  {
+   "q": "What does QFE indicate?",
+   "a": "Height above aerodrome level."
+  },
+  {
+   "q": "What is the standard pressure setting?",
+   "a": "1013 hPa."
+  },
+  {
+   "q": "How many feet per hPa?",
+   "a": "About 30 ft (27 ft more precisely)."
+  },
+  {
+   "q": "What is the RPS?",
+   "a": "The lowest forecast pressure in an altimeter setting region."
+  },
+  {
+   "q": "How many altimeter setting regions does the UK have?",
+   "a": "21."
+  },
+  {
+   "q": "Why is the RPS a risk near CAS?",
+   "a": "It normally under-reads, risking a vertical infringement."
+  },
+  {
+   "q": "UK transition altitude outside CAS?",
+   "a": "Normally 3,000 ft."
+  },
+  {
+   "q": "Transition altitude in or below CAS?",
+   "a": "Normally 5,000 or 6,000 ft."
+  },
+  {
+   "q": "Minimum gap between transition altitude and transition level?",
+   "a": "At least 1,000 ft."
+  },
+  {
+   "q": "What is the lowest VFR flight level?",
+   "a": "Normally FL35."
+  },
+  {
+   "q": "Is use of flight levels mandatory for VFR in the UK?",
+   "a": "No, it is required for IFR."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "With QNH 1000 and the altimeter on 1013 at 3,000 ft altitude, the reading is about:",
+   "o": [
+    "2,610 ft",
+    "3,000 ft",
+    "3,390 ft",
+    "4,013 ft"
+   ],
+   "a": 2,
+   "why": "13 hPa x 30 ft = 390 ft, so about 3,390 ft (3,351 ft using the more precise 27 ft)."
+  },
+  {
+   "q": "The regional pressure setting is:",
+   "o": [
+    "The highest forecast pressure",
+    "The lowest forecast pressure in the region",
+    "An actual QNH",
+    "1013 hPa"
+   ],
+   "a": 1,
+   "why": "Using RPS normally gives a lower altimeter reading than actual."
+  },
+  {
+   "q": "The transition level must be:",
+   "o": [
+    "Equal to the TA",
+    "At least 1,000 ft above the TA",
+    "At least 500 ft above the TA",
+    "FL100"
+   ],
+   "a": 1,
+   "why": "There must be a 1,000 ft minimum transition layer."
+  },
+  {
+   "q": "Near CAS defined as a flight level you should set:",
+   "o": [
+    "QNH",
+    "RPS",
+    "1013 hPa",
+    "QFE"
+   ],
+   "a": 2,
+   "why": "Use standard setting when the airspace is defined by FLs."
+  },
+  {
+   "q": "Which setting reads zero on the ground at an aerodrome?",
+   "o": [
+    "QNH",
+    "QFE",
+    "RPS",
+    "1013"
+   ],
+   "a": 1,
+   "why": "QFE reads height above the aerodrome."
+  }
+ ]
+}

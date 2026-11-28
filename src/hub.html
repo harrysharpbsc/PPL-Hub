@@ -584,26 +584,6 @@ function stepsOf(t){return S.steps[t]||(S.steps[t]={})}
 
 /* ---------- derived data ---------- */
 var INT=[0,1,3,7,14,30];
-var MN={"Chicago Convention: which article gives each state complete and exclusive sovereignty over its airspace?":"The number one rule: my sky.",
-"Chicago Convention: which article lets non-scheduled flights fly into or across a state without prior permission?":"Five: free to fly through.",
-"Chicago Convention: which article says an aircraft must obey the laws and regulations of the state it is in, whatever its nationality?":"11: their laws.",
-"Chicago Convention: which article covers rules of the air, including which rules apply over the high seas?":"12: the rules in the air.",
-"Chicago Convention: which articles say an aircraft takes the nationality of its state of registration, and cannot be registered in two states at once?":"17 and 18 are a pair: registered means nationality, and only one state at a time.",
-"Chicago Convention: which article requires aircraft on international flights to display nationality and registration marks?":"20: show your marks.",
-"Chicago Convention: which article makes fuel, oil, spares and regular equipment on board exempt from customs duty on arrival?":"24-hour fuel stop, duty free.",
-"Chicago Convention: which article says who investigates an accident in another state?":"26: investigation.",
-"Chicago Convention: which article lists the documents carried on international flights, and what are they?":"29: the whole document bag.",
-"Chicago Convention: which article requires a certificate of airworthiness for international flights?":"31: is it airworthy?",
-"Chicago Convention: which articles cover crew licences and their recognition by other states?":"32: who is flying it? 33: everyone accepts them.",
-"Chicago Convention: which article sets out ICAO's objectives?":"44: ICAO's aims.",
-"Which colour navigation light is on which wing?":"Port wine is red: port is left, so red is on the left wing.",
-"Red to red, green to green: safe or unsafe?":"Red to red, green to green: safe to go on. Mixed colours means take care.",
-"Head-on with a risk of collision: what does each aircraft do?":"Everyone turns right in the air.",
-"On a straight-in approach, where are 'long final' and 'final' reported?":"8 then 4: long final is twice final.",
-"When does night start and end in the UK?":"Sunset plus 30, sunrise minus 30.",
-"What does ATC's 'land after' mean?":"Land after is a heads-up, never a clearance.",
-"How soon must a safety departure from the rules be reported?":"Ten days, in writing.",
-"Converging in the same category at about the same altitude: who gives way?":"Give way to the right."};
 NOTES.forEach(function(n,i){n.id=i;n.cl=n.cards.map(function(c,ci){return{n:i,ci:ci,key:n.topic+'|'+c[0],q:c[0],a:c[1],m:MN[c[0]]||''}})});
 S.custom.forEach(function(cu){NOTES.forEach(function(n){if(n.topic===cu.t)n.cl.push({n:n.id,ci:-1,key:cu.t+'|'+cu.q,q:cu.q,a:cu.a,m:cu.m||'',custom:true})})});
 function getc(k){return S.cards[k]||{b:0,d:0,n:0}}

@@ -1,0 +1,195 @@
+{
+ "seq": 17,
+ "s": 1,
+ "topic": "Piston engine icing (SS14)",
+ "order": 20,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "Engines can ice up in three ways: carburettor ice (fuel evaporating chills the carb by up to 35°C), impact ice on the intake or filter, and ice or water in the fuel system. Carb ice can form on a warm humid day, not just a cold one. Use carb heat for at least 15 seconds, apply it before reducing power, and always follow the AFM. Built from CAA Safety Sense Leaflet 14, not yet from your own notes.",
+ "src": [
+  [
+   "Safety Sense Leaflet 14: Piston Engine Icing",
+   "https://www.caa.co.uk/media/j5omfigm/ssl-14_piston-engine-icing.pdf"
+  ]
+ ],
+ "sections": [
+  [
+   "Three types of engine icing",
+   [
+    "<b>Carburettor ice</b>: fuel evaporating in the venturi cools the carb by up to <code>35°C</code> below the outside air. Water vapour freezes and chokes the venturi and throttle. Fuel-injected engines do not get it",
+    "<b>Impact (intake) ice</b>: ice builds on or in the air intake or blocks the filter. Needs visible moisture below <code>0°C</code>, and affects carburettor and injected engines alike",
+    "<b>Fuel system ice</b>: water in tanks or lines freezes, often at bends or filters. Water can stop an engine even if it never freezes",
+    "Car fuel (MOGAS) may be more prone to water problems than AVGAS"
+   ]
+  ],
+  [
+   "When it happens",
+   [
+    "Carb icing is possible on warm days, not only in the cold. Worst band is roughly <code>0°C to 10°C</code> with high humidity",
+    "Tests showed serious ice at descent power with air above <code>25°C</code> and humidity as low as <code>30%</code>",
+    "Clues for high humidity: temperature and dew point close together, wet ground, rain, fog or low cloud",
+    "Descent power carries the greatest risk of serious carb ice"
+   ]
+  ],
+  [
+   "Recognising it",
+   [
+    "First sign is usually a loss of power or performance",
+    "Fixed-pitch prop: a small RPM drop with falling airspeed or height. Opening the throttle slightly can hide it",
+    "Constant-speed prop: manifold pressure drops first while RPM stays steady",
+    "With an autopilot holding height, airspeed can quietly decay, so watch it",
+    "An EGT gauge often shows a drop before power is lost",
+    "Fuel icing: power loss in cold, clear air where carb ice is not the cause"
+   ]
+  ],
+  [
+   "Using carb heat and alternate air",
+   [
+    "Carb heat sends air through an exhaust heat exchanger and bypasses the filter. A small power drop when selected is normal",
+    "Alternate air (injected engines) bypasses a blocked intake or filter. Apply it fully on, and keep it on until clear of icing and the ice has melted",
+    "Select heat for at least <code>15 seconds</code>. Rough running at first is normal as ice melts: keep heat on",
+    "If the engine fails and carb ice is suspected, keep heat hot as residual exhaust warmth may allow a restart",
+    "Always follow the AFM. Do not use continuous carb heat at high power unless the AFM allows it"
+   ]
+  ],
+  [
+   "Procedures by phase of flight",
+   [
+    "<b>Start and taxi</b>: start with heat cold. Avoid heat when taxiing because the air is unfiltered",
+    "<b>Power checks</b>: heat fully on for 15 seconds. A typical drop is <code>75 to 100 RPM</code> or <code>3 to 5 inches</code> of MP. If power rises above the earlier value when heat goes off, ice was present: repeat until clear",
+    "<b>Take-off</b>: normally heat cold. If a long time passed since the checks, apply about 15 seconds just before",
+    "<b>Cruise</b>: monitor RPM or MP and apply heat periodically in conducive conditions",
+    "<b>Descent</b>: apply heat before reducing power and add power regularly to keep the engine warm",
+    "<b>Landing</b>: heat on downwind, and many types go cold at around <code>300 ft</code> ready for a go-around",
+    "<b>Go-around</b>: check carb heat is cold before and after applying power"
+   ]
+  ],
+  [
+   "Prevention on the ground",
+   [
+    "Keep tanks full to reduce condensation, including in a hangar",
+    "Check fuel for water and check filler cap seals for deterioration",
+    "Take extra care with MOGAS and barrel fuel",
+    "Periodically check the carb heat or alternate air controls and seals"
+   ]
+  ]
+ ],
+ "sum": {
+  "Three types of engine icing": "Carburettor, intake and fuel system ice, and which engines they affect.",
+  "When it happens": "Humid air between 0°C and 10°C is worst, but warm days can ice too.",
+  "Recognising it": "Power loss shows as RPM or manifold pressure falling first.",
+  "Using carb heat and alternate air": "Select heat for at least 15 seconds and expect rough running as it clears.",
+  "Procedures by phase of flight": "Heat on before power off in descent, cold again for the go-around.",
+  "Prevention on the ground": "Full tanks, drained water checks and good seals."
+ },
+ "cards": [
+  {
+   "q": "What cools the carburettor enough to cause ice?",
+   "a": "Fuel evaporating in the venturi, up to 35°C below the outside air."
+  },
+  {
+   "q": "Which engines cannot get carb ice?",
+   "a": "Fuel-injected engines. They can still get intake (impact) ice."
+  },
+  {
+   "q": "Temperature band with the highest carb ice risk in humid air?",
+   "a": "About 0°C to 10°C, but it can happen on warm days too."
+  },
+  {
+   "q": "First sign of carb ice in a fixed-pitch propeller aircraft?",
+   "a": "A small RPM drop with falling airspeed or height."
+  },
+  {
+   "q": "First sign of carb ice with a constant-speed propeller?",
+   "a": "Manifold pressure falls while RPM stays the same."
+  },
+  {
+   "q": "How long should carb heat be selected to clear ice?",
+   "a": "At least 15 seconds."
+  },
+  {
+   "q": "Normal power-check drop with carb heat on?",
+   "a": "About 75 to 100 RPM or 3 to 5 inches of MP."
+  },
+  {
+   "q": "When should carb heat be applied during a descent?",
+   "a": "Before reducing power, then keep adding power regularly."
+  },
+  {
+   "q": "Why avoid carb heat while taxiing?",
+   "a": "Heated air bypasses the filter, so it can draw in dust and debris."
+  },
+  {
+   "q": "What is impact icing?",
+   "a": "Ice on the intake or filter from visible moisture below 0°C."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "On a warm humid day you are descending at low power. Which statement is correct?",
+   "o": [
+    "Carb ice is impossible above 15°C",
+    "Carb ice can still form and descent power is the highest-risk setting",
+    "Carb ice only forms in cloud",
+    "Only fuel-injected engines are at risk"
+   ],
+   "a": 1,
+   "why": "Serious carb ice has been shown with air above 25°C and humidity as low as 30%, especially at descent power."
+  },
+  {
+   "q": "Your fixed-pitch propeller RPM drops slightly and airspeed falls. What do you do first?",
+   "o": [
+    "Open the throttle and ignore it",
+    "Apply carb heat and accept some rough running while it clears",
+    "Lean the mixture fully",
+    "Switch off the fuel pump"
+   ],
+   "a": 1,
+   "why": "Select heat and keep it on. The engine may run rough as ice melts."
+  },
+  {
+   "q": "At the power check, carb heat on gives a typical drop of:",
+   "o": [
+    "10 to 20 RPM",
+    "75 to 100 RPM",
+    "300 to 400 RPM",
+    "No change"
+   ],
+   "a": 1,
+   "why": "A drop of about 75 to 100 RPM, or 3 to 5 inches of MP, is expected. A rise afterwards suggests ice was cleared."
+  },
+  {
+   "q": "Why should you apply carb heat before closing the throttle in the descent?",
+   "o": [
+    "It lowers drag",
+    "Ice is much more likely at reduced power",
+    "It cools the engine",
+    "It improves visibility"
+   ],
+   "a": 1,
+   "why": "Induction ice is far more likely at low power, so heat goes on before power comes off."
+  },
+  {
+   "q": "Which engine type can suffer intake icing but not carb icing?",
+   "o": [
+    "Carburettor",
+    "Fuel-injected",
+    "Both",
+    "Neither"
+   ],
+   "a": 1,
+   "why": "Fuel-injected engines have no carburettor but can ice at the intake or filter, so check alternate air."
+  },
+  {
+   "q": "At about 300 ft on final many aircraft call for carb heat to be:",
+   "o": [
+    "Selected hot",
+    "Selected cold ready for a go-around",
+    "Left unchanged",
+    "Removed from the checklist"
+   ],
+   "a": 1,
+   "why": "Cold heat gives full power if you go around, but follow the AFM."
+  }
+ ]
+}

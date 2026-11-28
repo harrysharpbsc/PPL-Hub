@@ -1,0 +1,391 @@
+{
+ "seq": 11,
+ "s": 0,
+ "topic": "Operation of Aircraft",
+ "num": 12,
+ "order": 120,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "Before every flight the PIC checks weather, route, equipment, airworthiness, load, fuel with a margin, and performance, then briefs passengers on exits, belts, and oxygen or life jackets if carried. In flight, everyone obeys the commander, a pilot stays at the controls, and nobody flies impaired (20 mg alcohol per 100 ml of blood; at least 8 hours after drinking). Towing, dropping and parachuting need CofA or CAA approval. Carry the documents Part-NCO lists, or leave items 2 to 8 on the ground for an A-to-A flight. Know the squawks (7700, 7600, 7500, 7000), report an Airprox by radio and confirm within 7 days, and know the equipment rules for over-water flight and oxygen.",
+ "sections": [
+  [
+   "Operational rules (UK ANO and Part-NCO)",
+   [
+    "ICAO <b class=\"k\">Annex 6</b> (international GA) differs in places from the <b class=\"k\">ANO</b>, so the ANO rules come first, then the Annex 6 extracts for international flights. Air operations: <b class=\"k\">Regulation (EU) 965/2012</b> (Part-NCO for private flights in other-than-complex aircraft)."
+   ]
+  ],
+  [
+   "Pre-flight actions of the PIC (NCO.GEN.105, ANO Articles 69 and 75)",
+   [
+    "Before each flight, be satisfied that:",
+    "– the flight can be made <b class=\"k\">safely</b>, with the latest route, aerodrome and <b class=\"k\">weather</b> information, and <b class=\"k\">options</b> if it can't be completed as planned",
+    "– required <b class=\"k\">equipment</b> (including radio) is carried and working, with suitable <b class=\"k\">maps, charts</b> and navigation equipment",
+    "– the aircraft is <b class=\"k\">fit to fly</b>, with a valid <b class=\"k\">ARC</b> or Certificate of Maintenance Review where needed",
+    "– the <b class=\"k\">load</b> is safe for weight, distribution and security",
+    "– there is enough <b class=\"k\">fuel, oil, coolant</b> (and ballast), <b class=\"k\">with a margin</b>",
+    "– <b class=\"k\">performance</b> allows a safe take-off, climb, cruise and landing at the destination",
+    "– all <b class=\"k\">pre-flight checks</b> are done",
+    "Rough take-off distance factors (use the aircraft's charts for real numbers):",
+    "– <code>10%</code> more weight → about <code>20%</code> more take-off distance",
+    "– <b class=\"k\">tailwind</b> of <code>10%</code> of lift-off speed (about <code>5 kt</code>) → about <code>20%</code> more",
+    "– <code>10°C</code> warmer or <code>1,000 ft</code> higher → about <code>10%</code> more"
+   ]
+  ],
+  [
+   "Passenger briefing (ANO Article 73)",
+   [
+    "Before take-off, brief passengers on <b class=\"k\">emergency exits</b>, <b class=\"k\">seat belts or harnesses</b>, and <b class=\"k\">oxygen</b> and <b class=\"k\">life jackets</b> when carried."
+   ]
+  ],
+  [
+   "In flight",
+   [
+    "<code>Commander's authority</code> (Article 244): everyone on board must obey the commander's <b class=\"k\">lawful commands</b> for safety.",
+    "<code>Crew composition</code> (Article 66): must meet the rules of the <b class=\"k\">State of Registry</b>.",
+    "<code>Pilots at the controls</code> (Article 70): <b class=\"k\">one pilot at the controls</b> at all times; both during take-off and landing if two are required; <b class=\"k\">belt or harness worn</b> at the controls (harness for take-off and landing when one is fitted).",
+    "<code>Carriage of persons</code>: nobody in a part of the aircraft <b class=\"k\">not designed for people</b>, or on anything towed, except brief access for safety or to a designed cargo area.",
+    "<code>Smoking</code> (Article 243): obey no-smoking signs; the commander can ban it at any time.",
+    "<code>Alcohol</code> (Article 242): not drunk on board; crew not impaired by <b class=\"k\">drink or drugs</b>. Legal limit <code>20 mg</code> per <code>100 ml</code> of blood (a quarter of the England and Wales driving limit). Rule of thumb: at least <code>8 hours</code> \"bottle to throttle\", more after heavy drinking.",
+    "<b class=\"k\">Disruptive behaviour</b> (Article 245) and <b class=\"k\">endangering</b> aircraft, people or property recklessly or negligently (Articles 240-241) are offences, e.g. flying dangerously low or with too little fuel.",
+    "<code>Radio</code> (Article 79): the operator needs an <b class=\"k\">R/T licence</b> and the radio its own licence.",
+    "<code>Flight recorders</code> (Article 231): aeroplanes over <code>5,700 kg</code> and helicopters over <code>2,700 kg</code> in some cases."
+   ]
+  ],
+  [
+   "Towing, dropping and parachuting",
+   [
+    "<b class=\"k\">Towing gliders</b> (Article 87) and <b class=\"k\">towing or picking up</b> people or articles (Article 88): only if the <b class=\"k\">CofA expressly allows</b> it. Part-SPO covers the EASA rules.",
+    "<code>Dropping articles or animals</code> (Article 89): never so as to <b class=\"k\">endanger</b> anyone; otherwise only with <b class=\"k\">CAA written approval</b>, except e.g. life-saving equipment or <b class=\"k\">jettisoning</b> in an emergency.",
+    "<code>Dropping persons</code> (Article 90): except escaping in an emergency, only with <b class=\"k\">CAA written permission</b>, a CofA that allows it, and the Parachuting Manual.",
+    "<code>Weapons</code> (Article 98): operator's consent, <b class=\"k\">unloaded</b>, not accessible to passengers.",
+    "<code>Munitions of war</code>: CAA <b class=\"k\">written permission</b>.",
+    "<code>Dangerous goods</code> (Article 97, NCO.GEN.140): harmless items on the ground can be dangerous at altitude in a small cabin (aerosols, lighters, gas cylinders, batteries, fire lighters). <b class=\"k\">If in doubt, leave it out.</b> <b class=\"k\">Mobile phones</b> off before engine start; portable electronic devices: NCO.GEN.125."
+   ]
+  ],
+  [
+   "Balloons, kites, airships and winch launches (Articles 92-93)",
+   [
+    "A <b class=\"k\">captive balloon or kite</b> must not fly higher than <code>60 m</code> agl, within <code>60 m</code> of a vessel, vehicle or structure, or <b class=\"k\">within an ATZ</b>.",
+    "A balloon over <code>2 m</code> in any dimension must not fly in notified controlled airspace.",
+    "Gliders and parascending parachutes: no winch or ground-tow launch above <code>60 m</code> agl. The CAA can vary any of these in writing."
+   ]
+  ],
+  [
+   "Documents to be carried (NCO.GEN.135, ANO Article 229)",
+   [
+    "Aircraft <b class=\"k\">Flight Manual</b> (or equivalent)",
+    "Original <b class=\"k\">certificate of registration</b>",
+    "Original <b class=\"k\">CofA</b>",
+    "<b class=\"k\">Noise certificate</b>, if applicable",
+    "List of <b class=\"k\">specific approvals</b>, if applicable",
+    "Aircraft <b class=\"k\">radio licence</b>",
+    "<b class=\"k\">Insurance</b> certificate",
+    "<b class=\"k\">Journey log</b>",
+    "Details of the <b class=\"k\">filed flight plan</b>, if applicable",
+    "Current, suitable <b class=\"k\">charts</b> for the route and likely diversions",
+    "<b class=\"k\">Interception</b> procedures and visual signals",
+    "<b class=\"k\">MEL</b>, if applicable",
+    "Anything else pertinent to the flight",
+    "Taking off and landing at the <b class=\"k\">same aerodrome</b> (staying in UK airspace): items <b class=\"k\">2 to 8</b> may stay on the ground.",
+    "<b class=\"k\">Non-Part-21</b> aircraft within the UK: only <b class=\"k\">navigation charts</b> are required.",
+    "Using a <b class=\"k\">Part-FCL licence</b>: carry the <b class=\"k\">licence</b> and <b class=\"k\">photo ID</b> (passport or driving licence), and your medical."
+   ]
+  ],
+  [
+   "Production of documents (Article 235)",
+   [
+    "Within a <b class=\"k\">reasonable time</b> of a request from an <b class=\"k\">authorised person</b> (police, CAA, Secretary of State), produce the <b class=\"k\">registration and airworthiness certificates</b>, <b class=\"k\">crew licences</b>, <b class=\"k\">personal logbooks</b> (up to <code>2 years</code> after the last entry), and other documents that should be carried."
+   ]
+  ],
+  [
+   "Offences (Article 256)",
+   [
+    "Using a <b class=\"k\">forged, altered, revoked or suspended</b> document, or one you're not entitled to; <b class=\"k\">lending</b> one with intent to deceive; forging, defacing or <b class=\"k\">falsifying a logbook</b> or record, or destroying it while it must be kept. Entries in <b class=\"k\">ink or indelible pencil</b>."
+   ]
+  ],
+  [
+   "SSR transponders",
+   [
+    "<code>Mode A</code>: 4,096 four-digit codes.",
+    "<code>Mode C</code>: adds <b class=\"k\">pressure altitude</b> (from an encoding altimeter).",
+    "<code>Mode S</code>: individual aircraft address and identity, better detection.",
+    "The book's carriage rules are the old Mode A/C ones. Today the UK AIP (<b class=\"k\">ENR 1.6</b>) requires <b class=\"k\">Mode S</b> at and above <b class=\"k\">FL100</b>, in <b class=\"k\">Transponder Mandatory Zones (TMZs)</b> and in much controlled airspace; check ENR 1.6.",
+    "Where not mandatory, squawk <code>7000</code> with <b class=\"k\">ALT</b> (Mode C) unless ATC gives you a code.",
+    "Without a transponder, expect not to be let into a <b class=\"k\">TMZ</b>.",
+    "<b><code>7700</code></b>: <b class=\"k\">Emergency</b> (keep an assigned code if already in contact with a unit)",
+    "<b><code>7600</code></b>: <b class=\"k\">Radio failure</b>",
+    "<b><code>7500</code></b>: <b class=\"k\">Unlawful interference</b>",
+    "<b><code>7000</code></b>: <b class=\"k\">VFR conspicuity</b>",
+    "<b><code>2000</code></b>: IFR conspicuity / no code assigned",
+    "<b><code>7004</code></b>: <b class=\"k\">Aerobatics</b> and display",
+    "<b><code>0033</code></b>: <b class=\"k\">Parachute dropping</b> (from 5 minutes before until parachutists are down)",
+    "<b><code>0030</code></b>: <b class=\"k\">Lost</b> (UK)",
+    "Select <b class=\"k\">Mode C</b> with all of them. Don't pass through <b class=\"k\">7500/7600/7700</b> when changing codes."
+   ]
+  ],
+  [
+   "Airprox",
+   [
+    "If you think your aircraft was <b class=\"k\">endangered by another aircraft's proximity</b>, report an <b class=\"k\">Airprox</b>: first <b class=\"k\">by radio</b> to the ATSU you're talking to (or by phone after landing, preferably to an ACC), then confirm within <code>7 days</code> online on <b class=\"k\">CA Form 1094</b>. AIP ENR 1.14."
+   ]
+  ],
+  [
+   "International flights (ICAO Annex 6)",
+   [
+    "Obey the laws of each <b class=\"k\">State</b> you fly in. The <b class=\"k\">PIC</b> is responsible for the operation and <b class=\"k\">safety</b> of the aeroplane and everyone on board.",
+    "If an <b class=\"k\">emergency</b> forces you to break local rules, tell the authority <b class=\"k\">as soon as possible</b> (some want a report within <b class=\"k\">10 days</b>).",
+    "<b class=\"k\">Accident</b> with serious injury, death or substantial damage: the PIC notifies the authority as quickly as possible.",
+    "Carry <b class=\"k\">search and rescue</b> information for the areas overflown (recommended).",
+    "Before flight, check <b class=\"k\">facilities</b> (aerodromes, communications, navaids) are adequate; don't fly below <b class=\"k\">aerodrome operating minima</b>.",
+    "Brief crew and passengers on <b class=\"k\">seat belts, exits, life jackets, oxygen</b> and other emergency equipment, including life rafts.",
+    "Aeroplane <b class=\"k\">airworthy, registered</b>, certificates on board, suitable <b class=\"k\">instruments</b>, maintenance done, <b class=\"k\">mass and balance</b> in limits, <b class=\"k\">cargo secured</b>, Flight Manual limits respected.",
+    "<code>VFR</code>: don't start unless current reports and forecasts show <b class=\"k\">VMC along the route</b>; don't continue unless the destination or <b class=\"k\">an alternate</b> is at or above minima. No flight into <b class=\"k\">known icing</b> without suitable equipment.",
+    "Enough <b class=\"k\">fuel and oil</b> for the weather and expected delays.",
+    "<b class=\"k\">Report</b> weather or hazards (volcanic ash, dust storms) likely to affect other flights.",
+    "<code>Taxiing</code>: only if authorised, competent, radio-qualified where needed, and briefed on the aerodrome's layout, signs and procedures.",
+    "<code>Refuelling with passengers on board</code>: only with the PIC or a qualified person ready to organise an <b class=\"k\">evacuation</b>."
+   ]
+  ],
+  [
+   "Part-NCO aeroplanes",
+   [
+    "<b class=\"k\">First-aid kit</b>, kept up to date",
+    "At least one <b class=\"k\">hand fire extinguisher</b>",
+    "<b class=\"k\">Spare fuses</b> (if fuses, not circuit breakers)",
+    "A <b class=\"k\">seat</b> and <b class=\"k\">seat belt</b> for each person (above an age set by the State)",
+    "<b class=\"k\">ELT</b>: any type if the first CofA was on or before <b class=\"k\">1 July 2008</b>; an <b class=\"k\">automatic ELT</b> if later; or, for aircraft with <b class=\"k\">six seats or fewer</b>, a <b class=\"k\">survival ELT or PLB</b> carried by someone on board. They transmit on <code>121.5 MHz</code> and <code>406 MHz</code>."
+   ]
+  ],
+  [
+   "Instruments",
+   [
+    "<code>VFR by day</code>: <b class=\"k\">magnetic heading</b>, <b class=\"k\">time</b> (hours, minutes, seconds), <b class=\"k\">pressure altitude</b>, <b class=\"k\">indicated airspeed</b>.",
+    "<b class=\"k\">VFR at night</b> (or where instruments are needed to hold a flight path), also: <b class=\"k\">turn and slip</b>, <b class=\"k\">attitude</b>, <b class=\"k\">vertical speed</b>, <b class=\"k\">stabilised heading</b>, and a warning when <b class=\"k\">gyro power</b> is inadequate. Where instruments are needed: <b class=\"k\">pitot heat</b>."
+   ]
+  ],
+  [
+   "Over water (Part-NCO)",
+   [
+    "<b class=\"k\">Single-engine</b> aeroplanes: a <b class=\"k\">life jacket</b> for each person (or a flotation device for those under <b class=\"k\">24 months</b>) when <b class=\"k\">beyond gliding distance from land</b>, or taking off or landing where the path over water makes a <b class=\"k\">ditching</b> likely. In a single, wear it (uninflated).",
+    "More than <code>30 minutes</code> at cruise or <code>50 nm</code> from land suitable for an emergency landing, <b class=\"k\">whichever is less</b>: the PIC assesses the <b class=\"k\">survival risk</b> and decides on <b class=\"k\">life rafts</b>, <b class=\"k\">distress signals</b> and life-saving equipment.",
+    "ICAO Annex 6 (book): life rafts beyond <code>100 nm</code> (single-engine) or <code>200 nm</code> (multi-engine).",
+    "Areas where search and rescue would be <b class=\"k\">especially difficult</b>: signalling and survival equipment."
+   ]
+  ],
+  [
+   "Oxygen (unpressurised)",
+   [
+    "<code>Crew</code>: continuously above <code>10,000 ft</code> for more than <code>30 minutes</code>, and at all times above <code>13,000 ft</code>.",
+    "<code>Passengers</code>: above <code>13,000 ft</code>."
+   ]
+  ]
+ ],
+ "sum": {
+  "Operational rules (UK ANO and Part-NCO)": "ANO rules first, then ICAO Annex 6 for international flights; Part-NCO covers private flights.",
+  "Pre-flight actions of the PIC (NCO.GEN.105, ANO Articles 69 and 75)": "Weather, equipment, airworthiness, load, fuel with a margin, performance and checks, before every flight.",
+  "Passenger briefing (ANO Article 73)": "Exits, belts or harnesses, and oxygen and life jackets when carried.",
+  "In flight": "Obey the commander, a pilot at the controls, belts on, no drink or drugs.",
+  "Towing, dropping and parachuting": "Only if the CofA or the CAA allows it; never endanger people or property.",
+  "Balloons, kites, airships and winch launches (Articles 92-93)": "Captive balloons and kites: 60 m agl, 60 m from structures, not in an ATZ.",
+  "Documents to be carried (NCO.GEN.135, ANO Article 229)": "Thirteen items under Part-NCO; for an A-to-A flight items 2 to 8 can stay on the ground.",
+  "Production of documents (Article 235)": "Produce certificates, licences and logbooks to an authorised person within a reasonable time.",
+  "Offences (Article 256)": "Forging, lending or falsifying documents and logbooks is an offence.",
+  "SSR transponders": "7700 emergency, 7600 radio failure, 7500 unlawful interference, 7000 conspicuity; select ALT.",
+  "Airprox": "Report by radio straight away and confirm within 7 days on CA1094.",
+  "International flights (ICAO Annex 6)": "Obey local law, check facilities and minima, VMC along the route, enough fuel, report hazards.",
+  "Part-NCO aeroplanes": "First-aid kit, fire extinguisher, seats and belts, and an ELT or PLB.",
+  "Instruments": "Day VFR: compass heading, time, pressure altitude, airspeed. Night adds attitude, turn and slip, VSI, heading.",
+  "Over water (Part-NCO)": "Life jackets beyond gliding distance; beyond 30 minutes or 50 nm the PIC decides on rafts.",
+  "Oxygen (unpressurised)": "Crew above 10,000 ft for over 30 minutes and always above 13,000 ft; passengers above 13,000 ft."
+ },
+ "cards": [
+  {
+   "q": "What must a PIC brief passengers on before take-off?",
+   "a": "Emergency exits, seat belts or harnesses, and oxygen and life jackets if carried."
+  },
+  {
+   "q": "Rough effect of 10% extra weight on take-off distance?",
+   "a": "About 20% more."
+  },
+  {
+   "q": "Rough effect of a 10°C rise or 1,000 ft higher aerodrome?",
+   "a": "About 10% more take-off distance."
+  },
+  {
+   "q": "Legal blood alcohol limit for crew?",
+   "a": "20 mg per 100 ml of blood."
+  },
+  {
+   "q": "Rule of thumb after drinking?",
+   "a": "At least 8 hours, longer after heavy drinking."
+  },
+  {
+   "q": "Who has final authority over the safe conduct of a flight?",
+   "a": "The pilot-in-command (commander)."
+  },
+  {
+   "q": "Can an aircraft tow a glider?",
+   "a": "Only if its CofA expressly allows it."
+  },
+  {
+   "q": "Captive balloon or kite height limit?",
+   "a": "60 m agl, and not within 60 m of a structure or inside an ATZ."
+  },
+  {
+   "q": "Documents that may stay on the ground for an A-to-A flight?",
+   "a": "Items 2 to 8: registration, CofA, noise certificate, approvals, radio licence, insurance, journey log."
+  },
+  {
+   "q": "Squawk for radio failure?",
+   "a": "7600."
+  },
+  {
+   "q": "Squawk for an emergency?",
+   "a": "7700 (keep an assigned code if already with a unit)."
+  },
+  {
+   "q": "Squawk for unlawful interference?",
+   "a": "7500."
+  },
+  {
+   "q": "UK lost code?",
+   "a": "0030."
+  },
+  {
+   "q": "Parachute dropping squawk?",
+   "a": "0033, from 5 minutes before the drop until the parachutists are down."
+  },
+  {
+   "q": "How do you confirm an Airprox?",
+   "a": "Online on CA Form 1094 within 7 days."
+  },
+  {
+   "q": "ELT frequencies?",
+   "a": "121.5 MHz and 406 MHz."
+  },
+  {
+   "q": "Day VFR instruments?",
+   "a": "Magnetic heading, time (h, min, s), pressure altitude, indicated airspeed."
+  },
+  {
+   "q": "When must single-engine aeroplanes carry life jackets?",
+   "a": "Beyond gliding distance from land, or where take-off or approach is over water and a ditching is likely."
+  },
+  {
+   "q": "Crew oxygen rule?",
+   "a": "Above 10,000 ft for more than 30 minutes, and at all times above 13,000 ft."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Before take-off the pilot-in-command must brief passengers on:",
+   "o": [
+    "Emergency exits, seat belts or harnesses, and oxygen and life jackets when carried",
+    "Emergency exits only",
+    "Seat belts and the aircraft's performance",
+    "The route and the weather"
+   ],
+   "a": 0,
+   "why": "ANO Article 73: exits, belts or harnesses, and oxygen and life jackets when they are carried."
+  },
+  {
+   "q": "The legal blood alcohol limit for a pilot is:",
+   "o": [
+    "20 mg per 100 ml of blood",
+    "80 mg per 100 ml of blood",
+    "50 mg per 100 ml of blood",
+    "9 mg per 100 ml of blood"
+   ],
+   "a": 0,
+   "why": "20 mg, a quarter of the England and Wales drink-driving limit of 80 mg."
+  },
+  {
+   "q": "The transponder code for radio failure is:",
+   "o": [
+    "7600",
+    "7700",
+    "7500",
+    "7000"
+   ],
+   "a": 0,
+   "why": "7600 is radio failure; 7700 emergency; 7500 unlawful interference; 7000 conspicuity."
+  },
+  {
+   "q": "Below FL100 a VFR pilot should squawk 7000 with ALT unless:",
+   "o": [
+    "ATC has assigned a code, or a special-purpose code applies",
+    "Flying in Class G",
+    "The visibility is over 10 km",
+    "The aircraft has Mode S"
+   ],
+   "a": 0,
+   "why": "Use 7000 unless you have been given a code or need a special one (emergency, lost, parachuting, aerobatics)."
+  },
+  {
+   "q": "An Airprox reported by radio must be confirmed:",
+   "o": [
+    "Within 7 days on CA Form 1094",
+    "Within 24 hours by phone",
+    "Within 28 days in writing",
+    "Only if ATC asks"
+   ],
+   "a": 0,
+   "why": "Report by radio at once, then confirm within 7 days online (CA1094)."
+  },
+  {
+   "q": "The final authority for the safe conduct of a flight rests with:",
+   "o": [
+    "The pilot-in-command",
+    "The aircraft operator",
+    "The person at the controls",
+    "ATC in controlled airspace"
+   ],
+   "a": 0,
+   "why": "Annex 6 and the ANO: the PIC. The person at the controls may not be the PIC, and ATC never takes over that authority."
+  },
+  {
+   "q": "A pilot plans a local flight, taking off and landing at the same aerodrome within the UK, in a Part-21 aeroplane. Which document may stay on the ground?",
+   "o": [
+    "The certificate of insurance",
+    "The aircraft Flight Manual",
+    "Current charts",
+    "The interception procedures"
+   ],
+   "a": 0,
+   "why": "Items 2 to 8 (registration, CofA, noise certificate, approvals, radio licence, insurance, journey log) may stay at the aerodrome. The Flight Manual, charts and interception procedures still fly."
+  },
+  {
+   "q": "A captive balloon or kite must not be flown:",
+   "o": [
+    "Higher than 60 m agl, within 60 m of a structure, or inside an ATZ",
+    "Higher than 150 m agl or within 150 m of a structure",
+    "Higher than 60 m agl only",
+    "Within 600 m of a congested area"
+   ],
+   "a": 0,
+   "why": "All three limits apply: 60 m agl, 60 m from vessels, vehicles or structures, and not in an ATZ."
+  },
+  {
+   "q": "Under Part-NCO, a single-engine aeroplane flying further from land than 30 minutes at cruise or 50 nm (whichever is less):",
+   "o": [
+    "The PIC must assess the survival risk and decide on life rafts and distress signals",
+    "Must carry a life raft for everyone on board",
+    "Needs no extra equipment if life jackets are worn",
+    "Must file a flight plan with D&D"
+   ],
+   "a": 0,
+   "why": "Part-NCO leaves the raft decision to the PIC's risk assessment beyond 30 minutes or 50 nm. The book's 100 nm raft rule is ICAO Annex 6."
+  },
+  {
+   "q": "In an unpressurised aeroplane the crew must use oxygen:",
+   "o": [
+    "Above 10,000 ft for more than 30 minutes, and at all times above 13,000 ft",
+    "At all times above 10,000 ft",
+    "Above 13,000 ft for more than 30 minutes",
+    "Above 8,000 ft at night"
+   ],
+   "a": 0,
+   "why": "The 30-minute allowance applies between 10,000 and 13,000 ft; above 13,000 ft oxygen is needed all the time."
+  }
+ ]
+}

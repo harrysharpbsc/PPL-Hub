@@ -1,0 +1,200 @@
+{
+ "seq": 33,
+ "s": 6,
+ "topic": "Emergencies (Skyway Code)",
+ "order": 35,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "Know your aircraft's checklists, fly the aircraft, assess, then declare an emergency in good time (on 121.5 MHz if not talking to anyone). The call format follows MAYDAY or PAN PAN three times, station, callsign, type, nature, intentions, position, altitude, heading and other information. D&D at London Area Control Centre can give fast position fixes. After engine failure land ahead after take-off and use a constant-aspect approach to a field. Built from the Skyway Code pp.136-141.",
+ "src": [
+  [
+   "The Skyway Code (CAP 1535 v4, Nov 2023), pp.136-141",
+   "https://www.caa.co.uk/our-work/publications/documents/content/cap1535s/"
+  ]
+ ],
+ "sections": [
+  [
+   "Key principles",
+   [
+    "Know the AFM checklists for time-critical emergencies by heart",
+    "<b>Fly the aircraft</b>: accidents often happen when a non-lethal problem distracts from flying. Keep a safe flying speed",
+    "<b>Assess</b> before acting. Do not jump to conclusions",
+    "<b>Declare</b> an emergency in good time. It is easier to cancel than to start too late. If not with an ATSU use <code>121.5 MHz</code>",
+    "Select <code>7700</code>. 'Mayday out' means no reply needed"
+   ]
+  ],
+  [
+   "Mayday and Pan call format",
+   [
+    "Distress: 'Mayday' three times. Urgency: 'Pan Pan' three times",
+    "Then: station addressed, callsign, aircraft type, nature of emergency, intentions, position, altitude, heading, other information (persons on board, pilot qualifications)",
+    "There is no ICAO requirement to include pilot qualifications but doing so helps UK controllers"
+   ]
+  ],
+  [
+   "Distress and Diversion Cell (D&D)",
+   [
+    "The emergency centre at the London Area Control Centre, available <b>24 hours</b> to pilots in UK airspace in distress or with difficulties such as being unsure of position",
+    "Can give accurate position fixes by direction finding. Instant fixes are available in the London FIR at or above <code>3,000 ft</code> AMSL over land east of Wales and south of Manchester, and in the Scottish FIR at or above 8,500 ft",
+    "Also takes practice calls ('Practice PAN' three times) and training fixes if no real emergency is in progress"
+   ]
+  ],
+  [
+   "Lost, comms and electrical failure",
+   [
+    "<b>Lost</b>: squawk <code>0030</code>, ask a radar ATSU or call D&D on 121.5, orbit a landmark and do not fly aimlessly",
+    "<b>Comms loss</b>: check volume, squelch, frequency and audio panel first, then set <code>7600</code>, stay in VMC and consider a quiet aerodrome outside CAS. Overhead observe the signal square and light signals",
+    "<b>Electrical failure</b>: alternator failure is common and the battery may give about 20 minutes. Reduce load, expect to lose the radio, know which systems are electric (flaps)"
+   ]
+  ],
+  [
+   "Engine failure and field selection",
+   [
+    "Know your best glide speed and procedure",
+    "Shortly after take-off <b>land ahead</b>, rather than turning back",
+    "With height check common causes: fuel selection and carb icing",
+    "With a partial failure decide positively between a field and an aerodrome",
+    "Field choice: wind (into wind), size (bigger), surroundings (power lines), shape (square), surface (grass is better than ploughed fields or crops) and slope (avoid)",
+    "<b>Constant aspect</b> approach: enter the pattern, assess the visual angle at about 45°, keep that angle constant by tightening or widening the turn, aim further in if using full flap or gear, and side slip or S-turn if high"
+   ]
+  ],
+  [
+   "Fire and ditching",
+   [
+    "Fire on the ground: usually when starting. Cut mixture and fuel, keep cranking with the throttle open to draw fire back, otherwise leave upwind",
+    "Fire in the air: engine or electrical. Shut down and force land. Do not reset a circuit breaker more than once",
+    "Ditching: wear lifejackets (belt over the jacket) and carry a liferaft for significant water crossings. In winter you are unlikely to survive more than an hour immersed unless in a survival suit"
+   ]
+  ]
+ ],
+ "sum": {
+  "Key principles": "Fly, assess, declare, and use 121.5 when not with an ATSU.",
+  "Mayday and Pan call format": "Station, callsign, type, nature, intentions and position.",
+  "Distress and Diversion Cell (D&D)": "24-hour London centre for fixes and help.",
+  "Lost, comms and electrical failure": "0030, 7600 and about 20 minutes of battery.",
+  "Engine failure and field selection": "Land ahead, pick a field and use constant aspect.",
+  "Fire and ditching": "Fire drills and survival after ditching."
+ },
+ "cards": [
+  {
+   "q": "What frequency do you use if not talking to an ATSU in an emergency?",
+   "a": "121.5 MHz."
+  },
+  {
+   "q": "What squawk shows an emergency?",
+   "a": "7700."
+  },
+  {
+   "q": "What does 'Mayday out' mean?",
+   "a": "No further reply is needed."
+  },
+  {
+   "q": "What is D&D?",
+   "a": "The Distress and Diversion Cell at London Area Control Centre."
+  },
+  {
+   "q": "When is D&D available?",
+   "a": "24 hours a day."
+  },
+  {
+   "q": "Squawk if lost?",
+   "a": "0030."
+  },
+  {
+   "q": "Squawk for radio failure?",
+   "a": "7600."
+  },
+  {
+   "q": "How long might a battery last after alternator failure?",
+   "a": "Perhaps 20 minutes."
+  },
+  {
+   "q": "What to do after engine failure just after take-off?",
+   "a": "Land ahead rather than turn back."
+  },
+  {
+   "q": "Best field surface?",
+   "a": "Grass, better than ploughed fields or crops."
+  },
+  {
+   "q": "What is a constant-aspect approach?",
+   "a": "Keep the visual angle to the landing spot constant by adjusting the turn."
+  },
+  {
+   "q": "Maximum circuit breaker resets for a suspected fire risk?",
+   "a": "Never reset more than once."
+  },
+  {
+   "q": "Immersion survival time in winter without a suit?",
+   "a": "Unlikely more than an hour."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "If not talking to a ATSU and you have an emergency, call on:",
+   "o": [
+    "118.0",
+    "121.5",
+    "123.45",
+    "135.48"
+   ],
+   "a": 1,
+   "why": "121.5 MHz is the emergency frequency monitored by D&D."
+  },
+  {
+   "q": "In the call order, after the station you give:",
+   "o": [
+    "Intentions",
+    "Callsign, then aircraft type",
+    "Position",
+    "Fuel"
+   ],
+   "a": 1,
+   "why": "Station, callsign, type, nature, intentions, position, altitude, heading, other information."
+  },
+  {
+   "q": "After engine failure just after take-off you should:",
+   "o": [
+    "Turn back",
+    "Land ahead",
+    "Climb",
+    "Stretch the glide"
+   ],
+   "a": 1,
+   "why": "Landing ahead is safer than attempting a turn back."
+  },
+  {
+   "q": "After alternator failure the battery may give about:",
+   "o": [
+    "2 minutes",
+    "20 minutes",
+    "2 hours",
+    "Unlimited power"
+   ],
+   "a": 1,
+   "why": "Reduce loads to extend it."
+  },
+  {
+   "q": "Radio failure: before concluding you have a failure you should check:",
+   "o": [
+    "Nothing",
+    "Volume, squelch, frequency and audio selector panel",
+    "Only the squawk",
+    "Fuel"
+   ],
+   "a": 1,
+   "why": "Many apparent failures are caused by incorrect settings."
+  },
+  {
+   "q": "Which is a good forced-landing field surface?",
+   "o": [
+    "Ploughed field",
+    "Crops",
+    "Grass",
+    "Steep slope"
+   ],
+   "a": 2,
+   "why": "Grass is one of the better surfaces."
+  }
+ ]
+}

@@ -1,0 +1,199 @@
+{
+ "seq": 8,
+ "s": 0,
+ "topic": "Instrument Flight Rules",
+ "num": 9,
+ "order": 90,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "IFR lets trained pilots fly without visual reference. Outside take-off and landing, stay 1,000 ft above the highest obstacle within 8 km (2,000 ft over high or mountainous terrain). Above 3,000 ft amsl or the transition altitude, cruise at semicircular levels: magnetic track 000° to 179° odd thousands, 180° to 359° even thousands (VFR adds 500 ft). In controlled airspace an IFR flight needs a flight plan and clearance, and reports position as callsign, position, time, level, next position and estimate.",
+ "sections": [
+  [
+   "Instrument Flight Rules (SERA.5015)",
+   [
+    "VFR is too restrictive for regular air services, so properly trained pilots with suitable instruments can fly in cloud and other non-visual conditions under the <b class=\"k\">Instrument Flight Rules (IFR)</b>.",
+    "Only two flight categories exist: <b class=\"k\">VFR</b> or <b class=\"k\">IFR</b>."
+   ]
+  ],
+  [
+   "The minimum height rule",
+   [
+    "Except for <b class=\"k\">take-off or landing</b>, or when specifically authorised, an IFR flight must not fly below the <b class=\"k\">minimum flight altitude</b> set by the State overflown. Where none is set:",
+    "– over <b class=\"k\">high terrain or mountainous areas</b>: at least <code>2,000 ft</code> above the highest obstacle within <code>8 km</code> of the aircraft's estimated position",
+    "– <code>elsewhere</code>: at least <code>1,000 ft</code> above the highest obstacle within <code>8 km</code>",
+    "<b>Exam trap</b> The distance is <code>8 km</code> of the aircraft's position, not <code>600 m</code> (that is the congested-area low-flying rule) and not nautical miles."
+   ]
+  ],
+  [
+   "Cruising levels: the semicircular rule (SERA.5015, Appendix 3)",
+   [
+    "In level flight above <code>3,000 ft</code> amsl, or above the <b class=\"k\">transition altitude</b> if that is higher, choose a cruising level by the <b class=\"k\">semicircular rule</b>. Flight levels use <code>1013.2 hPa</code>.",
+    "The level depends on <b class=\"k\">magnetic track</b>:",
+    "– <code>000°</code> to <code>179°</code> (east): IFR at <b class=\"k\">odd</b> thousands (FL30, 50, 70, 90 ...); VFR at odd thousands <b class=\"k\">plus 500 ft</b> (FL35, 55, 75 ...)",
+    "– <code>180°</code> to <code>359°</code> (west): IFR at <b class=\"k\">even</b> thousands (FL20, 40, 60, 80 ...); VFR at even thousands <b class=\"k\">plus 500 ft</b> (FL45, 65, 85 ...)",
+    "Above FL290 the steps change (FL300, 310 ... with 1,000 ft RVSM spacing up to FL410).",
+    "An IFR aircraft may cruise at another level when <b class=\"k\">ATC instructs</b> it or in a notified <b class=\"k\">holding procedure</b>.",
+    "<b>Memory aid</b> <b class=\"k\">East is odd</b> (\"Every Odd Day\"), west is even."
+   ]
+  ],
+  [
+   "Flight plan and ATC clearance (SERA.5020)",
+   [
+    "Before any IFR flight in <b class=\"k\">controlled airspace</b>, the commander must <b class=\"k\">file a flight plan</b> (whether IMC or VMC) and get an <b class=\"k\">ATC clearance</b> based on it.",
+    "In controlled airspace an IFR pilot must follow:",
+    "– the <b class=\"k\">ATC clearance</b> and any further instructions",
+    "– the published <b class=\"k\">holding and approach procedures</b> at the destination, unless ATC says otherwise",
+    "You may <b class=\"k\">cancel IFR</b> and continue VFR if you can <b class=\"k\">stay in VMC</b> while in controlled airspace and you <b class=\"k\">tell ATC</b>, asking them to cancel your IFR flight plan.",
+    "If you have to depart from these rules to <b class=\"k\">avoid immediate danger</b>, tell ATC <b class=\"k\">as soon as possible</b>.",
+    "Unless the flight plan has been cancelled, tell ATC when you <b class=\"k\">land within</b> or <b class=\"k\">leave</b> controlled airspace."
+   ]
+  ],
+  [
+   "Position reports (SERA.5025)",
+   [
+    "An IFR flight in, or about to enter, controlled airspace reports <b class=\"k\">time, position and level</b> at notified reporting points or intervals, or when ATC asks.",
+    "Order: <b class=\"k\">aircraft callsign</b>, <b class=\"k\">position</b>, <b class=\"k\">time</b>, <b class=\"k\">level</b>, <b class=\"k\">next position and estimate</b>.",
+    "Example: \"G-ABCD, Wicken four seven, flight level four zero, Marlow five seven\"."
+   ]
+  ]
+ ],
+ "sum": {
+  "Instrument Flight Rules (SERA.5015)": "IFR is for flight without visual reference; every flight is either VFR or IFR.",
+  "The minimum height rule": "1,000 ft above the highest obstacle within 8 km, or 2,000 ft over high or mountainous terrain.",
+  "Cruising levels: the semicircular rule (SERA.5015, Appendix 3)": "Track 000° to 179°: odd thousands; 180° to 359°: even thousands. VFR adds 500 ft.",
+  "Flight plan and ATC clearance (SERA.5020)": "IFR in controlled airspace: file a flight plan and get a clearance, whatever the weather.",
+  "Position reports (SERA.5025)": "Callsign, position, time, level, next position and estimate."
+ },
+ "cards": [
+  {
+   "q": "IFR minimum height, ordinary terrain?",
+   "a": "1,000 ft above the highest obstacle within 8 km of the aircraft."
+  },
+  {
+   "q": "IFR minimum height over high or mountainous terrain?",
+   "a": "2,000 ft above the highest obstacle within 8 km."
+  },
+  {
+   "q": "When does the semicircular rule apply?",
+   "a": "In level flight above 3,000 ft amsl or the transition altitude, whichever is higher."
+  },
+  {
+   "q": "IFR level for magnetic track 090°?",
+   "a": "Odd thousands: FL30, 50, 70 ..."
+  },
+  {
+   "q": "IFR level for magnetic track 270°?",
+   "a": "Even thousands: FL40, 60, 80 ..."
+  },
+  {
+   "q": "VFR semicircular level for track 045°?",
+   "a": "Odd plus 500 ft: FL35, 55, 75 ..."
+  },
+  {
+   "q": "What two things must an IFR flight have in controlled airspace?",
+   "a": "A filed flight plan and an ATC clearance."
+  },
+  {
+   "q": "Can an IFR flight switch to VFR in CAS?",
+   "a": "Yes, if it can stay in VMC and tells ATC to cancel its IFR flight plan."
+  },
+  {
+   "q": "Order of an IFR position report?",
+   "a": "Callsign, position, time, level, next position and estimate."
+  },
+  {
+   "q": "Is the semicircular rule based on true or magnetic track?",
+   "a": "Magnetic track."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "The minimum height for IFR flight over non-mountainous terrain is:",
+   "o": [
+    "1,000 ft above the highest obstacle within 8 km of the aircraft",
+    "1,000 ft above the highest obstacle within 600 m",
+    "1,500 ft above the highest obstacle within 10 nm",
+    "1,000 ft above ground level"
+   ],
+   "a": 0,
+   "why": "SERA.5015: 1,000 ft within 8 km (2,000 ft over high terrain). The 600 m figure belongs to the congested-area low-flying rule."
+  },
+  {
+   "q": "Over mountainous terrain an IFR flight must be at least:",
+   "o": [
+    "2,000 ft above the highest obstacle within 8 km",
+    "2,000 ft above the highest obstacle within 8 nm",
+    "1,000 ft above the highest obstacle within 8 km",
+    "1,500 ft above the highest obstacle within 5 km"
+   ],
+   "a": 0,
+   "why": "Mountainous areas double the margin to 2,000 ft; the radius stays 8 km."
+  },
+  {
+   "q": "An IFR flight on a magnetic track of 175° should cruise at:",
+   "o": [
+    "FL70",
+    "FL80",
+    "FL75",
+    "FL60"
+   ],
+   "a": 0,
+   "why": "000° to 179° takes odd thousands, so FL70. FL75 would be a VFR level; FL80 and FL60 are for westbound tracks."
+  },
+  {
+   "q": "A VFR flight on a magnetic track of 260° following the semicircular rule would choose:",
+   "o": [
+    "FL65",
+    "FL55",
+    "FL60",
+    "FL70"
+   ],
+   "a": 0,
+   "why": "180° to 359° is even thousands; VFR adds 500 ft, giving FL45, 65, 85. FL60 is the IFR level."
+  },
+  {
+   "q": "Above which level does the semicircular rule apply in level flight?",
+   "o": [
+    "3,000 ft amsl or the transition altitude, whichever is higher",
+    "3,000 ft amsl or the transition altitude, whichever is lower",
+    "FL100",
+    "The transition level"
+   ],
+   "a": 0,
+   "why": "The higher of 3,000 ft amsl and the transition altitude."
+  },
+  {
+   "q": "Before an IFR flight in controlled airspace in VMC, the commander must:",
+   "o": [
+    "File a flight plan and obtain an ATC clearance based on it",
+    "Obtain an ATC clearance; a flight plan is needed only in IMC",
+    "File a flight plan; no clearance is needed in VMC",
+    "Book out with the departure aerodrome only"
+   ],
+   "a": 0,
+   "why": "SERA.5020: flight plan and clearance, whether IMC or VMC."
+  },
+  {
+   "q": "The correct order for an IFR position report is:",
+   "o": [
+    "Callsign, position, time, level, next position and estimate",
+    "Callsign, position, level, next position and estimate",
+    "Ground station, position, time, level, next position and estimate",
+    "Callsign, position, time, next position, level and estimate"
+   ],
+   "a": 0,
+   "why": "Time comes after position and level after time. Leaving out the time, or starting with the ground station, is the trap."
+  },
+  {
+   "q": "An IFR flight in controlled airspace in VMC wishes to continue VFR. It must:",
+   "o": [
+    "Stay in VMC and tell ATC, asking them to cancel its IFR flight plan",
+    "Leave controlled airspace first",
+    "Simply change its squawk to 7000",
+    "Get a Special VFR clearance"
+   ],
+   "a": 0,
+   "why": "Cancelling IFR is allowed if you can stay in VMC and tell ATC."
+  }
+ ]
+}

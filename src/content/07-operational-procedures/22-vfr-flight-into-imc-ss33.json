@@ -1,0 +1,222 @@
+{
+ "seq": 22,
+ "s": 6,
+ "topic": "VFR flight into IMC (SS33)",
+ "order": 20,
+ "conf": "weak",
+ "status": "draft",
+ "summary": "Most VFR-into-IMC accidents follow poor weather decisions, pressure to press on, and no instrument skills. Plan a minimum safe altitude (add 500 or 1,000 ft to the MEF), avoid flight below 1,500 ft AGL en route, and decide early to turn back. If you enter IMC, fly the attitude indicator, make a gentle rate 1 turn of no more than 20° bank through 180°, call ATC and make a MAYDAY. Built from CAA Safety Sense Leaflet 33.",
+ "src": [
+  [
+   "Safety Sense Leaflet 33: VFR Flight into IMC",
+   "https://www.caa.co.uk/media/v43pcnok/safety-sense-leaflet-33.pdf"
+  ]
+ ],
+ "sections": [
+  [
+   "Causes of VFR into IMC",
+   [
+    "Complex or uncertain forecasts, or only checking departure and destination weather",
+    "Weather deteriorating on the day, and pressure to continue (get-there-itis)",
+    "Distraction from navigation or radio",
+    "No instrument qualification: instrument flying is a separate perishable skill"
+   ]
+  ],
+  [
+   "Spatial disorientation types",
+   [
+    "<b>Visual</b>: false horizon from sloping cloud",
+    "<b>Vestibular</b>: the leans, feeling banked the wrong way",
+    "<b>Somatogravic</b>: acceleration feels like a pitch-up",
+    "<b>Coriolis</b>: head movement in a prolonged turn gives false rotation",
+    "<b>Inversion</b>: abrupt level-off feels like tumbling"
+   ]
+  ],
+  [
+   "Planning to avoid IMC",
+   [
+    "Watch weather for days beforehand and review METARs, TAFs and the F215 chart. Account for elevation differences",
+    "Red flags: widespread PROB30, big time windows for change, unclear early-morning data",
+    "Warm fronts: low cloud and poor visibility. Cold fronts: showers with unpredictable cloud. Persistent high pressure: haze and unclear horizon",
+    "Set a <b>minimum safe altitude</b>: add <code>500 ft or 1,000 ft</code> to the Maximum Elevation Figure (MEF) for each quadrangle",
+    "En-route flight below <code>1,500 ft AGL</code> is not recommended",
+    "Have a Plan B, identify diversion aerodromes, and brief passengers that weather may change the plan. Do not take off just to have a look"
+   ]
+  ],
+  [
+   "VFR on top",
+   [
+    "VMC above cloud without sight of the surface",
+    "Risks: no hole at the destination to get down, and an emergency above cloud",
+    "Class G at or below 3,000 ft AMSL (or 1,000 ft above terrain, whichever is higher): remain in sight of the surface",
+    "Above 3,000 ft AMSL: <code>5 km</code> visibility, <code>1,500 m</code> horizontal and <code>1,000 ft</code> vertical from cloud"
+   ]
+  ],
+  [
+   "In-flight decisions and warning signs",
+   [
+    "Use planned decision points and look ahead and to the sides",
+    "Warning signs: scraps of cloud passing close, intermittent loss of horizon, a warm front sky closing the gaps, haze or rain fading the horizon",
+    "High risk at night, over sea and over featureless terrain",
+    "Start recovery when you recognise the risk, not after you enter cloud",
+    "Never descend below MSA in IMC. If weather closes in on all sides, consider a precautionary field landing"
+   ]
+  ],
+  [
+   "If you enter IMC",
+   [
+    "Priorities: <b>Aviate, Navigate, Communicate</b>",
+    "Trust the instruments, focus on the attitude indicator, make small inputs and trim",
+    "If control is difficult, hold straight and level and avoid power changes and turns",
+    "Turn <code>180°</code> once stable, toward where you believe VMC lies"
+   ]
+  ],
+  [
+   "The 180° turn",
+   [
+    "Note the target heading, choose a direction, and set a <b>rate 1</b> turn with bank no more than <code>20°</code>",
+    "Use a little back pressure to prevent descent and scan attitude, heading, airspeed and turn coordinator",
+    "Roll out near the target heading and hold it until visual references appear",
+    "No attitude indicator: use altimeter and turn and slip, keeping the altimeter steady",
+    "No heading indicator: rate 1 takes <code>2 minutes</code> for 360°, so <code>1 minute</code> for 180°. Do not trust the compass in the turn"
+   ]
+  ],
+  [
+   "Calling for help",
+   [
+    "Call ATC as soon as you have capacity, but fly the aircraft first",
+    "A <b>MAYDAY</b> is appropriate in VFR into IMC",
+    "Be honest that you are not IMC qualified. Best help: units with radar, or the D&amp;D cell on <code>121.5 MHz</code>",
+    "Landing below VFR minima is a last resort and a practised SRA can help"
+   ]
+  ]
+ ],
+ "sum": {
+  "Causes of VFR into IMC": "Poor forecasts, pressure to continue and distraction.",
+  "Spatial disorientation types": "Visual, vestibular, somatogravic, Coriolis and inversion illusions.",
+  "Planning to avoid IMC": "Weather review, MSA with a 500 or 1,000 ft margin and a Plan B.",
+  "VFR on top": "Minima and risks of flying above cloud.",
+  "In-flight decisions and warning signs": "Spot the signs early and turn back.",
+  "If you enter IMC": "Aviate, Navigate, Communicate and stay straight and level.",
+  "The 180° turn": "Rate 1, 20° bank, 1 minute for 180°.",
+  "Calling for help": "Call MAYDAY and use ATC or D&D on 121.5."
+ },
+ "cards": [
+  {
+   "q": "What does the MEF stand for and how is it used?",
+   "a": "Maximum Elevation Figure. Add 500 or 1,000 ft for a safe altitude margin."
+  },
+  {
+   "q": "Lowest recommended en-route height under VFR?",
+   "a": "1,500 ft AGL."
+  },
+  {
+   "q": "VMC minima above 3,000 ft AMSL in Class G?",
+   "a": "5 km visibility, 1,500 m horizontal and 1,000 ft vertical from cloud."
+  },
+  {
+   "q": "Priority order if you enter cloud?",
+   "a": "Aviate, Navigate, Communicate."
+  },
+  {
+   "q": "Maximum bank for the 180° turn?",
+   "a": "20° (rate 1)."
+  },
+  {
+   "q": "Time for a 180° rate 1 turn?",
+   "a": "1 minute (2 minutes for 360°)."
+  },
+  {
+   "q": "What is VFR on top?",
+   "a": "VMC above cloud without sight of the surface."
+  },
+  {
+   "q": "What type of call should you make in VFR into IMC?",
+   "a": "MAYDAY."
+  },
+  {
+   "q": "Which frequency for the D&D cell?",
+   "a": "121.5 MHz."
+  },
+  {
+   "q": "Which illusion makes you feel banked the wrong way?",
+   "a": "The leans (vestibular)."
+  },
+  {
+   "q": "What is somatogravic illusion?",
+   "a": "Acceleration feels like a pitch-up."
+  },
+  {
+   "q": "Never do what in IMC?",
+   "a": "Descend below MSA."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which is the recommended priority order in IMC?",
+   "o": [
+    "Communicate, Navigate, Aviate",
+    "Aviate, Navigate, Communicate",
+    "Navigate, Aviate, Communicate",
+    "Aviate, Communicate, Navigate"
+   ],
+   "a": 1,
+   "why": "Flying the aircraft comes first."
+  },
+  {
+   "q": "Without a heading indicator, how long does a rate 1 turn through 180° take?",
+   "o": [
+    "30 seconds",
+    "1 minute",
+    "2 minutes",
+    "3 minutes"
+   ],
+   "a": 1,
+   "why": "Rate 1 is 2 minutes for 360°, so 1 minute for 180°."
+  },
+  {
+   "q": "A sensible minimum safe altitude margin above the MEF is:",
+   "o": [
+    "100 ft",
+    "500 or 1,000 ft",
+    "2,500 ft",
+    "None needed"
+   ],
+   "a": 1,
+   "why": "The leaflet notes common practice of adding 500 or 1,000 ft."
+  },
+  {
+   "q": "Maximum bank angle suggested for the 180° turn in IMC:",
+   "o": [
+    "10°",
+    "20°",
+    "30°",
+    "45°"
+   ],
+   "a": 1,
+   "why": "Rate 1 turn, no more than 20° bank, with a little back pressure."
+  },
+  {
+   "q": "Which illusion makes acceleration feel like a pitch-up?",
+   "o": [
+    "Coriolis",
+    "Leans",
+    "Somatogravic",
+    "Inversion"
+   ],
+   "a": 2,
+   "why": "Somatogravic illusion is caused by rapid acceleration."
+  },
+  {
+   "q": "Which call is appropriate when you inadvertently enter IMC without a rating?",
+   "o": [
+    "No call needed",
+    "MAYDAY",
+    "Routine position report",
+    "Weather request only"
+   ],
+   "a": 1,
+   "why": "The leaflet advises a MAYDAY call in a VFR-into-IMC situation."
+  }
+ ]
+}
