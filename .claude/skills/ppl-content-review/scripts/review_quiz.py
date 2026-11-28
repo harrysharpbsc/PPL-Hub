@@ -19,10 +19,10 @@ slug = lambda s: re.sub(r'[^a-z0-9]+', '-', s.lower()).strip('-')
 CSS = """<style>
 .diff{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0}
 @media (max-width:640px){.diff{grid-template-columns:1fr}}
-.diff>div{border:1px solid var(--line,#d6dbe3);border-radius:10px;padding:10px 12px;min-width:0}
+.diff>div{border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-width:0}
 .diff h4{margin:0 0 6px;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;opacity:.7}
 .diff ol{margin:0;padding-left:20px}.diff li{margin:3px 0;overflow-wrap:anywhere}
-.diff li.r{font-weight:600;color:var(--good,#2c7a3f)}.diff li.r::after{content:"  ✓"}
+.diff li.r{font-weight:600;color:var(--good)}.diff li.r::after{content:"  ✓"}
 .diff .len{opacity:.6;font-size:.8rem;font-weight:400}
 .diff p{margin:6px 0 0;overflow-wrap:anywhere}.src{font-size:.9rem;opacity:.8;margin:4px 0}
 </style>"""
