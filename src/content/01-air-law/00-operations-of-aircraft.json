@@ -7,6 +7,10 @@
  "conf": "weak",
  "status": "draft",
  "summary": "EASA sorts aviation activity three ways: commercial or non-commercial, air transport or specialised operation, and complex or other-than-complex aircraft. An aircraft is complex if it meets criteria on mass, seating, crew or engines. The Basic Regulation splits into Part-NCO, Part-FCL and SERA. Modern Part-21 aircraft use these, while non-Part-21 aircraft (microlights, gyroplanes, vintage, ex-military and amateur-built) come under ANO 2016.",
+ "note": {
+  "file": "01 Operation of aircraft.md",
+  "modified": "2026-10-05T19:21:12.170Z"
+ },
  "sections": [
   [
    "EASA classifies civil aviation activity",

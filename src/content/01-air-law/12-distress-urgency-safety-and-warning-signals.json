@@ -7,6 +7,10 @@
  "conf": "weak",
  "status": "draft",
  "summary": "There are two states of emergency. Distress (MAYDAY) is grave and imminent danger needing immediate help; urgency (PAN PAN) is a safety concern without immediate danger. Call first on the frequency in use, otherwise 121.5 MHz, and squawk 7700. Visual distress signals are SOS, red flares or a red parachute flare; flashing landing or navigation lights and white flares mean 'I must land but don't need help'; XXX is an urgent safety message. Student pilots say STUDENT. If you stray into a danger area, leave it as fast as possible without descending. Low on fuel and in danger: declare a MAYDAY.",
+ "note": {
+  "file": "13 Distress Urgency Safety and Warning Signals.md",
+  "modified": "2026-11-27T20:26:19.710Z"
+ },
  "sections": [
   [
    "The two states of emergency",

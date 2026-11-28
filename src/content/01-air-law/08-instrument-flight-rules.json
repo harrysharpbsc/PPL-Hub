@@ -7,6 +7,10 @@
  "conf": "weak",
  "status": "draft",
  "summary": "IFR lets trained pilots fly without visual reference. Outside take-off and landing, stay 1,000 ft above the highest obstacle within 8 km (2,000 ft over high or mountainous terrain). Above 3,000 ft amsl or the transition altitude, cruise at semicircular levels: magnetic track 000° to 179° odd thousands, 180° to 359° even thousands (VFR adds 500 ft). In controlled airspace an IFR flight needs a flight plan and clearance, and reports position as callsign, position, time, level, next position and estimate.",
+ "note": {
+  "file": "09 Instrument Flight Rules.md",
+  "modified": "2026-11-27T20:26:14.881Z"
+ },
  "sections": [
   [
    "Instrument Flight Rules (SERA.5015)",

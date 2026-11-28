@@ -7,6 +7,10 @@
  "conf": "weak",
  "status": "draft",
  "summary": "Before every flight the PIC checks weather, route, equipment, airworthiness, load, fuel with a margin, and performance, then briefs passengers on exits, belts, and oxygen or life jackets if carried. In flight, everyone obeys the commander, a pilot stays at the controls, and nobody flies impaired (20 mg alcohol per 100 ml of blood; at least 8 hours after drinking). Towing, dropping and parachuting need CofA or CAA approval. Carry the documents Part-NCO lists, or leave items 2 to 8 on the ground for an A-to-A flight. Know the squawks (7700, 7600, 7500, 7000), report an Airprox by radio and confirm within 7 days, and know the equipment rules for over-water flight and oxygen.",
+ "note": {
+  "file": "12 Operation of Aircraft.md",
+  "modified": "2026-11-27T20:26:18.520Z"
+ },
  "sections": [
   [
    "Operational rules (UK ANO and Part-NCO)",

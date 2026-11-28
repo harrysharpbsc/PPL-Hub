@@ -15,7 +15,7 @@ Progress is keyed on topic name + question text, so never change those for an ex
 import json, os, re, sys, glob
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.join(HERE, 'content')
+ROOT = os.environ.get('PPL_CONTENT') or os.path.join(HERE, 'content')  # override for tests
 
 TOPIC_KEYS = {'seq': int, 's': int, 'topic': str, 'num': int, 'order': int, 'conf': str, 'status': str,
               'summary': str, 'src': list, 'note': dict, 'sections': list, 'sum': dict, 'cards': list, 'quiz': list}

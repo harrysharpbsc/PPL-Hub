@@ -7,6 +7,10 @@
  "conf": "weak",
  "status": "draft",
  "summary": "An RCC runs search and rescue; 121.5 MHz is watched continuously, and the ATSU last in contact normally starts alerting action. For a SAR watch, file a flight plan, which is advisable more than 10 nm from the coast, over remote areas or without a suitable radio. Diverting? Tell the original destination before ETA plus 30 minutes or SAR action begins. The phases are uncertainty, alert and distress. If you see a craft in distress, keep it in sight, fix your position and report what you see. Ground signals: V assistance, X medical, arrow direction, Y yes, N no; the aircraft rocks its wings (day) or flashes its landing lights twice (night) to show it understood.",
+ "note": {
+  "file": "14 Search and Rescue.md",
+  "modified": "2026-11-27T20:26:20.953Z"
+ },
  "sections": [
   [
    "Search and rescue in the UK",

@@ -7,6 +7,10 @@
  "conf": "weak",
  "status": "draft",
  "summary": "The altimeter is a barometer: what it reads depends on the pressure you set. QNH gives altitude (amsl) for terrain, QFE gives height above the aerodrome for the circuit, and 1013 gives flight levels for separation. En route below 3,000 ft use the Regional Pressure Setting, the lowest forecast QNH for each hour in your Altimeter Setting Region. Above the transition altitude (3,000 ft over most of the UK) use flight levels; under a TMA use an aerodrome QNH from beneath it. Flying into low pressure or cold air puts you lower than indicated: high to low, beware below. Semicircular levels go by magnetic track: east odd, west even, VFR plus 500.",
+ "note": {
+  "file": "05 Altimeter Setting Procedures.md",
+  "modified": "2026-11-24T20:30:21.740Z"
+ },
  "sections": [
   [
    "How the altimeter works",

@@ -7,6 +7,10 @@
  "conf": "weak",
  "status": "draft",
  "summary": "How international and UK aviation law fit together. ICAO and the Chicago Convention set the Articles on sovereignty, registration, documents and licences, with 19 Annexes behind them. EASA and the UK CAA regulate at regional and national level. The UK Aeronautical Information Service covers the AIP and its 28-day AIRAC cycle, colour-coded AICs, NOTAMs and Air Supplements, plus the CAP guides and the layout of the Air Navigation Order 2016.",
+ "note": {
+  "file": "02 Aviation Law and Organisation.md",
+  "modified": "2026-10-09T18:49:23.188Z"
+ },
  "sections": [
   [
    "International Civil Aviation Organisation (ICAO)",

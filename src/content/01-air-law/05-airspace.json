@@ -7,6 +7,10 @@
  "conf": "weak",
  "status": "draft",
  "summary": "UK airspace is the London and Scottish FIRs (surface to FL245). Classes A to E are controlled; F and G are not. Control Zones start at the surface; Control Areas, TMAs and airways start at a base. Class A is closed to VFR, B and F are unused, most CTRs are D, and everything above FL195 is C. ATZs run from the surface to 2,000 ft aal with a 2 or 2.5 nm radius; MATZs to 3,000 ft aal and 5 nm, with 4 nm by 5 nm stubs. Special VFR lets you fly in a CTR below VMC. Know how Danger Areas are drawn and labelled, and the hazards that live in Class G.",
+ "note": {
+  "file": "06 Airspace.md",
+  "modified": "2026-11-24T21:42:52.377Z"
+ },
  "sections": [
   [
    "Flight Information Regions",

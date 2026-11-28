@@ -7,6 +7,11 @@
  "conf": "weak",
  "status": "draft",
  "summary": "VFR keeps you in sight of the ground and clear of cloud. Above FL100 you need 8 km visibility, below it 5 km, and 1,500 m horizontally and 1,000 ft vertically from cloud, except in Class F and G at or below 3,000 ft, where clear of cloud with the surface in sight will do (and 1,500 m visibility at 140 kt or less). The UK lets you fly clear of cloud in Class D below 3,000 ft by day at 140 kt or less. A CTR aerodrome needs 5 km and a 1,500 ft ceiling unless you are Special VFR. At night: ceiling 1,500 ft, ground visibility 5 km, 1,000 ft (2,000 ft over high ground) above obstacles within 8 km.",
+ "note": {
+  "file": "08 Visual Flight Rules.md",
+  "modified": "2026-11-27T23:39:54.322Z",
+  "sha": "8295db317dd64774"
+ },
  "sections": [
   [
    "Visual Flight Rules (SERA.5005)",

@@ -7,6 +7,10 @@
  "conf": "weak",
  "status": "draft",
  "summary": "ATS (ICAO Annex 11) prevent collisions, keep traffic flowing, give information and alert search and rescue. Each airspace class sets who is separated from whom. In the UK you meet ATC (Ground, Tower, Approach), AFIS (\"Information\", no instructions in the air) and A/G (\"Radio\"). Outside controlled airspace CAP 774 gives four services: Basic, Traffic, Deconfliction and Procedural; whichever you get, avoiding traffic and terrain stays your job. Know when a flight plan is required or advisable, and the 30-minute overdue rule.",
+ "note": {
+  "file": "07 Air Traffic Services.md",
+  "modified": "2026-11-24T21:42:53.517Z"
+ },
  "sections": [
   [
    "ICAO Annex 11: objectives of ATS",

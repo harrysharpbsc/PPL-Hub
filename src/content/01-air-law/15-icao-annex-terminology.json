@@ -7,6 +7,10 @@
  "conf": "weak",
  "status": "draft",
  "summary": "The exam uses ICAO's definitions exactly. Know the aerodrome areas (manoeuvring area excludes aprons, movement area includes them), the declared distances (TODA = TORA + clearway, ASDA = TORA + stopway), and the vertical words (altitude from sea level, height from a datum, elevation of a point on the ground, flight level on 1013.2 hPa). A cloud ceiling is the lowest layer below 20,000 ft covering more than half the sky. A CTR starts at the surface, a CTA above it. Flight time runs from first moving to take off until coming to rest. The emergency phases are uncertainty, alert and distress.",
+ "note": {
+  "file": "16 ICAO Annex Terminology.md",
+  "modified": "2026-11-27T20:26:23.142Z"
+ },
  "sections": [
   [
    "ICAO Annex terminology",

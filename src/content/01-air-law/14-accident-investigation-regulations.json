@@ -7,6 +7,10 @@
  "conf": "weak",
  "status": "draft",
  "summary": "An accident happens between boarding with the intention of flight and everyone getting off, when someone is killed or seriously injured by the aircraft (including parts that fall off, and jet blast), when the aircraft suffers structural damage needing major repair (damage only to the engine, propeller, wingtips, aerials, tyres, brakes or small dents doesn't count), or when it is missing. The commander tells the AAIB (Chief Inspector of Air Accidents) and the police by the quickest means. The State where it happens investigates, to find the cause and prevent a repeat, never to blame. Report all bird strikes, and MORs through the CAA's portal.",
+ "note": {
+  "file": "15 Accident Investigation Regulations.md",
+  "modified": "2026-11-27T20:26:22.006Z"
+ },
  "sections": [
   [
    "What counts as an accident",

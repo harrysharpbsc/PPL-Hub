@@ -7,6 +7,10 @@
  "conf": "weak",
  "status": "draft",
  "summary": "Aerodromes are listed in AIP AD. Get prior permission (PPR) before you go; tell your destination if you divert or will be 45 minutes or more late. Green Morse beacons mark civil aerodromes, red military. On the ground give way to landing traffic, turn right head-on, give way to traffic on your right. Declared distances: TORA, TODA (plus clearway), ASDA (plus stopway), LDA. Runway markings are white, taxiway yellow; threshold lights green, end lights red. Learn the signals-area symbols, holding point lines (broken side towards the runway), displaced thresholds, ATC light signals in flight and on the ground, and the main marshalling signals.",
+ "note": {
+  "file": "04 Aerodromes.md",
+  "modified": "2026-11-24T18:01:27.741Z"
+ },
  "sections": [
   [
    "What an aerodrome is",

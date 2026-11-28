@@ -7,6 +7,10 @@
  "conf": "weak",
  "status": "draft",
  "summary": "Annex 7 sets the registration marks: nationality mark first, a hyphen before a letter, once under the left wing (50 cm high) and on the fuselage or fin (30 cm), characters two-thirds as wide as high, plus a fireproof plate by the door. In the UK an aircraft must be registered, and changes go to the CAA in writing. Part-21 aircraft have a non-expiring CofA kept alive by an annual ARC; non-approved maintenance or modification makes the CofA invalid. Maintenance needs a Certificate of Release to Service, defects go in the tech log, logbooks are kept 2 years after the aircraft goes, and an old weight schedule 6 months.",
+ "note": {
+  "file": "10 Registration and Airworthiness.md",
+  "modified": "2026-11-27T20:26:16.076Z"
+ },
  "sections": [
   [
    "Registration and Marking of Aircraft (ICAO Annex 7)",

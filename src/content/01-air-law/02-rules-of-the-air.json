@@ -7,6 +7,10 @@
  "conf": "weak",
  "status": "draft",
  "summary": "The rules that keep aircraft apart. SERA and the UK rules apply ICAO Annex 2, and the commander always has to avoid collisions. Head-on aircraft turn right, the overtaker keeps clear, and converging aircraft give way to less manoeuvrable types or to traffic on their right. Near aerodromes you follow the pattern and turn left, the lower or final aircraft has priority, and navigation lights show which way another aircraft is heading. Low flying rules set 1,000 ft over congested areas and 500 ft elsewhere, with defined exemptions. On international flights you must know the interception signals: rock your wings and follow, squawk 7700 and call on 121.50 MHz.",
+ "note": {
+  "file": "03 Rules of the Air.md",
+  "modified": "2026-11-06T22:40:43.256Z"
+ },
  "sections": [
   [
    "SERA and the UK rules of the air",

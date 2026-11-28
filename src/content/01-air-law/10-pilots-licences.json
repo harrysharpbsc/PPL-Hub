@@ -7,6 +7,10 @@
  "conf": "weak",
  "status": "draft",
  "summary": "UK Part-FCL licences (issued by the CAA) are for life, but you need a valid rating and medical to use them. A PPL(A) needs a Class 1 or 2 medical, 45 hours (25 dual, 10 solo with a 150 nm cross-country and two full-stop landings away), nine exams within 18 months, and a skill test; minimum age 17, solo from 16. Class 2 lasts 60 months under 40, 24 months from 40, 12 months from 50. The SEP rating lasts 24 months: revalidate by a proficiency check in the last 3 months, or by 12 hours in the last 12 months (6 PIC, 12 take-offs and landings, 1 hour with an instructor). To carry passengers, do 3 take-offs, approaches and landings in 90 days (one at night for night). Cost sharing: up to 6 on board, pilot pays a share.",
+ "note": {
+  "file": "11 Pilots Licences.md",
+  "modified": "2026-11-27T20:26:17.317Z"
+ },
  "sections": [
   [
    "Part-FCL and Part-MED",
