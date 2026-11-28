@@ -53,64 +53,103 @@
  "cards": [
   {
    "q": "What does PAVE stand for?",
-   "a": "Pilot, Aircraft, EnVironment, External pressures."
+   "a": "Pilot, Aircraft, EnVironment, External pressures.",
+   "ref": {
+    "sec": "Pre-flight decisions"
+   }
   },
   {
    "q": "What does TEM stand for?",
-   "a": "Threat and error management."
+   "a": "Threat and error management.",
+   "ref": {
+    "sec": "Threat and error management"
+   }
   },
   {
    "q": "What are the three elements of TEM?",
-   "a": "Threats, errors and undesired aircraft states."
+   "a": "Threats, errors and undesired aircraft states.",
+   "ref": {
+    "sec": "Threat and error management"
+   }
   },
   {
    "q": "What is an undesired aircraft state?",
-   "a": "An unsafe attitude, configuration or location."
+   "a": "An unsafe attitude, configuration or location.",
+   "ref": {
+    "sec": "Threat and error management"
+   }
   },
   {
    "q": "Name the three categories of threat.",
-   "a": "Anticipated, unanticipated and latent."
+   "a": "Anticipated, unanticipated and latent.",
+   "ref": {
+    "sec": "Threat and error management"
+   }
   },
   {
    "q": "Give an example of a latent threat.",
-   "a": "Time pressure, fatigue, insufficient skill or poor safety attitude."
+   "a": "Time pressure, fatigue, insufficient skill or poor safety attitude.",
+   "ref": {
+    "sec": "Threat and error management"
+   }
   },
   {
    "q": "Name three types of error.",
-   "a": "Aircraft handling, procedural and communication."
+   "a": "Aircraft handling, procedural and communication.",
+   "ref": {
+    "sec": "Threat and error management"
+   }
   },
   {
    "q": "What is a common cause of all error types?",
-   "a": "Distraction and mental overload."
+   "a": "Distraction and mental overload.",
+   "ref": {
+    "sec": "Threat and error management"
+   }
   },
   {
    "q": "What should you avoid when deciding to fly?",
-   "a": "Waiting 'to see what happens' or 'hoping it will be OK'."
+   "a": "Waiting 'to see what happens' or 'hoping it will be OK'.",
+   "ref": {
+    "sec": "Pre-flight decisions"
+   }
   },
   {
    "q": "What does TEM aim to do?",
-   "a": "Manage threats and errors, not eliminate them."
+   "a": "Manage threats and errors, not eliminate them.",
+   "ref": {
+    "sec": "Threat and error management"
+   }
   },
   {
    "q": "What should you do in most non-normal situations?",
-   "a": "Pause and assess before reacting, unless in immediate danger."
+   "a": "Pause and assess before reacting, unless in immediate danger.",
+   "ref": {
+    "sec": "Stress and in-flight decisions"
+   }
   },
   {
    "q": "What should you do if stressed or fatigued?",
-   "a": "Defer the flight or fly with an instructor."
+   "a": "Defer the flight or fly with an instructor.",
+   "ref": {
+    "sec": "Stress and in-flight decisions"
+   }
   }
  ],
  "quiz": [
   {
    "q": "In PAVE, the E for External pressures includes:",
    "o": [
-    "Engine",
     "Time pressure and passengers",
-    "Weather",
-    "Fuel"
+    "Engine and airframe condition",
+    "Weather along the route",
+    "Fuel and endurance planning"
    ],
-   "a": 1,
-   "why": "Time pressure, delays and passengers are external pressures."
+   "a": 0,
+   "why": "Time pressure, delays and passengers are external pressures.",
+   "ref": {
+    "sec": "Pre-flight decisions"
+   }
   },
   {
    "q": "A forecast of poor weather is which kind of threat?",
@@ -121,7 +160,10 @@
     "Error"
    ],
    "a": 1,
-   "why": "It is known in advance."
+   "why": "It is known in advance.",
+   "ref": {
+    "sec": "Threat and error management"
+   }
   },
   {
    "q": "Fatigue and time pressure are examples of:",
@@ -132,29 +174,38 @@
     "Undesired aircraft states"
    ],
    "a": 1,
-   "why": "Latent threats are background factors."
+   "why": "Latent threats are background factors.",
+   "ref": {
+    "sec": "Threat and error management"
+   }
   },
   {
    "q": "A procedural error often comes from:",
    "o": [
     "Insufficient checklist discipline",
-    "Excess altitude",
-    "Engine icing",
-    "Radar"
+    "Flying at too high an altitude",
+    "Carburettor or engine icing",
+    "Relying too much on radar"
    ],
    "a": 0,
-   "why": "Procedural and communication errors link to checklist and RT discipline."
+   "why": "Procedural and communication errors link to checklist and RT discipline.",
+   "ref": {
+    "sec": "Threat and error management"
+   }
   },
   {
    "q": "TEM is best described as:",
    "o": [
-    "Eliminating all risk",
     "Defensive flying that manages threats and errors",
-    "A navigation method",
-    "An emergency drill"
+    "A way of eliminating all risk before each flight",
+    "A navigation method for avoiding airspace",
+    "An emergency drill for engine failures"
    ],
-   "a": 1,
-   "why": "TEM aims to manage them more effectively."
+   "a": 0,
+   "why": "TEM aims to manage them more effectively.",
+   "ref": {
+    "sec": "Threat and error management"
+   }
   }
  ]
 }

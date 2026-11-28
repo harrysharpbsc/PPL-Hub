@@ -72,51 +72,87 @@
  "cards": [
   {
    "q": "ATZ radius for a runway of 1,850 m or less?",
-   "a": "2 NM."
+   "a": "2 NM.",
+   "ref": {
+    "sec": "ATZ and aerodromes without one"
+   }
   },
   {
    "q": "ATZ radius for a runway over 1,850 m?",
-   "a": "2.5 NM."
+   "a": "2.5 NM.",
+   "ref": {
+    "sec": "ATZ and aerodromes without one"
+   }
   },
   {
    "q": "ATZ height?",
-   "a": "Up to 2,000 ft above the aerodrome."
+   "a": "Up to 2,000 ft above the aerodrome.",
+   "ref": {
+    "sec": "ATZ and aerodromes without one"
+   }
   },
   {
    "q": "What do T and U mean on a chart circle?",
-   "a": "T is intensive training, U is unusual activity such as aerobatics or formation."
+   "a": "T is intensive training, U is unusual activity such as aerobatics or formation.",
+   "ref": {
+    "sec": "ATZ and aerodromes without one"
+   }
   },
   {
    "q": "Is a MATZ controlled airspace for civil aircraft?",
-   "a": "No."
+   "a": "No.",
+   "ref": {
+    "sec": "MATZ"
+   }
   },
   {
    "q": "Standard MATZ dimensions?",
-   "a": "5 NM radius, 3,000 ft above airfield level."
+   "a": "5 NM radius, 3,000 ft above airfield level.",
+   "ref": {
+    "sec": "MATZ"
+   }
   },
   {
    "q": "Can you enter the ATZ within a MATZ without clearance?",
-   "a": "No."
+   "a": "No.",
+   "ref": {
+    "sec": "MATZ"
+   }
   },
   {
    "q": "Which class is a typical UK CTR?",
-   "a": "Class D."
+   "a": "Class D.",
+   "ref": {
+    "sec": "Airspace structure"
+   }
   },
   {
    "q": "Which class are airways and TMAs?",
-   "a": "Normally class A."
+   "a": "Normally class A.",
+   "ref": {
+    "sec": "Airspace structure"
+   }
   },
   {
    "q": "VFR conspicuity squawk?",
-   "a": "7000."
+   "a": "7000.",
+   "ref": {
+    "sec": "Transponder"
+   }
   },
   {
    "q": "Squawk for lost?",
-   "a": "0030."
+   "a": "0030.",
+   "ref": {
+    "sec": "Transponder"
+   }
   },
   {
    "q": "Where is Mode S ES required?",
-   "a": "Class A and C, above FL100, and TMZs."
+   "a": "Class A and C, above FL100, and TMZs.",
+   "ref": {
+    "sec": "Transponder"
+   }
   }
  ],
  "quiz": [
@@ -129,18 +165,24 @@
     "3 NM"
    ],
    "a": 1,
-   "why": "Runways of 1,850 m or less give a 2 NM ATZ."
+   "why": "Runways of 1,850 m or less give a 2 NM ATZ.",
+   "ref": {
+    "sec": "ATZ and aerodromes without one"
+   }
   },
   {
    "q": "A MATZ is:",
    "o": [
-    "Controlled airspace",
     "Not controlled airspace for civilians, but contact is strongly recommended",
-    "Prohibited",
-    "Class A"
+    "Controlled airspace: civil aircraft need a clearance before entering",
+    "Prohibited airspace for civil aircraft while the aerodrome is open",
+    "Class A airspace, so only IFR flights may enter it with a clearance"
    ],
-   "a": 1,
-   "why": "Contact the unit before entering and never enter the ATZ without clearance."
+   "a": 0,
+   "why": "Contact the unit before entering and never enter the ATZ without clearance.",
+   "ref": {
+    "sec": "MATZ"
+   }
   },
   {
    "q": "Which class is most GA controlled airspace in the UK?",
@@ -151,7 +193,10 @@
     "F"
    ],
    "a": 2,
-   "why": "CTRs and CTAs are normally class D."
+   "why": "CTRs and CTAs are normally class D.",
+   "ref": {
+    "sec": "Airspace structure"
+   }
   },
   {
    "q": "Which squawk shows a lost aircraft?",
@@ -162,29 +207,38 @@
     "2000"
    ],
    "a": 2,
-   "why": "0030 is the UK lost code."
+   "why": "0030 is the UK lost code.",
+   "ref": {
+    "sec": "Transponder"
+   }
   },
   {
    "q": "A circle with a T on the VFR chart means:",
    "o": [
-    "Transit allowed",
     "Intensive training",
-    "Tower",
-    "TMZ"
+    "Transit allowed",
+    "Tower frequency",
+    "A TMZ boundary"
    ],
-   "a": 1,
-   "why": "T denotes intensive use for training flights."
+   "a": 0,
+   "why": "T denotes intensive use for training flights.",
+   "ref": {
+    "sec": "ATZ and aerodromes without one"
+   }
   },
   {
    "q": "Mode S Elementary Surveillance is required:",
    "o": [
-    "In class G",
     "In class A or C airspace, above FL100 and in TMZs",
-    "Only at night",
-    "Only IFR"
+    "In class G airspace, above 3,000 ft and in ATZs",
+    "At night, above FL100 and in all controlled airspace",
+    "For IFR flights only, above FL100 and in TMZs"
    ],
-   "a": 1,
-   "why": "Those are the circumstances listed by the Skyway Code."
+   "a": 0,
+   "why": "Those are the circumstances listed by the Skyway Code.",
+   "ref": {
+    "sec": "Transponder"
+   }
   }
  ]
 }

@@ -72,64 +72,103 @@
  "cards": [
   {
    "q": "Who has final authority over the aircraft?",
-   "a": "The pilot in command."
+   "a": "The pilot in command.",
+   "ref": {
+    "sec": "Pilot in command"
+   }
   },
   {
    "q": "Closest approach allowed to any person, vessel, vehicle or structure (not taking off or landing)?",
-   "a": "500 ft."
+   "a": "500 ft.",
+   "ref": {
+    "sec": "Low flying and congested areas"
+   }
   },
   {
    "q": "Minimum height over congested areas?",
-   "a": "1,000 ft above the highest obstacle within 600 m."
+   "a": "1,000 ft above the highest obstacle within 600 m.",
+   "ref": {
+    "sec": "Low flying and congested areas"
+   }
   },
   {
    "q": "Head-on in the air?",
-   "a": "Both turn right."
+   "a": "Both turn right.",
+   "ref": {
+    "sec": "Right of way in the air"
+   }
   },
   {
    "q": "Converging aircraft: who gives way?",
-   "a": "The one that has the other on its right."
+   "a": "The one that has the other on its right.",
+   "ref": {
+    "sec": "Right of way in the air"
+   }
   },
   {
    "q": "Overtaking aircraft pass on which side?",
-   "a": "The right (sailplanes may pass either side)."
+   "a": "The right (sailplanes may pass either side).",
+   "ref": {
+    "sec": "Right of way in the air"
+   }
   },
   {
    "q": "Overtaking sector angle?",
-   "a": "Within 70° either side of the extended centreline."
+   "a": "Within 70° either side of the extended centreline.",
+   "ref": {
+    "sec": "Right of way in the air"
+   }
   },
   {
    "q": "Who gives way, a powered aircraft or a glider?",
-   "a": "The powered aircraft."
+   "a": "The powered aircraft.",
+   "ref": {
+    "sec": "Right of way in the air"
+   }
   },
   {
    "q": "Who has priority when two aircraft approach to land?",
-   "a": "The lower one, but do not cut in front of one on final."
+   "a": "The lower one, but do not cut in front of one on final.",
+   "ref": {
+    "sec": "Right of way in the air"
+   }
   },
   {
    "q": "Head-on on the ground?",
-   "a": "Both stop and turn right."
+   "a": "Both stop and turn right.",
+   "ref": {
+    "sec": "Right of way on the ground"
+   }
   },
   {
    "q": "Which aircraft taxiing give way to?",
-   "a": "Aircraft taking off or about to take off."
+   "a": "Aircraft taking off or about to take off.",
+   "ref": {
+    "sec": "Right of way on the ground"
+   }
   },
   {
    "q": "Which vehicles have priority over all surface traffic?",
-   "a": "Emergency vehicles assisting an aircraft in distress."
+   "a": "Emergency vehicles assisting an aircraft in distress.",
+   "ref": {
+    "sec": "Right of way on the ground"
+   }
   }
  ],
  "quiz": [
   {
    "q": "Two aeroplanes approach head-on. Each should:",
    "o": [
-    "Turn left",
-    "Turn right",
-    "Climb",
-    "Descend"
+    "Each turns right",
+    "Each turns left",
+    "The higher one climbs",
+    "The lower one descends"
    ],
-   "a": 1,
-   "why": "Both alter course to the right."
+   "a": 0,
+   "why": "Both alter course to the right.",
+   "ref": {
+    "sec": "Right of way in the air"
+   }
   },
   {
    "q": "You are converging with an aircraft on your right. You should:",
@@ -140,18 +179,24 @@
     "Overtake"
    ],
    "a": 1,
-   "why": "The aircraft that has the other on its right gives way."
+   "why": "The aircraft that has the other on its right gives way.",
+   "ref": {
+    "sec": "Right of way in the air"
+   }
   },
   {
    "q": "Over a congested area your minimum height is:",
    "o": [
-    "500 ft above ground",
     "1,000 ft above the highest obstacle within 600 m",
-    "1,500 ft above ground",
-    "2,000 ft AMSL"
+    "500 ft above the highest obstacle within 150 m",
+    "1,500 ft above the highest obstacle within 600 m",
+    "1,000 ft above the highest obstacle within 1 km"
    ],
-   "a": 1,
-   "why": "It is also high enough to land clear in an emergency."
+   "a": 0,
+   "why": "It is also high enough to land clear in an emergency.",
+   "ref": {
+    "sec": "Low flying and congested areas"
+   }
   },
   {
    "q": "Who has priority among these in the air?",
@@ -162,7 +207,10 @@
     "A powered aircraft over towing aircraft"
    ],
    "a": 0,
-   "why": "Powered heavier-than-air aircraft give way to gliders."
+   "why": "Powered heavier-than-air aircraft give way to gliders.",
+   "ref": {
+    "sec": "Right of way in the air"
+   }
   },
   {
    "q": "An aircraft is being overtaken. It has:",
@@ -173,18 +221,24 @@
     "To give way"
    ],
    "a": 1,
-   "why": "The aircraft being overtaken has right of way."
+   "why": "The aircraft being overtaken has right of way.",
+   "ref": {
+    "sec": "Right of way in the air"
+   }
   },
   {
    "q": "Where may you not take off or land in the UK without special permission?",
    "o": [
-    "Aerodrome",
-    "Congested area (outside an aerodrome)",
-    "Licensed strip",
-    "ATZ"
+    "A congested area (outside an aerodrome)",
+    "A licensed aerodrome or airfield",
+    "An unlicensed strip in the open country",
+    "Any ATZ, with or without a radio"
    ],
-   "a": 1,
-   "why": "Take-off and landing in a congested area need aerodrome procedures or CAA permission."
+   "a": 0,
+   "why": "Take-off and landing in a congested area need aerodrome procedures or CAA permission.",
+   "ref": {
+    "sec": "Low flying and congested areas"
+   }
   }
  ]
 }

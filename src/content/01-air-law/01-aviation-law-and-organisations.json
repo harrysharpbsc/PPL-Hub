@@ -174,155 +174,287 @@
  "cards": [
   {
    "q": "What was the Paris Convention of 1919?",
-   "a": "The first major international aviation meeting, mostly European nations. It agreed general principles of air law and procedures."
+   "a": "The first major international aviation meeting, mostly European nations. It agreed general principles of air law and procedures.",
+   "ref": {
+    "sec": "International Civil Aviation Organisation (ICAO)"
+   }
   },
   {
    "q": "What did the Chicago Convention (1944) establish?",
-   "a": "A moral obligation on contracting states to provide safe and efficient ground and flight organisations."
+   "a": "A moral obligation on contracting states to provide safe and efficient ground and flight organisations.",
+   "ref": {
+    "sec": "International Civil Aviation Organisation (ICAO)"
+   }
   },
   {
    "q": "When was ICAO formed, and where is it based?",
-   "a": "1947, Montreal, Canada."
+   "a": "1947, Montreal, Canada.",
+   "ref": {
+    "sec": "International Civil Aviation Organisation (ICAO)"
+   }
   },
   {
    "q": "What is ICAO's purpose?",
-   "a": "To promote aviation standards and recommended practices internationally."
+   "a": "To promote aviation standards and recommended practices internationally.",
+   "ref": {
+    "sec": "International Civil Aviation Organisation (ICAO)"
+   }
   },
   {
    "q": "Cruising level units: west vs some eastern Europe?",
-   "a": "Feet in the west; metres in some eastern European nations."
+   "a": "Feet in the west; metres in some eastern European nations.",
+   "ref": {
+    "sec": "Differences between ICAO nations"
+   }
   },
   {
    "q": "Pressure units: UK vs US?",
-   "a": "UK: hectopascals (hPa). US: inches of mercury."
+   "a": "UK: hectopascals (hPa). US: inches of mercury.",
+   "ref": {
+    "sec": "Differences between ICAO nations"
+   }
   },
   {
    "q": "How does UK airspace differ on Class B?",
-   "a": "The UK has no Class B. In the USA it is allocated to Terminal Control Areas."
+   "a": "The UK has no Class B. In the USA it is allocated to Terminal Control Areas.",
+   "ref": {
+    "sec": "Differences between ICAO nations"
+   }
   },
   {
    "q": "What are ICAO principles from the Chicago Convention called?",
-   "a": "Articles."
+   "a": "Articles.",
+   "ref": {
+    "sec": "Chicago Convention principles"
+   }
   },
   {
    "q": "ICAO wording: shall vs should?",
-   "a": "Shall means must (required). Should means recommended for good airmanship and safety, not required."
+   "a": "Shall means must (required). Should means recommended for good airmanship and safety, not required.",
+   "ref": {
+    "sec": "Chicago Convention principles"
+   }
   },
   {
    "q": "Chicago Convention: which article gives each state complete and exclusive sovereignty over its airspace?",
    "a": "Article 1 (sovereignty).",
-   "m": "The number one rule: my sky."
+   "m": "The number one rule: my sky.",
+   "ref": {
+    "sec": "Articles 1 to 13: sovereignty and regulations"
+   }
   },
   {
    "q": "Chicago Convention: which article lets non-scheduled flights fly into or across a state without prior permission?",
    "a": "Article 5 (non-scheduled flights). The state may still require the aircraft to land.",
-   "m": "Five: free to fly through."
+   "m": "Five: free to fly through.",
+   "ref": {
+    "sec": "Articles 1 to 13: sovereignty and regulations"
+   }
   },
   {
    "q": "Chicago Convention: which article says an aircraft must obey the laws and regulations of the state it is in, whatever its nationality?",
    "a": "Article 11 (obey local regulations).",
-   "m": "11: their laws."
+   "m": "11: their laws.",
+   "ref": {
+    "sec": "Articles 1 to 13: sovereignty and regulations"
+   }
   },
   {
    "q": "Chicago Convention: which article covers rules of the air, including which rules apply over the high seas?",
    "a": "Article 12 (rules of the air). States keep their rules as close as possible to ICAO's; over the high seas ICAO's rules apply.",
-   "m": "12: the rules in the air."
+   "m": "12: the rules in the air.",
+   "ref": {
+    "sec": "Articles 1 to 13: sovereignty and regulations"
+   }
   },
   {
    "q": "Chicago Convention: which articles say an aircraft takes the nationality of its state of registration, and cannot be registered in two states at once?",
    "a": "Articles 17 (nationality) and 18 (no dual registration). Registration can still be changed from one state to another.",
-   "m": "17 and 18 are a pair: registered means nationality, and only one state at a time."
+   "m": "17 and 18 are a pair: registered means nationality, and only one state at a time.",
+   "ref": {
+    "sec": "Articles 16 to 26: registration and formalities"
+   }
   },
   {
    "q": "Chicago Convention: which article requires aircraft on international flights to display nationality and registration marks?",
    "a": "Article 20 (display of marks).",
-   "m": "20: show your marks."
+   "m": "20: show your marks.",
+   "ref": {
+    "sec": "Articles 16 to 26: registration and formalities"
+   }
   },
   {
    "q": "Chicago Convention: which article makes fuel, oil, spares and regular equipment on board exempt from customs duty on arrival?",
    "a": "Article 24 (customs duty). Items unloaded are not exempt.",
-   "m": "24-hour fuel stop, duty free."
+   "m": "24-hour fuel stop, duty free.",
+   "ref": {
+    "sec": "Articles 16 to 26: registration and formalities"
+   }
   },
   {
    "q": "Chicago Convention: which article says who investigates an accident in another state?",
    "a": "Article 26 (accident investigation). The state where it happens investigates; the state of registry may send observers.",
-   "m": "26: investigation."
+   "m": "26: investigation.",
+   "ref": {
+    "sec": "Articles 16 to 26: registration and formalities"
+   }
   },
   {
-   "q": "Chicago Convention: which article lists the documents carried on international flights, and what are they?",
-   "a": "Article 29. Certificate of registration, certificate of airworthiness, crew licences, journey log book, radio station licence, passenger list and cargo manifest (if carrying them). Not the pilot's personal logbook.",
-   "m": "29: the whole document bag."
+   "q": "Chicago Convention: which article lists the documents carried on international flights?",
+   "a": "Article 29.",
+   "ref": {
+    "sec": "Articles 28 to 40: facilities, documents and licences"
+   }
+  },
+  {
+   "q": "Which documents does Article 29 require on an international flight?",
+   "a": "Certificates of registration and airworthiness, crew licences, journey log book, radio licence, and passenger and cargo lists if carried.",
+   "ref": {
+    "sec": "Articles 28 to 40: facilities, documents and licences"
+   }
   },
   {
    "q": "Chicago Convention: which article requires a certificate of airworthiness for international flights?",
    "a": "Article 31. Issued or validated by the state of registry.",
-   "m": "31: is it airworthy?"
+   "m": "31: is it airworthy?",
+   "ref": {
+    "sec": "Articles 28 to 40: facilities, documents and licences"
+   }
   },
   {
    "q": "Chicago Convention: which articles cover crew licences and their recognition by other states?",
    "a": "Articles 32 (licences issued or validated by the state of registry) and 33 (other states recognise them if they meet ICAO standards).",
-   "m": "32: who is flying it? 33: everyone accepts them."
+   "m": "32: who is flying it? 33: everyone accepts them.",
+   "ref": {
+    "sec": "Articles 28 to 40: facilities, documents and licences"
+   }
   },
   {
    "q": "Chicago Convention: which article sets out ICAO's objectives?",
-   "a": "Article 44. Develop international air navigation and foster safe, orderly growth of international air transport: peaceful use, fair competition, no discrimination.",
-   "m": "44: ICAO's aims."
+   "a": "Article 44: to develop international air navigation and foster the safe, orderly growth of international air transport.",
+   "m": "44: ICAO's aims.",
+   "ref": {
+    "sec": "Articles 43 to 47, Annexes"
+   }
   },
   {
    "q": "How many ICAO Annexes, and where are UK differences shown?",
-   "a": "19 Annexes. UK differences are in AIP GEN 1-7."
+   "a": "19 Annexes. UK differences are in AIP GEN 1-7.",
+   "ref": {
+    "sec": "Articles 43 to 47, Annexes"
+   }
   },
   {
    "q": "Who regulates UK aviation after leaving the EU, and what is the CAA's information role?",
-   "a": "The UK regulates itself. The CAA provides the Aeronautical Information Service (AIS), delivered by NATS."
+   "a": "The UK regulates itself. The CAA provides the Aeronautical Information Service (AIS), delivered by NATS.",
+   "ref": {
+    "sec": "Aviation law in the UK"
+   }
   },
   {
    "q": "What are AMC and GM?",
-   "a": "Acceptable Means of Compliance and Guidance Material, used to implement the rules in Parts."
+   "a": "Acceptable Means of Compliance and Guidance Material, used to implement the rules in Parts.",
+   "ref": {
+    "sec": "EASA"
+   }
   },
   {
    "q": "What is Part ORA?",
-   "a": "The Part dealing with regulation of organisations, such as training schools."
+   "a": "The Part dealing with regulation of organisations, such as training schools.",
+   "ref": {
+    "sec": "EASA"
+   }
   },
   {
    "q": "Main UK sources of regulation for a private pilot?",
-   "a": "The Air Navigation Order, Part-NCO, Part-FCL and the Air Navigation (General) Regulations."
+   "a": "The Air Navigation Order, Part-NCO, Part-FCL and the Air Navigation (General) Regulations.",
+   "ref": {
+    "sec": "Aviation law in the UK"
+   }
   },
   {
    "q": "What do the AIP parts GEN, ENR and AD cover?",
-   "a": "GEN: national regulations and services. ENR: en route information. AD: licensed aerodromes."
+   "a": "GEN: national regulations and services. ENR: en route information. AD: licensed aerodromes.",
+   "ref": {
+    "sec": "Aeronautical Information Publication (AIP)"
+   }
   },
   {
    "q": "How often is the AIP updated?",
-   "a": "Every 28 days on the AIRAC cycle."
+   "a": "Every 28 days on the AIRAC cycle.",
+   "ref": {
+    "sec": "Aeronautical Information Publication (AIP)"
+   }
   },
   {
    "q": "How often are AICs published, and what is the colour code?",
-   "a": "Monthly. Pink air safety, white administrative, yellow operational/ATS, mauve UK restrictions chart, green maps/charts."
+   "a": "Monthly. Pink air safety, white administrative, yellow operational/ATS, mauve UK restrictions chart, green maps/charts.",
+   "ref": {
+    "sec": "Aeronautical Information Circulars (AICs)"
+   }
   },
   {
    "q": "NOTAM categories?",
-   "a": "NOTAMN new, NOTAMR replacing, NOTAMC cancelling."
+   "a": "NOTAMN new, NOTAMR replacing, NOTAMC cancelling.",
+   "ref": {
+    "sec": "NOTAMs and Air Supplements"
+   }
   },
   {
    "q": "What are Air Supplements?",
-   "a": "Temporary information with too much text or graphics for a NOTAM, e.g. air shows or aerodrome work. Issued every 28 days."
+   "a": "Temporary information with too much text or graphics for a NOTAM, e.g. air shows or aerodrome work. Issued every 28 days.",
+   "ref": {
+    "sec": "NOTAMs and Air Supplements"
+   }
   },
   {
    "q": "What is replacing the AIS concept?",
-   "a": "The digital Aeronautical Information Management (AIM) system. ICAO Annex 15 covers aeronautical information services."
+   "a": "The digital Aeronautical Information Management (AIM) system. ICAO Annex 15 covers aeronautical information services.",
+   "ref": {
+    "sec": "AIS delivery and publications"
+   }
   },
   {
-   "q": "CAP 1535, 637, 413, 804?",
-   "a": "Skyway Code; Visual aids handbook; Radiotelephony procedures; licence requirements (reference only)."
+   "q": "What is CAP 1535?",
+   "a": "The Skyway Code.",
+   "ref": {
+    "sec": "AIS delivery and publications"
+   }
+  },
+  {
+   "q": "What is CAP 637?",
+   "a": "The Visual Aids Handbook.",
+   "ref": {
+    "sec": "AIS delivery and publications"
+   }
+  },
+  {
+   "q": "What is CAP 413?",
+   "a": "The Radiotelephony Manual (UK RT procedures).",
+   "ref": {
+    "sec": "AIS delivery and publications"
+   }
+  },
+  {
+   "q": "What is CAP 804?",
+   "a": "Flight crew licensing requirements (a reference document).",
+   "ref": {
+    "sec": "AIS delivery and publications"
+   }
   },
   {
    "q": "How is the ANO 2016 organised?",
-   "a": "Parts containing consecutively numbered Articles, with detail in Schedules."
+   "a": "Parts containing consecutively numbered Articles, with detail in Schedules.",
+   "ref": {
+    "sec": "The Air Navigation Order 2016"
+   }
   },
   {
    "q": "ANO Schedule 13 and Schedule 1?",
-   "a": "Schedule 13: liability and maximum penalties. Schedule 1: legal definitions (glossary)."
+   "a": "Schedule 13: liability and maximum penalties. Schedule 1: legal definitions (glossary).",
+   "ref": {
+    "sec": "The Air Navigation Order 2016"
+   }
   }
  ],
  "quiz": [
@@ -335,7 +467,10 @@
     "Geneva 1930"
    ],
    "a": 1,
-   "why": "The Paris Convention of 1919, mostly European nations."
+   "why": "The Paris Convention of 1919, mostly European nations.",
+   "ref": {
+    "sec": "International Civil Aviation Organisation (ICAO)"
+   }
   },
   {
    "q": "When was ICAO formed?",
@@ -346,7 +481,10 @@
     "1950"
    ],
    "a": 2,
-   "why": "The Chicago Convention was 1944, ICAO itself was formed in 1947."
+   "why": "The Chicago Convention was 1944, ICAO itself was formed in 1947.",
+   "ref": {
+    "sec": "International Civil Aviation Organisation (ICAO)"
+   }
   },
   {
    "q": "Which unit of pressure does the UK use?",
@@ -357,7 +495,10 @@
     "Pounds per square inch"
    ],
    "a": 1,
-   "why": "The UK uses hPa; the US uses inches of mercury."
+   "why": "The UK uses hPa; the US uses inches of mercury.",
+   "ref": {
+    "sec": "Differences between ICAO nations"
+   }
   },
   {
    "q": "Which airspace class does the UK not have?",
@@ -368,7 +509,10 @@
     "Class D"
    ],
    "a": 1,
-   "why": "The UK has no Class B; in the USA it covers Terminal Control Areas."
+   "why": "The UK has no Class B; in the USA it covers Terminal Control Areas.",
+   "ref": {
+    "sec": "Differences between ICAO nations"
+   }
   },
   {
    "q": "What does 'shall' mean in ICAO documents?",
@@ -379,7 +523,10 @@
     "Advisory"
    ],
    "a": 1,
-   "why": "Shall means must. Should is a recommendation."
+   "why": "Shall means must. Should is a recommendation.",
+   "ref": {
+    "sec": "Chicago Convention principles"
+   }
   },
   {
    "q": "Which Article gives states exclusive sovereignty over their airspace?",
@@ -390,7 +537,10 @@
     "Article 12"
    ],
    "a": 0,
-   "why": "Article 1 is sovereignty."
+   "why": "Article 1 is sovereignty.",
+   "ref": {
+    "sec": "Articles 1 to 13: sovereignty and regulations"
+   }
   },
   {
    "q": "Which Article makes any aircraft obey the regulations of the state it is in?",
@@ -401,29 +551,38 @@
     "Article 13"
    ],
    "a": 1,
-   "why": "Article 11, regardless of nationality."
+   "why": "Article 11, regardless of nationality.",
+   "ref": {
+    "sec": "Articles 1 to 13: sovereignty and regulations"
+   }
   },
   {
    "q": "What nationality does an aircraft have?",
    "o": [
-    "The operator's",
     "The state of registration",
-    "The pilot's",
-    "The manufacturer's"
+    "The state the operator is based in",
+    "The pilot's nationality",
+    "The manufacturer's state"
    ],
-   "a": 1,
-   "why": "Article 17: the state of registration."
+   "a": 0,
+   "why": "Article 17: the state of registration.",
+   "ref": {
+    "sec": "Articles 16 to 26: registration and formalities"
+   }
   },
   {
    "q": "Can an aircraft be registered in two states at once?",
    "o": [
-    "Yes, if both agree",
-    "No, but registration can be changed",
+    "No, but it can be transferred",
+    "Yes, if both states agree to it",
     "Yes, for international flights",
-    "Only commercial aircraft"
+    "Only commercial aircraft can"
    ],
-   "a": 1,
-   "why": "Article 18 forbids dual registration."
+   "a": 0,
+   "why": "Article 18 forbids dual registration.",
+   "ref": {
+    "sec": "Articles 16 to 26: registration and formalities"
+   }
   },
   {
    "q": "Which Article lists documents carried on international flights?",
@@ -434,7 +593,10 @@
     "Article 34"
    ],
    "a": 1,
-   "why": "Article 29."
+   "why": "Article 29.",
+   "ref": {
+    "sec": "Articles 28 to 40: facilities, documents and licences"
+   }
   },
   {
    "q": "Which state investigates an accident with deaths in another state?",
@@ -445,7 +607,10 @@
     "State of the operator"
    ],
    "a": 1,
-   "why": "Article 26: the state where it occurs investigates; the state of registry may observe."
+   "why": "Article 26: the state where it occurs investigates; the state of registry may observe.",
+   "ref": {
+    "sec": "Articles 16 to 26: registration and formalities"
+   }
   },
   {
    "q": "How many ICAO Annexes are there?",
@@ -456,29 +621,38 @@
     "24"
    ],
    "a": 2,
-   "why": "There are 19 Annexes."
+   "why": "There are 19 Annexes.",
+   "ref": {
+    "sec": "Articles 43 to 47, Annexes"
+   }
   },
   {
    "q": "Where are UK differences from ICAO shown?",
    "o": [
     "AIP GEN 1-7",
-    "ANO 2016",
-    "SERA",
-    "Article 37"
+    "ANO 2016 Schedule 1",
+    "SERA Annex, UK supplement",
+    "Chicago Convention Article 37"
    ],
    "a": 0,
-   "why": "AIP GEN 1-7."
+   "why": "AIP GEN 1-7.",
+   "ref": {
+    "sec": "Articles 43 to 47, Annexes"
+   }
   },
   {
    "q": "How often is the AIP updated?",
    "o": [
-    "Weekly",
     "Every 28 days",
-    "Monthly",
-    "Annually"
+    "Every week",
+    "Every calendar month",
+    "Once a year"
    ],
-   "a": 1,
-   "why": "On the 28-day AIRAC cycle."
+   "a": 0,
+   "why": "On the 28-day AIRAC cycle.",
+   "ref": {
+    "sec": "Aeronautical Information Publication (AIP)"
+   }
   },
   {
    "q": "What colour are Air Safety AICs?",
@@ -489,7 +663,10 @@
     "Green"
    ],
    "a": 1,
-   "why": "Pink; white is administrative, yellow operational/ATS, mauve restrictions chart, green maps/charts."
+   "why": "Pink; white is administrative, yellow operational/ATS, mauve restrictions chart, green maps/charts.",
+   "ref": {
+    "sec": "Aeronautical Information Circulars (AICs)"
+   }
   },
   {
    "q": "Which AIP part covers licensed aerodromes?",
@@ -500,7 +677,10 @@
     "AIC"
    ],
    "a": 2,
-   "why": "AD covers aerodromes."
+   "why": "AD covers aerodromes.",
+   "ref": {
+    "sec": "Aeronautical Information Publication (AIP)"
+   }
   },
   {
    "q": "What does NOTAMC do?",
@@ -511,7 +691,10 @@
     "Corrects a chart"
    ],
    "a": 2,
-   "why": "NOTAMN is new, NOTAMR replaces, NOTAMC cancels."
+   "why": "NOTAMN is new, NOTAMR replaces, NOTAMC cancels.",
+   "ref": {
+    "sec": "NOTAMs and Air Supplements"
+   }
   },
   {
    "q": "Which CAP is the radiotelephony procedures guide?",
@@ -522,7 +705,10 @@
     "CAP 804"
    ],
    "a": 1,
-   "why": "CAP 413. CAP 1535 is the Skyway Code."
+   "why": "CAP 413. CAP 1535 is the Skyway Code.",
+   "ref": {
+    "sec": "AIS delivery and publications"
+   }
   },
   {
    "q": "Which ANO schedule covers penalties?",
@@ -533,7 +719,10 @@
     "Schedule 13"
    ],
    "a": 3,
-   "why": "Schedule 13; Schedule 1 is interpretation."
+   "why": "Schedule 13; Schedule 1 is interpretation.",
+   "ref": {
+    "sec": "The Air Navigation Order 2016"
+   }
   },
   {
    "q": "Which body is responsible for civil aviation in the UK?",
@@ -544,7 +733,10 @@
     "NATS"
    ],
    "a": 2,
-   "why": "The CAA; NATS provides AIS on its behalf."
+   "why": "The CAA; NATS provides AIS on its behalf.",
+   "ref": {
+    "sec": "AIS delivery and publications"
+   }
   },
   {
    "q": "How often are AICs published?",
@@ -555,18 +747,24 @@
     "Every 28 days"
    ],
    "a": 2,
-   "why": "AICs are monthly."
+   "why": "AICs are monthly.",
+   "ref": {
+    "sec": "Aeronautical Information Circulars (AICs)"
+   }
   },
   {
    "q": "What carries temporary information too long for a NOTAM?",
    "o": [
-    "An AIC",
     "An Air Supplement",
-    "The AIRAC cycle",
-    "AIP ENR"
+    "An AIC (pink)",
+    "An AIRAC amendment",
+    "An AIP ENR entry"
    ],
-   "a": 1,
-   "why": "Air Supplements, e.g. for major air shows."
+   "a": 0,
+   "why": "Air Supplements, e.g. for major air shows.",
+   "ref": {
+    "sec": "NOTAMs and Air Supplements"
+   }
   }
  ]
 }

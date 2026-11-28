@@ -121,63 +121,108 @@
  "cards": [
   {
    "q": "Who controls SAR in the UK?",
-   "a": "A Rescue Coordination Centre (RCC)."
+   "a": "A Rescue Coordination Centre (RCC).",
+   "ref": {
+    "sec": "Search and rescue in the UK"
+   }
   },
   {
    "q": "Emergency frequency watched continuously?",
-   "a": "121.5 MHz."
+   "a": "121.5 MHz.",
+   "ref": {
+    "sec": "Search and rescue in the UK"
+   }
   },
   {
    "q": "Who normally starts alerting action?",
-   "a": "The ATSU last in contact with the aircraft."
+   "a": "The ATSU last in contact with the aircraft.",
+   "ref": {
+    "sec": "Alerting service"
+   }
   },
   {
    "q": "How do you get a SAR watch?",
-   "a": "File a flight plan."
+   "a": "File a flight plan.",
+   "ref": {
+    "sec": "SAR watch"
+   }
   },
   {
    "q": "When is a flight plan advisable for SAR?",
-   "a": "More than 10 nm from the coast, over remote or hazardous areas, or without a suitable radio."
+   "a": "More than 10 nm from the coast, over remote or hazardous areas, or without a suitable radio.",
+   "ref": {
+    "sec": "SAR watch"
+   }
   },
   {
    "q": "Diverting en route: deadline to tell the original destination?",
-   "a": "Before ETA plus 30 minutes, or SAR action starts."
+   "a": "Before ETA plus 30 minutes, or SAR action starts.",
+   "ref": {
+    "sec": "SAR watch"
+   }
   },
   {
    "q": "The three emergency phases?",
-   "a": "Uncertainty, alert, distress."
+   "a": "Uncertainty, alert, distress.",
+   "ref": {
+    "sec": "Emergency phases"
+   }
   },
   {
    "q": "Distress phase means?",
-   "a": "Reasonably certain the aircraft needs immediate help or faces grave and imminent danger."
+   "a": "Reasonably certain the aircraft needs immediate help or faces grave and imminent danger.",
+   "ref": {
+    "sec": "Emergency phases"
+   }
   },
   {
    "q": "First non-SAR aircraft at a scene?",
-   "a": "Takes charge on scene until the first SAR aircraft arrives."
+   "a": "Takes charge on scene until the first SAR aircraft arrives.",
+   "ref": {
+    "sec": "If you see an aircraft or vessel in distress (5.8)"
+   }
   },
   {
    "q": "Ground signal V?",
-   "a": "Require assistance."
+   "a": "Require assistance.",
+   "ref": {
+    "sec": "Signals from survivors"
+   }
   },
   {
    "q": "Ground signal X?",
-   "a": "Require medical assistance."
+   "a": "Require medical assistance.",
+   "ref": {
+    "sec": "Signals from survivors"
+   }
   },
   {
    "q": "Ground signal arrow?",
-   "a": "Proceeding in this direction."
+   "a": "Proceeding in this direction.",
+   "ref": {
+    "sec": "Signals from survivors"
+   }
   },
   {
    "q": "Ground signals Y and N?",
-   "a": "Yes and No."
+   "a": "Yes and No.",
+   "ref": {
+    "sec": "Signals from survivors"
+   }
   },
   {
    "q": "Aircraft acknowledging a ground signal by day?",
-   "a": "Rocks its wings."
+   "a": "Rocks its wings.",
+   "ref": {
+    "sec": "Signals from survivors"
+   }
   },
   {
    "q": "By night?",
-   "a": "Flashes its landing lights (or nav lights) on and off twice."
+   "a": "Flashes its landing lights (or nav lights) on and off twice.",
+   "ref": {
+    "sec": "Signals from survivors"
+   }
   }
  ],
  "quiz": [
@@ -190,7 +235,10 @@
     "No"
    ],
    "a": 0,
-   "why": "X is medical assistance; V is general assistance. The two are easy to swap."
+   "why": "X is medical assistance; V is general assistance. The two are easy to swap.",
+   "ref": {
+    "sec": "Signals from survivors"
+   }
   },
   {
    "q": "A survivor lays out a 'V'. It means:",
@@ -201,7 +249,10 @@
     "Proceeding in this direction"
    ],
    "a": 0,
-   "why": "V = require assistance."
+   "why": "V = require assistance.",
+   "ref": {
+    "sec": "Signals from survivors"
+   }
   },
   {
    "q": "By day, a pilot shows that a ground signal has been understood by:",
@@ -212,7 +263,10 @@
     "Lowering the undercarriage"
    ],
    "a": 0,
-   "why": "Rocking the wings by day; flashing the landing or navigation lights twice at night. No reply means not understood."
+   "why": "Rocking the wings by day; flashing the landing or navigation lights twice at night. No reply means not understood.",
+   "ref": {
+    "sec": "Signals from survivors"
+   }
   },
   {
    "q": "To get a constant SAR watch, a pilot should:",
@@ -223,18 +277,24 @@
     "Squawk 7000 with Mode C"
    ],
    "a": 0,
-   "why": "Filing a flight plan sets up the overdue action that triggers SAR."
+   "why": "Filing a flight plan sets up the overdue action that triggers SAR.",
+   "ref": {
+    "sec": "SAR watch"
+   }
   },
   {
    "q": "A flight plan is advisable for SAR purposes when flying:",
    "o": [
     "More than 10 nm from the coast, over remote areas, or without a suitable radio",
-    "More than 20 nm from the coast or over congested areas",
-    "Outside controlled airspace for more than an hour",
-    "More than 10 km from the coast"
+    "More than 20 nm from the coast, over congested areas, or without a transponder",
+    "Outside controlled airspace for more than an hour, or without a suitable radio",
+    "More than 10 km from the coast, over remote areas, or without a transponder"
    ],
    "a": 0,
-   "why": "10 nm (not km, not 20 nm), remote or hazardous areas, or no suitable radio."
+   "why": "10 nm (not km, not 20 nm), remote or hazardous areas, or no suitable radio.",
+   "ref": {
+    "sec": "SAR watch"
+   }
   },
   {
    "q": "You decide en route to land somewhere other than your flight-planned destination. You must tell the original destination:",
@@ -245,7 +305,10 @@
     "Only if you were in controlled airspace"
    ],
    "a": 0,
-   "why": "Otherwise overdue action and SAR start at ETA plus 30 minutes."
+   "why": "Otherwise overdue action and SAR start at ETA plus 30 minutes.",
+   "ref": {
+    "sec": "SAR watch"
+   }
   },
   {
    "q": "Which emergency phase is declared when there is concern for an aircraft's safety?",
@@ -256,29 +319,38 @@
     "The urgency phase"
    ],
    "a": 0,
-   "why": "Uncertainty is doubt, alert is concern, distress is reasonable certainty of grave danger. 'Urgency' is a state of emergency, not a phase."
+   "why": "Uncertainty is doubt, alert is concern, distress is reasonable certainty of grave danger. 'Urgency' is a state of emergency, not a phase.",
+   "ref": {
+    "sec": "Emergency phases"
+   }
   },
   {
    "q": "You see a boat sinking and you are the first aircraft on scene. You should:",
    "o": [
     "Keep it in sight, fix your position and report to the RCC or ATSU",
-    "Land nearby to help",
-    "Leave the area so as not to hinder rescuers",
-    "Circle until you see the occupants rescued, without reporting"
+    "Land nearby if you can do so safely, then help the survivors",
+    "Leave the area at once so as not to hinder the rescue services",
+    "Circle overhead until the occupants are rescued, without reporting"
    ],
    "a": 0,
-   "why": "Keep sight, fix your own position, report type, position, time, numbers and condition, then act as instructed. You also take charge on scene until a SAR aircraft arrives."
+   "why": "Keep sight, fix your own position, report type, position, time, numbers and condition, then act as instructed. You also take charge on scene until a SAR aircraft arrives.",
+   "ref": {
+    "sec": "If you see an aircraft or vessel in distress (5.8)"
+   }
   },
   {
    "q": "An alerting service is provided by ATS to:",
    "o": [
     "All aircraft known to ATS in the UK FIRs",
-    "Only aircraft on a flight plan",
-    "Only aircraft in controlled airspace",
-    "Only IFR flights"
+    "Only aircraft that have filed a flight plan",
+    "Only aircraft flying in controlled airspace",
+    "Only IFR flights in the UK FIRs"
    ],
    "a": 0,
-   "why": "It is for all aircraft known to ATS; a flight plan just makes you known in advance."
+   "why": "It is for all aircraft known to ATS; a flight plan just makes you known in advance.",
+   "ref": {
+    "sec": "Alerting service"
+   }
   }
  ]
 }

@@ -45,7 +45,7 @@
    ]
   ],
   [
-   "Flight plans",
+   "Flight plans (Skyway Code)",
    [
     "A flight plan is required for flights across international borders, flights under an ATC service (entering CAS or leaving a controlled aerodrome), and leaving the vicinity of an aerodrome at night",
     "'Booking out' fulfils the night abbreviated flight plan if an ATSU can receive it. Otherwise file a full plan",
@@ -66,57 +66,93 @@
   "Fuel management": "Dip the tanks, trust no gauge and plan 30 minutes minimum.",
   "Mass and balance reminders": "CG maths, fuel density and checks at landing.",
   "Performance reminders": "Safety factors and minimum climb rates.",
-  "Flight plans": "When one is required and the abbreviated versus full forms.",
+  "Flight plans (Skyway Code)": "When one is required and the abbreviated versus full forms.",
   "Unfamiliar aerodromes": "What to ask before landing somewhere new."
  },
  "cards": [
   {
    "q": "Recommended minimum fuel at landing for VFR non-Part 21 aircraft?",
-   "a": "Not less than 30 minutes."
+   "a": "Not less than 30 minutes.",
+   "ref": {
+    "sec": "Fuel management"
+   }
   },
   {
    "q": "Best way to check fuel on board?",
-   "a": "Physically with a dipstick or equivalent."
+   "a": "Physically with a dipstick or equivalent.",
+   "ref": {
+    "sec": "Fuel management"
+   }
   },
   {
    "q": "What does a fuel totaliser measure?",
-   "a": "Fuel consumed by the engine, not tank contents."
+   "a": "Fuel consumed by the engine, not tank contents.",
+   "ref": {
+    "sec": "Fuel management"
+   }
   },
   {
    "q": "Specific gravity of Avgas?",
-   "a": "About 0.72 kg/L."
+   "a": "About 0.72 kg/L.",
+   "ref": {
+    "sec": "Mass and balance reminders"
+   }
   },
   {
    "q": "Specific gravity of Jet A-1 in the Skyway Code?",
-   "a": "About 0.82 kg/L."
+   "a": "About 0.82 kg/L.",
+   "ref": {
+    "sec": "Mass and balance reminders"
+   }
   },
   {
    "q": "Climb rate below which not to fly in a single piston aircraft?",
-   "a": "500 ft/min."
+   "a": "500 ft/min.",
+   "ref": {
+    "sec": "Performance reminders"
+   }
   },
   {
    "q": "Climb rate minimum on a twin with one engine failed?",
-   "a": "150 ft/min."
+   "a": "150 ft/min.",
+   "ref": {
+    "sec": "Performance reminders"
+   }
   },
   {
    "q": "When must a flight plan be filed?",
-   "a": "International flights, under ATC service, and leaving the aerodrome vicinity at night."
+   "a": "International flights, under ATC service, and leaving the aerodrome vicinity at night.",
+   "ref": {
+    "sec": "Flight plans"
+   }
   },
   {
    "q": "What is an abbreviated flight plan?",
-   "a": "Information to an ATSU by radio or phone for part of a flight."
+   "a": "Information to an ATSU by radio or phone for part of a flight.",
+   "ref": {
+    "sec": "Flight plans"
+   }
   },
   {
    "q": "Over-water distance from the UK coast where a flight plan is recommended?",
-   "a": "More than 10 NM."
+   "a": "More than 10 NM.",
+   "ref": {
+    "sec": "Flight plans"
+   }
   },
   {
    "q": "Does the AIP cover unlicensed aerodromes?",
-   "a": "No, only licensed or certificated ones."
+   "a": "No, only licensed or certificated ones.",
+   "ref": {
+    "sec": "Unfamiliar aerodromes"
+   }
   },
   {
    "q": "Which speed gives the better climb gradient for obstacles?",
-   "a": "Vx."
+   "a": "Vx.",
+   "ref": {
+    "sec": "Performance reminders"
+   }
   }
  ],
  "quiz": [
@@ -129,29 +165,38 @@
     "60 minutes"
    ],
    "a": 1,
-   "why": "Part 21 aircraft have specific reserves, but for others 30 minutes is recommended."
+   "why": "Part 21 aircraft have specific reserves, but for others 30 minutes is recommended.",
+   "ref": {
+    "sec": "Fuel management"
+   }
   },
   {
    "q": "A flight plan is required when:",
    "o": [
-    "Flying over any water",
     "Leaving the vicinity of an aerodrome at night",
-    "Flying above 3,000 ft",
-    "Flying solo"
+    "Flying over any stretch of water by day",
+    "Flying above 3,000 ft amsl outside CAS",
+    "Flying solo on a cross-country by day"
    ],
-   "a": 1,
-   "why": "Booking out can satisfy this if an ATSU receives it."
+   "a": 0,
+   "why": "Booking out can satisfy this if an ATSU receives it.",
+   "ref": {
+    "sec": "Flight plans"
+   }
   },
   {
    "q": "Which is the most reliable fuel quantity check?",
    "o": [
-    "Fuel gauge",
-    "Totaliser",
     "Dipstick or equivalent",
-    "Fuel flow estimate"
+    "The fuel gauges",
+    "The fuel totaliser",
+    "A fuel flow estimate"
    ],
-   "a": 2,
-   "why": "Gauges are not sufficiently reliable for planning."
+   "a": 0,
+   "why": "Gauges are not sufficiently reliable for planning.",
+   "ref": {
+    "sec": "Fuel management"
+   }
   },
   {
    "q": "A twin with one engine failed should not operate if it climbs below:",
@@ -162,18 +207,24 @@
     "1,000 ft/min"
    ],
    "a": 1,
-   "why": "150 ft/min on a twin with an engine failed; 500 ft/min for singles."
+   "why": "150 ft/min on a twin with an engine failed; 500 ft/min for singles.",
+   "ref": {
+    "sec": "Performance reminders"
+   }
   },
   {
    "q": "Which is true of the general safety factors?",
    "o": [
-    "Applied before other factors",
     "Applied after other factors: x1.33 take-off, x1.43 landing",
-    "Apply only to paved runways",
-    "Apply only to twins"
+    "Applied before other factors: x1.33 take-off, x1.43 landing",
+    "Applied after other factors, but only on paved runways",
+    "Applied after other factors, but only to twin-engine types"
    ],
-   "a": 1,
-   "why": "Apply them after surface factors."
+   "a": 0,
+   "why": "Apply them after surface factors.",
+   "ref": {
+    "sec": "Performance reminders"
+   }
   }
  ]
 }

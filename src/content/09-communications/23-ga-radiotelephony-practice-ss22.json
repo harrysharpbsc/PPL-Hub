@@ -98,59 +98,101 @@
  "cards": [
   {
    "q": "What does squawk 7600 mean?",
-   "a": "Radio failure."
+   "a": "Radio failure.",
+   "ref": {
+    "sec": "Squawk codes"
+   }
   },
   {
    "q": "What does squawk 7700 mean?",
-   "a": "Emergency."
+   "a": "Emergency.",
+   "ref": {
+    "sec": "Squawk codes"
+   }
   },
   {
    "q": "What does squawk 7500 mean?",
-   "a": "Unlawful interference."
+   "a": "Unlawful interference.",
+   "ref": {
+    "sec": "Squawk codes"
+   }
   },
   {
    "q": "VFR conspicuity squawk?",
-   "a": "7000."
+   "a": "7000.",
+   "ref": {
+    "sec": "Squawk codes"
+   }
   },
   {
    "q": "UK lost procedure squawk?",
-   "a": "0030."
+   "a": "0030.",
+   "ref": {
+    "sec": "Squawk codes"
+   }
   },
   {
    "q": "Frequency for the London Centre D&D cell?",
-   "a": "121.5 MHz."
+   "a": "121.5 MHz.",
+   "ref": {
+    "sec": "MAYDAY and PAN PAN"
+   }
   },
   {
    "q": "SAFETYCOM frequency?",
-   "a": "135.480 MHz."
+   "a": "135.480 MHz.",
+   "ref": {
+    "sec": "Circuit and aerodrome calls"
+   }
   },
   {
    "q": "How far from the aerodrome is SAFETYCOM usable?",
-   "a": "Within 10 NM and up to 1,000 ft above circuit height."
+   "a": "Within 10 NM and up to 1,000 ft above circuit height.",
+   "ref": {
+    "sec": "Circuit and aerodrome calls"
+   }
   },
   {
    "q": "What does AFIS suffix say?",
-   "a": "Information."
+   "a": "Information.",
+   "ref": {
+    "sec": "Circuit and aerodrome calls"
+   }
   },
   {
    "q": "What does AGCS suffix say?",
-   "a": "Radio."
+   "a": "Radio.",
+   "ref": {
+    "sec": "Circuit and aerodrome calls"
+   }
   },
   {
    "q": "Long final range?",
-   "a": "4 to 8 NM."
+   "a": "4 to 8 NM.",
+   "ref": {
+    "sec": "Circuit and aerodrome calls"
+   }
   },
   {
    "q": "When do you press IDENT?",
-   "a": "Only when ATC says squawk IDENT."
+   "a": "Only when ATC says squawk IDENT.",
+   "ref": {
+    "sec": "Squawk codes"
+   }
   },
   {
    "q": "Who may be unable to give clearances at AGCS?",
-   "a": "The radio operator, since it is not a formal ATC service."
+   "a": "The radio operator, since it is not a formal ATC service.",
+   "ref": {
+    "sec": "Circuit and aerodrome calls"
+   }
   },
   {
    "q": "How early should a CAS transit be requested?",
-   "a": "About 10 minutes before the boundary."
+   "a": "About 10 minutes before the boundary.",
+   "ref": {
+    "sec": "Flight information services and transits"
+   }
   }
  ],
  "quiz": [
@@ -163,7 +205,10 @@
     "7700"
    ],
    "a": 2,
-   "why": "7600 is radio failure."
+   "why": "7600 is radio failure.",
+   "ref": {
+    "sec": "Radio failure and lost procedures"
+   }
   },
   {
    "q": "What is the UK lost procedure squawk?",
@@ -174,51 +219,66 @@
     "7700"
    ],
    "a": 0,
-   "why": "0030 is the UK lost procedure code, with ALT selected."
+   "why": "0030 is the UK lost procedure code, with ALT selected.",
+   "ref": {
+    "sec": "Squawk codes"
+   }
   },
   {
    "q": "SAFETYCOM 135.480 MHz is used at unattended aerodromes within:",
    "o": [
-    "5 NM",
     "10 NM and 1,000 ft above circuit height",
-    "25 NM",
-    "The ATZ only"
+    "5 NM and 500 ft above circuit height",
+    "25 NM and 2,000 ft above circuit height",
+    "The ATZ only, up to 2,000 ft aal"
    ],
-   "a": 1,
-   "why": "SAFETYCOM is usable within 10 NM and up to 1,000 ft above circuit height."
+   "a": 0,
+   "why": "SAFETYCOM is usable within 10 NM and up to 1,000 ft above circuit height.",
+   "ref": {
+    "sec": "Circuit and aerodrome calls"
+   }
   },
   {
    "q": "An AFIS says 'land at your discretion'. This is:",
    "o": [
-    "A landing clearance",
     "Not a clearance, so make sure the runway is clear",
-    "A request to go around",
-    "An instruction to hold"
+    "A landing clearance from the AFIS officer",
+    "A request to go around and rejoin the circuit",
+    "An instruction to hold until called again"
    ],
-   "a": 1,
-   "why": "AFIS gives no landing clearance and you decide and check the runway is clear."
+   "a": 0,
+   "why": "AFIS gives no landing clearance and you decide and check the runway is clear.",
+   "ref": {
+    "sec": "Circuit and aerodrome calls"
+   }
   },
   {
    "q": "Where should you call if you are not in contact with anyone and need emergency help?",
    "o": [
-    "Any tower",
     "London Centre D&D on 121.5",
-    "Ground",
-    "Information on 119.875"
+    "Any tower on its own frequency",
+    "The nearest Ground frequency",
+    "London Information on 124.6"
    ],
-   "a": 1,
-   "why": "D&D on 121.5 MHz can help."
+   "a": 0,
+   "why": "D&D on 121.5 MHz can help.",
+   "ref": {
+    "sec": "MAYDAY and PAN PAN"
+   }
   },
   {
    "q": "There is no 'short final' call. Instead you should:",
    "o": [
-    "Say 'final'",
     "State the distance, such as 'half-mile final'",
-    "Say 'base'",
-    "Say 'long final'"
+    "Say 'final' and nothing more, whatever the distance",
+    "Say 'base' until you are lined up with the runway",
+    "Say 'long final' and give your height in feet"
    ],
-   "a": 1,
-   "why": "State the distance from the threshold."
+   "a": 0,
+   "why": "State the distance from the threshold.",
+   "ref": {
+    "sec": "Circuit and aerodrome calls"
+   }
   }
  ]
 }

@@ -318,291 +318,513 @@
  "cards": [
   {
    "q": "Which AIP section is the aerodrome directory?",
-   "a": "AD (Aerodromes): characteristics, local hazards and restrictions."
+   "a": "AD (Aerodromes): characteristics, local hazards and restrictions.",
+   "ref": {
+    "sec": "What an aerodrome is"
+   }
   },
   {
    "q": "Who gives permission to land at a military or ordinary-licence aerodrome?",
-   "a": "The aerodrome authority (prior permission, PPR)."
+   "a": "The aerodrome authority (prior permission, PPR).",
+   "ref": {
+    "sec": "Prior permission (PPR) and limits on use"
+   }
   },
   {
    "q": "Who gives permission to land at an unlicensed aerodrome?",
-   "a": "The owner or person in charge."
+   "a": "The owner or person in charge.",
+   "ref": {
+    "sec": "Prior permission (PPR) and limits on use"
+   }
   },
   {
    "q": "When should you get PPR?",
-   "a": "Before departure, especially if no radio frequency is published."
+   "a": "Before departure, especially if no radio frequency is published.",
+   "ref": {
+    "sec": "Prior permission (PPR) and limits on use"
+   }
   },
   {
    "q": "Two consequences of landing without PPR?",
-   "a": "It is trespass, and an insurer may refuse a claim because you breached the ANO (plus you miss safety information)."
+   "a": "It is trespass, and an insurer may refuse a claim because you breached the ANO (plus you miss safety information).",
+   "ref": {
+    "sec": "Prior permission (PPR) and limits on use"
+   }
   },
   {
    "q": "What limits civil use of military aerodromes?",
-   "a": "Normal hours of watch and inland flights only; some limit the class of traffic. Not in an emergency."
+   "a": "Normal hours of watch and inland flights only; some limit the class of traffic. Not in an emergency.",
+   "ref": {
+    "sec": "Prior permission (PPR) and limits on use"
+   }
   },
   {
    "q": "Can you land at an aerodrome not in AIP AD?",
-   "a": "Yes, in an emergency or with the owner's or operator's permission."
+   "a": "Yes, in an emergency or with the owner's or operator's permission.",
+   "ref": {
+    "sec": "Prior permission (PPR) and limits on use"
+   }
   },
   {
    "q": "Flying instruction at an unlicensed aerodrome: who must be satisfied?",
-   "a": "The operator that the facilities are adequate, and the commander before take-off (Article 209)."
+   "a": "The operator that the facilities are adequate, and the commander before take-off (Article 209).",
+   "ref": {
+    "sec": "ANO rules at aerodromes: instruction, fuel, arrival and customs"
+   }
   },
   {
    "q": "What does Article 220 say about fuel?",
-   "a": "Do not use fuel you know or suspect is unfit; it must be stored and sampled as required."
+   "a": "Do not use fuel you know or suspect is unfit; it must be stored and sampled as required.",
+   "ref": {
+    "sec": "ANO rules at aerodromes: instruction, fuel, arrival and customs"
+   }
   },
   {
    "q": "What colour marks Avgas equipment?",
-   "a": "Red, usually."
+   "a": "Red, usually.",
+   "ref": {
+    "sec": "ANO rules at aerodromes: instruction, fuel, arrival and customs"
+   }
   },
   {
    "q": "When must you tell your destination you are late?",
-   "a": "As soon as possible if you will be 45 minutes or more late, or change destination."
+   "a": "As soon as possible if you will be 45 minutes or more late, or change destination.",
+   "ref": {
+    "sec": "ANO rules at aerodromes: instruction, fuel, arrival and customs"
+   }
   },
   {
    "q": "Where are customs airports listed?",
-   "a": "AIP GEN, with hours and special requirements."
+   "a": "AIP GEN, with hours and special requirements.",
+   "ref": {
+    "sec": "ANO rules at aerodromes: instruction, fuel, arrival and customs"
+   }
   },
   {
    "q": "Which ICAO Annex covers security?",
-   "a": "Annex 17."
+   "a": "Annex 17.",
+   "ref": {
+    "sec": "Security (ICAO Annex 17)",
+    "rule": "ICAO Annex 17"
+   }
   },
   {
    "q": "Green Morse identification beacon?",
-   "a": "Civil aerodrome: two-letter group every 12 seconds."
+   "a": "Civil aerodrome: two-letter group every 12 seconds.",
+   "ref": {
+    "sec": "Aeronautical light beacons"
+   }
   },
   {
    "q": "Red Morse identification beacon?",
-   "a": "Military aerodrome: two-letter group every 12 seconds."
+   "a": "Military aerodrome: two-letter group every 12 seconds.",
+   "ref": {
+    "sec": "Aeronautical light beacons"
+   }
   },
   {
    "q": "Alternating white/white or white/green flashes?",
-   "a": "An aerodrome beacon (civil)."
+   "a": "An aerodrome beacon (civil).",
+   "ref": {
+    "sec": "Aeronautical light beacons"
+   }
   },
   {
    "q": "When are light beacons usually on?",
-   "a": "At night, and by day in poor visibility, while the aerodrome is operating."
+   "a": "At night, and by day in poor visibility, while the aerodrome is operating.",
+   "ref": {
+    "sec": "Aeronautical light beacons"
+   }
   },
   {
    "q": "Manoeuvring area vs apron?",
-   "a": "Manoeuvring area: take-off, landing and taxiing (no aprons). Apron: loading, turn-rounds and maintenance."
+   "a": "Manoeuvring area: take-off, landing and taxiing (no aprons). Apron: loading, turn-rounds and maintenance.",
+   "ref": {
+    "sec": "Moving on the aerodrome (Rules 12 and 13)"
+   }
   },
   {
    "q": "What do you need before taxiing on the apron or manoeuvring area?",
-   "a": "The aerodrome authority's permission."
+   "a": "The aerodrome authority's permission.",
+   "ref": {
+    "sec": "Moving on the aerodrome (Rules 12 and 13)"
+   }
   },
   {
    "q": "On the ground, who gives way to aircraft taking off or landing?",
-   "a": "Everyone on the ground."
+   "a": "Everyone on the ground.",
+   "ref": {
+    "sec": "Right of way on the ground (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   },
   {
    "q": "Two aircraft taxi head-on. What does each do?",
-   "a": "Turn right."
+   "a": "Turn right.",
+   "ref": {
+    "sec": "Right of way on the ground (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   },
   {
    "q": "Converging while taxiing: who gives way?",
-   "a": "The one with the other on its right: stop or pass behind."
+   "a": "The one with the other on its right: stop or pass behind.",
+   "ref": {
+    "sec": "Right of way on the ground (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   },
   {
    "q": "Overtaking while taxiing: who has right of way?",
-   "a": "The aircraft being overtaken. The overtaker keeps clear until past and well clear."
+   "a": "The aircraft being overtaken. The overtaker keeps clear until past and well clear.",
+   "ref": {
+    "sec": "Right of way on the ground (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   },
   {
    "q": "Why is an ATZ established?",
-   "a": "Usually because of the amount of flying around the aerodrome."
+   "a": "Usually because of the amount of flying around the aerodrome.",
+   "ref": {
+    "sec": "Aerodrome Traffic Zones (ATZs)"
+   }
   },
   {
    "q": "What does TORA mean?",
-   "a": "Take-off run available: runway declared suitable for the ground run of a take-off."
+   "a": "Take-off run available: runway declared suitable for the ground run of a take-off.",
+   "ref": {
+    "sec": "Declared distances (TORA, TODA, ASDA, LDA)"
+   }
   },
   {
    "q": "TODA = ?",
-   "a": "TORA plus clearway (if provided)."
+   "a": "TORA plus clearway (if provided).",
+   "ref": {
+    "sec": "Declared distances (TORA, TODA, ASDA, LDA)"
+   }
   },
   {
    "q": "ASDA = ?",
-   "a": "TORA plus stopway (if provided). No stopway: ASDA = TORA."
+   "a": "TORA plus stopway (if provided). No stopway: ASDA = TORA.",
+   "ref": {
+    "sec": "Declared distances (TORA, TODA, ASDA, LDA)"
+   }
   },
   {
    "q": "What is LDA?",
-   "a": "Landing distance available: runway declared suitable for the landing ground run."
+   "a": "Landing distance available: runway declared suitable for the landing ground run.",
+   "ref": {
+    "sec": "Declared distances (TORA, TODA, ASDA, LDA)"
+   }
   },
   {
    "q": "What is a stopway?",
-   "a": "A prepared area beyond the runway end, in the take-off direction, for stopping after an abandoned take-off."
+   "a": "A prepared area beyond the runway end, in the take-off direction, for stopping after an abandoned take-off.",
+   "ref": {
+    "sec": "Markers on unpaved manoeuvring areas"
+   }
   },
   {
    "q": "Which Annex covers aerodromes?",
-   "a": "ICAO Annex 14."
+   "a": "ICAO Annex 14.",
+   "ref": {
+    "sec": "Aerodrome standards (ICAO Annex 14)",
+    "rule": "ICAO Annex 14"
+   }
   },
   {
    "q": "Wet runway: how deep can the water be?",
-   "a": "Up to and including 3 mm."
+   "a": "Up to and including 3 mm.",
+   "ref": {
+    "sec": "Runway surface condition (GRF and SNOWTAM)"
+   }
   },
   {
    "q": "When is a runway third reported as contaminated?",
-   "a": "When more than 25% of it is covered by a contaminant."
+   "a": "When more than 25% of it is covered by a contaminant.",
+   "ref": {
+    "sec": "Runway surface condition (GRF and SNOWTAM)"
+   }
   },
   {
    "q": "Runway condition code range?",
-   "a": "0 (worst) to 6 (best), one for each runway third."
+   "a": "0 (worst) to 6 (best), one for each runway third.",
+   "ref": {
+    "sec": "Runway surface condition (GRF and SNOWTAM)"
+   }
   },
   {
    "q": "What carries GRF runway reports, even for standing water?",
-   "a": "A SNOWTAM."
+   "a": "A SNOWTAM.",
+   "ref": {
+    "sec": "Runway surface condition (GRF and SNOWTAM)"
+   }
   },
   {
    "q": "Which runway number does a SNOWTAM give?",
-   "a": "The lower one (09 for runway 09/27)."
+   "a": "The lower one (09 for runway 09/27).",
+   "ref": {
+    "sec": "Runway surface condition (GRF and SNOWTAM)"
+   }
   },
   {
    "q": "Colour of runway and taxiway markings?",
-   "a": "Runway white, taxiway and stand markings yellow."
+   "a": "Runway white, taxiway and stand markings yellow.",
+   "ref": {
+    "sec": "Indicators, markings and signs (Annex 14 ch. 5)"
+   }
   },
   {
    "q": "Colour of mandatory instruction signs?",
-   "a": "White on a red background."
+   "a": "White on a red background.",
+   "ref": {
+    "sec": "Indicators, markings and signs (Annex 14 ch. 5)"
+   }
   },
   {
    "q": "Threshold lights?",
-   "a": "Fixed, unidirectional, green towards the approach."
+   "a": "Fixed, unidirectional, green towards the approach.",
+   "ref": {
+    "sec": "Runway lights (Annex 14 5.3)"
+   }
   },
   {
    "q": "Runway end lights?",
-   "a": "Fixed, unidirectional, red towards the runway; ideally at least six, no more than 3 m beyond the end."
+   "a": "Fixed, unidirectional, red towards the runway; ideally at least six, no more than 3 m beyond the end.",
+   "ref": {
+    "sec": "Runway lights (Annex 14 5.3)"
+   }
   },
   {
    "q": "Obstacle light on a vehicle (not emergency)?",
-   "a": "Flashing yellow (low intensity)."
+   "a": "Flashing yellow (low intensity).",
+   "ref": {
+    "sec": "Obstacle lights and marking (Annex 14 6.3)"
+   }
   },
   {
    "q": "Small obstacle (45 m or less) lit how?",
-   "a": "A single steady red light on its highest point."
+   "a": "A single steady red light on its highest point.",
+   "ref": {
+    "sec": "Obstacle lights and marking (Annex 14 6.3)"
+   }
   },
   {
    "q": "White T in the signals area?",
-   "a": "Take off and land parallel with the shaft, towards the cross-arm."
+   "a": "Take off and land parallel with the shaft, towards the cross-arm.",
+   "ref": {
+    "sec": "Signals area: direction and surfaces"
+   }
   },
   {
    "q": "White disc at the head of the T (or black ball on the mast)?",
-   "a": "Landing and take-off directions do not necessarily coincide."
+   "a": "Landing and take-off directions do not necessarily coincide.",
+   "ref": {
+    "sec": "Signals area: direction and surfaces"
+   }
   },
   {
    "q": "White dumb-bell?",
-   "a": "Keep to hard surfaces on the ground."
+   "a": "Keep to hard surfaces on the ground.",
+   "ref": {
+    "sec": "Signals area: direction and surfaces"
+   }
   },
   {
    "q": "Dumb-bell with black strips across the discs?",
-   "a": "Take off and land on a runway; other ground movement need not be on hard surfaces."
+   "a": "Take off and land on a runway; other ground movement need not be on hard surfaces.",
+   "ref": {
+    "sec": "Signals area: direction and surfaces"
+   }
   },
   {
    "q": "Red and yellow striped arrow bent clockwise?",
-   "a": "Right-hand circuit."
+   "a": "Right-hand circuit.",
+   "ref": {
+    "sec": "Signals area: circuit direction and warnings"
+   }
   },
   {
    "q": "Red flag / green flag on the signals mast?",
-   "a": "Left-hand circuit / right-hand circuit."
+   "a": "Left-hand circuit / right-hand circuit.",
+   "ref": {
+    "sec": "Signals area: circuit direction and warnings"
+   }
   },
   {
    "q": "Red square, one yellow diagonal?",
-   "a": "Manoeuvring area in poor state: take special care landing."
+   "a": "Manoeuvring area in poor state: take special care landing.",
+   "ref": {
+    "sec": "Signals area: circuit direction and warnings"
+   }
   },
   {
    "q": "Red square, yellow diagonal cross?",
-   "a": "Landing prohibited, likely for a long time."
+   "a": "Landing prohibited, likely for a long time.",
+   "ref": {
+    "sec": "Signals area: circuit direction and warnings"
+   }
   },
   {
    "q": "Double white cross or two red balls?",
-   "a": "Glider flying in progress."
+   "a": "Glider flying in progress.",
+   "ref": {
+    "sec": "Signals area: circuit direction and warnings"
+   }
   },
   {
    "q": "Yellow cross on the aerodrome?",
-   "a": "Tow-rope dropping area."
+   "a": "Tow-rope dropping area.",
+   "ref": {
+    "sec": "Signals area: circuit direction and warnings"
+   }
   },
   {
    "q": "Crosses on a runway (white) or taxiway (yellow)?",
-   "a": "That section is unfit for aircraft; crosses no more than 300 m apart."
+   "a": "That section is unfit for aircraft; crosses no more than 300 m apart.",
+   "ref": {
+    "sec": "Signals on paved runways and taxiways"
+   }
   },
   {
    "q": "Holding point: which lines face the runway?",
-   "a": "The broken lines."
+   "a": "The broken lines.",
+   "ref": {
+    "sec": "Signals on paved runways and taxiways"
+   }
   },
   {
    "q": "Orange and white wedges 45 m apart?",
-   "a": "Aerodrome boundary (unpaved)."
+   "a": "Aerodrome boundary (unpaved).",
+   "ref": {
+    "sec": "Markers on unpaved manoeuvring areas"
+   }
   },
   {
    "q": "Flat white rectangles 90 m apart?",
-   "a": "Boundary of an unpaved runway or stopway."
+   "a": "Boundary of an unpaved runway or stopway.",
+   "ref": {
+    "sec": "Markers on unpaved manoeuvring areas"
+   }
   },
   {
    "q": "White cross at each end of a runway?",
-   "a": "Landing dangerous; storage only."
+   "a": "Landing dangerous; storage only.",
+   "ref": {
+    "sec": "Markers on unpaved manoeuvring areas"
+   }
   },
   {
    "q": "White cross plus a white bar at each end?",
-   "a": "Disused aerodrome: emergency use only."
+   "a": "Disused aerodrome: emergency use only.",
+   "ref": {
+    "sec": "Markers on unpaved manoeuvring areas"
+   }
   },
   {
    "q": "Arrows before a displaced threshold?",
-   "a": "Pre-threshold area usable for taxi and take-off, not landing."
+   "a": "Pre-threshold area usable for taxi and take-off, not landing.",
+   "ref": {
+    "sec": "Displaced thresholds"
+   }
   },
   {
    "q": "Crosses before a displaced threshold?",
-   "a": "Pre-threshold area unfit for any movement."
+   "a": "Pre-threshold area unfit for any movement.",
+   "ref": {
+    "sec": "Displaced thresholds"
+   }
   },
   {
    "q": "Red and yellow chequered flag or board?",
-   "a": "Move on the manoeuvring area and apron only with ATC permission."
+   "a": "Move on the manoeuvring area and apron only with ATC permission.",
+   "ref": {
+    "sec": "Signals seen only on the ground"
+   }
   },
   {
    "q": "Black C on a yellow board?",
-   "a": "Where to report to ATC or the aerodrome authority."
+   "a": "Where to report to ATC or the aerodrome authority.",
+   "ref": {
+    "sec": "Signals seen only on the ground"
+   }
   },
   {
    "q": "Steady green: in flight / on the ground?",
-   "a": "Cleared to land / cleared to take off."
+   "a": "Cleared to land / cleared to take off.",
+   "ref": {
+    "sec": "Light signals from ATC"
+   }
   },
   {
    "q": "Flashing green: in flight / on the ground?",
-   "a": "Return and wait for permission to land / cleared to taxi."
+   "a": "Return and wait for permission to land / cleared to taxi.",
+   "ref": {
+    "sec": "Light signals from ATC"
+   }
   },
   {
    "q": "Steady red: in flight / on the ground?",
-   "a": "Give way and keep circling / stop."
+   "a": "Give way and keep circling / stop.",
+   "ref": {
+    "sec": "Light signals from ATC"
+   }
   },
   {
    "q": "Flashing red: in flight / on the ground?",
-   "a": "Do not land, aerodrome not available / move clear of the landing area."
+   "a": "Do not land, aerodrome not available / move clear of the landing area.",
+   "ref": {
+    "sec": "Light signals from ATC"
+   }
   },
   {
    "q": "Flashing white: in flight / on the ground?",
-   "a": "Land here after a steady green, then await instructions / return to starting point."
+   "a": "Land here after a steady green, then await instructions / return to starting point.",
+   "ref": {
+    "sec": "Light signals from ATC"
+   }
   },
   {
    "q": "Aircraft flashing its landing or nav lights?",
-   "a": "I am compelled to land."
+   "a": "I am compelled to land.",
+   "ref": {
+    "sec": "Light signals from aircraft"
+   }
   },
   {
    "q": "Green flare from an aircraft by day?",
-   "a": "May I land in a different direction from the landing T?"
+   "a": "May I land in a different direction from the landing T?",
+   "ref": {
+    "sec": "Light signals from aircraft"
+   }
   },
   {
    "q": "Marshaller: arms repeatedly crossed above the head?",
-   "a": "Stop (speed shows urgency)."
+   "a": "Stop (speed shows urgency).",
+   "ref": {
+    "sec": "Marshalling signals: marshaller to pilot"
+   }
   },
   {
    "q": "Marshaller: right arm raised at the elbow, palm forward?",
-   "a": "All clear, marshalling finished."
+   "a": "All clear, marshalling finished.",
+   "ref": {
+    "sec": "Marshalling signals: marshaller to pilot"
+   }
   },
   {
    "q": "How are engines numbered for the marshaller?",
-   "a": "From the marshaller's right to left: No. 1 port outer to No. 4 starboard outer."
+   "a": "From the marshaller's right to left: No. 1 port outer to No. 4 starboard outer.",
+   "ref": {
+    "sec": "Signals from pilot to marshaller"
+   }
   },
   {
    "q": "Emergency signal: arms crossed at the wrists in front of the head?",
-   "a": "Recommend stop."
+   "a": "Recommend stop.",
+   "ref": {
+    "sec": "Emergency hand signals"
+   }
   }
  ],
  "quiz": [
@@ -615,7 +837,10 @@
     "A green two-letter Morse group every 10 seconds"
    ],
    "a": 0,
-   "why": "Green Morse every 12 seconds is civil. Red is military, and alternating white/green is an aerodrome beacon, not an identification beacon."
+   "why": "Green Morse every 12 seconds is civil. Red is military, and alternating white/green is an aerodrome beacon, not an identification beacon.",
+   "ref": {
+    "sec": "Aeronautical light beacons"
+   }
   },
   {
    "q": "You see a red two-letter Morse group flashed from the ground. What is it?",
@@ -626,18 +851,24 @@
     "An aerodrome beacon"
    ],
    "a": 1,
-   "why": "Red Morse identifiers are military; civil ones are green. Danger-area warnings are red and green stars fired every 10 seconds."
+   "why": "Red Morse identifiers are military; civil ones are green. Danger-area warnings are red and green stars fired every 10 seconds.",
+   "ref": {
+    "sec": "Aeronautical light beacons"
+   }
   },
   {
    "q": "What does an aerodrome beacon usually show?",
    "o": [
-    "A green Morse group",
     "Alternating white/white or white/green flashes",
-    "A steady red light",
-    "Alternating red/green flashes"
+    "A green Morse group of the aerodrome's identity letters",
+    "A steady red light showing in all directions",
+    "Alternating red and green flashes at regular intervals"
    ],
-   "a": 1,
-   "why": "Usually white/white, less often white/green. It is not normally fitted as well as an identification beacon."
+   "a": 0,
+   "why": "Usually white/white, less often white/green. It is not normally fitted as well as an identification beacon.",
+   "ref": {
+    "sec": "Aeronautical light beacons"
+   }
   },
   {
    "q": "How often does an identification beacon flash its Morse group?",
@@ -648,7 +879,10 @@
     "Every 15 seconds"
    ],
    "a": 2,
-   "why": "Every 12 seconds. The 10-second interval belongs to the red and green warning stars."
+   "why": "Every 12 seconds. The 10-second interval belongs to the red and green warning stars.",
+   "ref": {
+    "sec": "Aeronautical light beacons"
+   }
   },
   {
    "q": "You are expected at another aerodrome. When must you tell them you are running late?",
@@ -659,18 +893,24 @@
     "Only if you change destination"
    ],
    "a": 2,
-   "why": "Forty-five minutes or more, or any change of destination, as soon as possible, so nobody starts overdue action."
+   "why": "Forty-five minutes or more, or any change of destination, as soon as possible, so nobody starts overdue action.",
+   "ref": {
+    "sec": "ANO rules at aerodromes: instruction, fuel, arrival and customs"
+   }
   },
   {
    "q": "Who gives permission to land at an unlicensed aerodrome?",
    "o": [
-    "The CAA",
-    "The nearest ATC unit",
-    "The owner or person in charge",
-    "No permission is needed"
+    "The owner or person in charge of the aerodrome",
+    "The CAA, through the aerodrome's AIP entry",
+    "The ATC unit whose airspace the aerodrome lies in",
+    "Nobody: permission is only needed at licensed sites"
    ],
-   "a": 2,
-   "why": "The owner or person in charge. At military and ordinary-licence aerodromes it is the aerodrome authority."
+   "a": 0,
+   "why": "The owner or person in charge. At military and ordinary-licence aerodromes it is the aerodrome authority.",
+   "ref": {
+    "sec": "Prior permission (PPR) and limits on use"
+   }
   },
   {
    "q": "When should you get PPR?",
@@ -681,40 +921,52 @@
     "After landing"
    ],
    "a": 1,
-   "why": "Before you set off, especially where no radio frequency is published."
+   "why": "Before you set off, especially where no radio frequency is published.",
+   "ref": {
+    "sec": "Prior permission (PPR) and limits on use"
+   }
   },
   {
    "q": "Civil use of a military aerodrome is normally restricted to:",
    "o": [
     "Its normal hours of watch and aircraft on inland flights",
-    "Any time, with PPR",
-    "International flights only",
-    "Aircraft with a radio"
+    "Its normal hours of watch and aircraft on international flights",
+    "Any time, provided PPR is obtained by radio first",
+    "Aircraft carrying both a radio and a transponder"
    ],
    "a": 0,
-   "why": "Normal hours of watch and inland flights, sometimes also by class of traffic. These limits do not apply in an emergency."
+   "why": "Normal hours of watch and inland flights, sometimes also by class of traffic. These limits do not apply in an emergency.",
+   "ref": {
+    "sec": "Prior permission (PPR) and limits on use"
+   }
   },
   {
    "q": "Can you land at an aerodrome that is not listed in AIP AD?",
    "o": [
-    "Never",
-    "Only if it is licensed",
     "In an emergency, or with the owner's or operator's permission",
-    "Only with CAA permission"
+    "Only in an emergency, never with permission alone",
+    "Only if it holds a CAA licence, even in an emergency",
+    "Only with written permission obtained from the CAA beforehand"
    ],
-   "a": 2,
-   "why": "Yes, in an emergency or with the owner's or operator's permission."
+   "a": 0,
+   "why": "Yes, in an emergency or with the owner's or operator's permission.",
+   "ref": {
+    "sec": "Prior permission (PPR) and limits on use"
+   }
   },
   {
    "q": "Before flying instruction towards a licence at an unlicensed aerodrome, who must be satisfied that the facilities are adequate?",
    "o": [
-    "The CAA",
-    "The aerodrome operator only",
     "Both the aerodrome operator and the commander",
-    "The student's instructor only"
+    "The aerodrome operator only, not the commander",
+    "The commander only, not the aerodrome operator",
+    "The CAA, after inspecting the site before use"
    ],
-   "a": 2,
-   "why": "Article 209: the operator must be satisfied, and the commander must not take off unless they are too."
+   "a": 0,
+   "why": "Article 209: the operator must be satisfied, and the commander must not take off unless they are too.",
+   "ref": {
+    "sec": "ANO rules at aerodromes: instruction, fuel, arrival and customs"
+   }
   },
   {
    "q": "What colour is Avgas equipment at aerodromes usually marked?",
@@ -725,7 +977,10 @@
     "Yellow"
    ],
    "a": 1,
-   "why": "Red. Black is the usual marking for Jet A-1, a common trap."
+   "why": "Red. Black is the usual marking for Jet A-1, a common trap.",
+   "ref": {
+    "sec": "ANO rules at aerodromes: instruction, fuel, arrival and customs"
+   }
   },
   {
    "q": "Where are the UK customs airports for international flights listed?",
@@ -736,7 +991,10 @@
     "An AIC"
    ],
    "a": 2,
-   "why": "AIP GEN, with hours of attendance and special requirements."
+   "why": "AIP GEN, with hours of attendance and special requirements.",
+   "ref": {
+    "sec": "ANO rules at aerodromes: instruction, fuel, arrival and customs"
+   }
   },
   {
    "q": "Which ICAO Annex covers aviation security?",
@@ -747,29 +1005,39 @@
     "Annex 17"
    ],
    "a": 3,
-   "why": "Annex 17. Annex 2 is rules of the air, Annex 11 air traffic services, Annex 14 aerodromes."
+   "why": "Annex 17. Annex 2 is rules of the air, Annex 11 air traffic services, Annex 14 aerodromes.",
+   "ref": {
+    "sec": "Security (ICAO Annex 17)",
+    "rule": "ICAO Annex 17"
+   }
   },
   {
    "q": "What is the manoeuvring area of an aerodrome?",
    "o": [
-    "The part used for take-off, landing and taxiing, excluding aprons",
-    "The runways only",
-    "The aprons and maintenance areas",
-    "The whole aerodrome including aprons"
+    "The take-off, landing and taxiing areas, excluding the aprons",
+    "The runways and stopways only, excluding the taxiways",
+    "The aprons and maintenance areas, excluding the runways",
+    "The whole aerodrome, including the aprons as well as the runways"
    ],
    "a": 0,
-   "why": "Take-off, landing and taxiing, but not aprons or maintenance areas. Add the aprons and you have the movement area."
+   "why": "Take-off, landing and taxiing, but not aprons or maintenance areas. Add the aprons and you have the movement area.",
+   "ref": {
+    "sec": "Moving on the aerodrome (Rules 12 and 13)"
+   }
   },
   {
    "q": "What is an apron used for?",
    "o": [
-    "Take-off and landing",
     "Loading, unloading, turn-rounds and maintenance",
-    "Holding before entering the runway",
-    "Engine run-ups only"
+    "Take-off and landing by light aircraft and helicopters",
+    "Holding clear of the runway before departure",
+    "Engine run-ups and power checks before take-off only"
    ],
-   "a": 1,
-   "why": "Aprons are for loading, unloading, turn-rounds, maintenance and repair: anything other than flight operations."
+   "a": 0,
+   "why": "Aprons are for loading, unloading, turn-rounds, maintenance and repair: anything other than flight operations.",
+   "ref": {
+    "sec": "Moving on the aerodrome (Rules 12 and 13)"
+   }
   },
   {
    "q": "You are taxiing and an aircraft is landing. Who gives way?",
@@ -780,7 +1048,11 @@
     "Whoever ATC cleared first"
    ],
    "a": 1,
-   "why": "Aircraft on the ground give way to those taking off or landing."
+   "why": "Aircraft on the ground give way to those taking off or landing.",
+   "ref": {
+    "sec": "Right of way on the ground (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   },
   {
    "q": "Two aircraft are taxiing head-on. What does each do?",
@@ -791,29 +1063,41 @@
     "The one on the taxiway centreline holds course"
    ],
    "a": 2,
-   "why": "Each turns right, the same as in the air."
+   "why": "Each turns right, the same as in the air.",
+   "ref": {
+    "sec": "Right of way on the ground (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   },
   {
    "q": "You are taxiing and another aircraft converges from your right. What do you do?",
    "o": [
-    "Continue: you have right of way",
     "Give way, stopping or passing behind it",
-    "Cross ahead quickly",
-    "Turn left"
+    "Continue, and let it give way to you",
+    "Cross ahead of it quickly while there is room",
+    "Turn left and pass ahead of the other aircraft"
    ],
-   "a": 1,
-   "why": "It is on your right, so you give way and avoid crossing ahead unless well clear."
+   "a": 0,
+   "why": "It is on your right, so you give way and avoid crossing ahead unless well clear.",
+   "ref": {
+    "sec": "Right of way on the ground (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   },
   {
    "q": "You are taxiing faster than an aircraft ahead of you on the same taxiway. Who has right of way?",
    "o": [
-    "You, as the faster aircraft",
     "The aircraft being overtaken",
-    "Whichever ATC names",
-    "Neither: both stop"
+    "You, as the faster overtaking aircraft",
+    "Whichever aircraft ATC names first",
+    "Neither: both must stop and wait"
    ],
-   "a": 1,
-   "why": "The aircraft being overtaken. As the overtaker you keep out of the way until past and well clear."
+   "a": 0,
+   "why": "The aircraft being overtaken. As the overtaker you keep out of the way until past and well clear.",
+   "ref": {
+    "sec": "Right of way on the ground (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   },
   {
    "q": "ATC has cleared you to taxi, but a vehicle pulls out ahead. Whose duty is it to avoid a collision?",
@@ -824,29 +1108,39 @@
     "Whoever is on the other's right"
    ],
    "a": 2,
-   "why": "Regardless of any ATC clearance, the commander must do everything possible to avoid a collision on the ground."
+   "why": "Regardless of any ATC clearance, the commander must do everything possible to avoid a collision on the ground.",
+   "ref": {
+    "sec": "Right of way on the ground (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   },
   {
    "q": "Whose permission do you need to taxi on an apron?",
    "o": [
-    "The CAA's",
     "The aerodrome authority's",
-    "The aircraft owner's",
-    "None"
+    "The CAA's, through the AIP",
+    "The aircraft owner's or operator's",
+    "Nobody's: aprons are not controlled"
    ],
-   "a": 1,
-   "why": "The aerodrome authority's permission is needed for the apron and the manoeuvring area (Rule 12)."
+   "a": 0,
+   "why": "The aerodrome authority's permission is needed for the apron and the manoeuvring area (Rule 12).",
+   "ref": {
+    "sec": "Moving on the aerodrome (Rules 12 and 13)"
+   }
   },
   {
    "q": "Apart from trespass, what risk do you run by landing without PPR?",
    "o": [
-    "None",
     "Your insurer may refuse a claim because you breached the ANO",
-    "Automatic licence suspension",
-    "A landing fee surcharge only"
+    "None: PPR is only a courtesy request to the aerodrome operator",
+    "Automatic suspension of your licence by the CAA",
+    "A landing fee surcharge, but no other consequence"
    ],
-   "a": 1,
-   "why": "You may miss safety information and, after an accident, the insurer may refuse to pay because you breached the ANO."
+   "a": 0,
+   "why": "You may miss safety information and, after an accident, the insurer may refuse to pay because you breached the ANO.",
+   "ref": {
+    "sec": "Prior permission (PPR) and limits on use"
+   }
   },
   {
    "q": "You told your destination you were coming. You are now running 50 minutes late. What must you do?",
@@ -857,7 +1151,10 @@
     "Tell them on arrival"
    ],
    "a": 0,
-   "why": "Tell them as soon as possible if you change destination or will be 45 minutes or more late, so they do not start overdue action. 60 and 30 minutes are the usual distractors."
+   "why": "Tell them as soon as possible if you change destination or will be 45 minutes or more late, so they do not start overdue action. 60 and 30 minutes are the usual distractors.",
+   "ref": {
+    "sec": "ANO rules at aerodromes: instruction, fuel, arrival and customs"
+   }
   },
   {
    "q": "Which is the take-off run available (TORA)?",
@@ -868,7 +1165,10 @@
     "The clearway and stopway together"
    ],
    "a": 0,
-   "why": "TORA is the ground-run length only. Adding the clearway gives TODA; adding the stopway gives ASDA."
+   "why": "TORA is the ground-run length only. Adding the clearway gives TODA; adding the stopway gives ASDA.",
+   "ref": {
+    "sec": "Declared distances (TORA, TODA, ASDA, LDA)"
+   }
   },
   {
    "q": "Which declared distance includes the clearway?",
@@ -879,7 +1179,10 @@
     "LDA"
    ],
    "a": 1,
-   "why": "TODA = TORA + clearway. The stopway belongs to ASDA, not TODA."
+   "why": "TODA = TORA + clearway. The stopway belongs to ASDA, not TODA.",
+   "ref": {
+    "sec": "Declared distances (TORA, TODA, ASDA, LDA)"
+   }
   },
   {
    "q": "A runway has no stopway. What is its ASDA?",
@@ -890,18 +1193,24 @@
     "Zero"
    ],
    "a": 0,
-   "why": "ASDA = TORA + stopway, so with no stopway it equals TORA."
+   "why": "ASDA = TORA + stopway, so with no stopway it equals TORA.",
+   "ref": {
+    "sec": "Declared distances (TORA, TODA, ASDA, LDA)"
+   }
   },
   {
    "q": "A runway third has standing water covering 20% of it. How is that third reported?",
    "o": [
     "Not contaminated: coverage must be more than 25%",
-    "Contaminated, because there is standing water",
-    "Slippery wet",
-    "Contaminated if it is deeper than 3 mm"
+    "Contaminated, because any standing water counts",
+    "Slippery wet, because under a quarter is covered",
+    "Contaminated if the water is deeper than 3 mm"
    ],
    "a": 0,
-   "why": "A third is contaminated only when more than a quarter of it is covered. Depth alone does not make it contaminated."
+   "why": "A third is contaminated only when more than a quarter of it is covered. Depth alone does not make it contaminated.",
+   "ref": {
+    "sec": "Runway surface condition (GRF and SNOWTAM)"
+   }
   },
   {
    "q": "Up to what depth of water is a runway reported as wet rather than contaminated?",
@@ -912,18 +1221,24 @@
     "Up to 1 mm"
    ],
    "a": 0,
-   "why": "Wet = visible dampness or water up to and including 3 mm (given enough coverage, deeper water is a contaminant)."
+   "why": "Wet = visible dampness or water up to and including 3 mm (given enough coverage, deeper water is a contaminant).",
+   "ref": {
+    "sec": "Runway surface condition (GRF and SNOWTAM)"
+   }
   },
   {
    "q": "In the GRF, a runway condition code of 0 means:",
    "o": [
     "The worst conditions",
     "The best conditions",
-    "No report made",
-    "A dry runway"
+    "No report has been made",
+    "A dry runway with good braking"
    ],
    "a": 0,
-   "why": "Codes run from 0 (worst) to 6 (best)."
+   "why": "Codes run from 0 (worst) to 6 (best).",
+   "ref": {
+    "sec": "Runway surface condition (GRF and SNOWTAM)"
+   }
   },
   {
    "q": "Standing water is reported on a runway in July. How is it notified?",
@@ -934,18 +1249,24 @@
     "It is not notified outside winter"
    ],
    "a": 0,
-   "why": "The GRF runs all year; a SNOWTAM reports standing water too, not only snow and ice."
+   "why": "The GRF runs all year; a SNOWTAM reports standing water too, not only snow and ice.",
+   "ref": {
+    "sec": "Runway surface condition (GRF and SNOWTAM)"
+   }
   },
   {
    "q": "A SNOWTAM shows 09 for runway 09/27 with 27 in use. Why?",
    "o": [
     "SNOWTAMs give the lower runway number",
-    "09 is the runway in use",
-    "It is the wind direction",
+    "09 is the runway in use for the report",
+    "It is the surface wind direction",
     "It is the runway condition code"
    ],
    "a": 0,
-   "why": "The lower designator is always given; the report covers the runway whichever way it is used."
+   "why": "The lower designator is always given; the report covers the runway whichever way it is used.",
+   "ref": {
+    "sec": "Runway surface condition (GRF and SNOWTAM)"
+   }
   },
   {
    "q": "ICAO recommends which marking colours?",
@@ -956,7 +1277,10 @@
     "Blue on runways, yellow on taxiways"
    ],
    "a": 0,
-   "why": "Runway markings white; taxiway and stand markings yellow."
+   "why": "Runway markings white; taxiway and stand markings yellow.",
+   "ref": {
+    "sec": "Indicators, markings and signs (Annex 14 ch. 5)"
+   }
   },
   {
    "q": "Runway threshold lights are:",
@@ -967,7 +1291,10 @@
     "Flashing green in all directions"
    ],
    "a": 0,
-   "why": "Fixed unidirectional green towards the approach. The red end lights are the ones that face along the runway."
+   "why": "Fixed unidirectional green towards the approach. The red end lights are the ones that face along the runway.",
+   "ref": {
+    "sec": "Runway lights (Annex 14 5.3)"
+   }
   },
   {
    "q": "Runway end lights show:",
@@ -978,7 +1305,10 @@
     "Fixed white, towards the runway"
    ],
    "a": 0,
-   "why": "Fixed unidirectional red in the direction of the runway, ideally at least six of them."
+   "why": "Fixed unidirectional red in the direction of the runway, ideally at least six of them.",
+   "ref": {
+    "sec": "Runway lights (Annex 14 5.3)"
+   }
   },
   {
    "q": "A mandatory instruction sign is:",
@@ -989,7 +1319,10 @@
     "Yellow on black"
    ],
    "a": 0,
-   "why": "White inscription on a red background."
+   "why": "White inscription on a red background.",
+   "ref": {
+    "sec": "Indicators, markings and signs (Annex 14 ch. 5)"
+   }
   },
   {
    "q": "A tug towing an airliner shows a low-intensity obstacle light. What colour?",
@@ -1000,7 +1333,10 @@
     "Flashing white"
    ],
    "a": 0,
-   "why": "Ordinary vehicles flash yellow. Emergency and security vehicles are excepted; high-intensity obstacle lights flash white."
+   "why": "Ordinary vehicles flash yellow. Emergency and security vehicles are excepted; high-intensity obstacle lights flash white.",
+   "ref": {
+    "sec": "Obstacle lights and marking (Annex 14 6.3)"
+   }
   },
   {
    "q": "How is a 40 m mast near an aerodrome normally lit at night?",
@@ -1011,18 +1347,24 @@
     "It is not lit"
    ],
    "a": 0,
-   "why": "Fixed obstacles 45 m or less in height, width and length get one steady red light at the highest point."
+   "why": "Fixed obstacles 45 m or less in height, width and length get one steady red light at the highest point.",
+   "ref": {
+    "sec": "Obstacle lights and marking (Annex 14 6.3)"
+   }
   },
   {
    "q": "In the signals area you see a white T with a white disc at the head. It means:",
    "o": [
     "Landing and take-off directions do not necessarily coincide",
-    "Land towards the disc",
-    "Gliding is in progress",
-    "The manoeuvring area is in poor state"
+    "Land towards the disc, then take off away from it",
+    "Gliding is in progress on or near the aerodrome",
+    "The manoeuvring area is in a poor state: take special care when landing"
    ],
    "a": 0,
-   "why": "The disc (or a black ball on the mast) warns that the two directions may differ."
+   "why": "The disc (or a black ball on the mast) warns that the two directions may differ.",
+   "ref": {
+    "sec": "Signals area: direction and surfaces"
+   }
   },
   {
    "q": "You land using the white T in the signals area. Which way do you land?",
@@ -1033,18 +1375,24 @@
     "Towards the signals area"
    ],
    "a": 0,
-   "why": "Towards the cross-arm, i.e. into wind, unless ATC say otherwise."
+   "why": "Towards the cross-arm, i.e. into wind, unless ATC say otherwise.",
+   "ref": {
+    "sec": "Signals area: direction and surfaces"
+   }
   },
   {
    "q": "A white dumb-bell with a black strip across each disc means:",
    "o": [
     "Take off and land on a runway, but ground movement need not be on hard surfaces",
-    "Use hard surfaces only, on the ground and for take-off and landing",
-    "Light aircraft may use the grass",
-    "Landing prohibited"
+    "Use hard surfaces only, both on the ground and for take-off and landing",
+    "Light aircraft may take off and land on the grass, but must taxi on hard surfaces only",
+    "Landing prohibited on the grass; the runways and taxiways remain usable"
    ],
    "a": 0,
-   "why": "Plain dumb-bell: hard surfaces only on the ground. The black strips relax that for taxiing but keep take-off and landing on the runway."
+   "why": "Plain dumb-bell: hard surfaces only on the ground. The black strips relax that for taxiing but keep take-off and landing on the runway.",
+   "ref": {
+    "sec": "Signals area: direction and surfaces"
+   }
   },
   {
    "q": "A red and yellow striped arrow, bent clockwise round the edge of the signals area, means:",
@@ -1055,7 +1403,10 @@
     "Taxi clockwise around the apron"
    ],
    "a": 0,
-   "why": "Turns before landing and after take-off are to the right."
+   "why": "Turns before landing and after take-off are to the right.",
+   "ref": {
+    "sec": "Signals area: circuit direction and warnings"
+   }
   },
   {
    "q": "A green rectangular flag flies from the signals mast. The circuit is:",
@@ -1066,29 +1417,38 @@
     "At the pilot's discretion"
    ],
    "a": 0,
-   "why": "Green = right-hand, red = left-hand, as with nav lights (green starboard, red port)."
+   "why": "Green = right-hand, red = left-hand, as with nav lights (green starboard, red port).",
+   "ref": {
+    "sec": "Signals area: circuit direction and warnings"
+   }
   },
   {
    "q": "A red square with a single yellow diagonal means:",
    "o": [
-    "The manoeuvring area is poor: take special care on approach and landing",
-    "Landing is prohibited",
-    "Glider flying in progress",
-    "Use hard surfaces only"
+    "The manoeuvring area is poor: take special care when landing",
+    "Landing is prohibited, and that prohibition is likely to be prolonged",
+    "Glider flying is in progress: keep a good lookout on the approach",
+    "Use hard surfaces only for take-off, landing and taxiing"
    ],
    "a": 0,
-   "why": "One diagonal = take special care. A yellow diagonal cross = landing prohibited."
+   "why": "One diagonal = take special care. A yellow diagonal cross = landing prohibited.",
+   "ref": {
+    "sec": "Signals area: circuit direction and warnings"
+   }
   },
   {
    "q": "A red square with a yellow diagonal cross means:",
    "o": [
     "Landing prohibited, likely to be prolonged",
-    "Special precautions on landing",
-    "Tow-rope dropping area",
-    "Disused aerodrome"
+    "Take special care on approach and landing",
+    "Tow-ropes and banners are dropped here",
+    "The aerodrome is disused and no longer licensed"
    ],
    "a": 0,
-   "why": "The cross means landing is prohibited. A single diagonal only calls for special care; a yellow cross alone is the tow-rope area."
+   "why": "The cross means landing is prohibited. A single diagonal only calls for special care; a yellow cross alone is the tow-rope area.",
+   "ref": {
+    "sec": "Signals area: circuit direction and warnings"
+   }
   },
   {
    "q": "Two red balls hang one above the other on the signals mast. This means:",
@@ -1099,40 +1459,52 @@
     "ATC permission needed to move"
    ],
    "a": 0,
-   "why": "Two red balls (or a double white cross) = gliding. One black ball = directions may differ."
+   "why": "Two red balls (or a double white cross) = gliding. One black ball = directions may differ.",
+   "ref": {
+    "sec": "Signals area: circuit direction and warnings"
+   }
   },
   {
    "q": "Crosses with arms at 45° to the centreline appear on a taxiway. What colour are they and what do they mean?",
    "o": [
     "Yellow; that section is unfit for aircraft",
     "White; that section is unfit for aircraft",
-    "Yellow; holding point",
-    "White; emergency use only"
+    "Yellow; a holding point for the runway",
+    "White; that section is for emergency use only"
    ],
    "a": 0,
-   "why": "Yellow on a taxiway, white on a runway, no more than 300 m apart."
+   "why": "Yellow on a taxiway, white on a runway, no more than 300 m apart.",
+   "ref": {
+    "sec": "Signals on paved runways and taxiways"
+   }
   },
   {
    "q": "You have landed and are vacating the runway. You meet two broken yellow lines, then two continuous ones. Do you need a clearance to cross?",
    "o": [
     "No: you meet the broken lines first, so you are leaving the runway side",
-    "Yes, always",
-    "Only at night",
-    "Yes, because the continuous lines are beyond"
+    "Yes: a holding point may never be crossed without a clearance",
+    "Yes, but only at night or in low visibility procedures",
+    "Yes: the continuous lines beyond mean you must stop and get a clearance"
    ],
    "a": 0,
-   "why": "The broken lines face the runway. Approaching from the runway, the holding point does not need a clearance."
+   "why": "The broken lines face the runway. Approaching from the runway, the holding point does not need a clearance.",
+   "ref": {
+    "sec": "Signals on paved runways and taxiways"
+   }
   },
   {
    "q": "Taxiing out towards the runway, you reach a holding point with continuous lines on your side. What applies?",
    "o": [
     "Do not cross without ATC permission",
-    "Cross if you see no traffic",
-    "Cross after the power checks",
-    "Stop only at night"
+    "Cross once you have checked there is no traffic",
+    "Cross once the power checks are complete",
+    "Stop only at night or in low visibility"
    ],
    "a": 0,
-   "why": "No part of the aircraft may pass the holding point towards the runway without permission."
+   "why": "No part of the aircraft may pass the holding point towards the runway without permission.",
+   "ref": {
+    "sec": "Signals on paved runways and taxiways"
+   }
   },
   {
    "q": "Orange and white wedge-shaped markers no more than 45 m apart show:",
@@ -1143,18 +1515,24 @@
     "An unfit part of a paved runway"
    ],
    "a": 0,
-   "why": "Wedges mark the boundary (or, alternating with flags, an unserviceable unpaved area). Unpaved runway edges are flat white markers 90 m apart."
+   "why": "Wedges mark the boundary (or, alternating with flags, an unserviceable unpaved area). Unpaved runway edges are flat white markers 90 m apart.",
+   "ref": {
+    "sec": "Markers on unpaved manoeuvring areas"
+   }
   },
   {
    "q": "Flat white rectangles flush with the ground, no more than 90 m apart, mark:",
    "o": [
     "The boundary of an unpaved runway or stopway",
-    "The aerodrome boundary",
-    "A light aircraft area",
-    "An unfit area"
+    "The boundary of the aerodrome itself",
+    "An area reserved for light aircraft",
+    "An area of the aerodrome that is unfit for any use"
    ],
    "a": 0,
-   "why": "Flat white = runway or stopway edge. Orange and white wedges at 45 m = aerodrome boundary."
+   "why": "Flat white = runway or stopway edge. Orange and white wedges at 45 m = aerodrome boundary.",
+   "ref": {
+    "sec": "Markers on unpaved manoeuvring areas"
+   }
   },
   {
    "q": "A white cross and a single white bar at each end of a runway at a disused aerodrome means:",
@@ -1165,29 +1543,38 @@
     "Light aircraft only"
    ],
    "a": 0,
-   "why": "Cross plus bar = emergency only (and the runway is not safeguarded). A cross alone = dangerous, storage only."
+   "why": "Cross plus bar = emergency only (and the runway is not safeguarded). A cross alone = dangerous, storage only.",
+   "ref": {
+    "sec": "Markers on unpaved manoeuvring areas"
+   }
   },
   {
    "q": "Before a permanently displaced threshold there are white arrows. The area may be used for:",
    "o": [
     "Taxi and take-off, not landing",
-    "Landing only",
-    "Nothing: it is unfit",
-    "Taxiing only"
+    "Landing only, not taxi or take-off",
+    "Nothing: the area is unfit for use",
+    "Taxiing only, not take-off or landing"
    ],
    "a": 0,
-   "why": "Arrows = usable for taxi and take-off. Crosses would mean unfit for any movement."
+   "why": "Arrows = usable for taxi and take-off. Crosses would mean unfit for any movement.",
+   "ref": {
+    "sec": "Displaced thresholds"
+   }
   },
   {
    "q": "On the ground you see a red and yellow chequered board. It means:",
    "o": [
     "Move on the manoeuvring area and apron only with ATC permission",
-    "Glider flying in progress",
-    "Report to ATC here",
-    "Do not taxi on grass"
+    "Glider flying is in progress: keep clear of the launch area and cables",
+    "Report to ATC or the aerodrome authority at this point before flight",
+    "Taxi only on paved surfaces: the grass is unfit for aircraft movement"
    ],
    "a": 0,
-   "why": "Chequered = ATC permission needed to move. A black C on yellow shows where to report."
+   "why": "Chequered = ATC permission needed to move. A black C on yellow shows where to report.",
+   "ref": {
+    "sec": "Signals seen only on the ground"
+   }
   },
   {
    "q": "A steady red light is aimed at you (i) in flight and (ii) on the ground. It means:",
@@ -1198,51 +1585,66 @@
     "(i) Do not land (ii) move clear of the landing area"
    ],
    "a": 0,
-   "why": "Steady red: keep circling, or stop. Flashing red means aerodrome unavailable, or move clear of the landing area."
+   "why": "Steady red: keep circling, or stop. Flashing red means aerodrome unavailable, or move clear of the landing area.",
+   "ref": {
+    "sec": "Light signals from ATC"
+   }
   },
   {
    "q": "Holding at the runway, you get a steady green light. It means:",
    "o": [
     "Cleared to take off, if no collision risk",
-    "Cleared to taxi",
-    "Return to the apron",
-    "Cleared to cross the runway only"
+    "Cleared to taxi, if there is no collision risk",
+    "Return to the apron and await instructions",
+    "Cleared to cross the runway, but not take off"
    ],
    "a": 0,
-   "why": "Steady green on the ground is take-off. A flashing green is taxi."
+   "why": "Steady green on the ground is take-off. A flashing green is taxi.",
+   "ref": {
+    "sec": "Light signals from ATC"
+   }
   },
   {
    "q": "Flying near the aerodrome with a radio failure, you see green flashes from the tower. They mean:",
    "o": [
-    "Return to this aerodrome and wait for permission to land",
-    "Cleared to land",
-    "Land and await instructions",
-    "Do not land"
+    "Come back and wait for permission to land",
+    "Cleared to land, if there is no collision risk",
+    "Land here, then await further instructions",
+    "Do not land: the aerodrome is not available"
    ],
    "a": 0,
-   "why": "Flashing green in flight = come back and wait; steady green = cleared to land."
+   "why": "Flashing green in flight = come back and wait; steady green = cleared to land.",
+   "ref": {
+    "sec": "Light signals from ATC"
+   }
   },
   {
    "q": "You are taxiing and receive a series of white flashes. You should:",
    "o": [
     "Return to your starting point on the aerodrome",
-    "Stop",
-    "Move clear of the landing area",
-    "Continue to the holding point"
+    "Stop immediately and wait for a further light signal",
+    "Move clear of the landing area without delay",
+    "Continue to the holding point and stop there"
    ],
    "a": 0,
-   "why": "Flashing white on the ground = return to starting point. In flight it means land here after a steady green, then await instructions."
+   "why": "Flashing white on the ground = return to starting point. In flight it means land here after a steady green, then await instructions.",
+   "ref": {
+    "sec": "Light signals from ATC"
+   }
   },
   {
    "q": "In flight you see a flashing red light from the tower. You should:",
    "o": [
     "Not land: the aerodrome is not available",
-    "Continue circling and give way",
-    "Land and clear the runway",
-    "Return and wait for permission"
+    "Give way to other aircraft and keep circling",
+    "Land, then clear the runway as soon as possible",
+    "Return to the aerodrome and wait for permission"
    ],
    "a": 0,
-   "why": "Flashing red in flight = do not land here. Steady red = give way and keep circling."
+   "why": "Flashing red in flight = do not land here. Steady red = give way and keep circling.",
+   "ref": {
+    "sec": "Light signals from ATC"
+   }
   },
   {
    "q": "At night, a pilot flashes the landing lights on and off over the aerodrome. This means:",
@@ -1253,18 +1655,24 @@
     "I am leaving the circuit"
    ],
    "a": 0,
-   "why": "Flashing landing or nav lights = compelled to land. A green flare by night asks 'may I land?', a red flare asks for immediate help."
+   "why": "Flashing landing or nav lights = compelled to land. A green flare by night asks 'may I land?', a red flare asks for immediate help.",
+   "ref": {
+    "sec": "Light signals from aircraft"
+   }
   },
   {
    "q": "By day, an aircraft fires a green flare. It asks:",
    "o": [
-    "May I land in a different direction from that shown by the landing T?",
-    "May I land?",
-    "Immediate assistance required",
-    "Permission to taxi"
+    "May I land in a different direction from the landing T?",
+    "May I land here, in the direction shown by the landing T?",
+    "I am in difficulty and need immediate assistance",
+    "May I taxi to the apron and shut down my engine?"
    ],
    "a": 0,
-   "why": "By night a green flare asks 'may I land?'; by day it asks to land in a different direction from the T."
+   "why": "By night a green flare asks 'may I land?'; by day it asks to land in a different direction from the T.",
+   "ref": {
+    "sec": "Light signals from aircraft"
+   }
   },
   {
    "q": "A marshaller holds the right arm down and repeatedly beckons with the left arm. You should:",
@@ -1275,18 +1683,24 @@
     "Slow down"
    ],
    "a": 0,
-   "why": "Right arm down, left arm beckoning = turn to port (open up the starboard engine). The faster the arm, the tighter the turn."
+   "why": "Right arm down, left arm beckoning = turn to port (open up the starboard engine). The faster the arm, the tighter the turn.",
+   "ref": {
+    "sec": "Marshalling signals: marshaller to pilot"
+   }
   },
   {
    "q": "A marshaller raises the right arm at the elbow, palm facing forwards. It means:",
    "o": [
-    "All clear, marshalling finished",
-    "Stop",
-    "This bay",
-    "Engage brakes"
+    "All clear: marshalling finished",
+    "Stop immediately and hold your position",
+    "This is your bay: park the aircraft here",
+    "Engage the brakes and hold the aircraft"
    ],
    "a": 0,
-   "why": "All clear. Arms crossed above the head is stop; both arms vertical is 'this bay'."
+   "why": "All clear. Arms crossed above the head is stop; both arms vertical is 'this bay'.",
+   "ref": {
+    "sec": "Marshalling signals: marshaller to pilot"
+   }
   },
   {
    "q": "The marshaller faces a four-engined aircraft. Which is No. 1 engine?",
@@ -1297,7 +1711,10 @@
     "Starboard inner"
    ],
    "a": 0,
-   "why": "Numbering runs from the marshaller's right to left: No. 1 port outer, through to No. 4 starboard outer."
+   "why": "Numbering runs from the marshaller's right to left: No. 1 port outer, through to No. 4 starboard outer.",
+   "ref": {
+    "sec": "Signals from pilot to marshaller"
+   }
   },
   {
    "q": "A fire crew member crosses both arms at the wrists in front of the head. It means:",
@@ -1308,7 +1725,10 @@
     "Fire"
    ],
    "a": 0,
-   "why": "Arms crossed in front of the head = recommend stop. Arms swept down and crossed below the waist = emergency contained."
+   "why": "Arms crossed in front of the head = recommend stop. Arms swept down and crossed below the waist = emergency contained.",
+   "ref": {
+    "sec": "Emergency hand signals"
+   }
   },
   {
    "q": "Which ICAO Annex sets the standards for aerodromes?",
@@ -1319,18 +1739,26 @@
     "Annex 11"
    ],
    "a": 0,
-   "why": "Annex 14 is aerodromes. Annex 17 is security, Annex 2 the rules of the air, Annex 11 air traffic services."
+   "why": "Annex 14 is aerodromes. Annex 17 is security, Annex 2 the rules of the air, Annex 11 air traffic services.",
+   "ref": {
+    "sec": "Aerodrome standards (ICAO Annex 14)",
+    "rule": "ICAO Annex 14"
+   }
   },
   {
    "q": "Taxiing on the manoeuvring area, ATC have cleared you along a taxiway and another aircraft approaches head-on. Who must avoid the collision?",
    "o": [
     "You, as commander, whatever the clearance",
-    "ATC, because they cleared you",
-    "The other aircraft",
-    "The aircraft with the greater speed"
+    "ATC, because they issued the taxi clearance",
+    "The other aircraft, since you are the one cleared",
+    "The faster of the two aircraft involved"
    ],
    "a": 0,
-   "why": "The commander must do everything possible to avoid a collision regardless of ATC. Head-on, both turn right."
+   "why": "The commander must do everything possible to avoid a collision regardless of ATC. Head-on, both turn right.",
+   "ref": {
+    "sec": "Right of way on the ground (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   }
  ]
 }

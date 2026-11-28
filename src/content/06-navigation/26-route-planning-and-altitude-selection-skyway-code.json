@@ -74,64 +74,103 @@
  "cards": [
   {
    "q": "What does a PLOG contain?",
-   "a": "Headings, distances, times, frequencies, planned and safety altitudes and the fuel plan."
+   "a": "Headings, distances, times, frequencies, planned and safety altitudes and the fuel plan.",
+   "ref": {
+    "sec": "The PLOG"
+   }
   },
   {
    "q": "What is the MEF?",
-   "a": "The higher of the highest obstacle or highest terrain plus 300 ft in a lat/long box."
+   "a": "The higher of the highest obstacle or highest terrain plus 300 ft in a lat/long box.",
+   "ref": {
+    "sec": "Maximum Elevation Figure and safety altitude"
+   }
   },
   {
    "q": "Why the 300 ft in the MEF?",
-   "a": "Obstacles under 300 ft AGL may not be captured in the aeronautical data."
+   "a": "Obstacles under 300 ft AGL may not be captured in the aeronautical data.",
+   "ref": {
+    "sec": "Maximum Elevation Figure and safety altitude"
+   }
   },
   {
    "q": "Suggested margin above the highest obstacle for a safety altitude?",
-   "a": "500 ft or 1,000 ft."
+   "a": "500 ft or 1,000 ft.",
+   "ref": {
+    "sec": "Maximum Elevation Figure and safety altitude"
+   }
   },
   {
    "q": "How wide should you study terrain either side of track?",
-   "a": "At least 5 NM."
+   "a": "At least 5 NM.",
+   "ref": {
+    "sec": "Maximum Elevation Figure and safety altitude"
+   }
   },
   {
    "q": "Why choose non-whole-number cruising altitudes?",
-   "a": "To reduce the risk of conflict, such as 4,200 ft."
+   "a": "To reduce the risk of conflict, such as 4,200 ft.",
+   "ref": {
+    "sec": "Choosing a cruising altitude"
+   }
   },
   {
    "q": "Descent rule of thumb?",
-   "a": "3 NM per 1,000 ft of height to lose."
+   "a": "3 NM per 1,000 ft of height to lose.",
+   "ref": {
+    "sec": "Choosing a cruising altitude"
+   }
   },
   {
    "q": "Descent rate rule using ground speed?",
-   "a": "Ground speed x 5 gives ft/min, so 100 kt gives about 500 ft/min."
+   "a": "Ground speed x 5 gives ft/min, so 100 kt gives about 500 ft/min.",
+   "ref": {
+    "sec": "Choosing a cruising altitude"
+   }
   },
   {
    "q": "What is Take 2?",
-   "a": "Keep 2 NM or 200 ft from CAS and similar airspace."
+   "a": "Keep 2 NM or 200 ft from CAS and similar airspace.",
+   "ref": {
+    "sec": "Avoiding infringements"
+   }
   },
   {
    "q": "How early to request a CAS transit?",
-   "a": "About 10 minutes before the boundary."
+   "a": "About 10 minutes before the boundary.",
+   "ref": {
+    "sec": "Planning a transit of CAS"
+   }
   },
   {
    "q": "Is the RPS recommended for VFR near CAS?",
-   "a": "No, use the relevant aerodrome QNH."
+   "a": "No, use the relevant aerodrome QNH.",
+   "ref": {
+    "sec": "Avoiding infringements"
+   }
   },
   {
    "q": "Why avoid IFR waypoints in VFR navigation?",
-   "a": "They are often on CAS boundaries or approach routes, creating infringement risk."
+   "a": "They are often on CAS boundaries or approach routes, creating infringement risk.",
+   "ref": {
+    "sec": "Avoiding infringements"
+   }
   }
  ],
  "quiz": [
   {
    "q": "The MEF in a lat/long box represents:",
    "o": [
-    "Average terrain height",
     "Higher of the highest obstacle or highest terrain plus 300 ft",
-    "Safe cruising altitude",
-    "Highest obstacle plus 1,000 ft"
+    "The average terrain height in the box, rounded up to 100 ft",
+    "A safe cruising altitude for the whole of the box",
+    "The highest obstacle in the box plus 1,000 ft, rounded up"
    ],
-   "a": 1,
-   "why": "The MEF is not a safe altitude on its own: add a margin."
+   "a": 0,
+   "why": "The MEF is not a safe altitude on its own: add a margin.",
+   "ref": {
+    "sec": "Maximum Elevation Figure and safety altitude"
+   }
   },
   {
    "q": "You need to descend from 6,000 ft to 1,000 ft. Using the rule of thumb you need about:",
@@ -142,7 +181,10 @@
     "50 NM"
    ],
    "a": 1,
-   "why": "3 NM per 1,000 ft x 5,000 ft of height to lose = 15 NM."
+   "why": "3 NM per 1,000 ft x 5,000 ft of height to lose = 15 NM.",
+   "ref": {
+    "sec": "Choosing a cruising altitude"
+   }
   },
   {
    "q": "At 120 kt ground speed the rate of descent rule gives about:",
@@ -153,29 +195,38 @@
     "1,200 ft/min"
    ],
    "a": 1,
-   "why": "Ground speed x 5 = 600 ft/min."
+   "why": "Ground speed x 5 = 600 ft/min.",
+   "ref": {
+    "sec": "Choosing a cruising altitude"
+   }
   },
   {
    "q": "Take 2 means:",
    "o": [
-    "Two radio calls",
     "2 NM or 200 ft clear of airspace",
-    "Two navigation aids",
-    "Two crew"
+    "Two radio calls before entry",
+    "Two navigation aids for each fix",
+    "Two crew for each flight"
    ],
-   "a": 1,
-   "why": "It is the recommended margin from CAS and similar airspace."
+   "a": 0,
+   "why": "It is the recommended margin from CAS and similar airspace.",
+   "ref": {
+    "sec": "Avoiding infringements"
+   }
   },
   {
    "q": "Which safety altitude margin does the Skyway Code suggest?",
    "o": [
-    "100 ft",
     "500 ft or 1,000 ft",
-    "2,000 ft",
-    "None"
+    "100 ft or 200 ft",
+    "2,000 ft or 3,000 ft",
+    "None is suggested"
    ],
-   "a": 1,
-   "why": "There is no legal requirement but 500 or 1,000 ft above the highest obstacle or terrain is appropriate."
+   "a": 0,
+   "why": "There is no legal requirement but 500 or 1,000 ft above the highest obstacle or terrain is appropriate.",
+   "ref": {
+    "sec": "Maximum Elevation Figure and safety altitude"
+   }
   }
  ]
 }

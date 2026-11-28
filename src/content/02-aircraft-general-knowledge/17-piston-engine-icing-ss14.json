@@ -85,67 +85,103 @@
  "cards": [
   {
    "q": "What cools the carburettor enough to cause ice?",
-   "a": "Fuel evaporating in the venturi, up to 35°C below the outside air."
+   "a": "Fuel evaporating in the venturi, up to 35°C below the outside air.",
+   "ref": {
+    "sec": "Three types of engine icing"
+   }
   },
   {
    "q": "Which engines cannot get carb ice?",
-   "a": "Fuel-injected engines. They can still get intake (impact) ice."
+   "a": "Fuel-injected engines. They can still get intake (impact) ice.",
+   "ref": {
+    "sec": "Three types of engine icing"
+   }
   },
   {
    "q": "Temperature band with the highest carb ice risk in humid air?",
-   "a": "About 0°C to 10°C, but it can happen on warm days too."
+   "a": "About 0°C to 10°C, but it can happen on warm days too.",
+   "ref": {
+    "sec": "When it happens"
+   }
   },
   {
    "q": "First sign of carb ice in a fixed-pitch propeller aircraft?",
-   "a": "A small RPM drop with falling airspeed or height."
+   "a": "A small RPM drop with falling airspeed or height.",
+   "ref": {
+    "sec": "Recognising it"
+   }
   },
   {
    "q": "First sign of carb ice with a constant-speed propeller?",
-   "a": "Manifold pressure falls while RPM stays the same."
+   "a": "Manifold pressure falls while RPM stays the same.",
+   "ref": {
+    "sec": "Recognising it"
+   }
   },
   {
    "q": "How long should carb heat be selected to clear ice?",
-   "a": "At least 15 seconds."
+   "a": "At least 15 seconds.",
+   "ref": {
+    "sec": "Using carb heat and alternate air"
+   }
   },
   {
    "q": "Normal power-check drop with carb heat on?",
-   "a": "About 75 to 100 RPM or 3 to 5 inches of MP."
+   "a": "About 75 to 100 RPM or 3 to 5 inches of MP.",
+   "ref": {
+    "sec": "Procedures by phase of flight"
+   }
   },
   {
    "q": "When should carb heat be applied during a descent?",
-   "a": "Before reducing power, then keep adding power regularly."
+   "a": "Before reducing power, then keep adding power regularly.",
+   "ref": {
+    "sec": "Procedures by phase of flight"
+   }
   },
   {
    "q": "Why avoid carb heat while taxiing?",
-   "a": "Heated air bypasses the filter, so it can draw in dust and debris."
+   "a": "Heated air bypasses the filter, so it can draw in dust and debris.",
+   "ref": {
+    "sec": "Procedures by phase of flight"
+   }
   },
   {
    "q": "What is impact icing?",
-   "a": "Ice on the intake or filter from visible moisture below 0°C."
+   "a": "Ice on the intake or filter from visible moisture below 0°C.",
+   "ref": {
+    "sec": "Three types of engine icing"
+   }
   }
  ],
  "quiz": [
   {
    "q": "On a warm humid day you are descending at low power. Which statement is correct?",
    "o": [
-    "Carb ice is impossible above 15°C",
     "Carb ice can still form and descent power is the highest-risk setting",
-    "Carb ice only forms in cloud",
-    "Only fuel-injected engines are at risk"
+    "Carb ice is impossible above 15°C, whatever the power setting",
+    "Carb ice only forms in visible moisture such as cloud or rain",
+    "Only fuel-injected engines are at risk at low descent power"
    ],
-   "a": 1,
-   "why": "Serious carb ice has been shown with air above 25°C and humidity as low as 30%, especially at descent power."
+   "a": 0,
+   "why": "Serious carb ice has been shown with air above 25°C and humidity as low as 30%, especially at descent power.",
+   "ref": {
+    "sec": "When it happens"
+   }
   },
   {
    "q": "Your fixed-pitch propeller RPM drops slightly and airspeed falls. What do you do first?",
    "o": [
-    "Open the throttle and ignore it",
     "Apply carb heat and accept some rough running while it clears",
-    "Lean the mixture fully",
-    "Switch off the fuel pump"
+    "Open the throttle to restore the RPM and ignore the drop",
+    "Lean the mixture fully to restore the lost RPM",
+    "Switch off the electric fuel pump and check the gauges"
    ],
-   "a": 1,
-   "why": "Select heat and keep it on. The engine may run rough as ice melts."
+   "a": 0,
+   "why": "Select heat and keep it on. The engine may run rough as ice melts.",
+   "ref": {
+    "sec": "Using carb heat and alternate air"
+   }
   },
   {
    "q": "At the power check, carb heat on gives a typical drop of:",
@@ -156,40 +192,52 @@
     "No change"
    ],
    "a": 1,
-   "why": "A drop of about 75 to 100 RPM, or 3 to 5 inches of MP, is expected. A rise afterwards suggests ice was cleared."
+   "why": "A drop of about 75 to 100 RPM, or 3 to 5 inches of MP, is expected. A rise afterwards suggests ice was cleared.",
+   "ref": {
+    "sec": "Procedures by phase of flight"
+   }
   },
   {
    "q": "Why should you apply carb heat before closing the throttle in the descent?",
    "o": [
-    "It lowers drag",
     "Ice is much more likely at reduced power",
-    "It cools the engine",
-    "It improves visibility"
+    "It lowers drag and so steepens the descent",
+    "It cools the engine to protect the cylinders",
+    "It improves visibility through the windscreen"
    ],
-   "a": 1,
-   "why": "Induction ice is far more likely at low power, so heat goes on before power comes off."
+   "a": 0,
+   "why": "Induction ice is far more likely at low power, so heat goes on before power comes off.",
+   "ref": {
+    "sec": "Procedures by phase of flight"
+   }
   },
   {
    "q": "Which engine type can suffer intake icing but not carb icing?",
    "o": [
-    "Carburettor",
     "Fuel-injected",
-    "Both",
-    "Neither"
+    "Carburettor",
+    "Both of these",
+    "Neither of these"
    ],
-   "a": 1,
-   "why": "Fuel-injected engines have no carburettor but can ice at the intake or filter, so check alternate air."
+   "a": 0,
+   "why": "Fuel-injected engines have no carburettor but can ice at the intake or filter, so check alternate air.",
+   "ref": {
+    "sec": "Three types of engine icing"
+   }
   },
   {
    "q": "At about 300 ft on final many aircraft call for carb heat to be:",
    "o": [
-    "Selected hot",
     "Selected cold ready for a go-around",
-    "Left unchanged",
-    "Removed from the checklist"
+    "Selected hot for the rest of the landing",
+    "Left unchanged from the descent setting",
+    "Removed from the before-landing checks"
    ],
-   "a": 1,
-   "why": "Cold heat gives full power if you go around, but follow the AFM."
+   "a": 0,
+   "why": "Cold heat gives full power if you go around, but follow the AFM.",
+   "ref": {
+    "sec": "Procedures by phase of flight"
+   }
   }
  ]
 }

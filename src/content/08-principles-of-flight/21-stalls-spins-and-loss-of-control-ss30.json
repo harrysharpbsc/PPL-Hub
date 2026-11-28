@@ -78,43 +78,73 @@
  "cards": [
   {
    "q": "What controls whether a wing stalls?",
-   "a": "Angle of attack."
+   "a": "Angle of attack.",
+   "ref": {
+    "sec": "What a stall is"
+   }
   },
   {
    "q": "Can a stall happen at high airspeed?",
-   "a": "Yes, at any airspeed or attitude if the critical AoA is exceeded."
+   "a": "Yes, at any airspeed or attitude if the critical AoA is exceeded.",
+   "ref": {
+    "sec": "What a stall is"
+   }
   },
   {
    "q": "Stall speed in a 60° banked level turn?",
-   "a": "Rises by about 1.4 times (2 g)."
+   "a": "Rises by about 1.4 times (2 g).",
+   "ref": {
+    "sec": "Load factor and stall speed"
+   }
   },
   {
    "q": "Load factor in a 60° banked level turn?",
-   "a": "2 g."
+   "a": "2 g.",
+   "ref": {
+    "sec": "Load factor and stall speed"
+   }
   },
   {
    "q": "First action in stall recovery?",
-   "a": "Move the control column forward to reduce AoA."
+   "a": "Move the control column forward to reduce AoA.",
+   "ref": {
+    "sec": "Recovery"
+   }
   },
   {
    "q": "Why not use aileron first in a stall?",
-   "a": "Aileron on a stalled wing can aggravate roll. Reduce AoA first."
+   "a": "Aileron on a stalled wing can aggravate roll. Reduce AoA first.",
+   "ref": {
+    "sec": "Recovery"
+   }
   },
   {
    "q": "What follows significant yaw in a stall?",
-   "a": "A possible spin."
+   "a": "A possible spin.",
+   "ref": {
+    "sec": "What a stall is"
+   }
   },
   {
    "q": "Why is turning back after engine failure on take-off dangerous?",
-   "a": "Speed decays and AoA rises, so a stall or spin is likely."
+   "a": "Speed decays and AoA rises, so a stall or spin is likely.",
+   "ref": {
+    "sec": "Common causes"
+   }
   },
   {
    "q": "Does full power on a go-around guarantee safety?",
-   "a": "No. Airspeed can still fall so lower the nose to accelerate."
+   "a": "No. Airspeed can still fall so lower the nose to accelerate.",
+   "ref": {
+    "sec": "Common causes"
+   }
   },
   {
    "q": "Stall speed changes with what mathematical relationship?",
-   "a": "The square root of load factor."
+   "a": "The square root of load factor.",
+   "ref": {
+    "sec": "Load factor and stall speed"
+   }
   }
  ],
  "quiz": [
@@ -127,62 +157,80 @@
     "100 kt"
    ],
    "a": 2,
-   "why": "2 g multiplies stall speed by about 1.4, so roughly 70 kt."
+   "why": "2 g multiplies stall speed by about 1.4, so roughly 70 kt.",
+   "ref": {
+    "sec": "Load factor and stall speed"
+   }
   },
   {
    "q": "The first action to recover from a stall is to:",
    "o": [
-    "Apply full power only",
     "Move the control column forward to reduce AoA",
-    "Level the wings with aileron",
-    "Pull back"
+    "Apply full power while holding the attitude",
+    "Level the wings with aileron before anything else",
+    "Pull back to stop the nose dropping further"
    ],
-   "a": 1,
-   "why": "Reduce AoA first, then level wings, add power and accelerate."
+   "a": 0,
+   "why": "Reduce AoA first, then level wings, add power and accelerate.",
+   "ref": {
+    "sec": "Recovery"
+   }
   },
   {
    "q": "A stall can occur:",
    "o": [
-    "Only at low airspeed",
-    "Only in a climb",
     "At any attitude or airspeed",
-    "Only with flaps down"
+    "Only at low airspeed",
+    "Only in a climbing attitude",
+    "Only with the flaps down"
    ],
-   "a": 2,
-   "why": "A stall depends on AoA, which can be exceeded at any speed or attitude."
+   "a": 0,
+   "why": "A stall depends on AoA, which can be exceeded at any speed or attitude.",
+   "ref": {
+    "sec": "What a stall is"
+   }
   },
   {
    "q": "After engine failure on take-off the leaflet advises you to:",
    "o": [
-    "Turn back immediately",
-    "Stretch the glide",
     "Lower the nose promptly",
-    "Raise the nose"
+    "Turn back to the runway",
+    "Stretch the glide to a field",
+    "Raise the nose to slow down"
    ],
-   "a": 2,
-   "why": "Lower the nose to keep flying speed. Turning back and stretching the glide often cause stalls."
+   "a": 0,
+   "why": "Lower the nose to keep flying speed. Turning back and stretching the glide often cause stalls.",
+   "ref": {
+    "sec": "Common causes"
+   }
   },
   {
    "q": "Which is a developed stall symptom?",
    "o": [
-    "Increasing airspeed",
     "Strong buffet with a high descent rate despite a high nose attitude",
-    "Steady climb",
-    "Stable controls"
+    "Increasing airspeed with a nose-low attitude and light controls",
+    "A steady climb with firm controls and no buffet at all",
+    "Stable, effective controls with a low descent rate and no buffet"
    ],
-   "a": 1,
-   "why": "A developed stall gives strong buffet, mushy controls and a high descent rate."
+   "a": 0,
+   "why": "A developed stall gives strong buffet, mushy controls and a high descent rate.",
+   "ref": {
+    "sec": "Symptoms"
+   }
   },
   {
    "q": "Why is a spin more serious than a stall?",
    "o": [
     "It needs far more height to recover",
-    "It uses more fuel",
-    "It is only a risk with flaps",
-    "It disables radios"
+    "It uses far more fuel to recover",
+    "It is only a risk with the flaps down",
+    "It disables the radios and instruments"
    ],
    "a": 0,
-   "why": "A spin needs considerably more height to recover from, and may be unrecoverable at low level."
+   "why": "A spin needs considerably more height to recover from, and may be unrecoverable at low level.",
+   "ref": {
+    "sec": "What a stall is"
+   }
   }
  ]
 }

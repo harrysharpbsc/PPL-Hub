@@ -127,59 +127,101 @@
  "cards": [
   {
    "q": "What is a moment?",
-   "a": "Weight x arm (distance from the datum)."
+   "a": "Weight x arm (distance from the datum).",
+   "ref": {
+    "sec": "Balance and the centre of gravity"
+   }
   },
   {
    "q": "How do you calculate the CG?",
-   "a": "Total moment divided by total weight."
+   "a": "Total moment divided by total weight.",
+   "ref": {
+    "sec": "Balance and the centre of gravity"
+   }
   },
   {
    "q": "Effect of a forward CG on stall speed?",
-   "a": "Stall speed rises."
+   "a": "Stall speed rises.",
+   "ref": {
+    "sec": "Balance and the centre of gravity"
+   }
   },
   {
    "q": "Effect of an aft CG on stability?",
-   "a": "Pitch stability reduces, so it is harder to trim and recover."
+   "a": "Pitch stability reduces, so it is harder to trim and recover.",
+   "ref": {
+    "sec": "Balance and the centre of gravity"
+   }
   },
   {
    "q": "General safety factor for take-off and landing?",
-   "a": "Take-off x1.33, landing x1.43."
+   "a": "Take-off x1.33, landing x1.43.",
+   "ref": {
+    "sec": "Safety factors"
+   }
   },
   {
    "q": "What does TODA equal?",
-   "a": "TORA plus clearway."
+   "a": "TORA plus clearway.",
+   "ref": {
+    "sec": "Performance principles and definitions"
+   }
   },
   {
    "q": "What does ASDA equal?",
-   "a": "TORA plus stopway."
+   "a": "TORA plus stopway.",
+   "ref": {
+    "sec": "Performance principles and definitions"
+   }
   },
   {
    "q": "Take-off distance is measured to what height?",
-   "a": "50 ft."
+   "a": "50 ft.",
+   "ref": {
+    "sec": "Performance principles and definitions"
+   }
   },
   {
    "q": "What is pressure altitude?",
-   "a": "The altimeter reading with 1013 hPa set."
+   "a": "The altimeter reading with 1013 hPa set.",
+   "ref": {
+    "sec": "Performance principles and definitions"
+   }
   },
   {
    "q": "Effect of +10% weight on take-off distance?",
-   "a": "About x1.2."
+   "a": "About x1.2.",
+   "ref": {
+    "sec": "Rule-of-thumb multipliers"
+   }
   },
   {
    "q": "Effect of a tailwind of 10% of lift-off speed?",
-   "a": "About x1.2 on distance."
+   "a": "About x1.2 on distance.",
+   "ref": {
+    "sec": "Rule-of-thumb multipliers"
+   }
   },
   {
    "q": "Minimum single-engine climb rate?",
-   "a": "500 ft/min."
+   "a": "500 ft/min.",
+   "ref": {
+    "sec": "Rejected take-off and climb"
+   }
   },
   {
    "q": "Weight of AVGAS per litre?",
-   "a": "About 0.72 kg/L."
+   "a": "About 0.72 kg/L.",
+   "ref": {
+    "sec": "Fuel weight"
+   }
   },
   {
    "q": "Convert 1 US gallon to litres.",
-   "a": "3.785 L."
+   "a": "3.785 L.",
+   "ref": {
+    "sec": "Units and conversions"
+   }
   }
  ],
  "quiz": [
@@ -192,7 +234,10 @@
     "32.8"
    ],
    "a": 1,
-   "why": "Moment is weight x arm: 160 x 2.05 = 328."
+   "why": "Moment is weight x arm: 160 x 2.05 = 328.",
+   "ref": {
+    "sec": "Worked CG example"
+   }
   },
   {
    "q": "An aircraft with 1,045 kg total weight and 2,386.05 total moment has a CG of about:",
@@ -203,7 +248,10 @@
     "2.86 m"
    ],
    "a": 1,
-   "why": "2,386.05 / 1,045 = 2.28 m."
+   "why": "2,386.05 / 1,045 = 2.28 m.",
+   "ref": {
+    "sec": "Worked CG example"
+   }
   },
   {
    "q": "Which is a result of an aft CG?",
@@ -214,7 +262,10 @@
     "Greater induced drag"
    ],
    "a": 1,
-   "why": "An aft CG reduces pitch stability and can worsen stall and spin behaviour."
+   "why": "An aft CG reduces pitch stability and can worsen stall and spin behaviour.",
+   "ref": {
+    "sec": "Balance and the centre of gravity"
+   }
   },
   {
    "q": "You calculate a 400 m take-off on dry grass. Applying x1.2 for grass then x1.33 gives about:",
@@ -225,7 +276,10 @@
     "712 m"
    ],
    "a": 2,
-   "why": "400 x 1.2 = 480, then x1.33 = about 638 m, so roughly 640 m."
+   "why": "400 x 1.2 = 480, then x1.33 = about 638 m, so roughly 640 m.",
+   "ref": {
+    "sec": "Safety factors"
+   }
   },
   {
    "q": "Which describes TODA?",
@@ -236,7 +290,10 @@
     "Runway length minus displaced threshold"
    ],
    "a": 1,
-   "why": "TODA is the take-off run available plus clearway."
+   "why": "TODA is the take-off run available plus clearway.",
+   "ref": {
+    "sec": "Performance principles and definitions"
+   }
   },
   {
    "q": "You must clear 500 ft in 2 NM at 70 kt ground speed. Roughly what rate of climb is needed?",
@@ -247,18 +304,24 @@
     "500 ft/min"
    ],
    "a": 2,
-   "why": "250 ft/NM x (70/60) = about 291 ft/min."
+   "why": "250 ft/NM x (70/60) = about 291 ft/min.",
+   "ref": {
+    "sec": "Rejected take-off and climb"
+   }
   },
   {
    "q": "Which statement about AFM performance figures is correct?",
    "o": [
-    "They include safety margins",
-    "They are unfactored for a new aircraft and proficient pilot",
-    "They apply only to paved runways",
-    "They ignore weight"
+    "They are unfactored, for a new aircraft and a proficient pilot",
+    "They already include safety margins for an average pilot",
+    "They apply only to paved runways, so grass needs no factor",
+    "They ignore weight, so the figures suit any loading"
    ],
-   "a": 1,
-   "why": "AFM data is unfactored, so GA pilots should add their own safety factors."
+   "a": 0,
+   "why": "AFM data is unfactored, so GA pilots should add their own safety factors.",
+   "ref": {
+    "sec": "Performance principles and definitions"
+   }
   }
  ]
 }

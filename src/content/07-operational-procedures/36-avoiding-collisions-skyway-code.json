@@ -63,51 +63,87 @@
  "cards": [
   {
    "q": "How many airproxes are reported each year?",
-   "a": "More than 100."
+   "a": "More than 100.",
+   "ref": {
+    "sec": "The risk"
+   }
   },
   {
    "q": "Where do about half of UK mid-air collisions happen?",
-   "a": "Near aerodromes, many in the circuit."
+   "a": "Near aerodromes, many in the circuit.",
+   "ref": {
+    "sec": "The risk"
+   }
   },
   {
    "q": "Maximum time eyes inside the cockpit?",
-   "a": "25%."
+   "a": "25%.",
+   "ref": {
+    "sec": "The visual scan"
+   }
   },
   {
    "q": "Eye movement per scan step?",
-   "a": "About 10°."
+   "a": "About 10°.",
+   "ref": {
+    "sec": "The visual scan"
+   }
   },
   {
    "q": "Minimum pause for each scan step?",
-   "a": "At least one second."
+   "a": "At least one second.",
+   "ref": {
+    "sec": "The visual scan"
+   }
   },
   {
    "q": "Name two scanning methods.",
-   "a": "Side-to-side and front-to-side."
+   "a": "Side-to-side and front-to-side.",
+   "ref": {
+    "sec": "The visual scan"
+   }
   },
   {
    "q": "Why avoid whole-number cruising levels?",
-   "a": "Many pilots use them, so randomising reduces conflict risk."
+   "a": "Many pilots use them, so randomising reduces conflict risk.",
+   "ref": {
+    "sec": "Mitigations"
+   }
   },
   {
    "q": "Descent along an instrument approach path?",
-   "a": "About 300 ft per NM."
+   "a": "About 300 ft per NM.",
+   "ref": {
+    "sec": "Mitigations"
+   }
   },
   {
    "q": "Preferred UK ADS-B frequency?",
-   "a": "1090 MHz."
+   "a": "1090 MHz.",
+   "ref": {
+    "sec": "Electronic and visual conspicuity"
+   }
   },
   {
    "q": "What is EC?",
-   "a": "Electronic conspicuity: technology detecting aircraft position electronically."
+   "a": "Electronic conspicuity: technology detecting aircraft position electronically.",
+   "ref": {
+    "sec": "Electronic and visual conspicuity"
+   }
   },
   {
    "q": "When should strobes and beacons be on?",
-   "a": "At all times after entering the runway environment."
+   "a": "At all times after entering the runway environment.",
+   "ref": {
+    "sec": "Electronic and visual conspicuity"
+   }
   },
   {
    "q": "When should landing lights be on?",
-   "a": "On approaching an aerodrome and in areas of high traffic density."
+   "a": "On approaching an aerodrome and in areas of high traffic density.",
+   "ref": {
+    "sec": "Electronic and visual conspicuity"
+   }
   }
  ],
  "quiz": [
@@ -120,18 +156,24 @@
     "75%"
    ],
    "a": 1,
-   "why": "The rest of the time look outside."
+   "why": "The rest of the time look outside.",
+   "ref": {
+    "sec": "The visual scan"
+   }
   },
   {
    "q": "Most mid-air collisions occur:",
    "o": [
-    "In IMC at high level",
     "In good VMC at low level",
-    "At night",
-    "Above FL100"
+    "In IMC at high level",
+    "At night in poor visibility",
+    "Above FL100 in controlled airspace"
    ],
-   "a": 1,
-   "why": "Traffic density is higher at low level."
+   "a": 0,
+   "why": "Traffic density is higher at low level.",
+   "ref": {
+    "sec": "The risk"
+   }
   },
   {
    "q": "The CAA preferred UK ADS-B frequency is:",
@@ -142,18 +184,24 @@
     "135.48 MHz"
    ],
    "a": 1,
-   "why": "ADS-B on 1090 MHz is the preferred national system."
+   "why": "ADS-B on 1090 MHz is the preferred national system.",
+   "ref": {
+    "sec": "Electronic and visual conspicuity"
+   }
   },
   {
    "q": "Which statement about gliders is correct?",
    "o": [
-    "They stay overhead their site",
     "They may congregate in thermals and fly cross-country",
-    "They have no cable launches",
-    "They never use sites without charts"
+    "They always stay overhead their launch site",
+    "They never use cable launches, only aerotows",
+    "They never operate from sites not shown on charts"
    ],
-   "a": 1,
-   "why": "Gliders do not confine themselves to the site."
+   "a": 0,
+   "why": "Gliders do not confine themselves to the site.",
+   "ref": {
+    "sec": "Mitigations"
+   }
   },
   {
    "q": "An effective scan moves the eyes in steps of about:",
@@ -164,7 +212,10 @@
     "90°"
    ],
    "a": 1,
-   "why": "10° steps with a pause of at least a second each."
+   "why": "10° steps with a pause of at least a second each.",
+   "ref": {
+    "sec": "The visual scan"
+   }
   }
  ]
 }

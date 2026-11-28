@@ -104,51 +104,87 @@
  "cards": [
   {
    "q": "What does the MEF stand for and how is it used?",
-   "a": "Maximum Elevation Figure. Add 500 or 1,000 ft for a safe altitude margin."
+   "a": "Maximum Elevation Figure. Add 500 or 1,000 ft for a safe altitude margin.",
+   "ref": {
+    "sec": "Planning to avoid IMC"
+   }
   },
   {
    "q": "Lowest recommended en-route height under VFR?",
-   "a": "1,500 ft AGL."
+   "a": "1,500 ft AGL.",
+   "ref": {
+    "sec": "Planning to avoid IMC"
+   }
   },
   {
    "q": "VMC minima above 3,000 ft AMSL in Class G?",
-   "a": "5 km visibility, 1,500 m horizontal and 1,000 ft vertical from cloud."
+   "a": "5 km visibility, 1,500 m horizontal and 1,000 ft vertical from cloud.",
+   "ref": {
+    "sec": "VFR on top"
+   }
   },
   {
    "q": "Priority order if you enter cloud?",
-   "a": "Aviate, Navigate, Communicate."
+   "a": "Aviate, Navigate, Communicate.",
+   "ref": {
+    "sec": "If you enter IMC"
+   }
   },
   {
    "q": "Maximum bank for the 180° turn?",
-   "a": "20° (rate 1)."
+   "a": "20° (rate 1).",
+   "ref": {
+    "sec": "The 180° turn"
+   }
   },
   {
    "q": "Time for a 180° rate 1 turn?",
-   "a": "1 minute (2 minutes for 360°)."
+   "a": "1 minute (2 minutes for 360°).",
+   "ref": {
+    "sec": "The 180° turn"
+   }
   },
   {
    "q": "What is VFR on top?",
-   "a": "VMC above cloud without sight of the surface."
+   "a": "VMC above cloud without sight of the surface.",
+   "ref": {
+    "sec": "VFR on top"
+   }
   },
   {
    "q": "What type of call should you make in VFR into IMC?",
-   "a": "MAYDAY."
+   "a": "MAYDAY.",
+   "ref": {
+    "sec": "Calling for help"
+   }
   },
   {
    "q": "Which frequency for the D&D cell?",
-   "a": "121.5 MHz."
+   "a": "121.5 MHz.",
+   "ref": {
+    "sec": "Calling for help"
+   }
   },
   {
    "q": "Which illusion makes you feel banked the wrong way?",
-   "a": "The leans (vestibular)."
+   "a": "The leans (vestibular).",
+   "ref": {
+    "sec": "Spatial disorientation types"
+   }
   },
   {
    "q": "What is somatogravic illusion?",
-   "a": "Acceleration feels like a pitch-up."
+   "a": "Acceleration feels like a pitch-up.",
+   "ref": {
+    "sec": "Spatial disorientation types"
+   }
   },
   {
    "q": "Never do what in IMC?",
-   "a": "Descend below MSA."
+   "a": "Descend below MSA.",
+   "ref": {
+    "sec": "In-flight decisions and warning signs"
+   }
   }
  ],
  "quiz": [
@@ -161,7 +197,10 @@
     "Aviate, Communicate, Navigate"
    ],
    "a": 1,
-   "why": "Flying the aircraft comes first."
+   "why": "Flying the aircraft comes first.",
+   "ref": {
+    "sec": "If you enter IMC"
+   }
   },
   {
    "q": "Without a heading indicator, how long does a rate 1 turn through 180° take?",
@@ -172,18 +211,24 @@
     "3 minutes"
    ],
    "a": 1,
-   "why": "Rate 1 is 2 minutes for 360°, so 1 minute for 180°."
+   "why": "Rate 1 is 2 minutes for 360°, so 1 minute for 180°.",
+   "ref": {
+    "sec": "The 180° turn"
+   }
   },
   {
    "q": "A sensible minimum safe altitude margin above the MEF is:",
    "o": [
-    "100 ft",
     "500 or 1,000 ft",
-    "2,500 ft",
-    "None needed"
+    "100 or 200 ft",
+    "2,500 or 3,000 ft",
+    "None is needed"
    ],
-   "a": 1,
-   "why": "The leaflet notes common practice of adding 500 or 1,000 ft."
+   "a": 0,
+   "why": "The leaflet notes common practice of adding 500 or 1,000 ft.",
+   "ref": {
+    "sec": "Planning to avoid IMC"
+   }
   },
   {
    "q": "Maximum bank angle suggested for the 180° turn in IMC:",
@@ -194,18 +239,24 @@
     "45°"
    ],
    "a": 1,
-   "why": "Rate 1 turn, no more than 20° bank, with a little back pressure."
+   "why": "Rate 1 turn, no more than 20° bank, with a little back pressure.",
+   "ref": {
+    "sec": "The 180° turn"
+   }
   },
   {
    "q": "Which illusion makes acceleration feel like a pitch-up?",
    "o": [
-    "Coriolis",
-    "Leans",
     "Somatogravic",
-    "Inversion"
+    "Coriolis effect",
+    "The leans",
+    "Inversion illusion"
    ],
-   "a": 2,
-   "why": "Somatogravic illusion is caused by rapid acceleration."
+   "a": 0,
+   "why": "Somatogravic illusion is caused by rapid acceleration.",
+   "ref": {
+    "sec": "Spatial disorientation types"
+   }
   },
   {
    "q": "Which call is appropriate when you inadvertently enter IMC without a rating?",
@@ -216,7 +267,10 @@
     "Weather request only"
    ],
    "a": 1,
-   "why": "The leaflet advises a MAYDAY call in a VFR-into-IMC situation."
+   "why": "The leaflet advises a MAYDAY call in a VFR-into-IMC situation.",
+   "ref": {
+    "sec": "Calling for help"
+   }
   }
  ]
 }

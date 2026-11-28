@@ -64,51 +64,93 @@
  "cards": [
   {
    "q": "Which way do you turn in the circuit unless told otherwise?",
-   "a": "Left."
+   "a": "Left.",
+   "ref": {
+    "sec": "Operating rules (SERA.3225)",
+    "rule": "SERA.3225"
+   }
   },
   {
    "q": "Which direction do you land and take off?",
-   "a": "Into wind unless safety dictates otherwise."
+   "a": "Into wind unless safety dictates otherwise.",
+   "ref": {
+    "sec": "Operating rules (SERA.3225)",
+    "rule": "SERA.3225"
+   }
   },
   {
    "q": "What does Rule 10 say about runways?",
-   "a": "Do not land on an occupied runway unless authorised by ATC."
+   "a": "Do not land on an occupied runway unless authorised by ATC.",
+   "ref": {
+    "sec": "ATZ rules (Rule 11 and 12)",
+    "rule": "Rule 11"
+   }
   },
   {
    "q": "What does Rule 11 apply to?",
-   "a": "Operating within an ATZ during notified hours of watch."
+   "a": "Operating within an ATZ during notified hours of watch.",
+   "ref": {
+    "sec": "ATZ rules (Rule 11 and 12)",
+    "rule": "Rule 11"
+   }
   },
   {
    "q": "What does Rule 12 apply to?",
-   "a": "Taxiing on the manoeuvring area of an uncontrolled aerodrome."
+   "a": "Taxiing on the manoeuvring area of an uncontrolled aerodrome.",
+   "ref": {
+    "sec": "ATZ rules (Rule 11 and 12)",
+    "rule": "Rule 11"
+   }
   },
   {
    "q": "Do you need a taxi clearance at an AGCS aerodrome?",
-   "a": "No, but you need the permission of the person in charge."
+   "a": "No, but you need the permission of the person in charge.",
+   "ref": {
+    "sec": "Departure procedures"
+   }
   },
   {
    "q": "What do you request at an AFIS aerodrome before taxiing?",
-   "a": "Taxi instructions."
+   "a": "Taxi instructions.",
+   "ref": {
+    "sec": "Departure procedures"
+   }
   },
   {
    "q": "Who must you give way to when joining the circuit?",
-   "a": "Traffic already established."
+   "a": "Traffic already established.",
+   "ref": {
+    "sec": "The circuit"
+   }
   },
   {
    "q": "What must be transmitted on entering or leaving an ATZ?",
-   "a": "Aircraft position and height."
+   "a": "Aircraft position and height.",
+   "ref": {
+    "sec": "ATZ rules (Rule 11 and 12)",
+    "rule": "Rule 11"
+   }
   },
   {
    "q": "What are hot spots on aerodrome charts?",
-   "a": "Holding points vulnerable to runway incursion, circled in red."
+   "a": "Holding points vulnerable to runway incursion, circled in red.",
+   "ref": {
+    "sec": "Departure procedures"
+   }
   },
   {
    "q": "Which clearance allows runway entry at an ATC aerodrome?",
-   "a": "Take-off clearance or 'line up and wait'."
+   "a": "Take-off clearance or 'line up and wait'.",
+   "ref": {
+    "sec": "Departure procedures"
+   }
   },
   {
    "q": "What must you call after departing the ATZ?",
-   "a": "Report leaving the ATZ."
+   "a": "Report leaving the ATZ.",
+   "ref": {
+    "sec": "Departure procedures"
+   }
   }
  ],
  "quiz": [
@@ -121,51 +163,68 @@
     "Depends on wind"
    ],
    "a": 1,
-   "why": "All turns left when approaching to land or take off unless indicated."
+   "why": "All turns left when approaching to land or take off unless indicated.",
+   "ref": {
+    "sec": "Operating rules (SERA.3225)",
+    "rule": "SERA.3225"
+   }
   },
   {
    "q": "At an AFIS aerodrome, when you report 'ready for departure':",
    "o": [
-    "You receive a take-off clearance",
     "The service reverts to information only and you ensure it is safe",
-    "ATC separates you",
-    "You must hold"
+    "You receive a take-off clearance from the AFIS officer",
+    "ATC separates you from other traffic in the circuit",
+    "You must hold until the AFIS officer clears you to go"
    ],
-   "a": 1,
-   "why": "AFIS gives information, not clearances, once you are at the holding point."
+   "a": 0,
+   "why": "AFIS gives information, not clearances, once you are at the holding point.",
+   "ref": {
+    "sec": "Departure procedures"
+   }
   },
   {
    "q": "Rule 11 requires, in an ATZ with an AGCS, that you:",
    "o": [
-    "Get permission",
     "Obtain appropriate information",
-    "Hold off",
-    "Squawk 7700"
+    "Get permission from the AGCS operator",
+    "Hold off until called by the operator",
+    "Squawk 7700 and call on entry"
    ],
-   "a": 1,
-   "why": "For AFIS or AGCS you get information, with ATC you get permission."
+   "a": 0,
+   "why": "For AFIS or AGCS you get information, with ATC you get permission.",
+   "ref": {
+    "sec": "ATZ rules (Rule 11 and 12)",
+    "rule": "Rule 11"
+   }
   },
   {
    "q": "Joining traffic must:",
    "o": [
-    "Have priority",
     "Give way to traffic already in the circuit",
-    "Join on final",
-    "Squawk ident"
+    "Have priority over traffic in the circuit",
+    "Join on final ahead of circuit traffic",
+    "Squawk ident and wait for a clearance"
    ],
-   "a": 1,
-   "why": "Joining aircraft give way to established traffic."
+   "a": 0,
+   "why": "Joining aircraft give way to established traffic.",
+   "ref": {
+    "sec": "The circuit"
+   }
   },
   {
    "q": "Before taxiing at an aerodrome with ATIS, you should quote:",
    "o": [
-    "The QFE",
     "The information letter on first contact",
-    "The squawk",
-    "Fuel on board"
+    "The QFE you have set, on first contact",
+    "The squawk you are using, on first contact",
+    "Your fuel on board, on first contact"
    ],
-   "a": 1,
-   "why": "Give the ATIS letter on first contact with ATC."
+   "a": 0,
+   "why": "Give the ATIS letter on first contact with ATC.",
+   "ref": {
+    "sec": "Departure procedures"
+   }
   }
  ]
 }

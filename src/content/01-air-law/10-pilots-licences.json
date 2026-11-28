@@ -185,79 +185,136 @@
  "cards": [
   {
    "q": "Minimum age for a PPL(A)? For solo?",
-   "a": "17 for the licence, 16 for solo."
+   "a": "17 for the licence, 16 for solo.",
+   "ref": {
+    "sec": "The PPL(A)"
+   }
   },
   {
    "q": "Medical needed for a PPL(A)?",
-   "a": "Class 2 (or Class 1)."
+   "a": "Class 2 (or Class 1).",
+   "ref": {
+    "sec": "Medicals (Part-MED)"
+   }
   },
   {
    "q": "Class 2 validity under 40?",
-   "a": "60 months (but not beyond age 42 if issued before 40)."
+   "a": "60 months (but not beyond age 42 if issued before 40).",
+   "ref": {
+    "sec": "Class 2 validity"
+   }
   },
   {
    "q": "Class 2 validity from 40 to 49?",
-   "a": "24 months (not beyond 51 if issued before 50)."
+   "a": "24 months (not beyond 51 if issued before 50).",
+   "ref": {
+    "sec": "Class 2 validity"
+   }
   },
   {
    "q": "Class 2 validity from 50?",
-   "a": "12 months."
+   "a": "12 months.",
+   "ref": {
+    "sec": "Class 2 validity"
+   }
   },
   {
    "q": "How early can you renew a medical without losing time?",
-   "a": "Up to 45 days before expiry."
+   "a": "Up to 45 days before expiry.",
+   "ref": {
+    "sec": "Class 2 validity"
+   }
   },
   {
    "q": "Who do you see after a significant illness or injury?",
-   "a": "Your AME (or an AeMC), before flying again."
+   "a": "Your AME (or an AeMC), before flying again.",
+   "ref": {
+    "sec": "Decrease in medical fitness"
+   }
   },
   {
    "q": "Rule of thumb after a local / general anaesthetic?",
-   "a": "12 hours / 48 hours."
+   "a": "12 hours / 48 hours.",
+   "ref": {
+    "sec": "Decrease in medical fitness"
+   }
   },
   {
    "q": "PPL(A) minimum flying hours?",
-   "a": "45 h, including 25 h dual and 10 h supervised solo."
+   "a": "45 h, including 25 h dual and 10 h supervised solo.",
+   "ref": {
+    "sec": "The PPL(A)"
+   }
   },
   {
    "q": "PPL(A) qualifying cross-country?",
-   "a": "At least 150 nm (270 km) solo with two full-stop landings at other aerodromes."
+   "a": "At least 150 nm (270 km) solo with two full-stop landings at other aerodromes.",
+   "ref": {
+    "sec": "The PPL(A)"
+   }
   },
   {
    "q": "How long do you have to pass the nine exams?",
-   "a": "18 months from the end of the month of the first pass."
+   "a": "18 months from the end of the month of the first pass.",
+   "ref": {
+    "sec": "The PPL(A)"
+   }
   },
   {
    "q": "Passenger recency?",
-   "a": "3 take-offs, approaches and landings in the preceding 90 days (one at night for night passengers)."
+   "a": "3 take-offs, approaches and landings in the preceding 90 days (one at night for night passengers).",
+   "ref": {
+    "sec": "Passenger recency (FCL.060)"
+   }
   },
   {
    "q": "Cost sharing conditions?",
-   "a": "Private flight, up to 6 people on board including the pilot, and the pilot pays a share."
+   "a": "Private flight, up to 6 people on board including the pilot, and the pilot pays a share.",
+   "ref": {
+    "sec": "Privileges"
+   }
   },
   {
    "q": "SEP rating validity?",
-   "a": "24 months."
+   "a": "24 months.",
+   "ref": {
+    "sec": "Revalidating the SEP class rating (valid 24 months)"
+   }
   },
   {
    "q": "SEP revalidation by experience?",
-   "a": "In the 12 months before expiry: 12 h, 6 h PIC, 12 take-offs and 12 landings, 1 h with an FI or CRI."
+   "a": "In the 12 months before expiry: 12 h, 6 h PIC, 12 take-offs and 12 landings, 1 h with an FI or CRI.",
+   "ref": {
+    "sec": "Revalidating the SEP class rating (valid 24 months)"
+   }
   },
   {
    "q": "SEP revalidation by test?",
-   "a": "A proficiency check with an examiner in the 3 months before expiry."
+   "a": "A proficiency check with an examiner in the 3 months before expiry.",
+   "ref": {
+    "sec": "Revalidating the SEP class rating (valid 24 months)"
+   }
   },
   {
    "q": "LAPL(A) limits?",
-   "a": "MTOW 2,000 kg or less and no more than 3 passengers."
+   "a": "MTOW 2,000 kg or less and no more than 3 passengers.",
+   "ref": {
+    "sec": "Other licences"
+   }
   },
   {
    "q": "Revalidation vs renewal?",
-   "a": "Revalidation extends a valid rating; renewal restores an expired one."
+   "a": "Revalidation extends a valid rating; renewal restores an expired one.",
+   "ref": {
+    "sec": "Part-FCL terms"
+   }
   },
   {
    "q": "How long must you be able to produce your logbook?",
-   "a": "Up to 2 years after the last entry."
+   "a": "Up to 2 years after the last entry.",
+   "ref": {
+    "sec": "Personal flying logbook"
+   }
   }
  ],
  "quiz": [
@@ -270,7 +327,10 @@
     "60 months, but not beyond age 40"
    ],
    "a": 0,
-   "why": "Under 40 it's 60 months, but one issued before 40 lapses at 42. Lapsing at exactly 40 is the trap."
+   "why": "Under 40 it's 60 months, but one issued before 40 lapses at 42. Lapsing at exactly 40 is the trap.",
+   "ref": {
+    "sec": "Class 2 validity"
+   }
   },
   {
    "q": "A Class 2 medical issued to a 52-year-old is valid for:",
@@ -281,7 +341,10 @@
     "6 months"
    ],
    "a": 0,
-   "why": "From 50 the period is 12 months."
+   "why": "From 50 the period is 12 months.",
+   "ref": {
+    "sec": "Class 2 validity"
+   }
   },
   {
    "q": "Before carrying passengers, a PPL(A) holder must have made, in the same class or type:",
@@ -292,18 +355,24 @@
     "3 take-offs, approaches and landings in the preceding calendar month"
    ],
    "a": 0,
-   "why": "Three in 90 days, as sole manipulator of the controls. For night passengers one must be at night."
+   "why": "Three in 90 days, as sole manipulator of the controls. For night passengers one must be at night.",
+   "ref": {
+    "sec": "Passenger recency (FCL.060)"
+   }
   },
   {
    "q": "Which is a valid way to revalidate an SEP class rating?",
    "o": [
     "12 h in the 12 months before expiry, with 6 h PIC, 12 take-offs and landings and 1 h with an instructor",
-    "12 h in the 12 months before expiry, with 6 take-offs and landings and 2 h with an instructor",
-    "A proficiency check with an examiner in the 12 months before expiry",
-    "6 h PIC in the 6 months before expiry"
+    "12 h in the 12 months before expiry, with 6 h PIC, 6 take-offs and landings and 2 h with an instructor",
+    "A proficiency check with an examiner at any time in the 12 months before the rating expires",
+    "6 h PIC in the 6 months before expiry, with 6 take-offs and landings and 1 h with an instructor"
    ],
    "a": 0,
-   "why": "Experience route: 12 h, 6 PIC, 12 and 12, 1 h refresher. The proficiency check must fall in the last 3 months, not 12."
+   "why": "Experience route: 12 h, 6 PIC, 12 and 12, 1 h refresher. The proficiency check must fall in the last 3 months, not 12.",
+   "ref": {
+    "sec": "Revalidating the SEP class rating (valid 24 months)"
+   }
   },
   {
    "q": "Cost sharing on a private flight is allowed when:",
@@ -314,18 +383,24 @@
     "The pilot holds an instructor rating"
    ],
    "a": 0,
-   "why": "Up to 6 on board, and direct costs are shared by everyone including the pilot."
+   "why": "Up to 6 on board, and direct costs are shared by everyone including the pilot.",
+   "ref": {
+    "sec": "Privileges"
+   }
   },
   {
    "q": "A student pilot may fly solo without a licence if they are at least:",
    "o": [
     "16, hold a Class 1 or 2 medical and are authorised and supervised by an instructor",
-    "17 and hold a Class 2 medical",
-    "16 and hold a LAPL medical, with one passenger",
-    "16, with written permission from the CAA"
+    "17, hold a Class 2 medical and are authorised and supervised by an instructor",
+    "16, hold a LAPL medical and carry no more than one passenger with them",
+    "16, hold a Class 2 medical and have written permission from the CAA"
    ],
    "a": 0,
-   "why": "16, a Class 1 or 2 medical, no one else on board, and an instructor's authorisation and supervision."
+   "why": "16, a Class 1 or 2 medical, no one else on board, and an instructor's authorisation and supervision.",
+   "ref": {
+    "sec": "Student pilots"
+   }
   },
   {
    "q": "After a dental local anaesthetic, a pilot should not fly for at least:",
@@ -336,18 +411,24 @@
     "8 hours"
    ],
    "a": 0,
-   "why": "12 hours for a local; 48 hours for a general anaesthetic."
+   "why": "12 hours for a local; 48 hours for a general anaesthetic.",
+   "ref": {
+    "sec": "Decrease in medical fitness"
+   }
   },
   {
    "q": "A pilot is admitted to hospital overnight. What must they do before flying again?",
    "o": [
     "Seek advice from their AME or an AeMC",
-    "Wait 20 days, then resume",
-    "Nothing, if they feel well",
-    "Get a note from their GP"
+    "Wait 20 days, then resume flying",
+    "Nothing, provided they feel well",
+    "Get a fitness note from their GP"
    ],
    "a": 0,
-   "why": "Hospital admission is one of the triggers; the AME or AeMC decides fitness."
+   "why": "Hospital admission is one of the triggers; the AME or AeMC decides fitness.",
+   "ref": {
+    "sec": "Decrease in medical fitness"
+   }
   },
   {
    "q": "A LAPL(A) holder could act as PIC of an aeroplane with:",
@@ -358,7 +439,10 @@
     "MTOW 2,500 kg and 2 seats"
    ],
    "a": 0,
-   "why": "LAPL(A): 2,000 kg or less and no more than 3 passengers, so 4 seats at most."
+   "why": "LAPL(A): 2,000 kg or less and no more than 3 passengers, so 4 seats at most.",
+   "ref": {
+    "sec": "Other licences"
+   }
   },
   {
    "q": "Under Part-FCL, a 'proficiency check' is used to:",
@@ -369,7 +453,10 @@
     "Test a student before first solo"
    ],
    "a": 0,
-   "why": "A skill test is for issue; a proficiency check revalidates or renews. The book's glossary has these the wrong way round."
+   "why": "A skill test is for issue; a proficiency check revalidates or renews. The book's glossary has these the wrong way round.",
+   "ref": {
+    "sec": "Part-FCL terms"
+   }
   }
  ]
 }

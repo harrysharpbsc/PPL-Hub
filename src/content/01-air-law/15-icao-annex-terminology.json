@@ -215,75 +215,129 @@
  "cards": [
   {
    "q": "Manoeuvring area?",
-   "a": "For taxiing, take-off and landing, excluding aprons."
+   "a": "For taxiing, take-off and landing, excluding aprons.",
+   "ref": {
+    "sec": "Aerodromes"
+   }
   },
   {
    "q": "Movement area?",
-   "a": "The manoeuvring area plus aprons."
+   "a": "The manoeuvring area plus aprons.",
+   "ref": {
+    "sec": "Aerodromes"
+   }
   },
   {
    "q": "Aerodrome elevation?",
-   "a": "The elevation of the highest point of the landing area."
+   "a": "The elevation of the highest point of the landing area.",
+   "ref": {
+    "sec": "Aerodromes"
+   }
   },
   {
    "q": "Aerodrome traffic?",
-   "a": "All traffic on the manoeuvring area and all aircraft in the vicinity (in, entering or leaving the circuit)."
+   "a": "All traffic on the manoeuvring area and all aircraft in the vicinity (in, entering or leaving the circuit).",
+   "ref": {
+    "sec": "Aerodromes"
+   }
   },
   {
    "q": "TODA?",
-   "a": "TORA plus clearway."
+   "a": "TORA plus clearway.",
+   "ref": {
+    "sec": "Declared distances"
+   }
   },
   {
    "q": "ASDA?",
-   "a": "TORA plus stopway."
+   "a": "TORA plus stopway.",
+   "ref": {
+    "sec": "Declared distances"
+   }
   },
   {
    "q": "Altitude?",
-   "a": "Vertical distance of a point from mean sea level."
+   "a": "Vertical distance of a point from mean sea level.",
+   "ref": {
+    "sec": "Heights and levels"
+   }
   },
   {
    "q": "Height?",
-   "a": "Vertical distance from a specified datum."
+   "a": "Vertical distance from a specified datum.",
+   "ref": {
+    "sec": "Heights and levels"
+   }
   },
   {
    "q": "Elevation?",
-   "a": "Vertical distance of a point on the earth's surface from mean sea level."
+   "a": "Vertical distance of a point on the earth's surface from mean sea level.",
+   "ref": {
+    "sec": "Heights and levels"
+   }
   },
   {
    "q": "Transition level?",
-   "a": "The lowest flight level available above the transition altitude."
+   "a": "The lowest flight level available above the transition altitude.",
+   "ref": {
+    "sec": "Heights and levels"
+   }
   },
   {
    "q": "Cloud ceiling?",
-   "a": "Base of the lowest layer below 20,000 ft covering more than half the sky."
+   "a": "Base of the lowest layer below 20,000 ft covering more than half the sky.",
+   "ref": {
+    "sec": "Weather and visibility"
+   }
   },
   {
    "q": "Control zone vs control area?",
-   "a": "CTR from the surface up; CTA from a specified height above the surface."
+   "a": "CTR from the surface up; CTA from a specified height above the surface.",
+   "ref": {
+    "sec": "ATS and airspace"
+   }
   },
   {
    "q": "ATC clearance vs instruction?",
-   "a": "A clearance authorises you to proceed under conditions; an instruction directs a specific action."
+   "a": "A clearance authorises you to proceed under conditions; an instruction directs a specific action.",
+   "ref": {
+    "sec": "ATS and airspace"
+   }
   },
   {
    "q": "Special VFR flight?",
-   "a": "A VFR flight cleared by ATC to operate in a CTR below VMC."
+   "a": "A VFR flight cleared by ATC to operate in a CTR below VMC.",
+   "ref": {
+    "sec": "ATS and airspace"
+   }
   },
   {
    "q": "Flight time?",
-   "a": "From first moving for the purpose of taking off until coming to rest after the flight."
+   "a": "From first moving for the purpose of taking off until coming to rest after the flight.",
+   "ref": {
+    "sec": "Flight plans and times"
+   }
   },
   {
    "q": "The emergency phases?",
-   "a": "Uncertainty, alert, distress."
+   "a": "Uncertainty, alert, distress.",
+   "ref": {
+    "sec": "Emergencies, accidents and SAR"
+   }
   },
   {
    "q": "Fireproof material?",
-   "a": "Withstands heat as well as or better than steel."
+   "a": "Withstands heat as well as or better than steel.",
+   "ref": {
+    "sec": "Emergencies, accidents and SAR"
+   }
   },
   {
    "q": "Air-taxiing?",
-   "a": "Helicopter movement above an aerodrome surface, normally in ground effect, below 20 kt groundspeed."
+   "a": "Helicopter movement above an aerodrome surface, normally in ground effect, below 20 kt groundspeed.",
+   "ref": {
+    "sec": "Communications"
+   }
   }
  ],
  "quiz": [
@@ -296,7 +350,10 @@
     "The aprons and taxiways only"
    ],
    "a": 0,
-   "why": "Movement includes aprons; manoeuvring excludes them. The exam swaps these often."
+   "why": "Movement includes aprons; manoeuvring excludes them. The exam swaps these often.",
+   "ref": {
+    "sec": "Aerodromes"
+   }
   },
   {
    "q": "TODA is:",
@@ -307,7 +364,10 @@
     "The landing distance available"
    ],
    "a": 0,
-   "why": "Clearway is for the climb-out, so it extends the take-off distance. Stopway extends ASDA."
+   "why": "Clearway is for the climb-out, so it extends the take-off distance. Stopway extends ASDA.",
+   "ref": {
+    "sec": "Declared distances"
+   }
   },
   {
    "q": "ASDA is:",
@@ -318,18 +378,24 @@
     "The runway length less any displaced threshold"
    ],
    "a": 0,
-   "why": "Accelerate-stop: you need somewhere to stop, so stopway."
+   "why": "Accelerate-stop: you need somewhere to stop, so stopway.",
+   "ref": {
+    "sec": "Declared distances"
+   }
   },
   {
    "q": "Aerodrome elevation is the elevation of:",
    "o": [
     "The highest point of the landing area",
-    "The aerodrome reference point",
-    "The threshold of the main runway",
-    "The control tower base"
+    "The notified aerodrome reference point",
+    "The threshold of the main instrument runway",
+    "The base of the aerodrome control tower"
    ],
    "a": 0,
-   "why": "ICAO uses the highest point of the landing area."
+   "why": "ICAO uses the highest point of the landing area.",
+   "ref": {
+    "sec": "Aerodromes"
+   }
   },
   {
    "q": "The vertical distance of an aircraft from mean sea level is its:",
@@ -340,7 +406,10 @@
     "Flight level"
    ],
    "a": 0,
-   "why": "Altitude is from MSL. Height is from a datum such as the aerodrome; elevation is for a point on the ground; flight levels use 1013.2 hPa."
+   "why": "Altitude is from MSL. Height is from a datum such as the aerodrome; elevation is for a point on the ground; flight levels use 1013.2 hPa.",
+   "ref": {
+    "sec": "Heights and levels"
+   }
   },
   {
    "q": "A cloud ceiling is the height of the base of the lowest cloud layer:",
@@ -351,40 +420,52 @@
     "Of any amount below 5,000 ft"
    ],
    "a": 0,
-   "why": "More than half the sky (BKN or OVC) and below 20,000 ft."
+   "why": "More than half the sky (BKN or OVC) and below 20,000 ft.",
+   "ref": {
+    "sec": "Weather and visibility"
+   }
   },
   {
    "q": "A control zone is controlled airspace extending:",
    "o": [
     "Upwards from the surface to a specified upper limit",
     "Upwards from a specified height above the surface",
-    "From FL100 to FL195",
-    "Only along a corridor between navaids"
+    "From FL100 up to FL195, around major aerodromes",
+    "Along a corridor between radio navigation aids"
    ],
    "a": 0,
-   "why": "A CTR starts at the surface. A CTA starts at a height above it; an airway is a corridor-shaped CTA."
+   "why": "A CTR starts at the surface. A CTA starts at a height above it; an airway is a corridor-shaped CTA.",
+   "ref": {
+    "sec": "ATS and airspace"
+   }
   },
   {
    "q": "Under ICAO and Part-FCL, flight time starts when the aircraft:",
    "o": [
     "First moves for the purpose of taking off",
-    "Begins its take-off roll",
-    "Becomes airborne",
-    "Has its engine started"
+    "Begins its take-off roll on the runway",
+    "Becomes airborne at the end of the take-off run",
+    "Has its engine started for the flight"
    ],
    "a": 0,
-   "why": "It runs from first moving to take off until it comes to rest. The book's glossary says 'take-off roll', which is wrong."
+   "why": "It runs from first moving to take off until it comes to rest. The book's glossary says 'take-off roll', which is wrong.",
+   "ref": {
+    "sec": "Flight plans and times"
+   }
   },
   {
    "q": "The transition level is:",
    "o": [
     "The lowest flight level available for use above the transition altitude",
-    "The highest altitude flown on QNH",
-    "The airspace between transition altitude and transition level",
-    "Always FL40 in the UK"
+    "The highest altitude that may be flown with QNH set on the altimeter",
+    "The airspace between the transition altitude and the transition level",
+    "Always FL40 in the UK, whatever the transition altitude is locally"
    ],
    "a": 0,
-   "why": "The transition altitude is the top of QNH flying; the transition level is the lowest usable FL above it; between them is the transition layer."
+   "why": "The transition altitude is the top of QNH flying; the transition level is the lowest usable FL above it; between them is the transition layer.",
+   "ref": {
+    "sec": "Heights and levels"
+   }
   },
   {
    "q": "An area at the end of the runway prepared for stopping after an abandoned take-off is a:",
@@ -395,7 +476,10 @@
     "Holding bay"
    ],
    "a": 0,
-   "why": "Stopway is for stopping (in ASDA). Clearway is for the initial climb (in TODA)."
+   "why": "Stopway is for stopping (in ASDA). Clearway is for the initial climb (in TODA).",
+   "ref": {
+    "sec": "Declared distances"
+   }
   }
  ]
 }

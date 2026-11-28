@@ -205,92 +205,158 @@
  "cards": [
   {
    "q": "What must a PIC brief passengers on before take-off?",
-   "a": "Emergency exits, seat belts or harnesses, and oxygen and life jackets if carried."
+   "a": "Emergency exits, seat belts or harnesses, and oxygen and life jackets if carried.",
+   "ref": {
+    "sec": "Passenger briefing (ANO Article 73)",
+    "rule": "ANO Article 73"
+   }
   },
   {
    "q": "Rough effect of 10% extra weight on take-off distance?",
-   "a": "About 20% more."
+   "a": "About 20% more.",
+   "ref": {
+    "sec": "Pre-flight actions of the PIC (NCO.GEN.105, ANO Articles 69 and 75)",
+    "rule": "NCO.GEN.105"
+   }
   },
   {
    "q": "Rough effect of a 10°C rise or 1,000 ft higher aerodrome?",
-   "a": "About 10% more take-off distance."
+   "a": "About 10% more take-off distance.",
+   "ref": {
+    "sec": "Pre-flight actions of the PIC (NCO.GEN.105, ANO Articles 69 and 75)",
+    "rule": "NCO.GEN.105"
+   }
   },
   {
    "q": "Legal blood alcohol limit for crew?",
-   "a": "20 mg per 100 ml of blood."
+   "a": "20 mg per 100 ml of blood.",
+   "ref": {
+    "sec": "In flight"
+   }
   },
   {
    "q": "Rule of thumb after drinking?",
-   "a": "At least 8 hours, longer after heavy drinking."
+   "a": "At least 8 hours, longer after heavy drinking.",
+   "ref": {
+    "sec": "In flight"
+   }
   },
   {
    "q": "Who has final authority over the safe conduct of a flight?",
-   "a": "The pilot-in-command (commander)."
+   "a": "The pilot-in-command (commander).",
+   "ref": {
+    "sec": "In flight",
+    "rule": "ANO Article 244"
+   }
   },
   {
    "q": "Can an aircraft tow a glider?",
-   "a": "Only if its CofA expressly allows it."
+   "a": "Only if its CofA expressly allows it.",
+   "ref": {
+    "sec": "Towing, dropping and parachuting"
+   }
   },
   {
    "q": "Captive balloon or kite height limit?",
-   "a": "60 m agl, and not within 60 m of a structure or inside an ATZ."
+   "a": "60 m agl, and not within 60 m of a structure or inside an ATZ.",
+   "ref": {
+    "sec": "Balloons, kites, airships and winch launches (Articles 92-93)"
+   }
   },
   {
    "q": "Documents that may stay on the ground for an A-to-A flight?",
-   "a": "Items 2 to 8: registration, CofA, noise certificate, approvals, radio licence, insurance, journey log."
+   "a": "Items 2 to 8: registration, CofA, noise certificate, approvals, radio licence, insurance, journey log.",
+   "ref": {
+    "sec": "Documents to be carried (NCO.GEN.135, ANO Article 229)",
+    "rule": "NCO.GEN.135"
+   }
   },
   {
    "q": "Squawk for radio failure?",
-   "a": "7600."
+   "a": "7600.",
+   "ref": {
+    "sec": "SSR transponders"
+   }
   },
   {
    "q": "Squawk for an emergency?",
-   "a": "7700 (keep an assigned code if already with a unit)."
+   "a": "7700 (keep an assigned code if already with a unit).",
+   "ref": {
+    "sec": "SSR transponders"
+   }
   },
   {
    "q": "Squawk for unlawful interference?",
-   "a": "7500."
+   "a": "7500.",
+   "ref": {
+    "sec": "SSR transponders"
+   }
   },
   {
    "q": "UK lost code?",
-   "a": "0030."
+   "a": "0030.",
+   "ref": {
+    "sec": "SSR transponders"
+   }
   },
   {
    "q": "Parachute dropping squawk?",
-   "a": "0033, from 5 minutes before the drop until the parachutists are down."
+   "a": "0033, from 5 minutes before the drop until the parachutists are down.",
+   "ref": {
+    "sec": "SSR transponders"
+   }
   },
   {
    "q": "How do you confirm an Airprox?",
-   "a": "Online on CA Form 1094 within 7 days."
+   "a": "Online on CA Form 1094 within 7 days.",
+   "ref": {
+    "sec": "Airprox"
+   }
   },
   {
    "q": "ELT frequencies?",
-   "a": "121.5 MHz and 406 MHz."
+   "a": "121.5 MHz and 406 MHz.",
+   "ref": {
+    "sec": "Part-NCO aeroplanes"
+   }
   },
   {
    "q": "Day VFR instruments?",
-   "a": "Magnetic heading, time (h, min, s), pressure altitude, indicated airspeed."
+   "a": "Magnetic heading, time (h, min, s), pressure altitude, indicated airspeed.",
+   "ref": {
+    "sec": "Instruments"
+   }
   },
   {
    "q": "When must single-engine aeroplanes carry life jackets?",
-   "a": "Beyond gliding distance from land, or where take-off or approach is over water and a ditching is likely."
+   "a": "Beyond gliding distance from land, or where take-off or approach is over water and a ditching is likely.",
+   "ref": {
+    "sec": "Over water (Part-NCO)"
+   }
   },
   {
    "q": "Crew oxygen rule?",
-   "a": "Above 10,000 ft for more than 30 minutes, and at all times above 13,000 ft."
+   "a": "Above 10,000 ft for more than 30 minutes, and at all times above 13,000 ft.",
+   "ref": {
+    "sec": "Oxygen (unpressurised)"
+   }
   }
  ],
  "quiz": [
   {
    "q": "Before take-off the pilot-in-command must brief passengers on:",
    "o": [
-    "Emergency exits, seat belts or harnesses, and oxygen and life jackets when carried",
-    "Emergency exits only",
-    "Seat belts and the aircraft's performance",
-    "The route and the weather"
+    "Emergency exits, seat belts or harnesses, and oxygen and life jackets if carried",
+    "Emergency exits only, since the other items are covered by placards in the cabin",
+    "Seat belts or harnesses, and the aircraft's performance and planned route",
+    "The route, the weather, and the expected time of arrival at the destination"
    ],
    "a": 0,
-   "why": "ANO Article 73: exits, belts or harnesses, and oxygen and life jackets when they are carried."
+   "why": "ANO Article 73: exits, belts or harnesses, and oxygen and life jackets when they are carried.",
+   "ref": {
+    "sec": "Passenger briefing (ANO Article 73)",
+    "rule": "ANO Article 73"
+   }
   },
   {
    "q": "The legal blood alcohol limit for a pilot is:",
@@ -301,7 +367,10 @@
     "9 mg per 100 ml of blood"
    ],
    "a": 0,
-   "why": "20 mg, a quarter of the England and Wales drink-driving limit of 80 mg."
+   "why": "20 mg, a quarter of the England and Wales drink-driving limit of 80 mg.",
+   "ref": {
+    "sec": "In flight"
+   }
   },
   {
    "q": "The transponder code for radio failure is:",
@@ -312,29 +381,38 @@
     "7000"
    ],
    "a": 0,
-   "why": "7600 is radio failure; 7700 emergency; 7500 unlawful interference; 7000 conspicuity."
+   "why": "7600 is radio failure; 7700 emergency; 7500 unlawful interference; 7000 conspicuity.",
+   "ref": {
+    "sec": "SSR transponders"
+   }
   },
   {
    "q": "Below FL100 a VFR pilot should squawk 7000 with ALT unless:",
    "o": [
     "ATC has assigned a code, or a special-purpose code applies",
-    "Flying in Class G",
-    "The visibility is over 10 km",
-    "The aircraft has Mode S"
+    "You are flying in Class G airspace and outside any ATZ or MATZ",
+    "The flight visibility is more than 10 km in VMC",
+    "The aircraft has a Mode S transponder with ADS-B"
    ],
    "a": 0,
-   "why": "Use 7000 unless you have been given a code or need a special one (emergency, lost, parachuting, aerobatics)."
+   "why": "Use 7000 unless you have been given a code or need a special one (emergency, lost, parachuting, aerobatics).",
+   "ref": {
+    "sec": "SSR transponders"
+   }
   },
   {
    "q": "An Airprox reported by radio must be confirmed:",
    "o": [
     "Within 7 days on CA Form 1094",
-    "Within 24 hours by phone",
-    "Within 28 days in writing",
-    "Only if ATC asks"
+    "Within 24 hours by phone to the CAA",
+    "Within 28 days in writing to the CAA",
+    "Only if the ATC unit asks you to"
    ],
    "a": 0,
-   "why": "Report by radio at once, then confirm within 7 days online (CA1094)."
+   "why": "Report by radio at once, then confirm within 7 days online (CA1094).",
+   "ref": {
+    "sec": "Airprox"
+   }
   },
   {
    "q": "The final authority for the safe conduct of a flight rests with:",
@@ -345,7 +423,11 @@
     "ATC in controlled airspace"
    ],
    "a": 0,
-   "why": "Annex 6 and the ANO: the PIC. The person at the controls may not be the PIC, and ATC never takes over that authority."
+   "why": "Annex 6 and the ANO: the PIC. The person at the controls may not be the PIC, and ATC never takes over that authority.",
+   "ref": {
+    "sec": "In flight",
+    "rule": "ANO Article 244"
+   }
   },
   {
    "q": "A pilot plans a local flight, taking off and landing at the same aerodrome within the UK, in a Part-21 aeroplane. Which document may stay on the ground?",
@@ -356,40 +438,53 @@
     "The interception procedures"
    ],
    "a": 0,
-   "why": "Items 2 to 8 (registration, CofA, noise certificate, approvals, radio licence, insurance, journey log) may stay at the aerodrome. The Flight Manual, charts and interception procedures still fly."
+   "why": "Items 2 to 8 (registration, CofA, noise certificate, approvals, radio licence, insurance, journey log) may stay at the aerodrome. The Flight Manual, charts and interception procedures still fly.",
+   "ref": {
+    "sec": "Documents to be carried (NCO.GEN.135, ANO Article 229)",
+    "rule": "NCO.GEN.135"
+   }
   },
   {
    "q": "A captive balloon or kite must not be flown:",
    "o": [
     "Higher than 60 m agl, within 60 m of a structure, or inside an ATZ",
-    "Higher than 150 m agl or within 150 m of a structure",
-    "Higher than 60 m agl only",
-    "Within 600 m of a congested area"
+    "Higher than 150 m agl, within 150 m of a structure, or inside an ATZ",
+    "Higher than 60 m agl, within 60 m of a structure, or inside a CTR",
+    "Higher than 60 m agl, within 600 m of a congested area, or in an ATZ"
    ],
    "a": 0,
-   "why": "All three limits apply: 60 m agl, 60 m from vessels, vehicles or structures, and not in an ATZ."
+   "why": "All three limits apply: 60 m agl, 60 m from vessels, vehicles or structures, and not in an ATZ.",
+   "ref": {
+    "sec": "Balloons, kites, airships and winch launches (Articles 92-93)"
+   }
   },
   {
    "q": "Under Part-NCO, a single-engine aeroplane flying further from land than 30 minutes at cruise or 50 nm (whichever is less):",
    "o": [
     "The PIC must assess the survival risk and decide on life rafts and distress signals",
-    "Must carry a life raft for everyone on board",
-    "Needs no extra equipment if life jackets are worn",
-    "Must file a flight plan with D&D"
+    "Must carry a life raft with enough places for everyone on board, whatever the assessed risk",
+    "Needs no extra equipment provided everyone on board wears a life jacket",
+    "Must file a flight plan with D&D and carry a personal locator beacon"
    ],
    "a": 0,
-   "why": "Part-NCO leaves the raft decision to the PIC's risk assessment beyond 30 minutes or 50 nm. The book's 100 nm raft rule is ICAO Annex 6."
+   "why": "Part-NCO leaves the raft decision to the PIC's risk assessment beyond 30 minutes or 50 nm. The book's 100 nm raft rule is ICAO Annex 6.",
+   "ref": {
+    "sec": "Over water (Part-NCO)"
+   }
   },
   {
    "q": "In an unpressurised aeroplane the crew must use oxygen:",
    "o": [
     "Above 10,000 ft for more than 30 minutes, and at all times above 13,000 ft",
-    "At all times above 10,000 ft",
-    "Above 13,000 ft for more than 30 minutes",
-    "Above 8,000 ft at night"
+    "At all times above 10,000 ft, and for more than 30 minutes above 8,000 ft",
+    "Above 13,000 ft for more than 30 minutes, and at all times above 15,000 ft",
+    "Above 8,000 ft at night, and at all times above 10,000 ft by day"
    ],
    "a": 0,
-   "why": "The 30-minute allowance applies between 10,000 and 13,000 ft; above 13,000 ft oxygen is needed all the time."
+   "why": "The 30-minute allowance applies between 10,000 and 13,000 ft; above 13,000 ft oxygen is needed all the time.",
+   "ref": {
+    "sec": "Oxygen (unpressurised)"
+   }
   }
  ]
 }

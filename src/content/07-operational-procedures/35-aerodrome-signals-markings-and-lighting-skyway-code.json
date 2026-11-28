@@ -65,59 +65,101 @@
  "cards": [
   {
    "q": "What does a white or orange T mean?",
-   "a": "Land and take off parallel to the shaft towards the cross arm."
+   "a": "Land and take off parallel to the shaft towards the cross arm.",
+   "ref": {
+    "sec": "Signal square"
+   }
   },
   {
    "q": "What does a right-hand arrow in the signal square mean?",
-   "a": "Right-hand circuits. Left-hand is the norm otherwise."
+   "a": "Right-hand circuits. Left-hand is the norm otherwise.",
+   "ref": {
+    "sec": "Signal square"
+   }
   },
   {
    "q": "Red square with one yellow diagonal?",
-   "a": "Take special precautions in approaching or landing."
+   "a": "Take special precautions in approaching or landing.",
+   "ref": {
+    "sec": "Signal square"
+   }
   },
   {
    "q": "Red square with two yellow diagonals?",
-   "a": "Landings are prohibited."
+   "a": "Landings are prohibited.",
+   "ref": {
+    "sec": "Signal square"
+   }
   },
   {
    "q": "Horizontal white dumb-bell?",
-   "a": "Land, take off and taxi on runways and taxiways only."
+   "a": "Land, take off and taxi on runways and taxiways only.",
+   "ref": {
+    "sec": "Signal square"
+   }
   },
   {
    "q": "Double white cross?",
-   "a": "Gliding operations in progress."
+   "a": "Gliding operations in progress.",
+   "ref": {
+    "sec": "Signal square"
+   }
   },
   {
    "q": "Cross on the surface, and its colours?",
-   "a": "Area unfit for movement: white on runways, yellow on taxiways."
+   "a": "Area unfit for movement: white on runways, yellow on taxiways.",
+   "ref": {
+    "sec": "Signal square"
+   }
   },
   {
    "q": "Black letter C on yellow?",
-   "a": "Where to report to ATC or the person in charge."
+   "a": "Where to report to ATC or the person in charge.",
+   "ref": {
+    "sec": "Signal square"
+   }
   },
   {
    "q": "GA runway light colours?",
-   "a": "Green threshold, white edge, red end."
+   "a": "Green threshold, white edge, red end.",
+   "ref": {
+    "sec": "Runway lighting and PAPI"
+   }
   },
   {
    "q": "Normal approach angle indicated by PAPI?",
-   "a": "Between 3° and 4°."
+   "a": "Between 3° and 4°.",
+   "ref": {
+    "sec": "Runway lighting and PAPI"
+   }
   },
   {
    "q": "APAPI on the correct slope?",
-   "a": "One white light and one red light."
+   "a": "One white light and one red light.",
+   "ref": {
+    "sec": "Runway lighting and PAPI"
+   }
   },
   {
    "q": "Mandatory instruction sign colours?",
-   "a": "White letters on a red background."
+   "a": "White letters on a red background.",
+   "ref": {
+    "sec": "Taxiway signs and holding points"
+   }
   },
   {
    "q": "Holding position marking?",
-   "a": "Two solid yellow lines then two dashed lines on the runway side."
+   "a": "Two solid yellow lines then two dashed lines on the runway side.",
+   "ref": {
+    "sec": "Taxiway signs and holding points"
+   }
   },
   {
    "q": "Can you cross a red stop bar?",
-   "a": "Never. Wait for ATC to switch it off."
+   "a": "Never. Wait for ATC to switch it off.",
+   "ref": {
+    "sec": "Taxiway signs and holding points"
+   }
   }
  ],
  "quiz": [
@@ -130,18 +172,24 @@
     "Gliding"
    ],
    "a": 1,
-   "why": "Two diagonals mean landings are prohibited."
+   "why": "Two diagonals mean landings are prohibited.",
+   "ref": {
+    "sec": "Signal square"
+   }
   },
   {
    "q": "On the correct slope a two-light APAPI shows:",
    "o": [
-    "Two white",
-    "Two red",
     "One white and one red",
-    "One green"
+    "Two white lights",
+    "Two red lights",
+    "One green and one white"
    ],
-   "a": 2,
-   "why": "One white and one red light indicate the correct approach path."
+   "a": 0,
+   "why": "One white and one red light indicate the correct approach path.",
+   "ref": {
+    "sec": "Runway lighting and PAPI"
+   }
   },
   {
    "q": "Mandatory instruction signs are:",
@@ -152,29 +200,38 @@
     "White on blue"
    ],
    "a": 1,
-   "why": "They mark runway entry points and must not be passed without permission."
+   "why": "They mark runway entry points and must not be passed without permission.",
+   "ref": {
+    "sec": "Taxiway signs and holding points"
+   }
   },
   {
    "q": "You are approaching a red stop bar. You should:",
    "o": [
-    "Cross carefully",
     "Stop and wait for ATC to switch it off",
-    "Call tower and cross",
-    "Cross if the runway looks clear"
+    "Cross carefully after a good lookout",
+    "Call the tower and cross while you wait",
+    "Cross if the runway looks clear of traffic"
    ],
-   "a": 1,
-   "why": "Never cross a red stop bar."
+   "a": 0,
+   "why": "Never cross a red stop bar.",
+   "ref": {
+    "sec": "Taxiway signs and holding points"
+   }
   },
   {
    "q": "A white or orange T shows:",
    "o": [
-    "Gliding",
-    "Direction for landing and take-off",
-    "Parking",
-    "Wind speed"
+    "The direction for landing and take-off",
+    "Gliding is in progress at the aerodrome",
+    "Parking area for visiting aircraft",
+    "Surface wind speed above 15 kt"
    ],
-   "a": 1,
-   "why": "Aircraft land and take off parallel to the shaft towards the cross arm."
+   "a": 0,
+   "why": "Aircraft land and take off parallel to the shaft towards the cross arm.",
+   "ref": {
+    "sec": "Signal square"
+   }
   },
   {
    "q": "A double white cross means:",
@@ -185,7 +242,10 @@
     "Right-hand circuit"
    ],
    "a": 1,
-   "why": "Gliding is taking place at the aerodrome."
+   "why": "Gliding is taking place at the aerodrome.",
+   "ref": {
+    "sec": "Signal square"
+   }
   }
  ]
 }

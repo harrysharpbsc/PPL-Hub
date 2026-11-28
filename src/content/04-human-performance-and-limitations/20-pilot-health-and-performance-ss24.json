@@ -114,59 +114,101 @@
  "cards": [
   {
    "q": "What is the UK flying alcohol limit?",
-   "a": "20 mg per 100 ml of blood."
+   "a": "20 mg per 100 ml of blood.",
+   "ref": {
+    "sec": "Factors that reduce performance"
+   }
   },
   {
    "q": "What does I AM SAFE stand for?",
-   "a": "Illness, Attitude, Medication, Stress, Alcohol, Fatigue, Eating."
+   "a": "Illness, Attitude, Medication, Stress, Alcohol, Fatigue, Eating.",
+   "ref": {
+    "sec": "I AM SAFE"
+   }
   },
   {
    "q": "Minimum recommended sleep before a flight day?",
-   "a": "At least 8 hours."
+   "a": "At least 8 hours.",
+   "ref": {
+    "sec": "I AM SAFE"
+   }
   },
   {
    "q": "No flying within how long of drinking alcohol?",
-   "a": "8 hours, and up to 24 hours after a lot."
+   "a": "8 hours, and up to 24 hours after a lot.",
+   "ref": {
+    "sec": "I AM SAFE"
+   }
   },
   {
    "q": "PMD basis standard?",
-   "a": "DVLA Group 1 (car) medical standards."
+   "a": "DVLA Group 1 (car) medical standards.",
+   "ref": {
+    "sec": "Medical certificates and the PMD"
+   }
   },
   {
    "q": "What kind of examiner performs Part-MED exams?",
-   "a": "A CAA-authorised AME."
+   "a": "A CAA-authorised AME.",
+   "ref": {
+    "sec": "Medical certificates and the PMD"
+   }
   },
   {
    "q": "Altitude where contrast sensitivity falls?",
-   "a": "Above 8,000 ft."
+   "a": "Above 8,000 ft.",
+   "ref": {
+    "sec": "Altitude and gas effects"
+   }
   },
   {
    "q": "Altitude where confusion and drowsiness appear?",
-   "a": "Above 10,000 ft."
+   "a": "Above 10,000 ft.",
+   "ref": {
+    "sec": "Altitude and gas effects"
+   }
   },
   {
    "q": "Technique to clear the ears?",
-   "a": "Valsalva."
+   "a": "Valsalva.",
+   "ref": {
+    "sec": "Altitude and gas effects"
+   }
   },
   {
    "q": "How often should eyes be checked?",
-   "a": "At least every two years."
+   "a": "At least every two years.",
+   "ref": {
+    "sec": "Vision and hearing"
+   }
   },
   {
    "q": "Which lenses does the CAA advise against?",
-   "a": "Polarised and photochromic."
+   "a": "Polarised and photochromic.",
+   "ref": {
+    "sec": "Vision and hearing"
+   }
   },
   {
    "q": "Why is CO dangerous?",
-   "a": "Colourless and odourless, with symptoms like hypoxia."
+   "a": "Colourless and odourless, with symptoms like hypoxia.",
+   "ref": {
+    "sec": "Heat, cold, CO and G"
+   }
   },
   {
    "q": "What is the weekly activity guideline?",
-   "a": "150 minutes moderate or 75 vigorous."
+   "a": "150 minutes moderate or 75 vigorous.",
+   "ref": {
+    "sec": "Staying healthy"
+   }
   },
   {
    "q": "If you suspect hypoxia?",
-   "a": "Descend."
+   "a": "Descend.",
+   "ref": {
+    "sec": "Altitude and gas effects"
+   }
   }
  ],
  "quiz": [
@@ -179,7 +221,10 @@
     "No alcohol limit if not flying solo"
    ],
    "a": 1,
-   "why": "The flying limit is 20 mg per 100 ml, much stricter than driving."
+   "why": "The flying limit is 20 mg per 100 ml, much stricter than driving.",
+   "ref": {
+    "sec": "Factors that reduce performance"
+   }
   },
   {
    "q": "In I AM SAFE, what does the second A stand for?",
@@ -190,62 +235,80 @@
     "Aircraft"
    ],
    "a": 2,
-   "why": "Illness, Attitude, Medication, Stress, Alcohol, Fatigue, Eating."
+   "why": "Illness, Attitude, Medication, Stress, Alcohol, Fatigue, Eating.",
+   "ref": {
+    "sec": "I AM SAFE"
+   }
   },
   {
    "q": "You start a new medication. What does the leaflet suggest?",
    "o": [
-    "Fly immediately",
     "Leave a few days before flying to see how it affects you",
-    "Fly only solo",
-    "Take a double dose"
+    "Fly immediately, as long as you feel well on the day",
+    "Fly only solo until you know how it affects you",
+    "Take a double dose the day before to test the effects"
    ],
-   "a": 1,
-   "why": "Side effects may be delayed, so wait and take aeromedical advice."
+   "a": 0,
+   "why": "Side effects may be delayed, so wait and take aeromedical advice.",
+   "ref": {
+    "sec": "Medication, illness and incapacitation"
+   }
   },
   {
    "q": "A Pilot Medical Declaration is based on meeting:",
    "o": [
-    "Class 1 standards",
     "DVLA Group 1 standards",
-    "LAPL standards only",
-    "ICAO Class 3"
+    "Class 1 medical standards",
+    "LAPL medical standards",
+    "ICAO Class 3 standards"
    ],
-   "a": 1,
-   "why": "A PMD requires reasonable belief you meet DVLA Group 1 car standards."
+   "a": 0,
+   "why": "A PMD requires reasonable belief you meet DVLA Group 1 car standards.",
+   "ref": {
+    "sec": "Medical certificates and the PMD"
+   }
   },
   {
    "q": "Without oxygen or pressurisation, which ceiling applies?",
    "o": [
-    "Below 8,000 ft",
     "Below 10,000 ft",
+    "Below 8,000 ft",
     "Below FL150",
-    "No limit"
+    "No limit applies"
    ],
-   "a": 1,
-   "why": "Flights without oxygen or pressurisation must stay below 10,000 ft."
+   "a": 0,
+   "why": "Flights without oxygen or pressurisation must stay below 10,000 ft.",
+   "ref": {
+    "sec": "Altitude and gas effects"
+   }
   },
   {
    "q": "Carbon monoxide poisoning is hard to spot because:",
    "o": [
-    "It smells strongly",
     "It is colourless, odourless and mimics hypoxia",
-    "It only happens in winter",
-    "It affects only passengers"
+    "It has a strong smell that is easily confused",
+    "It only happens in winter with the heater on",
+    "It affects only passengers in the rear seats"
    ],
-   "a": 1,
-   "why": "CO is invisible and its symptoms resemble hypoxia."
+   "a": 0,
+   "why": "CO is invisible and its symptoms resemble hypoxia.",
+   "ref": {
+    "sec": "Heat, cold, CO and G"
+   }
   },
   {
    "q": "Who is responsible for fitness to fly before each flight?",
    "o": [
-    "The AME",
-    "The instructor",
     "The pilot, whichever medical system applies",
-    "The aircraft operator"
+    "The AME who issued the medical certificate",
+    "The instructor who authorises the flight",
+    "The aircraft operator or flying club"
    ],
-   "a": 2,
-   "why": "Self-assessment before every flight is the pilot's responsibility."
+   "a": 0,
+   "why": "Self-assessment before every flight is the pilot's responsibility.",
+   "ref": {
+    "sec": "Medical certificates and the PMD"
+   }
   }
  ]
 }

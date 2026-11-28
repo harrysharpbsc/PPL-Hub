@@ -65,59 +65,101 @@
  "cards": [
   {
    "q": "What period does an F215 cover?",
-   "a": "A 9-hour period centred on a fixed time, below 10,000 ft."
+   "a": "A 9-hour period centred on a fixed time, below 10,000 ft.",
+   "ref": {
+    "sec": "F215, F214 and GAMET"
+   }
   },
   {
    "q": "What does the F214 provide?",
-   "a": "Forecast upper winds and temperatures."
+   "a": "Forecast upper winds and temperatures.",
+   "ref": {
+    "sec": "F215, F214 and GAMET"
+   }
   },
   {
    "q": "How often is a GAMET issued?",
-   "a": "Four times a day for four UK regions."
+   "a": "Four times a day for four UK regions.",
+   "ref": {
+    "sec": "F215, F214 and GAMET"
+   }
   },
   {
    "q": "What does XXX on the F215 mean?",
-   "a": "Cloud tops above the chart upper limit."
+   "a": "Cloud tops above the chart upper limit.",
+   "ref": {
+    "sec": "F215, F214 and GAMET"
+   }
   },
   {
    "q": "What is the difference between a TAF and a METAR?",
-   "a": "A TAF is a forecast, a METAR is a report of the actual weather."
+   "a": "A TAF is a forecast, a METAR is a report of the actual weather.",
+   "ref": {
+    "sec": "Reading TAFs and METARs"
+   }
   },
   {
    "q": "What does 9999 mean in visibility?",
-   "a": "10 km or more."
+   "a": "10 km or more.",
+   "ref": {
+    "sec": "Reading TAFs and METARs"
+   }
   },
   {
    "q": "Cloud heights in TAFs and METARs are measured from where?",
-   "a": "Above aerodrome level."
+   "a": "Above aerodrome level.",
+   "ref": {
+    "sec": "Reading TAFs and METARs"
+   }
   },
   {
    "q": "What does TEMPO mean?",
-   "a": "A temporary condition within the stated period."
+   "a": "A temporary condition within the stated period.",
+   "ref": {
+    "sec": "Reading TAFs and METARs"
+   }
   },
   {
    "q": "Which probabilities are used in UK TAFs?",
-   "a": "PROB30 and PROB40 only."
+   "a": "PROB30 and PROB40 only.",
+   "ref": {
+    "sec": "Reading TAFs and METARs"
+   }
   },
   {
    "q": "What is a SIGMET?",
-   "a": "A warning of severe weather such as thunderstorms, mountain waves, icing or turbulence."
+   "a": "A warning of severe weather such as thunderstorms, mountain waves, icing or turbulence.",
+   "ref": {
+    "sec": "Reading TAFs and METARs"
+   }
   },
   {
    "q": "Define cloud ceiling.",
-   "a": "The lowest cloud covering more than half the sky (BKN or OVC)."
+   "a": "The lowest cloud covering more than half the sky (BKN or OVC).",
+   "ref": {
+    "sec": "Making the weather decision"
+   }
   },
   {
    "q": "Worst airframe icing temperature range per the Skyway Code?",
-   "a": "0°C to -15°C."
+   "a": "0°C to -15°C.",
+   "ref": {
+    "sec": "Icing in the Skyway Code"
+   }
   },
   {
    "q": "Surface visibility threshold below which VFR is not recommended?",
-   "a": "Less than 5 km."
+   "a": "Less than 5 km.",
+   "ref": {
+    "sec": "Making the weather decision"
+   }
   },
   {
    "q": "Winds aloft above roughly what speed suggest bumpy conditions?",
-   "a": "About 35 kt."
+   "a": "About 35 kt.",
+   "ref": {
+    "sec": "Making the weather decision"
+   }
   }
  ],
  "quiz": [
@@ -130,7 +172,10 @@
     "SIGMET"
    ],
    "a": 1,
-   "why": "F215 is the low-level significant weather forecast."
+   "why": "F215 is the low-level significant weather forecast.",
+   "ref": {
+    "sec": "F215, F214 and GAMET"
+   }
   },
   {
    "q": "In a TAF, SCT025 means:",
@@ -141,18 +186,24 @@
     "5 to 7 oktas at 2,500 ft AMSL"
    ],
    "a": 0,
-   "why": "SCT is 3 to 4 oktas and the height is above aerodrome level in hundreds of feet."
+   "why": "SCT is 3 to 4 oktas and the height is above aerodrome level in hundreds of feet.",
+   "ref": {
+    "sec": "Reading TAFs and METARs"
+   }
   },
   {
    "q": "A cloud ceiling is:",
    "o": [
-    "Any cloud base",
-    "Lowest cloud covering more than half the sky",
-    "Cloud above 10,000 ft",
-    "Cumulonimbus only"
+    "The lowest cloud covering more than half the sky",
+    "The base of any cloud, whatever its amount",
+    "Any cloud layer above 10,000 ft amsl",
+    "The base of cumulonimbus cloud only"
    ],
-   "a": 1,
-   "why": "BKN or OVC forms a ceiling. FEW and SCT do not."
+   "a": 0,
+   "why": "BKN or OVC forms a ceiling. FEW and SCT do not.",
+   "ref": {
+    "sec": "Making the weather decision"
+   }
   },
   {
    "q": "A METAR reports visibility as 9999. This means:",
@@ -163,18 +214,24 @@
     "Fog"
    ],
    "a": 2,
-   "why": "9999 is used for 10 km or more."
+   "why": "9999 is used for 10 km or more.",
+   "ref": {
+    "sec": "Reading TAFs and METARs"
+   }
   },
   {
    "q": "The Skyway Code says legal VFR visibility minima should be regarded as:",
    "o": [
-    "Targets",
-    "Limits not targets",
-    "Irrelevant",
-    "Only for IFR"
+    "Limits, not targets",
+    "Targets to aim for",
+    "Irrelevant to VFR",
+    "Only for IFR flight"
    ],
-   "a": 1,
-   "why": "Safe VFR flight normally ceases long before the legal minima."
+   "a": 0,
+   "why": "Safe VFR flight normally ceases long before the legal minima.",
+   "ref": {
+    "sec": "Making the weather decision"
+   }
   },
   {
    "q": "Which product is a plain-text forecast issued four times a day for low-level GA?",
@@ -185,7 +242,10 @@
     "VOLMET"
    ],
    "a": 0,
-   "why": "GAMET replaced AIRMET and covers four UK regions."
+   "why": "GAMET replaced AIRMET and covers four UK regions.",
+   "ref": {
+    "sec": "F215, F214 and GAMET"
+   }
   }
  ]
 }

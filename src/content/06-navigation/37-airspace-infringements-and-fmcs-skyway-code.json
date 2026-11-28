@@ -61,64 +61,103 @@
  "cards": [
   {
    "q": "Which airspace types count for infringement?",
-   "a": "CAS, prohibited and restricted airspace, active danger areas, ATZ, RMZ and TMZ."
+   "a": "CAS, prohibited and restricted airspace, active danger areas, ATZ, RMZ and TMZ.",
+   "ref": {
+    "sec": "What counts as an infringement"
+   }
   },
   {
    "q": "What does RMZ stand for?",
-   "a": "Radio mandatory zone."
+   "a": "Radio mandatory zone.",
+   "ref": {
+    "sec": "What counts as an infringement"
+   }
   },
   {
    "q": "What does TMZ stand for?",
-   "a": "Transponder mandatory zone."
+   "a": "Transponder mandatory zone.",
+   "ref": {
+    "sec": "What counts as an infringement"
+   }
   },
   {
    "q": "Common factor in most infringements?",
-   "a": "Not using a moving map or using it incorrectly."
+   "a": "Not using a moving map or using it incorrectly.",
+   "ref": {
+    "sec": "What counts as an infringement"
+   }
   },
   {
    "q": "Recommended vertical margin from CAS?",
-   "a": "200 ft."
+   "a": "200 ft.",
+   "ref": {
+    "sec": "Prevention"
+   }
   },
   {
    "q": "Recommended horizontal margin from notified airspace?",
-   "a": "2 NM."
+   "a": "2 NM.",
+   "ref": {
+    "sec": "Prevention"
+   }
   },
   {
    "q": "What does FMC stand for?",
-   "a": "Frequency Monitoring Code."
+   "a": "Frequency Monitoring Code.",
+   "ref": {
+    "sec": "Frequency Monitoring Codes (FMC)"
+   }
   },
   {
    "q": "What is an FMC used for?",
-   "a": "Showing you monitor a frequency without a service."
+   "a": "Showing you monitor a frequency without a service.",
+   "ref": {
+    "sec": "Frequency Monitoring Codes (FMC)"
+   }
   },
   {
    "q": "Mode to select an FMC with?",
-   "a": "ALT (Mode C)."
+   "a": "ALT (Mode C).",
+   "ref": {
+    "sec": "Frequency Monitoring Codes (FMC)"
+   }
   },
   {
    "q": "What to set after finishing with an FMC?",
-   "a": "7000 (VFR) or 2000 (IFR)."
+   "a": "7000 (VFR) or 2000 (IFR).",
+   "ref": {
+    "sec": "Frequency Monitoring Codes (FMC)"
+   }
   },
   {
    "q": "Does an FMC guarantee a warning?",
-   "a": "No, it depends on ATC capacity."
+   "a": "No, it depends on ATC capacity.",
+   "ref": {
+    "sec": "Frequency Monitoring Codes (FMC)"
+   }
   },
   {
    "q": "Is it recommended to use IFR waypoints for VFR?",
-   "a": "No."
+   "a": "No.",
+   "ref": {
+    "sec": "Prevention"
+   }
   }
  ],
  "quiz": [
   {
    "q": "A Frequency Monitoring Code is used to:",
    "o": [
-    "Declare an emergency",
     "Show you are listening on a frequency without a service",
-    "Request a clearance",
-    "Report position"
+    "Declare an emergency without making a radio call",
+    "Request a clearance to enter controlled airspace",
+    "Report your position to ATC without a radio call"
    ],
-   "a": 1,
-   "why": "It improves situational awareness for pilot and ATC."
+   "a": 0,
+   "why": "It improves situational awareness for pilot and ATC.",
+   "ref": {
+    "sec": "Frequency Monitoring Codes (FMC)"
+   }
   },
   {
    "q": "The recommended margin from the base of CAS is:",
@@ -129,7 +168,10 @@
     "1,000 ft"
    ],
    "a": 1,
-   "why": "Plus 2 NM horizontally from the edge of notified airspace."
+   "why": "Plus 2 NM horizontally from the edge of notified airspace.",
+   "ref": {
+    "sec": "Prevention"
+   }
   },
   {
    "q": "When leaving the monitored frequency you should:",
@@ -140,7 +182,10 @@
     "Turn the transponder off"
    ],
    "a": 1,
-   "why": "Reset to the conspicuity code."
+   "why": "Reset to the conspicuity code.",
+   "ref": {
+    "sec": "Frequency Monitoring Codes (FMC)"
+   }
   },
   {
    "q": "Which is NOT counted as an infringement?",
@@ -151,18 +196,24 @@
     "Entering an active danger area"
    ],
    "a": 2,
-   "why": "Class G is not notified restricted airspace."
+   "why": "Class G is not notified restricted airspace.",
+   "ref": {
+    "sec": "Prevention"
+   }
   },
   {
    "q": "Most infringements occur when the pilot:",
    "o": [
-    "Used a moving map correctly",
     "Did not use or misused a moving map",
-    "Flew IFR",
-    "Had a Mode S transponder"
+    "Used a moving map correctly throughout",
+    "Flew IFR in controlled airspace",
+    "Had a Mode S transponder switched on"
    ],
-   "a": 1,
-   "why": "Moving maps help only when configured and used properly."
+   "a": 0,
+   "why": "Moving maps help only when configured and used properly.",
+   "ref": {
+    "sec": "What counts as an infringement"
+   }
   }
  ]
 }

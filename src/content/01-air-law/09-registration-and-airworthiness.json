@@ -146,63 +146,112 @@
  "cards": [
   {
    "q": "Which Annex covers registration marks?",
-   "a": "ICAO Annex 7."
+   "a": "ICAO Annex 7.",
+   "ref": {
+    "sec": "Registration and Marking of Aircraft (ICAO Annex 7)",
+    "rule": "ICAO Annex 7"
+   }
   },
   {
    "q": "When is a hyphen used in the marks?",
-   "a": "When the registration mark starts with a letter (G-ABCD)."
+   "a": "When the registration mark starts with a letter (G-ABCD).",
+   "ref": {
+    "sec": "The marks"
+   }
   },
   {
    "q": "Where are the marks on the wing?",
-   "a": "Once on the lower surface, on the left half, tops towards the leading edge."
+   "a": "Once on the lower surface, on the left half, tops towards the leading edge.",
+   "ref": {
+    "sec": "Where the marks go"
+   }
   },
   {
    "q": "Minimum height of marks on the wing?",
-   "a": "50 cm."
+   "a": "50 cm.",
+   "ref": {
+    "sec": "Size and lettering"
+   }
   },
   {
    "q": "Minimum height on fuselage or fin?",
-   "a": "30 cm."
+   "a": "30 cm.",
+   "ref": {
+    "sec": "Size and lettering"
+   }
   },
   {
    "q": "Width of a character?",
-   "a": "Two-thirds of its height (except I and 1)."
+   "a": "Two-thirds of its height (except I and 1).",
+   "ref": {
+    "sec": "Size and lettering"
+   }
   },
   {
    "q": "What is the identification plate made of and where is it?",
-   "a": "Fireproof material, near the main entrance."
+   "a": "Fireproof material, near the main entrance.",
+   "ref": {
+    "sec": "Identification plate"
+   }
   },
   {
    "q": "How long is a Part-21 CofA valid?",
-   "a": "It doesn't expire; it stays valid with a current ARC (yearly)."
+   "a": "It doesn't expire; it stays valid with a current ARC (yearly).",
+   "ref": {
+    "sec": "Airworthiness (ICAO Annex 8; ANO Part 4; UK Basic Regulation)",
+    "rule": "ICAO Annex 8"
+   }
   },
   {
    "q": "What makes a CofA invalid?",
-   "a": "Modification, repair or maintenance in a non-approved way (and flying outside its limits)."
+   "a": "Modification, repair or maintenance in a non-approved way (and flying outside its limits).",
+   "ref": {
+    "sec": "Airworthiness (ICAO Annex 8; ANO Part 4; UK Basic Regulation)",
+    "rule": "ICAO Annex 8"
+   }
   },
   {
    "q": "When is a Certificate of Release to Service needed?",
-   "a": "After the aircraft or any part is overhauled, repaired, replaced, modified or maintained."
+   "a": "After the aircraft or any part is overhauled, repaired, replaced, modified or maintained.",
+   "ref": {
+    "sec": "Maintenance"
+   }
   },
   {
    "q": "Where does a pilot record a defect?",
-   "a": "In the technical log, before the next flight or the end of the day, whichever is earlier."
+   "a": "In the technical log, before the next flight or the end of the day, whichever is earlier.",
+   "ref": {
+    "sec": "Maintenance"
+   }
   },
   {
    "q": "How long are aircraft and engine logbooks kept?",
-   "a": "2 years after the aircraft or engine is destroyed or permanently withdrawn."
+   "a": "2 years after the aircraft or engine is destroyed or permanently withdrawn.",
+   "ref": {
+    "sec": "Maintenance"
+   }
   },
   {
    "q": "How long is a superseded weight schedule kept?",
-   "a": "6 months."
+   "a": "6 months.",
+   "ref": {
+    "sec": "Mass and balance (ANO Article 43)",
+    "rule": "ANO Article 43"
+   }
   },
   {
    "q": "Does empty mass include unusable fuel?",
-   "a": "Yes, and undrainable oil, fixed ballast, coolant and hydraulic fluid; not usable fuel or crew."
+   "a": "Yes, and undrainable oil, fixed ballast, coolant and hydraulic fluid; not usable fuel or crew.",
+   "ref": {
+    "sec": "Flight Manual, limitations and placards (Annex 8)"
+   }
   },
   {
    "q": "Is hull insurance a legal requirement?",
-   "a": "No; passenger and third-party liability cover is."
+   "a": "No; passenger and third-party liability cover is.",
+   "ref": {
+    "sec": "Equipment, noise and insurance"
+   }
   }
  ],
  "quiz": [
@@ -215,62 +264,82 @@
     "30 cm high, on both lower wing surfaces"
    ],
    "a": 0,
-   "why": "Wing marks are 50 cm, once under the left half. 30 cm is the fuselage and fin figure."
+   "why": "Wing marks are 50 cm, once under the left half. 30 cm is the fuselage and fin figure.",
+   "ref": {
+    "sec": "Where the marks go"
+   }
   },
   {
    "q": "Each character in a registration mark must be:",
    "o": [
     "Two-thirds as wide as it is high (except I and 1)",
-    "Half as wide as it is high",
-    "As wide as it is high",
-    "Two-thirds as high as it is wide"
+    "Half as wide as it is high (except I and 1)",
+    "As wide as it is high (except I and 1)",
+    "Two-thirds as high as it is wide (except I and 1)"
    ],
    "a": 0,
-   "why": "Two-thirds of the height, so the letters aren't stretched. The last option swaps width and height."
+   "why": "Two-thirds of the height, so the letters aren't stretched. The last option swaps width and height.",
+   "ref": {
+    "sec": "Size and lettering"
+   }
   },
   {
    "q": "A Certificate of Airworthiness ceases to be valid:",
    "o": [
     "If the aircraft is modified, repaired or maintained in a non-approved way",
-    "After 5 years",
-    "When the aircraft leaves its State of Registry",
-    "At the end of each calendar year"
+    "Automatically 5 years after it was issued, unless it is renewed by the CAA",
+    "When the aircraft leaves its State of Registry on an international flight",
+    "At the end of each calendar year, unless a new ARC has been issued"
    ],
    "a": 0,
-   "why": "A Part-21 CofA doesn't expire; it stays valid with a current ARC unless non-approved work (or misuse) invalidates it."
+   "why": "A Part-21 CofA doesn't expire; it stays valid with a current ARC unless non-approved work (or misuse) invalidates it.",
+   "ref": {
+    "sec": "Airworthiness (ICAO Annex 8; ANO Part 4; UK Basic Regulation)",
+    "rule": "ICAO Annex 8"
+   }
   },
   {
    "q": "A Part-21 aircraft's Certificate of Airworthiness is kept in force by:",
    "o": [
     "An Airworthiness Review Certificate, renewed or extended each year",
-    "A new CofA every 3 years",
-    "A Certificate of Maintenance Review every 6 months",
-    "The pilot's daily inspection"
+    "A new Certificate of Airworthiness issued every 3 years by the CAA",
+    "A Certificate of Maintenance Review, renewed every 6 months",
+    "The pilot's daily inspection, recorded in the technical log"
    ],
    "a": 0,
-   "why": "The ARC is the annual check. The 3-year CofA and the CMR belong to non-Part-21 aircraft."
+   "why": "The ARC is the annual check. The 3-year CofA and the CMR belong to non-Part-21 aircraft.",
+   "ref": {
+    "sec": "Airworthiness (ICAO Annex 8; ANO Part 4; UK Basic Regulation)",
+    "rule": "ICAO Annex 8"
+   }
   },
   {
    "q": "After an aircraft has been repaired it needs, in addition to its CofA:",
    "o": [
     "A Certificate of Release to Service",
     "A new Certificate of Registration",
-    "A Noise Certificate",
-    "A new weight schedule"
+    "A new Noise Certificate from the CAA",
+    "A new weight and balance schedule"
    ],
    "a": 0,
-   "why": "Any overhaul, repair, replacement, modification or maintenance needs a CRS signed by an authorised person."
+   "why": "Any overhaul, repair, replacement, modification or maintenance needs a CRS signed by an authorised person.",
+   "ref": {
+    "sec": "Maintenance"
+   }
   },
   {
    "q": "A pilot finds a defect during a flight. It must be recorded:",
    "o": [
-    "In the technical log, before the next flight or at the end of the day, whichever is earlier",
-    "In the pilot's personal logbook",
-    "On the Certificate of Release to Service",
-    "In the technical log within 7 days"
+    "In the technical log, before the next flight or by the end of the day if sooner",
+    "In the pilot's personal logbook, before the next flight or at the end of the day",
+    "On the Certificate of Release to Service, before the aircraft flies again",
+    "In the technical log within 7 days, or before the next Airworthiness Review"
    ],
    "a": 0,
-   "why": "The tech log records defects; the deadline is before the next pilot flies or the end of the day."
+   "why": "The tech log records defects; the deadline is before the next pilot flies or the end of the day.",
+   "ref": {
+    "sec": "Maintenance"
+   }
   },
   {
    "q": "When a new weight schedule is prepared, the previous one must be kept for:",
@@ -281,18 +350,25 @@
     "2 years"
    ],
    "a": 0,
-   "why": "ANO Article 43: 6 months. 2 years is the logbook period."
+   "why": "ANO Article 43: 6 months. 2 years is the logbook period.",
+   "ref": {
+    "sec": "Mass and balance (ANO Article 43)",
+    "rule": "ANO Article 43"
+   }
   },
   {
    "q": "Aircraft, engine and variable-pitch propeller logbooks must be kept until:",
    "o": [
     "2 years after the aircraft, engine or propeller is destroyed or permanently withdrawn",
-    "2 years after the last entry",
-    "6 months after the aircraft is sold",
-    "The next Airworthiness Review"
+    "2 years after the last entry made in the logbook, whatever later happens to the aircraft",
+    "6 months after the aircraft, engine or propeller is sold to a new owner",
+    "Until the next Airworthiness Review, when the entries are carried forward"
    ],
    "a": 0,
-   "why": "2 years after destruction or permanent withdrawal. '2 years after the last entry' is the rule for producing a pilot's personal logbook."
+   "why": "2 years after destruction or permanent withdrawal. '2 years after the last entry' is the rule for producing a pilot's personal logbook.",
+   "ref": {
+    "sec": "Maintenance"
+   }
   },
   {
    "q": "The owner of a UK-registered aircraft sells half of it. They must:",
@@ -303,18 +379,24 @@
     "Do nothing; only a full sale needs reporting"
    ],
    "a": 0,
-   "why": "Any change of ownership or part-ownership is reported to the CAA in writing."
+   "why": "Any change of ownership or part-ownership is reported to the CAA in writing.",
+   "ref": {
+    "sec": "Registration in the UK (ANO Articles 24-26, Schedule 4)"
+   }
   },
   {
    "q": "Which UK insurance cover is compulsory for a private aeroplane?",
    "o": [
     "Passenger and third-party liability",
-    "Hull only",
-    "Hull and third-party",
-    "None; it is the owner's choice"
+    "Hull cover only, for the aircraft itself",
+    "Hull and third-party liability, not passengers",
+    "None: insurance is the owner's choice"
    ],
    "a": 0,
-   "why": "Liability cover is compulsory; hull cover is optional, though wise."
+   "why": "Liability cover is compulsory; hull cover is optional, though wise.",
+   "ref": {
+    "sec": "Equipment, noise and insurance"
+   }
   }
  ]
 }

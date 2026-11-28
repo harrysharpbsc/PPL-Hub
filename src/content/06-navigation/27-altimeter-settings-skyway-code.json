@@ -51,51 +51,87 @@
  "cards": [
   {
    "q": "What does QNH indicate?",
-   "a": "Altitude above mean sea level."
+   "a": "Altitude above mean sea level.",
+   "ref": {
+    "sec": "Four pressure settings"
+   }
   },
   {
    "q": "What does QFE indicate?",
-   "a": "Height above aerodrome level."
+   "a": "Height above aerodrome level.",
+   "ref": {
+    "sec": "Four pressure settings"
+   }
   },
   {
    "q": "What is the standard pressure setting?",
-   "a": "1013 hPa."
+   "a": "1013 hPa.",
+   "ref": {
+    "sec": "Four pressure settings"
+   }
   },
   {
    "q": "How many feet per hPa?",
-   "a": "About 30 ft (27 ft more precisely)."
+   "a": "About 30 ft (27 ft more precisely).",
+   "ref": {
+    "sec": "Four pressure settings"
+   }
   },
   {
    "q": "What is the RPS?",
-   "a": "The lowest forecast pressure in an altimeter setting region."
+   "a": "The lowest forecast pressure in an altimeter setting region.",
+   "ref": {
+    "sec": "Four pressure settings"
+   }
   },
   {
    "q": "How many altimeter setting regions does the UK have?",
-   "a": "21."
+   "a": "21.",
+   "ref": {
+    "sec": "Four pressure settings"
+   }
   },
   {
    "q": "Why is the RPS a risk near CAS?",
-   "a": "It normally under-reads, risking a vertical infringement."
+   "a": "It normally under-reads, risking a vertical infringement.",
+   "ref": {
+    "sec": "Recommended procedure"
+   }
   },
   {
    "q": "UK transition altitude outside CAS?",
-   "a": "Normally 3,000 ft."
+   "a": "Normally 3,000 ft.",
+   "ref": {
+    "sec": "Transition altitude and level"
+   }
   },
   {
    "q": "Transition altitude in or below CAS?",
-   "a": "Normally 5,000 or 6,000 ft."
+   "a": "Normally 5,000 or 6,000 ft.",
+   "ref": {
+    "sec": "Transition altitude and level"
+   }
   },
   {
    "q": "Minimum gap between transition altitude and transition level?",
-   "a": "At least 1,000 ft."
+   "a": "At least 1,000 ft.",
+   "ref": {
+    "sec": "Transition altitude and level"
+   }
   },
   {
    "q": "What is the lowest VFR flight level?",
-   "a": "Normally FL35."
+   "a": "Normally FL35.",
+   "ref": {
+    "sec": "Transition altitude and level"
+   }
   },
   {
    "q": "Is use of flight levels mandatory for VFR in the UK?",
-   "a": "No, it is required for IFR."
+   "a": "No, it is required for IFR.",
+   "ref": {
+    "sec": "Transition altitude and level"
+   }
   }
  ],
  "quiz": [
@@ -108,40 +144,52 @@
     "4,013 ft"
    ],
    "a": 2,
-   "why": "13 hPa x 30 ft = 390 ft, so about 3,390 ft (3,351 ft using the more precise 27 ft)."
+   "why": "13 hPa x 30 ft = 390 ft, so about 3,390 ft (3,351 ft using the more precise 27 ft).",
+   "ref": {
+    "sec": "Transition altitude and level"
+   }
   },
   {
    "q": "The regional pressure setting is:",
    "o": [
-    "The highest forecast pressure",
     "The lowest forecast pressure in the region",
-    "An actual QNH",
-    "1013 hPa"
+    "The highest forecast pressure in the region",
+    "An actual QNH measured at an aerodrome",
+    "Standard pressure, 1013 hPa, for the region"
    ],
-   "a": 1,
-   "why": "Using RPS normally gives a lower altimeter reading than actual."
+   "a": 0,
+   "why": "Using RPS normally gives a lower altimeter reading than actual.",
+   "ref": {
+    "sec": "Four pressure settings"
+   }
   },
   {
    "q": "The transition level must be:",
    "o": [
-    "Equal to the TA",
     "At least 1,000 ft above the TA",
     "At least 500 ft above the TA",
-    "FL100"
+    "Equal to the transition altitude",
+    "FL100, whatever the TA"
    ],
-   "a": 1,
-   "why": "There must be a 1,000 ft minimum transition layer."
+   "a": 0,
+   "why": "There must be a 1,000 ft minimum transition layer.",
+   "ref": {
+    "sec": "Transition altitude and level"
+   }
   },
   {
    "q": "Near CAS defined as a flight level you should set:",
    "o": [
-    "QNH",
-    "RPS",
     "1013 hPa",
-    "QFE"
+    "The QNH",
+    "The RPS",
+    "The QFE"
    ],
-   "a": 2,
-   "why": "Use standard setting when the airspace is defined by FLs."
+   "a": 0,
+   "why": "Use standard setting when the airspace is defined by FLs.",
+   "ref": {
+    "sec": "Recommended procedure"
+   }
   },
   {
    "q": "Which setting reads zero on the ground at an aerodrome?",
@@ -152,7 +200,10 @@
     "1013"
    ],
    "a": 1,
-   "why": "QFE reads height above the aerodrome."
+   "why": "QFE reads height above the aerodrome.",
+   "ref": {
+    "sec": "Four pressure settings"
+   }
   }
  ]
 }

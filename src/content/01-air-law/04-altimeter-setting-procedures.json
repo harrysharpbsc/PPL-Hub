@@ -155,147 +155,255 @@
  "cards": [
   {
    "q": "What is the altimeter, really?",
-   "a": "A barometer (aneroid capsule) with a scale in feet."
+   "a": "A barometer (aneroid capsule) with a scale in feet.",
+   "ref": {
+    "sec": "How the altimeter works"
+   }
   },
   {
    "q": "Below 5,000 ft, 1 hPa is about how many feet?",
-   "a": "30 ft."
+   "a": "30 ft.",
+   "ref": {
+    "sec": "How the altimeter works"
+   }
   },
   {
    "q": "What does a striped sector on the altimeter show?",
-   "a": "You are below 10,000 ft."
+   "a": "You are below 10,000 ft.",
+   "ref": {
+    "sec": "How the altimeter works"
+   }
   },
   {
    "q": "QNH set: the altimeter reads?",
-   "a": "Altitude (above mean sea level)."
+   "a": "Altitude (above mean sea level).",
+   "ref": {
+    "sec": "QNH, QFE and standard pressure"
+   }
   },
   {
    "q": "QFE set: the altimeter reads?",
-   "a": "Height above aerodrome level."
+   "a": "Height above aerodrome level.",
+   "ref": {
+    "sec": "QNH, QFE and standard pressure"
+   }
   },
   {
    "q": "1013 set: the altimeter reads?",
-   "a": "Pressure altitude, given as a flight level."
+   "a": "Pressure altitude, given as a flight level.",
+   "ref": {
+    "sec": "QNH, QFE and standard pressure"
+   }
   },
   {
    "q": "What is aerodrome elevation?",
-   "a": "The highest point on the landing area."
+   "a": "The highest point on the landing area.",
+   "ref": {
+    "sec": "QNH, QFE and standard pressure"
+   }
   },
   {
    "q": "PA 3,500 ft as a flight level?",
-   "a": "FL35."
+   "a": "FL35.",
+   "ref": {
+    "sec": "QNH, QFE and standard pressure"
+   }
   },
   {
    "q": "How many UK Altimeter Setting Regions?",
-   "a": "20."
+   "a": "20.",
+   "ref": {
+    "sec": "Altimeter Setting Regions and the RPS"
+   }
   },
   {
    "q": "What is the Regional Pressure Setting?",
-   "a": "The lowest forecast QNH in the region for each hour."
+   "a": "The lowest forecast QNH in the region for each hour.",
+   "ref": {
+    "sec": "Altimeter Setting Regions and the RPS"
+   }
   },
   {
    "q": "Can an aerodrome QNH be lower than the RPS?",
-   "a": "It should not be: the RPS is the lowest forecast value."
+   "a": "It should not be: the RPS is the lowest forecast value.",
+   "ref": {
+    "sec": "Altimeter Setting Regions and the RPS"
+   }
   },
   {
    "q": "How often is the RPS updated?",
-   "a": "Every hour."
+   "a": "Every hour.",
+   "ref": {
+    "sec": "Altimeter Setting Regions and the RPS"
+   }
   },
   {
    "q": "Where is the ASR chart?",
-   "a": "UK AIP, ENR 6."
+   "a": "UK AIP, ENR 6.",
+   "ref": {
+    "sec": "Altimeter Setting Regions and the RPS"
+   }
   },
   {
    "q": "Usual UK transition altitude?",
-   "a": "3,000 ft amsl (exceptions in AIP ENR 1.7)."
+   "a": "3,000 ft amsl (exceptions in AIP ENR 1.7).",
+   "ref": {
+    "sec": "Transition altitude, layer and level"
+   }
   },
   {
    "q": "What is the transition level?",
-   "a": "The lowest flight level available above the transition altitude."
+   "a": "The lowest flight level available above the transition altitude.",
+   "ref": {
+    "sec": "Transition altitude, layer and level"
+   }
   },
   {
    "q": "What is the transition layer?",
-   "a": "The airspace between the transition altitude and the transition level."
+   "a": "The airspace between the transition altitude and the transition level.",
+   "ref": {
+    "sec": "Transition altitude, layer and level"
+   }
   },
   {
    "q": "Climbing through TA, report as?",
-   "a": "A flight level."
+   "a": "A flight level.",
+   "ref": {
+    "sec": "Transition altitude, layer and level"
+   }
   },
   {
    "q": "Descending through TL, report as?",
-   "a": "An altitude."
+   "a": "An altitude.",
+   "ref": {
+    "sec": "Transition altitude, layer and level"
+   }
   },
   {
    "q": "Two altimeters in controlled airspace on take-off?",
-   "a": "At least one on aerodrome QNH."
+   "a": "At least one on aerodrome QNH.",
+   "ref": {
+    "sec": "Take-off and climb"
+   }
   },
   {
    "q": "Departing beneath a TMA, which setting below TA?",
-   "a": "Aerodrome QNH (QFE allowed in the circuit)."
+   "a": "Aerodrome QNH (QFE allowed in the circuit).",
+   "ref": {
+    "sec": "Take-off and climb"
+   }
   },
   {
    "q": "En-route setting on a typical VFR cross-country?",
-   "a": "The Regional Pressure Setting."
+   "a": "The Regional Pressure Setting.",
+   "ref": {
+    "sec": "A typical cross-country"
+   }
   },
   {
    "q": "Effect of flying into lower pressure without resetting?",
-   "a": "You are lower than indicated."
+   "a": "You are lower than indicated.",
+   "ref": {
+    "sec": "En route: high to low, beware below"
+   }
   },
   {
    "q": "Effect of flying into colder air?",
-   "a": "You are lower than indicated (up to about 10% in very cold air)."
+   "a": "You are lower than indicated (up to about 10% in very cold air).",
+   "ref": {
+    "sec": "En route: high to low, beware below"
+   }
   },
   {
    "q": "Memory aid for pressure and temperature errors?",
-   "a": "High to low, beware below."
+   "a": "High to low, beware below.",
+   "ref": {
+    "sec": "En route: high to low, beware below"
+   }
   },
   {
    "q": "QNH 996: roughly what altitude is FL40?",
-   "a": "About 3,500 ft amsl."
+   "a": "About 3,500 ft amsl.",
+   "ref": {
+    "sec": "Choosing a flight level when the QNH is low"
+   }
   },
   {
    "q": "QNH 996: lowest FL to clear 3,000 ft amsl by 1,000 ft?",
-   "a": "FL45."
+   "a": "FL45.",
+   "ref": {
+    "sec": "Choosing a flight level when the QNH is low"
+   }
   },
   {
    "q": "Under a TMA outside controlled airspace, which setting?",
-   "a": "QNH of an aerodrome beneath the TMA."
+   "a": "QNH of an aerodrome beneath the TMA.",
+   "ref": {
+    "sec": "Outside controlled airspace"
+   }
   },
   {
    "q": "MATZ penetration: usual setting?",
-   "a": "Aerodrome QFE (clutch QFE in a combined MATZ)."
+   "a": "Aerodrome QFE (clutch QFE in a combined MATZ).",
+   "ref": {
+    "sec": "Outside controlled airspace"
+   }
   },
   {
    "q": "What is the clutch QFE?",
-   "a": "The lowest QFE of the aerodromes in a combined MATZ."
+   "a": "The lowest QFE of the aerodromes in a combined MATZ.",
+   "ref": {
+    "sec": "Outside controlled airspace"
+   }
   },
   {
    "q": "VFR above 3,000 ft on semicircular levels: which setting?",
-   "a": "1013 hPa (it must be)."
+   "a": "1013 hPa (it must be).",
+   "ref": {
+    "sec": "Outside controlled airspace"
+   }
   },
   {
    "q": "Semicircular rule is based on?",
-   "a": "Magnetic track."
+   "a": "Magnetic track.",
+   "ref": {
+    "sec": "The semicircular rule"
+   }
   },
   {
    "q": "VFR, track 000–179°M: which levels?",
-   "a": "Odd thousands + 500 (FL35, 55, 75...)."
+   "a": "Odd thousands + 500 (FL35, 55, 75...).",
+   "ref": {
+    "sec": "The semicircular rule"
+   }
   },
   {
    "q": "VFR, track 180–359°M: which levels?",
-   "a": "Even thousands + 500 (FL45, 65...)."
+   "a": "Even thousands + 500 (FL45, 65...).",
+   "ref": {
+    "sec": "The semicircular rule"
+   }
   },
   {
    "q": "IFR, track 000–179°M: which levels?",
-   "a": "Odd thousands (FL30, 50, 70...)."
+   "a": "Odd thousands (FL30, 50, 70...).",
+   "ref": {
+    "sec": "The semicircular rule"
+   }
   },
   {
    "q": "Radar approach: which setting does the controller assume?",
-   "a": "QNH."
+   "a": "QNH.",
+   "ref": {
+    "sec": "Approach, landing and missed approach"
+   }
   },
   {
    "q": "Missed approach: report vertical position as?",
-   "a": "Altitude on aerodrome QNH, unless ATC say otherwise."
+   "a": "Altitude on aerodrome QNH, unless ATC say otherwise.",
+   "ref": {
+    "sec": "Approach, landing and missed approach"
+   }
   }
  ],
  "quiz": [
@@ -308,7 +416,10 @@
     "Elevation"
    ],
    "a": 0,
-   "why": "QNH gives altitude amsl. QFE gives height, 1013 gives a flight level, and elevation is a fixed point on the ground, not your level."
+   "why": "QNH gives altitude amsl. QFE gives height, 1013 gives a flight level, and elevation is a fixed point on the ground, not your level.",
+   "ref": {
+    "sec": "QNH, QFE and standard pressure"
+   }
   },
   {
    "q": "The Regional Pressure Setting is:",
@@ -319,7 +430,10 @@
     "The average QNH of aerodromes in the region"
    ],
    "a": 0,
-   "why": "It is the lowest forecast value, so you are at or slightly above the altitude shown. 'Actual' is the usual trap."
+   "why": "It is the lowest forecast value, so you are at or slightly above the altitude shown. 'Actual' is the usual trap.",
+   "ref": {
+    "sec": "Altimeter Setting Regions and the RPS"
+   }
   },
   {
    "q": "The main purpose of (i) QFE and (ii) QNH is:",
@@ -330,7 +444,10 @@
     "(i) Terrain clearance (ii) height above the aerodrome"
    ],
    "a": 0,
-   "why": "QFE tells you your height aal for the circuit; QNH relates you to charted elevations amsl. Separation from other traffic at higher levels is what 1013 is for."
+   "why": "QFE tells you your height aal for the circuit; QNH relates you to charted elevations amsl. Separation from other traffic at higher levels is what 1013 is for.",
+   "ref": {
+    "sec": "QNH, QFE and standard pressure"
+   }
   },
   {
    "q": "If you don't update the altimeter setting, which is the dangerous direction to fly?",
@@ -341,7 +458,10 @@
     "Low to high pressure, or warmer to colder air"
    ],
    "a": 0,
-   "why": "Both lower pressure and colder air put you lower than indicated: high to low, beware below. The distractors mix one correct half with one wrong half."
+   "why": "Both lower pressure and colder air put you lower than indicated: high to low, beware below. The distractors mix one correct half with one wrong half.",
+   "ref": {
+    "sec": "En route: high to low, beware below"
+   }
   },
   {
    "q": "A VFR flight cruising above 3,000 ft amsl:",
@@ -352,7 +472,10 @@
     "Must follow the semicircular rule; the lowest westbound level is FL35"
    ],
    "a": 0,
-   "why": "For VFR the rule is recommended, not required. Westbound VFR levels are even + 500, so the lowest above 3,000 ft is FL45; FL35 is eastbound."
+   "why": "For VFR the rule is recommended, not required. Westbound VFR levels are even + 500, so the lowest above 3,000 ft is FL45; FL35 is eastbound.",
+   "ref": {
+    "sec": "The semicircular rule"
+   }
   },
   {
    "q": "Flying beneath a TMA outside controlled airspace, which setting should you use?",
@@ -363,18 +486,24 @@
     "Whichever is lower, the RPS or an aerodrome QNH"
    ],
    "a": 0,
-   "why": "Use the QNH of an aerodrome under the TMA: it matches the traffic above and protects the TMA base. The RPS may differ slightly."
+   "why": "Use the QNH of an aerodrome under the TMA: it matches the traffic above and protects the TMA base. The RPS may differ slightly.",
+   "ref": {
+    "sec": "Outside controlled airspace"
+   }
   },
   {
    "q": "The transition altitude is:",
    "o": [
-    "The altitude at and below which vertical position is controlled by reference to altitude on QNH",
-    "Always 3,000 ft amsl",
-    "The altitude above which you must fly a flight level on QFE",
-    "The lowest flight level available for cruising"
+    "The altitude at or below which vertical position is given as altitude on QNH",
+    "Always 3,000 ft amsl everywhere in the UK, whatever the local airspace or aerodrome",
+    "The altitude above which vertical position is controlled by reference to height on QFE",
+    "The lowest flight level available for cruising above the transition layer"
    ],
    "a": 0,
-   "why": "It is defined by QNH and altitude. It is 3,000 ft over most of the UK but not everywhere; the lowest usable flight level is the transition level."
+   "why": "It is defined by QNH and altitude. It is 3,000 ft over most of the UK but not everywhere; the lowest usable flight level is the transition level.",
+   "ref": {
+    "sec": "Transition altitude, layer and level"
+   }
   },
   {
    "q": "A VFR aircraft is on a magnetic track of 055°. Which semicircular level is correct?",
@@ -385,7 +514,10 @@
     "FL40"
    ],
    "a": 0,
-   "why": "Track 000–179° is odd thousands; VFR adds 500, so FL35, FL55, FL75. FL50 is the IFR level; FL40 and FL45 are westbound."
+   "why": "Track 000–179° is odd thousands; VFR adds 500, so FL35, FL55, FL75. FL50 is the IFR level; FL40 and FL45 are westbound.",
+   "ref": {
+    "sec": "The semicircular rule"
+   }
   },
   {
    "q": "The semicircular rule is based on:",
@@ -396,7 +528,10 @@
     "True heading"
    ],
    "a": 0,
-   "why": "Magnetic track. In a crosswind two aircraft on the same track can have very different headings."
+   "why": "Magnetic track. In a crosswind two aircraft on the same track can have very different headings.",
+   "ref": {
+    "sec": "The semicircular rule"
+   }
   },
   {
    "q": "An IFR flight on a magnetic track of 250°. Which is a correct cruising level?",
@@ -407,7 +542,10 @@
     "FL55"
    ],
    "a": 0,
-   "why": "Westbound IFR flies even thousands (FL40, FL60...). Plus 500 is for VFR; odd thousands are eastbound."
+   "why": "Westbound IFR flies even thousands (FL40, FL60...). Plus 500 is for VFR; odd thousands are eastbound.",
+   "ref": {
+    "sec": "The semicircular rule"
+   }
   },
   {
    "q": "A VFR flight on a magnetic track of 180°. Which level?",
@@ -418,7 +556,10 @@
     "FL55"
    ],
    "a": 0,
-   "why": "180° is in the westbound half (180–359°), so VFR uses even + 500."
+   "why": "180° is in the westbound half (180–359°), so VFR uses even + 500.",
+   "ref": {
+    "sec": "The semicircular rule"
+   }
   },
   {
    "q": "QNH is 996 hPa. Roughly what altitude is FL40?",
@@ -429,7 +570,10 @@
     "3,000 ft amsl"
    ],
    "a": 0,
-   "why": "17 hPa × 30 ft ≈ 500 ft. The 1013 level is 500 ft below sea level, so FL40 ≈ 3,500 ft. Low QNH makes flight levels lower, not higher."
+   "why": "17 hPa × 30 ft ≈ 500 ft. The 1013 level is 500 ft below sea level, so FL40 ≈ 3,500 ft. Low QNH makes flight levels lower, not higher.",
+   "ref": {
+    "sec": "Choosing a flight level when the QNH is low"
+   }
   },
   {
    "q": "QNH 996. You need 1,000 ft clearance above traffic at 3,000 ft amsl. Lowest suitable level?",
@@ -440,7 +584,10 @@
     "FL50"
    ],
    "a": 0,
-   "why": "FL45 ≈ 4,000 ft amsl that day. FL40 is only about 3,500 ft, giving 500 ft separation."
+   "why": "FL45 ≈ 4,000 ft amsl that day. FL40 is only about 3,500 ft, giving 500 ft separation.",
+   "ref": {
+    "sec": "Choosing a flight level when the QNH is low"
+   }
   },
   {
    "q": "Cruising at 1,000 ft with 1020 set, you fly into an area where the QNH is 1010. Your actual altitude is about:",
@@ -451,7 +598,10 @@
     "300 ft"
    ],
    "a": 0,
-   "why": "The 1020 level is about 300 ft below sea level there (10 × 30 ft), so 1,000 ft above it is about 700 ft amsl."
+   "why": "The 1020 level is about 300 ft below sea level there (10 × 30 ft), so 1,000 ft above it is about 700 ft amsl.",
+   "ref": {
+    "sec": "En route: high to low, beware below"
+   }
   },
   {
    "q": "In very cold air, how much lower than indicated could you be?",
@@ -462,18 +612,24 @@
     "Not at all if QNH is correct"
    ],
    "a": 0,
-   "why": "Cold dense air lowers the pressure levels; the error can reach about 10% even with the correct QNH set."
+   "why": "Cold dense air lowers the pressure levels; the error can reach about 10% even with the correct QNH set.",
+   "ref": {
+    "sec": "En route: high to low, beware below"
+   }
   },
   {
    "q": "The transition level is:",
    "o": [
-    "The lowest flight level available above the transition altitude",
-    "The highest altitude at which QNH is used",
-    "The level at which QFE changes to QNH",
-    "Always FL30"
+    "The lowest flight level available above the TA",
+    "The highest altitude at which QNH may be used for reporting",
+    "The level at which you change from QFE to the regional QNH",
+    "Always FL30, whatever the transition altitude below it"
    ],
    "a": 0,
-   "why": "TL is a flight level, the first usable one above TA; between them is the transition layer."
+   "why": "TL is a flight level, the first usable one above TA; between them is the transition layer.",
+   "ref": {
+    "sec": "Transition altitude, layer and level"
+   }
   },
   {
    "q": "Climbing through the transition altitude, you give your vertical position as:",
@@ -484,18 +640,24 @@
     "A pressure altitude in feet"
    ],
    "a": 0,
-   "why": "Climbing, change to flight levels at TA; descending, change to altitude at TL."
+   "why": "Climbing, change to flight levels at TA; descending, change to altitude at TL.",
+   "ref": {
+    "sec": "Transition altitude, layer and level"
+   }
   },
   {
    "q": "Inside controlled airspace with two altimeters, for take-off you should have:",
    "o": [
     "At least one on aerodrome QNH",
-    "Both on QFE",
+    "Both on the aerodrome QFE",
     "One on 1013 and one on QFE",
-    "Both on the RPS"
+    "Both on the Regional Pressure Setting"
    ],
    "a": 0,
-   "why": "One on aerodrome QNH for terrain and traffic; the other on QNH or QFE."
+   "why": "One on aerodrome QNH for terrain and traffic; the other on QNH or QFE.",
+   "ref": {
+    "sec": "Take-off and climb"
+   }
   },
   {
    "q": "How is the aircraft's vertical position reported outside controlled airspace?",
@@ -506,29 +668,38 @@
     "As pressure altitude"
    ],
    "a": 0,
-   "why": "Outside controlled airspace, communications and flight plans use altitude (IFR above the TA excepted)."
+   "why": "Outside controlled airspace, communications and flight plans use altitude (IFR above the TA excepted).",
+   "ref": {
+    "sec": "Outside controlled airspace"
+   }
   },
   {
    "q": "Crossing a combined MATZ, what setting are you usually given?",
    "o": [
     "The clutch QFE: the lowest QFE of the aerodromes",
-    "The highest QFE of the aerodromes",
-    "The RPS",
-    "1013"
+    "The clutch QFE: the highest QFE of the aerodromes",
+    "The Regional Pressure Setting for the area",
+    "Standard pressure, 1013 hPa, for a flight level"
    ],
    "a": 0,
-   "why": "The lowest QFE is given, the clutch QFE. Sometimes QNH is passed instead when crossing."
+   "why": "The lowest QFE is given, the clutch QFE. Sometimes QNH is passed instead when crossing.",
+   "ref": {
+    "sec": "Outside controlled airspace"
+   }
   },
   {
    "q": "A VFR pilot above 3,000 ft chooses to fly semicircular levels. Which setting?",
    "o": [
     "1013 hPa must be set",
-    "The RPS",
-    "Aerodrome QNH",
-    "Either RPS or 1013"
+    "The RPS must be set",
+    "Aerodrome QNH must be set",
+    "Either RPS or 1013 may be set"
    ],
    "a": 0,
-   "why": "VFR may stay on the RPS, but semicircular levels are flight levels, so 1013 must be set if you fly them."
+   "why": "VFR may stay on the RPS, but semicircular levels are flight levels, so 1013 must be set if you fly them.",
+   "ref": {
+    "sec": "Outside controlled airspace"
+   }
   },
   {
    "q": "How often is the Regional Pressure Setting updated?",
@@ -539,7 +710,10 @@
     "Only when it changes by 2 hPa"
    ],
    "a": 0,
-   "why": "Hourly, as the lowest forecast QNH for each hour."
+   "why": "Hourly, as the lowest forecast QNH for each hour.",
+   "ref": {
+    "sec": "Altimeter Setting Regions and the RPS"
+   }
   },
   {
    "q": "On a radar approach, which setting does the controller assume you have?",
@@ -550,18 +724,24 @@
     "The RPS"
    ],
    "a": 0,
-   "why": "QNH is assumed and altitudes are given. If you say you are on QFE, the controller gives heights instead."
+   "why": "QNH is assumed and altitudes are given. If you say you are on QFE, the controller gives heights instead.",
+   "ref": {
+    "sec": "Approach, landing and missed approach"
+   }
   },
   {
    "q": "During a missed approach, vertical position should be reported as:",
    "o": [
     "Altitude on aerodrome QNH, unless ATC instruct otherwise",
-    "Height on QFE",
-    "A flight level",
-    "Height on QNH"
+    "Height on aerodrome QFE, unless ATC instruct otherwise",
+    "A flight level on 1013 hPa, unless ATC instruct otherwise",
+    "Altitude on the RPS, unless ATC instruct otherwise"
    ],
    "a": 0,
-   "why": "You may keep the final-approach setting, but report altitude on aerodrome QNH."
+   "why": "You may keep the final-approach setting, but report altitude on aerodrome QNH.",
+   "ref": {
+    "sec": "Approach, landing and missed approach"
+   }
   },
   {
    "q": "Below 5,000 ft, a 1 hPa change in setting moves the altimeter reading by about:",
@@ -572,7 +752,10 @@
     "3 ft"
    ],
    "a": 0,
-   "why": "About 30 ft per hPa low down (often rounded to 27–30 ft)."
+   "why": "About 30 ft per hPa low down (often rounded to 27–30 ft).",
+   "ref": {
+    "sec": "How the altimeter works"
+   }
   },
   {
    "q": "On a high-pressure day (QNH 1030), an aircraft is at 4,000 ft altitude. Its flight level is about:",
@@ -583,7 +766,10 @@
     "FL30"
    ],
    "a": 0,
-   "why": "QNH is 17 hPa above 1013, so the 1013 level is about 500 ft above sea level, making the aircraft about FL35. High QNH makes the flight level lower than the altitude."
+   "why": "QNH is 17 hPa above 1013, so the 1013 level is about 500 ft above sea level, making the aircraft about FL35. High QNH makes the flight level lower than the altitude.",
+   "ref": {
+    "sec": "QNH, QFE and standard pressure"
+   }
   },
   {
    "q": "Aerodrome elevation 1,500 ft. With QFE set on the ground, the altimeter reads:",
@@ -594,7 +780,10 @@
     "The pressure altitude"
    ],
    "a": 0,
-   "why": "QFE is the pressure at aerodrome level, so on the ground it reads zero. QNH would read 1,500 ft."
+   "why": "QFE is the pressure at aerodrome level, so on the ground it reads zero. QNH would read 1,500 ft.",
+   "ref": {
+    "sec": "QNH, QFE and standard pressure"
+   }
   },
   {
    "q": "Which statement about the RPS and an aerodrome QNH in the same region is right?",
@@ -605,18 +794,24 @@
     "The RPS is the aerodrome QNH of the largest airport"
    ],
    "a": 0,
-   "why": "The RPS is the lowest forecast QNH, so aerodrome QNHs should be equal or higher."
+   "why": "The RPS is the lowest forecast QNH, so aerodrome QNHs should be equal or higher.",
+   "ref": {
+    "sec": "Altimeter Setting Regions and the RPS"
+   }
   },
   {
    "q": "Outside controlled airspace at or below 3,000 ft amsl, which settings may you use?",
    "o": [
     "The RPS or the QNH of an aerodrome nearby",
-    "Only the RPS",
-    "Only 1013",
-    "Only QFE"
+    "Only the RPS of the altimeter setting region",
+    "Only standard pressure, 1013 hPa",
+    "Only the QFE of the nearest aerodrome"
    ],
    "a": 0,
-   "why": "Either the RPS or a nearby aerodrome's QNH; under a TMA or CTA, the QNH of an aerodrome beneath it."
+   "why": "Either the RPS or a nearby aerodrome's QNH; under a TMA or CTA, the QNH of an aerodrome beneath it.",
+   "ref": {
+    "sec": "Outside controlled airspace"
+   }
   },
   {
    "q": "Since when has the UK used hectopascals instead of millibars?",
@@ -627,7 +822,10 @@
     "They were never replaced"
    ],
    "a": 0,
-   "why": "Hectopascals replaced millibars in the UK on 17 November 2011. 1 hPa = 1 mb, so the numbers are the same."
+   "why": "Hectopascals replaced millibars in the UK on 17 November 2011. 1 hPa = 1 mb, so the numbers are the same.",
+   "ref": {
+    "sec": "How the altimeter works"
+   }
   }
  ]
 }

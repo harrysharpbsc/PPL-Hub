@@ -39,43 +39,73 @@
  "cards": [
   {
    "q": "Crosswind component formula?",
-   "a": "Wind speed x sin of the angle to the runway."
+   "a": "Wind speed x sin of the angle to the runway.",
+   "ref": {
+    "sec": "Finding the components"
+   }
   },
   {
    "q": "Headwind component formula?",
-   "a": "Wind speed x cos of the angle to the runway."
+   "a": "Wind speed x cos of the angle to the runway.",
+   "ref": {
+    "sec": "Finding the components"
+   }
   },
   {
    "q": "Crosswind from 20 kt at 60°?",
-   "a": "About 17 kt."
+   "a": "About 17 kt.",
+   "ref": {
+    "sec": "Finding the components"
+   }
   },
   {
    "q": "Headwind from 20 kt at 60°?",
-   "a": "About 10 kt."
+   "a": "About 10 kt.",
+   "ref": {
+    "sec": "Finding the components"
+   }
   },
   {
    "q": "Crosswind from 20 kt at 90°?",
-   "a": "20 kt, the full speed."
+   "a": "20 kt, the full speed.",
+   "ref": {
+    "sec": "Finding the components"
+   }
   },
   {
    "q": "Crosswind from 30 kt at 30°?",
-   "a": "About 15 kt."
+   "a": "About 15 kt.",
+   "ref": {
+    "sec": "Finding the components"
+   }
   },
   {
    "q": "Rule of thumb at 30°?",
-   "a": "Crosswind is about half the wind speed."
+   "a": "Crosswind is about half the wind speed.",
+   "ref": {
+    "sec": "Finding the components"
+   }
   },
   {
    "q": "Rule of thumb at 45°?",
-   "a": "Crosswind is about 70% of the wind speed."
+   "a": "Crosswind is about 70% of the wind speed.",
+   "ref": {
+    "sec": "Finding the components"
+   }
   },
   {
    "q": "Rule of thumb at 60°?",
-   "a": "Crosswind is about 85% of the wind speed."
+   "a": "Crosswind is about 85% of the wind speed.",
+   "ref": {
+    "sec": "Finding the components"
+   }
   },
   {
    "q": "Effect of a tailwind of 10% of lift-off speed?",
-   "a": "About x1.2 on distance."
+   "a": "About x1.2 on distance.",
+   "ref": {
+    "sec": "Using it"
+   }
   }
  ],
  "quiz": [
@@ -88,7 +118,10 @@
     "30 kt"
    ],
    "a": 1,
-   "why": "Crosswind = 30 x sin30° = 15 kt."
+   "why": "Crosswind = 30 x sin30° = 15 kt.",
+   "ref": {
+    "sec": "Finding the components"
+   }
   },
   {
    "q": "A 20 kt wind straight across the runway gives a crosswind of:",
@@ -99,7 +132,10 @@
     "20 kt"
    ],
    "a": 3,
-   "why": "At 90° the whole wind is crosswind."
+   "why": "At 90° the whole wind is crosswind.",
+   "ref": {
+    "sec": "Finding the components"
+   }
   },
   {
    "q": "A 20 kt wind 60° off gives a headwind of about:",
@@ -110,7 +146,10 @@
     "0 kt"
    ],
    "a": 0,
-   "why": "Headwind = 20 x cos60° = 10 kt."
+   "why": "Headwind = 20 x cos60° = 10 kt.",
+   "ref": {
+    "sec": "Finding the components"
+   }
   },
   {
    "q": "A 20 kt wind 45° off gives a crosswind of about:",
@@ -121,7 +160,10 @@
     "20 kt"
    ],
    "a": 1,
-   "why": "20 x 0.7 = 14 kt."
+   "why": "20 x 0.7 = 14 kt.",
+   "ref": {
+    "sec": "Finding the components"
+   }
   },
   {
    "q": "Approximate crosswind for a 24 kt wind at 60°:",
@@ -132,7 +174,10 @@
     "24 kt"
    ],
    "a": 2,
-   "why": "24 x 0.85 = about 21 kt."
+   "why": "24 x 0.85 = about 21 kt.",
+   "ref": {
+    "sec": "Finding the components"
+   }
   }
  ]
 }

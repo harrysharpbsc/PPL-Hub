@@ -22,6 +22,7 @@ TOPIC_KEYS = {'seq': int, 's': int, 'topic': str, 'num': int, 'order': int, 'con
 REQUIRED = ['seq', 's', 'topic', 'order', 'conf', 'status', 'summary', 'sections', 'sum', 'cards', 'quiz']
 LONG_RATIO = 1.3        # correct option this much longer than the average wrong one gives the answer away
 SUBJECT_LONGEST = 0.35  # at most this share of a subject's questions may have the correct option longest
+SUBJECT_LONGEST_MIN = 0.15  # below this, 'never pick the longest' becomes the trick (chance is 25%)
 CARD_MAX = 160          # longer card answers are rarely one fact
 
 
@@ -135,7 +136,7 @@ def lint(ts):
             seen.add(c['q'])
             ref_ok(c.get('ref'), where)
             a = _strip(c['a'])
-            if len(a) > CARD_MAX or a.count(';') >= 2:
+            if len(a) > CARD_MAX or a.count(';') >= 3:
                 W.append(('card-long', where, '%d chars: probably more than one fact' % len(a)))
             for rx, un, msg in errata:
                 if rx.search(a) and not (un and un.search(a)): E.append(('errata', where, msg))
@@ -163,6 +164,9 @@ def lint(ts):
         if n and l / n > SUBJECT_LONGEST:
             E.append(('subject-longest', 'subject %d' % s, '%d%% of questions have the correct option longest (max %d%%)'
                       % (round(100 * l / n), round(100 * SUBJECT_LONGEST))))
+        elif n >= 12 and l / n < SUBJECT_LONGEST_MIN:
+            W.append(('subject-shortest', 'subject %d' % s, 'only %d%% of questions have the correct option longest: '
+                      'the longest is almost always wrong (aim for about 25%%)' % round(100 * l / n)))
     return E, W
 
 

@@ -29,7 +29,7 @@ Errors: duplicate topic / heading / question, section without summary, malformed
 above", missing or dangling `ref`, correct option clearly the longest (≥ 1.3× the average wrong one), a subject
 where more than 35% of questions have the right option longest, and anything in `errata.json` (known wrong
 facts and house rules such as 30 ft per hPa).
-Warnings: card answers over 160 characters or with several `;` clauses, Air Law items without `ref.rule`,
+Warnings: card answers over 160 characters or with three or more `;` clauses, Air Law items without `ref.rule`,
 sections no item points at.
 
 `lint_baseline.json` lists the errors that existed when the lint was added (Nov 2026). The build fails only on

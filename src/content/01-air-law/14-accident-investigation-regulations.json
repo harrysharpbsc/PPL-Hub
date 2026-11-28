@@ -86,55 +86,94 @@
  "cards": [
   {
    "q": "When does the accident 'window' start and end?",
-   "a": "From when anyone boards with the intention of flight until all have left."
+   "a": "From when anyone boards with the intention of flight until all have left.",
+   "ref": {
+    "sec": "What counts as an accident"
+   }
   },
   {
    "q": "Is a person on the ground hit by a part that fell off an aircraft an accident?",
-   "a": "Yes."
+   "a": "Yes.",
+   "ref": {
+    "sec": "What counts as an accident"
+   }
   },
   {
    "q": "Is damage limited to the propeller an accident?",
-   "a": "No (nor engine-only damage, wingtips, aerials, tyres, brakes, small dents)."
+   "a": "No (nor engine-only damage, wingtips, aerials, tyres, brakes, small dents).",
+   "ref": {
+    "sec": "What counts as an accident"
+   }
   },
   {
    "q": "Is a missing aircraft an accident?",
-   "a": "Yes, once the official search ends without finding the wreckage."
+   "a": "Yes, once the official search ends without finding the wreckage.",
+   "ref": {
+    "sec": "What counts as an accident"
+   }
   },
   {
    "q": "Who must be told of a UK accident, and how?",
-   "a": "The Chief Inspector of Air Accidents (AAIB) and the local police, by the quickest means."
+   "a": "The Chief Inspector of Air Accidents (AAIB) and the local police, by the quickest means.",
+   "ref": {
+    "sec": "Notifying an accident"
+   }
   },
   {
    "q": "Who tells them if the commander is killed?",
-   "a": "The operator."
+   "a": "The operator.",
+   "ref": {
+    "sec": "Notifying an accident"
+   }
   },
   {
    "q": "Which State starts the investigation?",
-   "a": "The State in which the accident happens."
+   "a": "The State in which the accident happens.",
+   "ref": {
+    "sec": "Notifying an accident"
+   }
   },
   {
    "q": "Purpose of an accident investigation?",
-   "a": "To find the cause and prevent recurrence; not to apportion blame or liability."
+   "a": "To find the cause and prevent recurrence; not to apportion blame or liability.",
+   "ref": {
+    "sec": "Purpose of an investigation"
+   }
   },
   {
    "q": "Serious injury: hospital time?",
-   "a": "More than 48 hours, starting within 7 days."
+   "a": "More than 48 hours, starting within 7 days.",
+   "ref": {
+    "sec": "Serious injury"
+   }
   },
   {
    "q": "Which fractures don't count as serious injury?",
-   "a": "Simple fractures of fingers, toes or nose."
+   "a": "Simple fractures of fingers, toes or nose.",
+   "ref": {
+    "sec": "Serious injury"
+   }
   },
   {
    "q": "Accident vs serious incident?",
-   "a": "An accident has the damage or injury; a serious incident nearly did."
+   "a": "An accident has the damage or injury; a serious incident nearly did.",
+   "ref": {
+    "sec": "Incidents"
+   }
   },
   {
    "q": "Which bird strikes must be reported?",
-   "a": "All of them, damage or not."
+   "a": "All of them, damage or not.",
+   "ref": {
+    "sec": "Reporting"
+   }
   },
   {
    "q": "What does CHIRP stand for?",
-   "a": "Confidential Human Factors Incident Reporting Programme."
+   "a": "Confidential Human Factors Incident Reporting Programme.",
+   "ref": {
+    "sec": "Purpose of an investigation"
+   }
   }
  ],
  "quiz": [
@@ -142,12 +181,15 @@
    "q": "Which of these is an aircraft accident?",
    "o": [
     "A person on the ground is seriously injured by a part that falls off an aircraft in flight",
-    "A tyre bursts on landing",
-    "An aerial breaks off in flight",
-    "A bird strike leaves a small dent in the wing"
+    "A tyre bursts on landing and the aircraft has to be towed clear of the runway",
+    "An aerial breaks off in flight and is found later beside the runway",
+    "A bird strike in flight leaves a small dent in the wing leading edge"
    ],
    "a": 0,
-   "why": "Injury from a detached part is an accident. Tyres, aerials and small dents are listed exceptions."
+   "why": "Injury from a detached part is an accident. Tyres, aerials and small dents are listed exceptions.",
+   "ref": {
+    "sec": "What counts as an accident"
+   }
   },
   {
    "q": "An engine fails in the circuit and the aircraft lands safely on the runway. Damage is limited to the engine. This is:",
@@ -158,7 +200,10 @@
     "An accident only if the engine must be replaced"
    ],
    "a": 0,
-   "why": "Damage limited to the engine, its cowlings or accessories is excluded. It is still reportable as an occurrence."
+   "why": "Damage limited to the engine, its cowlings or accessories is excluded. It is still reportable as an occurrence.",
+   "ref": {
+    "sec": "What counts as an accident"
+   }
   },
   {
    "q": "A person on the apron is seriously injured by the wingtip of an aircraft taxiing for departure. This is:",
@@ -169,29 +214,38 @@
     "An accident only if the aircraft is damaged"
    ],
    "a": 0,
-   "why": "People had boarded with the intention of flight, and a person was seriously injured by direct contact with the aircraft."
+   "why": "People had boarded with the intention of flight, and a person was seriously injured by direct contact with the aircraft.",
+   "ref": {
+    "sec": "What counts as an accident"
+   }
   },
   {
    "q": "A UK accident must be reported by the quickest means to:",
    "o": [
     "The Chief Inspector of Air Accidents and the local police",
-    "The CAA and the AAIB",
-    "The CAA and the police",
-    "The operator and the insurer"
+    "The CAA and the Chief Inspector of Air Accidents",
+    "The CAA and the local police where it happened",
+    "The aircraft's operator and its insurer"
    ],
    "a": 0,
-   "why": "AAIB (the Chief Inspector) and the police. The CAA is the trap."
+   "why": "AAIB (the Chief Inspector) and the police. The CAA is the trap.",
+   "ref": {
+    "sec": "Notifying an accident"
+   }
   },
   {
    "q": "Who is responsible for starting the investigation of an accident?",
    "o": [
     "The authority of the State in which it occurred",
-    "The State of Registry",
-    "The CAA, wherever it happens",
-    "The aircraft's operator"
+    "The authority of the State of Registry",
+    "The CAA, wherever in the world it happens",
+    "The aircraft's operator, with the insurer"
    ],
    "a": 0,
-   "why": "The State of Occurrence starts the investigation; other States may take part."
+   "why": "The State of Occurrence starts the investigation; other States may take part.",
+   "ref": {
+    "sec": "Notifying an accident"
+   }
   },
   {
    "q": "The purpose of an accident investigation is to:",
@@ -202,7 +256,10 @@
     "Decide whether to prosecute the pilot"
    ],
    "a": 0,
-   "why": "Investigators do not apportion blame or liability."
+   "why": "Investigators do not apportion blame or liability.",
+   "ref": {
+    "sec": "Purpose of an investigation"
+   }
   },
   {
    "q": "Which of these counts as a serious injury?",
@@ -213,18 +270,24 @@
     "A small cut"
    ],
    "a": 0,
-   "why": "Most fractures count, but not simple fractures of fingers, toes or nose. Hospital must be more than 48 hours."
+   "why": "Most fractures count, but not simple fractures of fingers, toes or nose. Hospital must be more than 48 hours.",
+   "ref": {
+    "sec": "Serious injury"
+   }
   },
   {
    "q": "Which bird strikes should be reported?",
    "o": [
     "All of them, whether or not there is damage",
-    "Only those that cause damage",
-    "Only those that cause an accident",
-    "Only those at controlled aerodromes"
+    "Only those that cause damage to the aircraft",
+    "Only those that lead to an accident or injury",
+    "Only those at aerodromes with an ATC unit"
    ],
    "a": 0,
-   "why": "Every bird strike, and near misses are welcome too."
+   "why": "Every bird strike, and near misses are welcome too.",
+   "ref": {
+    "sec": "Reporting"
+   }
   }
  ]
 }

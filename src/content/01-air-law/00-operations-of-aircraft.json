@@ -67,59 +67,101 @@
  "cards": [
   {
    "q": "What three ways does EASA classify civil aviation activity?",
-   "a": "Commercial vs non-commercial; air transport vs specialised operation; complex vs other-than-complex motor-powered aircraft."
+   "a": "Commercial vs non-commercial; air transport vs specialised operation; complex vs other-than-complex motor-powered aircraft.",
+   "ref": {
+    "sec": "EASA classifies civil aviation activity"
+   }
   },
   {
    "q": "What decides commercial vs non-commercial?",
-   "a": "The presence of remuneration."
+   "a": "The presence of remuneration.",
+   "ref": {
+    "sec": "EASA classifies civil aviation activity"
+   }
   },
   {
    "q": "What decides air transport vs specialised operation?",
-   "a": "The activity performed."
+   "a": "The activity performed.",
+   "ref": {
+    "sec": "EASA classifies civil aviation activity"
+   }
   },
   {
    "q": "Complex aircraft: take-off mass threshold?",
-   "a": "Maximum certificated take-off mass exceeding 5,700 kg."
+   "a": "Maximum certificated take-off mass exceeding 5,700 kg.",
+   "ref": {
+    "sec": "Definition of complex (air operations)"
+   }
   },
   {
    "q": "Complex aircraft: passenger seating threshold?",
-   "a": "Maximum certificated seating of more than 19."
+   "a": "Maximum certificated seating of more than 19.",
+   "ref": {
+    "sec": "Definition of complex (air operations)"
+   }
   },
   {
    "q": "Complex aircraft: minimum crew?",
-   "a": "At least 2 pilots."
+   "a": "At least 2 pilots.",
+   "ref": {
+    "sec": "Definition of complex (air operations)"
+   }
   },
   {
    "q": "Complex aircraft: engine criterion?",
-   "a": "At least one turbojet, or more than one turboprop."
+   "a": "At least one turbojet, or more than one turboprop.",
+   "ref": {
+    "sec": "Definition of complex (air operations)"
+   }
   },
   {
    "q": "What does Part-NCO cover?",
-   "a": "Operational regulations for Part-21 other-than-complex motor-powered aircraft."
+   "a": "Operational regulations for Part-21 other-than-complex motor-powered aircraft.",
+   "ref": {
+    "sec": "Documents for a UK pilot in a G-registered aeroplane"
+   }
   },
   {
    "q": "What does Part-FCL cover?",
-   "a": "Licensing requirements for Part-21 aeroplanes."
+   "a": "Licensing requirements for Part-21 aeroplanes.",
+   "ref": {
+    "sec": "Documents for a UK pilot in a G-registered aeroplane"
+   }
   },
   {
    "q": "What does SERA stand for, and cover?",
-   "a": "Standardised European Rules of the Air; the rules of the air."
+   "a": "Standardised European Rules of the Air; the rules of the air.",
+   "ref": {
+    "sec": "Structure of the assimilated EU law"
+   }
   },
   {
    "q": "What does the Air Navigation Order (ANO) 2016 contain?",
-   "a": "Safety requirements for all aircraft in UK airspace and people involved in operating them, including airworthiness, operational and flight crew rules for non-Part-21 aircraft."
+   "a": "Safety rules for all aircraft in UK airspace and the people operating them, including the rules for non-Part-21 aircraft.",
+   "ref": {
+    "sec": "Documents for a UK pilot in a G-registered aeroplane"
+   }
   },
   {
    "q": "Which ANO 2016 parts cover licensing and operations for non-Part-21 aircraft?",
-   "a": "Licensing: Part 6 and Schedule 8. Operations: Part 5 and Schedule 5."
+   "a": "Licensing: Part 6 and Schedule 8. Operations: Part 5 and Schedule 5.",
+   "ref": {
+    "sec": "Documents for a UK pilot in a G-registered aeroplane"
+   }
   },
   {
    "q": "Which aircraft are non-Part-21?",
-   "a": "Vintage, ex-military, amateur-built aircraft, microlights and gyroplanes."
+   "a": "Vintage, ex-military, amateur-built aircraft, microlights and gyroplanes.",
+   "ref": {
+    "sec": "Part-21 or non-Part-21?"
+   }
   },
   {
    "q": "Which aircraft are Part-21?",
-   "a": "Most modern factory-built aircraft, excluding microlights and gyroplanes."
+   "a": "Most modern factory-built aircraft, excluding microlights and gyroplanes.",
+   "ref": {
+    "sec": "Part-21 or non-Part-21?"
+   }
   }
  ],
  "quiz": [
@@ -132,7 +174,10 @@
     "12,500 kg"
    ],
    "a": 2,
-   "why": "The threshold is a maximum certificated take-off mass exceeding 5,700 kg."
+   "why": "The threshold is a maximum certificated take-off mass exceeding 5,700 kg.",
+   "ref": {
+    "sec": "Definition of complex (air operations)"
+   }
   },
   {
    "q": "Which maximum seating configuration meets the complex threshold?",
@@ -143,7 +188,10 @@
     "20"
    ],
    "a": 3,
-   "why": "More than 19, so exactly 19 does not qualify."
+   "why": "More than 19, so exactly 19 does not qualify.",
+   "ref": {
+    "sec": "Definition of complex (air operations)"
+   }
   },
   {
    "q": "What makes an activity commercial?",
@@ -154,7 +202,10 @@
     "Flying for a company"
    ],
    "a": 2,
-   "why": "Commercial vs non-commercial depends on the presence of remuneration."
+   "why": "Commercial vs non-commercial depends on the presence of remuneration.",
+   "ref": {
+    "sec": "EASA classifies civil aviation activity"
+   }
   },
   {
    "q": "Which engine fit meets the complex criterion?",
@@ -165,18 +216,24 @@
     "None of these"
    ],
    "a": 2,
-   "why": "One turbojet is enough; turboprops need to be more than one."
+   "why": "One turbojet is enough; turboprops need to be more than one.",
+   "ref": {
+    "sec": "Definition of complex (air operations)"
+   }
   },
   {
    "q": "What separates air transport from specialised operation?",
    "o": [
-    "The aircraft type",
     "The activity performed",
-    "Crew size",
-    "Remuneration"
+    "The aircraft type used",
+    "The number of crew",
+    "Whether payment is made"
    ],
-   "a": 1,
-   "why": "It is based on the activity performed."
+   "a": 0,
+   "why": "It is based on the activity performed.",
+   "ref": {
+    "sec": "EASA classifies civil aviation activity"
+   }
   },
   {
    "q": "Which regulation covers the rules of the air?",
@@ -187,7 +244,10 @@
     "Part-21"
    ],
    "a": 2,
-   "why": "SERA is the Standardised European Rules of the Air."
+   "why": "SERA is the Standardised European Rules of the Air.",
+   "ref": {
+    "sec": "Structure of the assimilated EU law"
+   }
   },
   {
    "q": "Which part covers flight crew licensing for Part-21 aeroplanes?",
@@ -198,7 +258,10 @@
     "ANO Part 5"
    ],
    "a": 0,
-   "why": "Part-FCL contains the licensing requirements."
+   "why": "Part-FCL contains the licensing requirements.",
+   "ref": {
+    "sec": "Documents for a UK pilot in a G-registered aeroplane"
+   }
   },
   {
    "q": "Which of these is a non-Part-21 aircraft?",
@@ -209,7 +272,10 @@
     "A factory-built single"
    ],
    "a": 1,
-   "why": "Microlights, gyroplanes, vintage, ex-military and amateur-built aircraft are non-Part-21."
+   "why": "Microlights, gyroplanes, vintage, ex-military and amateur-built aircraft are non-Part-21.",
+   "ref": {
+    "sec": "Part-21 or non-Part-21?"
+   }
   },
   {
    "q": "Which part covers operations of Part-21 other-than-complex aircraft?",
@@ -220,7 +286,10 @@
     "ANO Part 6"
    ],
    "a": 0,
-   "why": "Part-NCO holds the operational regulations for these aircraft."
+   "why": "Part-NCO holds the operational regulations for these aircraft.",
+   "ref": {
+    "sec": "Documents for a UK pilot in a G-registered aeroplane"
+   }
   }
  ]
 }

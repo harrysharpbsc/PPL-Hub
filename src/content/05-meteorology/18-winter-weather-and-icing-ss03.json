@@ -108,51 +108,87 @@
  "cards": [
   {
    "q": "Define fog and mist by visibility.",
-   "a": "Fog is below 1,000 m. Mist is 1,000 to 5,000 m."
+   "a": "Fog is below 1,000 m. Mist is 1,000 to 5,000 m.",
+   "ref": {
+    "sec": "Fog, mist and reporting"
+   }
   },
   {
    "q": "How is runway condition reported now?",
-   "a": "Global Reporting Format (rated 0 to 6) via SNOWTAM or ATIS, not the METAR."
+   "a": "Global Reporting Format (rated 0 to 6) via SNOWTAM or ATIS, not the METAR.",
+   "ref": {
+    "sec": "Fog, mist and reporting"
+   }
   },
   {
    "q": "What does GRF 6 mean? And 0?",
-   "a": "6 is a normal dry runway. 0 means minimal braking action, such as wet ice."
+   "a": "6 is a normal dry runway. 0 means minimal braking action, such as wet ice.",
+   "ref": {
+    "sec": "Fog, mist and reporting"
+   }
   },
   {
    "q": "Main warning sign of radiation fog?",
-   "a": "Temperature and dew point converging, with clear skies and light wind."
+   "a": "Temperature and dew point converging, with clear skies and light wind.",
+   "ref": {
+    "sec": "Radiation fog and high pressure"
+   }
   },
   {
    "q": "How much can light frost reduce lift and increase drag?",
-   "a": "Lift down by up to 30%, drag up by up to 40%."
+   "a": "Lift down by up to 30%, drag up by up to 40%.",
+   "ref": {
+    "sec": "Frost, snow and de-icing"
+   }
   },
   {
    "q": "Which de-icing fluid type suits light aircraft?",
-   "a": "Type I. Types II and IV are for larger aircraft."
+   "a": "Type I. Types II and IV are for larger aircraft.",
+   "ref": {
+    "sec": "Frost, snow and de-icing"
+   }
   },
   {
    "q": "Take-off factors for wet grass and general safety?",
-   "a": "x1.3 for wet grass, then x1.33 general."
+   "a": "x1.3 for wet grass, then x1.33 general.",
+   "ref": {
+    "sec": "Surface performance factors"
+   }
   },
   {
    "q": "Landing factors for wet grass and general safety?",
-   "a": "x1.35 for wet grass, then x1.43 general."
+   "a": "x1.35 for wet grass, then x1.43 general.",
+   "ref": {
+    "sec": "Surface performance factors"
+   }
   },
   {
    "q": "Temperature range of most airframe icing?",
-   "a": "0°C to -10°C."
+   "a": "0°C to -10°C.",
+   "ref": {
+    "sec": "Carb ice and airframe ice"
+   }
   },
   {
    "q": "Clear ice versus rime ice?",
-   "a": "Clear ice is from large drops, builds fast and is hard to see. Rime is milky and powdery on leading edges in stable cloud."
+   "a": "Clear ice is from large drops, builds fast and is hard to see. Rime is milky and powdery on leading edges in stable cloud.",
+   "ref": {
+    "sec": "Carb ice and airframe ice"
+   }
   },
   {
    "q": "Approach speed change with significant ice?",
-   "a": "Add 20% or more."
+   "a": "Add 20% or more.",
+   "ref": {
+    "sec": "If you pick up ice"
+   }
   },
   {
    "q": "Routine carb heat in cruise in icing conditions?",
-   "a": "About 15 seconds every 10 to 15 minutes."
+   "a": "About 15 seconds every 10 to 15 minutes.",
+   "ref": {
+    "sec": "Carb ice and airframe ice"
+   }
   }
  ],
  "quiz": [
@@ -165,7 +201,10 @@
     "BC"
    ],
    "a": 1,
-   "why": "Fog is visibility below 1,000 m. BR is mist, 1,000 to 5,000 m."
+   "why": "Fog is visibility below 1,000 m. BR is mist, 1,000 to 5,000 m.",
+   "ref": {
+    "sec": "Fog, mist and reporting"
+   }
   },
   {
    "q": "Which fluid is appropriate for de-icing a light aircraft?",
@@ -176,7 +215,10 @@
     "Washing-up liquid"
    ],
    "a": 2,
-   "why": "Type I fluid is used on light aircraft. Types II and IV do not shear off at low speeds."
+   "why": "Type I fluid is used on light aircraft. Types II and IV do not shear off at low speeds.",
+   "ref": {
+    "sec": "Frost, snow and de-icing"
+   }
   },
   {
    "q": "How much can light frost on the wing reduce lift?",
@@ -187,7 +229,10 @@
     "None"
    ],
    "a": 2,
-   "why": "Up to 30% lift loss and up to 40% more drag, so remove all frost."
+   "why": "Up to 30% lift loss and up to 40% more drag, so remove all frost.",
+   "ref": {
+    "sec": "Frost, snow and de-icing"
+   }
   },
   {
    "q": "A take-off from wet grass: which factor applies before the general safety factor?",
@@ -198,18 +243,24 @@
     "x2.0"
    ],
    "a": 1,
-   "why": "Wet grass is x1.3 for take-off, then x1.33 general."
+   "why": "Wet grass is x1.3 for take-off, then x1.33 general.",
+   "ref": {
+    "sec": "Surface performance factors"
+   }
   },
   {
    "q": "You encounter airframe ice. The best first option is usually to:",
    "o": [
-    "Climb at the best rate regardless of terrain",
-    "Slow down for better control",
     "Descend towards warmer air if terrain allows, keeping speed up",
-    "Switch off the pitot heater"
+    "Climb at the best rate towards colder air, whatever the terrain",
+    "Slow down to reduce the ice build-up and keep better control",
+    "Switch off the pitot heater to save electrical power for de-icing"
    ],
-   "a": 2,
-   "why": "Ice sits in bands. Descent is normally safer, and keep speed high because stall speed has risen."
+   "a": 0,
+   "why": "Ice sits in bands. Descent is normally safer, and keep speed high because stall speed has risen.",
+   "ref": {
+    "sec": "If you pick up ice"
+   }
   },
   {
    "q": "Which is the likely fog type on a clear, calm, cold winter night inland?",
@@ -220,18 +271,24 @@
     "Frontal fog"
    ],
    "a": 1,
-   "why": "Radiation fog forms as the ground cools under clear skies with light winds."
+   "why": "Radiation fog forms as the ground cools under clear skies with light winds.",
+   "ref": {
+    "sec": "Radiation fog and high pressure"
+   }
   },
   {
    "q": "The GRF runway condition code of 0 indicates:",
    "o": [
-    "Dry runway",
-    "Minimal braking action such as wet ice",
-    "Light frost",
-    "Runway closed for work"
+    "Minimal braking action, such as wet ice",
+    "Good braking action, such as a dry runway",
+    "Medium braking action, such as light frost",
+    "The runway is closed for maintenance work"
    ],
-   "a": 1,
-   "why": "0 is the worst rating, with minimal braking action."
+   "a": 0,
+   "why": "0 is the worst rating, with minimal braking action.",
+   "ref": {
+    "sec": "Fog, mist and reporting"
+   }
   }
  ]
 }

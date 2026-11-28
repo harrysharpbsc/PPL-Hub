@@ -191,179 +191,313 @@
  "cards": [
   {
    "q": "How many UK FIRs?",
-   "a": "Two: London and Scottish."
+   "a": "Two: London and Scottish.",
+   "ref": {
+    "sec": "Flight Information Regions"
+   }
   },
   {
    "q": "Vertical extent of the UK FIRs?",
-   "a": "Surface to FL245."
+   "a": "Surface to FL245.",
+   "ref": {
+    "sec": "Flight Information Regions"
+   }
   },
   {
    "q": "UK UIRs?",
-   "a": "FL245 to FL660."
+   "a": "FL245 to FL660.",
+   "ref": {
+    "sec": "Flight Information Regions"
+   }
   },
   {
    "q": "Which classes are controlled airspace?",
-   "a": "A, B, C, D and E."
+   "a": "A, B, C, D and E.",
+   "ref": {
+    "sec": "Controlled and uncontrolled airspace"
+   }
   },
   {
    "q": "Which classes are uncontrolled?",
-   "a": "F and G."
+   "a": "F and G.",
+   "ref": {
+    "sec": "Controlled and uncontrolled airspace"
+   }
   },
   {
    "q": "Which UK classes can VFR flights use in controlled airspace?",
-   "a": "Usually C, D and E (A is closed to VFR; B is not used)."
+   "a": "Usually C, D and E (A is closed to VFR; B is not used).",
+   "ref": {
+    "sec": "Controlled and uncontrolled airspace"
+   }
   },
   {
    "q": "Control Zone: lower limit?",
-   "a": "The surface."
+   "a": "The surface.",
+   "ref": {
+    "sec": "Control Zones, TMAs, CTAs and Airways"
+   }
   },
   {
    "q": "Control Area: lower limit?",
-   "a": "A specified base altitude or flight level."
+   "a": "A specified base altitude or flight level.",
+   "ref": {
+    "sec": "Control Zones, TMAs, CTAs and Airways"
+   }
   },
   {
    "q": "What is a TMA?",
-   "a": "A Control Area at the confluence of ATS routes near one or more major aerodromes."
+   "a": "A Control Area at the confluence of ATS routes near one or more major aerodromes.",
+   "ref": {
+    "sec": "Control Zones, TMAs, CTAs and Airways"
+   }
   },
   {
    "q": "The four UK TMAs?",
-   "a": "London, Manchester, Scottish, Belfast."
+   "a": "London, Manchester, Scottish, Belfast.",
+   "ref": {
+    "sec": "Control Zones, TMAs, CTAs and Airways"
+   }
   },
   {
    "q": "Airway width?",
-   "a": "5 nm each side of the centreline."
+   "a": "5 nm each side of the centreline.",
+   "ref": {
+    "sec": "Control Zones, TMAs, CTAs and Airways"
+   }
   },
   {
    "q": "Most UK CTRs are which class?",
-   "a": "Class D."
+   "a": "Class D.",
+   "ref": {
+    "sec": "Control Zones, TMAs, CTAs and Airways"
+   }
   },
   {
    "q": "1:500,000 chart shows controlled airspace up to?",
-   "a": "FL195."
+   "a": "FL195.",
+   "ref": {
+    "sec": "Controlled airspace on charts"
+   }
   },
   {
    "q": "1:250,000 chart shows controlled airspace with a base at or below?",
-   "a": "3,000 ft amsl."
+   "a": "3,000 ft amsl.",
+   "ref": {
+    "sec": "Controlled airspace on charts"
+   }
   },
   {
    "q": "SVFR flight visibility?",
-   "a": "At least 1,500 m."
+   "a": "At least 1,500 m.",
+   "ref": {
+    "sec": "Special VFR"
+   }
   },
   {
    "q": "SVFR speed limit?",
-   "a": "140 kt."
+   "a": "140 kt.",
+   "ref": {
+    "sec": "Special VFR"
+   }
   },
   {
    "q": "SVFR: no take-off or landing if ground visibility is below / ceiling below?",
-   "a": "1,500 m / 600 ft."
+   "a": "1,500 m / 600 ft.",
+   "ref": {
+    "sec": "Special VFR"
+   }
   },
   {
    "q": "Where does SVFR exist?",
-   "a": "Only in Control Zones."
+   "a": "Only in Control Zones.",
+   "ref": {
+    "sec": "Special VFR"
+   }
   },
   {
    "q": "SVFR: flight plan?",
-   "a": "Not required, but ATC approval is."
+   "a": "Not required, but ATC approval is.",
+   "ref": {
+    "sec": "Special VFR"
+   }
   },
   {
    "q": "Crossing an airway without an instrument rating?",
-   "a": "Only beneath its base (where the base is a FL), at right angles, in VMC."
+   "a": "Only beneath its base (where the base is a FL), at right angles, in VMC.",
+   "ref": {
+    "sec": "Crossing an airway"
+   }
   },
   {
    "q": "Airway crossing with an IR: how early to request clearance?",
-   "a": "At least 10 minutes before the crossing point."
+   "a": "At least 10 minutes before the crossing point.",
+   "ref": {
+    "sec": "Crossing an airway"
+   }
   },
   {
    "q": "Share of UK airspace that is Class G?",
-   "a": "About 50%."
+   "a": "About 50%.",
+   "ref": {
+    "sec": "Uncontrolled airspace: the Open-FIR"
+   }
   },
   {
    "q": "ATZ vertical extent?",
-   "a": "Surface to 2,000 ft aal."
+   "a": "Surface to 2,000 ft aal.",
+   "ref": {
+    "sec": "Aerodrome Traffic Zones (ATZ)"
+   }
   },
   {
    "q": "ATZ radius, longest runway 1,850 m or less?",
-   "a": "2 nm."
+   "a": "2 nm.",
+   "ref": {
+    "sec": "Aerodrome Traffic Zones (ATZ)"
+   }
   },
   {
    "q": "ATZ radius, longest runway over 1,850 m?",
-   "a": "2.5 nm."
+   "a": "2.5 nm.",
+   "ref": {
+    "sec": "Aerodrome Traffic Zones (ATZ)"
+   }
   },
   {
    "q": "ATZ centre?",
-   "a": "The mid-point of the longest runway."
+   "a": "The mid-point of the longest runway.",
+   "ref": {
+    "sec": "Aerodrome Traffic Zones (ATZ)"
+   }
   },
   {
    "q": "ATZ class?",
-   "a": "None of its own: it takes the class of the surrounding airspace."
+   "a": "None of its own: it takes the class of the surrounding airspace.",
+   "ref": {
+    "sec": "Aerodrome Traffic Zones (ATZ)"
+   }
   },
   {
    "q": "Radio report in an ATZ?",
-   "a": "Position and height, entering and leaving."
+   "a": "Position and height, entering and leaving.",
+   "ref": {
+    "sec": "Rule 11: flying in an ATZ",
+    "rule": "Rule 11"
+   }
   },
   {
    "q": "Rule 11 with no ATC or AFIS?",
-   "a": "Get enough information from the A/G station to fly safely."
+   "a": "Get enough information from the A/G station to fly safely.",
+   "ref": {
+    "sec": "Rule 11: flying in an ATZ",
+    "rule": "Rule 11"
+   }
   },
   {
    "q": "MATZ vertical extent and radius?",
-   "a": "Surface to 3,000 ft aal, 5 nm radius."
+   "a": "Surface to 3,000 ft aal, 5 nm radius.",
+   "ref": {
+    "sec": "Military Aerodrome Traffic Zones (MATZ)"
+   }
   },
   {
    "q": "MATZ stub dimensions?",
-   "a": "4 nm wide, 5 nm long, 1,000 to 3,000 ft aal."
+   "a": "4 nm wide, 5 nm long, 1,000 to 3,000 ft aal.",
+   "ref": {
+    "sec": "Military Aerodrome Traffic Zones (MATZ)"
+   }
   },
   {
    "q": "Is a MATZ regulated airspace?",
-   "a": "No, but the ATZ inside it is."
+   "a": "No, but the ATZ inside it is.",
+   "ref": {
+    "sec": "Military Aerodrome Traffic Zones (MATZ)"
+   }
   },
   {
    "q": "Class C in the UK?",
-   "a": "All airspace above FL195, plus certain CTAs."
+   "a": "All airspace above FL195, plus certain CTAs.",
+   "ref": {
+    "sec": "UK airspace classes"
+   }
   },
   {
    "q": "Solid red Danger Area outline?",
-   "a": "Active in published hours."
+   "a": "Active in published hours.",
+   "ref": {
+    "sec": "Prohibited, Restricted and Danger Areas"
+   }
   },
   {
    "q": "Pecked red Danger Area outline?",
-   "a": "Inactive unless notified by NOTAM."
+   "a": "Inactive unless notified by NOTAM.",
+   "ref": {
+    "sec": "Prohibited, Restricted and Danger Areas"
+   }
   },
   {
    "q": "D129/1.75: what does 1.75 mean?",
-   "a": "Upper limit 1,750 ft amsl."
+   "a": "Upper limit 1,750 ft amsl.",
+   "ref": {
+    "sec": "Prohibited, Restricted and Danger Areas"
+   }
   },
   {
    "q": "Asterisk before a Danger Area number?",
-   "a": "By-laws prohibit entry while active."
+   "a": "By-laws prohibit entry while active.",
+   "ref": {
+    "sec": "Prohibited, Restricted and Danger Areas"
+   }
   },
   {
    "q": "P611/2.2?",
-   "a": "Prohibited Area, surface to 2,200 ft."
+   "a": "Prohibited Area, surface to 2,200 ft.",
+   "ref": {
+    "sec": "Prohibited, Restricted and Danger Areas"
+   }
   },
   {
    "q": "Glider winch cable height?",
-   "a": "Up to 2,000 ft agl."
+   "a": "Up to 2,000 ft agl.",
+   "ref": {
+    "sec": "Other hazards"
+   }
   },
   {
    "q": "Free-fall parachuting: height and radius?",
-   "a": "Up to FL150, within 1.5 nm of the drop zone."
+   "a": "Up to FL150, within 1.5 nm of the drop zone.",
+   "ref": {
+    "sec": "Other hazards"
+   }
   },
   {
    "q": "Military low flying busiest band?",
-   "a": "250 to 500 ft agl."
+   "a": "250 to 500 ft agl.",
+   "ref": {
+    "sec": "Other hazards"
+   }
   },
   {
    "q": "Birds: minimum height over concentrations?",
-   "a": "1,500 ft agl (above the effective altitude over sanctuaries)."
+   "a": "1,500 ft agl (above the effective altitude over sanctuaries).",
+   "ref": {
+    "sec": "Other hazards"
+   }
   },
   {
    "q": "Structures listed as air navigation obstructions?",
-   "a": "100 m agl or more."
+   "a": "100 m agl or more.",
+   "ref": {
+    "sec": "Obstructions"
+   }
   },
   {
    "q": "Royal Flight temporary airspace?",
-   "a": "CAS-T, Class D, notified by NOTAM; enter only with a clearance."
+   "a": "CAS-T, Class D, notified by NOTAM; enter only with a clearance.",
+   "ref": {
+    "sec": "Royal Flights"
+   }
   }
  ],
  "quiz": [
@@ -371,12 +505,15 @@
    "q": "A Danger Area on the 1:500,000 chart has a pecked red outline. It is:",
    "o": [
     "Inactive unless notified by NOTAM",
-    "Active only in published hours",
-    "Always active",
-    "Inactive in daylight"
+    "Active only in its published hours",
+    "Always active, day and night",
+    "Inactive in daylight, active at night"
    ],
    "a": 0,
-   "why": "Pecked = inactive unless NOTAMed. A solid red outline is active in its published hours."
+   "why": "Pecked = inactive unless NOTAMed. A solid red outline is active in its published hours.",
+   "ref": {
+    "sec": "Prohibited, Restricted and Danger Areas"
+   }
   },
   {
    "q": "Controlled airspace from the surface to a specified upper limit is a:",
@@ -387,7 +524,10 @@
     "Airway"
    ],
    "a": 0,
-   "why": "Surface upwards is a CTR. A CTA (and an airway) starts at a base above the surface; an ATZ is not controlled airspace in itself."
+   "why": "Surface upwards is a CTR. A CTA (and an airway) starts at a base above the surface; an ATZ is not controlled airspace in itself.",
+   "ref": {
+    "sec": "Control Zones, TMAs, CTAs and Airways"
+   }
   },
   {
    "q": "A Terminal Control Area is:",
@@ -398,7 +538,10 @@
     "A Control Area for departing flights only"
    ],
    "a": 0,
-   "why": "It is a Control Area (it has a base), not a Control Zone. It serves both arrivals and departures."
+   "why": "It is a Control Area (it has a base), not a Control Zone. It serves both arrivals and departures.",
+   "ref": {
+    "sec": "Control Zones, TMAs, CTAs and Airways"
+   }
   },
   {
    "q": "\"P611/2.2\" on a chart is:",
@@ -409,7 +552,10 @@
     "A Prohibited Area, surface to 22,000 ft"
    ],
    "a": 0,
-   "why": "P is Prohibited; 2.2 is the upper limit in thousands of feet: 2,200 ft."
+   "why": "P is Prohibited; 2.2 is the upper limit in thousands of feet: 2,200 ft.",
+   "ref": {
+    "sec": "Prohibited, Restricted and Danger Areas"
+   }
   },
   {
    "q": "The dimensions of a MATZ stub are:",
@@ -420,7 +566,10 @@
     "1,000 to 2,000 ft aal, 5 nm wide, extending 4 nm"
    ],
    "a": 0,
-   "why": "Stubs: 4 nm wide, 5 nm long, from 1,000 to 3,000 ft aal. The traps swap the 4 and the 5."
+   "why": "Stubs: 4 nm wide, 5 nm long, from 1,000 to 3,000 ft aal. The traps swap the 4 and the 5.",
+   "ref": {
+    "sec": "Military Aerodrome Traffic Zones (MATZ)"
+   }
   },
   {
    "q": "An aerodrome's longest runway is 2,000 m. Its ATZ is:",
@@ -431,29 +580,39 @@
     "2.5 km radius, surface to 2,000 ft aal"
    ],
    "a": 0,
-   "why": "Over 1,850 m gives 2.5 nm (nautical miles, not km). 5 nm and 3,000 ft are MATZ figures."
+   "why": "Over 1,850 m gives 2.5 nm (nautical miles, not km). 5 nm and 3,000 ft are MATZ figures.",
+   "ref": {
+    "sec": "Aerodrome Traffic Zones (ATZ)"
+   }
   },
   {
    "q": "Flying in an ATZ with a radio, you must:",
    "o": [
     "Keep a continuous listening watch and report position and height entering and leaving",
-    "Keep a continuous watch and report position and heading entering and leaving",
-    "Report position, intentions and height entering and leaving",
-    "Report position and heading entering and leaving"
+    "Keep a continuous listening watch and report position and heading entering and leaving",
+    "Keep a continuous listening watch and report position and intentions entering and leaving",
+    "Report position and height entering and leaving, without a listening watch in between"
    ],
    "a": 0,
-   "why": "Position and height, plus a continuous watch. Heading and intentions are the distractors."
+   "why": "Position and height, plus a continuous watch. Heading and intentions are the distractors.",
+   "ref": {
+    "sec": "Rule 11: flying in an ATZ",
+    "rule": "Rule 11"
+   }
   },
   {
    "q": "A Special VFR flight is:",
    "o": [
     "A VFR flight cleared by ATC to operate in a Control Zone in conditions below VMC",
-    "A VFR flight cleared to operate in any controlled airspace below VMC",
-    "A VFR flight cleared to operate in a Control Area below VMC",
-    "A VFR flight cleared to operate below IMC"
+    "A VFR flight cleared by ATC to operate in any controlled airspace in conditions below VMC",
+    "A VFR flight cleared by ATC to operate in a Control Area in conditions below VMC",
+    "A VFR flight cleared by ATC to operate in a Control Zone in conditions below IMC"
    ],
    "a": 0,
-   "why": "SVFR exists only in Control Zones. 'Below IMC' is meaningless: SVFR is used below VMC."
+   "why": "SVFR exists only in Control Zones. 'Below IMC' is meaningless: SVFR is used below VMC.",
+   "ref": {
+    "sec": "Special VFR"
+   }
   },
   {
    "q": "Under SVFR, which minimum flight visibility applies?",
@@ -464,7 +623,10 @@
     "3,000 m"
    ],
    "a": 0,
-   "why": "SVFR needs a flight visibility of at least 1,500 m, clear of cloud and in sight of the surface."
+   "why": "SVFR needs a flight visibility of at least 1,500 m, clear of cloud and in sight of the surface.",
+   "ref": {
+    "sec": "Special VFR"
+   }
   },
   {
    "q": "You may not take off under SVFR if the reported conditions at the aerodrome are:",
@@ -475,7 +637,10 @@
     "Flight visibility below 1,500 m or cloud ceiling below 1,500 ft"
    ],
    "a": 0,
-   "why": "The limits are ground visibility 1,500 m and ceiling 600 ft."
+   "why": "The limits are ground visibility 1,500 m and ceiling 600 ft.",
+   "ref": {
+    "sec": "Special VFR"
+   }
   },
   {
    "q": "Which statement about SVFR is correct?",
@@ -486,7 +651,10 @@
     "It can be used in Class G outside a Control Zone"
    ],
    "a": 0,
-   "why": "SVFR needs ATC approval but no flight plan. It exists only in Control Zones and never in Class A outside a CTR."
+   "why": "SVFR needs ATC approval but no flight plan. It exists only in Control Zones and never in Class A outside a CTR.",
+   "ref": {
+    "sec": "Special VFR"
+   }
   },
   {
    "q": "The speed limit under SVFR is:",
@@ -497,29 +665,38 @@
     "100 kt"
    ],
    "a": 0,
-   "why": "140 kt. 250 kt is the speed limit below FL100 for VFR in some airspace classes."
+   "why": "140 kt. 250 kt is the speed limit below FL100 for VFR in some airspace classes.",
+   "ref": {
+    "sec": "Special VFR"
+   }
   },
   {
    "q": "Without an instrument rating, how may you cross an airway whose base is FL75?",
    "o": [
     "Beneath it, at right angles, not above FL75, in VMC",
-    "Through it at FL80 in VMC",
-    "Through it with a crossing clearance",
-    "Not at all"
+    "Through it at FL80 in VMC, without a clearance",
+    "Through it in VMC, with a crossing clearance",
+    "Not at all without an instrument rating, even below it"
    ],
    "a": 0,
-   "why": "You may pass under the base at right angles but must not enter. Entering needs an IR and a crossing clearance."
+   "why": "You may pass under the base at right angles but must not enter. Entering needs an IR and a crossing clearance.",
+   "ref": {
+    "sec": "Crossing an airway"
+   }
   },
   {
    "q": "With an instrument rating, a crossing clearance for an airway should be requested at least:",
    "o": [
     "10 minutes before the crossing point",
-    "5 minutes before",
-    "30 minutes before",
-    "Before departure only"
+    "5 minutes before the crossing point",
+    "30 minutes before the crossing point",
+    "Before departure, when filing the flight plan"
    ],
    "a": 0,
-   "why": "At least 10 minutes before, and the clearance must be received before crossing."
+   "why": "At least 10 minutes before, and the clearance must be received before crossing.",
+   "ref": {
+    "sec": "Crossing an airway"
+   }
   },
   {
    "q": "Which UK airspace class is NOT available to VFR flights?",
@@ -530,7 +707,10 @@
     "Class E"
    ],
    "a": 0,
-   "why": "Class A is IFR only. VFR may use C and D with a clearance, and E."
+   "why": "Class A is IFR only. VFR may use C and D with a clearance, and E.",
+   "ref": {
+    "sec": "Controlled and uncontrolled airspace"
+   }
   },
   {
    "q": "All UK airspace above FL195 is:",
@@ -541,7 +721,10 @@
     "Class G"
    ],
    "a": 0,
-   "why": "Above FL195 the London and Scottish FIR airspace is Class C."
+   "why": "Above FL195 the London and Scottish FIR airspace is Class C.",
+   "ref": {
+    "sec": "UK airspace classes"
+   }
   },
   {
    "q": "Most UK Control Zones, including Heathrow's, are:",
@@ -552,73 +735,96 @@
     "Class E"
    ],
    "a": 0,
-   "why": "Most UK CTRs are Class D."
+   "why": "Most UK CTRs are Class D.",
+   "ref": {
+    "sec": "UK airspace classes"
+   }
   },
   {
    "q": "What class is an ATZ?",
    "o": [
-    "It takes the class of the airspace it sits in",
-    "Always Class D",
-    "Always Class G",
-    "Class F"
+    "It has the class of the airspace around it",
+    "It is always Class D, whatever surrounds it",
+    "It is always Class G, wherever it is",
+    "It is always Class F advisory airspace"
    ],
    "a": 0,
-   "why": "An ATZ has no class of its own."
+   "why": "An ATZ has no class of its own.",
+   "ref": {
+    "sec": "Aerodrome Traffic Zones (ATZ)"
+   }
   },
   {
    "q": "Where is the centre of an ATZ?",
    "o": [
     "The mid-point of the longest runway",
-    "The aerodrome reference point",
-    "The control tower",
-    "The threshold of the main runway"
+    "The notified aerodrome reference point",
+    "The aerodrome control tower or radio room",
+    "The threshold of the main instrument runway"
    ],
    "a": 0,
-   "why": "The circle is centred on the notified mid-point of the longest runway."
+   "why": "The circle is centred on the notified mid-point of the longest runway.",
+   "ref": {
+    "sec": "Aerodrome Traffic Zones (ATZ)"
+   }
   },
   {
    "q": "At an aerodrome with no ATC or AFIS, Rule 11 lets you fly in the ATZ if you have:",
    "o": [
     "Enough information from the A/G radio station to fly safely",
-    "Permission from the A/G operator",
-    "Permission from London Information",
-    "A clearance from the nearest ATC unit"
+    "Permission from the A/G radio operator to fly within the ATZ",
+    "Permission from London Information to enter the ATZ",
+    "A clearance from the nearest ATC unit to enter the ATZ"
    ],
    "a": 0,
-   "why": "A/G stations give information, not permission; ATC gives permission; AFIS gives information."
+   "why": "A/G stations give information, not permission; ATC gives permission; AFIS gives information.",
+   "ref": {
+    "sec": "Rule 11: flying in an ATZ",
+    "rule": "Rule 11"
+   }
   },
   {
    "q": "Where an ATZ lies within Class D airspace:",
    "o": [
     "The stricter Class D rules apply",
     "Only the ATZ rules apply",
-    "Neither applies to VFR",
-    "The pilot chooses"
+    "Neither applies to VFR flights",
+    "The pilot chooses which rules apply"
    ],
    "a": 0,
-   "why": "The more stringent rules take precedence."
+   "why": "The more stringent rules take precedence.",
+   "ref": {
+    "sec": "Rule 11: flying in an ATZ",
+    "rule": "Rule 11"
+   }
   },
   {
    "q": "A Danger Area is labelled D129/1.75. It lies:",
    "o": [
     "Between 51°N and 52°N, from the surface to 1,750 ft amsl",
-    "Between 52°N and 53°N, up to 1,750 ft agl",
-    "Between 51°N and 52°N, up to 17,500 ft",
-    "At 12.9°E, up to 1,750 ft"
+    "Between 52°N and 53°N, from the surface to 1,750 ft agl",
+    "Between 51°N and 52°N, from the surface to 17,500 ft amsl",
+    "At 12.9°E, from the surface to 1,750 ft amsl or FL17"
    ],
    "a": 0,
-   "why": "The first digit is the latitude band (1 = 51 to 52°N); after the slash the top is in thousands of ft amsl."
+   "why": "The first digit is the latitude band (1 = 51 to 52°N); after the slash the top is in thousands of ft amsl.",
+   "ref": {
+    "sec": "Prohibited, Restricted and Danger Areas"
+   }
   },
   {
    "q": "An asterisk before a Danger Area number means:",
    "o": [
     "By-laws prohibit entry while it is active",
-    "It is never active",
-    "A crossing service is available",
-    "It contains pilotless aircraft"
+    "It is never active and can be ignored",
+    "A crossing service is available on request",
+    "It contains unmanned or pilotless aircraft"
    ],
    "a": 0,
-   "why": "By-law areas may not be entered during their activity."
+   "why": "By-law areas may not be entered during their activity.",
+   "ref": {
+    "sec": "Prohibited, Restricted and Danger Areas"
+   }
   },
   {
    "q": "The 1:250,000 chart shows all controlled airspace with a base:",
@@ -629,18 +835,24 @@
     "Below FL100"
    ],
    "a": 0,
-   "why": "The half-million shows up to FL195; the quarter-million shows everything with a base at or below 3,000 ft amsl."
+   "why": "The half-million shows up to FL195; the quarter-million shows everything with a base at or below 3,000 ft amsl.",
+   "ref": {
+    "sec": "Controlled airspace on charts"
+   }
   },
   {
    "q": "Free-fall parachuting can be expected up to:",
    "o": [
     "FL150, within 1.5 nm of the drop zone",
-    "FL100, within 1 nm",
-    "5,000 ft, within 2 nm",
-    "FL150, within 5 nm"
+    "FL100, within 1 nm of the drop zone",
+    "5,000 ft, within 2 nm of the drop zone",
+    "FL150, within 5 nm of the drop zone"
    ],
    "a": 0,
-   "why": "Up to FL150 within a 1.5 nm radius of the DZ."
+   "why": "Up to FL150 within a 1.5 nm radius of the DZ.",
+   "ref": {
+    "sec": "Other hazards"
+   }
   },
   {
    "q": "Winch-launched gliders may carry the cable up to about:",
@@ -651,7 +863,10 @@
     "500 ft agl"
    ],
    "a": 0,
-   "why": "2,000 ft agl, and higher at a few sites."
+   "why": "2,000 ft agl, and higher at a few sites.",
+   "ref": {
+    "sec": "Other hazards"
+   }
   },
   {
    "q": "Military low flying is concentrated between:",
@@ -662,7 +877,10 @@
     "Surface and 250 ft agl"
    ],
    "a": 0,
-   "why": "Low flying happens up to 2,000 ft agl but is busiest at 250 to 500 ft agl."
+   "why": "Low flying happens up to 2,000 ft agl but is busiest at 250 to 500 ft agl.",
+   "ref": {
+    "sec": "Other hazards"
+   }
   },
   {
    "q": "Over areas where birds concentrate (not sanctuaries) you should avoid flying below:",
@@ -673,18 +891,24 @@
     "3,000 ft agl"
    ],
    "a": 0,
-   "why": "Below 1,500 ft agl; over sanctuaries, keep above the listed effective altitude."
+   "why": "Below 1,500 ft agl; over sanctuaries, keep above the listed effective altitude.",
+   "ref": {
+    "sec": "Other hazards"
+   }
   },
   {
    "q": "Is a MATZ regulated airspace?",
    "o": [
     "No, but the ATZ within it must always be observed",
-    "Yes, always",
-    "Only when the aerodrome is open",
-    "Only for military aircraft"
+    "Yes, always: entry needs a clearance at all times",
+    "Only when the military aerodrome is open for flying",
+    "Only for military aircraft; civil aircraft may ignore it"
    ],
    "a": 0,
-   "why": "Entering under MATZ control is strongly advised, not required, but the ATZ inside applies (usually H24)."
+   "why": "Entering under MATZ control is strongly advised, not required, but the ATZ inside applies (usually H24).",
+   "ref": {
+    "sec": "Military Aerodrome Traffic Zones (MATZ)"
+   }
   },
   {
    "q": "The upper limit of the UK FIRs is:",
@@ -695,18 +919,24 @@
     "FL100"
    ],
    "a": 0,
-   "why": "FIRs run from the surface to FL245; the UIRs from FL245 to FL660."
+   "why": "FIRs run from the surface to FL245; the UIRs from FL245 to FL660.",
+   "ref": {
+    "sec": "Flight Information Regions"
+   }
   },
   {
    "q": "CAS-T for a Royal Flight is:",
    "o": [
     "Temporary Class D airspace; enter only with an ATC clearance",
-    "Temporary Class A airspace closed to all",
-    "Advisory airspace you may enter freely",
-    "A Prohibited Area"
+    "Temporary Class A airspace, closed to all VFR flights",
+    "Advisory airspace you may enter freely, keeping a good lookout",
+    "A temporary Prohibited Area that no aircraft may enter"
    ],
    "a": 0,
-   "why": "CAS-T is Class D and notified by NOTAM; you need a clearance whatever the weather."
+   "why": "CAS-T is Class D and notified by NOTAM; you need a clearance whatever the weather.",
+   "ref": {
+    "sec": "Royal Flights"
+   }
   }
  ]
 }

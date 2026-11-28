@@ -110,127 +110,227 @@
  "cards": [
   {
    "q": "What is the maximum rate of speech on the radio?",
-   "a": "No more than 100 words per minute."
+   "a": "No more than 100 words per minute.",
+   "ref": {
+    "sec": "Transmitting technique"
+   }
   },
   {
    "q": "How long should you wait before making a second call?",
-   "a": "At least 10 seconds."
+   "a": "At least 10 seconds.",
+   "ref": {
+    "sec": "Transmitting technique"
+   }
   },
   {
    "q": "How is the digit 9 said on the radio?",
-   "a": "NINER."
+   "a": "NINER.",
+   "ref": {
+    "sec": "Letters, numbers and time"
+   }
   },
   {
    "q": "How are the digits 3, 4 and 5 said?",
-   "a": "TREE, FOWER, FIFE."
+   "a": "TREE, FOWER, FIFE.",
+   "ref": {
+    "sec": "Letters, numbers and time"
+   }
   },
   {
    "q": "How is a decimal point said?",
-   "a": "DAYSEEMAL."
+   "a": "DAYSEEMAL.",
+   "ref": {
+    "sec": "Letters, numbers and time"
+   }
   },
   {
    "q": "How is 2,500 ft said?",
-   "a": "TOO TOUSAND FIFE HUNDRED."
+   "a": "TOO TOUSAND FIFE HUNDRED.",
+   "ref": {
+    "sec": "Letters, numbers and time"
+   }
   },
   {
    "q": "How is QNH 1000 said?",
-   "a": "WUN TOUSAND."
+   "a": "WUN TOUSAND.",
+   "ref": {
+    "sec": "Letters, numbers and time"
+   }
   },
   {
    "q": "How is frequency 118.000 said?",
-   "a": "WUN WUN AIT DAYSEEMAL ZERO. If the last two digits are zero, only the first four digits are given."
+   "a": "WUN WUN AIT DAYSEEMAL ZERO. If the last two digits are zero, only the first four digits are given.",
+   "ref": {
+    "sec": "Letters, numbers and time"
+   }
   },
   {
    "q": "Which time standard is used on the radio?",
-   "a": "UTC."
+   "a": "UTC.",
+   "ref": {
+    "sec": "Letters, numbers and time"
+   }
   },
   {
    "q": "What does ROGER mean?",
-   "a": "I have received your last transmission. It does not mean you will comply."
+   "a": "I have received your last transmission. It does not mean you will comply.",
+   "ref": {
+    "sec": "Standard words and phrases"
+   }
   },
   {
    "q": "What does WILCO mean?",
-   "a": "I understand your message and will comply with it."
+   "a": "I understand your message and will comply with it.",
+   "ref": {
+    "sec": "Standard words and phrases"
+   }
   },
   {
    "q": "What does AFFIRM mean?",
-   "a": "Yes."
+   "a": "Yes.",
+   "ref": {
+    "sec": "Standard words and phrases"
+   }
   },
   {
    "q": "What does NEGATIVE mean?",
-   "a": "No, permission not granted, or that is not correct."
+   "a": "No, permission not granted, or that is not correct.",
+   "ref": {
+    "sec": "Standard words and phrases"
+   }
   },
   {
    "q": "What does UNABLE mean?",
-   "a": "I cannot comply with your request, instruction or clearance. It is normally followed by a reason."
+   "a": "I cannot comply with your request, instruction or clearance. It is normally followed by a reason.",
+   "ref": {
+    "sec": "Standard words and phrases"
+   }
   },
   {
    "q": "What does STANDBY mean?",
-   "a": "Wait and I will call you. It is not an approval or a denial."
+   "a": "Wait and I will call you. It is not an approval or a denial.",
+   "ref": {
+    "sec": "Standard words and phrases"
+   }
   },
   {
    "q": "What is the difference between CONTACT and FREECALL?",
-   "a": "CONTACT: your details have been passed. FREECALL: they have not, so give full details."
+   "a": "CONTACT: your details have been passed. FREECALL: they have not, so give full details.",
+   "ref": {
+    "sec": "Standard words and phrases"
+   }
   },
   {
    "q": "When may you shorten G-ABCD to G-CD?",
-   "a": "Only after the ground station has abbreviated it first."
+   "a": "Only after the ground station has abbreviated it first.",
+   "ref": {
+    "sec": "Callsigns and stations"
+   }
   },
   {
    "q": "Which services do not use the word CLEARED?",
-   "a": "Air/ground radio operators and flight information service officers (FISOs)."
+   "a": "Air/ground radio operators and flight information service officers (FISOs).",
+   "ref": {
+    "sec": "Clearances and readbacks"
+   }
   },
   {
    "q": "Which clearances must be read back in full?",
-   "a": "Taxi, level, heading, speed, route and approach clearances, runway in use, runway entry, landing, take-off, crossing and hold-short clearances, SSR codes, altimeter settings, frequency changes, type of service and transition levels."
+   "a": "Taxi, level, heading, speed, route and approach clearances, and runway entry, landing, take-off, crossing and hold-short clearances.",
+   "ref": {
+    "sec": "Clearances and readbacks"
+   }
+  },
+  {
+   "q": "Besides clearances, what else must be read back in full?",
+   "a": "Runway in use, SSR codes, altimeter settings, frequency changes, type of service and transition levels.",
+   "ref": {
+    "sec": "Clearances and readbacks"
+   }
   },
   {
    "q": "How do you end a readback?",
-   "a": "With your callsign."
+   "a": "With your callsign.",
+   "ref": {
+    "sec": "Clearances and readbacks"
+   }
   },
   {
    "q": "What does a controller say if your readback is wrong?",
-   "a": "NEGATIVE, followed by the correct version."
+   "a": "NEGATIVE, followed by the correct version.",
+   "ref": {
+    "sec": "Clearances and readbacks"
+   }
   },
   {
    "q": "Which word is used in a departure clearance that is not a take-off clearance?",
-   "a": "DEPARTURE. TAKE-OFF is used only when cleared for take-off or when that clearance is cancelled."
+   "a": "DEPARTURE. TAKE-OFF is used only when cleared for take-off or when that clearance is cancelled.",
+   "ref": {
+    "sec": "Clearances and readbacks"
+   }
   },
   {
    "q": "At what distance is a 'long final' report made?",
-   "a": "When turning onto final more than 4 NM from touchdown."
+   "a": "When turning onto final more than 4 NM from touchdown.",
+   "ref": {
+    "sec": "Aerodrome calls"
+   }
   },
   {
    "q": "Is CONTINUE APPROACH an invitation to land?",
-   "a": "No. You must wait for a landing clearance or go around."
+   "a": "No. You must wait for a landing clearance or go around.",
+   "ref": {
+    "sec": "Aerodrome calls"
+   }
   },
   {
    "q": "What does the radio check format contain?",
-   "a": "Station callsign, your callsign, RADIO CHECK, and the frequency."
+   "a": "Station callsign, your callsign, RADIO CHECK, and the frequency.",
+   "ref": {
+    "sec": "Emergencies and failures"
+   }
   },
   {
    "q": "What does readability 3 mean?",
-   "a": "Readable but with difficulty."
+   "a": "Readable but with difficulty.",
+   "ref": {
+    "sec": "Emergencies and failures"
+   }
   },
   {
    "q": "Which prefix declares distress?",
-   "a": "MAYDAY, MAYDAY, MAYDAY."
+   "a": "MAYDAY, MAYDAY, MAYDAY.",
+   "ref": {
+    "sec": "Emergencies and failures"
+   }
   },
   {
    "q": "Which prefix declares urgency?",
-   "a": "PAN PAN, PAN PAN, PAN PAN."
+   "a": "PAN PAN, PAN PAN, PAN PAN.",
+   "ref": {
+    "sec": "Emergencies and failures"
+   }
   },
   {
    "q": "Which frequency is used for emergency calls and who do you address?",
-   "a": "121.5 MHz, addressed to London Centre."
+   "a": "121.5 MHz, addressed to London Centre.",
+   "ref": {
+    "sec": "Emergencies and failures"
+   }
   },
   {
    "q": "Which transponder code means emergency?",
-   "a": "7700. Radio failure is 7600 and hijack is 7500."
+   "a": "7700. Radio failure is 7600 and hijack is 7500.",
+   "ref": {
+    "sec": "Emergencies and failures"
+   }
   },
   {
    "q": "What do you say if you cannot make contact and must transmit blind?",
-   "a": "TRANSMITTING BLIND, then the message twice. If your receiver has failed: TRANSMITTING BLIND DUE TO RECEIVER FAILURE."
+   "a": "TRANSMITTING BLIND, then the message twice. If your receiver has failed: TRANSMITTING BLIND DUE TO RECEIVER FAILURE.",
+   "ref": {
+    "sec": "Emergencies and failures"
+   }
   }
  ],
  "quiz": [
@@ -243,7 +343,10 @@
     "Nein"
    ],
    "a": 1,
-   "why": "NINER, so it cannot be confused with the German word for no."
+   "why": "NINER, so it cannot be confused with the German word for no.",
+   "ref": {
+    "sec": "Letters, numbers and time"
+   }
   },
   {
    "q": "How is QNH 1000 hPa said?",
@@ -254,7 +357,10 @@
     "One thousand hectopascals only"
    ],
    "a": 1,
-   "why": "Whole thousands are said as the digit followed by TOUSAND, so WUN TOUSAND."
+   "why": "Whole thousands are said as the digit followed by TOUSAND, so WUN TOUSAND.",
+   "ref": {
+    "sec": "Letters, numbers and time"
+   }
   },
   {
    "q": "How is an altitude of 2,500 ft said?",
@@ -265,7 +371,10 @@
     "Too tousand five zero zero"
    ],
    "a": 2,
-   "why": "Altitudes in whole hundreds and thousands use TOUSAND and HUNDRED: TOO TOUSAND FIFE HUNDRED."
+   "why": "Altitudes in whole hundreds and thousands use TOUSAND and HUNDRED: TOO TOUSAND FIFE HUNDRED.",
+   "ref": {
+    "sec": "Letters, numbers and time"
+   }
   },
   {
    "q": "Which word means you have received the message and will comply?",
@@ -276,7 +385,10 @@
     "Acknowledge"
    ],
    "a": 1,
-   "why": "WILCO means understood and will comply. ROGER only means received."
+   "why": "WILCO means understood and will comply. ROGER only means received.",
+   "ref": {
+    "sec": "Standard words and phrases"
+   }
   },
   {
    "q": "Which word do you use for yes?",
@@ -287,7 +399,10 @@
     "Roger"
    ],
    "a": 1,
-   "why": "AFFIRM is the standard word for yes. NEGATIVE means no."
+   "why": "AFFIRM is the standard word for yes. NEGATIVE means no.",
+   "ref": {
+    "sec": "Standard words and phrases"
+   }
   },
   {
    "q": "What is the maximum rate of speech?",
@@ -298,7 +413,10 @@
     "200 words per minute"
    ],
    "a": 1,
-   "why": "No more than 100 words per minute, slower when the message will be written down."
+   "why": "No more than 100 words per minute, slower when the message will be written down.",
+   "ref": {
+    "sec": "Transmitting technique"
+   }
   },
   {
    "q": "How long should you wait before a second call?",
@@ -309,7 +427,10 @@
     "30 seconds"
    ],
    "a": 2,
-   "why": "At least 10 seconds, to give the receiving station time to get ready to reply."
+   "why": "At least 10 seconds, to give the receiving station time to get ready to reply.",
+   "ref": {
+    "sec": "Transmitting technique"
+   }
   },
   {
    "q": "Which of these must be read back in full?",
@@ -320,18 +441,24 @@
     "Surface wind"
    ],
    "a": 1,
-   "why": "Runway in use is on the mandatory readback list."
+   "why": "Runway in use is on the mandatory readback list.",
+   "ref": {
+    "sec": "Clearances and readbacks"
+   }
   },
   {
    "q": "A controller says NEGATIVE after your readback. What does it mean?",
    "o": [
     "Your readback was incorrect and the correct version follows",
-    "You are refused take-off",
-    "Your radio is unreadable",
-    "You must change frequency"
+    "Your take-off is refused and you must hold your position",
+    "Your transmission was unreadable and must be repeated",
+    "You must change to the frequency that follows"
    ],
    "a": 0,
-   "why": "NEGATIVE followed by the correct version means your readback was wrong. Read the corrected version back."
+   "why": "NEGATIVE followed by the correct version means your readback was wrong. Read the corrected version back.",
+   "ref": {
+    "sec": "Clearances and readbacks"
+   }
   },
   {
    "q": "How may G-ABCD be shortened?",
@@ -342,7 +469,10 @@
     "G-ACD"
    ],
    "a": 1,
-   "why": "First character and last two: G-CD, and only once the ground station has abbreviated it first."
+   "why": "First character and last two: G-CD, and only once the ground station has abbreviated it first.",
+   "ref": {
+    "sec": "Callsigns and stations"
+   }
   },
   {
    "q": "Which word replaces TAKE-OFF in a departure instruction that is not a take-off clearance?",
@@ -350,10 +480,13 @@
     "DEPARTURE",
     "LAUNCH",
     "LINE UP",
-    "ROLL"
+    "AIRBORNE"
    ],
    "a": 0,
-   "why": "TAKE-OFF is used only when cleared for take-off or when it is cancelled. Otherwise DEPARTURE."
+   "why": "TAKE-OFF is used only when cleared for take-off or when it is cancelled. Otherwise DEPARTURE.",
+   "ref": {
+    "sec": "Clearances and readbacks"
+   }
   },
   {
    "q": "Which call prefix declares distress?",
@@ -364,7 +497,10 @@
     "URGENT"
    ],
    "a": 1,
-   "why": "MAYDAY, MAYDAY, MAYDAY declares distress. PAN PAN declares urgency."
+   "why": "MAYDAY, MAYDAY, MAYDAY declares distress. PAN PAN declares urgency.",
+   "ref": {
+    "sec": "Emergencies and failures"
+   }
   },
   {
    "q": "Which frequency is used for emergency calls when not talking to a unit?",
@@ -375,7 +511,10 @@
     "130.0"
    ],
    "a": 1,
-   "why": "121.5 MHz, the international aeronautical emergency frequency."
+   "why": "121.5 MHz, the international aeronautical emergency frequency.",
+   "ref": {
+    "sec": "Emergencies and failures"
+   }
   },
   {
    "q": "Which transponder code indicates an emergency?",
@@ -386,51 +525,66 @@
     "7700"
    ],
    "a": 3,
-   "why": "7700 is emergency. 7600 is radio failure and 7500 is hijack."
+   "why": "7700 is emergency. 7600 is radio failure and 7500 is hijack.",
+   "ref": {
+    "sec": "Emergencies and failures"
+   }
   },
   {
    "q": "Which callsign suffix is used for a flight information service?",
    "o": [
-    "TOWER",
-    "RADIO",
-    "INFORMATION",
-    "CONTROL"
+    "Larkfield INFORMATION",
+    "Larkfield RADIO",
+    "Larkfield DEPARTURE",
+    "Larkfield APPROACH"
    ],
-   "a": 2,
-   "why": "INFORMATION is flight information. RADIO is air/ground communication service."
+   "a": 0,
+   "why": "INFORMATION is flight information. RADIO is air/ground communication service.",
+   "ref": {
+    "sec": "Callsigns and stations"
+   }
   },
   {
    "q": "A radio check reply says READABILITY 3. What does it mean?",
    "o": [
-    "Perfectly readable",
-    "Readable",
     "Readable but with difficulty",
-    "Unreadable"
+    "Readable now and then only",
+    "Perfectly readable throughout",
+    "Readable, with no difficulty"
    ],
-   "a": 2,
-   "why": "3 is readable but with difficulty. 5 is perfectly readable and 1 is unreadable."
+   "a": 0,
+   "why": "3 is readable but with difficulty. 5 is perfectly readable and 1 is unreadable.",
+   "ref": {
+    "sec": "Emergencies and failures"
+   }
   },
   {
    "q": "What do you say if you suspect your receiver has failed?",
    "o": [
-    "Mayday receiver",
     "Transmitting blind due to receiver failure, then the message twice",
-    "Say again all stations",
-    "Radio check"
+    "Mayday, receiver failure, then the message once on 121.5 MHz",
+    "Say again all stations, then the message once with your position",
+    "Radio check, then the message twice on the same frequency"
    ],
-   "a": 1,
-   "why": "Transmit your reports twice, preceded by TRANSMITTING BLIND DUE TO RECEIVER FAILURE."
+   "a": 0,
+   "why": "Transmit your reports twice, preceded by TRANSMITTING BLIND DUE TO RECEIVER FAILURE.",
+   "ref": {
+    "sec": "Emergencies and failures"
+   }
   },
   {
    "q": "Is CONTINUE APPROACH an invitation to land?",
    "o": [
-    "Yes",
-    "Only in daylight",
     "No, you need a landing clearance or must go around",
-    "Only at an uncontrolled aerodrome"
+    "Yes, if the runway is clear when you reach it",
+    "Only in daylight, when the runway is in sight",
+    "Only at an aerodrome without an ATC unit"
    ],
-   "a": 2,
-   "why": "CONTINUE APPROACH is not an invitation to land."
+   "a": 0,
+   "why": "CONTINUE APPROACH is not an invitation to land.",
+   "ref": {
+    "sec": "Aerodrome calls"
+   }
   }
  ]
 }

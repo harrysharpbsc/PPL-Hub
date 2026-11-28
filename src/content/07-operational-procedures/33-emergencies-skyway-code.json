@@ -78,55 +78,94 @@
  "cards": [
   {
    "q": "What frequency do you use if not talking to an ATSU in an emergency?",
-   "a": "121.5 MHz."
+   "a": "121.5 MHz.",
+   "ref": {
+    "sec": "Key principles"
+   }
   },
   {
    "q": "What squawk shows an emergency?",
-   "a": "7700."
+   "a": "7700.",
+   "ref": {
+    "sec": "Key principles"
+   }
   },
   {
    "q": "What does 'Mayday out' mean?",
-   "a": "No further reply is needed."
+   "a": "No further reply is needed.",
+   "ref": {
+    "sec": "Key principles"
+   }
   },
   {
    "q": "What is D&D?",
-   "a": "The Distress and Diversion Cell at London Area Control Centre."
+   "a": "The Distress and Diversion Cell at London Area Control Centre.",
+   "ref": {
+    "sec": "Distress and Diversion Cell (D&D)"
+   }
   },
   {
    "q": "When is D&D available?",
-   "a": "24 hours a day."
+   "a": "24 hours a day.",
+   "ref": {
+    "sec": "Distress and Diversion Cell (D&D)"
+   }
   },
   {
    "q": "Squawk if lost?",
-   "a": "0030."
+   "a": "0030.",
+   "ref": {
+    "sec": "Lost, comms and electrical failure"
+   }
   },
   {
    "q": "Squawk for radio failure?",
-   "a": "7600."
+   "a": "7600.",
+   "ref": {
+    "sec": "Lost, comms and electrical failure"
+   }
   },
   {
    "q": "How long might a battery last after alternator failure?",
-   "a": "Perhaps 20 minutes."
+   "a": "Perhaps 20 minutes.",
+   "ref": {
+    "sec": "Lost, comms and electrical failure"
+   }
   },
   {
    "q": "What to do after engine failure just after take-off?",
-   "a": "Land ahead rather than turn back."
+   "a": "Land ahead rather than turn back.",
+   "ref": {
+    "sec": "Engine failure and field selection"
+   }
   },
   {
    "q": "Best field surface?",
-   "a": "Grass, better than ploughed fields or crops."
+   "a": "Grass, better than ploughed fields or crops.",
+   "ref": {
+    "sec": "Engine failure and field selection"
+   }
   },
   {
    "q": "What is a constant-aspect approach?",
-   "a": "Keep the visual angle to the landing spot constant by adjusting the turn."
+   "a": "Keep the visual angle to the landing spot constant by adjusting the turn.",
+   "ref": {
+    "sec": "Engine failure and field selection"
+   }
   },
   {
    "q": "Maximum circuit breaker resets for a suspected fire risk?",
-   "a": "Never reset more than once."
+   "a": "Never reset more than once.",
+   "ref": {
+    "sec": "Fire and ditching"
+   }
   },
   {
    "q": "Immersion survival time in winter without a suit?",
-   "a": "Unlikely more than an hour."
+   "a": "Unlikely more than an hour.",
+   "ref": {
+    "sec": "Fire and ditching"
+   }
   }
  ],
  "quiz": [
@@ -139,18 +178,24 @@
     "135.48"
    ],
    "a": 1,
-   "why": "121.5 MHz is the emergency frequency monitored by D&D."
+   "why": "121.5 MHz is the emergency frequency monitored by D&D.",
+   "ref": {
+    "sec": "Key principles"
+   }
   },
   {
    "q": "In the call order, after the station you give:",
    "o": [
-    "Intentions",
     "Callsign, then aircraft type",
-    "Position",
-    "Fuel"
+    "Intentions, then position",
+    "Position, then altitude",
+    "Nature of the emergency"
    ],
-   "a": 1,
-   "why": "Station, callsign, type, nature, intentions, position, altitude, heading, other information."
+   "a": 0,
+   "why": "Station, callsign, type, nature, intentions, position, altitude, heading, other information.",
+   "ref": {
+    "sec": "Mayday and Pan call format"
+   }
   },
   {
    "q": "After engine failure just after take-off you should:",
@@ -161,7 +206,10 @@
     "Stretch the glide"
    ],
    "a": 1,
-   "why": "Landing ahead is safer than attempting a turn back."
+   "why": "Landing ahead is safer than attempting a turn back.",
+   "ref": {
+    "sec": "Engine failure and field selection"
+   }
   },
   {
    "q": "After alternator failure the battery may give about:",
@@ -172,18 +220,24 @@
     "Unlimited power"
    ],
    "a": 1,
-   "why": "Reduce loads to extend it."
+   "why": "Reduce loads to extend it.",
+   "ref": {
+    "sec": "Lost, comms and electrical failure"
+   }
   },
   {
    "q": "Radio failure: before concluding you have a failure you should check:",
    "o": [
-    "Nothing",
     "Volume, squelch, frequency and audio selector panel",
-    "Only the squawk",
-    "Fuel"
+    "Nothing: declare the failure and squawk 7600 at once",
+    "Only the squawk code and the transponder mode",
+    "Fuel quantity, mixture and the carburettor heat"
    ],
-   "a": 1,
-   "why": "Many apparent failures are caused by incorrect settings."
+   "a": 0,
+   "why": "Many apparent failures are caused by incorrect settings.",
+   "ref": {
+    "sec": "Lost, comms and electrical failure"
+   }
   },
   {
    "q": "Which is a good forced-landing field surface?",
@@ -194,7 +248,10 @@
     "Steep slope"
    ],
    "a": 2,
-   "why": "Grass is one of the better surfaces."
+   "why": "Grass is one of the better surfaces.",
+   "ref": {
+    "sec": "Engine failure and field selection"
+   }
   }
  ]
 }

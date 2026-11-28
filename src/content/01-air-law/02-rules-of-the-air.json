@@ -204,211 +204,382 @@
  "cards": [
   {
    "q": "Which regulation introduced SERA, and when?",
-   "a": "Regulation (EU) No 923/2012 of 26 September 2012, as amended."
+   "a": "Regulation (EU) No 923/2012 of 26 September 2012, as amended.",
+   "ref": {
+    "sec": "SERA and the UK rules of the air"
+   }
   },
   {
    "q": "What happened to EASA rules in the UK on 1 January 2021?",
-   "a": "They passed into UK law as retained EU law, now called assimilated law."
+   "a": "They passed into UK law as retained EU law, now called assimilated law.",
+   "ref": {
+    "sec": "SERA and the UK rules of the air"
+   }
   },
   {
    "q": "Which ICAO Annex sets the international rules of the air?",
-   "a": "Annex 2."
+   "a": "Annex 2.",
+   "ref": {
+    "sec": "SERA and the UK rules of the air"
+   }
   },
   {
    "q": "Where are the UK-assimilated rules of the air found?",
-   "a": "Under Article 249 of the ANO, in a separate Statutory Instrument usually bound with the ANO as CAP 393."
+   "a": "Under Article 249 of the ANO, in a separate Statutory Instrument usually bound with the ANO as CAP 393.",
+   "ref": {
+    "sec": "SERA and the UK rules of the air"
+   }
   },
   {
    "q": "Where do you check that a permission or exemption is still valid?",
-   "a": "The CAA website, ORS4 (Official Record Series 4)."
+   "a": "The CAA website, ORS4 (Official Record Series 4).",
+   "ref": {
+    "sec": "SERA and the UK rules of the air"
+   }
   },
   {
    "q": "Which aircraft do the UK rules of the air apply to?",
-   "a": "All aircraft in the UK, and all UK-registered aircraft wherever they are."
+   "a": "All aircraft in the UK, and all UK-registered aircraft wherever they are.",
+   "ref": {
+    "sec": "Scope and departures from the rules"
+   }
   },
   {
    "q": "When may you depart from the rules of the air?",
-   "a": "As far as necessary to avoid immediate danger, or to comply with the law of the country you are in."
+   "a": "As far as necessary to avoid immediate danger, or to comply with the law of the country you are in.",
+   "ref": {
+    "sec": "Scope and departures from the rules"
+   }
   },
   {
    "q": "How soon must a safety departure from the rules be reported?",
    "a": "In writing to the competent authority within 10 days.",
-   "m": "Ten days, in writing."
+   "m": "Ten days, in writing.",
+   "ref": {
+    "sec": "Scope and departures from the rules"
+   }
   },
   {
    "q": "When does a collision risk exist?",
-   "a": "Another aircraft is at the same level or approaching, its range is decreasing and its relative bearing stays constant."
+   "a": "Another aircraft is at the same level or approaching, its range is decreasing and its relative bearing stays constant.",
+   "ref": {
+    "sec": "Collision avoidance (SERA.3201)",
+    "rule": "SERA.3201"
+   }
   },
   {
    "q": "Who must avoid collisions, whatever ATC has cleared?",
-   "a": "The commander (pilot in command)."
+   "a": "The commander (pilot in command).",
+   "ref": {
+    "sec": "Collision avoidance (SERA.3201)",
+    "rule": "SERA.3201"
+   }
   },
   {
    "q": "What should an aircraft with right of way do?",
-   "a": "Maintain its heading and speed."
+   "a": "Maintain its heading and speed.",
+   "ref": {
+    "sec": "Collision avoidance (SERA.3201)",
+    "rule": "SERA.3201"
+   }
   },
   {
    "q": "How are a glider and its tug treated?",
-   "a": "As one aircraft under the command of the tug. Aeroplanes and helicopters give way to aircraft towing gliders."
+   "a": "As one aircraft under the command of the tug. Aeroplanes and helicopters give way to aircraft towing gliders.",
+   "ref": {
+    "sec": "Collision avoidance (SERA.3201)",
+    "rule": "SERA.3201"
+   }
   },
   {
    "q": "Head-on with a risk of collision: what does each aircraft do?",
    "a": "Turn right.",
-   "m": "Everyone turns right in the air."
+   "m": "Everyone turns right in the air.",
+   "ref": {
+    "sec": "Right of way (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   },
   {
    "q": "Overtaking: who has right of way, and what does the overtaker do?",
-   "a": "The aircraft being overtaken. The overtaker keeps clear by turning right."
+   "a": "The aircraft being overtaken. The overtaker keeps clear by turning right.",
+   "ref": {
+    "sec": "Right of way (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   },
   {
    "q": "What counts as an overtaking situation?",
-   "a": "Approaching from within 70° of the other aircraft's centreline."
+   "a": "Approaching from within 70° of the other aircraft's centreline.",
+   "ref": {
+    "sec": "Right of way (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   },
   {
    "q": "Converging: who gives way, by category?",
-   "a": "Power-driven heavier-than-air aircraft give way to airships, sailplanes and balloons; airships to sailplanes and balloons; sailplanes to balloons."
+   "a": "Power-driven heavier-than-air aircraft give way to airships, sailplanes and balloons; airships to sailplanes and balloons; sailplanes to balloons.",
+   "ref": {
+    "sec": "Right of way (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   },
   {
    "q": "Converging in the same category at about the same altitude: who gives way?",
    "a": "The aircraft that has the other on its right.",
-   "m": "Give way to the right."
+   "m": "Give way to the right.",
+   "ref": {
+    "sec": "Right of way (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   },
   {
    "q": "Near an aerodrome, which way do you turn?",
-   "a": "Left, unless ground signals direct otherwise."
+   "a": "Left, unless ground signals direct otherwise.",
+   "ref": {
+    "sec": "Flights near an aerodrome (SERA.3225)",
+    "rule": "SERA.3225"
+   }
   },
   {
    "q": "On a straight-in approach, where are 'long final' and 'final' reported?",
    "a": "Long final at 8 nm, final at 4 nm from the runway.",
-   "m": "8 then 4: long final is twice final."
+   "m": "8 then 4: long final is twice final.",
+   "ref": {
+    "sec": "Flights near an aerodrome (SERA.3225)",
+    "rule": "SERA.3225"
+   }
   },
   {
    "q": "Two aircraft approach to land: who has priority?",
-   "a": "The lower aircraft, but it must not cut in front of or overtake one on final. An aircraft on final has right of way over others."
+   "a": "The lower aircraft, but it must not cut in front of or overtake one on final. An aircraft on final has right of way over others.",
+   "ref": {
+    "sec": "Order of landing and take-off (Rules 9 and 10)"
+   }
   },
   {
    "q": "What does ATC's 'land after' mean?",
    "a": "It is not a clearance to land. You decide whether separation is sufficient. It is never given at night.",
-   "m": "Land after is a heads-up, never a clearance."
+   "m": "Land after is a heads-up, never a clearance.",
+   "ref": {
+    "sec": "Order of landing and take-off (Rules 9 and 10)"
+   }
   },
   {
    "q": "Is the right-hand traffic rule still a legal requirement?",
-   "a": "No. Keeping a line feature on your left is only strongly recommended by the CAA."
+   "a": "No. Keeping a line feature on your left is only strongly recommended by the CAA.",
+   "ref": {
+    "sec": "Radio in the ATZ and the right-hand traffic rule"
+   }
   },
   {
    "q": "Which colour navigation light is on which wing?",
    "a": "Green on the right (starboard) wing, red on the left (port) wing, each showing 110° from dead ahead.",
-   "m": "Port wine is red: port is left, so red is on the left wing."
+   "m": "Port wine is red: port is left, so red is on the left wing.",
+   "ref": {
+    "sec": "Lights on aircraft (Rule 14, SERA.3215)",
+    "rule": "Rule 14"
+   }
   },
   {
    "q": "How much of the sky does the white tail light cover?",
-   "a": "70° either side of dead astern."
+   "a": "70° either side of dead astern.",
+   "ref": {
+    "sec": "Lights on aircraft (Rule 14, SERA.3215)",
+    "rule": "Rule 14"
+   }
   },
   {
    "q": "Red to red, green to green: safe or unsafe?",
    "a": "Safe. Red to green and green to red are unsafe.",
-   "m": "Red to red, green to green: safe to go on. Mixed colours means take care."
+   "m": "Red to red, green to green: safe to go on. Mixed colours means take care.",
+   "ref": {
+    "sec": "Lights on aircraft (Rule 14, SERA.3215)",
+    "rule": "Rule 14"
+   }
   },
   {
    "q": "You see both red and green lights on another aircraft. What does it mean?",
-   "a": "It is heading straight at you. A white light means it is flying away."
+   "a": "It is heading straight at you. A white light means it is flying away.",
+   "ref": {
+    "sec": "Lights on aircraft (Rule 14, SERA.3215)",
+    "rule": "Rule 14"
+   }
   },
   {
    "q": "What must you do if a required light fails in flight?",
-   "a": "Land as soon as it is safe, unless ATC authorises continuing."
+   "a": "Land as soon as it is safe, unless ATC authorises continuing.",
+   "ref": {
+    "sec": "Lights on aircraft (Rule 14, SERA.3215)",
+    "rule": "Rule 14"
+   }
   },
   {
    "q": "When does night start and end in the UK?",
    "a": "From 30 minutes after sunset to 30 minutes before sunrise.",
-   "m": "Sunset plus 30, sunrise minus 30."
+   "m": "Sunset plus 30, sunrise minus 30.",
+   "ref": {
+    "sec": "Lights on aircraft (Rule 14, SERA.3215)",
+    "rule": "Rule 14"
+   }
   },
   {
    "q": "Minimum height over a congested area?",
-   "a": "1,000 ft above the highest fixed object within 600 m, and able to land clear in an emergency. Landing clear is the pilot's responsibility."
+   "a": "1,000 ft above the highest fixed object within 600 m, and able to land clear in an emergency. Landing clear is the pilot's responsibility.",
+   "ref": {
+    "sec": "Low flying prohibitions (SERA.3105 and .5005(f))",
+    "rule": "SERA.3105"
+   }
   },
   {
    "q": "UK 500 ft rule by day?",
-   "a": "Not closer than 500 ft to any person, vehicle, vessel or structure."
+   "a": "Not closer than 500 ft to any person, vehicle, vessel or structure.",
+   "ref": {
+    "sec": "Low flying prohibitions (SERA.3105 and .5005(f))",
+    "rule": "SERA.3105"
+   }
   },
   {
    "q": "EASA 500 ft rule?",
-   "a": "Not below 500 ft above the ground or water, or 500 ft above the highest obstacle within 150 m."
+   "a": "Not below 500 ft above the ground or water, or 500 ft above the highest obstacle within 150 m.",
+   "ref": {
+    "sec": "Low flying prohibitions (SERA.3105 and .5005(f))",
+    "rule": "SERA.3105"
+   }
   },
   {
    "q": "How close may you take off or land to an open-air assembly of more than 1,000 persons?",
-   "a": "Not within 1,000 m, except at an aerodrome using CAA procedures or at an approved site with the organiser's written permission."
+   "a": "Not within 1,000 m, except at an aerodrome using CAA procedures or at an approved site with the organiser's written permission.",
+   "ref": {
+    "sec": "Open-air assemblies"
+   }
   },
   {
    "q": "Do the low flying prohibitions apply to captive balloons and kites?",
-   "a": "No."
+   "a": "No.",
+   "ref": {
+    "sec": "Exceptions to the low flying prohibitions"
+   }
   },
   {
    "q": "How close may a manoeuvring helicopter under the exemption get to people and property outside the site?",
-   "a": "Not closer than 60 m."
+   "a": "Not closer than 60 m.",
+   "ref": {
+    "sec": "Exceptions to the low flying prohibitions"
+   }
   },
   {
    "q": "Which low flying exemption covers crop spraying and similar work?",
-   "a": "Dropping articles with CAA permission, or under a CAA aerial application certificate (exempt from the 500 ft rule)."
+   "a": "Dropping articles with CAA permission, or under a CAA aerial application certificate (exempt from the 500 ft rule).",
+   "ref": {
+    "sec": "Other rules: hazards, aerobatics and instrument practice"
+   }
   },
   {
    "q": "Which hazardous conditions must you report to ATC, and when?",
-   "a": "As soon as possible: things like severe windshear or turbulence, rapidly worsening visibility, or an unserviceable runway."
+   "a": "As soon as possible: things like severe windshear or turbulence, rapidly worsening visibility, or an unserviceable runway.",
+   "ref": {
+    "sec": "Other rules: hazards, aerobatics and instrument practice"
+   }
   },
   {
    "q": "Where may you not fly aerobatics?",
-   "a": "Over a congested area. In controlled airspace only with the controlling authority's approval."
+   "a": "Over a congested area. In controlled airspace only with the controlling authority's approval.",
+   "ref": {
+    "sec": "Other rules: hazards, aerobatics and instrument practice"
+   }
   },
   {
    "q": "What do you need for simulated instrument flight?",
-   "a": "Working dual controls and a qualified safety pilot in the other control seat (not a student pilot), plus an observer if needed for lookout."
+   "a": "Working dual controls and a qualified safety pilot in the other control seat (not a student pilot), plus an observer if needed for lookout.",
+   "ref": {
+    "sec": "Other rules: hazards, aerobatics and instrument practice"
+   }
   },
   {
    "q": "Practising instrument approaches in VMC: what two things are required?",
-   "a": "Inform ATC and carry a competent observer."
+   "a": "Inform ATC and carry a competent observer.",
+   "ref": {
+    "sec": "Other rules: hazards, aerobatics and instrument practice"
+   }
   },
   {
    "q": "Where are the interception procedures published?",
-   "a": "AIP ENR 1.12."
+   "a": "AIP ENR 1.12.",
+   "ref": {
+    "sec": "Interception: what to do (AIP ENR 1.12)"
+   }
   },
   {
    "q": "Intercepted: which frequency and which squawk?",
-   "a": "Call on 121.50 MHz with your callsign and nature of flight; squawk 7700 unless the ATS unit says otherwise."
+   "a": "Call on 121.50 MHz with your callsign and nature of flight; squawk 7700 unless the ATS unit says otherwise.",
+   "ref": {
+    "sec": "Interception: what to do (AIP ENR 1.12)"
+   }
   },
   {
    "q": "ATC and the interceptor give conflicting instructions. What do you do?",
-   "a": "Ask for clarification at once, but obey the interceptor's visual instructions."
+   "a": "Ask for clarification at once, but obey the interceptor's visual instructions.",
+   "ref": {
+    "sec": "Interception: what to do (AIP ENR 1.12)"
+   }
   },
   {
    "q": "Interceptor rocks its wings from ahead, then turns slowly left. Meaning and your reply?",
-   "a": "\"Follow me.\" Rock your wings and follow immediately (at night, also flash navigation lights at irregular intervals)."
+   "a": "\"Follow me.\" Rock your wings and follow immediately (at night, also flash navigation lights at irregular intervals).",
+   "ref": {
+    "sec": "Interception signals"
+   }
   },
   {
    "q": "Interceptor makes an abrupt climbing turn of 90° or more without crossing your path. Meaning?",
-   "a": "\"You may proceed.\" Reply by rocking your wings."
+   "a": "\"You may proceed.\" Reply by rocking your wings.",
+   "ref": {
+    "sec": "Interception signals"
+   }
   },
   {
    "q": "Interceptor lowers its gear and overflies the runway. Meaning and reply?",
-   "a": "\"Land at this aerodrome.\" Lower gear if possible, follow, and land if it looks safe."
+   "a": "\"Land at this aerodrome.\" Lower gear if possible, follow, and land if it looks safe.",
+   "ref": {
+    "sec": "Interception signals"
+   }
   },
   {
    "q": "How do you signal \"this aerodrome is inadequate\"?",
-   "a": "Raise gear (if possible) while passing over the runway between 1,000 and 2,000 ft above aerodrome level, and keep circling."
+   "a": "Raise gear (if possible) while passing over the runway between 1,000 and 2,000 ft above aerodrome level, and keep circling.",
+   "ref": {
+    "sec": "Interception signals"
+   }
   },
   {
    "q": "Lights switched on and off at regular vs irregular intervals?",
-   "a": "Regular = I cannot comply. Irregular = I am in distress."
+   "a": "Regular = I cannot comply. Irregular = I am in distress.",
+   "ref": {
+    "sec": "Interception signals"
+   }
   },
   {
    "q": "What do WILCO, CAN NOT and AM LOST mean in interception phrases?",
-   "a": "Will comply; unable to comply; position unknown."
+   "a": "Will comply; unable to comply; position unknown.",
+   "ref": {
+    "sec": "Interception radio phrases and ground signals"
+   }
   },
   {
    "q": "Red and green stars fired from the ground every 10 seconds?",
-   "a": "You are in, or about to enter, a restricted, prohibited or danger area. Take remedial action."
+   "a": "You are in, or about to enter, a restricted, prohibited or danger area. Take remedial action.",
+   "ref": {
+    "sec": "Interception radio phrases and ground signals"
+   }
   },
   {
    "q": "Night, steady relative bearing of 330°, you see the other aircraft's green light. What now?",
-   "a": "Collision risk (green to red). It has you on its right so it must give way: you hold heading and speed."
+   "a": "Collision risk (green to red). It has you on its right so it must give way: you hold heading and speed.",
+   "ref": {
+    "sec": "Lights on aircraft (Rule 14, SERA.3215)",
+    "rule": "Rule 14"
+   }
   }
  ],
  "quiz": [
@@ -421,7 +592,10 @@
     "Annex 15"
    ],
    "a": 1,
-   "why": "Annex 2. Annex 1 covers licensing, Annex 11 air traffic services and Annex 15 aeronautical information services."
+   "why": "Annex 2. Annex 1 covers licensing, Annex 11 air traffic services and Annex 15 aeronautical information services.",
+   "ref": {
+    "sec": "SERA and the UK rules of the air"
+   }
   },
   {
    "q": "Which CAA publication usually binds the ANO with the assimilated rules of the air?",
@@ -432,7 +606,10 @@
     "CAP 1535"
    ],
    "a": 0,
-   "why": "CAP 393. CAP 413 is the radiotelephony guide, CAP 637 the visual aids handbook and CAP 1535 the Skyway Code."
+   "why": "CAP 393. CAP 413 is the radiotelephony guide, CAP 637 the visual aids handbook and CAP 1535 the Skyway Code.",
+   "ref": {
+    "sec": "SERA and the UK rules of the air"
+   }
   },
   {
    "q": "Within how many days must a safety departure from the rules be reported in writing?",
@@ -443,40 +620,55 @@
     "30 days"
    ],
    "a": 2,
-   "why": "Ten days, to the competent authority."
+   "why": "Ten days, to the competent authority.",
+   "ref": {
+    "sec": "Scope and departures from the rules"
+   }
   },
   {
    "q": "Two aircraft approach head-on with a danger of collision. What does each do?",
    "o": [
-    "Climb",
-    "Turn left",
-    "Turn right",
-    "Descend"
+    "Each turns right",
+    "Each turns left",
+    "The higher one climbs",
+    "The lower one descends"
    ],
-   "a": 2,
-   "why": "Each turns right."
+   "a": 0,
+   "why": "Each turns right.",
+   "ref": {
+    "sec": "Right of way (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   },
   {
    "q": "An aircraft is being overtaken. Who has right of way?",
    "o": [
-    "The overtaking aircraft",
     "The aircraft being overtaken",
-    "The higher aircraft",
-    "The faster aircraft"
+    "The overtaking aircraft",
+    "Whichever aircraft is higher",
+    "Whichever aircraft is faster"
    ],
-   "a": 1,
-   "why": "The aircraft being overtaken. The overtaker keeps clear by turning right."
+   "a": 0,
+   "why": "The aircraft being overtaken. The overtaker keeps clear by turning right.",
+   "ref": {
+    "sec": "Right of way (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   },
   {
    "q": "Two aeroplanes converge at about the same altitude. Who gives way?",
    "o": [
-    "The one with the other on its left",
     "The one with the other on its right",
-    "The lower one",
-    "The slower one"
+    "The one with the other on its left side",
+    "The lower of the two aeroplanes",
+    "The slower of the two aeroplanes"
    ],
-   "a": 1,
-   "why": "The aircraft that has the other on its right gives way."
+   "a": 0,
+   "why": "The aircraft that has the other on its right gives way.",
+   "ref": {
+    "sec": "Right of way (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   },
   {
    "q": "A power-driven aeroplane converges with a balloon. Who gives way?",
@@ -487,7 +679,11 @@
     "Whichever is slower"
    ],
    "a": 1,
-   "why": "Power-driven heavier-than-air aircraft give way to airships, sailplanes and balloons."
+   "why": "Power-driven heavier-than-air aircraft give way to airships, sailplanes and balloons.",
+   "ref": {
+    "sec": "Right of way (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   },
   {
    "q": "Within what angle of the other aircraft's centreline is an approach treated as overtaking?",
@@ -498,7 +694,11 @@
     "140°"
    ],
    "a": 1,
-   "why": "Within 70° of the overtaken aircraft's centreline."
+   "why": "Within 70° of the overtaken aircraft's centreline.",
+   "ref": {
+    "sec": "Right of way (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   },
   {
    "q": "Which way do you turn near an aerodrome, unless told otherwise?",
@@ -509,7 +709,11 @@
     "Either way"
    ],
    "a": 1,
-   "why": "Left, unless ground signals direct otherwise."
+   "why": "Left, unless ground signals direct otherwise.",
+   "ref": {
+    "sec": "Flights near an aerodrome (SERA.3225)",
+    "rule": "SERA.3225"
+   }
   },
   {
    "q": "Where is 'long final' reported on a straight-in approach?",
@@ -520,18 +724,25 @@
     "10 nm"
    ],
    "a": 2,
-   "why": "Long final at 8 nm, final at 4 nm."
+   "why": "Long final at 8 nm, final at 4 nm.",
+   "ref": {
+    "sec": "Flights near an aerodrome (SERA.3225)",
+    "rule": "SERA.3225"
+   }
   },
   {
    "q": "ATC says 'land after'. What does this mean?",
    "o": [
-    "You are cleared to land",
     "You decide whether separation is sufficient",
-    "You must go around",
-    "You must hold"
+    "You are cleared to land after the aircraft ahead",
+    "You must go around and rejoin the circuit",
+    "You must hold at your position until cleared"
    ],
-   "a": 1,
-   "why": "It is not a landing clearance. The decision is yours, based on whether you judge separation sufficient."
+   "a": 0,
+   "why": "It is not a landing clearance. The decision is yours, based on whether you judge separation sufficient.",
+   "ref": {
+    "sec": "Order of landing and take-off (Rules 9 and 10)"
+   }
   },
   {
    "q": "Which main navigation light is on the left (port) wing?",
@@ -542,7 +753,11 @@
     "Flashing red"
    ],
    "a": 1,
-   "why": "Red on the left, green on the right."
+   "why": "Red on the left, green on the right.",
+   "ref": {
+    "sec": "Lights on aircraft (Rule 14, SERA.3215)",
+    "rule": "Rule 14"
+   }
   },
   {
    "q": "Through what angle does the white tail light show?",
@@ -553,29 +768,41 @@
     "180° to the rear"
    ],
    "a": 0,
-   "why": "70° either side of dead astern. The red and green lights show 110° from dead ahead."
+   "why": "70° either side of dead astern. The red and green lights show 110° from dead ahead.",
+   "ref": {
+    "sec": "Lights on aircraft (Rule 14, SERA.3215)",
+    "rule": "Rule 14"
+   }
   },
   {
    "q": "You see an approaching aircraft's red light out to your left. What does this suggest?",
    "o": [
-    "A collision risk",
     "Your paths will not cross",
-    "It is flying away",
-    "It is a glider"
+    "There is a risk of collision",
+    "It is flying directly away from you",
+    "It is a glider showing a steady red"
    ],
-   "a": 1,
-   "why": "Red to red is safe. Red to green is unsafe."
+   "a": 0,
+   "why": "Red to red is safe. Red to green is unsafe.",
+   "ref": {
+    "sec": "Lights on aircraft (Rule 14, SERA.3215)",
+    "rule": "Rule 14"
+   }
   },
   {
    "q": "A required light fails in flight and cannot be repaired. What must you do?",
    "o": [
-    "Continue to your destination",
     "Land as soon as it is safe, unless ATC authorises continuing",
-    "Climb above cloud",
-    "Switch on the landing light"
+    "Continue to your planned destination, then report the failure",
+    "Climb above cloud and continue with the anti-collision light on",
+    "Switch on the landing light and continue to your destination"
    ],
-   "a": 1,
-   "why": "Rule 15: land as soon as it is safe unless ATC authorises you to continue."
+   "a": 0,
+   "why": "Rule 15: land as soon as it is safe unless ATC authorises you to continue.",
+   "ref": {
+    "sec": "Lights on aircraft (Rule 14, SERA.3215)",
+    "rule": "Rule 14"
+   }
   },
   {
    "q": "When does night begin in the UK?",
@@ -586,18 +813,26 @@
     "At the end of civil twilight"
    ],
    "a": 1,
-   "why": "Night runs from 30 minutes after sunset to 30 minutes before sunrise."
+   "why": "Night runs from 30 minutes after sunset to 30 minutes before sunrise.",
+   "ref": {
+    "sec": "Lights on aircraft (Rule 14, SERA.3215)",
+    "rule": "Rule 14"
+   }
   },
   {
    "q": "What is the minimum height over a congested area?",
    "o": [
-    "500 ft above the highest obstacle within 150 m",
     "1,000 ft above the highest fixed object within 600 m",
-    "1,500 ft above the ground",
-    "500 ft above the ground"
+    "500 ft above the highest fixed object within 150 m",
+    "1,500 ft above the highest fixed object within 600 m",
+    "1,000 ft above the highest fixed object within 150 m"
    ],
-   "a": 1,
-   "why": "1,000 ft above the highest fixed object within 600 m, and you must be able to land clear in an emergency."
+   "a": 0,
+   "why": "1,000 ft above the highest fixed object within 600 m, and you must be able to land clear in an emergency.",
+   "ref": {
+    "sec": "Low flying prohibitions (SERA.3105 and .5005(f))",
+    "rule": "SERA.3105"
+   }
   },
   {
    "q": "Who is responsible for being able to land clear over a congested area?",
@@ -608,18 +843,26 @@
     "The CAA"
    ],
    "a": 1,
-   "why": "The pilot, not ATC."
+   "why": "The pilot, not ATC.",
+   "ref": {
+    "sec": "Low flying prohibitions (SERA.3105 and .5005(f))",
+    "rule": "SERA.3105"
+   }
   },
   {
    "q": "What is the UK daytime 500 ft rule?",
    "o": [
-    "Not below 500 ft above the ground",
     "Not closer than 500 ft to any person, vehicle, vessel or structure",
-    "Not below 500 ft over water",
-    "Not within 500 ft of an aerodrome"
+    "Not lower than 500 ft above the ground or water, wherever you are flying",
+    "Not lower than 500 ft above the highest obstacle within 150 m",
+    "Not closer than 500 ft to any aerodrome boundary or runway"
    ],
-   "a": 1,
-   "why": "By day, not closer than 500 ft to any person, vehicle, vessel or structure."
+   "a": 0,
+   "why": "By day, not closer than 500 ft to any person, vehicle, vessel or structure.",
+   "ref": {
+    "sec": "Low flying prohibitions (SERA.3105 and .5005(f))",
+    "rule": "SERA.3105"
+   }
   },
   {
    "q": "How close may you take off or land to an open-air assembly of more than 1,000 persons, outside an approved procedure?",
@@ -630,18 +873,24 @@
     "Not within 2,000 m"
    ],
    "a": 2,
-   "why": "Not within 1,000 m, except at an aerodrome using CAA procedures or an approved site with written permission."
+   "why": "Not within 1,000 m, except at an aerodrome using CAA procedures or an approved site with written permission.",
+   "ref": {
+    "sec": "Open-air assemblies"
+   }
   },
   {
    "q": "Which of these is exempt from the low flying prohibitions?",
    "o": [
     "A captive balloon or kite",
-    "Any glider",
-    "Any helicopter",
-    "Any aircraft over water"
+    "Any glider, whether or not hill-soaring",
+    "Any helicopter over a congested area",
+    "Any aircraft flying over open water"
    ],
    "a": 0,
-   "why": "No low flying prohibitions apply to captive balloons and kites. Gliders are exempt only when hill-soaring, and only from the 500 ft rule."
+   "why": "No low flying prohibitions apply to captive balloons and kites. Gliders are exempt only when hill-soaring, and only from the 500 ft rule.",
+   "ref": {
+    "sec": "Exceptions to the low flying prohibitions"
+   }
   },
   {
    "q": "How close may a manoeuvring helicopter under the exemption get to people outside the site?",
@@ -652,7 +901,10 @@
     "500 ft"
    ],
    "a": 1,
-   "why": "Not closer than 60 m to persons, vessels, vehicles or structures outside the aerodrome or site."
+   "why": "Not closer than 60 m to persons, vessels, vehicles or structures outside the aerodrome or site.",
+   "ref": {
+    "sec": "Exceptions to the low flying prohibitions"
+   }
   },
   {
    "q": "Who is ultimately responsible for taking every possible measure to avoid a collision?",
@@ -663,7 +915,11 @@
     "The air/ground radio operator"
    ],
    "a": 1,
-   "why": "The commander (pilot in command), whatever clearance ATC has given. ATC and A/G can help but the duty stays with the commander."
+   "why": "The commander (pilot in command), whatever clearance ATC has given. ATC and A/G can help but the duty stays with the commander.",
+   "ref": {
+    "sec": "Collision avoidance (SERA.3201)",
+    "rule": "SERA.3201"
+   }
   },
   {
    "q": "When converging, what must the aircraft with right of way do?",
@@ -674,7 +930,11 @@
     "Maintain heading, speed and height"
    ],
    "a": 2,
-   "why": "SERA says heading (course) and speed. Height is not mentioned, which is the usual trap."
+   "why": "SERA says heading (course) and speed. Height is not mentioned, which is the usual trap.",
+   "ref": {
+    "sec": "Collision avoidance (SERA.3201)",
+    "rule": "SERA.3201"
+   }
   },
   {
    "q": "What is the minimum height over a congested area of a city, town or settlement?",
@@ -685,18 +945,25 @@
     "150 m (500 ft) above the highest obstacle within 150 m"
    ],
    "a": 1,
-   "why": "1,000 ft (300 m) above the highest obstacle within 600 m, and high enough to land clear. 500 ft within 150 m is the rule elsewhere."
+   "why": "1,000 ft (300 m) above the highest obstacle within 600 m, and high enough to land clear. 500 ft within 150 m is the rule elsewhere.",
+   "ref": {
+    "sec": "Low flying prohibitions (SERA.3105 and .5005(f))",
+    "rule": "SERA.3105"
+   }
   },
   {
    "q": "Two aircraft approach to land at the same place. Neither has an emergency and ATC has set no order. Who has priority?",
    "o": [
-    "The faster aircraft",
-    "The aircraft closest to the threshold",
-    "The lower aircraft",
-    "The lower aircraft, but it must not cut in front of or overtake one on final"
+    "The lower aircraft, but it must not cut in front of or overtake one on final",
+    "The faster aircraft, but it must not cut in front of or overtake one on final",
+    "The aircraft closest to the threshold, whatever its height or speed",
+    "The lower aircraft, provided it is already established on the final approach"
    ],
-   "a": 3,
-   "why": "The lower aircraft, with the caveat that it must not cut in front of or overtake an aircraft on final. The plain 'lower aircraft' option misses that caveat."
+   "a": 0,
+   "why": "The lower aircraft, with the caveat that it must not cut in front of or overtake an aircraft on final. The plain 'lower aircraft' option misses that caveat.",
+   "ref": {
+    "sec": "Order of landing and take-off (Rules 9 and 10)"
+   }
   },
   {
    "q": "Which right-of-way order for converging aircraft is correct?",
@@ -707,40 +974,56 @@
     "Airships give way to power-driven aircraft, sailplanes and balloons"
    ],
    "a": 2,
-   "why": "The least manoeuvrable has priority: power-driven aircraft give way to airships, sailplanes and balloons; airships to sailplanes and balloons; sailplanes to balloons."
+   "why": "The least manoeuvrable has priority: power-driven aircraft give way to airships, sailplanes and balloons; airships to sailplanes and balloons; sailplanes to balloons.",
+   "ref": {
+    "sec": "Right of way (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   },
   {
    "q": "At night you see another aircraft's green light on a steady relative bearing of 330°, at a similar level. What should you do?",
    "o": [
     "Collision risk: hold your heading and speed",
-    "No risk of collision",
-    "Collision risk: climb or descend",
-    "Collision risk: turn right"
+    "No risk of collision: green to red is safe",
+    "Collision risk: climb or descend to avoid it",
+    "Collision risk: you give way by turning right"
    ],
    "a": 0,
-   "why": "330° is at your 11 o'clock. Its green light faces your red wing (green to red = unsafe) and the bearing is steady, so there is a risk. It has you on its right, so it gives way: you keep heading and speed."
+   "why": "330° is at your 11 o'clock. Its green light faces your red wing (green to red = unsafe) and the bearing is steady, so there is a risk. It has you on its right, so it gives way: you hold heading and speed. 'You give way by turning right' would be right only if it were on your right.",
+   "ref": {
+    "sec": "Lights on aircraft (Rule 14, SERA.3215)",
+    "rule": "Rule 14"
+   }
   },
   {
    "q": "At night you see another aircraft's red light on a steady relative bearing of 030°, at a similar level. What should you do?",
    "o": [
-    "No action: red means it is moving away",
-    "Collision risk: hold heading and speed",
     "Collision risk: you give way, normally by turning right to pass behind it",
-    "Collision risk: turn left"
+    "Collision risk: hold your heading and speed, as it must give way to you",
+    "Collision risk: you give way, normally by turning left to pass ahead of it",
+    "No action is needed: a red light on your right means it is moving away"
    ],
-   "a": 2,
-   "why": "It is at your 1 o'clock showing red (red to green = unsafe). It is on your right, so you give way, avoiding passing ahead of it. A right turn takes you behind it."
+   "a": 0,
+   "why": "It is at your 1 o'clock showing red (red to green = unsafe). It is on your right, so you give way, avoiding passing ahead of it. A right turn takes you behind it.",
+   "ref": {
+    "sec": "Lights on aircraft (Rule 14, SERA.3215)",
+    "rule": "Rule 14"
+   }
   },
   {
    "q": "At night you see only a steady white light ahead of you, getting closer at your level. What is happening?",
    "o": [
-    "It is heading straight at you",
     "You are overtaking it, so you must keep clear by turning right",
-    "It is overtaking you",
-    "It is a balloon, which has right of way"
+    "It is heading straight at you, so you both turn right to avoid it",
+    "It is overtaking you, so it must keep clear by turning right",
+    "It is a balloon showing white, which has right of way over you"
    ],
-   "a": 1,
-   "why": "A white light alone is the tail light, so it is flying away from you. If it is getting closer you are the overtaker: keep clear and turn right."
+   "a": 0,
+   "why": "A white light alone is the tail light, so it is flying away from you. If it is getting closer you are the overtaker: keep clear and turn right.",
+   "ref": {
+    "sec": "Lights on aircraft (Rule 14, SERA.3215)",
+    "rule": "Rule 14"
+   }
   },
   {
    "q": "At night you see both the red and the green light of another aircraft, dead ahead at your level. What do you do?",
@@ -751,18 +1034,26 @@
     "Hold heading and speed"
    ],
    "a": 1,
-   "why": "Seeing both wing lights means it is heading straight at you. Head-on: both aircraft turn right."
+   "why": "Seeing both wing lights means it is heading straight at you. Head-on: both aircraft turn right.",
+   "ref": {
+    "sec": "Lights on aircraft (Rule 14, SERA.3215)",
+    "rule": "Rule 14"
+   }
   },
   {
    "q": "You are flying an aeroplane and converging with a tug that is towing a glider. Who gives way?",
    "o": [
-    "The tug, because it is power-driven",
     "You, because aircraft towing gliders have priority",
-    "Whichever is lower",
-    "The glider, which must release"
+    "The tug, because it is the power-driven aircraft of the two",
+    "Whichever of you is lower at the time",
+    "The glider, which must release and give way"
    ],
-   "a": 1,
-   "why": "A glider and its tug count as one aircraft. Aeroplanes and helicopters give way to aircraft towing gliders, banners or other objects."
+   "a": 0,
+   "why": "A glider and its tug count as one aircraft. Aeroplanes and helicopters give way to aircraft towing gliders, banners or other objects.",
+   "ref": {
+    "sec": "Collision avoidance (SERA.3201)",
+    "rule": "SERA.3201"
+   }
   },
   {
    "q": "A helicopter and an aeroplane converge at about the same altitude, with the aeroplane on the helicopter's right. Who gives way?",
@@ -773,51 +1064,67 @@
     "Both turn right"
    ],
    "a": 1,
-   "why": "Both are power-driven heavier-than-air, so the same-category rule applies: the aircraft with the other on its right gives way."
+   "why": "Both are power-driven heavier-than-air, so the same-category rule applies: the aircraft with the other on its right gives way.",
+   "ref": {
+    "sec": "Right of way (SERA.3210)",
+    "rule": "SERA.3210"
+   }
   },
   {
    "q": "An aircraft is landing on final, and you are lower but on base leg. What should you do?",
    "o": [
-    "Turn final ahead of it, as the lower aircraft",
     "Let it land first; do not cut in front of an aircraft on final",
-    "Climb above it",
-    "Go around immediately"
+    "Turn final ahead of it, because the lower aircraft has priority",
+    "Climb above it, then turn final behind it as the higher aircraft",
+    "Go around immediately and rejoin the circuit from the deadside"
    ],
-   "a": 1,
-   "why": "The lower aircraft normally has priority, but must never cut in front of or overtake one on final approach."
+   "a": 0,
+   "why": "The lower aircraft normally has priority, but must never cut in front of or overtake one on final approach.",
+   "ref": {
+    "sec": "Order of landing and take-off (Rules 9 and 10)"
+   }
   },
   {
    "q": "Who may act as the safety pilot during simulated instrument flight?",
    "o": [
-    "Any passenger with a good view",
-    "A student pilot with at least 20 hours",
     "A qualified pilot in a control seat with working dual controls",
-    "Anyone, if ATC is informed"
+    "A student pilot in a control seat with fully working dual controls",
+    "Any passenger with a good view who is briefed on the lookout",
+    "Any qualified pilot on board, if ATC has been informed"
    ],
-   "a": 2,
-   "why": "SERA.3220 needs fully working dual controls and a qualified safety pilot in the other control seat. A student pilot cannot do it."
+   "a": 0,
+   "why": "SERA.3220 needs fully working dual controls and a qualified safety pilot in the other control seat. A student pilot cannot do it.",
+   "ref": {
+    "sec": "Other rules: hazards, aerobatics and instrument practice"
+   }
   },
   {
    "q": "You want to practise an instrument approach in VMC, without screens. What is required?",
    "o": [
-    "Nothing extra",
     "Inform ATC and carry a competent observer",
-    "File an IFR flight plan",
-    "Carry a qualified instructor"
+    "Nothing extra, as you are in VMC without screens",
+    "File an IFR flight plan and get a clearance",
+    "Carry a qualified instructor in the other seat"
    ],
-   "a": 1,
-   "why": "Inform ATC and carry a competent observer."
+   "a": 0,
+   "why": "Inform ATC and carry a competent observer.",
+   "ref": {
+    "sec": "Other rules: hazards, aerobatics and instrument practice"
+   }
   },
   {
    "q": "Where may aerobatics not be flown?",
    "o": [
-    "Inside an ATZ",
     "Over a congested area",
-    "Above 5,000 ft",
-    "Over the sea"
+    "Inside any aerodrome's ATZ",
+    "Above 5,000 ft amsl",
+    "Over the open sea"
    ],
-   "a": 1,
-   "why": "Not over a congested area. In controlled airspace you need the controlling authority's approval."
+   "a": 0,
+   "why": "Not over a congested area. In controlled airspace you need the controlling authority's approval.",
+   "ref": {
+    "sec": "Other rules: hazards, aerobatics and instrument practice"
+   }
   },
   {
    "q": "You meet severe windshear on approach. What must you do?",
@@ -828,7 +1135,10 @@
     "Nothing, unless you go around"
    ],
    "a": 1,
-   "why": "Report hazardous conditions to ATC as soon as possible so they can warn others."
+   "why": "Report hazardous conditions to ATC as soon as possible so they can warn others.",
+   "ref": {
+    "sec": "Other rules: hazards, aerobatics and instrument practice"
+   }
   },
   {
    "q": "You are being intercepted. Which squawk do you select?",
@@ -839,7 +1149,10 @@
     "7700"
    ],
    "a": 3,
-   "why": "7700, unless the ATS unit tells you otherwise. 7500 is unlawful interference and 7600 radio failure."
+   "why": "7700, unless the ATS unit tells you otherwise. 7500 is unlawful interference and 7600 radio failure.",
+   "ref": {
+    "sec": "Interception: what to do (AIP ENR 1.12)"
+   }
   },
   {
    "q": "On which frequency do you try to contact the intercepting aircraft?",
@@ -850,7 +1163,10 @@
     "Your current ATC frequency only"
    ],
    "a": 0,
-   "why": "121.50 MHz, giving your callsign and the nature of your flight."
+   "why": "121.50 MHz, giving your callsign and the nature of your flight.",
+   "ref": {
+    "sec": "Interception: what to do (AIP ENR 1.12)"
+   }
   },
   {
    "q": "The interceptor rocks its wings from slightly above and ahead, then makes a slow level turn to the left. What does it mean, and how do you reply?",
@@ -861,7 +1177,10 @@
     "You are in distress; flash your lights"
    ],
    "a": 1,
-   "why": "That is \"follow me\". Rock your wings and follow immediately (at night, also flash your navigation lights at irregular intervals)."
+   "why": "That is \"follow me\". Rock your wings and follow immediately (at night, also flash your navigation lights at irregular intervals).",
+   "ref": {
+    "sec": "Interception signals"
+   }
   },
   {
    "q": "The interceptor makes an abrupt break-away climbing turn of 90° or more without crossing your flight path. What does it mean?",
@@ -872,29 +1191,38 @@
     "Change frequency"
    ],
    "a": 2,
-   "why": "You may proceed. Rock your wings to acknowledge."
+   "why": "You may proceed. Rock your wings to acknowledge.",
+   "ref": {
+    "sec": "Interception signals"
+   }
   },
   {
    "q": "The interceptor circles an aerodrome, lowers its gear and overflies the runway. What should you do?",
    "o": [
-    "Continue on your planned route",
     "Lower your gear if possible, follow it and land if it looks safe",
-    "Circle at 2,000 ft",
-    "Squawk 7600"
+    "Continue on your planned route, but squawk 7700 and call on 121.5",
+    "Circle the aerodrome at 2,000 ft and wait for a radio instruction",
+    "Squawk 7600 and follow it until it breaks away from you"
    ],
-   "a": 1,
-   "why": "It means \"land at this aerodrome\". Lower your gear, follow, and land if, after overflying the runway, you judge it safe."
+   "a": 0,
+   "why": "It means \"land at this aerodrome\". Lower your gear, follow, and land if, after overflying the runway, you judge it safe.",
+   "ref": {
+    "sec": "Interception signals"
+   }
   },
   {
    "q": "How do you tell an interceptor that the aerodrome it has chosen is inadequate?",
    "o": [
-    "Rock your wings",
-    "Flash all lights at irregular intervals",
-    "Raise your gear while passing over the runway between 1,000 and 2,000 ft above aerodrome level, and keep circling",
-    "Use a hand signal"
+    "Raise your gear over the runway at 1,000-2,000 ft above aerodrome level and keep circling",
+    "Lower your gear over the runway at 1,000-2,000 ft above aerodrome level and land",
+    "Switch all available lights on and off at irregular intervals while circling the aerodrome",
+    "Rock your wings and make an abrupt climbing turn of 90° away from the intercepting aircraft"
    ],
-   "a": 2,
-   "why": "Raise gear (if possible) over the runway between 1,000 and 2,000 ft above aerodrome level and keep circling. Avoid hand signals."
+   "a": 0,
+   "why": "Raise gear (if possible) over the runway between 1,000 and 2,000 ft above aerodrome level and keep circling. Avoid hand signals.",
+   "ref": {
+    "sec": "Interception signals"
+   }
   },
   {
    "q": "You switch all your lights on and off at regular intervals. What are you telling the interceptor?",
@@ -905,18 +1233,24 @@
     "I am lost"
    ],
    "a": 1,
-   "why": "Regular = cannot comply. Irregular = distress."
+   "why": "Regular = cannot comply. Irregular = distress.",
+   "ref": {
+    "sec": "Interception signals"
+   }
   },
   {
    "q": "ATC tells you to turn right, but the intercepting aircraft is signalling you to follow it left. What do you do?",
    "o": [
-    "Follow ATC, since you are on their frequency",
     "Follow the interceptor's visual instructions and ask for clarification",
-    "Hold your heading until it is resolved",
-    "Squawk 7600"
+    "Follow ATC's instruction, since you are on their frequency and in contact",
+    "Hold your present heading and level until the conflict has been resolved",
+    "Squawk 7600 and follow whichever instruction you received first"
    ],
-   "a": 1,
-   "why": "Request clarification at once, but obey the interceptor's visual instructions."
+   "a": 0,
+   "why": "Request clarification at once, but obey the interceptor's visual instructions.",
+   "ref": {
+    "sec": "Interception: what to do (AIP ENR 1.12)"
+   }
   },
   {
    "q": "In the interception phrases, what does \"CAN NOT\" mean?",
@@ -927,29 +1261,38 @@
     "I require descent"
    ],
    "a": 1,
-   "why": "CAN NOT = unable to comply. REPEAT, AM LOST and DESCEND are the others."
+   "why": "CAN NOT = unable to comply. REPEAT, AM LOST and DESCEND are the others.",
+   "ref": {
+    "sec": "Interception radio phrases and ground signals"
+   }
   },
   {
    "q": "By day you see projectiles fired from the ground every 10 seconds, bursting into red and green stars. What does it mean?",
    "o": [
-    "Cleared to land",
     "You are in or about to enter a restricted, prohibited or danger area",
-    "Return to the aerodrome",
-    "A display is in progress"
+    "You are cleared to land at the nearest aerodrome in the direction fired",
+    "You must return to your departure aerodrome and await instructions",
+    "A flying display is in progress below you and you must keep clear"
    ],
-   "a": 1,
-   "why": "It warns an unauthorised aircraft that it is in, or about to enter, a restricted, prohibited or danger area. Take remedial action."
+   "a": 0,
+   "why": "It warns an unauthorised aircraft that it is in, or about to enter, a restricted, prohibited or danger area. Take remedial action.",
+   "ref": {
+    "sec": "Interception radio phrases and ground signals"
+   }
   },
   {
    "q": "Where are the interception procedures you must carry on international flights published?",
    "o": [
-    "AIP GEN 1.7",
     "AIP ENR 1.12",
+    "AIP GEN 1.7",
     "AIP AD 2",
-    "CAP 413"
+    "CAP 413 ch. 8"
    ],
-   "a": 1,
-   "why": "AIP ENR 1.12. GEN 1.7 lists UK differences from ICAO."
+   "a": 0,
+   "why": "AIP ENR 1.12. GEN 1.7 lists UK differences from ICAO.",
+   "ref": {
+    "sec": "Interception: what to do (AIP ENR 1.12)"
+   }
   }
  ]
 }

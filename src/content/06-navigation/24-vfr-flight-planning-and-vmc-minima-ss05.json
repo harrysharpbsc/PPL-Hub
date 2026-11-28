@@ -70,51 +70,87 @@
  "cards": [
   {
    "q": "Fuel reserve for a Part-21 aeroplane at night?",
-   "a": "45 minutes."
+   "a": "45 minutes.",
+   "ref": {
+    "sec": "Fuel reserves"
+   }
   },
   {
    "q": "Fuel reserve by day not in sight of an aerodrome?",
-   "a": "30 minutes."
+   "a": "30 minutes.",
+   "ref": {
+    "sec": "Fuel reserves"
+   }
   },
   {
    "q": "Fuel reserve by day in sight of the aerodrome?",
-   "a": "10 minutes."
+   "a": "10 minutes.",
+   "ref": {
+    "sec": "Fuel reserves"
+   }
   },
   {
    "q": "Fuel reserve for helicopters?",
-   "a": "20 minutes."
+   "a": "20 minutes.",
+   "ref": {
+    "sec": "Fuel reserves"
+   }
   },
   {
    "q": "Visibility at or above FL100?",
-   "a": "8 km."
+   "a": "8 km.",
+   "ref": {
+    "sec": "VMC minima in the UK"
+   }
   },
   {
    "q": "Visibility below FL100, above 3,000 ft amsl?",
-   "a": "5 km."
+   "a": "5 km.",
+   "ref": {
+    "sec": "VMC minima in the UK"
+   }
   },
   {
    "q": "Horizontal and vertical distance from cloud in controlled-airspace VMC minima?",
-   "a": "1,500 m horizontal, 1,000 ft vertical."
+   "a": "1,500 m horizontal, 1,000 ft vertical.",
+   "ref": {
+    "sec": "VMC minima in the UK"
+   }
   },
   {
    "q": "What does FREDA stand for?",
-   "a": "Fuel, Radio, Engine, Direction, Altimeter."
+   "a": "Fuel, Radio, Engine, Direction, Altimeter.",
+   "ref": {
+    "sec": "In-flight monitoring"
+   }
   },
   {
    "q": "How often to do FREDA checks?",
-   "a": "About every 10 minutes."
+   "a": "About every 10 minutes.",
+   "ref": {
+    "sec": "In-flight monitoring"
+   }
   },
   {
    "q": "What is Take 2?",
-   "a": "Keep 2 NM or 200 ft clear of controlled airspace."
+   "a": "Keep 2 NM or 200 ft clear of controlled airspace.",
+   "ref": {
+    "sec": "In-flight monitoring"
+   }
   },
   {
    "q": "How much time should be spent looking outside?",
-   "a": "About 80%."
+   "a": "About 80%.",
+   "ref": {
+    "sec": "In-flight monitoring"
+   }
   },
   {
    "q": "Recommended minimum en-route height under VFR?",
-   "a": "Avoid below 1,500 ft AGL."
+   "a": "Avoid below 1,500 ft AGL.",
+   "ref": {
+    "sec": "Pre-flight planning"
+   }
   }
  ],
  "quiz": [
@@ -127,7 +163,10 @@
     "60 minutes"
    ],
    "a": 2,
-   "why": "45 minutes at night for Part-21 aeroplanes."
+   "why": "45 minutes at night for Part-21 aeroplanes.",
+   "ref": {
+    "sec": "Fuel reserves"
+   }
   },
   {
    "q": "VMC visibility at FL100 and above:",
@@ -138,7 +177,10 @@
     "1,500 m"
    ],
    "a": 1,
-   "why": "8 km at or above 10,000 ft."
+   "why": "8 km at or above 10,000 ft.",
+   "ref": {
+    "sec": "VMC minima in the UK"
+   }
   },
   {
    "q": "FREDA stands for:",
@@ -149,18 +191,24 @@
     "Fuel Radio Electrics Direction Airspeed"
    ],
    "a": 0,
-   "why": "Fuel, Radio, Engine, Direction, Altimeter."
+   "why": "Fuel, Radio, Engine, Direction, Altimeter.",
+   "ref": {
+    "sec": "In-flight monitoring"
+   }
   },
   {
    "q": "What does 'Take 2' mean?",
    "o": [
-    "Two radio calls",
     "Keep 2 NM or 200 ft from controlled airspace",
-    "Two turns of a hold",
-    "Two minutes of fuel"
+    "Make two radio calls before entering any ATZ",
+    "Fly two turns of a hold before joining",
+    "Carry two minutes of extra fuel per leg"
    ],
-   "a": 1,
-   "why": "A margin of 2 NM or 200 ft helps avoid infringements."
+   "a": 0,
+   "why": "A margin of 2 NM or 200 ft helps avoid infringements.",
+   "ref": {
+    "sec": "In-flight monitoring"
+   }
   },
   {
    "q": "About how much of your time should you spend looking outside?",
@@ -171,7 +219,10 @@
     "100%"
    ],
    "a": 2,
-   "why": "Roughly 80% of the time outside, 20% inside."
+   "why": "Roughly 80% of the time outside, 20% inside.",
+   "ref": {
+    "sec": "In-flight monitoring"
+   }
   }
  ]
 }
